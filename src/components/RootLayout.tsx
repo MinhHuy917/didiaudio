@@ -143,12 +143,16 @@ function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/work">Our Work</NavigationItem>
-        <NavigationItem href="/about">About Us</NavigationItem>
+        <NavigationItem href="/dia-diem-cam-trai">
+          Địa điểm cắm trại{' '}
+        </NavigationItem>
+        <NavigationItem href="https://www.facebook.com/groups/695950148016396">
+          Cộng đồng cắm trại
+        </NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/process">Our Process</NavigationItem>
-        <NavigationItem href="/blog">Blog</NavigationItem>
+        <NavigationItem href="/blog">Kỹ năng cắm trại</NavigationItem>
+        <NavigationItem href="/process">Kinh nghiệm cắm trại</NavigationItem>
       </NavigationRow>
     </nav>
   )
