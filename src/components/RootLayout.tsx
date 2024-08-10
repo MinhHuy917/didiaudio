@@ -1,23 +1,14 @@
 'use client'
 
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useId,
-  useRef,
-  useState,
-} from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { createContext, useEffect, useId, useRef, useState } from 'react'
 
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
-import { Logo, Logomark } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
 
@@ -58,32 +49,19 @@ function Header({
   toggleRef: React.RefObject<HTMLButtonElement>
   invert?: boolean
 }) {
-  let { logoHovered, setLogoHovered } = useContext(RootLayoutContext)!
-
   return (
     <Container>
       <div className="flex items-center justify-between">
-        <Link
-          href="/"
-          aria-label="Home"
-          onMouseEnter={() => setLogoHovered(true)}
-          onMouseLeave={() => setLogoHovered(false)}
-        >
-          <Logomark
-            className="h-8 sm:hidden"
-            invert={invert}
-            filled={logoHovered}
-          />
-          <Logo
-            className="hidden h-8 sm:block"
-            invert={invert}
-            filled={logoHovered}
+        <Link href="/" aria-label="Home">
+          <img
+            alt=""
+            src="https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/433255474_122110873592234912_8694586101169034819_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=8MFPMCdNR5kQ7kNvgEifJzL&_nc_ht=scontent-hkg4-1.xx&oh=00_AYBKmMpaz7N0wIRzNGSffSZ0d8vE20ANlmz45VbzMwKUnQ&oe=66BD139D"
+            width={80}
+            height={80}
+            className="rounded-full"
           />
         </Link>
-        <div className="flex items-center gap-x-8">
-          <Button href="/contact" invert={invert}>
-            Contact us
-          </Button>
+        <div className="flex items-center gap-x-8 ">
           <button
             ref={toggleRef}
             type="button"
@@ -143,11 +121,11 @@ function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/dia-diem-cam-trai">
-          Địa điểm cắm trại{' '}
-        </NavigationItem>
         <NavigationItem href="https://www.facebook.com/groups/695950148016396">
           Cộng đồng cắm trại
+        </NavigationItem>
+        <NavigationItem href="/dia-diem-cam-trai">
+          Địa điểm cắm trại{' '}
         </NavigationItem>
       </NavigationRow>
       <NavigationRow>
@@ -237,7 +215,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
                 <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
                   <div>
                     <h2 className="font-display text-base font-semibold text-white">
-                      Our offices
+                      Address
                     </h2>
                     <Offices
                       invert
