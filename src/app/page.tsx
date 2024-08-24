@@ -16,11 +16,10 @@ export default async function Home() {
       <Container className="mt-24 pb-24 sm:mt-32 sm:pb-32 md:mt-40 md:pb-40">
         <PageIntro
           eyebrow="Đà Nẵng Campers"
-          title="Địa điểm thuê lều và thiết bị đồ cắm trại"
+          title=""
         >
-          <h1 className=" font-display text-3xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-5xl">
-            Cuối tuần hãy cùng bạn bè, người yêu có những buổi cắm trại để kết
-            nối cùng nhau
+          <h1 className="font-[system-ui] text-3xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-5xl">
+            Địa điểm thuê lều và thiết bị đồ cắm trại
           </h1>
         </PageIntro>
       </Container>
