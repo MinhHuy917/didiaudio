@@ -20,7 +20,6 @@ export default async function HuongDanDungLeu() {
       >
       <div className='font-[system-ui]'>
 
-      <h1>Hướng dẫn dựng lều cho người mới bắt đầu</h1>
     <p>🌿 Khi bạn mới bắt đầu cắm trại, việc học các kỹ năng cơ bản như chọn địa điểm 🗺️, dựng lều ⛺, chuẩn bị thức ăn 🍳, và bảo vệ môi trường ♻️ là rất quan trọng.</p>
 
     <h2>1. Chọn địa điểm</h2>
