@@ -15,7 +15,7 @@ export default async function HuongDanDungLeu() {
   return (
     <>
       <PageIntro
-        eyebrow="Hướng dẫn dựng lều cho người mới bắt đầu"
+        eyebrow="Hướng dẫn dựng lều"
         title="Những kỹ năng cắm trại cơ bản dành cho người mới"
       >
       <div className='font-[system-ui]'>
