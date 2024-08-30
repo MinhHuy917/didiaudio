@@ -55,9 +55,9 @@ function Header({
     <Container>
       <div className="flex items-center justify-between">
         <Link href="/" aria-label="Home">
-          <Image
+          <img
            alt=""
-           src='/images/logo.jpg'
+           src='https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/457665580_122171676452234912_5246027867796834543_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ITkvhoc1YZYQ7kNvgESs7AJ&_nc_ht=scontent-atl3-1.xx&oh=00_AYA9Qt-FkN7WR7swqPX37vg152kTUHBicaKHyGCGIQpt2A&oe=66D76D3E'
            width={100}
            height={80}
            className="rounded-full" 

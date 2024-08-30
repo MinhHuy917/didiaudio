@@ -1,9 +1,9 @@
 import { type Metadata } from 'next'
 
 import { Container } from '@/components/Container'
-import ProductList from '@/components/ProductTable'
-import { loadCaseStudies } from '@/lib/mdx'
+import MenuContact from '@/components/MenuContact'
 import { PageIntro } from '@/components/PageIntro'
+import ProductList from '@/components/ProductTable'
 
 export const metadata: Metadata = {
   description:
@@ -14,16 +14,15 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-24 pb-24 sm:mt-32 sm:pb-32 md:mt-40 md:pb-40">
-        <PageIntro
-          eyebrow="Đà Nẵng Campers"
-          title=""
-        >
+        <PageIntro eyebrow="Đà Nẵng Campers" title="">
           <h1 className="font-[system-ui] text-3xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-5xl">
-            Địa điểm thuê lều và thiết bị đồ cắm trại
+            Địa điểm thuê lều và thiết bị đồ cắm trại ở Đà Nẵng
           </h1>
         </PageIntro>
       </Container>
       <ProductList />
+
+      <MenuContact />
 
       {/* // Các quy tắc & đền bù khi làm hư hỏng đồ cắm trại */}
     </>

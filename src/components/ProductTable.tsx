@@ -240,9 +240,9 @@ const ProductList: React.FC = () => {
             <th scope="col" className="px-6 py-3">
               Giá
             </th>
-            <th scope="col" className="px-6 py-3">
+            {/* <th scope="col" className="px-6 py-3">
               Action
-            </th>
+            </th> */}
           </tr>
         </thead>
         <tbody>
@@ -320,14 +320,14 @@ const ProductList: React.FC = () => {
               <td className="px-6 py-4 font-semibold text-gray-900 dark:text-white">
                 {product.price}k/ngày
               </td>
-              <td className="px-6 py-4">
+              {/* <td className="px-6 py-4">
                 <button
                   className="font-medium text-blue-600 hover:underline dark:text-blue-500"
                   //   onClick={() => handleRemove(product.id)}
                 >
                   Xem chi tiết
                 </button>
-              </td>
+              </td> */}
             </tr>
           ))}
         </tbody>
