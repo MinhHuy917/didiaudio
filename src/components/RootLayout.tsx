@@ -11,6 +11,8 @@ import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
+import imageLogo from '@/images/logo.jpg'
+import Image, { type ImageProps } from 'next/image'
 
 const RootLayoutContext = createContext<{
   logoHovered: boolean
@@ -53,12 +55,12 @@ function Header({
     <Container>
       <div className="flex items-center justify-between">
         <Link href="/" aria-label="Home">
-          <img
-            alt=""
-            src="https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/433255474_122110873592234912_8694586101169034819_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=8MFPMCdNR5kQ7kNvgEifJzL&_nc_ht=scontent-hkg4-1.xx&oh=00_AYBKmMpaz7N0wIRzNGSffSZ0d8vE20ANlmz45VbzMwKUnQ&oe=66BD139D"
-            width={80}
-            height={80}
-            className="rounded-full"
+          <Image
+           alt=""
+           src='/images/logo.jpg'
+           width={100}
+           height={80}
+           className="rounded-full" 
           />
         </Link>
         <div className="flex items-center gap-x-8 ">
@@ -102,13 +104,16 @@ function NavigationRow({ children }: { children: React.ReactNode }) {
 function NavigationItem({
   href,
   children,
+  target,
 }: {
   href: string
   children: React.ReactNode
+  target?: string
 }) {
   return (
     <Link
       href={href}
+      target={target}
       className="font-[system-ui] group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
     >
       {children}
@@ -131,7 +136,7 @@ function Navigation() {
         
         
         <NavigationItem href="/huong-dan-dung-leu">Hướng dẫn dựng lều</NavigationItem>
-        <NavigationItem href="https://www.facebook.com/groups/695950148016396">
+        <NavigationItem target='_blank' href="https://www.facebook.com/groups/695950148016396">
           Cộng đồng cắm trại
         </NavigationItem>
       </NavigationRow>
