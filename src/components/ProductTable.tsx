@@ -254,11 +254,11 @@ const ProductList: React.FC = () => {
               <td className="p-4">
                 <img
                   src={product.image}
-                  className="max-h-full w-16 max-w-full md:w-32 rounded-md"
+                  className="h-20 w-20 md:h-32 md:w-32 rounded-md"
                   alt={product.name}
                 />
               </td>
-              <td className="px-6 py-4 font-semibold text-gray-900 dark:text-white">
+              <td className="font-[system-ui] px-6 py-4 font-semibold text-gray-900 dark:text-white">
                 {product.name}
               </td>
 
@@ -317,7 +317,7 @@ const ProductList: React.FC = () => {
                   </button>
                 </div>
               </td> */}
-              <td className="px-6 py-4 font-semibold text-gray-900 dark:text-white">
+              <td className="font-[system-ui] px-6 py-4 font-semibold text-gray-900 dark:text-white">
                 {product.price}k/ngày
               </td>
               {/* <td className="px-6 py-4">
