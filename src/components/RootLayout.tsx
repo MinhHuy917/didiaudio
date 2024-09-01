@@ -124,7 +124,7 @@ function NavigationItem({
 
 function Navigation() {
   return (
-    <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
+    <nav className="mt-px font-display text-3xl lg:text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
       <NavigationItem target='_blank' href="https://www.facebook.com/groups/695950148016396">
           Cộng đồng cắm trại

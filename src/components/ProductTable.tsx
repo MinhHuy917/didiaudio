@@ -254,7 +254,7 @@ const ProductList: React.FC = () => {
               <td className="p-4">
                 <img
                   src={product.image}
-                  className="max-h-full w-16 max-w-full md:w-32"
+                  className="max-h-full w-16 max-w-full md:w-32 rounded-md"
                   alt={product.name}
                 />
               </td>
