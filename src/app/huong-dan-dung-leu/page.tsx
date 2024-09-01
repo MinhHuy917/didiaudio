@@ -2,7 +2,7 @@ import { type Metadata } from 'next'
 
 import { PageIntro } from '@/components/PageIntro'
 import { loadArticles } from '@/lib/mdx'
-import BlogArticleWrapper from '../ky-nang-cam-trai/wrapper'
+import BlogArticleWrapper from '../blog-cam-trai/wrapper'
 
 export const metadata: Metadata = {
   title: 'Kỹ Năng Cắm Trại',

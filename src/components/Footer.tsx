@@ -104,12 +104,18 @@ export function Footer() {
             <GoogleMap />
           </div>
         </div>
-        <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
-          <Link href="/" aria-label="Home">
-            <Logo className="h-8" fillOnHover />
-          </Link>
+        <div className="mb-20 mt-24 items-center flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
+        <Link href="/" aria-label="Home">
+          <img
+           alt=""
+           src='https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/457665580_122171676452234912_5246027867796834543_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ITkvhoc1YZYQ7kNvgESs7AJ&_nc_ht=scontent-atl3-1.xx&oh=00_AYA9Qt-FkN7WR7swqPX37vg152kTUHBicaKHyGCGIQpt2A&oe=66D76D3E'
+           width={50}
+           height={30}
+           className="rounded-full" 
+          />
+        </Link>
           <p className="text-sm text-neutral-700">
-            © Da Nang Campers. {new Date().getFullYear()}
+            © Da Nang Campers {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>

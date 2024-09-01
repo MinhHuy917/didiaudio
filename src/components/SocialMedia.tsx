@@ -27,6 +27,18 @@ function TiktokIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+function GroupFacebookIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+    <g fill="none" stroke="currentColor" strokeWidth="2">
+      <circle cx="9" cy="9" r="4" />
+      <circle cx="15" cy="9" r="4" />
+      <circle cx="12" cy="15" r="4" />
+    </g>
+  </svg>
+  );
+}
+
 export const socialMediaProfiles = [
   
   {
@@ -42,7 +54,7 @@ export const socialMediaProfiles = [
   {
     title: 'Cộng đồng',
     href: 'https://www.facebook.com/groups/danangcampers',
-    icon: FacebookIcon,
+    icon: GroupFacebookIcon,
   },
 ]
 
