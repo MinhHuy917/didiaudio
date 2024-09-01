@@ -7,32 +7,15 @@ import { socialMediaProfiles } from '@/components/SocialMedia'
 
 const navigation = [
   {
-    title: 'Work',
+    title: 'Quy định và chính sách',
     links: [
-      { title: 'FamilyFund', href: '/dia-diem-cam-trai/family-fund' },
-      { title: 'Unseal', href: '/dia-diem-cam-trai/unseal' },
-      { title: 'Phobia', href: '/dia-diem-cam-trai/phobia' },
-      {
-        title: (
-          <>
-            See all <span aria-hidden="true">&rarr;</span>
-          </>
-        ),
-        href: '/dia-diem-cam-trai',
-      },
+      { title: 'Chính sách thanh toán', href: '/quy-dinh-va-chinh-sach/thanh-toan' },
+      { title: 'Quy định sử dụng',  href: '/quy-dinh-va-chinh-sach/su-dung' },
+      { title: 'Chính sách đền bù',  href: '/quy-dinh-va-chinh-sach/den-bu' },
     ],
   },
   {
-    title: 'Company',
-    links: [
-      { title: 'About', href: '/about' },
-      { title: 'Process', href: '/process' },
-      { title: 'Blog', href: '/blog' },
-      { title: 'Contact us', href: '/contact' },
-    ],
-  },
-  {
-    title: 'Connect',
+    title: 'Về chúng tôi',
     links: socialMediaProfiles,
   },
 ]
@@ -40,10 +23,10 @@ const navigation = [
 function Navigation() {
   return (
     <nav>
-      <ul role="list" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+      <ul role="list" className="grid grid-cols-2 gap-8 ">
         {navigation.map((section, sectionIndex) => (
           <li key={sectionIndex}>
-            <div className="font-display text-sm font-semibold tracking-wider text-neutral-950">
+            <div className="font-display text-sm font-semibold tracking-wider text-neutral-950 !font-[system-ui]">
               {section.title}
             </div>
             <ul role="list" className="mt-4 text-sm text-neutral-700">
@@ -51,7 +34,7 @@ function Navigation() {
                 <li key={linkIndex} className="mt-4">
                   <Link
                     href={link.href}
-                    className="transition hover:text-neutral-950"
+                    className="!font-[system-ui] transition hover:text-neutral-950"
                   >
                     {link.title}
                   </Link>
@@ -78,7 +61,7 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-function NewsletterForm() {
+function GoogleMap() {
   return (
     <form className="max-w-sm">
       <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
@@ -114,10 +97,11 @@ export function Footer() {
   return (
     <Container as="footer" className="mt-24 w-full sm:mt-32 lg:mt-40">
       <FadeIn>
+
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
           <Navigation />
           <div className="flex lg:justify-end">
-            <NewsletterForm />
+            <GoogleMap />
           </div>
         </div>
         <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
@@ -125,7 +109,7 @@ export function Footer() {
             <Logo className="h-8" fillOnHover />
           </Link>
           <p className="text-sm text-neutral-700">
-            © Studio Agency Inc. {new Date().getFullYear()}
+            © Da Nang Campers. {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>

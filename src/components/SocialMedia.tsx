@@ -28,6 +28,7 @@ function TiktokIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export const socialMediaProfiles = [
+  
   {
     title: 'Facebook',
     href: 'https://www.facebook.com/danangcampers',
@@ -37,6 +38,11 @@ export const socialMediaProfiles = [
     title: 'Tiktok',
     href: 'https://www.tiktok.com/@danang.campers',
     icon: TiktokIcon,
+  },
+  {
+    title: 'Cộng đồng',
+    href: 'https://www.facebook.com/groups/danangcampers',
+    icon: FacebookIcon,
   },
 ]
 
