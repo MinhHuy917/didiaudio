@@ -2,32 +2,50 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { Logo } from '@/components/Logo'
 import { socialMediaProfiles } from '@/components/SocialMedia'
 
 const navigation = [
   {
+    title: "Liên Hệ",
+    links: [
+      { title: "Phone: 0909223917", href: "tel:0909223917" },
+      { title: "Zalo: 0909223917", href: "https://zalo.me/0909223917" },
+      { title: "Messenger", href: "//m.me/danangcampers" },
+    ],
+  },
+  {
+    title: "Thông Tin Cửa Hàng",
+    links: [
+      { title: "Địa Chỉ: 86 Lê Thiệt, Phường Hoà Minh, Quận Liên Chiểu, TP. Đà Nẵng", href: "https://maps.app.goo.gl/xtErkxmAs9pYEY1B9" },
+      { title: "Giờ Mở Cửa: 08:00 - 20:00 mỗi ngày", href: "#" },
+    ],
+  },
+  {
     title: 'Quy định và chính sách',
     links: [
-      { title: 'Chính sách thanh toán', href: '/quy-dinh-va-chinh-sach/thanh-toan' },
-      { title: 'Quy định sử dụng',  href: '/quy-dinh-va-chinh-sach/su-dung' },
-      { title: 'Chính sách đền bù',  href: '/quy-dinh-va-chinh-sach/den-bu' },
+      {
+        title: 'Chính sách thanh toán',
+        href: '/quy-dinh-va-chinh-sach/thanh-toan',
+      },
+      { title: 'Quy định sử dụng', href: '/quy-dinh-va-chinh-sach/su-dung' },
+      { title: 'Chính sách đền bù', href: '/quy-dinh-va-chinh-sach/den-bu' },
     ],
   },
   {
     title: 'Về chúng tôi',
     links: socialMediaProfiles,
   },
+ 
 ]
 
 function Navigation() {
   return (
     <nav>
-      <ul role="list" className="grid grid-cols-2 gap-8 ">
+      <ul role="list" className="grid grid-cols-2 lg:grid-cols-4 gap-8 ">
         {navigation.map((section, sectionIndex) => (
           <li key={sectionIndex}>
-            <div className="font-display text-sm font-semibold tracking-wider text-neutral-950 !font-[system-ui]">
-              {section.title}
+            <div className="!font-[system-ui] font-display text-sm font-semibold tracking-wider text-neutral-950">
+              {/* {section.title} */}
             </div>
             <ul role="list" className="mt-4 text-sm text-neutral-700">
               {section.links.map((link, linkIndex) => (
@@ -61,59 +79,32 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-function GoogleMap() {
-  return (
-    <form className="max-w-sm">
-      <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-        Sign up for our newsletter
-      </h2>
-      <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest design news, articles, resources and
-        inspiration.
-      </p>
-      <div className="relative mt-6">
-        <input
-          type="email"
-          placeholder="Email address"
-          autoComplete="email"
-          aria-label="Email address"
-          className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"
-        />
-        <div className="absolute inset-y-1 right-1 flex justify-end">
-          <button
-            type="submit"
-            aria-label="Submit"
-            className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
-          >
-            <ArrowIcon className="w-4" />
-          </button>
-        </div>
-      </div>
-    </form>
-  )
-}
-
 export function Footer() {
   return (
-    <Container as="footer" className="mt-24 w-full sm:mt-32 lg:mt-40">
+    <Container as="footer" className="mt-12 w-full sm:mt-16 lg:mt-20">
       <FadeIn>
-
-        <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
-          <Navigation />
-          <div className="flex lg:justify-end">
-            <GoogleMap />
-          </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15334.657814147615!2d108.14981161384843!3d16.08289293907161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142192b5b9c5953%3A0xab6abe8718988a4!2zxJDDoCBO4bq1bmcgQ2FtcGVycyAtIENobyBUaHXDqiBM4buBdSDEkMOgIE7hurVuZw!5e0!3m2!1sen!2s!4v1725334728408!5m2!1sen!2s"
+          width="100%"
+          height="450"
+          style={{ border: 0 }}
+          allowFullScreen={false}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+          <div className="mt-12 sm:mt-16 lg:mt-20">
+            <Navigation />
         </div>
-        <div className="mb-20 mt-24 items-center flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
-        <Link href="/" aria-label="Home">
-          <img
-           alt=""
-           src='https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/457665580_122171676452234912_5246027867796834543_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ITkvhoc1YZYQ7kNvgESs7AJ&_nc_ht=scontent-atl3-1.xx&oh=00_AYA9Qt-FkN7WR7swqPX37vg152kTUHBicaKHyGCGIQpt2A&oe=66D76D3E'
-           width={50}
-           height={30}
-           className="rounded-full" 
-          />
-        </Link>
+        <div className="mb-20 mt-24 flex flex-wrap items-end items-center justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
+          <Link href="/" aria-label="Home">
+            <img
+              alt=""
+              src="https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/457665580_122171676452234912_5246027867796834543_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ITkvhoc1YZYQ7kNvgESs7AJ&_nc_ht=scontent-atl3-1.xx&oh=00_AYA9Qt-FkN7WR7swqPX37vg152kTUHBicaKHyGCGIQpt2A&oe=66D76D3E"
+              width={50}
+              height={30}
+              className="rounded-full"
+            />
+          </Link>
           <p className="text-sm text-neutral-700">
             © Da Nang Campers {new Date().getFullYear()}
           </p>
