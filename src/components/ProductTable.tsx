@@ -42,7 +42,7 @@ const ProductList: React.FC = () => {
       name: 'Lều 2 ',
       catalogue: '(1m4x2m)',
       image:
-      leu2.src,
+        leu2.src,
       price: 60,
       quantity: 1,
     },
@@ -72,20 +72,20 @@ const ProductList: React.FC = () => {
       price: 180,
       quantity: 1,
     },
-    
+
     {
       id: 3,
       name: 'Cách nhiệt',
-      catalogue: '(2mx2m - Miễn phí khi thuê cùng lều)',
+      catalogue: '(Miễn phí khi thuê lều)',
       image:
-      cachnhiet.src,
+        cachnhiet.src,
       price: 0,
       quantity: 1,
     },
     {
       id: 2,
       name: 'Gối hơi',
-      catalogue: '(1m4x2m - Miễn phí khi thuê cùng lều)',
+      catalogue: '(Miễn phí khi thuê lều)',
       image:
         goihoi.src,
       price: 0,
@@ -100,14 +100,14 @@ const ProductList: React.FC = () => {
       price: 20,
       quantity: 1,
     },
-    
-   
+
+
 
     // Bàn ghế dã ngoại
     {
       id: 3,
       name: 'Ghế mặt trăng',
-      catalogue: '(47cmx47cmx68cm)',
+      catalogue: '(47cmx47cmx68cm, tải trọng 120kg)',
       image:
         ghe.src,
       price: 15,
@@ -116,7 +116,7 @@ const ProductList: React.FC = () => {
     {
       id: 3,
       name: 'Bàn nhôm',
-      catalogue: '90x60',
+      catalogue: '(90cmx60cm)',
       image:
         ban.src,
       price: 40,
@@ -133,8 +133,8 @@ const ProductList: React.FC = () => {
       price: 60,
       quantity: 1,
     },
-   
-  
+
+
 
     // Đèn lều , đèn trang trí
     {
@@ -149,7 +149,7 @@ const ProductList: React.FC = () => {
     {
       id: 3,
       name: 'Đèn để bàn',
-      catalogue: '(Đã sạc pin 4-5h chiếu sáng)',
+      catalogue: '(Thời gian chiếu sáng 4-6h)',
       image:
         dendeban.src,
       price: 15,
@@ -167,7 +167,7 @@ const ProductList: React.FC = () => {
     {
       id: 3,
       name: 'Đèn đội đầu',
-      catalogue: '(Đã sạc pin 6-10h chiếu sáng)',
+      catalogue: '(Thời gian chiếu sáng 6-10h)',
       image:
         dendoidau.src,
       price: 10,
@@ -176,7 +176,7 @@ const ProductList: React.FC = () => {
     {
       id: 3,
       name: 'Đèn ngôi sao',
-      catalogue: '(Dài 4m, đèn dùng 3 pin con thỏ, chưa kèm pin)',
+      catalogue: '(Dùng 3 viên pin con thỏ, đèn chưa kèm pin)',
       image:
         denngoisao.src,
       price: 20,
@@ -186,7 +186,7 @@ const ProductList: React.FC = () => {
     {
       id: 3,
       name: 'Dây đèn Led ',
-      catalogue: '(Dài 6m, đèn dùng 3 pin con thỏ, chưa kèm pin)',
+      catalogue: '(Dùng 3 viên pin con thỏ, đèn chưa kèm pin)',
       image:
         denled.src,
       price: 10,
@@ -195,7 +195,7 @@ const ProductList: React.FC = () => {
     {
       id: 3,
       name: 'Loa mini vintage',
-      catalogue: '(Thời gian sử dụng: 6-10h liên tục )',
+      catalogue: '(Thời gian sử dụng 6-10h liên tục)',
       image:
         loa.src,
       price: 50,
@@ -204,7 +204,7 @@ const ProductList: React.FC = () => {
     {
       id: 3,
       name: 'Bếp nướng',
-      catalogue: '(73cmx21,5cmx20cm)',
+      catalogue: '(73cmx22cmx20cm, có kèm kẹp inox gắp than)',
       image: bepnuong.src,
       price: 40,
       quantity: 1,
@@ -212,7 +212,7 @@ const ProductList: React.FC = () => {
     {
       id: 3,
       name: 'Bếp củi',
-      catalogue: '(125x125cmx160mm)',
+      catalogue: '(125x125cmx16cm)',
       image:
         bepcui.src,
       price: 30,
@@ -247,23 +247,7 @@ const ProductList: React.FC = () => {
     },
   ])
 
-  
 
-  const handleQuantityChange = (id: number, delta: number) => {
-    setProducts((prevProducts) =>
-      prevProducts.map((product) =>
-        product.id === id
-          ? { ...product, quantity: Math.max(1, product.quantity + delta) }
-          : product,
-      ),
-    )
-  }
-
-  const handleRemove = (id: number) => {
-    setProducts((prevProducts) =>
-      prevProducts.filter((product) => product.id !== id),
-    )
-  }
 
   return (
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -361,8 +345,13 @@ const ProductList: React.FC = () => {
                 </div>
               </td> */}
               <td className="font-[system-ui] px-2 py-4 font-semibold text-gray-900 dark:text-[#1F3329]">
-                {product.price}k/ngày
+                {product.price === 0 ? (
+                  <span className="text-green-500">Free</span>
+                ) : (
+                  `${product.price}k/ngày`
+                )}
               </td>
+
               {/* <td className="px-6 py-4">
                 <button
                   className="font-medium text-blue-600 hover:underline dark:text-blue-500"

@@ -47,19 +47,9 @@ export default async function DenBu() {
                 </p>
               </section>
 
-              <section>
-                <h2 className="text-2xl font-semibold mb-2">4. Quy Trình Đền Bù:</h2>
-                <p>
-                  ĐiĐi Camping sẽ thông báo chi phí bồi thường và khách hàng phải thanh toán trong thời gian quy định.
-                </p>
-              </section>
+             
 
-              <section>
-                <h2 className="text-2xl font-semibold mb-2">5. Liên Hệ và Hỗ Trợ:</h2>
-                <p>
-                  Liên hệ ĐiĐi Camping nếu có câu hỏi hoặc cần hỗ trợ. Chúng tôi cam kết minh bạch và công bằng.
-                </p>
-              </section>
+            
             </div>
           </div>
         </div>
