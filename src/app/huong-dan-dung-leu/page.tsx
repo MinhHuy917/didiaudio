@@ -32,7 +32,11 @@ export default async function HuongDanDungLeu() {
 
     <p className='mt-4'><strong>Xem video hướng dẫn chi tiết về cách dựng lều:</strong> </p>
       </div>
-        <iframe className='mt-6' width="100%" height="315px" src="https://www.youtube.com/embed/8a219dZFfpg?si=U_2JR2OAvSFlM8Xc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe className='mt-6' width="100%" height="500px"
+         src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FThueLeuCamTraiDaNang%2Fvideos%2F641412221870938%2F&show_text=false&width=560&t=0"  title="YouTube video player"
+          frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      
       
       </PageIntro>
     </>

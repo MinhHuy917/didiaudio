@@ -3,7 +3,7 @@ import { PageIntro } from '@/components/PageIntro'
 
 export const metadata: Metadata = {
   title: 'Chính Sách Đền Bù và Bồi Thường',
-  description: 'Chi tiết về chính sách đền bù và bồi thường của Đà Nẵng Campers',
+  description: 'Chi tiết về chính sách đền bù và bồi thường của ĐiĐi Camping',
 }
 
 export default async function DenBu() {
@@ -50,14 +50,14 @@ export default async function DenBu() {
               <section>
                 <h2 className="text-2xl font-semibold mb-2">4. Quy Trình Đền Bù:</h2>
                 <p>
-                  Đà Nẵng Campers sẽ thông báo chi phí bồi thường và khách hàng phải thanh toán trong thời gian quy định.
+                  ĐiĐi Camping sẽ thông báo chi phí bồi thường và khách hàng phải thanh toán trong thời gian quy định.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold mb-2">5. Liên Hệ và Hỗ Trợ:</h2>
                 <p>
-                  Liên hệ Đà Nẵng Campers nếu có câu hỏi hoặc cần hỗ trợ. Chúng tôi cam kết minh bạch và công bằng.
+                  Liên hệ ĐiĐi Camping nếu có câu hỏi hoặc cần hỗ trợ. Chúng tôi cam kết minh bạch và công bằng.
                 </p>
               </section>
             </div>

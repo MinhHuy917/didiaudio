@@ -11,8 +11,9 @@ import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
-import imageLogo from '@/images/logo.jpg'
-import Image, { type ImageProps } from 'next/image'
+import logo from '@/images/logo.png'
+import Image from 'next/image'
+
 
 const RootLayoutContext = createContext<{
   logoHovered: boolean
@@ -36,6 +37,7 @@ function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+
 function Header({
   panelId,
   icon: Icon,
@@ -55,13 +57,7 @@ function Header({
     <Container>
       <div className="flex items-center justify-between">
         <Link href="/" aria-label="Home">
-          <img
-           alt=""
-           src='https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/457665580_122171676452234912_5246027867796834543_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ITkvhoc1YZYQ7kNvgESs7AJ&_nc_ht=scontent-atl3-1.xx&oh=00_AYA9Qt-FkN7WR7swqPX37vg152kTUHBicaKHyGCGIQpt2A&oe=66D76D3E'
-           width={100}
-           height={80}
-           className="rounded-full" 
-          />
+        <Image src={logo} alt="Logo" width={100} height={80} className="rounded-full object-cover" />
         </Link>
         <div className="flex items-center gap-x-8 ">
           <button
@@ -93,7 +89,7 @@ function Header({
 
 function NavigationRow({ children }: { children: React.ReactNode }) {
   return (
-    <div className="even:mt-px sm:bg-neutral-950">
+    <div className="even:mt-px sm:bg-[#EFE9DA]">
       <Container>
         <div className="grid grid-cols-1 sm:grid-cols-2">{children}</div>
       </Container>
@@ -114,10 +110,10 @@ function NavigationItem({
     <Link
       href={href}
       target={target}
-      className="font-[system-ui] group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
+      className="font-[system-ui] group relative isolate -mx-6 bg-[#EFE9DA] px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 text-[#1F3329]"
     >
       {children}
-      <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
+      <span className="absolute inset-y-0 -z-10 w-screen bg-[#EFE9DA] opacity-0 transition group-odd:right-0 group-even:left-0 " />
     </Link>
   )
 }
@@ -126,9 +122,9 @@ function Navigation() {
   return (
     <nav className="mt-px font-display text-3xl lg:text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-      <NavigationItem target='_blank' href="https://www.facebook.com/groups/695950148016396">
+      {/* <NavigationItem target='_blank' href="https://www.facebook.com/groups/695950148016396">
           Cộng đồng cắm trại
-        </NavigationItem>
+        </NavigationItem> */}
        
         <NavigationItem href="/dia-diem-cam-trai">
           Địa điểm cắm trại{' '}
@@ -136,7 +132,7 @@ function Navigation() {
       
       </NavigationRow>
       <NavigationRow>
-      <NavigationItem href="/blog-cam-trai">Blog cắm trại</NavigationItem>
+      {/* <NavigationItem href="/blog-cam-trai">Blog cắm trại</NavigationItem> */}
         
         <NavigationItem href="/huong-dan-dung-leu">Hướng dẫn dựng lều</NavigationItem>
       
@@ -202,8 +198,8 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
           inert={expanded ? undefined : ''}
         >
-          <motion.div layout className="bg-neutral-800">
-            <div ref={navRef} className="bg-neutral-950 pb-16 pt-14">
+          <motion.div layout className="bg-white-800">
+            <div ref={navRef} className="bg-[#EFE9DA] pb-16 pt-14">
               <Header
                 invert
                 panelId={panelId}
@@ -219,20 +215,20 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
               />
             </div>
             <Navigation />
-            <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
+            <div className="relative bg-[#EFE9DA] before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
               <Container>
                 <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
                   <div>
-                    <h2 className="font-display text-base font-semibold text-white">
+                    <h2 className="font-display text-base font-semibold text-[#1F3329]">
                       Địa Chỉ
                     </h2>
                     <Offices
                       invert
-                      className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
+                      className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 !text-[#1F3329]"
                     />
                   </div>
                   <div className="sm:border-l sm:border-transparent sm:pl-16">
-                    <h2 className="font-display text-base font-semibold text-white">
+                    <h2 className="font-display text-base font-semibold text-[#1F3329]">
                       Follow us
                     </h2>
                     <SocialMedia className="mt-6" invert />
@@ -246,7 +242,6 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
 
       <motion.div
         layout
-        style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
         className="relative flex flex-auto overflow-hidden bg-white pt-14"
       >
         <motion.div

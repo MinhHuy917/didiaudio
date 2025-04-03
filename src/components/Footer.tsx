@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { socialMediaProfiles } from '@/components/SocialMedia'
+import logo from '@/images/logo.png'
+import Image from 'next/image'
 
 const navigation = [
   {
@@ -17,7 +19,7 @@ const navigation = [
     title: "Thông Tin Cửa Hàng",
     links: [
       { title: "Địa Chỉ: 86 Lê Thiệt, Phường Hoà Minh, Quận Liên Chiểu, TP. Đà Nẵng", href: "https://maps.app.goo.gl/xtErkxmAs9pYEY1B9" },
-      { title: "Giờ Mở Cửa: 08:00 - 20:00 mỗi ngày", href: "#" },
+      { title: "Giờ Mở Cửa: 08:00 - 22:00 mỗi ngày", href: "#" },
     ],
   },
   {
@@ -97,16 +99,11 @@ export function Footer() {
         </div>
         <div className="mb-20 mt-24 flex flex-wrap items-end items-center justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href="/" aria-label="Home">
-            <img
-              alt=""
-              src="https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/457665580_122171676452234912_5246027867796834543_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ITkvhoc1YZYQ7kNvgESs7AJ&_nc_ht=scontent-atl3-1.xx&oh=00_AYA9Qt-FkN7WR7swqPX37vg152kTUHBicaKHyGCGIQpt2A&oe=66D76D3E"
-              width={50}
-              height={30}
-              className="rounded-full"
-            />
+            
+            <Image src={logo} alt="Logo" width={50} height={30} className="rounded-full object-cover" />
           </Link>
           <p className="text-sm text-neutral-700">
-            © Da Nang Campers {new Date().getFullYear()}
+            © ĐiĐi Camping {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>

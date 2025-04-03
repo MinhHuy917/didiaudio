@@ -264,7 +264,7 @@ export default function Process() {
 
       <Values />
 
-      <ContactSection />
+      {/* <ContactSection /> */}
     </>
   )
 }

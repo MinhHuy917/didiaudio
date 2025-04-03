@@ -2,210 +2,252 @@
 
 import React, { useState } from 'react'
 
+import leu2 from '/src/images/leu2.jpg'
+import leu4 from '/src/images/leu4.jpg'
+import leu6 from '/src/images/leu6.jpg'
+import leu8 from '/src/images/leu8.jpg'
+import cachnhiet from '/src/images/cachnhiet.jpg'
+import thamdangoai from '/src/images/thamdangoai.jpg'
+import goihoi from '/src/images/goihoi.jpg'
+import ghe from '/src/images/ghe.jpg'
+import ban from '/src/images/ban.jpg'
+import tang from '/src/images/tang.jpg'
+import loa from '/src/images/loa.jpg'
+import densinhhoat from '/src/images/densinhhoat.jpg'
+import dendeban from '/src/images/dendeban.jpg'
+import dendoidau from '/src/images/dendoidau.jpg'
+import dencamtay from '/src/images/dencamtay.jpg'
+import denled from '/src/images/denled.jpg'
+import denngoisao from '/src/images/denngoisao.jpg'
+import bepnuong from '/src/images/bepnuong.jpg'
+import bepcui from '/src/images/bepcui.jpg'
+import bepgas from '/src/images/bepgas.jpg'
+import bonoi from '/src/images/bonoi.jpg'
+import thungda25L from '/src/images/thungda25L.jpg'
+
+
 type Product = {
   id: number
   name: string
-  image: string
+  catalogue: string
+  image: any
   price: number
   quantity: number
 }
 
 const ProductList: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([
-    // Lều 2,4,6,10.. & Lều chữ A, Lều thay đồ free cách nhiệt kèm theo
     {
       id: 1,
-      name: 'Lều 2 Naturehike',
+      name: 'Lều 2 ',
+      catalogue: '(1m4x2m)',
       image:
-        'https://bizweb.dktcdn.net/thumb/large/100/163/023/products/82a14b24-1df7-4c36-85e8-02eae721c1ef.jpg?v=1711087412123',
-      price: 599,
+      leu2.src,
+      price: 60,
       quantity: 1,
     },
     {
-      id: 1,
-      name: 'Lều 4 Naturehike',
+      id: 2,
+      name: 'Lều 4',
+      catalogue: '(2mx2m)',
       image:
-        'https://bizweb.dktcdn.net/thumb/large/100/163/023/products/fer02807.jpg?v=1696578557973',
-      price: 599,
+        leu4.src,
+      price: 80,
       quantity: 1,
     },
     {
-      id: 1,
-      name: 'Lều 6 Euruka',
+      id: 3,
+      name: 'Lều 6',
+      catalogue: '(3mx2m7)',
       image:
-        'https://bizweb.dktcdn.net/thumb/large/100/163/023/products/16cb6bc3-0340-4a05-b9b5-6af0ca5cf55f.jpg?v=1651891736957',
-      price: 599,
+        leu6.src,
+      price: 140,
       quantity: 1,
     },
     {
-      id: 1,
-      name: 'Lều 10 bear',
-      image: 'https://www.leudulich.vn/upload/sanpham3/Nnay2sCa2P.jpg',
-      price: 599,
+      id: 4,
+      name: 'Lều 8',
+      catalogue: '(4mx2m)',
+      image: leu8.src,
+      price: 180,
       quantity: 1,
     },
+    
     {
       id: 3,
       name: 'Cách nhiệt',
+      catalogue: '(2mx2m - Miễn phí khi thuê cùng lều)',
       image:
-        'https://salt.tikicdn.com/ts/product/c7/85/de/81fb45fc53257b438e8ce17719a41401.jpg',
-      price: 999,
+      cachnhiet.src,
+      price: 0,
+      quantity: 1,
+    },
+    {
+      id: 2,
+      name: 'Gối hơi',
+      catalogue: '(1m4x2m - Miễn phí khi thuê cùng lều)',
+      image:
+        goihoi.src,
+      price: 0,
       quantity: 1,
     },
     {
       id: 3,
-      name: 'Thảm lót lều',
+      name: 'Thảm dã ngoại',
+      catalogue: '(2m1x2m)',
       image:
-        'https://www.nature-hike.vn/wp-content/uploads/2019/10/Untitled-1.jpg',
-      price: 999,
+        thamdangoai.src,
+      price: 20,
       quantity: 1,
     },
+    
+   
+
+    // Bàn ghế dã ngoại
+    {
+      id: 3,
+      name: 'Ghế mặt trăng',
+      catalogue: '(47cmx47cmx68cm)',
+      image:
+        ghe.src,
+      price: 15,
+      quantity: 1,
+    },
+    {
+      id: 3,
+      name: 'Bàn nhôm',
+      catalogue: '90x60',
+      image:
+        ban.src,
+      price: 40,
+      quantity: 1,
+    },
+
     // Tăng
     {
       id: 2,
-      name: 'Tăng 4-6 người',
+      name: 'Tăng 4m5x4m5 (kèm 2 trụ)',
+      catalogue: '(1m4x2m)',
       image:
-        'https://bizweb.dktcdn.net/thumb/large/100/163/023/products/nh20tm006-5-720x-jpeg-c92b99f1-dc83-461a-95db-d394bfde89d0.jpg?v=1624181023147',
-      price: 2499,
+        tang.src,
+      price: 60,
       quantity: 1,
     },
-    {
-      id: 2,
-      name: 'Tăng 8-12 người',
-      image:
-        'https://bizweb.dktcdn.net/thumb/large/100/163/023/products/dji-0459.jpg?v=1720436765893',
-      price: 2499,
-      quantity: 1,
-    },
-
-    // Bàn ghế dã ngoại
-
-    {
-      id: 3,
-      name: 'Bàn Naturehike',
-      image:
-        'https://bizweb.dktcdn.net/thumb/large/100/163/023/products/ban-gap-da-ngoai-mat-nhom-size-s-naturehike-portable-aluminium-folding-table-nh16z016-l-9536.png?v=1613908727157',
-      price: 999,
-      quantity: 1,
-    },
-    {
-      id: 3,
-      name: 'Bàn Gỗ Naturehike',
-      image:
-        'https://bizweb.dktcdn.net/thumb/large/100/163/023/products/ban-go-cuon-da-ngoai-vua-1713169777153.jpg?v=1722549925207',
-      price: 999,
-      quantity: 1,
-    },
-
-    {
-      id: 3,
-      name: 'Ghế Thổ Cẩm',
-      image:
-        'https://bizweb.dktcdn.net/thumb/large/100/163/023/products/f84801d1-a5cb-4bd7-892b-4d9e39628703.jpg?v=1651891272480',
-      price: 999,
-      quantity: 1,
-    },
-    {
-      id: 3,
-      name: 'Ghế Naturehike',
-      image:
-        'https://bizweb.dktcdn.net/thumb/large/100/163/023/products/cho-thue-ghe-da-ngoai-vintage.jpg?v=1715846303690',
-      price: 999,
-      quantity: 1,
-    },
+   
+  
 
     // Đèn lều , đèn trang trí
     {
       id: 3,
-      name: 'Đèn Lều',
+      name: 'Đèn Sinh Hoạt',
+      catalogue: '(Kèm 2 pin sạc đầy, chiếu sáng 4-6h)',
       image:
-        'https://bizweb.dktcdn.net/thumb/large/100/163/023/products/56f128a0-fc99-4c0d-b254-fa1294cc354f.jpg?v=1652109909667',
-      price: 999,
+        densinhhoat.src,
+      price: 20,
       quantity: 1,
     },
     {
       id: 3,
-      name: 'Đèn vintage',
+      name: 'Đèn để bàn',
+      catalogue: '(Đã sạc pin 4-5h chiếu sáng)',
       image:
-        'https://thueleudulich.com/wp-content/uploads/2016/05/cho-thue-den-long-vintage.jpeg',
-      price: 999,
+        dendeban.src,
+      price: 15,
       quantity: 1,
     },
     {
       id: 3,
-      name: 'Đèn trang trí',
+      name: 'Đèn cầm tay',
+      catalogue: '(Thời gian chiếu sáng 4-6h)',
       image:
-        'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRjafxxrWZBLyRGHeFDSAH-LcXIxfNFrcEtSy3RN45JCO0aEBEzGZ-id7S_8CvoyvOUGvaatZ_SAdufB5KipOfQtdlb9ljoNcEPwpW3EJs&usqp=CAc',
-      price: 999,
+        dencamtay.src,
+      price: 15,
+      quantity: 1,
+    },
+    {
+      id: 3,
+      name: 'Đèn đội đầu',
+      catalogue: '(Đã sạc pin 6-10h chiếu sáng)',
+      image:
+        dendoidau.src,
+      price: 10,
       quantity: 1,
     },
     {
       id: 3,
       name: 'Đèn ngôi sao',
+      catalogue: '(Dài 4m, đèn dùng 3 pin con thỏ, chưa kèm pin)',
       image:
-        'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSRyHOSKrdEjjfzhA9CG9X4s5IS9fU0V1teJ1aCaqQM2PMQgGCLLW03KfE2e8ha77jkCAzxwob1CQcAWljHiUnGS9zgdVkaqADmTCKQnmp_b9Fy1cl_QueK&usqp=CAc',
-      price: 999,
+        denngoisao.src,
+      price: 20,
       quantity: 1,
     },
 
-    // Bếp   & dụng cụ nấu
+    {
+      id: 3,
+      name: 'Dây đèn Led ',
+      catalogue: '(Dài 6m, đèn dùng 3 pin con thỏ, chưa kèm pin)',
+      image:
+        denled.src,
+      price: 10,
+      quantity: 1,
+    },
+    {
+      id: 3,
+      name: 'Loa mini vintage',
+      catalogue: '(Thời gian sử dụng: 6-10h liên tục )',
+      image:
+        loa.src,
+      price: 50,
+      quantity: 1,
+    },
     {
       id: 3,
       name: 'Bếp nướng',
-      image:
-        'https://armyhaus.com/wp-content/uploads/2020/03/bep-nuong-campingmoon-mt3-1.jpg',
-      price: 999,
+      catalogue: '(73cmx21,5cmx20cm)',
+      image: bepnuong.src,
+      price: 40,
       quantity: 1,
     },
     {
       id: 3,
-      name: 'Bếp gas dã ngoại',
+      name: 'Bếp củi',
+      catalogue: '(125x125cmx160mm)',
       image:
-        'https://product.hstatic.net/200000467803/product/fanfan-bep-gas-da-ngoai-gap-gon-ms-100-1_77c8240ccd3f45c0a39087352ed65b86.jpg',
-      price: 999,
-      quantity: 1,
-    },
-    // Phụ kiện cắm trại (Khăn trải bàn thổ cẩm, Đèn,quạt,loa nghe nhạc,túi ngủ,võng,..)
-    {
-      id: 3,
-      name: 'Khăn trải bàn thổ cẩm',
-      image: '      https://philong.com.vn/media/product/27880-j2.jpg',
-      price: 999,
+        bepcui.src,
+      price: 30,
       quantity: 1,
     },
     {
       id: 3,
-      name: 'Khăn trải bàn thổ cẩm',
+      name: 'Bếp gas',
+      catalogue: '(Kèm bình gas mới)',
       image:
-        'https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lfvct6n8nc6i9d',
-      price: 999,
+        bepgas.src,
+      price: 50,
       quantity: 1,
     },
     {
       id: 3,
-      name: 'Quạt tích điện',
+      name: 'Bộ nồi',
+      catalogue: '(ấm, chảo, nồi)',
       image:
-        'https://product.hstatic.net/1000217316/product/quat-treo-da-nang-naturehike-nh21zm003_c959ec911ceb40a3910705897950cc47_master.jpg',
-      price: 999,
+        bonoi.src,
+      price: 30,
       quantity: 1,
     },
     {
       id: 3,
-      name: 'Túi ngủ',
+      name: 'Thùng đá',
+      catalogue: '(25L)',
       image:
-        'https://www.nature-hike.vn/wp-content/uploads/2018/07/tu%CC%81i-ngu%CC%89-va%CC%86n-pho%CC%80ng-LV180.jpg',
-      price: 999,
-      quantity: 1,
-    },
-    {
-      id: 3,
-      name: 'Võng',
-      image:
-        'https://product.hstatic.net/200000832593/product/vong_doi_sieu_nhe_naturehike_ultralight_double_person_hammock-mau_cam_f1ea42b484b84010b35026e84436fddd_master.jpg',
-      price: 999,
+        thungda25L.src,
+      price: 40,
       quantity: 1,
     },
   ])
+
+  
 
   const handleQuantityChange = (id: number, delta: number) => {
     setProducts((prevProducts) =>
@@ -226,18 +268,18 @@ const ProductList: React.FC = () => {
   return (
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
       <table className="w-full text-left text-sm text-gray-500 rtl:text-right dark:text-gray-400">
-        <thead className="bg-gray-50 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
+        <thead className="bg-gray-50 text-xs uppercase text-gray-700 dark:bg-[#EFE9DA] border-b border-[#6A8F6B] dark:text-gray-400">
           <tr>
             <th scope="col" className="px-16 py-3">
               <span className="sr-only">Image</span>
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className="px-0 text-[#1F3329] text-lg py-3">
               Sản phẩm
             </th>
             {/* <th scope="col" className="px-6 py-3">
               Qty
             </th> */}
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className="px-0 text-[#1F3329] text-lg py-3">
               Giá
             </th>
             {/* <th scope="col" className="px-6 py-3">
@@ -249,17 +291,18 @@ const ProductList: React.FC = () => {
           {products.map((product) => (
             <tr
               key={product.id}
-              className="border-b bg-white hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600"
+              className="border-b bg-white border-[#6A8F6B] dark:bg-[#EFE9DA] "
             >
               <td className="p-4">
                 <img
                   src={product.image}
-                  className="h-20 w-20 md:h-32 md:w-32 rounded-md"
+                  className="h-20 w-20 md:h-32 md:w-32 rounded-md object-cover "
                   alt={product.name}
                 />
               </td>
-              <td className="font-[system-ui] px-6 py-4 font-semibold text-gray-900 dark:text-white">
+              <td className="font-[system-ui] px-0 py-4 font-semibold text-gray-900 dark:text-[#1F3329]">
                 {product.name}
+                <p className="text-sm text-gray-600 dark:text-[#2D4B3A]">{product.catalogue}</p>
               </td>
 
               {/* // Chọn số lượng lều thuê và gửi tới mail  */}
@@ -317,7 +360,7 @@ const ProductList: React.FC = () => {
                   </button>
                 </div>
               </td> */}
-              <td className="font-[system-ui] px-6 py-4 font-semibold text-gray-900 dark:text-white">
+              <td className="font-[system-ui] px-2 py-4 font-semibold text-gray-900 dark:text-[#1F3329]">
                 {product.price}k/ngày
               </td>
               {/* <td className="px-6 py-4">

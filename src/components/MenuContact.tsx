@@ -17,7 +17,7 @@ export default function MenuContact() {
         font-sans text-sm font-semibold leading-6 text-gray-900 md:bottom-28 md:right-14
         `}
       >
-        <div className="flex items-center justify-center rounded-full bg-yellow-500 p-1.5 font-bold text-white">
+        <div className="flex items-center justify-center rounded-full bg-[#E5C07B] p-1.5 font-bold text-white">
           {isMenu.visible ? (
             <svg
               width="34"
@@ -115,7 +115,7 @@ export default function MenuContact() {
                 />
               </Link>
               <a
-                href="//m.me/danangcampers"
+                href="https://m.me/ThueLeuCamTraiDaNang"
                 target="_blank"
                 className="group relative flex items-center gap-x-6 rounded-lg p-2 pl-0 hover:bg-gray-50"
               >

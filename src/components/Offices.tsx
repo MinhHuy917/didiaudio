@@ -16,9 +16,7 @@ function Office({
         invert ? 'text-neutral-300' : 'text-neutral-600',
       )}
     >
-      <strong className={invert ? 'text-white' : 'text-neutral-950'}>
         {name}
-      </strong>
       <br />
       {children}
     </address>
@@ -32,7 +30,7 @@ export function Offices({
   return (
     <ul role="list" {...props}>
       <li>
-        <Office name="Đà Nẵng" invert={invert}>
+        <Office name="Đà Nẵng" >
           Quận Liên Chiểu
           <br />
           86, Đường Lê Thiệt

@@ -51,7 +51,7 @@ export default async function SuDung() {
         <section className="mb-6">
             <h2 className="text-2xl font-semibold mb-2">4. Đền Bù Thiệt Hại:</h2>
             <p>
-                Nếu lều hoặc các thiết bị bị hư hỏng, cháy nổ hoặc mất mát trong thời gian thuê, khách hàng sẽ phải bồi thường theo chính sách đền bù của Đà Nẵng Campers. Chi phí đền bù sẽ được tính dựa trên mức độ thiệt hại và giá trị của thiết bị.
+                Nếu lều hoặc các thiết bị bị hư hỏng, cháy nổ hoặc mất mát trong thời gian thuê, khách hàng sẽ phải bồi thường theo giá trị của sản phẩm. Chi phí đền bù sẽ được tính dựa trên mức độ thiệt hại và giá trị của thiết bị.
             </p>
         </section>
         
@@ -71,7 +71,7 @@ export default async function SuDung() {
 
         <section className="mt-6">
             <p className="font-semibold">
-                Nếu có bất kỳ câu hỏi nào về quy định sử dụng lều hoặc chính sách đền bù, xin vui lòng liên hệ với Đà Nẵng Campers để được hỗ trợ.
+                Nếu có bất kỳ câu hỏi nào về quy định sử dụng lều hoặc chính sách đền bù, xin vui lòng liên hệ với ĐiĐi Camping để được hỗ trợ.
             </p>
             <p className="mt-2">
                 Chúng tôi mong rằng quý khách hàng sẽ tuân thủ các quy định trên để đảm bảo việc sử dụng lều được an toàn và thuận lợi. Xin cảm ơn sự hợp tác và tin tưởng của quý khách!

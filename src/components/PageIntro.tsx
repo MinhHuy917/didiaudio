@@ -30,7 +30,7 @@ export function PageIntro({
               centered && 'mx-auto',
             )}
           >
-            <p className='!font-[system-ui]'>
+            <p className='!font-[system-ui] '>
             {title}
             </p>
           </span>

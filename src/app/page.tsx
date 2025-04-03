@@ -14,9 +14,9 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-24 pb-24 sm:mt-32 sm:pb-32 md:mt-40 md:pb-40 !pl-0">
-        <PageIntro eyebrow="Đà Nẵng Campers" title="">
+        <PageIntro eyebrow="" title="ĐiĐi Camping">
           <h1 className="font-[system-ui] text-3xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-5xl">
-          Cho Thuê Lều và Đồ Cắm Trại Chất Lượng Cao Tại Đà Nẵng - Giá Cả Hợp Lý
+          Cho thuê lều và phụ kiện cắm trại ở Đà Nẵng
           </h1>
         </PageIntro>
       </Container>

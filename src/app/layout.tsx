@@ -6,8 +6,8 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: 'Đà Nẵng Campers',
-    default: 'Đà Nẵng Campers',
+    template: '%s | ĐiĐi Camping',
+    default: 'ĐiĐi Camping',
   },
 }
 
