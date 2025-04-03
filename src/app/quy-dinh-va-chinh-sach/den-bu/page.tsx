@@ -31,7 +31,7 @@ export default async function DenBu() {
               <section className="mb-6">
                 <h2 className="text-2xl font-semibold mb-2">2. Chính Sách Hủy Đặt:</h2>
                 <p>
-                  Hủy ít nhất 24 giờ trước ngày sử dụng để nhận lại 50% số tiền đặt cọc. Sau thời gian này, phí hủy không được hoàn trả.
+                Quý khách cần hủy đặt chỗ trước 12:00 trưa ngày thứ Sáu để được hoàn lại 50% số tiền đặt cọc. Nếu hủy sau thời điểm này, phí hủy sẽ không được hoàn trả.
                 </p>
               </section>
 
