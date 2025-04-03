@@ -35,7 +35,7 @@ export default async function HuongDanDungLeu() {
         <iframe className='mt-6' width="100%" height="500px"
          src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FThueLeuCamTraiDaNang%2Fvideos%2F641412221870938%2F&show_text=false&width=560&t=0"  title="YouTube video player"
           frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       
       
       </PageIntro>
