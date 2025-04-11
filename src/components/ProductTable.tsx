@@ -31,6 +31,7 @@ import thungdanho from '/src/images/thungda6.8L.jpeg'
 import cafe from '/src/images/thungda6.8L.jpg'
 import tra from '/src/images/thungda6.8L.jpg'
 import ruou from '/src/images/thungda6.8L.jpg'
+import Image from 'next/image'
 
 type Product = {
   id: number
@@ -70,9 +71,9 @@ const ProductList: React.FC = () => {
     { id: 25, name: 'Thùng đá nhỏ', catalogue: '(8L)', image: thungdanho.src, price: 20, quantity: 1 },
     { id: 26, name: 'Thùng đá lớn', catalogue: '(25L)', image: thungda25L.src, price: 40, quantity: 1 },
     { id: 27, name: 'Cafe phin pha sẵn', catalogue: '300ml', image: thungda25L.src, price: 25, quantity: 1 },
-    { id: 27, name: 'Cafe phin pha sẵn', catalogue: '300ml', image: thungda25L.src, price: 25, quantity: 1 },
-    { id: 28, name: 'Rượu táo mèo ngâm', catalogue: '500ml', image: thungda25L.src, price: 80, quantity: 1 },
-    { id: 29, name: 'Mật ong rừng Làng Aur', catalogue: '750ml', image: thungda25L.src, price: 60, quantity: 1 },
+    { id: 28, name: 'Cafe phin pha sẵn', catalogue: '300ml', image: thungda25L.src, price: 25, quantity: 1 },
+    { id: 29, name: 'Rượu táo mèo ngâm', catalogue: '500ml', image: thungda25L.src, price: 80, quantity: 1 },
+    { id: 30, name: 'Mật ong rừng Làng Aur', catalogue: '750ml', image: thungda25L.src, price: 60, quantity: 1 },
   ]
 
   const renderSection = (title: string, filter: (product: Product) => boolean) => {
@@ -90,10 +91,12 @@ const ProductList: React.FC = () => {
               key={product.id}
               className="rounded-2xl bg-white dark:bg-[#EFE9DA] shadow hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col"
             >
-              <img
-                src={product.image}
-                alt={product.name}
-                className="h-36 sm:h-40 md:h-48 w-full object-cover"
+              <Image
+                src="/images/product.jpg"
+                alt="Product"
+                width={200}
+                height={200}
+                priority // hoặc dùng loading="lazy" nếu cần lazy load
               />
               <div className="p-4 flex-1 flex flex-col justify-between">
                 <div>
@@ -135,64 +138,64 @@ const ProductList: React.FC = () => {
       {renderSection('🍹 Nước uống', (p) => ['Cafe', 'Trà', 'Rượu'].some(keyword => p.name.includes(keyword)))}
 
       <div className="text-center mt-20 text-[#1F3329] bg-[#FAF9F7] py-12 px-6 rounded-2xl shadow-inner">
-  <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">🍽️ DỊCH VỤ SET UP BBQ & ĐỒ ĂN CAMPING</h2>
-  <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed text-[#3E5245]">
-    Thưởng thức bữa ăn ngoài trời phong phú, tươi ngon và tiện lợi. Mọi món ăn được sơ chế sẵn, đóng gói vệ sinh, chỉ việc nướng và thưởng thức cùng bạn bè!
-  </p>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">🍽️ DỊCH VỤ SET UP BBQ & ĐỒ ĂN CAMPING</h2>
+        <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed text-[#3E5245]">
+          Thưởng thức bữa ăn ngoài trời phong phú, tươi ngon và tiện lợi. Mọi món ăn được sơ chế sẵn, đóng gói vệ sinh, chỉ việc nướng và thưởng thức cùng bạn bè!
+        </p>
 
-  
 
-  <div className="mt-10 grid md:grid-cols-3 gap-8 text-left max-w-6xl mx-auto">
-    {/* Set Hải Sản */}
-    <div className="bg-white rounded-2xl shadow-lg p-6 border border-[#E6E4DF]">
-      <h3 className="text-xl font-bold mb-3 text-[#1F3329]">🦐 Set Hải Sản</h3>
-      <ul className="list-disc pl-5 space-y-1 text-[#3E5245] text-sm leading-relaxed">
-        <li>Hàu sữa phô mai nướng</li>
-        <li>Ốc hương xào bơ tỏi</li>
-        <li>Chip Chip hấp sả</li>
-        <li>Sò mai mỡ hành</li>
-        <li>Cá dìm nướng giấy bạc</li>
-        <li>Tôm nướng muối ớt</li>
-        <li>Trái cây tráng miệng: Dưa hấu, Nho</li>
-      </ul>
-      <p className="mt-4 text-[#DD6B20] font-semibold">💰 150.000đ/người</p>
-    </div>
 
-    {/* Set Thịt Nướng */}
-    <div className="bg-white rounded-2xl shadow-lg p-6 border border-[#E6E4DF]">
-      <h3 className="text-xl font-bold mb-3 text-[#1F3329]">🍖 Set Thịt Nướng</h3>
-      <ul className="list-disc pl-5 space-y-1 text-[#3E5245] text-sm leading-relaxed">
-        <li>Gà nướng nguyên con ướp mật ong</li>
-        <li>Ba chỉ heo ướp BBQ</li>
-        <li>Nem nướng</li>
-        <li>Rau củ nướng: bắp, đậu bắp, ớt chuông</li>
-        <li>Bánh mì bơ tỏi</li>
-        <li>Xà lách trộn</li>
-        <li>Trái cây: Thơm, Dưa lưới</li>
-      </ul>
-      <p className="mt-4 text-[#DD6B20] font-semibold">💰 130.000đ/người</p>
-    </div>
+        <div className="mt-10 grid md:grid-cols-3 gap-8 text-left max-w-6xl mx-auto">
+          {/* Set Hải Sản */}
+          <div className="bg-white rounded-2xl shadow-lg p-6 border border-[#E6E4DF]">
+            <h3 className="text-xl font-bold mb-3 text-[#1F3329]">🦐 Set Hải Sản</h3>
+            <ul className="list-disc pl-5 space-y-1 text-[#3E5245] text-sm leading-relaxed">
+              <li>Hàu sữa phô mai nướng</li>
+              <li>Ốc hương xào bơ tỏi</li>
+              <li>Chip Chip hấp sả</li>
+              <li>Sò mai mỡ hành</li>
+              <li>Cá dìm nướng giấy bạc</li>
+              <li>Tôm nướng muối ớt</li>
+              <li>Trái cây tráng miệng: Dưa hấu, Nho</li>
+            </ul>
+            <p className="mt-4 text-[#DD6B20] font-semibold">💰 150.000đ/người</p>
+          </div>
 
-    {/* Set Thập Cẩm */}
-    <div className="bg-white rounded-2xl shadow-lg p-6 border border-[#E6E4DF]">
-      <h3 className="text-xl font-bold mb-3 text-[#1F3329]">🍢 Set Thập Cẩm</h3>
-      <ul className="list-disc pl-5 space-y-1 text-[#3E5245] text-sm leading-relaxed">
-        <li>Gà nướng nguyên con</li>
-        <li>Ốc hương xào bơ tỏi</li>
-        <li>Chip Chip hấp sả</li>
-        <li>Ba chỉ heo ướp</li>
-        <li>Rau củ nướng</li>
-        <li>Xôi lá cẩm hoặc cơm nắm mè</li>
-        <li>Trái cây: Dưa hấu, Thanh long</li>
-      </ul>
-      <p className="mt-4 text-[#DD6B20] font-semibold">💰 140.000đ/người</p>
-    </div>
-  </div>
+          {/* Set Thịt Nướng */}
+          <div className="bg-white rounded-2xl shadow-lg p-6 border border-[#E6E4DF]">
+            <h3 className="text-xl font-bold mb-3 text-[#1F3329]">🍖 Set Thịt Nướng</h3>
+            <ul className="list-disc pl-5 space-y-1 text-[#3E5245] text-sm leading-relaxed">
+              <li>Gà nướng nguyên con ướp mật ong</li>
+              <li>Ba chỉ heo ướp BBQ</li>
+              <li>Nem nướng</li>
+              <li>Rau củ nướng: bắp, đậu bắp, ớt chuông</li>
+              <li>Bánh mì bơ tỏi</li>
+              <li>Xà lách trộn</li>
+              <li>Trái cây: Thơm, Dưa lưới</li>
+            </ul>
+            <p className="mt-4 text-[#DD6B20] font-semibold">💰 130.000đ/người</p>
+          </div>
 
-  <p className="mt-10 text-[#1F3329] text-base md:text-lg font-medium">
-    📅 <strong>Đặt trước tối thiểu 24h</strong> để đảm bảo chất lượng. Nhận chuẩn bị theo yêu cầu riêng cho nhóm từ 5 người trở lên.
-  </p>
-</div>
+          {/* Set Thập Cẩm */}
+          <div className="bg-white rounded-2xl shadow-lg p-6 border border-[#E6E4DF]">
+            <h3 className="text-xl font-bold mb-3 text-[#1F3329]">🍢 Set Thập Cẩm</h3>
+            <ul className="list-disc pl-5 space-y-1 text-[#3E5245] text-sm leading-relaxed">
+              <li>Gà nướng nguyên con</li>
+              <li>Ốc hương xào bơ tỏi</li>
+              <li>Chip Chip hấp sả</li>
+              <li>Ba chỉ heo ướp</li>
+              <li>Rau củ nướng</li>
+              <li>Xôi lá cẩm hoặc cơm nắm mè</li>
+              <li>Trái cây: Dưa hấu, Thanh long</li>
+            </ul>
+            <p className="mt-4 text-[#DD6B20] font-semibold">💰 140.000đ/người</p>
+          </div>
+        </div>
+
+        <p className="mt-10 text-[#1F3329] text-base md:text-lg font-medium">
+          📅 <strong>Đặt trước tối thiểu 24h</strong> để đảm bảo chất lượng. Nhận chuẩn bị theo yêu cầu riêng cho nhóm từ 5 người trở lên.
+        </p>
+      </div>
 
     </div>
   )
