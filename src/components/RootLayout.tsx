@@ -118,7 +118,7 @@ function NavigationItem({
   )
 }
 
-function Navigation() {
+export function Navigation() {
   return (
     <nav className="mt-px font-display text-3xl lg:text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
@@ -140,6 +140,20 @@ function Navigation() {
     </nav>
   )
 }
+
+export function NavigationV2() {
+  return (
+    <nav className="mt-2 space-y-2 font-display text-white text-2xl lg:text-4xl font-semibold tracking-tight">
+      <NavigationRow>
+        <NavigationItem href="/dia-diem-cam-trai">Địa điểm cắm trại Đà Nẵng</NavigationItem>
+      </NavigationRow>
+      <NavigationRow>
+        <NavigationItem href="/huong-dan-dung-leu">Hướng dẫn dựng lều</NavigationItem>
+      </NavigationRow>
+    </nav>
+  )
+}
+
 
 function RootLayoutInner({ children }: { children: React.ReactNode }) {
   let panelId = useId()

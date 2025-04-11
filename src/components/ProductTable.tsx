@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 
 import leu2 from '/src/images/leu2.jpg'
 import leu4 from '/src/images/leu4.jpg'
@@ -8,6 +8,7 @@ import leu6 from '/src/images/leu6.jpg'
 import leu8 from '/src/images/leu8.jpg'
 import cachnhiet from '/src/images/cachnhiet.jpg'
 import thamdangoai from '/src/images/thamdangoai.jpg'
+import thamvintage from '/src/images/thamvintage.jpg'
 import goihoi from '/src/images/goihoi.jpg'
 import ghe from '/src/images/ghe.png'
 import ban from '/src/images/ban.png'
@@ -24,7 +25,12 @@ import bepcui from '/src/images/bepcui.jpg'
 import bepgas from '/src/images/bepgas.jpg'
 import bonoi from '/src/images/bonoi.jpg'
 import thungda25L from '/src/images/thungda25L.jpg'
-
+import sacduphong from '/src/images/sacduphong.jpeg'
+import tang3m from '/src/images/tang3m.jpg'
+import thungdanho from '/src/images/thungda6.8L.jpeg'
+import cafe from '/src/images/thungda6.8L.jpg'
+import tra from '/src/images/thungda6.8L.jpg'
+import ruou from '/src/images/thungda6.8L.jpg'
 
 type Product = {
   id: number
@@ -36,334 +42,158 @@ type Product = {
 }
 
 const ProductList: React.FC = () => {
-  const [products, setProducts] = useState<Product[]>([
-    {
-      id: 1,
-      name: 'Lều 2 ',
-      catalogue: '(1m4x2m)',
-      image:
-        leu2.src,
-      price: 60,
-      quantity: 1,
-    },
-    {
-      id: 2,
-      name: 'Lều 4',
-      catalogue: '(2mx2m)',
-      image:
-        leu4.src,
-      price: 80,
-      quantity: 1,
-    },
-    {
-      id: 3,
-      name: 'Lều 6',
-      catalogue: '(3mx2m7)',
-      image:
-        leu6.src,
-      price: 140,
-      quantity: 1,
-    },
-    {
-      id: 4,
-      name: 'Lều 8',
-      catalogue: '(4mx2m)',
-      image: leu8.src,
-      price: 180,
-      quantity: 1,
-    },
+  const products: Product[] = [
+    { id: 1, name: 'Lều 2 ', catalogue: '(1m4x2m)', image: leu2.src, price: 60, quantity: 1 },
+    { id: 2, name: 'Lều 4', catalogue: '(2mx2m)', image: leu4.src, price: 80, quantity: 1 },
+    { id: 3, name: 'Lều 6', catalogue: '(3mx2m7)', image: leu6.src, price: 140, quantity: 1 },
+    { id: 4, name: 'Lều 8', catalogue: '(4mx2m)', image: leu8.src, price: 180, quantity: 1 },
+    { id: 5, name: 'Cách nhiệt', catalogue: '(Miễn phí khi thuê lều)', image: cachnhiet.src, price: 0, quantity: 1 },
+    { id: 6, name: 'Gối hơi', catalogue: '(Miễn phí khi thuê lều)', image: goihoi.src, price: 0, quantity: 1 },
+    { id: 7, name: 'Ghế mặt trăng', catalogue: '(tải trọng 120kg)', image: ghe.src, price: 20, quantity: 1 },
+    { id: 8, name: 'Bàn nhôm', catalogue: '(90cmx60cm)', image: ban.src, price: 40, quantity: 1 },
+    { id: 9, name: 'Tăng 6-8 người', catalogue: '(3mx3m, kèm 2 trụ)', image: tang3m.src, price: 50, quantity: 1 },
+    { id: 10, name: 'Tăng 12-16 người', catalogue: '(4m5x4m5, kèm 2 trụ)', image: tang.src, price: 100, quantity: 1 },
+    { id: 11, name: 'Thảm dã ngoại', catalogue: '(2m1x2m)', image: thamdangoai.src, price: 25, quantity: 1 },
+    { id: 12, name: 'Thảm vintage', catalogue: '(2mx2m)', image: thamvintage.src, price: 40, quantity: 1 },
+    { id: 13, name: 'Đèn Sinh Hoạt', catalogue: '(Thời gian chiếu sáng 4-6h, đã kèm pin)', image: densinhhoat.src, price: 30, quantity: 1 },
+    { id: 14, name: 'Đèn Vintage', catalogue: '(Thời gian chiếu sáng 8h-10h)', image: dendeban.src, price: 20, quantity: 1 },
+    { id: 15, name: 'Đèn cầm tay', catalogue: '(Thời gian chiếu sáng 7-9h, đã sạc đầy pin)', image: dencamtay.src, price: 15, quantity: 1 },
+    { id: 16, name: 'Đèn đội đầu', catalogue: '(Thời gian chiếu sáng 8-10h, đã sạc đầy pin)', image: dendoidau.src, price: 10, quantity: 1 },
+    { id: 17, name: 'Đèn ngôi sao', catalogue: '(Thời gian chiếu sáng 7-8h, đã kèm pin)', image: denngoisao.src, price: 30, quantity: 1 },
+    { id: 18, name: 'Dây đèn Led ', catalogue: '(Thời gian chiếu sáng 7-8h, đã kèm pin)', image: denled.src, price: 20, quantity: 1 },
+    { id: 19, name: 'Loa Vintage', catalogue: '(Thời gian sử dụng 7-8h liên tục, đã kèm pin)', image: loa.src, price: 50, quantity: 1 },
+    { id: 20, name: 'Sạc dự phòng', catalogue: 'Dung lượng 20.000 mAh đã sạc đầy', image: sacduphong.src, price: 30, quantity: 1 },
+    { id: 21, name: 'Bếp nướng', catalogue: '(73cmx22cmx20cm, có kèm kẹp inox)', image: bepnuong.src, price: 40, quantity: 1 },
+    { id: 22, name: 'Bếp củi', catalogue: '(125x125cmx16cm)', image: bepcui.src, price: 30, quantity: 1 },
+    { id: 23, name: 'Bếp gas', catalogue: '(Chưa kèm gas)', image: bepgas.src, price: 50, quantity: 1 },
+    { id: 24, name: 'Bộ nồi', catalogue: '(ấm, chảo, nồi)', image: bonoi.src, price: 30, quantity: 1 },
+    { id: 25, name: 'Thùng đá nhỏ', catalogue: '(8L)', image: thungdanho.src, price: 20, quantity: 1 },
+    { id: 26, name: 'Thùng đá lớn', catalogue: '(25L)', image: thungda25L.src, price: 40, quantity: 1 },
+    { id: 27, name: 'Cafe phin pha sẵn', catalogue: '300ml', image: thungda25L.src, price: 25, quantity: 1 },
+    { id: 27, name: 'Cafe phin pha sẵn', catalogue: '300ml', image: thungda25L.src, price: 25, quantity: 1 },
+    { id: 28, name: 'Rượu táo mèo ngâm', catalogue: '500ml', image: thungda25L.src, price: 80, quantity: 1 },
+    { id: 29, name: 'Mật ong rừng Làng Aur', catalogue: '750ml', image: thungda25L.src, price: 60, quantity: 1 },
+  ]
 
-    {
-      id: 3,
-      name: 'Cách nhiệt',
-      catalogue: '(Miễn phí khi thuê lều)',
-      image:
-        cachnhiet.src,
-      price: 0,
-      quantity: 1,
-    },
-    {
-      id: 2,
-      name: 'Gối hơi',
-      catalogue: '(Miễn phí khi thuê lều)',
-      image:
-        goihoi.src,
-      price: 0,
-      quantity: 1,
-    },
-    {
-      id: 3,
-      name: 'Thảm dã ngoại',
-      catalogue: '(2m1x2m)',
-      image:
-        thamdangoai.src,
-      price: 20,
-      quantity: 1,
-    },
+  const renderSection = (title: string, filter: (product: Product) => boolean) => {
+    const sectionItems = products.filter(filter)
+    if (sectionItems.length === 0) return null
 
-
-
-    // Bàn ghế dã ngoại
-    {
-      id: 3,
-      name: 'Ghế mặt trăng',
-      catalogue: '(47cmx47cmx68cm, tải trọng 120kg)',
-      image:
-        ghe.src,
-      price: 15,
-      quantity: 1,
-    },
-    {
-      id: 3,
-      name: 'Bàn nhôm',
-      catalogue: '(90cmx60cm)',
-      image:
-        ban.src,
-      price: 40,
-      quantity: 1,
-    },
-
-    // Tăng
-    {
-      id: 2,
-      name: 'Tăng 4m5x4m5 (kèm 2 trụ)',
-      catalogue: '(1m4x2m)',
-      image:
-        tang.src,
-      price: 60,
-      quantity: 1,
-    },
-
-
-
-    // Đèn lều , đèn trang trí
-    {
-      id: 3,
-      name: 'Đèn Sinh Hoạt',
-      catalogue: '(Kèm 2 pin sạc đầy, chiếu sáng 4-6h)',
-      image:
-        densinhhoat.src,
-      price: 20,
-      quantity: 1,
-    },
-    {
-      id: 3,
-      name: 'Đèn để bàn',
-      catalogue: '(Thời gian chiếu sáng 4-6h)',
-      image:
-        dendeban.src,
-      price: 15,
-      quantity: 1,
-    },
-    {
-      id: 3,
-      name: 'Đèn cầm tay',
-      catalogue: '(Thời gian chiếu sáng 4-6h)',
-      image:
-        dencamtay.src,
-      price: 15,
-      quantity: 1,
-    },
-    {
-      id: 3,
-      name: 'Đèn đội đầu',
-      catalogue: '(Thời gian chiếu sáng 6-10h)',
-      image:
-        dendoidau.src,
-      price: 10,
-      quantity: 1,
-    },
-    {
-      id: 3,
-      name: 'Đèn ngôi sao',
-      catalogue: '(Dùng 3 viên pin con thỏ, đèn chưa kèm pin)',
-      image:
-        denngoisao.src,
-      price: 20,
-      quantity: 1,
-    },
-
-    {
-      id: 3,
-      name: 'Dây đèn Led ',
-      catalogue: '(Dùng 3 viên pin con thỏ, đèn chưa kèm pin)',
-      image:
-        denled.src,
-      price: 10,
-      quantity: 1,
-    },
-    {
-      id: 3,
-      name: 'Loa mini vintage',
-      catalogue: '(Thời gian sử dụng 6-10h liên tục)',
-      image:
-        loa.src,
-      price: 50,
-      quantity: 1,
-    },
-    {
-      id: 3,
-      name: 'Bếp nướng',
-      catalogue: '(73cmx22cmx20cm, có kèm kẹp inox gắp than)',
-      image: bepnuong.src,
-      price: 40,
-      quantity: 1,
-    },
-    {
-      id: 3,
-      name: 'Bếp củi',
-      catalogue: '(125x125cmx16cm)',
-      image:
-        bepcui.src,
-      price: 30,
-      quantity: 1,
-    },
-    {
-      id: 3,
-      name: 'Bếp gas',
-      catalogue: '(Kèm bình gas mới)',
-      image:
-        bepgas.src,
-      price: 50,
-      quantity: 1,
-    },
-    {
-      id: 3,
-      name: 'Bộ nồi',
-      catalogue: '(ấm, chảo, nồi)',
-      image:
-        bonoi.src,
-      price: 30,
-      quantity: 1,
-    },
-    {
-      id: 3,
-      name: 'Thùng đá',
-      catalogue: '(25L)',
-      image:
-        thungda25L.src,
-      price: 40,
-      quantity: 1,
-    },
-  ])
-
-
+    return (
+      <div className="mb-12">
+        <h3 className="text-xl sm:text-2xl font-bold text-[#1F3329] mb-5 font-sans tracking-wide">
+          {title}
+        </h3>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          {sectionItems.map((product) => (
+            <div
+              key={product.id}
+              className="rounded-2xl bg-white dark:bg-[#EFE9DA] shadow hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col"
+            >
+              <img
+                src={product.image}
+                alt={product.name}
+                className="h-36 sm:h-40 md:h-48 w-full object-cover"
+              />
+              <div className="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                  <h4 className="font-semibold text-sm md:text-base text-[#1F3329] leading-tight">
+                    {product.name}
+                  </h4>
+                  <p className="text-xs text-gray-600 dark:text-[#2D4B3A] mt-1">
+                    {product.catalogue}
+                  </p>
+                </div>
+                <div className="mt-3 text-sm md:text-base font-semibold text-[#1F3329]">
+                  {product.price === 0 ? (
+                    <span className="text-green-600">Miễn phí</span>
+                  ) : (
+                    <span className="text-orange-600">{product.price}k/ngày</span>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
 
   return (
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-      <table className="w-full text-left text-sm text-gray-500 rtl:text-right dark:text-gray-400">
-        <thead className="bg-gray-50 text-xs uppercase text-gray-700 dark:bg-[#EFE9DA] border-b border-[#6A8F6B] dark:text-gray-400">
-          <tr>
-            <th scope="col" className="px-16 py-3">
-              <span className="sr-only">Image</span>
-            </th>
-            <th scope="col" className="px-0 text-[#1F3329] text-lg py-3">
-              Sản phẩm
-            </th>
-            {/* <th scope="col" className="px-6 py-3">
-              Qty
-            </th> */}
-            <th scope="col" className="px-0 text-[#1F3329] text-lg py-3">
-              Giá
-            </th>
-            {/* <th scope="col" className="px-6 py-3">
-              Action
-            </th> */}
-          </tr>
-        </thead>
-        <tbody>
-          {products.map((product) => (
-            <tr
-              key={product.id}
-              className="border-b bg-white border-[#6A8F6B] dark:bg-[#EFE9DA] "
-            >
-              <td className="p-4">
-                <img
-                  src={product.image}
-                  className="h-20 w-20 md:h-32 md:w-32 rounded-md object-cover "
-                  alt={product.name}
-                />
-              </td>
-              <td className="font-[system-ui] px-0 py-4 font-semibold text-gray-900 dark:text-[#1F3329]">
-                {product.name}
-                <p className="text-sm text-gray-600 dark:text-[#2D4B3A]">{product.catalogue}</p>
-              </td>
+    <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 font-sans text-[#1F3329]">
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 tracking-wide">
+        🎪 BẢNG GIÁ THUÊ ĐỒ DÃ NGOẠI
+      </h2>
 
-              {/* // Chọn số lượng lều thuê và gửi tới mail  */}
-              {/* <td className="px-6 py-4">
-                <div className="flex items-center">
-                  <button
-                    className="me-3 inline-flex h-6 w-6 items-center justify-center rounded-full border border-gray-300 bg-white p-1 text-sm font-medium text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-                    type="button"
-                    onClick={() => handleQuantityChange(product.id, -1)}
-                  >
-                    <span className="sr-only">Decrease quantity</span>
-                    <svg
-                      className="h-3 w-3"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 18 2"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M1 1h16"
-                      />
-                    </svg>
-                  </button>
-                  <input
-                    type="number"
-                    className="block w-14 rounded-lg border border-gray-300 bg-gray-50 px-2.5 py-1 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-                    value={product.quantity}
-                    readOnly
-                  />
-                  <button
-                    className="ms-3 inline-flex h-6 w-6 items-center justify-center rounded-full border border-gray-300 bg-white p-1 text-sm font-medium text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-                    type="button"
-                    onClick={() => handleQuantityChange(product.id, 1)}
-                  >
-                    <span className="sr-only">Increase quantity</span>
-                    <svg
-                      className="h-3 w-3"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 18 18"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 1v16M1 9h16"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </td> */}
-              <td className="font-[system-ui] px-2 py-4 font-semibold text-gray-900 dark:text-[#1F3329]">
-                {product.price === 0 ? (
-                  <span className="text-green-500">Free</span>
-                ) : (
-                  `${product.price}k/ngày`
-                )}
-              </td>
+      {renderSection('🏕️ Lều & Phụ kiện đi kèm', (p) => p.name.includes('Lều') || ['Cách nhiệt', 'Gối hơi'].some(keyword => p.name.includes(keyword)))}
+      {renderSection('🪑 Bàn ghế dã ngoại', (p) => ['Bàn', 'Ghế'].some(keyword => p.name.includes(keyword)))}
+      {renderSection('⛺ Tăng & Thảm dã ngoại', (p) => ['Tăng', 'Thảm'].some(keyword => p.name.includes(keyword)))}
+      {renderSection('💡 Đèn & Trang trí', (p) => p.name.includes('Đèn') || p.name.includes('Dây đèn'))}
+      {renderSection('🔊 Loa - Sạc dự phòng', (p) => ['Loa', 'Sạc dự phòng'].some(keyword => p.name.includes(keyword)))}
+      {renderSection('🔥 Bếp & Dụng cụ nấu nướng', (p) => ['Bếp', 'nồi'].some(keyword => p.name.toLowerCase().includes(keyword)))}
+      {renderSection('❄️ Dụng cụ giữ lạnh', (p) => p.name.includes('Thùng đá'))}
+      {renderSection('🍹 Nước uống', (p) => ['Cafe', 'Trà', 'Rượu'].some(keyword => p.name.includes(keyword)))}
 
-              {/* <td className="px-6 py-4">
-                <button
-                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
-                  //   onClick={() => handleRemove(product.id)}
-                >
-                  Xem chi tiết
-                </button>
-              </td> */}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="text-center mt-20 text-[#1F3329] bg-[#FAF9F7] py-12 px-6 rounded-2xl shadow-inner">
+  <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">🍽️ DỊCH VỤ SET UP BBQ & ĐỒ ĂN CAMPING</h2>
+  <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed text-[#3E5245]">
+    Thưởng thức bữa ăn ngoài trời phong phú, tươi ngon và tiện lợi. Mọi món ăn được sơ chế sẵn, đóng gói vệ sinh, chỉ việc nướng và thưởng thức cùng bạn bè!
+  </p>
+
+  
+
+  <div className="mt-10 grid md:grid-cols-3 gap-8 text-left max-w-6xl mx-auto">
+    {/* Set Hải Sản */}
+    <div className="bg-white rounded-2xl shadow-lg p-6 border border-[#E6E4DF]">
+      <h3 className="text-xl font-bold mb-3 text-[#1F3329]">🦐 Set Hải Sản</h3>
+      <ul className="list-disc pl-5 space-y-1 text-[#3E5245] text-sm leading-relaxed">
+        <li>Hàu sữa phô mai nướng</li>
+        <li>Ốc hương xào bơ tỏi</li>
+        <li>Chip Chip hấp sả</li>
+        <li>Sò mai mỡ hành</li>
+        <li>Cá dìm nướng giấy bạc</li>
+        <li>Tôm nướng muối ớt</li>
+        <li>Trái cây tráng miệng: Dưa hấu, Nho</li>
+      </ul>
+      <p className="mt-4 text-[#DD6B20] font-semibold">💰 150.000đ/người</p>
+    </div>
+
+    {/* Set Thịt Nướng */}
+    <div className="bg-white rounded-2xl shadow-lg p-6 border border-[#E6E4DF]">
+      <h3 className="text-xl font-bold mb-3 text-[#1F3329]">🍖 Set Thịt Nướng</h3>
+      <ul className="list-disc pl-5 space-y-1 text-[#3E5245] text-sm leading-relaxed">
+        <li>Gà nướng nguyên con ướp mật ong</li>
+        <li>Ba chỉ heo ướp BBQ</li>
+        <li>Nem nướng</li>
+        <li>Rau củ nướng: bắp, đậu bắp, ớt chuông</li>
+        <li>Bánh mì bơ tỏi</li>
+        <li>Xà lách trộn</li>
+        <li>Trái cây: Thơm, Dưa lưới</li>
+      </ul>
+      <p className="mt-4 text-[#DD6B20] font-semibold">💰 130.000đ/người</p>
+    </div>
+
+    {/* Set Thập Cẩm */}
+    <div className="bg-white rounded-2xl shadow-lg p-6 border border-[#E6E4DF]">
+      <h3 className="text-xl font-bold mb-3 text-[#1F3329]">🍢 Set Thập Cẩm</h3>
+      <ul className="list-disc pl-5 space-y-1 text-[#3E5245] text-sm leading-relaxed">
+        <li>Gà nướng nguyên con</li>
+        <li>Ốc hương xào bơ tỏi</li>
+        <li>Chip Chip hấp sả</li>
+        <li>Ba chỉ heo ướp</li>
+        <li>Rau củ nướng</li>
+        <li>Xôi lá cẩm hoặc cơm nắm mè</li>
+        <li>Trái cây: Dưa hấu, Thanh long</li>
+      </ul>
+      <p className="mt-4 text-[#DD6B20] font-semibold">💰 140.000đ/người</p>
+    </div>
+  </div>
+
+  <p className="mt-10 text-[#1F3329] text-base md:text-lg font-medium">
+    📅 <strong>Đặt trước tối thiểu 24h</strong> để đảm bảo chất lượng. Nhận chuẩn bị theo yêu cầu riêng cho nhóm từ 5 người trở lên.
+  </p>
+</div>
+
     </div>
   )
 }
