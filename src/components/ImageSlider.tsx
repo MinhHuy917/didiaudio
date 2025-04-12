@@ -35,14 +35,14 @@ export default function ImageSlider() {
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <div className="aspect-[16/9] w-full relative">
-              <Image
+              {/* <Image
                 src={image}
                 alt={`Slide ${index + 1}`}
                 fill
                 className="object-cover rounded-2xl"
                 sizes="(max-width: 768px) 100vw, 768px"
                 priority={index === 0}
-              />
+              /> */}
             </div>
           </SwiperSlide>
         ))}

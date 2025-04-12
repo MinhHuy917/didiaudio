@@ -25,11 +25,11 @@ export default function ThanhToan() {
               <p>Thanh toán trước khi nhận lều. Nếu lều bị hư hại hoặc mất, quý khách bồi thường theo chính sách.</p>
             </section>
 
-            <section>
+            {/* <section>
               <h2 className="text-2xl font-semibold mb-2">3. Thanh Toán Qua QR</h2>
               <p>Sau khi thanh toán qua mã QR, vui lòng chụp ảnh giao dịch và nhắn tin số lượng lều, phụ kiện thuê để xác nhận.</p>
               <Image src={qr} alt="Mã QR thanh toán" className='rounded-3xl mt-5'/>
-            </section>
+            </section> */}
           </div>
         </div>
       </PageIntro>
