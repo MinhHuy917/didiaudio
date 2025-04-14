@@ -2,36 +2,33 @@
 
 import React from 'react'
 
+import Image from 'next/image'
+import ban from '/src/images/ban.png'
+import bepcui from '/src/images/bepcui.jpg'
+import bepgas from '/src/images/bepgas.jpg'
+import bepnuong from '/src/images/bepnuong.jpg'
+import bonoi from '/src/images/bonoi.jpg'
+import cachnhiet from '/src/images/cachnhiet.jpg'
+import dencamtay from '/src/images/dencamtay.jpg'
+import dendeban from '/src/images/dendeban.jpg'
+import dendoidau from '/src/images/dendoidau.jpg'
+import denled from '/src/images/denled.png'
+import denngoisao from '/src/images/denngoisao.png'
+import densinhhoat from '/src/images/densinhhoat.jpg'
+import ghe from '/src/images/ghe.png'
+import goihoi from '/src/images/goihoi.jpg'
 import leu2 from '/src/images/leu2.jpg'
 import leu4 from '/src/images/leu4.jpg'
 import leu6 from '/src/images/leu6.jpg'
 import leu8 from '/src/images/leu8.jpg'
-import cachnhiet from '/src/images/cachnhiet.jpg'
+import loa from '/src/images/loa.jpg'
+import sacduphong from '/src/images/sacduphong.jpeg'
+import tang from '/src/images/tang.jpg'
+import tang3m from '/src/images/tang3m.jpg'
 import thamdangoai from '/src/images/thamdangoai.jpg'
 import thamvintage from '/src/images/thamvintage.jpg'
-import goihoi from '/src/images/goihoi.jpg'
-import ghe from '/src/images/ghe.png'
-import ban from '/src/images/ban.png'
-import tang from '/src/images/tang.jpg'
-import loa from '/src/images/loa.jpg'
-import densinhhoat from '/src/images/densinhhoat.jpg'
-import dendeban from '/src/images/dendeban.jpg'
-import dendoidau from '/src/images/dendoidau.jpg'
-import dencamtay from '/src/images/dencamtay.jpg'
-import denled from '/src/images/denled.png'
-import denngoisao from '/src/images/denngoisao.png'
-import bepnuong from '/src/images/bepnuong.jpg'
-import bepcui from '/src/images/bepcui.jpg'
-import bepgas from '/src/images/bepgas.jpg'
-import bonoi from '/src/images/bonoi.jpg'
 import thungda25L from '/src/images/thungda25L.jpg'
-import sacduphong from '/src/images/sacduphong.jpeg'
-import tang3m from '/src/images/tang3m.jpg'
 import thungdanho from '/src/images/thungda6.8L.jpeg'
-import cafe from '/src/images/thungda6.8L.jpg'
-import tra from '/src/images/thungda6.8L.jpg'
-import ruou from '/src/images/thungda6.8L.jpg'
-import Image from 'next/image'
 
 type Product = {
   id: number
@@ -92,12 +89,12 @@ const ProductList: React.FC = () => {
               className="rounded-2xl bg-white dark:bg-[#EFE9DA] shadow hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col"
             >
               <Image
-                src="/images/product.jpg"
-                alt="Product"
-                width={200}
-                height={200}
-                priority // hoặc dùng loading="lazy" nếu cần lazy load
-              />
+  src={product.image}
+  alt={product.name}
+  width={200}
+  height={200}
+  priority
+/>
               <div className="p-4 flex-1 flex flex-col justify-between">
                 <div>
                   <h4 className="font-semibold text-sm md:text-base text-[#1F3329] leading-tight">
