@@ -89,12 +89,12 @@ const ProductList: React.FC = () => {
               className="rounded-2xl bg-white dark:bg-[#EFE9DA] shadow hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col"
             >
               <Image
-  src={product.image}
-  alt={product.name}
-  width={200}
-  height={200}
-  priority
-/>
+                src={product.image}
+                alt={product.name}
+                width={200}
+                height={200}
+                priority
+              />
               <div className="p-4 flex-1 flex flex-col justify-between">
                 <div>
                   <h4 className="font-semibold text-sm md:text-base text-[#1F3329] leading-tight">
