@@ -132,7 +132,7 @@ const ProductList: React.FC = () => {
   }
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 font-sans text-[#1F3329]">
+    <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 font-sans text-[#1F3329]" style={{ fontFamily: 'Arial, sans-serif' }}>
       <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 tracking-wide">
         🎪 BẢNG GIÁ THUÊ ĐỒ DÃ NGOẠI
       </h2>
