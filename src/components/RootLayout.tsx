@@ -13,6 +13,9 @@ import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
 import logo from '@/images/logo.png'
 import Image from 'next/image'
+import bg1 from '/src/images/bg1.png'
+import bg4 from '/src/images/bg4.png'
+import bg6 from '/src/images/bg6.png'
 
 
 const RootLayoutContext = createContext<{
@@ -57,7 +60,7 @@ function Header({
     <Container>
       <div className="flex items-center justify-between">
         <Link href="/" aria-label="Home">
-        <Image src={logo} alt="Logo" width={100} height={80} className="rounded-full object-cover" />
+          <Image src={logo} alt="Logo" width={100} height={80} className="rounded-full object-cover" />
         </Link>
         <div className="flex items-center gap-x-8 ">
           <button
@@ -101,19 +104,24 @@ function NavigationItem({
   href,
   children,
   target,
+  className,
+  style,
 }: {
   href: string
   children: React.ReactNode
   target?: string
+  className?: any
+  style?: any
 }) {
   return (
     <Link
       href={href}
       target={target}
-      className="font-[system-ui] group relative isolate -mx-6 bg-[#EFE9DA] px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 text-[#1F3329]"
+      className={`font-[system-ui] group relative isolate -mx-6 bg-[#EFE9DA] px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 text-cornsilk-500 ${className}`}
+      style={style}
     >
       {children}
-      <span className="absolute inset-y-0 -z-10 w-screen bg-[#EFE9DA] opacity-0 transition group-odd:right-0 group-even:left-0 " />
+      <span className='absolute inset-y-0 -z-10 w-screen bg-[#EFE9DA] opacity-0 transition group-odd:right-0 group-even:left-0' />
     </Link>
   )
 }
@@ -122,20 +130,20 @@ export function Navigation() {
   return (
     <nav className="mt-px font-display text-3xl lg:text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-      {/* <NavigationItem target='_blank' href="https://www.facebook.com/groups/695950148016396">
+        <NavigationItem target='_blank' href="https://www.facebook.com/groups/695950148016396">
           Cộng đồng cắm trại
-        </NavigationItem> */}
-       
+        </NavigationItem>
+
         <NavigationItem href="/dia-diem-cam-trai">
           Địa điểm cắm trại{' '}
         </NavigationItem>
-      
+
       </NavigationRow>
       <NavigationRow>
-      {/* <NavigationItem href="/blog-cam-trai">Blog cắm trại</NavigationItem> */}
-        
+        {/* <NavigationItem href="/blog-cam-trai">Blog cắm trại</NavigationItem> */}
+
         <NavigationItem href="/huong-dan-dung-leu">Hướng dẫn dựng lều</NavigationItem>
-      
+
       </NavigationRow>
     </nav>
   )
@@ -143,12 +151,64 @@ export function Navigation() {
 
 export function NavigationV2() {
   return (
-    <nav className="mt-2 space-y-2 font-display text-white text-2xl lg:text-4xl font-semibold tracking-tight">
+    <nav className="mt-2 space-y-2 font-display text-gray-100 sm:text-[#DD6B20] text-xl lg:text-4xl font-semibold tracking-tight">
       <NavigationRow>
-        <NavigationItem href="/dia-diem-cam-trai">Địa điểm cắm trại Đà Nẵng</NavigationItem>
+        <NavigationItem
+          href="/dia-diem-cam-trai"
+          className="relative sm:bg-none md:bg-none"
+        >
+          <div
+            className="absolute inset-0 sm:hidden"
+            style={{
+              backgroundImage: `url(${bg1.src})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              zIndex: -1,
+            }}
+          />
+          <span className="relative z-10">Địa điểm cắm trại Đà Nẵng</span>
+        </NavigationItem>
+
+
+      </NavigationRow>
+
+
+      <NavigationRow>
+        <NavigationItem
+          href="/huong-dan-dung-leu"
+          className="relative sm:bg-none md:bg-none"
+        >
+          <div
+            className="absolute inset-0 sm:hidden"
+            style={{
+              backgroundImage: `url(${bg4.src})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              zIndex: -1,
+            }}
+          />
+          <span className="relative z-10">Hướng dẫn dựng lều</span>
+        </NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/huong-dan-dung-leu">Hướng dẫn dựng lều</NavigationItem>
+
+        <NavigationItem
+          href="https://www.facebook.com/groups/695950148016396"
+          target='_blank'
+          className="relative sm:bg-none md:bg-none"
+        >
+          <div
+            className="absolute inset-0 sm:hidden"
+            style={{
+              backgroundImage: `url(${bg6.src})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              zIndex: -1,
+            }}
+          />
+          <span className="relative z-10">  Cộng đồng cắm trại Đà Nẵng</span>
+        </NavigationItem>
+
       </NavigationRow>
     </nav>
   )
