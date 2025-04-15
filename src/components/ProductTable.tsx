@@ -7,8 +7,8 @@ import ban from '/src/images/ban.png'
 import bepcui from '/src/images/bepcui.jpg'
 import bepgas from '/src/images/bepgas.jpg'
 import bepnuong from '/src/images/bepnuong.jpg'
-import bonoi from '/src/images/bonoi.jpg'
-import cachnhiet from '/src/images/cachnhiet.jpg'
+import bonoi from '/src/images/bonoicamping.png'
+import cachnhiet from '/src/images/tamcachnhiet.png'
 import dencamtay from '/src/images/dencamtay.jpg'
 import dendeban from '/src/images/dendeban.jpg'
 import dendoidau from '/src/images/dendoidau.jpg'
@@ -31,8 +31,8 @@ import sacduphong from '/src/images/sacduphong.jpeg'
 import tang from '/src/images/tang.jpg'
 import tang3m from '/src/images/tang3m.jpg'
 import thamdangoai from '/src/images/thamdangoai.jpg'
-import thamvintage from '/src/images/thamvintage.jpg'
-import thungda25L from '/src/images/thungda25L.jpg'
+import thamvintage from '/src/images/thamvintage2.png'
+import thungda25L from '/src/images/thungdac2.png'
 import thungdanho from '/src/images/thungda6.8L.jpeg'
 
 type Product = {
@@ -75,9 +75,9 @@ const ProductList: React.FC = () => {
     { id: 26, name: 'Thùng đá nhỏ', catalogue: '(8L)', image: thungdanho.src, price: 20, quantity: 1 },
     { id: 27, name: 'Thùng đá lớn', catalogue: '(25L)', image: thungda25L.src, price: 40, quantity: 1 },
     { id: 28, name: 'Võng hơi Naturehike', catalogue: '(Tải trọng đến 150kg)', image: vonghoi.src, price: 80, quantity: 1 },
-    { id: 29, name: 'Cafe Đen ', catalogue: '250ml', image: cafeden.src, price: 60, quantity: 1, isRental: false },
-    { id: 30, name: 'Cafe Muối', catalogue: '250ml', image: cafemuoi.src, price: 80, quantity: 1, isRental: false },
-    { id: 31, name: 'Mật ong rừng', catalogue: '500ml', image: matong.src, price: 600, quantity: 1, isRental: false },
+    { id: 29, name: 'Cafe Phin ', catalogue: '250ml(7-8 cốc)', image: cafeden.src, price: 60, quantity: 1, isRental: false },
+    { id: 30, name: 'Cafe Muối', catalogue: '250ml (5-6 cốc)', image: cafemuoi.src, price: 80, quantity: 1, isRental: false },
+    { id: 31, name: 'Mật ong rừng làng Aur', catalogue: '500ml (hàng đặt trước)', image: matong.src, price: 600, quantity: 1, isRental: false },
 
   ]
 
@@ -102,7 +102,7 @@ const ProductList: React.FC = () => {
                 width={0}
                 height={0}
                 sizes="(max-width: 768px) 100vw, 200px"
-                className="w-full h-full object-cover rounded"
+                className="w-full h-[180px] md:h-[180px] lg:h-full object-cover rounded"
               />
 
               <div className="p-4 flex-1 flex flex-col justify-between">
