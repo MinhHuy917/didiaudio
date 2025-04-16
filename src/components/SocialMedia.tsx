@@ -61,11 +61,6 @@ export const socialMediaProfiles = [
     href: 'https://www.tiktok.com/@didicamping',
     icon: TiktokIcon,
   },
-  {
-    title: 'Cộng đồng',
-    href: 'https://www.facebook.com/groups/congdongcamtraidanang',
-    icon: GroupFacebookIcon,
-  },
 ]
 
 export function SocialMedia({
