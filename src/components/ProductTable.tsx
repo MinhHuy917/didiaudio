@@ -148,9 +148,11 @@ const ProductList: React.FC = () => {
       {renderSection('Thùng đá', (p) => p.name.includes('Thùng'))}
       {renderSection('Cafe & Mật Ong', (p) => p.name.includes('Cafe') || p.name.includes('Mật ong'))}
       <div className="text-center mt-20 text-[#1F3329] bg-[#FAF9F7] py-12 px-6 rounded-2xl shadow-inner">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">🍽️ DỊCH VỤ SET UP BBQ & ĐỒ ĂN CAMPING</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">Dịch vụ đi chợ - sơ chế đồ ăn BBQ</h2>
         <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed text-[#3E5245]">
-          Thưởng thức bữa ăn ngoài trời phong phú, tươi ngon và tiện lợi. Mọi món ăn được sơ chế sẵn, đóng gói vệ sinh, chỉ việc nướng và thưởng thức cùng bạn bè!
+
+          🎒 Bạn chọn món – chúng tôi đi chợ, sơ chế sạch, đóng gói gọn.
+          📄 Có hóa đơn minh bạch – chỉ cần mang đi và nướng!
         </p>
 
 
@@ -160,15 +162,15 @@ const ProductList: React.FC = () => {
           <div className="bg-white rounded-2xl shadow-lg p-6 border border-[#E6E4DF]">
             <h3 className="text-xl font-bold mb-3 text-[#1F3329]">🦐 Set Hải Sản</h3>
             <ul className="list-disc pl-5 space-y-1 text-[#3E5245] text-sm leading-relaxed">
-              <li>Hàu sữa phô mai nướng</li>
-              <li>Ốc hương xào bơ tỏi</li>
+              <li>Hàu sữa nướng mỡ hành</li>
+              <li>Ốc hương xào bơ tỏi kèm bánh mỳ</li>
               <li>Chip Chip hấp sả</li>
-              <li>Sò mai mỡ hành</li>
-              <li>Cá dìm nướng giấy bạc</li>
+              <li>Cá nướng</li>
               <li>Tôm nướng muối ớt</li>
-              <li>Trái cây tráng miệng: Dưa hấu, Nho</li>
+              <li>Rau củ nướng: bắp/đậu bắp/ớt chuông/khoai mật</li>
+              <li>Trái cây theo mùa</li>
             </ul>
-            <p className="mt-4 text-[#DD6B20] font-semibold">💰 150.000đ/người</p>
+            <p className="mt-4 text-[#DD6B20] font-semibold">💰 200.000đ ~ 250.000/người</p>
           </div>
 
           {/* Set Thịt Nướng */}
@@ -178,12 +180,12 @@ const ProductList: React.FC = () => {
               <li>Gà nướng nguyên con ướp mật ong</li>
               <li>Ba chỉ heo ướp BBQ</li>
               <li>Nem nướng</li>
-              <li>Rau củ nướng: bắp, đậu bắp, ớt chuông</li>
+              <li>Rau củ nướng: bắp/đậu bắp/ớt chuông/khoai mật</li>
               <li>Bánh mì bơ tỏi</li>
               <li>Xà lách trộn</li>
-              <li>Trái cây: Thơm, Dưa lưới</li>
+              <li>Trái cây theo mùa</li>
             </ul>
-            <p className="mt-4 text-[#DD6B20] font-semibold">💰 130.000đ/người</p>
+            <p className="mt-4 text-[#DD6B20] font-semibold">💰 200.000đ ~ 250.000/người</p>
           </div>
 
           {/* Set Thập Cẩm */}
@@ -194,17 +196,28 @@ const ProductList: React.FC = () => {
               <li>Ốc hương xào bơ tỏi</li>
               <li>Chip Chip hấp sả</li>
               <li>Ba chỉ heo ướp</li>
-              <li>Rau củ nướng</li>
-              <li>Xôi lá cẩm hoặc cơm nắm mè</li>
-              <li>Trái cây: Dưa hấu, Thanh long</li>
+              <li>Rau củ nướng: bắp/đậu bắp/ớt chuông/khoai mật</li>
+              <li>Trái cây theo mùa</li>
             </ul>
-            <p className="mt-4 text-[#DD6B20] font-semibold">💰 140.000đ/người</p>
+            <p className="mt-4 text-[#DD6B20] font-semibold">💰 200.000đ ~ 250.000/người</p>
           </div>
         </div>
 
         <p className="mt-10 text-[#1F3329] text-base md:text-lg font-medium">
-          📅 <strong>Đặt trước tối thiểu 24h</strong> để đảm bảo chất lượng. Nhận chuẩn bị theo yêu cầu riêng cho nhóm từ 5 người trở lên.
-        </p>
+  📌 <strong>Menu chỉ mang tính chất tham khảo</strong>. Bạn có thể đặt món theo sở thích, chúng tôi sẽ đi chợ đúng yêu cầu – đảm bảo <strong>hóa đơn rõ ràng, minh bạch</strong>, có thể kiểm tra nguồn gốc và giá cả nếu cần.
+</p>
+<p className="mt-2 text-[#1F3329] text-base md:text-lg font-medium">
+  🧑‍🍳 Dịch vụ bao gồm: <strong>rửa sạch – sơ chế sẵn – tẩm ướp và đóng gói gọn gàng</strong>. Bạn chỉ cần mang theo và nướng tại chỗ. Phù hợp với những nhóm đi cắm trại nhưng không có thời gian chuẩn bị.
+</p>
+<p className="mt-2 text-[#1F3329] text-base md:text-lg font-medium">
+  💰 <strong>Phí dịch vụ: 90.000đ/người</strong> (chưa bao gồm chi phí nguyên liệu). Chúng tôi đi chợ giúp, chuẩn bị từ A-Z, bạn chỉ việc tận hưởng bữa tiệc BBQ giữa thiên nhiên.
+</p>
+<p className="mt-4 text-[#1F3329] text-base md:text-lg font-medium">
+  📅 <strong>Đặt trước tối thiểu 24h</strong> để đảm bảo chất lượng. Nhận nhóm từ 5 người trở lên.
+</p>
+
+
+
       </div>
 
     </div>
