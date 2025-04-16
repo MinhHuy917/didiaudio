@@ -12,12 +12,11 @@ export default function MenuContact() {
   onClick={isMenu.toggle}
   className={`
     ${isMenu.visible ? '' : 'animate-bounce'}
-    fixed bottom-4 md:bottom-8 lg:bottom-40 left-[44%] md:left-[80%] lg:left-[90%] transform -translate-x-1/2 z-10 inline-flex items-center gap-x-1 
-    font-sans text-sm font-semibold leading-6 text-gray-900 md:bottom-28 md:right-14
-
+  fixed bottom-8 right-6 z-10  inline-flex items-center gap-x-1 
+  font-sans text-sm font-semibold leading-6 text-gray-900 md:bottom-28 md:right-14
   `}
 >
-        <div className="flex items-center justify-center rounded-full bg-[#E5C07B] p-1.5 font-bold text-white">
+        <div className="flex items-center justify-center rounded-full bg-yellow-300 p-2 font-bold text-white">
           {isMenu.visible ? (
             <svg
               width="34"
