@@ -128,21 +128,21 @@ function NavigationItem({
 
 export function Navigation() {
   return (
-    <nav className="mt-px font-display text-3xl lg:text-5xl font-medium tracking-tight text-white">
+    <nav className="mt-px font-display text-3xl lg:text-5xl text-[#DD6B20] font-medium tracking-tight">
       <NavigationRow>
-        <NavigationItem target='_blank' href="https://www.facebook.com/groups/695950148016396">
-          Cộng đồng cắm trại
-        </NavigationItem>
+        
 
         <NavigationItem href="/dia-diem-cam-trai">
           Địa điểm cắm trại{' '}
         </NavigationItem>
-
+        <NavigationItem href="/huong-dan-dung-leu">Hướng dẫn dựng lều</NavigationItem>
       </NavigationRow>
       <NavigationRow>
         {/* <NavigationItem href="/blog-cam-trai">Blog cắm trại</NavigationItem> */}
 
-        <NavigationItem href="/huong-dan-dung-leu">Hướng dẫn dựng lều</NavigationItem>
+        <NavigationItem target='_blank' href="https://www.facebook.com/groups/695950148016396">
+          Cộng đồng cắm trại
+        </NavigationItem>
 
       </NavigationRow>
     </nav>

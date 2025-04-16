@@ -33,7 +33,7 @@ export default function ImageSlider() {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="aspect-[16/9] w-full relative">
+            <div className="aspect-[16/9] w-full lg:w-[1280px] relative mx-auto">
               <Image
                 src={image}
                 alt={`Slide ${index + 1}`}

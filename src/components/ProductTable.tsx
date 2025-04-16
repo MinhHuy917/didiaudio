@@ -68,7 +68,7 @@ const ProductList: React.FC = () => {
     { id: 18, name: 'Đèn đội đầu', catalogue: '(đã sạc đầy pin, thời gian chiếu sáng 8-10h)', image: dendoidau.src, price: 10, quantity: 1 },
     { id: 19, name: 'Loa Vintage', catalogue: '(đã sạc đầy pin, thời gian sử dụng 7-8h liên tục)', image: loa.src, price: 50, quantity: 1 },
     { id: 20, name: 'Sạc dự phòng', catalogue: '(đã sạc đầy pin, dung lượng 20.000 mAh)', image: sacduphong.src, price: 30, quantity: 1 },
-    { id: 21, name: 'Tripod', catalogue: '(dùng cho cả máy ảnh và điện thoại)', image: tripod.src, price: 30, quantity: 1 },
+    { id: 21, name: 'Tripod', catalogue: '(dùng cho cả máy ảnh và điện thoại)', image: tripod.src, price: 40, quantity: 1 },
     { id: 22, name: 'Bếp nướng', catalogue: '(có kèm kẹp inox, 73cmx22cmx20cm)', image: bepnuong.src, price: 40, quantity: 1 },
     { id: 23, name: 'Bếp củi', catalogue: '(125x125cmx16cm)', image: bepcui.src, price: 30, quantity: 1 },
     { id: 24, name: 'Bếp gas', catalogue: '(Chưa kèm bình gas)', image: bepgas.src, price: 50, quantity: 1 },
