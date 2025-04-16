@@ -26,11 +26,9 @@ const navigation = [
     title: 'Quy định và chính sách',
     links: [
       {
-        title: 'Chính sách thanh toán',
+        title: 'Chính sách thuê lều',
         href: '/quy-dinh-va-chinh-sach/thanh-toan',
       },
-      { title: 'Quy định sử dụng', href: '/quy-dinh-va-chinh-sach/su-dung' },
-      { title: 'Chính sách đền bù', href: '/quy-dinh-va-chinh-sach/den-bu' },
     ],
   },
   {

@@ -35,7 +35,7 @@ export default function SuDung() {
 
             <section>
               <h2 className="text-xl font-semibold mb-2">5. Trả Lại Thiết Bị</h2>
-              <p>Trả lại lều và phụ kiện trong tình trạng sạch sẽ, nguyên vẹn. Nếu lều và phụ kiện bị bẩn quá thì phạt 200k tiền phí vệ sinh, còn nếu vệ sinh không được thì đền bù theo giá trị sản phẩm.</p>
+              <p>Trả lại lều và phụ kiện trong tình trạng sạch sẽ, nguyên vẹn. Nếu lều và phụ kiện bị bẩn quá thì phạt 100 - 200k tiền phí vệ sinh, còn nếu vệ sinh không được thì đền bù theo giá trị sản phẩm.</p>
             </section>
             
           </div>
