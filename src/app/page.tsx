@@ -9,7 +9,7 @@ import { NavigationV2 } from '@/components/RootLayout'
 
 export const metadata: Metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
+  'Dịch vụ cho thuê lều cắm trại chuyên nghiệp tại Đà Nẵng – đồng hành cùng bạn trong mọi chuyến phiêu lưu.',
 }
 
 export default async function Home() {
