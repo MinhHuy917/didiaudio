@@ -1,17 +1,18 @@
 import { type Metadata } from 'next'
+
 import { PageIntro } from '@/components/PageIntro'
-import Image from 'next/image'
-import qr from '@/images/qr.png'
+
 
 export const metadata: Metadata = {
-  title: 'Quy định & Chính sách',
-  description: 'Chính Sách Thuê Lều',
+  title: 'Quy định và chính sách',
+  description: 'Những Quy định và chính sách',
 }
 
-export default function ThanhToan() {
+export default async function QuyDinhVaChinhSach() {
+
   return (
     <>
-   <PageIntro eyebrow="Quy định & Chính sách" title="Chính Sách Thuê Lều">
+     <PageIntro eyebrow="Quy định & Chính sách" title="Chính Sách Thuê Lều">
   <div className="font-[system-ui] bg-gray-100 text-gray-900 py-6 px-4 md:px-8">
     <div className="container mx-auto space-y-6">
 
@@ -51,7 +52,6 @@ export default function ThanhToan() {
     </div>
   </div>
 </PageIntro>
-
     </>
   )
 }

@@ -27,7 +27,7 @@ const navigation = [
     links: [
       {
         title: 'Chính sách thuê lều',
-        href: '/quy-dinh-va-chinh-sach/thanh-toan',
+        href: '/chinh-sach-thue-leu',
       },
     ],
   },

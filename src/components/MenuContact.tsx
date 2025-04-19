@@ -13,7 +13,7 @@ export default function MenuContact() {
   className={`
     ${isMenu.visible ? '' : 'animate-bounce'}
   fixed bottom-8 right-6 z-10  inline-flex items-center gap-x-1 
-  font-sans text-sm font-semibold leading-6 text-gray-900 md:bottom-28 md:right-14
+  font-sans text-sm font-semibold leading-6 text-gray-900 md:bottom-28 md:right-14 z-20
   `}
 >
         <div className="flex items-center justify-center rounded-full bg-yellow-300 p-2 font-bold text-white">
