@@ -139,7 +139,7 @@ const ProductList: React.FC = () => {
         🎪 BẢNG GIÁ THUÊ ĐỒ DÃ NGOẠI
       </h2>
 
-      {renderSection('Lều trại', (p) => p.name.includes('Lều') || p.name.includes('Gối') || p.name.includes('Cách nhiệt'))}
+      {renderSection('Lều trại', (p) => p.name.includes('Lều') || p.name.includes('Gối') || p.name.includes('Tấm cách nhiệt'))}
       {renderSection('Bàn Ghế', (p) => p.name.includes('Bàn') || p.name.includes('Ghế'))}
       {renderSection('Tăng, Thảm', (p) => p.name.includes('Tăng') || p.name.includes('Thảm'))}
       {renderSection('Đèn', (p) => p.name.includes('Đèn'))}
