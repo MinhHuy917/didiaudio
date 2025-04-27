@@ -35,6 +35,13 @@ import thamvintage from '/src/images/thamvintage2.png'
 import thungda25L from '/src/images/thungdac2.png'
 import thungdanho from '/src/images/thungda6.8L.jpeg'
 import baimasoi from '/src/images/baimasoi.png'
+import loakara from '/src/images/loakara.png'
+import bepcon from '/src/images/bepcon.png'
+import noitreo from '/src/images/noitreo.png'
+import daukho from '/src/images/daukho.png'
+import than from '/src/images/than.jpeg'
+
+
 
 type Product = {
   id: number
@@ -62,19 +69,24 @@ const ProductList: React.FC = () => {
     { id: 12, name: 'Thảm Vintage', catalogue: '(2mx2m)', image: thamvintage.src, price: 50, quantity: 1 },
     { id: 13, name: 'Đèn sinh hoạt', catalogue: '(đã kèm pin, thời gian chiếu sáng 5-6h)', image: densinhhoat.src, price: 25, quantity: 1 },
     { id: 14, name: 'Đèn Vintage', catalogue: '(đã kèm pin, thời gian chiếu sáng 8h-10h)', image: dendeban.src, price: 15, quantity: 1 },
-    { id: 15, name: 'Đèn led tròn ', catalogue: '(đã kèm pin, Thời gian chiếu sáng 7-8h)', image: denled.src, price: 20, quantity: 1 },
+    { id: 15, name: 'Đèn led tròn ', catalogue: '(đã kèm pin, thời gian chiếu sáng 7-8h)', image: denled.src, price: 20, quantity: 1 },
     { id: 16, name: 'Đèn led ngôi sao', catalogue: '(đã kèm pin, thời gian chiếu sáng 7-8h)', image: denngoisao.src, price: 30, quantity: 1 },
     { id: 17, name: 'Đèn cầm tay', catalogue: '(đã sạc đầy pin, thời gian chiếu sáng 7-9h)', image: dencamtay.src, price: 10, quantity: 1 },
     { id: 18, name: 'Đèn đội đầu', catalogue: '(đã sạc đầy pin, thời gian chiếu sáng 8-10h)', image: dendoidau.src, price: 10, quantity: 1 },
     { id: 19, name: 'Loa Vintage', catalogue: '(đã sạc đầy pin, thời gian sử dụng 7-8h liên tục)', image: loa.src, price: 50, quantity: 1 },
-    { id: 20, name: 'Sạc dự phòng', catalogue: '(đã sạc đầy pin, dung lượng 20.000 mAh, và kèm dây sạc 3 đầu', image: sacduphong.src, price: 30, quantity: 1 },
-    { id: 21, name: 'Tripod', catalogue: '(dùng cho cả máy ảnh và điện thoại)', image: tripod.src, price: 40, quantity: 1 },
-    { id: 22, name: 'Bếp nướng', catalogue: '(có kèm kẹp inox, 73cmx22cmx20cm)', image: bepnuong.src, price: 40, quantity: 1 },
-    { id: 23, name: 'Bếp củi', catalogue: '(125x125cmx16cm)', image: bepcui.src, price: 30, quantity: 1 },
-    { id: 24, name: 'Bếp gas', catalogue: '(Chưa kèm bình gas)', image: bepgas.src, price: 50, quantity: 1 },
-    { id: 25, name: 'Bộ nồi 4-5 người', catalogue: '(ấm, chảo, nồi)', image: bonoi.src, price: 30, quantity: 1 },
-    { id: 26, name: 'Thùng đá nhỏ', catalogue: '(8L)', image: thungdanho.src, price: 20, quantity: 1 },
-    { id: 27, name: 'Thùng đá lớn', catalogue: '(25L)', image: thungda25L.src, price: 40, quantity: 1 },
+    { id: 20, name: 'Loa kara mini', catalogue: '(đã sạc đầy pin, thời gian sử dụng 6-8h)', image: loakara.src, price: 120, quantity: 1 },
+    { id: 21, name: 'Sạc dự phòng', catalogue: '(đã sạc đầy pin, dung lượng 20.000 mAh, và kèm dây sạc 3 đầu', image: sacduphong.src, price: 30, quantity: 1 },
+    { id: 22, name: 'Tripod', catalogue: '(dùng cho cả máy ảnh và điện thoại)', image: tripod.src, price: 40, quantity: 1 },
+    { id: 23, name: 'Bếp nướng', catalogue: '(có kèm kẹp inox, 73cmx22cmx20cm)', image: bepnuong.src, price: 40, quantity: 1 },
+    { id: 24, name: 'Bếp củi', catalogue: '(125x125cmx16cm)', image: bepcui.src, price: 30, quantity: 1 },
+    { id: 25, name: 'Bếp gas', catalogue: '(Chưa kèm bình gas)', image: bepgas.src, price: 50, quantity: 1 },
+    { id: 26, name: 'Bếp cồn', catalogue: '(có núm vặn chỉnh to nhỏ, và khay cồn oan toàn)', image: bepcon.src, price: 20, quantity: 1,  },
+    { id: 27, name: 'Thùng đá nhỏ', catalogue: '(8L)', image: thungdanho.src, price: 20, quantity: 1 },
+    { id: 28, name: 'Thùng đá lớn', catalogue: '(25L)', image: thungda25L.src, price: 40, quantity: 1 },
+    { id: 29, name: 'Bộ nồi 4-5 người', catalogue: '(ấm, chảo, nồi)', image: bonoi.src, price: 30, quantity: 1 },
+    { id: 30, name: 'Nồi treo 4L', catalogue: '(đã kèm giá treo 3 chân)', image: noitreo.src, price: 60, quantity: 1,  },
+    { id: 31, name: 'Đầu khò', catalogue: '(mồi lửa nhanh, nhóm củi/than dễ dàng)', image: daukho.src, price: 10, quantity: 1,  },
+    // { id: 32, name: 'Than củi', catalogue: '(mồi lửa nhanh, nhóm củi/than dễ dàng)', image: than.src, price: 15, quantity: 1,  },
     // { id: 28, name: 'Võng hơi Naturehike', catalogue: '(Tải trọng đến 150kg)', image: vonghoi.src, price: 80, quantity: 1 },
     // { id: 29, name: 'Cafe phin ', catalogue: '250ml(7-8 cốc) (hàng đặt trước)', image: cafeden.src, price: 60, quantity: 1, isRental: false },
     // { id: 30, name: 'Cafe muối', catalogue: '250ml (5-6 cốc) (hàng đặt trước)', image: cafemuoi.src, price: 80, quantity: 1, isRental: false },
@@ -144,7 +156,7 @@ const ProductList: React.FC = () => {
       {renderSection('Tăng, Thảm', (p) => p.name.includes('Tăng') || p.name.includes('Thảm'))}
       {renderSection('Đèn', (p) => p.name.includes('Đèn'))}
       {renderSection('Phụ kiện tiện ích', (p) => p.name.includes('Loa') || p.name.includes('Tripod') || p.name.includes('Sạc') || p.name.includes('Bộ bài'))}
-      {renderSection('Dụng cụ nấu ăn', (p) => p.name.includes('Bếp') || p.name.includes('nồi'))}
+      {renderSection('Dụng cụ nấu ăn', (p) => p.name.includes('Bếp') || p.name.includes('nồi') || p.name.includes('Nồi') || p.name.includes('Đầu khò'))} 
       {renderSection('Thùng đá', (p) => p.name.includes('Thùng'))}
       {renderSection('Cafe & Mật Ong', (p) => p.name.includes('Cafe') || p.name.includes('Mật ong'))}
       <div className="text-center mt-20 text-[#1F3329] bg-[#FAF9F7] py-12 px-6 rounded-2xl shadow-inner">
