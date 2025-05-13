@@ -23,10 +23,10 @@ import leu6 from '/src/images/leu6.jpg'
 import leu8 from '/src/images/leu8.jpg'
 import loa from '/src/images/loa.jpg'
 import tripod from '/src/images/tripod.jpg'
-import vonghoi from '/src/images/vonghoi.jpg'
-import cafeden from '/src/images/cafeden.jpg'
-import cafemuoi from '/src/images/cafemuoi.jpg'
-import matong from '/src/images/matong.jpg'
+import thungda16L from '/src/images/thungda16L.jpg'
+import chanden from '/src/images/chanden.png'
+import khanban from '/src/images/khanban.png'
+import vong from '/src/images/vong.jpg'
 import sacduphong from '/src/images/sacduphong.jpeg'
 import tang from '/src/images/tang.jpg'
 import tang3m from '/src/images/tang3m.jpg'
@@ -35,11 +35,11 @@ import thamvintage from '/src/images/thamvintage2.png'
 import thungda25L from '/src/images/thungdac2.png'
 import thungdanho from '/src/images/thungda6.8L.jpeg'
 import baimasoi from '/src/images/baimasoi.png'
-import loakara from '/src/images/loakara.png'
+import noi4L from '/src/images/noi4L.png'
 import bepcon from '/src/images/bepcon.png'
 import noitreo from '/src/images/noitreo.png'
 import daukho from '/src/images/daukho.png'
-import than from '/src/images/than.jpeg'
+import amnuoc from '/src/images/amnuoc.png'
 
 
 
@@ -59,40 +59,46 @@ const ProductList: React.FC = () => {
     { id: 2, name: 'Lều 4', catalogue: '(2 lớp chống mưa, 2mx2m)', image: leu4.src, price: 80, quantity: 1 },
     { id: 3, name: 'Lều 6', catalogue: '(2 lớp chống mưa, 3mx2m7)', image: leu6.src, price: 140, quantity: 1 },
     { id: 4, name: 'Lều 8', catalogue: '(2 lớp chống mưa, 4mx2m)', image: leu8.src, price: 180, quantity: 1 },
+    { id: 4, name: 'Võng', catalogue: '(đã kèm dây và móc võng)', image: vong.src, price: 40, quantity: 1 },
     { id: 5, name: 'Tấm cách nhiệt', catalogue: '(lót trong lều, cách hơi đất)', image: cachnhiet.src, price: 0, quantity: 1 },
     { id: 6, name: 'Gối hơi', catalogue: '(tính theo số lều)', image: goihoi.src, price: 0, quantity: 1 },
     { id: 7, name: 'Ghế mặt trăng', catalogue: '(màu trắng kem, tải trọng 120kg)', image: ghe.src, price: 20, quantity: 1 },
     { id: 8, name: 'Bàn nhôm', catalogue: '(90cmx60cm)', image: ban.src, price: 40, quantity: 1 },
-    { id: 9, name: 'Tăng 6-8 người', catalogue: '(3mx3m, kèm 2 trụ)', image: tang3m.src, price: 50, quantity: 1 },
-    { id: 10, name: 'Tăng 12-16 người', catalogue: '(4m5x4m5, kèm 2 trụ)', image: tang.src, price: 100, quantity: 1 },
+    { id: 8, name: 'Khăn bàn thổ cẩm', catalogue: '(1mx1m5)', image: khanban.src, price: 15, quantity: 1 },
+    { id: 8, name: 'Chân đèn', catalogue: '(Có thể gắn bàn hoặc cắm đất đều được)', image: chanden.src, price: 25, quantity: 1 },
+    { id: 9, name: 'Tăng 4-6 người', catalogue: '(3mx3m, kèm 2 trụ)', image: tang3m.src, price: 50, quantity: 1 },
+    { id: 10, name: 'Tăng 8-12 người', catalogue: '(4m5x4m5, kèm 2 trụ)', image: tang.src, price: 100, quantity: 1 },
     { id: 11, name: 'Thảm dã ngoại', catalogue: '(chống thấm, 2m1x2m)', image: thamdangoai.src, price: 25, quantity: 1 },
-    { id: 12, name: 'Thảm Vintage', catalogue: '(2mx2m)', image: thamvintage.src, price: 50, quantity: 1 },
-    { id: 13, name: 'Đèn sinh hoạt', catalogue: '(đã kèm pin, thời gian chiếu sáng 5-6h)', image: densinhhoat.src, price: 25, quantity: 1 },
+    { id: 12, name: 'Thảm Vintage', catalogue: '(2mx2m, thảm chống thấm dùng lót trong lều hoặc để ngồi)', image: thamvintage.src, price: 40, quantity: 1 },
+    { id: 13, name: 'Đèn sinh hoạt', catalogue: '(đã kèm pin, thời gian chiếu sáng 4-6h, pin thêm 10k/cặp)', image: densinhhoat.src, price: 25, quantity: 1 },
     { id: 14, name: 'Đèn Vintage', catalogue: '(đã kèm pin, thời gian chiếu sáng 8h-10h)', image: dendeban.src, price: 15, quantity: 1 },
-    { id: 15, name: 'Đèn led tròn ', catalogue: '(đã kèm pin, thời gian chiếu sáng 7-8h)', image: denled.src, price: 20, quantity: 1 },
-    { id: 16, name: 'Đèn led ngôi sao', catalogue: '(đã kèm pin, thời gian chiếu sáng 7-8h)', image: denngoisao.src, price: 30, quantity: 1 },
+    { id: 15, name: 'Đèn led tròn ', catalogue: '(đã kèm pin, thời gian chiếu sáng 8-10h)', image: denled.src, price: 20, quantity: 1 },
+    { id: 16, name: 'Đèn led ngôi sao', catalogue: '(đã kèm pin, thời gian chiếu sáng 8-10h)', image: denngoisao.src, price: 30, quantity: 1 },
     { id: 17, name: 'Đèn cầm tay', catalogue: '(đã sạc đầy pin, thời gian chiếu sáng 7-9h)', image: dencamtay.src, price: 10, quantity: 1 },
     { id: 18, name: 'Đèn đội đầu', catalogue: '(đã sạc đầy pin, thời gian chiếu sáng 8-10h)', image: dendoidau.src, price: 10, quantity: 1 },
-    { id: 19, name: 'Loa Vintage', catalogue: '(đã sạc đầy pin, thời gian sử dụng 7-8h liên tục)', image: loa.src, price: 50, quantity: 1 },
-    { id: 20, name: 'Loa kara mini', catalogue: '(đã sạc đầy pin, thời gian sử dụng 6-8h)', image: loakara.src, price: 120, quantity: 1 },
+    { id: 19, name: 'Loa Vintage', catalogue: '(đã sạc đầy pin, thời gian sử dụng 6-8h)', image: loa.src, price: 50, quantity: 1 },
+   
     { id: 21, name: 'Sạc dự phòng', catalogue: '(đã sạc đầy pin, dung lượng 20.000 mAh, và kèm dây sạc 3 đầu', image: sacduphong.src, price: 30, quantity: 1 },
     { id: 22, name: 'Tripod', catalogue: '(dùng cho cả máy ảnh và điện thoại)', image: tripod.src, price: 40, quantity: 1 },
-    { id: 23, name: 'Bếp nướng', catalogue: '(có kèm kẹp inox, 73cmx22cmx20cm)', image: bepnuong.src, price: 40, quantity: 1 },
+    { id: 23, name: 'Bếp nướng', catalogue: '(có kèm 2 kẹp inox, 73cmx22cmx20cm)', image: bepnuong.src, price: 40, quantity: 1 },
     { id: 24, name: 'Bếp củi', catalogue: '(125x125cmx16cm)', image: bepcui.src, price: 30, quantity: 1 },
-    { id: 25, name: 'Bếp gas', catalogue: '(Chưa kèm bình gas)', image: bepgas.src, price: 50, quantity: 1 },
-    { id: 26, name: 'Bếp cồn', catalogue: '(có núm vặn chỉnh to nhỏ, và khay cồn oan toàn)', image: bepcon.src, price: 20, quantity: 1,  },
-    { id: 27, name: 'Thùng đá nhỏ', catalogue: '(8L)', image: thungdanho.src, price: 20, quantity: 1 },
-    { id: 28, name: 'Thùng đá lớn', catalogue: '(25L)', image: thungda25L.src, price: 40, quantity: 1 },
-    { id: 29, name: 'Bộ nồi 4-5 người', catalogue: '(ấm, chảo, nồi)', image: bonoi.src, price: 30, quantity: 1 },
-    { id: 30, name: 'Nồi treo 4L', catalogue: '(đã kèm giá treo 3 chân)', image: noitreo.src, price: 60, quantity: 1,  },
-    { id: 31, name: 'Đầu khò', catalogue: '(mồi lửa nhanh, nhóm củi/than dễ dàng)', image: daukho.src, price: 10, quantity: 1,  },
+    { id: 25, name: 'Bếp gas', catalogue: '(Chưa kèm bình gas)', image: bepgas.src, price: 40, quantity: 1 },
+    { id: 26, name: 'Bếp cồn', catalogue: '(có núm vặn lấy khay cồn, và cần gạt bỏ cồn oan toàn)', image: bepcon.src, price: 20, quantity: 1,  },
+    { id: 27, name: 'Thùng đá 8L', catalogue: '(thể tích 8L)', image: thungdanho.src, price: 20, quantity: 1 },
+    { id: 32, name: 'Thùng đá 16L', catalogue: '(thể tích 16L)', image: thungda16L.src, price: 30, quantity: 1 },
+    { id: 28, name: 'Thùng đá 25L', catalogue: '(thể tích 25L)', image: thungda25L.src, price: 40, quantity: 1 },
+    { id: 29, name: 'Bộ nồi 3-4 người', catalogue: '(ấm, chảo, nồi)', image: bonoi.src, price: 30, quantity: 1 },
+    { id: 30, name: 'Nồi treo 4L', catalogue: '(đã kèm giá treo 3 chân)', image: noitreo.src, price: 50, quantity: 1,  },
+    { id: 30, name: 'Nồi 4L', catalogue: '(thể tích 4L)', image: noi4L.src, price: 30, quantity: 1,  },
+    { id: 20, name: 'Ấm 0.8L', catalogue: '(thể tích 0.8L)', image: amnuoc.src, price: 15, quantity: 1 },
+    { id: 31, name: 'Đầu khò', catalogue: '(mồi lửa nhanh, nhóm củi,than dễ dàng)', image: daukho.src, price: 10, quantity: 1,  },
     // { id: 32, name: 'Than củi', catalogue: '(mồi lửa nhanh, nhóm củi/than dễ dàng)', image: than.src, price: 15, quantity: 1,  },
     // { id: 28, name: 'Võng hơi Naturehike', catalogue: '(Tải trọng đến 150kg)', image: vonghoi.src, price: 80, quantity: 1 },
     // { id: 29, name: 'Cafe phin ', catalogue: '250ml(7-8 cốc) (hàng đặt trước)', image: cafeden.src, price: 60, quantity: 1, isRental: false },
     // { id: 30, name: 'Cafe muối', catalogue: '250ml (5-6 cốc) (hàng đặt trước)', image: cafemuoi.src, price: 80, quantity: 1, isRental: false },
     // { id: 31, name: 'Mật ong rừng làng Aur', catalogue: '500ml (hàng đặt trước)', image: matong.src, price: 600, quantity: 1, isRental: false },
     { id: 32, name: 'Bộ bài ma sói', catalogue: '(bộ bài chia rẽ tình bạn bè)', image: baimasoi.src, price: 10, quantity: 1 },
-
+    
   ]
 
   const renderSection = (title: string, filter: (product: Product) => boolean) => {
@@ -151,12 +157,12 @@ const ProductList: React.FC = () => {
         🎪 BẢNG GIÁ THUÊ ĐỒ DÃ NGOẠI
       </h2>
 
-      {renderSection('Lều trại', (p) => p.name.includes('Lều') || p.name.includes('Gối') || p.name.includes('Tấm cách nhiệt'))}
-      {renderSection('Bàn Ghế', (p) => p.name.includes('Bàn') || p.name.includes('Ghế'))}
+      {renderSection('Lều trại', (p) => p.name.includes('Lều') || p.name.includes('Võng') || p.name.includes('Gối') || p.name.includes('Tấm cách nhiệt'))}
+      {renderSection('Bàn Ghế', (p) => p.name.includes('Bàn') || p.name.includes('Ghế') || p.name.includes('Khăn') || p.name.includes('Chân đèn'))}
       {renderSection('Tăng, Thảm', (p) => p.name.includes('Tăng') || p.name.includes('Thảm'))}
       {renderSection('Đèn', (p) => p.name.includes('Đèn'))}
       {renderSection('Phụ kiện tiện ích', (p) => p.name.includes('Loa') || p.name.includes('Tripod') || p.name.includes('Sạc') || p.name.includes('Bộ bài'))}
-      {renderSection('Dụng cụ nấu ăn', (p) => p.name.includes('Bếp') || p.name.includes('nồi') || p.name.includes('Nồi') || p.name.includes('Đầu khò'))} 
+      {renderSection('Dụng cụ nấu ăn', (p) => p.name.includes('Bếp') || p.name.includes('nồi') || p.name.includes('Nồi') || p.name.includes('Ấm') || p.name.includes('Đầu khò'))} 
       {renderSection('Thùng đá', (p) => p.name.includes('Thùng'))}
       {renderSection('Cafe & Mật Ong', (p) => p.name.includes('Cafe') || p.name.includes('Mật ong'))}
       <div className="text-center mt-20 text-[#1F3329] bg-[#FAF9F7] py-12 px-6 rounded-2xl shadow-inner">
