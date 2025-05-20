@@ -15,14 +15,17 @@ export const metadata: Metadata = {
 export default async function Home() {
   return (
     <>
-      <Container className="mt-24 sm:mt-32 md:mt-40 !pl-0 pb-12 sm:pb-16 md:pb-20">
-        <PageIntro eyebrow="" title="ĐiĐi Camping">
-          <h1 className="font-[system-ui] text-3xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-5xl">
+      <Container className="mt-24 sm:mt-32 md:mt-40 !pl-0">
+        <PageIntro eyebrow="" title="">
+           {/* <h1 className="font-[system-ui] text-3xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-5xl">
             Cho thuê lều và phụ kiện cắm trại ở Đà Nẵng
-          </h1>
+          </h1>  */}
+          <p></p>
+        
+
         </PageIntro>
       </Container>
-      <div className='pb-12 sm:pb-16 md:pb-20'>
+      <div>
 
       <ImageSlider />
       </div>

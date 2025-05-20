@@ -63,27 +63,62 @@ function Header({
           <Image src={logo} alt="Logo" width={100} height={80} className="rounded-full object-cover" />
         </Link>
         <div className="flex items-center gap-x-8 ">
-          <button
-            ref={toggleRef}
-            type="button"
-            onClick={onToggle}
-            aria-expanded={expanded ? 'true' : 'false'}
-            aria-controls={panelId}
-            className={clsx(
-              'group -m-2.5 rounded-full p-2.5 transition',
-              invert ? 'hover:bg-white/10' : 'hover:bg-neutral-950/10',
-            )}
-            aria-label="Toggle navigation"
-          >
-            <Icon
-              className={clsx(
-                'h-6 w-6',
-                invert
-                  ? 'fill-white group-hover:fill-neutral-200'
-                  : 'fill-neutral-950 group-hover:fill-neutral-700',
-              )}
-            />
-          </button>
+        <button
+  ref={toggleRef}
+  type="button"
+  onClick={onToggle}
+  aria-expanded={expanded ? 'true' : 'false'}
+  aria-controls={panelId}
+  className={clsx(
+    'group -m-2.5 rounded-full p-2.5 transition',
+    invert ? 'hover:bg-white/10' : 'hover:bg-neutral-950/10',
+  )}
+  aria-label="Toggle navigation"
+>
+{/* <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2.5"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+  className={clsx(
+    'h-7 w-7 drop-shadow-sm',
+    invert
+      ? 'text-white group-hover:text-neutral-100'
+      : 'text-neutral-950 group-hover:text-black'
+  )}
+>
+  <line x1="4" y1="6" x2="20" y2="6" />
+  <line x1="4" y1="12" x2="20" y2="12" />
+  <line x1="4" y1="18" x2="20" y2="18" />
+</svg> */}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="currentColor"
+  className={clsx(
+    'h-6 w-6',
+    invert
+      ? 'text-white group-hover:text-neutral-200'
+      : 'text-neutral-950 group-hover:text-neutral-700'
+  )}
+>
+  <circle cx="5" cy="5" r="1.5" />
+  <circle cx="12" cy="5" r="1.5" />
+  <circle cx="19" cy="5" r="1.5" />
+  <circle cx="5" cy="12" r="1.5" />
+  <circle cx="12" cy="12" r="1.5" />
+  <circle cx="19" cy="12" r="1.5" />
+  <circle cx="5" cy="19" r="1.5" />
+  <circle cx="12" cy="19" r="1.5" />
+  <circle cx="19" cy="19" r="1.5" />
+</svg>
+
+
+</button>
+
         </div>
       </div>
     </Container>

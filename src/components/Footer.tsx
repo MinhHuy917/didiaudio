@@ -18,17 +18,7 @@ const navigation = [
   {
     title: "Thông Tin Cửa Hàng",
     links: [
-      { title: "Địa Chỉ: 86 Lê Thiệt, Phường Hoà Minh, Quận Liên Chiểu, TP. Đà Nẵng", href: "https://maps.app.goo.gl/xtErkxmAs9pYEY1B9" },
-      { title: "Giờ Mở Cửa: 08:00 - 22:00 mỗi ngày", href: "#" },
-    ],
-  },
-  {
-    title: 'Quy định và chính sách',
-    links: [
-      {
-        title: 'Chính sách thuê lều',
-        href: '/chinh-sach-thue-leu',
-      },
+      { title: "Địa Chỉ: 86 Lê Thiệt, Quận Liên Chiểu", href: "https://maps.app.goo.gl/xtErkxmAs9pYEY1B9" },
     ],
   },
   {
@@ -93,7 +83,7 @@ export function Footer() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
           <div className="mt-12 sm:mt-16 lg:mt-20">
-            <Navigation />
+            {/* <Navigation /> */}
         </div>
         <div className="mb-20 mt-24 flex flex-wrap items-end items-center justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href="/" aria-label="Home">
