@@ -48,7 +48,27 @@ import leu2anh7 from '/src/images/leu2/7.png'
 
 
 export const products = [
-    { id: 1, name: 'Lều 2 ', catalogue: '(2 lớp chống mưa, 1m4x2m)', image: leu2.src, image1: leu2anh1.src, image2: leu2anh2.src,image3: leu2anh3.src,image4: leu2anh4.src,image5: leu2anh5.src,image6: leu2anh6.src,image7: leu2anh7.src, price: 70, quantity: 1 },
+  {
+    id: 1,
+    name: 'Lều 2',
+    catalogue: '(2 lớp chống mưa, 1m4x2m)',
+    image: leu2.src,
+    image1: leu2anh1.src,
+    image2: leu2anh2.src,
+    image3: leu2anh3.src,
+    image4: leu2anh4.src,
+    image5: leu2anh5.src,
+    image6: leu2anh6.src,
+    image7: leu2anh7.src,
+    price: 70,
+    quantity: 1,
+    detail1: 'Lớp chống mưa 2 lớp bảo vệ hiệu quả, vải polyester 210T PU2000mm chống thấm tốt.',
+    detail2: 'Kích thước lều 210×140×120cm, đủ rộng cho 2 người sử dụng.',
+    detail3: 'Khung nhôm cường lực siêu nhẹ, trọng lượng chỉ 1.5kg, dễ dàng dựng trên mọi địa hình.',
+    detail4: 'Kèm 8 cọc neo, 4 dây dù chống gió và túi đựng tiện lợi, 4 góc có dây phản quang tăng an toàn khi dựng ban đêm.',
+    videoId: 'D3CLiDGj6r4?si=UsOPSSl-Cp9vQCFO',
+  }
+,  
     { id: 2, name: 'Lều 4', catalogue: '(2 lớp chống mưa, 2mx2m)', image: leu4.src, price: 90, quantity: 1 },
     { id: 3, name: 'Lều 6', catalogue: '(2 lớp chống mưa, 3mx2m7)', image: leu6.src, price: 140, quantity: 1 },
     { id: 4, name: 'Lều 8', catalogue: '(2 lớp chống mưa, 4mx2m)', image: leu8.src, price: 180, quantity: 1 },

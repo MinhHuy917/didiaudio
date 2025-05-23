@@ -153,17 +153,17 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           <div className="flex-1 flex flex-col justify-between">
             <div>
               <Rating rating={ratingValue} reviewsCount={ratingCount} />
-              <p className="text-2xl text-green-600 font-semibold mt-4">{product.price}đ</p>
+              <p className="text-2xl text-green-600 font-semibold mt-4">{product.price}k</p>
               <p className="text-gray-700 mt-2">Phân loại: {product.catalogue}</p>
 
               {/* Mô tả chi tiết (có thể thêm) */}
               <div className="mt-6 text-gray-600 leading-relaxed">
                 <p><strong>Chi tiết sản phẩm:</strong></p>
                 <ul className="list-disc list-inside mt-2">
-                  <li>Lớp chống mưa 2 lớp bảo vệ.</li>
-                  <li>Kích thước 1m4 x 2m, đủ cho 2 người.</li>
-                  <li>Chất liệu bền, nhẹ, dễ dàng lắp đặt.</li>
-                  <li>Phù hợp cho các chuyến camping dã ngoại, du lịch.</li>
+                  <li>{product.detail1}</li>
+                  <li>{product.detail2}</li>
+                  <li>{product.detail3}</li>
+                  <li>{product.detail4}</li>
                 </ul>
               </div>
             </div>
@@ -171,12 +171,16 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             {/* Video demo */}
             <div className="mt-6">
               <p className="font-semibold mb-2">Video hướng dẫn sử dụng:</p>
-              <video
-                src={demoVideoUrl}
-                controls
-                className="w-full rounded-lg shadow-md"
-                poster={images[0]}
-              />
+              <iframe
+      width="100%"
+      height="360"
+      src={`https://www.youtube.com/embed/${product.videoId}`}
+      title="Video hướng dẫn sử dụng"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      className="rounded-lg shadow-md"
+    />
             </div>
           </div>
         </div>
