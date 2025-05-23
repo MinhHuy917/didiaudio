@@ -61,7 +61,7 @@ const ProductList: React.FC = () => {
                     <span className="text-green-600">Miễn phí</span>
                   ) : (
                     <span className="text-orange-600">
-                      {product.price}k{product.isRental === false ? '/Chai' : '/ngày'}
+                      {product.price}k/ngày
                     </span>
                   )}
                 </div>

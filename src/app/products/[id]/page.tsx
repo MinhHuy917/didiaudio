@@ -169,6 +169,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             </div>
 
             {/* Video demo */}
+             {product.videoId && 
             <div className="mt-6">
               <p className="font-semibold mb-2">Video hướng dẫn sử dụng:</p>
               <iframe
@@ -182,6 +183,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       className="rounded-lg shadow-md"
     />
             </div>
+            }
           </div>
         </div>
       </div>
