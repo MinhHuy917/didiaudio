@@ -84,31 +84,13 @@ const ProductList: React.FC = () => {
 
 
       {renderSection('Lều trại', (p) => p.name.includes('Lều') || p.name.includes('Võng') || p.name.includes('Gối') || p.name.includes('Tấm cách nhiệt'))}
-      {renderSection('Bàn Ghế', (p) => p.name.includes('Bàn') || p.name.includes('Ghế') || p.name.includes('Khăn') || p.name.includes('Chân đèn'))}
+      {renderSection('Bàn Ghế', (p) => p.name.includes('Bàn') || p.name.includes('Ghế') || p.name.includes('Khăn') || p.name.includes('Chân treo đèn'))}
       {renderSection('Tăng, Thảm', (p) => p.name.includes('Tăng') || p.name.includes('Thảm'))}
       {renderSection('Đèn', (p) => p.name.includes('Đèn'))}
       {renderSection('Phụ kiện tiện ích', (p) => p.name.includes('Loa') || p.name.includes('Quạt') || p.name.includes('Tripod') || p.name.includes('Sạc') || p.name.includes('Bộ bài'))}
       {renderSection('Dụng cụ nấu ăn', (p) => p.name.includes('Bếp') || p.name.includes('nồi') || p.name.includes('Nồi') || p.name.includes('Ấm') || p.name.includes('Tay quay nướng gà') || p.name.includes('Máy nướng gà tự động') || p.name.includes('Đầu khò'))} 
       {renderSection('Thùng đá', (p) => p.name.includes('Thùng'))}
       {renderSection('Cafe & Mật Ong', (p) => p.name.includes('Cafe') || p.name.includes('Mật ong'))}
-
-
-      <div className="bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 p-5 rounded-xl shadow-sm space-y-3 my-6">
-      <h2 className="text-lg font-bold">Lưu ý khi thuê đồ</h2>
-
-      <p className="text-base leading-relaxed">
-        Khi bạn thuê, <span className="font-medium text-yellow-900">shop đã chuẩn bị sẵn túi bạt và dây cột</span>.
-        Bạn <span className="font-semibold text-yellow-900">không cần mang theo</span> túi đựng hay dây cột riêng —
-        chỉ cần mượn tại shop và khi trả lại hãy trả đầy đủ cho shop là được.
-      </p>
-
-      <p className="text-base leading-relaxed">
-  Vui lòng nhận lều và trả lều tại  <span className="font-semibold"> khu vực có camera </span>, 
-  để <span className="font-medium text-yellow-900">kiểm tra đầy đủ lều và phụ kiện</span>.  
-  Việc kiểm tra kỹ lưỡng giúp đảm bảo không thiếu, hư hỏng hoặc mất mát đồ đạc — tránh rắc rối cho bạn và giúp shop xử lý nhanh chóng hơn.
-</p>
-
-    </div>
 
 
     <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-md space-y-6 my-8">
