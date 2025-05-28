@@ -726,7 +726,7 @@ export const products = [
     image3: quatanh3.src,
     image4: quatanh4.src,
     image5: quatanh5.src,
-    price: 30,
+    price: 60,
     quantity: 1,
     detail1: 'Quạt tích điện F6 mẫu 2024, pin siêu khủng 20.000mAh, tích hợp đèn chiếu sáng 3 mức, điều khiển từ xa và chức năng hẹn giờ.',
     detail2: 'Thời gian dùng: 70h (mức gió thấp), 11h (gió mạnh nhất), 9h (bật toàn bộ chức năng); đèn sáng liên tục đến 300h.',

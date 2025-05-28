@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://didicamping.com
+
+# Sitemaps
+Sitemap: https://didicamping.com/sitemap.xml
