@@ -63,19 +63,19 @@ function Header({
           <Image src={logo} alt="Logo" width={100} height={80} className="rounded-full object-cover" />
         </Link>
         <div className="flex items-center gap-x-8 ">
-        <button
-  ref={toggleRef}
-  type="button"
-  onClick={onToggle}
-  aria-expanded={expanded ? 'true' : 'false'}
-  aria-controls={panelId}
-  className={clsx(
-    'group -m-2.5 rounded-full p-2.5 transition',
-    invert ? 'hover:bg-white/10' : 'hover:bg-neutral-950/10',
-  )}
-  aria-label="Toggle navigation"
->
-{/* <svg
+          <button
+            ref={toggleRef}
+            type="button"
+            onClick={onToggle}
+            aria-expanded={expanded ? 'true' : 'false'}
+            aria-controls={panelId}
+            className={clsx(
+              'group -m-2.5 rounded-full p-2.5 transition',
+              invert ? 'hover:bg-white/10' : 'hover:bg-neutral-950/10',
+            )}
+            aria-label="Toggle navigation"
+          >
+            {/* <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 24 24"
   fill="none"
@@ -94,30 +94,30 @@ function Header({
   <line x1="4" y1="12" x2="20" y2="12" />
   <line x1="4" y1="18" x2="20" y2="18" />
 </svg> */}
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 24 24"
-  fill="currentColor"
-  className={clsx(
-    'h-6 w-6',
-    invert
-      ? 'text-white group-hover:text-neutral-200'
-      : 'text-neutral-950 group-hover:text-neutral-700'
-  )}
->
-  <circle cx="5" cy="5" r="1.5" />
-  <circle cx="12" cy="5" r="1.5" />
-  <circle cx="19" cy="5" r="1.5" />
-  <circle cx="5" cy="12" r="1.5" />
-  <circle cx="12" cy="12" r="1.5" />
-  <circle cx="19" cy="12" r="1.5" />
-  <circle cx="5" cy="19" r="1.5" />
-  <circle cx="12" cy="19" r="1.5" />
-  <circle cx="19" cy="19" r="1.5" />
-</svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className={clsx(
+                'h-6 w-6',
+                invert
+                  ? 'text-white group-hover:text-neutral-200'
+                  : 'text-neutral-950 group-hover:text-neutral-700'
+              )}
+            >
+              <circle cx="5" cy="5" r="1.5" />
+              <circle cx="12" cy="5" r="1.5" />
+              <circle cx="19" cy="5" r="1.5" />
+              <circle cx="5" cy="12" r="1.5" />
+              <circle cx="12" cy="12" r="1.5" />
+              <circle cx="19" cy="12" r="1.5" />
+              <circle cx="5" cy="19" r="1.5" />
+              <circle cx="12" cy="19" r="1.5" />
+              <circle cx="19" cy="19" r="1.5" />
+            </svg>
 
 
-</button>
+          </button>
 
         </div>
       </div>
@@ -165,7 +165,7 @@ export function Navigation() {
   return (
     <nav className="mt-px font-display text-3xl lg:text-5xl text-[#DD6B20] font-medium tracking-tight">
       <NavigationRow>
-        
+
 
         <NavigationItem href="/dia-diem-cam-trai">
           Địa điểm cắm trại{' '}
@@ -187,6 +187,8 @@ export function Navigation() {
 export function NavigationV2() {
   return (
     <nav className="mt-2 space-y-2 font-display text-gray-100 sm:text-[#DD6B20] text-xl lg:text-4xl font-semibold tracking-tight">
+
+
       <NavigationRow>
         <NavigationItem
           href="/dia-diem-cam-trai"
@@ -210,7 +212,7 @@ export function NavigationV2() {
 
       <NavigationRow>
         <NavigationItem
-          href="/huong-dan-dung-leu"
+          href="/kinh-nghiem-cam-trai"
           className="relative sm:bg-none md:bg-none"
         >
           <div
@@ -222,9 +224,31 @@ export function NavigationV2() {
               zIndex: -1,
             }}
           />
-          <span className="relative z-10">Hướng dẫn dựng lều</span>
+          <span className="relative z-10">Kinh nghiệm cắm trại</span>
         </NavigationItem>
       </NavigationRow>
+
+      <NavigationRow>
+        <NavigationItem
+          href="/blog-cam-trai"
+          className="relative sm:bg-none md:bg-none"
+        >
+          <div
+            className="absolute inset-0 sm:hidden"
+            style={{
+              backgroundImage: `url(${bg4.src})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              zIndex: -1,
+            }}
+          />
+             <span className="relative z-10">Blog Cắm trại</span>
+        </NavigationItem>
+      </NavigationRow>
+
+   
+
+
       <NavigationRow>
 
         <NavigationItem
@@ -245,6 +269,9 @@ export function NavigationV2() {
         </NavigationItem>
 
       </NavigationRow>
+
+
+
     </nav>
   )
 }

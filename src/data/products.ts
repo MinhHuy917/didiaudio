@@ -417,7 +417,7 @@ export const products = [
   {
     id: 7,
     name: 'Tấm cách nhiệt',
-    catalogue: '(lót trong lều, cách hơi đất)',
+    catalogue: '(lót dưới lều khi mùa nóng, lót trong lều khi trời lạnh)',
     image: cachnhiet.src,
     image2: cachnhietanh2.src,
     image3: cachnhietanh3.src,
@@ -517,7 +517,7 @@ export const products = [
     detail2: 'Bên trong tráng bạc giúp chống nắng xuyên thấu, thích hợp sử dụng cả ngày nắng gắt.',
     detail3: 'Kèm 2 trụ thép sơn tĩnh điện, dây dù và cọc ghim – dễ dựng ở nhiều địa hình.',
     detail4: 'Gấp gọn vào túi 60x15cm – tiện mang theo khi đi rừng, biển, cắm trại dài ngày.',
-    videoId: 'qOOs-LZp1Mc',
+    videoId: '7lWx-hpQdAs',
   },  
   {
     id: 13,
@@ -535,7 +535,7 @@ export const products = [
     detail2: 'Có lớp tráng bạc chống tia UV, thích hợp cho hoạt động ngoài trời cả ngày.',
     detail3: 'Kèm 2 trụ thép, cọc và dây dù – dễ dựng và cố định chắc chắn ở nhiều địa hình.',
     detail4: 'Gấp gọn trong túi 60x15cm – tiện lợi mang theo đi cắm trại, dã ngoại, picnic.',
-    videoId: 'qOOs-LZp1Mc',
+    videoId: '7lWx-hpQdAs',
   },  
   {
     id: 14,
