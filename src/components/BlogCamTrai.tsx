@@ -32,7 +32,7 @@ export default function BlogCamTrai() {
           {visibleArticles.map((article) => (
             <Link
               key={article.slug}
-              href={`/blog/${article.slug}`}
+              href={`/${article.slug}`}
               className="group rounded-3xl bg-white overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-500 border border-gray-100"
             >
               <div className="relative h-64 w-full">

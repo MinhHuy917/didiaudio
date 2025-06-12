@@ -16,6 +16,7 @@ import Image from 'next/image'
 import bg1 from '/src/images/bg1.png'
 import bg4 from '/src/images/bg4.png'
 import bg6 from '/src/images/bg6.png'
+import bgAbout from '/src/images/bgAbout.png'
 
 
 const RootLayoutContext = createContext<{
@@ -75,27 +76,27 @@ function Header({
             )}
             aria-label="Toggle navigation"
           >
-    
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 24 24"
-  fill="currentColor"
-  className={clsx(
-    'h-6 w-6',
-    expanded ? 'text-black' : 'text-white',
-  )}
->
-  <circle cx="5" cy="5" r="1.5" />
-  <circle cx="12" cy="5" r="1.5" />
-  <circle cx="19" cy="5" r="1.5" />
-  <circle cx="5" cy="12" r="1.5" />
-  <circle cx="12" cy="12" r="1.5" />
-  <circle cx="19" cy="12" r="1.5" />
-  <circle cx="5" cy="19" r="1.5" />
-  <circle cx="12" cy="19" r="1.5" />
-  <circle cx="19" cy="19" r="1.5" />
-</svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className={clsx(
+                'h-6 w-6',
+                expanded ? 'text-black' : 'text-white',
+              )}
+            >
+              <circle cx="5" cy="5" r="1.5" />
+              <circle cx="12" cy="5" r="1.5" />
+              <circle cx="19" cy="5" r="1.5" />
+              <circle cx="5" cy="12" r="1.5" />
+              <circle cx="12" cy="12" r="1.5" />
+              <circle cx="19" cy="12" r="1.5" />
+              <circle cx="5" cy="19" r="1.5" />
+              <circle cx="12" cy="19" r="1.5" />
+              <circle cx="19" cy="19" r="1.5" />
+            </svg>
 
 
 
@@ -118,6 +119,16 @@ function NavigationRow({ children }: { children: React.ReactNode }) {
   )
 }
 
+function NavigationRowV2({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="even:mt-px sm:bg-[#EFE9DA] rounded-lg">
+      <Container className='lg:px-0 rounded-lg'>
+        <div className="grid grid-cols-1 sm:grid-cols-1 rounded-lg">{children}</div>
+      </Container>
+    </div>
+  )
+}
+
 function NavigationItem({
   href,
   children,
@@ -135,7 +146,33 @@ function NavigationItem({
     <Link
       href={href}
       target={target}
-      className={`font-[system-ui] group relative isolate -mx-6 bg-[#EFE9DA] px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 text-cornsilk-500 ${className}`}
+      className={`font-[system-ui] group relative isolate -mx-6 bg-[#EFE9DA] px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 text-[#1F3329] ${className}`}
+      style={style}
+    >
+      {children}
+      <span className='absolute inset-y-0 -z-10 w-screen bg-[#EFE9DA] opacity-0 transition group-odd:right-0 group-even:left-0' />
+    </Link>
+  )
+}
+
+function NavigationItemV2({
+  href,
+  children,
+  target,
+  className,
+  style,
+}: {
+  href: string
+  children: React.ReactNode
+  target?: string
+  className?: any
+  style?: any
+}) {
+  return (
+    <Link
+      href={href}
+      target={target}
+      className={`font-[system-ui] group relative isolate -mx-6 bg-[#EFE9DA] px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-20 sm:pl-6 sm:odd:pr-16 rounded-lg sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 text-[#1F3329] ${className}`}
       style={style}
     >
       {children}
@@ -148,20 +185,16 @@ export function Navigation() {
   return (
     <nav className="mt-px font-display text-3xl lg:text-5xl text-[#DD6B20] font-medium tracking-tight">
       <NavigationRow>
-
-
-        <NavigationItem href="/dia-diem-cam-trai">
-          Địa điểm cắm trại{' '}
-        </NavigationItem>
         <NavigationItem href="/about-didicamping">ĐiĐi Camping Story</NavigationItem>
-      </NavigationRow>
-      <NavigationRow>
-        <NavigationItem href="/blog-cam-trai">Blog cắm trại</NavigationItem>
-
         <NavigationItem target='_blank' href="https://www.facebook.com/groups/695950148016396">
           Cộng đồng cắm trại
         </NavigationItem>
-
+      </NavigationRow>
+      <NavigationRow>
+        <NavigationItem href="/dia-diem-cam-trai">
+          Địa điểm cắm trại{' '}
+        </NavigationItem>
+        <NavigationItem href="/kinh-nghiem-cam-trai">Kinh Nghiệm cắm trại</NavigationItem>
       </NavigationRow>
     </nav>
   )
@@ -171,87 +204,93 @@ export function NavigationV2() {
   return (
     <nav className="mt-2 space-y-2 font-display text-gray-100 sm:text-[#DD6B20] text-xl lg:text-4xl font-semibold tracking-tight">
 
-
-      <NavigationRow>
-        <NavigationItem
-          href="/dia-diem-cam-trai"
-          className="relative sm:bg-none md:bg-none"
-        >
-          <div
-            className="absolute inset-0 sm:hidden"
-            style={{
-              backgroundImage: `url(${bg1.src})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              zIndex: -1,
-            }}
-          />
-          <span className="relative z-10">Địa điểm cắm trại Đà Nẵng</span>
-        </NavigationItem>
-
-
-      </NavigationRow>
-
-
-      <NavigationRow>
-        <NavigationItem
+      <NavigationRowV2>
+        <NavigationItemV2
           href="/about-didicamping"
           className="relative sm:bg-none md:bg-none"
         >
           <div
-            className="absolute inset-0 sm:hidden"
+            className="absolute inset-0 "
             style={{
-              backgroundImage: `url(${bg4.src})`,
+              backgroundImage: `url(${bgAbout.src})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
+              borderRadius: '8px',
               zIndex: -1,
             }}
           />
-          <span className="relative z-10">ĐiĐi Camping Story</span>
-        </NavigationItem>
-      </NavigationRow>
+          <span className="relative z-10 text-white">ĐiĐi Camping Story</span>
+        </NavigationItemV2>
+      </NavigationRowV2>
 
-      <NavigationRow>
-        <NavigationItem
-          href="/ki-cam-trai"
-          className="relative sm:bg-none md:bg-none"
-        >
-          <div
-            className="absolute inset-0 sm:hidden"
-            style={{
-              backgroundImage: `url(${bg4.src})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              zIndex: -1,
-            }}
-          />
-             <span className="relative z-10">Blog Cắm trại</span>
-        </NavigationItem>
-      </NavigationRow>
+      <NavigationRowV2>
 
-   
-
-
-      <NavigationRow>
-
-        <NavigationItem
+        <NavigationItemV2
           href="https://www.facebook.com/groups/695950148016396"
           target='_blank'
           className="relative sm:bg-none md:bg-none"
         >
           <div
-            className="absolute inset-0 sm:hidden"
+            className="absolute inset-0"
             style={{
               backgroundImage: `url(${bg6.src})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
+              borderRadius: '8px',
               zIndex: -1,
             }}
           />
-          <span className="relative z-10">  Cộng đồng cắm trại Đà Nẵng</span>
-        </NavigationItem>
+          <span className="relative z-10 text-white">  Cộng đồng cắm trại Đà Nẵng</span>
+        </NavigationItemV2>
 
-      </NavigationRow>
+      </NavigationRowV2>
+
+
+      <NavigationRowV2>
+        <NavigationItemV2
+          href="/dia-diem-cam-trai"
+          className="relative sm:bg-none md:bg-none"
+        >
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(${bg1.src})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              borderRadius: '8px',
+              zIndex: -1,
+            }}
+          />
+          <span className="relative z-10 text-white">Địa điểm cắm trại Đà Nẵng</span>
+        </NavigationItemV2>
+
+
+      </NavigationRowV2>
+
+
+
+      <NavigationRowV2>
+        <NavigationItemV2
+          href="/kinh-nghiem-cam-trai"
+          className="relative sm:bg-none md:bg-none"
+        >
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(${bg4.src})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              borderRadius: '8px',
+              zIndex: -1,
+            }}
+          />
+          <span className="relative z-10 text-white">Kinh Nghiệm Cắm trại</span>
+        </NavigationItemV2>
+      </NavigationRowV2>
+
+
+
+
 
 
 
@@ -318,7 +357,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           inert={expanded ? undefined : ''}
         >
           <motion.div layout className="bg-white">
-            <div ref={navRef}  className={clsx(
+            <div ref={navRef} className={clsx(
               'py-10',
               expanded ? 'bg-[#EFE9DA]' : 'bg-white',
             )}>
@@ -338,28 +377,9 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
             </div>
             <Navigation />
             <div className="relative bg-[#EFE9DA] before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
-              <Container>
-                <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
-                  <div>
-                    <h2 className="font-display text-base font-semibold text-[#1F3329]">
-                      Địa Chỉ
-                    </h2>
-                    <Offices
-                      invert
-                      className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 !text-[#1F3329]"
-                    />
-                  </div>
-                  <div className="sm:border-l sm:border-transparent sm:pl-16">
-                    <h2 className="font-display text-base font-semibold text-[#1F3329]">
-                      Follow us
-                    </h2>
-                    <SocialMedia className="mt-6" invert />
-                  </div>
-                </div>
-              </Container>
             </div>
           </motion.div>
-        </motion.div> 
+        </motion.div>
       </>
 
       <motion.div
@@ -374,7 +394,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
             className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
             yOffset={-96}
             interactive
-          /> 
+          />
 
           <main className="w-full flex-auto">{children}</main>
 

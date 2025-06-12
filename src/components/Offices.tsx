@@ -30,8 +30,8 @@ export function Offices({
   return (
     <ul role="list" {...props}>
       <li>
-        <Office name="Đà Nẵng" >
-          Quận Liên Chiểu
+        <Office name="0909223917" >
+          didicamping917@gmail.com
           <br />
           86, Đường Lê Thiệt
         </Office>
