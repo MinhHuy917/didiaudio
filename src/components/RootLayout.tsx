@@ -58,11 +58,11 @@ function Header({
 }) {
   return (
     <Container>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between z-100">
         <Link href="/" aria-label="Home">
-          <Image src={logo} alt="Logo" width={100} height={80} className="rounded-full object-cover" />
+          <Image src={logo} alt="Logo" width={80} height={80} className="rounded-full object-cover w-[48px] lg:w-[80px] mt-3" />
         </Link>
-        <div className="flex items-center gap-x-8 ">
+        <div className="flex items-center gap-x-8 mt-1">
           <button
             ref={toggleRef}
             type="button"
@@ -94,27 +94,46 @@ function Header({
   <line x1="4" y1="12" x2="20" y2="12" />
   <line x1="4" y1="18" x2="20" y2="18" />
 </svg> */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
+        {/* <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 32 32"
+  fill="currentColor"
               className={clsx(
-                'h-6 w-6',
+                'h-8 w-8',
                 invert
                   ? 'text-white group-hover:text-neutral-200'
                   : 'text-neutral-950 group-hover:text-neutral-700'
               )}
-            >
-              <circle cx="5" cy="5" r="1.5" />
-              <circle cx="12" cy="5" r="1.5" />
-              <circle cx="19" cy="5" r="1.5" />
-              <circle cx="5" cy="12" r="1.5" />
-              <circle cx="12" cy="12" r="1.5" />
-              <circle cx="19" cy="12" r="1.5" />
-              <circle cx="5" cy="19" r="1.5" />
-              <circle cx="12" cy="19" r="1.5" />
-              <circle cx="19" cy="19" r="1.5" />
-            </svg>
+>
+  <circle cx="5" cy="5" r="1.5" />
+  <circle cx="12" cy="5" r="1.5" />
+  <circle cx="19" cy="5" r="1.5" />
+  <circle cx="5" cy="12" r="1.5" />
+  <circle cx="12" cy="12" r="1.5" />
+  <circle cx="19" cy="12" r="1.5" />
+  <circle cx="5" cy="19" r="1.5" />
+  <circle cx="12" cy="19" r="1.5" />
+  <circle cx="19" cy="19" r="1.5" />
+</svg> */}
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="currentColor"
+  className="h-6 w-6 text-white"
+>
+  <circle cx="5" cy="5" r="1.5" />
+  <circle cx="12" cy="5" r="1.5" />
+  <circle cx="19" cy="5" r="1.5" />
+  <circle cx="5" cy="12" r="1.5" />
+  <circle cx="12" cy="12" r="1.5" />
+  <circle cx="19" cy="12" r="1.5" />
+  <circle cx="5" cy="19" r="1.5" />
+  <circle cx="12" cy="19" r="1.5" />
+  <circle cx="19" cy="19" r="1.5" />
+</svg>
+
+
 
 
           </button>
@@ -304,9 +323,9 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
 
   return (
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
-      <header>
+      <>
         <div
-          className="absolute left-0 right-0 top-2 z-40 pt-14"
+          className="absolute left-0 right-0 top-2 z-40"
           aria-hidden={expanded ? 'true' : undefined}
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
           inert={expanded ? '' : undefined}
@@ -329,13 +348,16 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           layout
           id={panelId}
           style={{ height: expanded ? 'auto' : '0.5rem' }}
-          className="relative z-50 overflow-hidden bg-neutral-950 pt-2"
+          className="relative z-50 overflow-hidden bg-neutral-950"
           aria-hidden={expanded ? undefined : 'true'}
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
           inert={expanded ? undefined : ''}
         >
           <motion.div layout className="bg-white-800">
-            <div ref={navRef} className="bg-[#EFE9DA] pb-16 pt-14">
+            <div ref={navRef}  className={clsx(
+              'py-10',
+              expanded ? 'bg-[#EFE9DA]' : 'bg-white',
+            )}>
               <Header
                 invert
                 panelId={panelId}
@@ -373,22 +395,22 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
               </Container>
             </div>
           </motion.div>
-        </motion.div>
-      </header>
+        </motion.div> 
+      </>
 
       <motion.div
         layout
-        className="relative flex flex-auto overflow-hidden bg-white pt-14"
+        className="relative flex flex-auto overflow-hidden bg-white"
       >
         <motion.div
           layout
-          className="relative isolate flex w-full flex-col pt-9"
+          className="relative isolate flex w-full flex-col"
         >
           <GridPattern
             className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
             yOffset={-96}
             interactive
-          />
+          /> 
 
           <main className="w-full flex-auto">{children}</main>
 

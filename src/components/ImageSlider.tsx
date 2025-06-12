@@ -21,7 +21,7 @@ const images = [
 
 export default function ImageSlider() {
   return (
-    <div className="w-full px-4">
+    <div className="w-full px-4 mt-2">
       <Swiper
         modules={[Autoplay, Pagination]}
         autoplay={{ delay: 3000 }}

@@ -15,15 +15,6 @@ export const metadata: Metadata = {
 export default async function Home() {
   return (
     <>
-      <Container className="mt-24 sm:mt-32 md:mt-40 !pl-0">
-        <h1 className="font-poppins text-balance text-3xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-fuchsia-500 via-rose-500 to-orange-400 bg-clip-text text-transparent [text-wrap:balance] pb-6 lg:pb-12 pl-4 lg:pl-0 drop-shadow-lg animate-gradient-x">
-  Cho Thuê Lều & Đồ Cắm Trại Đà Nẵng
-</h1>
-
-
-
-
-      </Container>
       <div>
 
       <ImageSlider />
