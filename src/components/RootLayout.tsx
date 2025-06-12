@@ -75,52 +75,16 @@ function Header({
             )}
             aria-label="Toggle navigation"
           >
-            {/* <svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  strokeWidth="2.5"
-  strokeLinecap="round"
-  strokeLinejoin="round"
-  className={clsx(
-    'h-7 w-7 drop-shadow-sm',
-    invert
-      ? 'text-white group-hover:text-neutral-100'
-      : 'text-neutral-950 group-hover:text-black'
-  )}
->
-  <line x1="4" y1="6" x2="20" y2="6" />
-  <line x1="4" y1="12" x2="20" y2="12" />
-  <line x1="4" y1="18" x2="20" y2="18" />
-</svg> */}
-        {/* <svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 32 32"
-  fill="currentColor"
-              className={clsx(
-                'h-8 w-8',
-                invert
-                  ? 'text-white group-hover:text-neutral-200'
-                  : 'text-neutral-950 group-hover:text-neutral-700'
-              )}
->
-  <circle cx="5" cy="5" r="1.5" />
-  <circle cx="12" cy="5" r="1.5" />
-  <circle cx="19" cy="5" r="1.5" />
-  <circle cx="5" cy="12" r="1.5" />
-  <circle cx="12" cy="12" r="1.5" />
-  <circle cx="19" cy="12" r="1.5" />
-  <circle cx="5" cy="19" r="1.5" />
-  <circle cx="12" cy="19" r="1.5" />
-  <circle cx="19" cy="19" r="1.5" />
-</svg> */}
+    
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 24 24"
   fill="currentColor"
-  className="h-6 w-6 text-white"
+  className={clsx(
+    'h-6 w-6',
+    expanded ? 'text-black' : 'text-white',
+  )}
 >
   <circle cx="5" cy="5" r="1.5" />
   <circle cx="12" cy="5" r="1.5" />
@@ -189,10 +153,10 @@ export function Navigation() {
         <NavigationItem href="/dia-diem-cam-trai">
           Địa điểm cắm trại{' '}
         </NavigationItem>
-        <NavigationItem href="/huong-dan-dung-leu">Hướng dẫn dựng lều</NavigationItem>
+        <NavigationItem href="/about-didicamping">ĐiĐi Camping Story</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        {/* <NavigationItem href="/blog-cam-trai">Blog cắm trại</NavigationItem> */}
+        <NavigationItem href="/blog-cam-trai">Blog cắm trại</NavigationItem>
 
         <NavigationItem target='_blank' href="https://www.facebook.com/groups/695950148016396">
           Cộng đồng cắm trại
@@ -231,7 +195,7 @@ export function NavigationV2() {
 
       <NavigationRow>
         <NavigationItem
-          href="/kinh-nghiem-cam-trai"
+          href="/about-didicamping"
           className="relative sm:bg-none md:bg-none"
         >
           <div
@@ -243,13 +207,13 @@ export function NavigationV2() {
               zIndex: -1,
             }}
           />
-          <span className="relative z-10">Kinh nghiệm cắm trại</span>
+          <span className="relative z-10">ĐiĐi Camping Story</span>
         </NavigationItem>
       </NavigationRow>
 
       <NavigationRow>
         <NavigationItem
-          href="/blog-cam-trai"
+          href="/ki-cam-trai"
           className="relative sm:bg-none md:bg-none"
         >
           <div
@@ -353,7 +317,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
           inert={expanded ? undefined : ''}
         >
-          <motion.div layout className="bg-white-800">
+          <motion.div layout className="bg-white">
             <div ref={navRef}  className={clsx(
               'py-10',
               expanded ? 'bg-[#EFE9DA]' : 'bg-white',

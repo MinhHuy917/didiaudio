@@ -472,7 +472,7 @@ export const products = [
     name: 'Khăn bàn thổ cẩm',
     catalogue: '(1m x 1m5)',
     image: khanban.src,
-    price: 15,
+    price: 10,
     quantity: 1,
     detail1: 'Khăn bàn thổ cẩm với họa tiết truyền thống, mang phong cách boho – thích hợp trang trí bàn ăn, bàn trà, bàn cắm trại hoặc sử dụng làm phông nền chụp ảnh.',
     detail2: 'Kích thước: 1m x 1m5 – vừa vặn cho các loại bàn từ nhỏ đến trung bình hoặc trải sàn picnic.',

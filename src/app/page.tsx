@@ -6,6 +6,7 @@ import { PageIntro } from '@/components/PageIntro'
 import ProductList from '@/components/ProductTable'
 import ImageSlider from '@/components/ImageSlider'
 import { NavigationV2 } from '@/components/RootLayout'
+import Process from './about-didicamping/page'
 
 export const metadata: Metadata = {
   description:
@@ -15,10 +16,7 @@ export const metadata: Metadata = {
 export default async function Home() {
   return (
     <>
-      <div>
-
       <ImageSlider />
-      </div>
       <ProductList />
       <div className='mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 font-sans text-[#1F3329]'>
 
