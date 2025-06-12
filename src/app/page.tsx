@@ -16,15 +16,13 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-24 sm:mt-32 md:mt-40 !pl-0">
-        <PageIntro eyebrow="" title="">
-        <h1 className="font-poppins text-4xl sm:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-fuchsia-500 via-rose-500 to-orange-400 bg-clip-text text-transparent [text-wrap:balance] py-10 lg:py-24 drop-shadow-lg animate-gradient-x">
+        <h1 className="font-poppins text-balance text-3xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-fuchsia-500 via-rose-500 to-orange-400 bg-clip-text text-transparent [text-wrap:balance] pb-6 lg:pb-12 pl-4 lg:pl-0 drop-shadow-lg animate-gradient-x">
   Cho Thuê Lều & Đồ Cắm Trại Đà Nẵng
 </h1>
 
 
 
 
-        </PageIntro>
       </Container>
       <div>
 
