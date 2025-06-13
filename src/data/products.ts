@@ -18,13 +18,17 @@ import ghe from '/src/images/ghe.png'
 import goihoi from '/src/images/goihoi.jpg'
 import khanban from '/src/images/khanbanthocam.png'
 import leu2 from '/src/images/leu2.jpg'
+import leu2anh1 from '/src/images/leu2/1.png'
+import leu2anh3 from '/src/images/leu2/3.png'
+import leu2anh4 from '/src/images/leu2/4.png'
+import leu2anh5 from '/src/images/leu2/5.png'
+import leu2anh7 from '/src/images/leu2/7.png'
 import leu4 from '/src/images/leu4.jpg'
 import leu6 from '/src/images/leu6.jpg'
 import leu8 from '/src/images/leu8.jpg'
 import loa from '/src/images/loatronsmart.png'
 import maynuongtudong from '/src/images/maynuongtudong.png'
 import noi4L from '/src/images/noi4L.png'
-import noitreo from '/src/images/noitreo.png'
 import quat from '/src/images/quat.png'
 import sacduphong from '/src/images/sacduphong.jpeg'
 import cachnhiet from '/src/images/tamcachnhiet.png'
@@ -38,20 +42,11 @@ import thungdanho from '/src/images/thungda6.8L.jpeg'
 import thungda25L from '/src/images/thungdac2.png'
 import tripod from '/src/images/tripod.jpg'
 import vong from '/src/images/vong.jpg'
-import leu2anh1 from '/src/images/leu2/1.png'
-import leu2anh2 from '/src/images/leu2/2.png'
-import leu2anh3 from '/src/images/leu2/3.png'
-import leu2anh4 from '/src/images/leu2/4.png'
-import leu2anh5 from '/src/images/leu2/5.png'
-import leu2anh6 from '/src/images/leu2/6.png'
-import leu2anh7 from '/src/images/leu2/7.png'
 
 import leu4anh1 from '/src/images/leu4/1.png'
 import leu4anh2 from '/src/images/leu4/2.png'
-import leu4anh3 from '/src/images/leu4/3.png'
 import leu4anh4 from '/src/images/leu4/4.png'
 import leu4anh5 from '/src/images/leu4/5.png'
-import leu4anh6 from '/src/images/leu4/6.png'
 import leu4anh7 from '/src/images/leu4/7.png'
 
 import leu6anh1 from '/src/images/leu6/1.png'
@@ -59,47 +54,48 @@ import leu6anh2 from '/src/images/leu6/2.png'
 import leu6anh3 from '/src/images/leu6/3.png'
 import leu6anh4 from '/src/images/leu6/4.png'
 import leu6anh5 from '/src/images/leu6/5.png'
-import leu6anh6 from '/src/images/leu6/6.png'
-import leu6anh7 from '/src/images/leu6/7.png'
 
 import leu8anh1 from '/src/images/leu8/0.png'
 import leu8anh2 from '/src/images/leu8/1.jpg'
 import leu8anh3 from '/src/images/leu8/2.jpg'
 import leu8anh4 from '/src/images/leu8/3.jpg'
 import leu8anh5 from '/src/images/leu8/4.jpg'
-import leu8anh6 from '/src/images/leu8/5.jpg'
-import leu8anh7 from '/src/images/leu8/6.jpg'
 
 import vonganh1 from '/src/images/vong/0.png'
-import vonganh2 from '/src/images/vong/1.jpg'
-import vonganh3 from '/src/images/vong/2.jpg'
 import vonganh4 from '/src/images/vong/3.jpeg'
 import vonganh5 from '/src/images/vong/4.png'
 import vonganh6 from '/src/images/vong/5.jpg'
 import vonganh7 from '/src/images/vong/6.jpg'
 
-import goihoianh1 from '/src/images/goihoi/1.png'
 import goihoianh2 from '/src/images/goihoi/2.png'
 import goihoianh3 from '/src/images/goihoi/3.png'
 import goihoianh4 from '/src/images/goihoi/4.png'
 import goihoianh6 from '/src/images/goihoi/6.png'
 import goihoianh7 from '/src/images/goihoi/7.png'
 
-import cachnhietanh1 from '/src/images/cachnhiet/1.png'
 import cachnhietanh2 from '/src/images/cachnhiet/2.png'
 import cachnhietanh3 from '/src/images/cachnhiet/3.png'
 import cachnhietanh4 from '/src/images/cachnhiet/4.png'
 import cachnhietanh5 from '/src/images/cachnhiet/5.png'
 import cachnhietanh6 from '/src/images/cachnhiet/6.png'
-import cachnhietanh7 from '/src/images/cachnhiet/7.png'
 
 import gheanh1 from '/src/images/ghe/1.png'
 import gheanh2 from '/src/images/ghe/2.png'
 import gheanh3 from '/src/images/ghe/3.png'
 import gheanh4 from '/src/images/ghe/4.png'
 import gheanh5 from '/src/images/ghe/5.png'
-import gheanh6 from '/src/images/ghe/6.png'
-import gheanh7 from '/src/images/ghe/7.png'
+
+import gheNH1 from '/src/images/gheNH16J001-J/1.jpg'
+import gheNH2 from '/src/images/gheNH16J001-J/2.png'
+import gheNH3 from '/src/images/gheNH16J001-J/3.jpg'
+import gheNH4 from '/src/images/gheNH16J001-J/4.jpg'
+import gheNH5 from '/src/images/gheNH16J001-J/5.jpg'
+import gheNH6 from '/src/images/gheNH16J001-J/6.jpg'
+import gheNH7 from '/src/images/gheNH16J001-J/7.jpg'
+import gheNH8 from '/src/images/gheNH16J001-J/8.jpg'
+import gheNH9 from '/src/images/gheNH16J001-J/9.jpg'
+import gheNH10 from '/src/images/gheNH16J001-J/10.jpg'
+import gheNH11 from '/src/images/gheNH16J001-J/11.jpg'
 
 import bananh1 from '/src/images/ban/1.png'
 import bananh2 from '/src/images/ban/2.png'
@@ -107,13 +103,25 @@ import bananh3 from '/src/images/ban/3.png'
 import bananh4 from '/src/images/ban/4.png'
 import bananh5 from '/src/images/ban/5.png'
 
-import khanbanthocamanh1 from '/src/images/khanbanthocam/1.png'
-import khanbanthocamanh2 from '/src/images/khanbanthocam/1.png'
-import khanbanthocamanh3 from '/src/images/khanbanthocam/1.png'
-import khanbanthocamanh4 from '/src/images/khanbanthocam/1.png'
-import khanbanthocamanh5 from '/src/images/khanbanthocam/1.png'
-import khanbanthocamanh6 from '/src/images/khanbanthocam/1.png'
-import khanbanthocamanh7 from '/src/images/khanbanthocam/1.png'
+import banNH1 from '/src/images/banNH22JU050/1.png'
+import banNH2 from '/src/images/banNH22JU050/2.jpg'
+import banNH3 from '/src/images/banNH22JU050/3.jpg'
+import banNH4 from '/src/images/banNH22JU050/4.jpg'
+import banNH5 from '/src/images/banNH22JU050/5.jpg'
+import banNH6 from '/src/images/banNH22JU050/6.jpg'
+import banNH7 from '/src/images/banNH22JU050/7.jpg'
+import banNH8 from '/src/images/banNH22JU050/8.jpg'
+import banNH9 from '/src/images/banNH22JU050/9.jpg'
+import banNH10 from '/src/images/banNH22JU050/10.jpg'
+
+import TuiMangNuocCoVoi1 from '/src/images/TuiMangNuocCoVoi/1.jpg'
+import TuiMangNuocCoVoi2 from '/src/images/TuiMangNuocCoVoi/2.jpeg'
+import TuiMangNuocCoVoi3 from '/src/images/TuiMangNuocCoVoi/3.jpg'
+import TuiMangNuocCoVoi4 from '/src/images/TuiMangNuocCoVoi/4.jpg'
+import TuiMangNuocCoVoi5 from '/src/images/TuiMangNuocCoVoi/5.jpg'
+import TuiMangNuocCoVoi6 from '/src/images/TuiMangNuocCoVoi/6.jpg'
+import TuiMangNuocCoVoi7 from '/src/images/TuiMangNuocCoVoi/7.jpg'
+
 
 import chantreodenannh1 from '/src/images/chantreoden/1.png'
 import chantreodenannh2 from '/src/images/chantreoden/2.png'
@@ -282,6 +290,13 @@ import daukhoanh3 from '/src/images/daukho/3.png'
 import daukhoanh4 from '/src/images/daukho/4.png'
 import daukhoanh5 from '/src/images/daukho/5.png'
 
+import binhgas1 from '/src/images/binhgas/1.jpg'
+import binhgas2 from '/src/images/binhgas/2.jpg'
+import binhgas3 from '/src/images/binhgas/3.jpg'
+import binhgas4 from '/src/images/binhgas/4.jpg'
+import binhgas5 from '/src/images/binhgas/5.jpg'
+import binhgas6 from '/src/images/binhgas/6.jpg'
+
 
 import thungda8Lanh1 from '/src/images/thungda8L/1.png'
 import thungda8Lanh2 from '/src/images/thungda8L/2.png'
@@ -434,7 +449,7 @@ export const products = [
   {
     id: 8,
     name: 'Ghế mặt trăng',
-    catalogue: '(màu trắng kem, tải trọng 120kg)',
+    catalogue: '(màu trắng, 2.5kg)',
     image: ghe.src,
     image1: gheanh1.src,
     image2: gheanh2.src,
@@ -448,11 +463,32 @@ export const products = [
     detail3: 'Thích hợp dùng trong các buổi picnic, camping, ngồi chơi ngoài trời – tạo cảm giác thoải mái và thư giãn với thiết kế lưng thấp ôm sát người.',
     detail4: 'Thương hiệu cao cấp: TMOUNTAIN – chuyên sản xuất đồ Camping & Glamping thiết kế riêng biệt, gia công tỉ mỉ, chất lượng vượt trội so với các sản phẩm không thương hiệu.',
   },
+
+  {
+    id: 'ghe-xep-mini-cau-ca-di-du-lich-naturehike-nh16j001-j',
+    name: 'Ghế Naturehike',
+    catalogue: '(màu kaki, 1.3kg)',
+    image: gheNH1.src,
+    image1: gheNH5.src,
+    image2: gheNH11.src,
+    image3: gheNH7.src,
+    image4: gheNH2.src,
+    image5: gheNH10.src,
+    
+    price: 30,
+    quantity: 1,
+    detail1: 'Ghế xếp mini câu cá, đi du lịch NatureHike NH16J001-J. Là một mẫu ghế dã ngoại được ưa chuộng trong cộng đồng camper với thiết kế đơn giản chắc chắn, gọn nhẹ giúp người sử dụng có thể luôn mang bên mình.',
+    detail2: 'Khung được làm từ thép không gỉ dạng ống, chắc chắn, chịu lực tốt, chống han gỉ khi sử dụng ngoài trời. Kết hợp với lớp vải Offord 600D dày dặn, chống thấm nhẹ, dễ vệ sinh, bền màu theo thời gian.',
+    detail3: 'Kích thước sử dụng: 57 x 35 x 35.5 cm – đủ rộng để đựng đồ cắm trại, picnic, câu cá,... Khi không dùng có thể gấp gọn chỉ còn 57 x 10 x 10 cm, dễ dàng bỏ cốp xe, balo hay túi đồ.',
+    detail4: 'Trọng lượng chỉ 1.3kg, ai cũng có thể mang vác thoải mái trong các chuyến đi. Tông màu kaki trung tính, hài hòa với thiên nhiên – phù hợp với mọi phong cách dã ngoại.',
+  },
+
+
   
   {
     id: 9,
     name: 'Bàn nhôm',
-    catalogue: '(90cm x 60cm)',
+    catalogue: '(màu vàng, 90x60cm, 4kg)',
     image: ban.src,
     image1: bananh1.src,
     image2: bananh2.src,
@@ -467,6 +503,24 @@ export const products = [
     detail4: 'Mặt bàn rộng rãi 90x60cm, cao 43cm – đủ để bày nhiều vật dụng cần thiết trong các buổi picnic, ăn uống hoặc ngồi chơi thư giãn ngoài trời.',
   },
   
+  {
+    id: 'ban-nhom-sieu-nhe-naturehike-cnh22ju050',
+    name: 'Bàn nhôm Naturehike',
+    catalogue: '(màu kaki, 40x30cm, 1kg)',
+    image: banNH1.src,
+    image1: banNH2.src,
+    image2: banNH3.src,
+    image3: banNH5.src,
+    image4: banNH8.src,
+    image5: banNH9.src,
+    price: 60,
+    quantity: 1,
+    detail1: 'Thiết kế bàn cuộn trứng, dễ dàng lắp ráp và gấp gọn siêu nhỏ, tiện lợi mang theo trong các chuyến cắm trại, dã ngoại hay đi câu cá.',
+    detail2: 'Sử dụng hợp kim nhôm 6063 dày dặn, kết hợp Inox 304 ở phần đinh tán, đảm bảo sự ổn định cao, bền bỉ trong suốt quá trình sử dụng.',
+    detail3: 'Kích thước sử dụng: 40.5 x 29 x 30.5 cm | Gấp gọn: 11 x 14 x 19 cm | Trọng lượng chỉ khoảng 1kg, phù hợp mang đi bộ đường dài.',
+    detail4: 'Lý tưởng dùng làm bàn ăn, bàn trà, bàn để đồ khi cắm trại – picnic. Mang lại không gian gọn gàng, tiện nghi, giúp bạn tận hưởng thiên nhiên một cách trọn vẹn.',
+  },
+
   {
     id: 10,
     name: 'Khăn bàn thổ cẩm',
@@ -997,6 +1051,25 @@ export const products = [
     detail4: 'Thân bằng kim loại chắc chắn, tay cầm tiện dụng, thiết kế gọn nhẹ dễ mang theo trong các chuyến dã ngoại.',
     detail5: 'Thích hợp sử dụng khi đi cắm trại, picnic, BBQ ngoài trời hoặc sử dụng trong gia đình.'
   },
+
+  {
+    id: 'binh-ga-mini-namilux-250g',
+    name: 'Bình gas mini Namilux 250g',
+    catalogue: '(250g)',
+    image: binhgas1.src,
+    image1: binhgas2.src,
+    image2: binhgas3.src,
+    image3: binhgas4.src,
+    image4: binhgas5.src,
+    image5: binhgas6.src,
+    price: 30,
+    quantity: 1,
+    detail1: 'Thể tích tăng 14% so với lon gas thông thường, phù hợp cho bếp ga du lịch, đèn khò mini, bếp cắm trại, giúp nấu nướng tiết kiệm và hiệu quả hơn.',
+    detail2: 'Nhập khẩu trực tiếp từ Hàn Quốc, sản xuất bởi TAEYANG CORPORATION, đạt tiêu chuẩn an toàn Nhật Bản, Hàn Quốc, Châu Âu, đảm bảo chất lượng cao cấp.',
+    detail3: 'Vỏ lon thiết kế nổi bật, có logo NAMILUX và hướng dẫn an toàn in rõ ràng trên thân lon. Sử dụng rộng rãi tại khách sạn, nhà hàng, quán ăn và gia đình.',
+    detail4: 'Chỉ sử dụng 1 lần, không nạp lại. Tránh va chạm, để nơi thoáng mát dưới 40°C, không dùng lon móp, rỉ sét. Đọc kỹ hướng dẫn để đảm bảo an toàn tuyệt đối.'
+  },
+  
   
   {
     id: 40,
@@ -1014,7 +1087,26 @@ export const products = [
     detail2: 'Chơi lý tưởng từ 11–15 người, thời lượng 30–90 phút, dành cho người từ 8 tuổi trở lên. Giúp tăng khả năng quan sát và phân tích tình huống.',
     detail3: 'Là trò chơi nhập môn phổ biến nhất trong thế giới board game, với nhiều phiên bản như Werewolf One Night, Character, Daybreak...',
     detail4: 'Giúp phát triển tư duy logic, kỹ năng giao tiếp, giải quyết vấn đề, toán học cơ bản và kỹ năng xã hội qua các vòng tranh luận và suy luận.'
-  }
+  },
+  {
+    id: 'tui-dung-nuoc-co-voi-naturehike-cnk2450cf027',
+    name: 'Túi đựng nước có vòi Naturehike',
+    catalogue: '(10L)',
+    image: TuiMangNuocCoVoi1.src,
+    image1: TuiMangNuocCoVoi3.src,
+    image2: TuiMangNuocCoVoi4.src,
+    image3: TuiMangNuocCoVoi5.src,
+    image4: TuiMangNuocCoVoi6.src,
+    image5: TuiMangNuocCoVoi7.src,
+    price: 10,
+    quantity: 1,
+    detail1: 'Thiết kế túi nước 10L phù hợp sử dụng trong các chuyến dã ngoại, picnic, cắm trại dài ngày, tích trữ đủ lượng nước sinh hoạt, nấu ăn hay giải khát.',
+    detail2: 'Có thể gấp gọn chung với hành lý khi không sử dụng, tiết kiệm diện tích, thuận tiện mang theo trong balo hoặc cốp xe.',
+    detail3: 'Làm từ nhựa PA, PE, PET (3 lớp Composite), an toàn khi đựng nước ngọt, nước có ga hay đồ uống có cồn, giữ nhiệt tốt khi kết hợp với thùng bảo ôn.',
+    detail4: 'Trang bị vòi rót tiện lợi, dễ dàng lấy nước hoặc rót đồ uống. Thích hợp mang đi picnic, cắm trại, đi biển hay tổ chức tiệc ngoài trời.'
+  },
+  
+
   
 ]
 

@@ -63,6 +63,20 @@ export const socialMediaProfiles = [
   },
 ]
 
+export const socialMediaProfilesV2 = [
+  
+  {
+    title: 'Instagram',
+    href: 'https://www.instagram.com/didicamping/',
+    icon: FacebookIcon,
+  },
+  {
+    title: 'Youtube',
+    href: 'https://www.youtube.com/@didicamping',
+    icon: TiktokIcon,
+  },
+]
+
 export function SocialMedia({
   className,
   invert = false,
@@ -80,6 +94,40 @@ export function SocialMedia({
       )}
     >
       {socialMediaProfiles.map((socialMediaProfile) => (
+        <li key={socialMediaProfile.title}>
+          <Link
+            href={socialMediaProfile.href}
+            aria-label={socialMediaProfile.title}
+            className={clsx(
+              'transition',
+              invert ? 'hover:text-neutral-200' : 'hover:text-neutral-700',
+            )}
+          >
+            <socialMediaProfile.icon className="h-6 w-6 fill-current" />
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+export function SocialMediaV2({
+  className,
+  invert = false,
+}: {
+  className?: string
+  invert?: boolean
+}) {
+  return (
+    <ul
+      role="list"
+      className={clsx(
+        'flex gap-x-10',
+        invert ? 'text-white' : 'text-neutral-950',
+        className,
+      )}
+    >
+      {socialMediaProfilesV2.map((socialMediaProfile) => (
         <li key={socialMediaProfile.title}>
           <Link
             href={socialMediaProfile.href}

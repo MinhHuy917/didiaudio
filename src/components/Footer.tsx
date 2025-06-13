@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { socialMediaProfiles } from '@/components/SocialMedia'
+import { socialMediaProfiles, socialMediaProfilesV2 } from '@/components/SocialMedia'
 import logo from '@/images/logo.png'
 import Image from 'next/image'
 
@@ -18,12 +18,16 @@ const navigation = [
   {
     title: "Thông Tin Cửa Hàng",
     links: [
-      { title: "Địa Chỉ: 86 Lê Thiệt, Quận Liên Chiểu", href: "https://maps.app.goo.gl/xtErkxmAs9pYEY1B9" },
+      { title: "86 Lê Thiệt, Quận Liên Chiểu, TP. Đà Nẵng", href: "https://maps.app.goo.gl/xtErkxmAs9pYEY1B9" },
     ],
   },
   {
     title: 'Về chúng tôi',
     links: socialMediaProfiles,
+  },
+  {
+    title: 'Về chúng tôi',
+    links: socialMediaProfilesV2,
   },
  
 ]
@@ -83,7 +87,7 @@ export function Footer() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
           <div className="mt-12 sm:mt-16 lg:mt-20">
-            {/* <Navigation /> */}
+            <Navigation />
         </div>
         <div className="mb-20 mt-24 flex flex-wrap items-end items-center justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href="/" aria-label="Home">

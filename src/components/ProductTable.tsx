@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 
 type Product = {
-  id: number
+  id: any
   name: string
   catalogue: string
   image: any
@@ -88,9 +88,8 @@ const ProductList: React.FC = () => {
       {renderSection('Tăng, Thảm', (p) => p.name.includes('Tăng') || p.name.includes('Thảm'))}
       {renderSection('Đèn', (p) => p.name.includes('Đèn'))}
       {renderSection('Phụ kiện tiện ích', (p) => p.name.includes('Loa') || p.name.includes('Quạt') || p.name.includes('Tripod') || p.name.includes('Sạc') || p.name.includes('Bộ bài'))}
-      {renderSection('Dụng cụ nấu ăn', (p) => p.name.includes('Bếp') || p.name.includes('nồi') || p.name.includes('Nồi') || p.name.includes('Ấm') || p.name.includes('Tay quay nướng gà') || p.name.includes('Máy nướng gà tự động') || p.name.includes('Đầu khò'))} 
-      {renderSection('Thùng đá', (p) => p.name.includes('Thùng'))}
-      {renderSection('Cafe & Mật Ong', (p) => p.name.includes('Cafe') || p.name.includes('Mật ong'))}
+      {renderSection('Dụng cụ nấu ăn', (p) => p.name.includes('Bếp') || p.name.includes('nồi') || p.name.includes('Nồi') || p.name.includes('Ấm') || p.name.includes('Tay quay nướng gà') || p.name.includes('Máy nướng gà tự động') || p.name.includes('Đầu khò') || p.name.includes('Bình gas'))} 
+      {renderSection('Thùng đá, túi đựng nước', (p) => p.name.includes('Thùng') || p.name.includes('Túi đựng nước'))}
 
 
    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-md space-y-6 my-8">

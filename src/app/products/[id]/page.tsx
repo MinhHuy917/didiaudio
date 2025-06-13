@@ -29,7 +29,7 @@ type Product = {
 export default function ProductPage({ params }: { params: { id: string } }) {
   const router = useRouter()
 
-  const product = products.find((p: Product) => p.id.toString() === params.id) ?? null
+  const product = products.find((p: any) => p.id.toString() === params.id) ?? null
 
   const images = [
     product?.image,
