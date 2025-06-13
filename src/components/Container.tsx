@@ -20,3 +20,18 @@ export function Container<T extends React.ElementType = 'div'>({
     </Component>
   )
 }
+
+export function ContainerV2<T extends React.ElementType = 'div'>({
+  as,
+  className,
+  children,
+}: Omit<React.ComponentPropsWithoutRef<T>, keyof ContainerProps<T>> &
+  ContainerProps<T>) {
+  let Component = as ?? 'div'
+
+  return (
+    <Component className={clsx(' max-w-7xl mx-6 sm:mx-0 ', className)}>
+      <div className="max-w-2xl lg:max-w-none">{children}</div>
+    </Component>
+  )
+}

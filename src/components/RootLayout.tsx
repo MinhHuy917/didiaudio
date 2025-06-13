@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { createContext, useEffect, useId, useRef, useState } from 'react'
 
-import { Container } from '@/components/Container'
+import { Container, ContainerV2 } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
 import { Offices } from '@/components/Offices'
@@ -121,10 +121,10 @@ function NavigationRow({ children }: { children: React.ReactNode }) {
 
 function NavigationRowV2({ children }: { children: React.ReactNode }) {
   return (
-    <div className="even:mt-px sm:bg-[#EFE9DA] rounded-lg">
-      <Container className='lg:px-0 rounded-lg'>
+    <div className="even:mt-px rounded-lg">
+      <ContainerV2 className='px-0 rounded-lg'>
         <div className="grid grid-cols-1 sm:grid-cols-1 rounded-lg">{children}</div>
-      </Container>
+      </ContainerV2>
     </div>
   )
 }

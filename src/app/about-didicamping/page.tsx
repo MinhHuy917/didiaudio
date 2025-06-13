@@ -10,9 +10,10 @@ import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { TagList, TagListItem } from '@/components/TagList'
-import imageLaptop from '@/images/laptop.jpg'
-import imageMeeting from '@/images/meeting.jpg'
-import imageWhiteboard from '@/images/whiteboard.jpg'
+import imgAbout1 from '@/images/about/imgAbout1.png'
+import imgAbout3 from '@/images/about/imgAbout2.jpg'
+import imgAbout2 from '@/images/about/imgAbout3.jpg'
+
 
 function Section({
   title,
@@ -31,7 +32,7 @@ function Section({
             <StylizedImage
               {...image}
               sizes="(min-width: 1024px) 41rem, 31rem"
-              className="justify-center lg:justify-end lg:group-even/section:justify-start"
+              className="justify-center lg:justify-end lg:group-even/section:justify-start grayscale-0"
             />
           </FadeIn>
         </div>
@@ -54,7 +55,7 @@ function Section({
 
 function Discover() {
   return (
-    <Section title="Khởi nguồn" image={{ src: imageWhiteboard }}>
+    <Section title="Khởi nguồn" image={{ src: imgAbout1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
           Có những ngày cuối tuần, chỉ cần rời thành phố một đoạn, dựng tạm chiếc lều bên suối mát hay dưới tán cây rừng, ta đã thấy lòng nhẹ tênh. Nhưng không phải ai cũng có đủ đồ nghề để bắt đầu.
@@ -82,7 +83,7 @@ function Discover() {
 
 function Build() {
   return (
-    <Section title="Dịch vụ cho thuê thiết bị" image={{ src: imageLaptop, shape: 1 }}>
+    <Section title="Dịch vụ cho thuê thiết bị" image={{ src: imgAbout2, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
           Từ một chiếc lều 2 người đến một bộ bàn ghế nhỏ gọn, từ bếp nướng than thơm lừng đến đèn lều nhẹ dịu trong đêm – tất cả đều có sẵn tại ĐiĐi Camping.
@@ -107,7 +108,7 @@ function Build() {
 
 function Deliver() {
   return (
-    <Section title="Vận hành & chăm sóc" image={{ src: imageMeeting, shape: 2 }}>
+    <Section title="Vận hành & chăm sóc" image={{ src: imgAbout3, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
           Khi bạn đặt thuê, chúng tôi không chỉ giao đồ. Chúng tôi chuẩn bị kỹ, kiểm tra từng bộ phận nhỏ, gấp gọn và sẵn sàng để bạn chỉ việc dùng.
