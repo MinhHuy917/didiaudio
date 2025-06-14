@@ -103,6 +103,21 @@ import bananh3 from '/src/images/ban/3.png'
 import bananh4 from '/src/images/ban/4.png'
 import bananh5 from '/src/images/ban/5.png'
 
+
+import than1 from '/src/images/than/1.png'
+import than2 from '/src/images/than/2.png'
+import than3 from '/src/images/than/3.png'
+import than4 from '/src/images/than/4.png'
+import than5 from '/src/images/than/5.png'
+import than6 from '/src/images/than/6.png'
+
+import vienmoithan1 from '/src/images/vien-moi-than/1.png'
+import vienmoithan2 from '/src/images/vien-moi-than/2.png'
+import vienmoithan3 from '/src/images/vien-moi-than/3.png'
+import vienmoithan4 from '/src/images/vien-moi-than/4.png'
+import vienmoithan5 from '/src/images/vien-moi-than/5.png'
+import vienmoithan6 from '/src/images/vien-moi-than/6.png'
+
 import banNH1 from '/src/images/banNH22JU050/1.png'
 import banNH2 from '/src/images/banNH22JU050/2.jpg'
 import banNH3 from '/src/images/banNH22JU050/3.jpg'
@@ -321,7 +336,7 @@ import thungda25Lanh5 from '/src/images/thungda25L/5.png'
 
 export const products = [
   {
-    id: 1,
+    id: 'leu-2',
     name: 'Lều 2',
     catalogue: '(2 lớp chống mưa, 1m4x2m)',
     image: leu2.src,
@@ -340,7 +355,7 @@ export const products = [
   }
   ,
   {
-    id: 2,
+    id: 'leu-4',
     name: 'Lều 4',
     catalogue: '(2 lớp chống mưa, 2m1x2m1)',
     image: leu4.src,
@@ -358,7 +373,7 @@ export const products = [
     videoId: 'LW_kzZD7uwE?t=375',
   },
   {
-    id: 3,
+    id: 'leu-6',
     name: 'Lều 6',
     catalogue: '(Lều 6 người, cao thoáng, chống mưa tốt)',
     image: leu6.src,
@@ -377,7 +392,7 @@ export const products = [
   },
   
   {
-    id: 4,
+    id: 'leu-8',
     name: 'Lều 8',
     catalogue: '(Dragon Dome 8P – Lều 8 người, rộng rãi, chống mưa tốt)',
     image: leu8.src,
@@ -395,7 +410,7 @@ export const products = [
     videoId: '5yuCrcfo-3Q'
   },
   {
-    id: 5,
+    id: 'vong-don',
     name: 'Võng đơn NatureHike',
     catalogue: '(Chống thấm, chịu lực tốt, gấp gọn tiện lợi, kèm túi đựng)',
     image: vong.src,
@@ -412,7 +427,7 @@ export const products = [
     detail4: 'Màu sắc: xanh dương, cam, xám. Mã sản phẩm: NH21DC001 – thương hiệu uy tín NatureHike.'
   },  
   {
-    id: 6,
+    id: 'goi-hoi-intex',
     name: 'Gối hơi Intex',
     catalogue: '(kèm bơm hơi)',
     image: goihoi.src,
@@ -430,7 +445,7 @@ export const products = [
   },
   
   {
-    id: 7,
+    id: 'tam-cach-nhiet',
     name: 'Tấm cách nhiệt',
     catalogue: '(lót dưới lều khi mùa nóng, lót trong lều khi trời lạnh)',
     image: cachnhiet.src,
@@ -447,7 +462,7 @@ export const products = [
     detail4: 'Thích hợp dùng lót lều, ngủ trưa văn phòng, picnic, cắm trại, ngồi chơi ngoài trời – tạo cảm giác êm ái, dễ chịu.'
   },
   {
-    id: 8,
+    id: 'ghe-mat-trang',
     name: 'Ghế mặt trăng',
     catalogue: '(màu trắng, 2.5kg)',
     image: ghe.src,
@@ -465,7 +480,7 @@ export const products = [
   },
 
   {
-    id: 'ghe-xep-mini-cau-ca-di-du-lich-naturehike-nh16j001-j',
+    id: 'ghe-naturehike-nh16j001-j',
     name: 'Ghế Naturehike',
     catalogue: '(màu kaki, 1.3kg)',
     image: gheNH1.src,
@@ -486,7 +501,7 @@ export const products = [
 
   
   {
-    id: 9,
+    id: 'ban-nhom',
     name: 'Bàn nhôm',
     catalogue: '(màu vàng, 90x60cm, 4kg)',
     image: ban.src,
@@ -504,7 +519,7 @@ export const products = [
   },
   
   {
-    id: 'ban-nhom-sieu-nhe-naturehike-cnh22ju050',
+    id: 'ban-nhom-naturehike-cnh22ju050',
     name: 'Bàn nhôm Naturehike',
     catalogue: '(màu kaki, 40x30cm, 1kg)',
     image: banNH1.src,
@@ -522,7 +537,7 @@ export const products = [
   },
 
   {
-    id: 10,
+    id: 'khan-ban-tho-cam',
     name: 'Khăn bàn thổ cẩm',
     catalogue: '(1m x 1m5)',
     image: khanban.src,
@@ -536,7 +551,7 @@ export const products = [
   },
   
   {
-    id: 11,
+    id: 'chan-treo-den',
     name: 'Chân treo đèn',
     catalogue: '(Có thể gắn bàn hoặc cắm đất đều được)',
     image: chanden.src,
@@ -556,7 +571,7 @@ export const products = [
   },
   
   {
-    id: 12,
+    id: 'tang-9m2',
     name: 'Tăng 4-6 người - diện tích 9m2',
     catalogue: '(3mx3m, kèm 2 trụ chống)',
     image: tang3m.src,
@@ -574,7 +589,7 @@ export const products = [
     videoId: '7lWx-hpQdAs',
   },  
   {
-    id: 13,
+    id: 'tang-20m2',
     name: 'Tăng 8-12 người - diện tích 20m2',
     catalogue: '(4m5x4m5, kèm 2 trụ chống)',
     image: tang.src,
@@ -592,7 +607,7 @@ export const products = [
     videoId: '7lWx-hpQdAs',
   },  
   {
-    id: 14,
+    id: 'tham-da-ngoai',
     name: 'Thảm dã ngoại',
     catalogue: '(chống thấm, 2m1x2m)',
     image: thamdangoai.src,
@@ -610,7 +625,7 @@ export const products = [
   },
   
   {
-    id: 15,
+    id: 'tham-vintage',
     name: 'Thảm Vintage',
     catalogue: '(2mx2m, thảm chống thấm dùng lót trong lều hoặc để ngồi)',
     image: thamvintage.src,
@@ -628,7 +643,7 @@ export const products = [
   },
   
   {
-    id: 16,
+    id: 'den-cam-tay',
     name: 'Đèn cầm tay',
     catalogue: '(đã sạc đầy pin, thời gian chiếu sáng 7-9h)',
     image: dencamtay.src,
@@ -646,7 +661,7 @@ export const products = [
   },
   
   {
-    id: 17,
+    id: 'den-doi-dau',
     name: 'Đèn đội đầu',
     catalogue: '(đã sạc đầy pin, thời gian chiếu sáng 8-10h)',
     image: dendoidau.src,
@@ -664,7 +679,7 @@ export const products = [
   },
   
   {
-    id: 18,
+    id: 'den-vintage',
     name: 'Đèn Vintage',
     catalogue: '(đã kèm pin, 8–10h (sáng vừa)',
     image: dendeban.src,
@@ -682,7 +697,7 @@ export const products = [
   },
   
   {
-    id: 19,
+    id: 'den-led-tron',
     name: 'Đèn led tròn',
     catalogue: '(đã kèm pin, thời gian chiếu sáng 8-10h)',
     image: denled.src,
@@ -718,7 +733,7 @@ export const products = [
   },
   
   {
-    id: 21,
+    id: 'den-sinh-hoat',
     name: 'Đèn sinh hoạt',
     catalogue: '(kèm cặp pin thêm miễn phí, tổng thời gian chiếu sáng 2 cặp pin là 8-12h)',
     image: densinhhoat.src,
@@ -736,7 +751,7 @@ export const products = [
   },
   
   {
-    id: 22,
+    id: 'sac-du-phong',
     name: 'Sạc dự phòng',
     catalogue: '(đã sạc đầy pin, dung lượng 20.000 mAh, và kèm dây sạc 3 đầu)',
     image: sacduphong.src,
@@ -753,7 +768,7 @@ export const products = [
   },
   
   {
-    id: 23,
+    id: 'loa-mini',
     name: 'Loa Tronsmart T7 Mini',
     catalogue: 'Loa công suất 15W, dùng đến 12h (bật đèn) và 18h (tắt đèn), Chống nước nhẹ, dải tần 20Hz–20kHz.',
     image: loa.src,
@@ -771,7 +786,7 @@ export const products = [
   },
   
   {
-    id: 24,
+    id: 'quat-tich-dien',
     name: 'Quạt tích điện',
     catalogue: '(Pin 20.000mAh, dùng 70h mức thấp, 11h mạnh nhất, 9h khi bật tất cả; đèn dùng ~300h. Tích hợp đèn 3 mức, điều khiển từ xa, hẹn giờ, kiêm sạc dự phòng.)',
     image: quat.src,
@@ -788,7 +803,7 @@ export const products = [
     detail4: 'Thiết kế nhỏ gọn, phù hợp treo lều, để bàn, xe ô tô, dùng khi mất điện hay đi dã ngoại. Màu: Cam, Xanh. Trọng lượng 1.2kg.'
   },  
   {
-    id: 25,
+    id: 'trippd',
     name: 'Tripod',
     catalogue: '(có remote, dùng cho cả máy ảnh và điện thoại)',
     image: tripod.src,
@@ -804,7 +819,7 @@ export const products = [
     detail3: 'Đầu tripod xoay 360°, có thể lật ngang 90°, hỗ trợ chụp dọc và ngang. Tích hợp thước đo cân bằng cho ảnh phong cảnh, công trình.',
     detail4: 'Ống trục giữa có thể xoay để tăng lực giữ, phù hợp cả máy nặng. Trọng lượng 1.2kg, đường kính ống 21.2*16.2cm, tiện mang đi dã ngoại.'
   },
-    {id: 26,
+    {id: 'bep-nuong',
     name: 'Bếp nướng',
     catalogue: '(có kèm 2 kẹp inox, 73cm x 22cm x 20cm)',
     image: bepnuong.src,
@@ -822,7 +837,7 @@ export const products = [
   },
   
   {
-    id: 27,
+    id: 'bep-cui',
     name: 'Bếp củi',
     catalogue: '(125 x 125 x 16cm)',
     image: bepcui.src,
@@ -839,7 +854,7 @@ export const products = [
     detail4: 'Kích thước: 125 x 125 x 160mm. Trọng lượng chỉ 448g. Gấp gọn và dễ dàng mang theo trong ba lô. Kích thước gói: 190 x 170 x 15mm.'
   },  
   {
-    id: 28,
+    id: 'bep-gas',
     name: 'Bếp gas',
     catalogue: '(Không kèm bình gas)',
     image: bepgas.src,
@@ -857,7 +872,7 @@ export const products = [
   },
   
   {
-    id: 29,
+    id: 'bep-con',
     name: 'Bếp cồn',
     catalogue: '(có núm vặn lấy khay cồn, và cần gạt bỏ cồn an toàn)',
     image: bepcon.src,
@@ -874,7 +889,7 @@ export const products = [
     detail4: 'Dễ vệ sinh, không bị gỉ sét, phù hợp với nhiều loại nồi trên thị trường.'
   },  
   {
-    id: 30,
+    id: 'thung-da-8l',
     name: 'Thùng đá 8L',
     catalogue: '(thể tích 8L)',
     image: thungdanho.src,
@@ -892,7 +907,7 @@ export const products = [
   },
   
   {
-    id: 31,
+    id: 'thung-da-16l',
     name: 'Thùng đá 16L',
     catalogue: '(thể tích 16L)',
     image: thungda16L.src,
@@ -910,7 +925,7 @@ export const products = [
   },
   
   {
-    id: 32,
+    id: 'thung-da-25l',
     name: 'Thùng đá 25L',
     catalogue: '(thể tích 25L)',
     image: thungda25L.src,
@@ -927,7 +942,7 @@ export const products = [
     detail4: 'Thiết kế nắp đậy kín, tay xách tiện lợi. Bề mặt nhẵn dễ vệ sinh. Phù hợp sử dụng cho gia đình, đi cắm trại.'
   },  
   {
-    id: 33,
+    id: 'bo-noi-4-nguoi',
     name: 'Bộ nồi 3-4 người',
     catalogue: '(ấm, chảo, nồi)',
     image: bonoi.src,
@@ -945,9 +960,9 @@ export const products = [
   },
   
   {
-    id: 34,
+    id: 'noi-treo-4l',
     name: 'Nồi treo 4L',
-    catalogue: '(đã kèm giá treo 3 chân)',
+    catalogue: '(kèm giá treo 3 chân)',
     image: noi4Lanh4.src,
     image1: noi4Lanh1.src,
     image2: noi4Lanh2.src,
@@ -963,7 +978,7 @@ export const products = [
   },
   
   {
-    id: 35,
+    id: 'noi-4l',
     name: 'Nồi 4L',
     catalogue: '(thể tích 4L)',
     image: noi4L.src,
@@ -979,7 +994,7 @@ export const products = [
   },
   
   {
-    id: 36,
+    id: 'am-nuoc',
     name: 'Ấm 0.8L',
     catalogue: '(thể tích 0.8L)',
     image: amnuoc.src,
@@ -998,9 +1013,9 @@ export const products = [
   },
   
   {
-    id: 37,
-    name: 'Tay quay nướng gà',
-    catalogue: '(kèm 2 trụ chống, nướng gà, vịt, thịt đều được)',
+    id: 'tay-quay-nuong-inox',
+    name: 'Tay quay nướng inox',
+    catalogue: '(kèm 2 trụ chống)',
     image: tayquaynuongga.src,
     image1: tayquaynuonggaanh1.src,
     image2: tayquaynuonggaanh2.src,
@@ -1015,9 +1030,9 @@ export const products = [
     detail4: 'Chuyên dụng cho các buổi tiệc nướng dã ngoại, giúp món nướng chín đều và thơm ngon.'
   },  
   {
-    id: 38,
-    name: 'Máy nướng gà tự động',
-    catalogue: '(sử dụng nguồn usb - pin 5000mAh quay được 10h, kèm quạt mini, không kèm sạc dự phòng)',
+    id: 'may-nuong-tu-dong',
+    name: 'Máy nướng tự động',
+    catalogue: '(kèm quạt mini, không kèm sạc dự phòng)',
     image: maynuongtudong.src,
     image1: maynuonggatudonganh1.src,
     image2: maynuonggatudonganh2.src,
@@ -1026,7 +1041,7 @@ export const products = [
     image5: maynuonggatudonganh5.src,
     price: 50,
     quantity: 1,
-    detail1: 'Máy nướng gà vịt dã ngoại sử dụng nguồn USB – tiện lợi dùng với sạc dự phòng, cực kỳ phù hợp cho cắm trại, picnic, phượt hoặc dùng trong gia đình.',
+    detail1: 'Máy nướng dã ngoại sử dụng nguồn USB – tiện lợi dùng với sạc dự phòng, cực kỳ phù hợp cho cắm trại, picnic, phượt hoặc dùng trong gia đình.',
     detail2: 'Sử dụng pin sạc dự phòng 5000mAh có thể quay liên tục trong khoảng 10 giờ – tiết kiệm điện và rất linh hoạt khi mang theo.',
     detail3: 'Mô tơ cuốn dây đồng nguyên chất, hoạt động bền bỉ, đã hàn sẵn dây – chỉ cần cắm sạc dự phòng là sử dụng ngay.',
     detail4: 'Trục xiên làm từ inox cao cấp, sạch sẽ, an toàn cho thực phẩm, dễ vệ sinh sau khi sử dụng.',
@@ -1034,9 +1049,9 @@ export const products = [
     detail6: 'Sản phẩm sản xuất tại Việt Nam, dễ tháo lắp và kiểm tra, thiết kế nhỏ gọn dễ mang theo trong mọi hành trình.'
   },  
   {
-    id: 39,
+    id: 'dau-kho-namilux',
     name: 'Đầu khò',
-    catalogue: '(mồi lửa nhanh, nhóm củi, than dễ dàng)',
+    catalogue: '(không kèm bình gas)',
     image: daukho.src,
     image1: daukhoanh1.src,
     image2: daukhoanh2.src,
@@ -1067,12 +1082,49 @@ export const products = [
     detail1: 'Thể tích tăng 14% so với lon gas thông thường, phù hợp cho bếp ga du lịch, đèn khò mini, bếp cắm trại, giúp nấu nướng tiết kiệm và hiệu quả hơn.',
     detail2: 'Nhập khẩu trực tiếp từ Hàn Quốc, sản xuất bởi TAEYANG CORPORATION, đạt tiêu chuẩn an toàn Nhật Bản, Hàn Quốc, Châu Âu, đảm bảo chất lượng cao cấp.',
     detail3: 'Vỏ lon thiết kế nổi bật, có logo NAMILUX và hướng dẫn an toàn in rõ ràng trên thân lon. Sử dụng rộng rãi tại khách sạn, nhà hàng, quán ăn và gia đình.',
-    detail4: 'Chỉ sử dụng 1 lần, không nạp lại. Tránh va chạm, để nơi thoáng mát dưới 40°C, không dùng lon móp, rỉ sét. Đọc kỹ hướng dẫn để đảm bảo an toàn tuyệt đối.'
+    detail4: 'Chỉ sử dụng 1 lần, không nạp lại. Tránh va chạm, để nơi thoáng mát dưới 40°C, không dùng lon móp, rỉ sét. Đọc kỹ hướng dẫn để đảm bảo an toàn tuyệt đối.',
+    isRental: true,
+  },
+
+  {
+    id: 'than-gao-dua',
+    name: 'Than gáo dừa',
+    catalogue: '(1kg)',
+    image: than1.src,
+    image1: than2.src,
+    image2: than3.src,
+    image3: than4.src,
+    image4: than5.src,
+    image5: than6.src,
+    price: 30,
+    quantity: 1,
+    detail1: '100% từ gáo dừa tự nhiên – Không hóa chất độc hại, an toàn cho sức khỏe, không khói độc, không bắn tia lửa.',
+    detail2: 'Hiệu quả cao, tiết kiệm – Thời gian cháy lâu 3-4 giờ, nhiệt lượng cao ổn định đến khi tàn, tiết kiệm 30-50% so với than thường.',
+    detail3: 'Dễ sử dụng – Bén lửa nhanh, không cần quạt, giữ nhiệt ổn định giúp món nướng chín đều, giữ nguyên hương vị thơm ngon.',
+    detail4: 'Đa công dụng – Phù hợp nấu, nướng, sấy nông sản, xông hơ sau sinh, tiện lợi cho cả gia đình và nhà hàng.',
+    isRental: true,
+  },
+  {
+    id: 'vien-moi-than',
+    name: 'Viên mồi than',
+    catalogue: '(1 viên)',
+    image: vienmoithan1.src,
+    image1: vienmoithan2.src,
+    image2: vienmoithan3.src,
+    image3: vienmoithan4.src,
+    image4: vienmoithan5.src,
+    image5: vienmoithan6.src,
+    price: 8,
+    quantity: 1,
+    detail1: 'Chỉ cần 1-2 viên là đủ mồi cho bếp than, giúp bạn bắt đầu bữa tiệc BBQ nhanh chóng.',
+    detail2: 'Phù hợp khi cắm trại, picnic, tiệc tại nhà hay quán ăn. Không cần loay hoay tìm củi, giấy hay cồn lỏng.',
+    detail3: 'Không gây cay mắt, khó chịu khi mồi lửa. Thân thiện với sức khỏe và môi trường.',
+    detail4: 'Viên mồi than 20g, hình khối vuông, tiện bỏ túi hoặc balo mang theo mọi hành trình.',
+    isRental: true,
   },
   
-  
   {
-    id: 40,
+    id: 'bo-bai-ma-soi',
     name: 'Bộ bài ma sói',
     catalogue: '(bộ bài chia rẽ tình bạn bè)',
     image: baimasoi.src,

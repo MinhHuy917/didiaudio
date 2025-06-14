@@ -61,7 +61,7 @@ const ProductList: React.FC = () => {
                     <span className="text-green-600">Miễn phí</span>
                   ) : (
                     <span className="text-orange-600">
-                      {product.price}k/ngày
+                      {product.price}k{product.isRental ? "" : "/ngày"}
                     </span>
                   )}
                 </div>
@@ -88,7 +88,7 @@ const ProductList: React.FC = () => {
       {renderSection('Tăng, Thảm', (p) => p.name.includes('Tăng') || p.name.includes('Thảm'))}
       {renderSection('Đèn', (p) => p.name.includes('Đèn'))}
       {renderSection('Phụ kiện tiện ích', (p) => p.name.includes('Loa') || p.name.includes('Quạt') || p.name.includes('Tripod') || p.name.includes('Sạc') || p.name.includes('Bộ bài'))}
-      {renderSection('Dụng cụ nấu ăn', (p) => p.name.includes('Bếp') || p.name.includes('nồi') || p.name.includes('Nồi') || p.name.includes('Ấm') || p.name.includes('Tay quay nướng gà') || p.name.includes('Máy nướng gà tự động') || p.name.includes('Đầu khò') || p.name.includes('Bình gas'))} 
+      {renderSection('Dụng cụ nấu ăn', (p) => p.name.includes('Bếp') || p.name.includes('nồi') || p.name.includes('Nồi') || p.name.includes('Ấm') || p.name.includes('Tay quay nướng inox') || p.name.includes('Máy nướng tự động') || p.name.includes('Đầu khò') || p.name.includes('Bình gas') || p.name.includes('Than gáo dừa') || p.name.includes('Viên mồi than') )} 
       {renderSection('Thùng đá, túi đựng nước', (p) => p.name.includes('Thùng') || p.name.includes('Túi đựng nước'))}
 
 
