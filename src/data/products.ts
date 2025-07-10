@@ -305,6 +305,13 @@ import daukhoanh3 from '/src/images/daukho/3.png'
 import daukhoanh4 from '/src/images/daukho/4.png'
 import daukhoanh5 from '/src/images/daukho/5.png'
 
+import caytrutreodenanh1 from '/src/images/caytrutreoden/1.png'
+import caytrutreodenanh2 from '/src/images/caytrutreoden/2.png'
+import caytrutreodenanh3 from '/src/images/caytrutreoden/3.png'
+import caytrutreodenanh4 from '/src/images/caytrutreoden/4.png'
+import caytrutreodenanh5 from '/src/images/caytrutreoden/5.png'
+import caytrutreodenanh6 from '/src/images/caytrutreoden/6.png'
+
 import binhgas1 from '/src/images/binhgas/1.jpg'
 import binhgas2 from '/src/images/binhgas/2.jpg'
 import binhgas3 from '/src/images/binhgas/3.jpg'
@@ -461,6 +468,80 @@ export const products = [
     detail3: 'Có bao đựng tiện lợi, dễ gấp gọn, mang theo khi đi dã ngoại hoặc sử dụng hằng ngày.',
     detail4: 'Thích hợp dùng lót lều, ngủ trưa văn phòng, picnic, cắm trại, ngồi chơi ngoài trời – tạo cảm giác êm ái, dễ chịu.'
   },
+
+
+  {
+    id: 'tang-9m2',
+    name: 'Tăng 4-6 người - diện tích 9m2',
+    catalogue: '(3mx3m, kèm 2 trụ chống)',
+    image: tang3m.src,
+    image1: tang3manh1.src,
+    image2: tang3manh2.src,
+    image3: tang3manh3.src,
+    image4: tang3manh4.src,
+    image5: tang3manh5.src,
+    price: 50,
+    quantity: 1,
+    detail1: 'Tấm tăng 3x3m phủ PU2000mm, chống thấm tốt – che mưa nắng hiệu quả cho nhóm 4–6 người.',
+    detail2: 'Bên trong tráng bạc giúp chống nắng xuyên thấu, thích hợp sử dụng cả ngày nắng gắt.',
+    detail3: 'Kèm 2 trụ thép sơn tĩnh điện, dây dù và cọc ghim – dễ dựng ở nhiều địa hình.',
+    detail4: 'Gấp gọn vào túi 60x15cm – tiện mang theo khi đi rừng, biển, cắm trại dài ngày.',
+    videoId: '7lWx-hpQdAs',
+  },  
+  {
+    id: 'tang-20m2',
+    name: 'Tăng 8-12 người - diện tích 20m2',
+    catalogue: '(4m5x4m5, kèm 2 trụ chống)',
+    image: tang.src,
+    image1: tang4m5anh1.src,
+    image2: tang4m5anh2.src,
+    image3: tang4m5anh3.src,
+    image4: tang4m5anh4.src,
+    image5: tang4m5anh5.src,
+    price: 100,
+    quantity: 1,
+    detail1: 'Tăng lớn phủ PU2000mm, diện tích 4.5x4.5m – che được 8–12 người, dùng cho nhóm đông.',
+    detail2: 'Có lớp tráng bạc chống tia UV, thích hợp cho hoạt động ngoài trời cả ngày.',
+    detail3: 'Kèm 2 trụ thép, cọc và dây dù – dễ dựng và cố định chắc chắn ở nhiều địa hình.',
+    detail4: 'Gấp gọn trong túi 60x15cm – tiện lợi mang theo đi cắm trại, dã ngoại, picnic.',
+    videoId: '7lWx-hpQdAs',
+  },  
+  {
+    id: 'tham-da-ngoai',
+    name: 'Thảm dã ngoại',
+    catalogue: '(chống thấm, 2m1x2m)',
+    image: thamdangoai.src,
+    image1: thamdangoaiannh1.src,
+    image2: thamdangoaiannh2.src,
+    image3: thamdangoaiannh3.src,
+    image4: thamdangoaiannh4.src,
+    image5: thamdangoaiannh5.src,
+    price: 25,
+    quantity: 1,
+    detail1: 'Thảm vải dù chống thấm nước, kích thước 2.1x2m',
+    detail2: 'Gọn nhẹ chỉ 350g, gấp lại chỉ 10x20x3cm, có túi đựng và móc treo tiện lợi.',
+    detail3: 'Phù hợp picnic, tắm nắng, đi biển, công viên, chống ẩm và chống xước tốt.',
+    detail4: 'Bộ gồm: thảm, túi đựng, móc carabiner và 4 đinh ghim nhựa cố định.'
+  },
+  
+  {
+    id: 'tham-vintage',
+    name: 'Thảm Vintage',
+    catalogue: '(2mx2m, thảm chống thấm dùng lót trong lều hoặc để ngồi)',
+    image: thamvintage.src,
+    image1: thamvintageannh1.src,
+    image2: thamvintageannh2.src,
+    image3: thamvintageannh3.src,
+    image4: thamvintageannh4.src,
+    image5: thamvintageannh5.src,
+    price: 40,
+    quantity: 1,
+    detail1: 'Thảm picnic thổ cẩm đỏ chống thấm, dày 3.5mm, kích thước 2x2m hoặc 1.5x2m.',
+    detail2: 'Cấu tạo 3 lớp: Flannel + bông ngọc trai + lớp chống nước, giữ ấm, không xơ, không bóng.',
+    detail3: 'Gấp gọn tiện lợi (35x25x8cm), trọng lượng 1.2kg, dễ mang theo du lịch, picnic.',
+    detail4: 'Phù hợp dùng lót trong lều, trải ngồi ngoài trời, đi biển, dã ngoại hoặc tiệc BBQ.'
+  },
+
   {
     id: 'ghe-mat-trang',
     name: 'Ghế mặt trăng',
@@ -550,97 +631,7 @@ export const products = [
     detail5: 'Có thể sử dụng làm khăn trải bàn, tấm phủ đồ dùng, khăn phủ vali, khăn trải picnic, thảm chụp sản phẩm decor,...'
   },
   
-  {
-    id: 'chan-treo-den',
-    name: 'Chân treo đèn',
-    catalogue: '(Có thể gắn bàn hoặc cắm đất đều được)',
-    image: chanden.src,
-    image1: chantreodenannh1.src,
-    image2: chantreodenannh2.src,
-    image3: chantreodenannh3.src,
-    image4: chantreodenannh4.src,
-    image5: chantreodenannh5.src,
-    price: 20,
-    quantity: 1,
-    detail1: 'Chân treo đèn đa năng dùng để kẹp vào bàn hoặc cắm xuống đất, phù hợp cho các buổi cắm trại, picnic, dã ngoại hoặc sử dụng tại nhà.',
-    detail2: 'Thiết kế gọn nhẹ với trọng lượng chỉ 266g, chất liệu hợp kim nhôm 6061 cao cấp, chống gỉ sét và bền bỉ trong mọi điều kiện thời tiết.',
-    detail3: 'Bao gồm 2 móc treo đèn, 1 trụ chia thành 4 ống ghép, 1 đầu kẹp bàn và 1 đầu cắm đất – tiện lợi, dễ dàng tháo lắp và cất gọn.',
-    detail4: 'Chiều cao sử dụng: khoảng 90cm (kẹp bàn), 120cm (cắm đất); chiều dài thanh treo 12cm; đường kính trụ 12mm. Kích thước gấp gọn chỉ 38x11.5cm, đựng trong túi nhỏ.',
-    detail5: 'Phụ kiện lý tưởng để treo đèn chiếu sáng trong không gian cắm trại, giúp tay rảnh rỗi, ánh sáng trải đều không gian, tiện cho sinh hoạt, ăn uống, đọc sách.',
-    detail6: 'Thiết kế tháo ráp nhanh chóng, dễ mang theo trong balo. Màu sắc: Đen – hiện đại và dễ phối với các thiết bị cắm trại khác.'
-  },
-  
-  {
-    id: 'tang-9m2',
-    name: 'Tăng 4-6 người - diện tích 9m2',
-    catalogue: '(3mx3m, kèm 2 trụ chống)',
-    image: tang3m.src,
-    image1: tang3manh1.src,
-    image2: tang3manh2.src,
-    image3: tang3manh3.src,
-    image4: tang3manh4.src,
-    image5: tang3manh5.src,
-    price: 50,
-    quantity: 1,
-    detail1: 'Tấm tăng 3x3m phủ PU2000mm, chống thấm tốt – che mưa nắng hiệu quả cho nhóm 4–6 người.',
-    detail2: 'Bên trong tráng bạc giúp chống nắng xuyên thấu, thích hợp sử dụng cả ngày nắng gắt.',
-    detail3: 'Kèm 2 trụ thép sơn tĩnh điện, dây dù và cọc ghim – dễ dựng ở nhiều địa hình.',
-    detail4: 'Gấp gọn vào túi 60x15cm – tiện mang theo khi đi rừng, biển, cắm trại dài ngày.',
-    videoId: '7lWx-hpQdAs',
-  },  
-  {
-    id: 'tang-20m2',
-    name: 'Tăng 8-12 người - diện tích 20m2',
-    catalogue: '(4m5x4m5, kèm 2 trụ chống)',
-    image: tang.src,
-    image1: tang4m5anh1.src,
-    image2: tang4m5anh2.src,
-    image3: tang4m5anh3.src,
-    image4: tang4m5anh4.src,
-    image5: tang4m5anh5.src,
-    price: 100,
-    quantity: 1,
-    detail1: 'Tăng lớn phủ PU2000mm, diện tích 4.5x4.5m – che được 8–12 người, dùng cho nhóm đông.',
-    detail2: 'Có lớp tráng bạc chống tia UV, thích hợp cho hoạt động ngoài trời cả ngày.',
-    detail3: 'Kèm 2 trụ thép, cọc và dây dù – dễ dựng và cố định chắc chắn ở nhiều địa hình.',
-    detail4: 'Gấp gọn trong túi 60x15cm – tiện lợi mang theo đi cắm trại, dã ngoại, picnic.',
-    videoId: '7lWx-hpQdAs',
-  },  
-  {
-    id: 'tham-da-ngoai',
-    name: 'Thảm dã ngoại',
-    catalogue: '(chống thấm, 2m1x2m)',
-    image: thamdangoai.src,
-    image1: thamdangoaiannh1.src,
-    image2: thamdangoaiannh2.src,
-    image3: thamdangoaiannh3.src,
-    image4: thamdangoaiannh4.src,
-    image5: thamdangoaiannh5.src,
-    price: 25,
-    quantity: 1,
-    detail1: 'Thảm vải dù chống thấm nước, kích thước 2.1x2m',
-    detail2: 'Gọn nhẹ chỉ 350g, gấp lại chỉ 10x20x3cm, có túi đựng và móc treo tiện lợi.',
-    detail3: 'Phù hợp picnic, tắm nắng, đi biển, công viên, chống ẩm và chống xước tốt.',
-    detail4: 'Bộ gồm: thảm, túi đựng, móc carabiner và 4 đinh ghim nhựa cố định.'
-  },
-  
-  {
-    id: 'tham-vintage',
-    name: 'Thảm Vintage',
-    catalogue: '(2mx2m, thảm chống thấm dùng lót trong lều hoặc để ngồi)',
-    image: thamvintage.src,
-    image1: thamvintageannh1.src,
-    image2: thamvintageannh2.src,
-    image3: thamvintageannh3.src,
-    image4: thamvintageannh4.src,
-    image5: thamvintageannh5.src,
-    price: 40,
-    quantity: 1,
-    detail1: 'Thảm picnic thổ cẩm đỏ chống thấm, dày 3.5mm, kích thước 2x2m hoặc 1.5x2m.',
-    detail2: 'Cấu tạo 3 lớp: Flannel + bông ngọc trai + lớp chống nước, giữ ấm, không xơ, không bóng.',
-    detail3: 'Gấp gọn tiện lợi (35x25x8cm), trọng lượng 1.2kg, dễ mang theo du lịch, picnic.',
-    detail4: 'Phù hợp dùng lót trong lều, trải ngồi ngoài trời, đi biển, dã ngoại hoặc tiệc BBQ.'
-  },
+
   
   {
     id: 'den-cam-tay',
@@ -749,7 +740,45 @@ export const products = [
     detail3: 'Có thể thay thế pin dễ dàng, phù hợp cho các chuyến đi dài ngày, tiết kiệm và linh hoạt.',
     detail4: 'Thời gian chiếu sáng: 4h ở chế độ sáng nhất, 5-6h ở chế độ sáng thấp hơn.'
   },
-  
+  {
+    id: 'chan-treo-den',
+    name: 'Giá chân treo đèn 1m',
+    catalogue: '(Có thể gắn bàn hoặc cắm đất đều được)',
+    image: chanden.src,
+    image1: chantreodenannh1.src,
+    image2: chantreodenannh2.src,
+    image3: chantreodenannh3.src,
+    image4: chantreodenannh4.src,
+    image5: chantreodenannh5.src,
+    price: 20,
+    quantity: 1,
+    detail1: 'Chân treo đèn đa năng dùng để kẹp vào bàn hoặc cắm xuống đất, phù hợp cho các buổi cắm trại, picnic, dã ngoại hoặc sử dụng tại nhà.',
+    detail2: 'Thiết kế gọn nhẹ với trọng lượng chỉ 266g, chất liệu hợp kim nhôm 6061 cao cấp, chống gỉ sét và bền bỉ trong mọi điều kiện thời tiết.',
+    detail3: 'Bao gồm 2 móc treo đèn, 1 trụ chia thành 4 ống ghép, 1 đầu kẹp bàn và 1 đầu cắm đất – tiện lợi, dễ dàng tháo lắp và cất gọn.',
+    detail4: 'Chiều cao sử dụng: khoảng 90cm (kẹp bàn), 120cm (cắm đất); chiều dài thanh treo 12cm; đường kính trụ 12mm. Kích thước gấp gọn chỉ 38x11.5cm, đựng trong túi nhỏ.',
+    detail5: 'Phụ kiện lý tưởng để treo đèn chiếu sáng trong không gian cắm trại, giúp tay rảnh rỗi, ánh sáng trải đều không gian, tiện cho sinh hoạt, ăn uống, đọc sách.',
+    detail6: 'Thiết kế tháo ráp nhanh chóng, dễ mang theo trong balo. Màu sắc: Đen – hiện đại và dễ phối với các thiết bị cắm trại khác.'
+  },
+  {
+    id: 'cay-tru-cot-gia-treo-den',
+    name: 'Cây trụ treo đèn 1m8',
+    catalogue: '(phù hợp treo đèn cao)',
+    image: caytrutreodenanh2.src,
+    image1: caytrutreodenanh1.src,
+    image2: caytrutreodenanh5.src,
+    image3: caytrutreodenanh4.src,
+    image4: caytrutreodenanh6.src,
+    image5: caytrutreodenanh3.src,
+    
+    price: 25,
+    quantity: 1,
+    detail1: 'Khung nhôm hợp kim siêu nhẹ, kháng nước & kháng gỉ tốt',
+    detail2: 'Thiết kế 2 móc treo tiện dụng, tháo rời và gập gọn dễ dàng',
+    detail3: 'Có thể điều chỉnh chiều cao nhờ 4 chốt nối linh hoạt',
+    detail4: 'Phù hợp mang theo khi đi cắm trại, picnic, dã ngoại',
+    detail5: 'Đường kính ống nhôm 1.5cm, chịu tải tốt, không cong gãy',
+    detail6: 'Trọng lượng chỉ 600g – gồm chân cắm, 4 đoạn trụ & túi đựng'
+  },  
   {
     id: 'sac-du-phong',
     name: 'Sạc dự phòng',

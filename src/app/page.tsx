@@ -1,13 +1,13 @@
 import { type Metadata } from 'next'
 
-import { Container } from '@/components/Container'
-import MenuContact from '@/components/MenuContact'
-import { PageIntro } from '@/components/PageIntro'
-import ProductList from '@/components/ProductTable'
-import ImageSlider from '@/components/ImageSlider'
-import { NavigationV2 } from '@/components/RootLayout'
-import Process from './about-didicamping/page'
+import AboutSection from '@/components/AboutSection'
 import { FAQ, FAQSchema } from '@/components/FAQ'
+import ImageSlider from '@/components/ImageSlider'
+import MenuContact from '@/components/MenuContact'
+import ProductList from '@/components/ProductTable'
+import { NavigationV2 } from '@/components/RootLayout'
+import Testimonials from '@/components/Testimonials'
+import WhyUs from '@/components/WhyUs'
 
 export const metadata: Metadata = {
   description:
@@ -18,6 +18,15 @@ export default async function Home() {
   return (
     <>
       <ImageSlider />
+      {/* ✅ Giới thiệu về Dì Đi Camping */}
+        <AboutSection />
+
+      {/* ✅ Vì sao chọn chúng tôi */}
+        <WhyUs />
+
+      {/* ✅ Đánh giá khách hàng */}
+        <Testimonials />
+ 
       <ProductList />
       <FAQ />
       <FAQSchema />

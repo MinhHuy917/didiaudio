@@ -17,10 +17,10 @@ type Product = {
 
 const categoryOptions = [
   { label: 'Tất cả', value: 'all' },
-  { label: 'Lều trại', value: 'tent' },
-  { label: 'Bàn Ghế', value: 'table' },
+  { label: 'Lều võng', value: 'tent' },
   { label: 'Tăng, Thảm', value: 'mat' },
-  { label: 'Đèn', value: 'light' },
+  { label: 'Bàn Ghế', value: 'table' },
+  { label: 'Đèn, giá treo đèn', value: 'light' },
   { label: 'Phụ kiện tiện ích', value: 'accessory' },
   { label: 'Dụng cụ nấu ăn', value: 'cooking' },
   { label: 'Thùng đá, túi đựng nước', value: 'ice' },
@@ -33,9 +33,9 @@ const ProductList: React.FC = () => {
   const categoryFilterMap: Record<string, (p: Product) => boolean> = {
     all: () => true,
     tent: (p) => p.name.includes('Lều') || p.name.includes('Võng') || p.name.includes('Gối') || p.name.includes('Tấm cách nhiệt'),
-    table: (p) => p.name.includes('Bàn') || p.name.includes('Ghế') || p.name.includes('Khăn') || p.name.includes('Chân treo đèn'),
+    table: (p) => p.name.includes('Bàn') || p.name.includes('Ghế') || p.name.includes('Khăn') ,
     mat: (p) => p.name.includes('Tăng') || p.name.includes('Thảm'),
-    light: (p) => p.name.includes('Đèn'),
+    light: (p) => p.name.includes('Đèn') || p.name.includes('Giá chân treo đèn 1m') || p.name.includes('Cây trụ treo đèn 1m8') ,
     accessory: (p) => p.name.includes('Loa') || p.name.includes('Quạt') || p.name.includes('Tripod') || p.name.includes('Sạc') || p.name.includes('Bộ bài'),
     cooking: (p) => p.name.includes('Bếp') || p.name.includes('nồi') || p.name.includes('Nồi') || p.name.includes('Ấm') || p.name.includes('Tay quay nướng inox') || p.name.includes('Máy nướng tự động') || p.name.includes('Đầu khò') || p.name.includes('Bình gas') || p.name.includes('Than gáo dừa') || p.name.includes('Viên mồi than'),
     ice: (p) => p.name.includes('Thùng') || p.name.includes('Túi đựng nước'),
