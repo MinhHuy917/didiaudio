@@ -706,7 +706,7 @@ export const products = [
   },
   
   {
-    id: 20,
+    id: 'den-led-ngoi-sao',
     name: 'Đèn led ngôi sao',
     catalogue: '(đã kèm pin, thời gian chiếu sáng 8-10h)',
     image: denngoisao.src,

@@ -6,9 +6,8 @@ export default function AboutSection() {
           ✨ Về<br /> ĐiĐi Camping
         </h2>
         <p className="text-gray-700 text-lg sm:text-xl leading-relaxed tracking-wide">
-          Về với thiên nhiên giúp ta khỏe mạnh và hạnh phúc hơn.  
-          <br />
-          Đó là lý do ĐiĐi Camping ra đời – để bạn dễ dàng thuê lều trại và phụ kiện cắm trại chất lượng, sạch sẽ, và an tâm lên đường hòa mình vào thiên nhiên hoang sơ, nơi có thể tạm ngắt kết nối và thật sự tận hưởng.
+
+        ĐiĐi ra đời để đồng hành cùng bạn trên hành trình trở về với thiên nhiên, mang theo đầy đủ đồ cắm trại tiện ích.
         </p>
       </div>
     </section>
