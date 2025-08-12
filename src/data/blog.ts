@@ -1,73 +1,35 @@
-import leu4anh1 from '@/images/leu4/1.png'
-import leu4anh2 from '@/images/leu4/2.png'
-import leu4anh3 from '@/images/leu4/3.png'
-import leu4anh4 from '@/images/leu4/4.png'
-import leu4anh5 from '@/images/leu4/5.png'
 import anhmau from '@/images/leu4/5.png'
-import anhblog1 from '@/images/blog/1.jpg'
+
+import anh1 from '@/images/blog/1.jpg'
+import anh2 from '@/images/blog/2.jpg'
+import anh3 from '@/images/blog/3.jpg'
+import anh4 from '@/images/blog/4.jpg'
+import anh5 from '@/images/blog/5.jpg'
+import anh6 from '@/images/blog/6.jpg'
+import anh7 from '@/images/blog/7.jpg'
+import anh8 from '@/images/blog/8.jpg'
+import anh9 from '@/images/blog/9.jpg'
+import anh10 from '@/images/blog/10.jpg'
+import anh11 from '@/images/blog/11.jpg'
+import anh12 from '@/images/blog/12.jpg'
+import anh13 from '@/images/blog/13.jpg'
+import anh14 from '@/images/blog/14.jpg'
+import anh15 from '@/images/blog/15.jpg'
+import anh16 from '@/images/blog/16.jpg'
+
+
 
 export const articles = [
-  {
-    slug: 'cam-trai-da-nang',
-    title: 'Cắm Trại Tại Đà Nẵng: Trải Nghiệm Gần Gũi Thiên Nhiên Ven Biển Và Núi Rừng',
-    description: 'Trải nghiệm cắm trại ở Đà Nẵng: từ rừng núi Sơn Trà đến bãi biển hoang sơ, hành trình 2 ngày 1 đêm giúp bạn kết nối với thiên nhiên và nạp lại năng lượng.',
-    image: anhblog1.src,
-    date: '2024-08-15',
-    content: `
-      <p><strong>Cắm trại Đà Nẵng</strong> không chỉ là xu hướng mới trong giới trẻ, mà còn là cách tuyệt vời để tận hưởng vẻ đẹp đa dạng của thành phố – từ biển, đồi cát đến núi rừng. Trong bài viết này, mình sẽ chia sẻ hành trình <strong>cắm trại 2 ngày 1 đêm tại khu vực bán đảo Sơn Trà</strong> – một trong những điểm cắm trại đẹp nhất miền Trung.</p>
-
-      <figure>
-        <img src="${leu4anh1.src}" alt="Khung cảnh bán đảo Sơn Trà nhìn từ trên cao" />
-        <figcaption>Bán đảo Sơn Trà – điểm đến cắm trại hoang sơ và yên bình tại Đà Nẵng</figcaption>
-      </figure>
-
-      <h2>1. Vì sao nên cắm trại tại Đà Nẵng?</h2>
-      <p>Đà Nẵng có địa hình đa dạng hiếm nơi nào có: vừa có biển, vừa có núi và cả những cánh rừng xanh mát. Cắm trại tại đây giúp bạn tận hưởng cả không khí trong lành, cảnh hoàng hôn ven biển lẫn bình minh trong rừng. Gần trung tâm thành phố nhưng vẫn giữ được nét hoang sơ – đó là điểm cộng lớn.</p>
-
-      <figure>
-        <img src="${leu4anh2.src}" alt="Cắm trại trên núi gần biển ở Đà Nẵng" />
-        <figcaption>Địa điểm lý tưởng kết hợp giữa rừng và biển, cách trung tâm chỉ 20 phút chạy xe</figcaption>
-      </figure>
-
-      <h2>2. Chuẩn bị cho chuyến cắm trại Đà Nẵng</h2>
-      <p>Mình chuẩn bị lều 2 người, túi ngủ, bếp mini, nước sạch, đồ ăn khô, đèn pin và vài món đồ sinh tồn cơ bản như dao đa năng, bật lửa, và túi sơ cứu. Ngoài ra, nhớ mang theo kem chống muỗi và túi rác – để bảo vệ môi trường nhé!</p>
-
-      <figure>
-        <img src="${leu4anh3.src}" alt="Dụng cụ cần thiết cho chuyến cắm trại" />
-        <figcaption>Chuẩn bị kỹ càng giúp chuyến đi an toàn và thoải mái hơn</figcaption>
-      </figure>
-
-      <h2>3. Đêm cắm trại: giữa rừng Sơn Trà và tiếng sóng biển</h2>
-      <p>Khi mặt trời lặn, khung cảnh trở nên huyền ảo. Mình nhóm lửa trại, nướng đồ ăn đơn giản và ngồi trò chuyện dưới trời sao. Không khí biển hòa quyện với mùi cỏ cây tạo cảm giác rất thư thái. Nếu may mắn, bạn còn có thể thấy sóc hay nai rừng lướt qua!</p>
-
-      <figure>
-        <img src="${leu4anh4.src}" alt="Lửa trại giữa thiên nhiên Sơn Trà" />
-        <figcaption>Lửa trại ấm áp giữa không gian yên tĩnh của núi rừng Đà Nẵng</figcaption>
-      </figure>
-
-      <h2>4. Bình minh và ly cà phê nóng giữa rừng</h2>
-      <p>Sáng sớm, tiếng chim rừng đánh thức mình dậy lúc 5h30. Mình pha cà phê phin, ngắm mặt trời mọc phía biển – khoảnh khắc khiến mình không thể nào quên. Không có tiếng xe cộ, không có deadline – chỉ có thiên nhiên và sự tĩnh lặng.</p>
-
-      <figure>
-        <img src="${leu4anh5.src}" alt="Bình minh Sơn Trà và ly cà phê nóng" />
-        <figcaption>Khoảnh khắc yên bình với cà phê sáng và tiếng gió rì rào</figcaption>
-      </figure>
-
-      <h2>5. Tổng kết chuyến đi cắm trại tại Đà Nẵng</h2>
-      <p><strong>Chuyến cắm trại Đà Nẵng</strong> giúp mình rũ bỏ mọi căng thẳng sau những ngày làm việc mệt mỏi. Với thiên nhiên tuyệt đẹp và địa điểm dễ tiếp cận, đây chắc chắn là hành trình đáng thử cho bất kỳ ai yêu khám phá. Bạn đã sẵn sàng xách ba lô lên và đi chưa?</p>
-
-      <p><strong>Từ khóa liên quan:</strong> cắm trại Đà Nẵng, địa điểm cắm trại Sơn Trà, cắm trại ven biển miền Trung, du lịch bụi Đà Nẵng, trải nghiệm cắm trại 2 ngày 1 đêm.</p>
-    `
-  },
+ 
   {
     slug: 'thue-do-cam-trai-hay-mua',
     title: 'Thuê Đồ Cắm Trại Hay Mua? So Sánh Chi Tiết Để Bạn Lựa Chọn Phù Hợp',
     description: 'Nên thuê hay mua đồ cắm trại? Bài viết này giúp bạn so sánh chi tiết ưu nhược điểm của hai lựa chọn, từ đó đưa ra quyết định phù hợp với phong cách du lịch và ngân sách.',
-    image: anhmau.src,
+    image: anh1.src,
     date: '2024-08-25',
     content: `
       <p>Bạn đang lên kế hoạch cho một chuyến <strong>cắm trại</strong> nhưng chưa biết nên thuê hay mua đồ cắm trại? Đây là câu hỏi phổ biến với những ai mới bắt đầu hoặc đang phân vân giữa hai lựa chọn. Trong bài viết này, chúng tôi sẽ giúp bạn so sánh chi tiết để dễ dàng đưa ra quyết định phù hợp với nhu cầu và ngân sách cá nhân.</p>
-  
+      <br />
       <h2>1. Thuê Đồ Cắm Trại – Giải Pháp Linh Hoạt Cho Người Mới</h2>
       <p><strong>✅ Ưu điểm:</strong></p>
       <ul>
@@ -84,8 +46,7 @@ export const articles = [
       </ul>
   
       <figure>
-        <img src="${anhmau.src}" alt="Combo đồ cắm trại được cho thuê" />
-        <figcaption>Combo thuê đồ cắm trại đầy đủ, tiện lợi cho người mới bắt đầu</figcaption>
+      <br />
       </figure>
   
       <h2>2. Mua Đồ Cắm Trại – Đầu Tư Dài Hạn Cho Người Yêu Thiên Nhiên</h2>
@@ -103,8 +64,7 @@ export const articles = [
       </ul>
   
       <figure>
-        <img src="${anhmau.src}" alt="Đồ cắm trại cá nhân được mua và chuẩn bị kỹ" />
-        <figcaption>Mua đồ cắm trại giúp bạn chủ động lựa chọn và sử dụng lâu dài</figcaption>
+      <br />
       </figure>
   
       <h2>3. Bảng So Sánh Thuê và Mua Đồ Cắm Trại</h2>
@@ -116,6 +76,7 @@ export const articles = [
             <th>Mua Đồ Cắm Trại</th>
           </tr>
         </thead>
+        
         <tbody>
           <tr>
             <td>Chi phí ban đầu</td>
@@ -146,8 +107,7 @@ export const articles = [
       </table>
   
       <figure>
-        <img src="${anhmau.src}" alt="Bảng so sánh chi tiết giữa thuê và mua đồ cắm trại" />
-        <figcaption>So sánh trực quan giúp bạn dễ dàng đưa ra lựa chọn phù hợp</figcaption>
+      <br />
       </figure>
   
       <h2>4. Lời Khuyên Chọn Phương Án Phù Hợp</h2>
@@ -157,139 +117,26 @@ export const articles = [
       </ul>
   
       <figure>
-        <img src="${anhmau.src}" alt="Cắm trại cuối tuần với đồ thuê và đồ cá nhân kết hợp" />
-        <figcaption>Lựa chọn thuê hay mua tùy vào tần suất và phong cách trải nghiệm</figcaption>
+      <br />
       </figure>
   
       <h2>5. Kết Luận</h2>
       <p>Thuê hay mua đồ cắm trại đều có điểm mạnh riêng. Hãy cân nhắc kỹ nhu cầu sử dụng, ngân sách và không gian lưu trữ để chọn giải pháp phù hợp nhất cho bạn. Dù lựa chọn thế nào, điều quan trọng vẫn là trải nghiệm thiên nhiên một cách thoải mái, an toàn và đáng nhớ.</p>
   
       <figure>
-        <img src="${anhmau.src}" alt="Người trẻ đang cắm trại thư giãn giữa thiên nhiên" />
-        <figcaption>Quan trọng nhất vẫn là tận hưởng thiên nhiên theo cách phù hợp nhất với bạn</figcaption>
+      <br />
       </figure>
   
       <p><strong>Gợi ý:</strong> Nếu bạn cần tư vấn thêm về thuê hoặc mua thiết bị cắm trại, hãy liên hệ với các đơn vị uy tín để được hỗ trợ tốt nhất!</p>
-  
       <p><strong>Từ khóa liên quan:</strong> thuê đồ cắm trại, mua đồ cắm trại, nên thuê hay mua lều trại, thiết bị cắm trại cho người mới, so sánh thuê mua đồ camping.</p>
     `
   },  
-  {
-    slug: 'su-khac-nhau-thue-va-mua-do-cam-trai',
-    title: 'Sự Khác Nhau Giữa Thuê Và Mua Đồ Cắm Trại: Lựa Chọn Nào Phù Hợp Với Bạn?',
-    description: 'So sánh chi tiết giữa thuê và mua đồ cắm trại để giúp bạn đưa ra lựa chọn tối ưu nhất, phù hợp với tần suất sử dụng, ngân sách và phong cách du lịch.',
-    image: anhmau.src,
-    date: '2024-06-15',
-    content: `
-      <p><strong>Cắm trại</strong> là hoạt động tuyệt vời để khám phá thiên nhiên và thư giãn sau những ngày làm việc căng thẳng. Tuy nhiên, nhiều người mới bắt đầu thường phân vân: <strong>Nên thuê hay mua đồ cắm trại?</strong> Bài viết này sẽ giúp bạn hiểu rõ sự khác biệt giữa hai lựa chọn và đưa ra quyết định phù hợp nhất.</p>
-  
-      <h2>1. Thuê Đồ Cắm Trại – Giải Pháp Tiết Kiệm Và Linh Hoạt</h2>
-      <p><strong>✅ Ưu điểm:</strong></p>
-      <ul>
-        <li><strong>Tiết kiệm chi phí ban đầu:</strong> Không cần chi trả nhiều cho các thiết bị như lều, túi ngủ, bếp nướng, bàn ghế, nệm hơi, v.v.</li>
-        <li><strong>Tiện lợi và linh hoạt:</strong> Dễ dàng thuê trọn bộ phù hợp cho từng chuyến đi mà không phải tự mua từng món lẻ.</li>
-        <li><strong>Không cần lưu trữ:</strong> Trả lại sau khi sử dụng, không tốn không gian lưu trữ tại nhà.</li>
-      </ul>
-      <p><strong>❌ Nhược điểm:</strong></p>
-      <ul>
-        <li><strong>Chi phí dài hạn cao:</strong> Nếu bạn đi cắm trại thường xuyên, tổng chi phí thuê có thể vượt quá giá trị mua mới.</li>
-        <li><strong>Chất lượng không ổn định:</strong> Đôi khi đồ thuê đã cũ hoặc không được bảo quản tốt.</li>
-      </ul>
-  
-      <figure>
-        <img src="\${anhmau.src}" alt="Thiết bị cắm trại được thuê gọn gàng và tiện lợi" />
-        <figcaption>Bạn có thể thuê combo đồ cắm trại đầy đủ cho chuyến đi đầu tiên của mình</figcaption>
-      </figure>
-  
-      <h2>2. Mua Đồ Cắm Trại – Đầu Tư Dài Hạn Cho Người Đam Mê</h2>
-      <p><strong>✅ Ưu điểm:</strong></p>
-      <ul>
-        <li><strong>Sở hữu lâu dài:</strong> Mua một lần có thể sử dụng cho nhiều chuyến đi sau này.</li>
-        <li><strong>Tùy chọn theo nhu cầu:</strong> Lựa chọn từng thiết bị theo thương hiệu, chất liệu, kích thước và màu sắc yêu thích.</li>
-        <li><strong>Tiết kiệm nếu đi thường xuyên:</strong> Tổng chi phí thấp hơn thuê nếu bạn cắm trại thường xuyên.</li>
-      </ul>
-      <p><strong>❌ Nhược điểm:</strong></p>
-      <ul>
-        <li><strong>Chi phí ban đầu cao:</strong> Một bộ đầy đủ có thể tốn vài triệu đồng.</li>
-        <li><strong>Yêu cầu bảo quản:</strong> Cần vệ sinh và cất giữ cẩn thận sau khi sử dụng.</li>
-        <li><strong>Tốn diện tích:</strong> Thiết bị cắm trại thường cồng kềnh, đòi hỏi không gian lưu trữ riêng.</li>
-      </ul>
-  
-      <figure>
-        <img src="\${anhmau.src}" alt="Thiết bị cắm trại được chuẩn bị kỹ càng bởi người sở hữu" />
-        <figcaption>Mua thiết bị giúp bạn chủ động hơn trong mọi chuyến đi</figcaption>
-      </figure>
-  
-      <h2>3. Bảng So Sánh Thuê Và Mua Đồ Cắm Trại</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Tiêu chí</th>
-            <th>Thuê Đồ Cắm Trại</th>
-            <th>Mua Đồ Cắm Trại</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Chi phí ban đầu</td>
-            <td>Thấp</td>
-            <td>Cao</td>
-          </tr>
-          <tr>
-            <td>Chi phí dài hạn</td>
-            <td>Cao nếu đi nhiều</td>
-            <td>Tiết kiệm nếu sử dụng thường xuyên</td>
-          </tr>
-          <tr>
-            <td>Tính tiện lợi</td>
-            <td>Không cần bảo quản</td>
-            <td>Chủ động nhưng cần vệ sinh, cất giữ</td>
-          </tr>
-          <tr>
-            <td>Tùy biến thiết bị</td>
-            <td>Hạn chế</td>
-            <td>Tùy chọn thoải mái</td>
-          </tr>
-          <tr>
-            <td>Tần suất sử dụng</td>
-            <td>1–2 lần/năm</td>
-            <td>Thường xuyên</td>
-          </tr>
-        </tbody>
-      </table>
-  
-      <figure>
-        <img src="\${anhmau.src}" alt="So sánh tổng quan giữa thuê và mua đồ cắm trại" />
-        <figcaption>Bảng so sánh trực quan giúp bạn dễ dàng lựa chọn phương án phù hợp</figcaption>
-      </figure>
-  
-      <h2>4. Lời Khuyên Chọn Lựa Phù Hợp</h2>
-      <ul>
-        <li><strong>Nên thuê:</strong> Nếu bạn mới bắt đầu, ít đi cắm trại hoặc không có không gian cất giữ.</li>
-        <li><strong>Nên mua:</strong> Nếu bạn thường xuyên đi dã ngoại, du lịch bụi hoặc muốn đầu tư nghiêm túc cho sở thích này.</li>
-      </ul>
-  
-      <figure>
-        <img src="\${anhmau.src}" alt="Người trẻ lựa chọn hình thức cắm trại phù hợp với bản thân" />
-        <figcaption>Dù thuê hay mua, trải nghiệm cắm trại luôn đáng giá nếu bạn chuẩn bị phù hợp</figcaption>
-      </figure>
-  
-      <h2>5. Kết Luận</h2>
-      <p>Thuê hay mua đồ cắm trại đều có ưu điểm và phù hợp với từng nhu cầu khác nhau. Hãy xem xét kỹ lưỡng tần suất sử dụng, ngân sách và không gian của bạn để lựa chọn phương án hợp lý. Điều quan trọng là bạn có thể tận hưởng thiên nhiên một cách trọn vẹn và thoải mái nhất.</p>
-  
-      <figure>
-        <img src="\${anhmau.src}" alt="Cắm trại giữa thiên nhiên là trải nghiệm đáng nhớ" />
-        <figcaption>Hãy tận hưởng từng khoảnh khắc ngoài trời với sự chuẩn bị phù hợp</figcaption>
-      </figure>
-  
-      <p><strong>Từ khóa liên quan:</strong> thuê đồ cắm trại, mua đồ cắm trại, so sánh thuê và mua đồ cắm trại, thiết bị cắm trại cho người mới, nên mua hay thuê lều trại, đồ camping.</p>
-    `
-  },
+ 
   {
     slug: '4-loi-ich-thue-leu-cam-trai',
     title: '4 Lợi Ích Thuê Lều Cắm Trại Mà Bạn Không Nên Bỏ Lỡ',
     description: 'Thuê lều cắm trại mang lại nhiều lợi ích như tiết kiệm, tiện lợi và gắn kết gia đình. Cùng khám phá 4 lý do vì sao thuê lều là lựa chọn thông minh cho kỳ nghỉ ngoài trời.',
-    image: anhmau.src,
+    image: anh3.src,
     date: '2024-06-15',
     content: `
       <p><strong>Cắm trại</strong> là cách lý tưởng để tạm rời xa thành phố, thư giãn và kết nối với thiên nhiên. Nếu bạn đang cân nhắc giữa việc mua hay thuê lều, thì <strong>thuê lều cắm trại</strong> là lựa chọn tiện lợi và tối ưu hơn trong nhiều tình huống. Dưới đây là 4 lợi ích nổi bật khi chọn thuê thay vì mua.</p>
@@ -297,34 +144,18 @@ export const articles = [
       <h2>1. Khám Phá Thiên Nhiên Một Cách Trọn Vẹn</h2>
       <p>Khi thuê lều cắm trại, bạn có thể dễ dàng đến những địa điểm hoang sơ như <strong>rừng sâu, bãi biển, hồ suối</strong> mà không cần chuẩn bị quá nhiều thiết bị cá nhân. Sự tối giản trong khâu chuẩn bị giúp bạn tập trung vào việc trải nghiệm, ngắm cảnh, leo núi hoặc thư giãn giữa thiên nhiên trong lành.</p>
   
-      <figure>
-        <img src="\${anhmau.src}" alt="Cắm trại giữa rừng xanh với lều thuê tiện lợi" />
-        <figcaption>Thuê lều giúp bạn hòa mình vào thiên nhiên mà không cần đầu tư thiết bị phức tạp</figcaption>
-      </figure>
   
       <h2>2. Đơn Giản Và Tiện Lợi Cho Người Mới</h2>
       <p><strong>Không cần mua sắm, bảo quản hay cất giữ</strong> – thuê lều là lựa chọn hoàn hảo cho người mới bắt đầu. Nhiều đơn vị cung cấp dịch vụ trọn gói bao gồm lều, túi ngủ, nệm, bàn ghế,... giúp bạn có thể lên đường bất cứ lúc nào mà không phải lo lắng về hành trang.</p>
   
-      <figure>
-        <img src="\${anhmau.src}" alt="Thuê lều giúp đơn giản hóa chuyến cắm trại" />
-        <figcaption>Chỉ cần thuê – bạn có thể bắt đầu hành trình cắm trại mà không cần chuẩn bị quá nhiều</figcaption>
-      </figure>
   
       <h2>3. Gắn Kết Bạn Bè Và Gia Đình</h2>
       <p>Những buổi cắm trại là cơ hội tuyệt vời để <strong>giao lưu, trò chuyện và chia sẻ</strong> những khoảnh khắc đáng nhớ bên người thân. Không gian ngoài trời, ánh lửa trại và bầu không khí gần gũi giúp kết nối mọi người một cách tự nhiên, không bị phân tâm bởi công nghệ hay công việc.</p>
   
-      <figure>
-        <img src="\${anhmau.src}" alt="Cắm trại là dịp gắn kết gia đình và bạn bè" />
-        <figcaption>Cùng nhau dựng lều, nướng thịt và trò chuyện là trải nghiệm gắn kết khó quên</figcaption>
-      </figure>
   
       <h2>4. Trải Nghiệm Phong Cách Sống Mới</h2>
       <p>Cắm trại – đặc biệt là với lều thuê – giúp bạn thoát khỏi vòng quay tất bật của cuộc sống hiện đại và <strong>trải nghiệm một lối sống chậm rãi, gần gũi hơn với thiên nhiên</strong>. Bạn sẽ cảm nhận rõ sự yên bình, học cách trân trọng những điều giản dị như bầu trời sao, tiếng gió thổi hay bữa ăn ngoài trời.</p>
   
-      <figure>
-        <img src="\${anhmau.src}" alt="Lều trại ngoài trời giúp bạn trải nghiệm lối sống giản đơn" />
-        <figcaption>Mỗi chuyến đi là một bài học về sự tối giản, bình yên và kết nối với chính mình</figcaption>
-      </figure>
   
       <h2>Kết Luận</h2>
       <p>Thuê lều cắm trại không chỉ mang lại sự tiện lợi mà còn là cách tuyệt vời để làm quen với hoạt động ngoài trời mà không cần đầu tư lớn. Nếu bạn muốn có một kỳ nghỉ đáng nhớ, nhẹ nhàng và giàu trải nghiệm, hãy thử thuê lều và bắt đầu hành trình khám phá thiên nhiên ngay hôm nay.</p>
@@ -336,18 +167,13 @@ export const articles = [
     slug: 'thue-dung-cu-cam-trai-can-nhung-gi',
     title: 'Thuê Dụng Cụ Cắm Trại Cần Những Gì? Danh Sách Đầy Đủ Dành Cho Người Mới',
     description: 'Bạn muốn thuê dụng cụ cắm trại nhưng chưa biết cần mang theo gì? Bài viết này liệt kê đầy đủ những thiết bị thiết yếu, giúp bạn có chuyến đi trọn vẹn và an toàn.',
-    image: anhmau.src,
+    image: anh2.src,
     date: '2023-10-23',
     content: `
       <p><strong>Thuê dụng cụ cắm trại</strong> là giải pháp tối ưu cho những ai mới bắt đầu hành trình khám phá thiên nhiên mà không cần đầu tư quá nhiều. Tuy nhiên, để có trải nghiệm thoải mái và an toàn, bạn cần biết rõ những vật dụng nào là thiết yếu. Dưới đây là danh sách đầy đủ các món đồ nên chuẩn bị hoặc thuê cho mỗi chuyến cắm trại qua đêm.</p>
   
       <h2>1. Lều Cắm Trại – Vật Dụng Không Thể Thiếu</h2>
       <p>Lều là nơi trú ngụ, nghỉ ngơi và bảo vệ bạn khỏi gió, mưa, côn trùng hay động vật hoang dã. Khi thuê lều, hãy chọn loại phù hợp với số người, có khả năng chống thấm và dễ dựng lắp.</p>
-  
-      <figure>
-        <img src="\${anhmau.src}" alt="Lều cắm trại dựng ngoài trời" />
-        <figcaption>Lều là vật dụng cần thiết nhất trong mọi chuyến cắm trại</figcaption>
-      </figure>
   
       <h2>2. Túi Ngủ – Giữ Ấm Và Giúp Ngủ Ngon Hơn</h2>
       <p>Túi ngủ giúp giữ nhiệt vào ban đêm, đặc biệt quan trọng khi trời lạnh. Có nhiều loại túi ngủ phù hợp với từng mùa, bạn nên chọn loại tương ứng với điều kiện thời tiết nơi cắm trại.</p>
@@ -371,22 +197,12 @@ export const articles = [
         <li><strong>Khay và vỉ nướng:</strong> Phục vụ các món nướng, nên mang theo 2–3 vỉ thay phiên để đảm bảo vệ sinh.</li>
       </ul>
   
-      <figure>
-        <img src="\${anhmau.src}" alt="Dụng cụ nấu ăn ngoài trời" />
-        <figcaption>Bộ dụng cụ nấu ăn nhỏ gọn giúp bạn nấu nướng dễ dàng trong thiên nhiên</figcaption>
-      </figure>
-  
       <h2>8. Đồ Dùng Khác Nên Mang Theo</h2>
       <ul>
         <li><strong>Bộ sơ cứu y tế:</strong> Bao gồm thuốc đau bụng, hạ sốt, giảm đau, băng gạc, thuốc dị ứng, thuốc chống côn trùng,...</li>
         <li><strong>Pin dự phòng:</strong> Đảm bảo điện thoại, đèn, loa và các thiết bị khác luôn hoạt động, đặc biệt nếu không có nguồn điện gần.</li>
         <li><strong>Dụng cụ sửa chữa:</strong> Mang theo bộ đồ nghề mini đa năng (dao, kéo, kìm, vít...) để xử lý sự cố nhỏ với lều hoặc thiết bị.</li>
       </ul>
-  
-      <figure>
-        <img src="\${anhmau.src}" alt="Bộ dụng cụ cắm trại đa năng" />
-        <figcaption>Trang bị thêm các vật dụng hỗ trợ để sẵn sàng ứng phó mọi tình huống</figcaption>
-      </figure>
   
       <h2>Kết Luận</h2>
       <p>Việc thuê dụng cụ cắm trại không chỉ giúp tiết kiệm chi phí mà còn giảm áp lực chuẩn bị. Tuy nhiên, bạn vẫn cần lập kế hoạch kỹ lưỡng và chuẩn bị đầy đủ những vật dụng thiết yếu để có chuyến đi an toàn, thoải mái và nhiều kỷ niệm. Hãy tham khảo checklist trên để sẵn sàng cho hành trình khám phá thiên nhiên sắp tới!</p>
@@ -398,18 +214,13 @@ export const articles = [
     slug: 'thue-dung-cu-leo-nui-can-nhung-gi',
     title: 'Thuê Dụng Cụ Leo Núi Cần Những Gì? Danh Sách Đầy Đủ Cho Người Mới Bắt Đầu',
     description: 'Bạn muốn leo núi nhưng chưa biết cần thuê những dụng cụ gì? Bài viết này giúp bạn liệt kê đầy đủ các thiết bị cần thiết để đảm bảo an toàn và tiết kiệm cho chuyến đi.',
-    image: anhmau.src,
-    date: '2023-10-22',
+    image: anh4.src,
+    date: '2025-1-22',
     content: `
       <p><strong>Leo núi</strong> là hoạt động mang lại nhiều lợi ích cho sức khỏe và tinh thần: cải thiện tim mạch, tăng sức bền, giảm căng thẳng và rèn luyện khả năng tập trung. Tuy nhiên, để hành trình leo núi an toàn và hiệu quả, đặc biệt với người mới, việc <strong>thuê dụng cụ leo núi</strong> là lựa chọn thông minh và tiết kiệm. Dưới đây là danh sách các thiết bị thiết yếu nên thuê trước khi bắt đầu chuyến đi của bạn.</p>
   
       <h2>1. Ba Lô Leo Núi – Người Bạn Đồng Hành Đáng Tin Cậy</h2>
       <p>Balo chuyên dụng cho leo núi giúp bạn phân bổ trọng lượng hợp lý, bảo vệ đồ đạc khỏi bụi, nước và thời tiết khắc nghiệt. Ngoài ra, nó còn có nhiều ngăn tiện lợi để sắp xếp vật dụng cá nhân và thiết bị chuyên dụng một cách khoa học.</p>
-  
-      <figure>
-        <img src="\${anhmau.src}" alt="Balo leo núi chuyên dụng nhiều ngăn tiện lợi" />
-        <figcaption>Balo leo núi giúp bạn mang theo đầy đủ vật dụng một cách gọn nhẹ, tiện lợi</figcaption>
-      </figure>
   
       <h2>2. Gậy Leo Núi – Tăng Cân Bằng, Giảm Áp Lực</h2>
       <p>Gậy leo núi giúp giữ thăng bằng, hỗ trợ di chuyển ở địa hình dốc hoặc trơn trượt. Đồng thời, nó cũng giúp giảm áp lực lên đầu gối khi lên/xuống dốc và hỗ trợ phần thân trên trong những đoạn leo dốc cao.</p>
@@ -423,21 +234,11 @@ export const articles = [
         <li><strong>Lều:</strong> Mang đến không gian riêng tư, an toàn trước gió, mưa và côn trùng. Thích hợp nếu bạn ở lại qua đêm tại điểm dừng chân.</li>
       </ul>
   
-      <figure>
-        <img src="\${anhmau.src}" alt="Túi ngủ và lều khi leo núi" />
-        <figcaption>Túi ngủ nhỏ gọn và lều giúp bạn nghỉ ngơi thoải mái sau chặng đường leo núi</figcaption>
-      </figure>
-  
       <h2>5. Đèn Pin – Ánh Sáng An Toàn Trong Bóng Tối</h2>
       <p>Khi leo núi qua đêm hoặc xuất phát từ sáng sớm, đèn pin là vật bất ly thân. Dùng để chiếu sáng, soi đường, kiếm củi, dựng lều và xử lý các tình huống khẩn cấp trong điều kiện thiếu sáng.</p>
   
       <h2>6. Ghế Gấp Gọn – Nghỉ Chân Dễ Dàng Mọi Nơi</h2>
       <p>Ghế gấp gọn giúp bạn ngồi nghỉ ngơi bất cứ lúc nào, nhất là tại những điểm không có bãi cỏ hoặc mặt phẳng tự nhiên. Gọn nhẹ, dễ gấp và mang vác – đây là thiết bị không thể thiếu cho hành trình dài hơi.</p>
-  
-      <figure>
-        <img src="\${anhmau.src}" alt="Ghế gấp gọn cho người leo núi" />
-        <figcaption>Ghế gấp gọn hỗ trợ nghỉ ngơi, tiết kiệm sức và không chiếm nhiều không gian</figcaption>
-      </figure>
   
       <h2>Lợi Ích Của Việc Thuê Dụng Cụ Leo Núi</h2>
       <ul>
@@ -456,7 +257,7 @@ export const articles = [
     slug: 'bi-quyet-giu-am-cam-trai-mua-dong',
     title: '7 Bí Quyết Giữ Ấm Khi Cắm Trại Mùa Đông An Toàn Và Hiệu Quả',
     description: 'Tổng hợp 7 bí quyết giữ ấm khi cắm trại mùa đông giúp bạn tránh lạnh, bảo vệ sức khỏe và tận hưởng thiên nhiên an toàn trong thời tiết giá rét.',
-    image: anhmau.src,
+    image: anh5.src,
     date: '2023-09-01',
     content: `
       <p><strong>Cắm trại mùa đông</strong> là trải nghiệm thú vị nhưng cũng tiềm ẩn nhiều rủi ro nếu không được chuẩn bị kỹ. Nhiệt độ xuống thấp có thể khiến cơ thể mất nhiệt nhanh, dễ dẫn đến cảm lạnh, giảm sức đề kháng. Dưới đây là 7 bí quyết giữ ấm cực hiệu quả, giúp bạn có một chuyến dã ngoại mùa đông vừa an toàn vừa ấm áp.</p>
@@ -469,11 +270,6 @@ export const articles = [
         <li><strong>Lớp ngoài:</strong> Áo khoác chống gió, chống nước – có mũ và cổ cao.</li>
         <li>Đừng quên: <strong>mũ len, tất dày, găng tay và khăn choàng cổ</strong>.</li>
       </ul>
-  
-      <figure>
-        <img src="\${anhmau.src}" alt="Trang phục nhiều lớp giữ ấm khi cắm trại mùa đông" />
-        <figcaption>Mặc nhiều lớp đúng cách giúp giữ nhiệt hiệu quả mà vẫn thoải mái</figcaption>
-      </figure>
   
       <h2>2. Dựng Lều Đúng Cách Và Đúng Vị Trí</h2>
       <p>Chọn vị trí <strong>bằng phẳng, không trũng</strong>, tránh xa sông, suối ít nhất 60m. Lều nên có lớp cách nhiệt, dựng chắc chắn để chắn gió. Trước khi rời đi, đảm bảo đã dập tắt hoàn toàn lửa trại và dọn sạch rác.</p>
@@ -493,11 +289,6 @@ export const articles = [
       <h2>6. Cân Nhắc Sử Dụng Đèn Sưởi Ngoài Trời</h2>
       <p>Đèn sưởi gas có thể giữ ấm hiệu quả nhưng khá cồng kềnh và cần lưu ý về <strong>an toàn cháy nổ</strong>. Chỉ sử dụng khi thực sự cần thiết và có kinh nghiệm vận hành.</p>
   
-      <figure>
-        <img src="\${anhmau.src}" alt="Đèn sưởi ngoài trời trong lều cắm trại" />
-        <figcaption>Chỉ dùng đèn sưởi ngoài trời khi các phương án giữ ấm khác không đủ hiệu quả</figcaption>
-      </figure>
-  
       <h2>7. Giữ Cho Cơ Thể Luôn Khô Ráo</h2>
       <p>Hạn chế đổ mồ hôi, thay đồ khô khi bị ẩm và giữ chân tay luôn khô ráo. Nhiệt độ cơ thể có thể mất đi nhanh chóng khi da tiếp xúc với không khí lạnh trong tình trạng ẩm ướt.</p>
   
@@ -511,7 +302,7 @@ export const articles = [
     slug: 'chuan-bi-gi-cho-mot-chuyen-cam-trai-hoan-hao',
     title: 'Chuẩn Bị Gì Cho Một Chuyến Cắm Trại Hoàn Hảo? Checklist Đầy Đủ Từ A-Z',
     description: 'Tổng hợp đầy đủ những vật dụng, thực phẩm, kỹ năng và kế hoạch cần chuẩn bị để có chuyến cắm trại hoàn hảo, an toàn và đáng nhớ.',
-    image: anhmau.src,
+    image: anh6.src,
     date: '2023-10-21',
     content: `
       <p><strong>Cắm trại</strong> là cách lý tưởng để thư giãn, hòa mình vào thiên nhiên và gắn kết cùng gia đình, bạn bè. Tuy nhiên, để có một chuyến đi trọn vẹn, bạn cần chuẩn bị kỹ lưỡng về thiết bị, thực phẩm, trang phục và kỹ năng. Dưới đây là checklist chi tiết giúp bạn sẵn sàng cho một chuyến cắm trại hoàn hảo!</p>
@@ -535,11 +326,6 @@ export const articles = [
         <li><strong>Ghế xếp, bàn gấp:</strong> Hỗ trợ ăn uống, nghỉ ngơi gọn nhẹ.</li>
         <li><strong>Đèn pin, đèn lều, pin dự phòng:</strong> Đảm bảo ánh sáng và năng lượng thiết bị điện tử.</li>
       </ul>
-  
-      <figure>
-        <img src="\${anhmau.src}" alt="Lều trại và dụng cụ cắm trại được chuẩn bị kỹ" />
-        <figcaption>Lều, đèn và túi ngủ là những vật dụng cốt lõi cho chuyến cắm trại</figcaption>
-      </figure>
   
       <h2>3. Thực Phẩm Và Dụng Cụ Nấu Ăn</h2>
       <ul>
@@ -581,7 +367,7 @@ export const articles = [
     slug: '8-meo-ngu-ngon-khi-di-cam-trai-ngoai-troi',
     title: '8 Mẹo Ngủ Ngon Khi Đi Cắm Trại Ngoài Trời Ai Cũng Nên Biết',
     description: 'Khó ngủ khi đi cắm trại? Bài viết chia sẻ 8 mẹo đơn giản nhưng cực hiệu quả giúp bạn ngủ ngon và sâu hơn giữa thiên nhiên.',
-    image: anhmau.src,
+    image: anh7.src,
     date: '2023-09-01',
     content: `
       <p><strong>Cắm trại ngoài trời</strong> là hoạt động thú vị, giúp thư giãn và gắn kết các thành viên. Tuy nhiên, nhiều người gặp khó khăn khi ngủ do lạ chỗ, thời tiết, côn trùng hay điều kiện sinh hoạt khác biệt. Dưới đây là <strong>8 mẹo ngủ ngon khi đi cắm trại</strong> giúp bạn có giấc ngủ sâu, sảng khoái ngay cả khi ở ngoài trời.</p>
@@ -600,11 +386,6 @@ export const articles = [
   
       <h2>5. Mang Theo Gối Và Đệm Dã Ngoại</h2>
       <p>Thay vì nằm chiếu mỏng hoặc đất cứng, hãy chuẩn bị <strong>gối nhỏ và đệm mỏng (topper)</strong> phù hợp cho không gian ngoài trời. Đệm giúp cách nhiệt tốt hơn, còn gối hỗ trợ cổ, tạo cảm giác quen thuộc như ở nhà.</p>
-  
-      <figure>
-        <img src="\${anhmau.src}" alt="Đệm và gối cắm trại giúp ngủ ngon hơn" />
-        <figcaption>Đệm và gối dã ngoại giúp nâng cao chất lượng giấc ngủ ngoài trời</figcaption>
-      </figure>
   
       <h2>6. Cất Gọn Đồ Ăn Trước Khi Ngủ</h2>
       <p>Thực phẩm để ngoài trời có thể thu hút động vật hoang dã. Cất đồ ăn trong hộp kín hoặc balo chống mùi để tránh bị làm phiền lúc nửa đêm – vừa giúp ngủ ngon, vừa đảm bảo an toàn cho cả nhóm.</p>
@@ -625,7 +406,7 @@ export const articles = [
     slug: 'to-chuc-cam-trai-cho-gia-dinh-kinh-nghiem-chuan-bi-tu-a-z',
     title: 'Tổ Chức Cắm Trại Cho Gia Đình: Kinh Nghiệm Và Chuẩn Bị Đồ Camping Từ A-Z',
     description: 'Kinh nghiệm tổ chức cắm trại cho gia đình từ A-Z: cách lên kế hoạch, chọn lều, đồ dùng cần thiết, hoạt động ngoài trời và gợi ý địa điểm phù hợp.',
-    image: anhmau.src,
+    image: anh8.src,
     date: '2023-09-01',
     content: `
       <p><strong>Cắm trại gia đình</strong> là một trong những hoạt động gắn kết tuyệt vời giữa các thành viên. Từ việc lựa chọn địa điểm, chuẩn bị thiết bị cho đến tổ chức các hoạt động ngoài trời, tất cả đều góp phần tạo nên những khoảnh khắc đáng nhớ. Dưới đây là kinh nghiệm và danh sách chuẩn bị đồ camping từ A-Z giúp bạn tổ chức chuyến cắm trại gia đình suôn sẻ, an toàn và thú vị.</p>
@@ -638,11 +419,6 @@ export const articles = [
         <li><strong>Địa điểm:</strong> Ưu tiên các khu vực gần hồ, núi, rừng hoặc khu cắm trại có dịch vụ tiện nghi – nằm trong bán kính dưới 300km từ thành phố.</li>
         <li><strong>Hoạt động nổi bật:</strong> SUP hơi, chèo thuyền, câu cá, bơi lội, tổ chức trò chơi tập thể.</li>
       </ul>
-  
-      <figure>
-        <img src="\${anhmau.src}" alt="Gia đình chèo SUP và cắm trại bên hồ" />
-        <figcaption>SUP, câu cá hay bơi lội là những hoạt động gắn kết cho cả gia đình</figcaption>
-      </figure>
   
       <h2>3. Lý Do Nên Cắm Trại Qua Đêm</h2>
       <p>Cắm trại qua đêm giúp gia đình tận hưởng sự yên tĩnh, hòa mình vào thiên nhiên và tạo ra thời gian chất lượng bên nhau. Các khoảnh khắc quây quần bên bàn ăn, nhóm lửa, kể chuyện đêm khuya là những trải nghiệm đáng giá giúp gắn kết cảm xúc và tăng sự thấu hiểu giữa các thành viên.</p>
@@ -689,81 +465,12 @@ export const articles = [
       <p><strong>Từ khóa liên quan:</strong> tổ chức cắm trại cho gia đình, kinh nghiệm cắm trại gia đình, đồ cắm trại A-Z, cắm trại cuối tuần, checklist camping, lều glamping, hoạt động ngoài trời gia đình.</p>
     `
   },
-  {
-    slug: 'kinh-nghiem-cam-trai-mot-minh-an-toan-thu-vi-tu-a-z',
-    title: 'Kinh Nghiệm Cắm Trại Một Mình: Hành Trình An Toàn, Tự Do Và Đáng Nhớ',
-    description: 'Bỏ túi kinh nghiệm cắm trại một mình an toàn và thú vị: từ lựa chọn địa điểm, chuẩn bị đồ đạc, đến kỹ năng sinh tồn cần thiết cho người mới bắt đầu.',
-    image: anhmau.src,
-    date: '2023-09-01',
-    content: `
-      <p><strong>Cắm trại một mình</strong> không chỉ là cách để trốn khỏi nhịp sống xô bồ, mà còn là cơ hội để bạn khám phá chính mình. Tuy nhiên, hành trình này đòi hỏi sự chuẩn bị kỹ càng và kiến thức nhất định để đảm bảo an toàn và trọn vẹn. Dưới đây là những kinh nghiệm thực tế giúp bạn tự tin lên đường chinh phục chuyến đi solo camping đầu tiên!</p>
-  
-      <h2>1. Luôn Cập Nhật Thời Tiết Trước Khi Đi</h2>
-      <p>Thời tiết là yếu tố quyết định thành bại của chuyến đi. Hãy ưu tiên các ngày khô ráo, nắng nhẹ và tránh xa những đợt mưa, gió lớn hoặc bão. Nếu thấy điều kiện thời tiết thay đổi bất ngờ, đừng ngần ngại hoãn chuyến đi để đảm bảo an toàn.</p>
-  
-      <figure>
-        <img src="\${anhmau.src}" alt="Cắm trại một mình trong ngày nắng đẹp" />
-        <figcaption>Lựa chọn ngày nắng ráo giúp chuyến camping diễn ra thuận lợi và an toàn</figcaption>
-      </figure>
-  
-      <h2>2. Lựa Chọn Địa Điểm Cắm Trại Hợp Lý</h2>
-      <ul>
-        <li><strong>Miễn phí:</strong> Thường là vùng rừng núi, bãi đất trống – nhiều không gian, hoang sơ, thích hợp cho ai muốn thử thách bản thân. Tuy nhiên, thiếu dịch vụ và tiềm ẩn rủi ro về an toàn.</li>
-        <li><strong>Trả phí:</strong> Khu cắm trại có bảo vệ, đầy đủ tiện nghi như vệ sinh, lều, đồ nấu ăn,... phù hợp cho người mới bắt đầu.</li>
-      </ul>
-      <p>👉 <em>Gợi ý:</em> Nếu là lần đầu tiên, hãy chọn <strong>khu camping trả phí</strong> để đảm bảo an toàn và thuận tiện hơn.</p>
-  
-      <h2>3. Mang Theo Đồ Dùng Cắm Trại Gọn Gàng, Đầy Đủ</h2>
-      <p>Ưu tiên balo gọn nhẹ hoặc vali size vừa đủ. Những món đồ không thể thiếu:</p>
-      <ul>
-        <li>Lều, đèn pin, mền, ghế xếp</li>
-        <li>Bếp nấu mini, dụng cụ nấu ăn cơ bản</li>
-        <li>Bộ dụng cụ y tế cá nhân</li>
-        <li>Ổ khóa lều (nếu ở khu hẻo lánh)</li>
-      </ul>
-  
-      <h2>4. Chuẩn Bị Đồ Ăn Và Nước Uống Hợp Lý</h2>
-      <ul>
-        <li><strong>Đồ khô, đóng hộp:</strong> dễ bảo quản, không cần tủ lạnh</li>
-        <li><strong>Thức ăn tươi:</strong> nên mang theo hộp giữ nhiệt nếu cần</li>
-        <li><strong>Nước uống:</strong> chuẩn bị đủ cho toàn bộ hành trình</li>
-        <li><strong>Chia phần theo bữa:</strong> tránh hư hỏng do mở nắp nhiều lần</li>
-      </ul>
-      <p>Thêm một chút than nếu bạn muốn nướng BBQ. Đừng quên mang ấm nhỏ để đun nước nấu mì hay pha cà phê!</p>
-  
-      <h2>5. Lựa Chọn Trang Phục Phù Hợp</h2>
-      <ul>
-        <li>Trang phục thoải mái, dễ di chuyển</li>
-        <li>Áo khoác gió hoặc áo ấm nếu ngủ lại qua đêm</li>
-        <li>Giày thể thao hoặc giày trekking đế mềm – tránh giày cao gót, sandal mảnh</li>
-      </ul>
-  
-      <h2>6. Bộ Dụng Cụ Y Tế Cá Nhân Luôn Bên Mình</h2>
-      <ul>
-        <li>Thuốc chống côn trùng, thuốc cảm, đau bụng, băng gạc, cồn y tế</li>
-        <li>Gel rửa tay khô, khẩu trang, kem chống nắng</li>
-      </ul>
-      <p>Không thể lường trước mọi rủi ro, vì thế hãy luôn mang đủ vật dụng y tế phòng thân!</p>
-  
-      <h2>7. Một Số Lưu Ý Khi Đi Cắm Trại Một Mình</h2>
-      <ul>
-        <li>Luôn có kế hoạch dự phòng và chia sẻ định vị với người thân</li>
-        <li>Không xịt nước hoa – tránh thu hút côn trùng</li>
-        <li>Nắm vững kỹ năng cơ bản: dựng trại, đốt lửa, dùng bản đồ – la bàn, sơ cứu nhanh</li>
-        <li>Luôn giữ vệ sinh, dọn dẹp sạch sẽ trước khi rời đi</li>
-      </ul>
-  
-      <h2>Kết Luận</h2>
-      <p><strong>Cắm trại một mình</strong> là trải nghiệm quý giá giúp bạn học cách sống độc lập, bình tĩnh và kết nối sâu sắc hơn với thiên nhiên. Tuy nhiên, hãy chuẩn bị thật kỹ, ưu tiên sự an toàn và luôn trang bị kỹ năng cần thiết để chuyến đi trở nên trọn vẹn và đáng nhớ!</p>
-  
-      <p><strong>Từ khóa liên quan:</strong> kinh nghiệm cắm trại một mình, solo camping, cắm trại một mình an toàn, đồ dùng cắm trại cá nhân, địa điểm cắm trại miễn phí, kỹ năng sống một mình.</p>
-    `
-  },
+ 
   {
     slug: 'tu-nau-an-khi-di-du-lich-de-hay-kho',
     title: 'Tự Nấu Ăn Khi Đi Du Lịch: Dễ Hay Khó? Bí Kíp Tối Ưu Cho Mọi Hành Trình',
     description: 'Tự nấu ăn khi đi du lịch giúp tiết kiệm chi phí, đảm bảo khẩu vị và vệ sinh. Khám phá những bí quyết, thực đơn gọn nhẹ và mẹo bảo quản thực phẩm hiệu quả cho từng nhóm đối tượng.',
-    image: anhmau.src,
+    image: anh9.src,
     date: '2023-09-01',
     content: `
       <p><strong>Tự nấu ăn khi đi du lịch</strong> là xu hướng ngày càng phổ biến, nhất là với các nhóm bạn trẻ, gia đình có con nhỏ hoặc những ai ưa thích chủ động trong việc ăn uống. Vừa tiết kiệm chi phí, vừa đảm bảo khẩu vị và an toàn thực phẩm – nhưng liệu việc tự tay chuẩn bị đồ ăn trong chuyến đi có dễ như bạn nghĩ? Hãy cùng khám phá những bí quyết dưới đây để hành trình của bạn luôn suôn sẻ và ngon miệng!</p>
@@ -776,9 +483,6 @@ export const articles = [
         <li>Khẩu vị chung của nhóm</li>
       </ul>
       <p>Ưu tiên các món dễ nấu, gọn nhẹ, bảo quản được lâu như cơm nắm, thịt hộp, rau củ luộc, canh đơn giản,…</p>
-  
-      <img src="\${anhmau.src}" alt="Chuẩn bị món ăn dã ngoại" />
-      <figcaption>Thực đơn linh hoạt giúp bữa ăn khi du lịch vừa đủ dinh dưỡng lại dễ chế biến</figcaption>
   
       <h2>2. Kinh Nghiệm Tự Nấu Ăn Khi Đi Với Gia Đình</h2>
       <p>Với các nhóm gia đình, đặc biệt có người lớn tuổi và trẻ nhỏ, bạn cần đặc biệt chú ý:</p>
@@ -831,7 +535,7 @@ export const articles = [
     slug: '15-mon-an-di-picnic-de-chuan-bi',
     title: '15 Món Ăn Đi Picnic Ngon – Dễ Làm – Dễ Mang Theo',
     description: 'Gợi ý 15 món ăn picnic đơn giản, dễ làm và tiện mang theo. Từ bánh mì, cơm cuộn đến món nướng – tất cả đều giúp buổi dã ngoại thêm trọn vẹn.',
-    image: anhmau.src,
+    image: anh10.src,
     date: '2023-09-01',
     content: `
       <p>Chuẩn bị <strong>món ăn đi picnic</strong> không khó, quan trọng là bạn chọn đúng món dễ chế biến, gọn nhẹ và bảo quản được lâu. Dưới đây là 15 gợi ý món ăn dã ngoại vừa ngon vừa dễ làm mà bạn nên thử!</p>
@@ -900,7 +604,7 @@ export const articles = [
     slug: '6-tro-choi-cam-trai-cho-tre-em',
     title: '6 Trò Chơi Khi Đi Cắm Trại Dành Cho Trẻ Em – Vừa Vui Vừa Bổ Ích',
     description: 'Gợi ý 6 trò chơi cắm trại thú vị cho trẻ em: từ thả diều, đi săn côn trùng đến đá bóng. Giúp các bé rèn luyện thể chất, phát triển tư duy và khám phá thiên nhiên.',
-    image: anhmau.src,
+    image: anh11.src,
     date: '2023-09-01',
     content: `
       <p><strong>Đi cắm trại cùng trẻ em</strong> không chỉ là dịp để gia đình gần gũi nhau hơn mà còn là cơ hội tuyệt vời để các bé hòa mình vào thiên nhiên, phát triển thể chất và kỹ năng xã hội. Dưới đây là 6 trò chơi lý tưởng cho các bé khi đi cắm trại – đơn giản, an toàn và cực kỳ vui nhộn.</p>
@@ -929,76 +633,12 @@ export const articles = [
       <p><strong>Từ khóa liên quan:</strong> trò chơi cắm trại cho trẻ em, trò chơi ngoài trời, hoạt động picnic cho bé, gợi ý trò chơi gia đình, dã ngoại cùng trẻ em.</p>
     `
   },  
-  {
-    slug: '4-cach-so-cuu-ran-can-va-luu-y',
-    title: '4 Cách Sơ Cứu Rắn Cắn Và Những Lưu Ý Cần Biết Khi Đi Cắm Trại',
-    description: 'Rắn cắn là tình huống nguy hiểm có thể xảy ra khi đi dã ngoại. Nắm rõ 4 cách sơ cứu rắn cắn và các lưu ý quan trọng giúp bạn xử lý nhanh, đúng cách, tránh biến chứng nghiêm trọng.',
-    image: anhmau.src,
-    date: '2023-09-01',
-    content: `
-      <p>Khi đi dã ngoại, nhất là trong rừng, khu sinh thái hoặc vùng núi, <strong>nguy cơ bị rắn cắn</strong> là điều không thể xem nhẹ. Việc nhận biết rắn độc và <strong>sơ cứu đúng cách</strong> có thể cứu sống nạn nhân, hạn chế hoại tử hoặc tử vong. Cùng Milacamp trang bị 4 cách sơ cứu rắn cắn hiệu quả và những điều cần lưu ý.</p>
-  
-      <h2>1. Cách Nhận Biết Rắn Độc</h2>
-      <p>Chỉ khoảng 15% trong số 3.500 loài rắn trên thế giới là rắn độc, nhưng chúng có thể gây tử vong nếu không được xử lý kịp thời. Một số loại rắn độc phổ biến tại Việt Nam gồm:</p>
-      <ul>
-        <li><strong>Rắn hổ mang:</strong> Cổ bạnh, phát ra âm thanh đe dọa, nọc độc có thể phun xa.</li>
-        <li><strong>Rắn hổ chúa:</strong> Kích thước lớn, có hai vảy to trên đỉnh đầu, rất nguy hiểm.</li>
-        <li><strong>Rắn cạp nong/cạp nia:</strong> Thân đen vàng xen kẽ, độc tố mạnh.</li>
-        <li><strong>Rắn lục xanh:</strong> Màu xanh lá, đầu hình tam giác, sống nhiều ở vùng rừng.</li>
-        <li><strong>Rắn biển:</strong> Sống dưới nước, độc tố cực mạnh.</li>
-      </ul>
-      <p>Dấu hiệu rắn độc cắn thường có 2 dấu răng nanh sâu, vùng da xung quanh sưng đỏ nhanh chóng.</p>
-  
-      <h2>2. Triệu Chứng Khi Bị Rắn Độc Cắn</h2>
-      <p>Người bị rắn độc cắn có thể gặp các triệu chứng sau:</p>
-      <ul>
-        <li>Đau rát tại chỗ, sưng nề, bầm tím lan rộng</li>
-        <li>Khó thở, buồn nôn, chóng mặt</li>
-        <li>Liệt cơ, yếu tay chân, ngứa ran, khó nuốt</li>
-        <li>Trong trường hợp nặng: suy hô hấp, ngưng tim nếu không sơ cứu kịp thời</li>
-      </ul>
-  
-      <h2>3. 4 Bước Sơ Cứu Rắn Cắn Đúng Cách</h2>
-      <p>Nếu nghi ngờ bị rắn độc cắn, cần làm ngay các bước sau trước khi chờ cấp cứu:</p>
-      <ol>
-        <li><strong>Đưa nạn nhân ra khỏi khu vực nguy hiểm, giữ bình tĩnh.</strong></li>
-        <li><strong>Bất động phần bị cắn, giữ thấp hơn tim.</strong> Điều này giúp làm chậm quá trình lan truyền độc tố.</li>
-        <li><strong>Tháo trang sức, nới lỏng quần áo quanh vùng bị cắn.</strong></li>
-        <li><strong>Làm sạch vết cắn bằng nước muối hoặc xà phòng, sau đó băng nhẹ bằng gạc sạch.</strong></li>
-      </ol>
-      <p><em>Gọi ngay cấp cứu để được truyền huyết thanh kháng nọc càng sớm càng tốt.</em></p>
-  
-      <h2>4. Những Điều Không Nên Làm Khi Sơ Cứu Rắn Cắn</h2>
-      <p>Tránh những sai lầm nghiêm trọng sau:</p>
-      <ul>
-        <li>❌ Không rạch vết cắn, không hút máu độc bằng miệng</li>
-        <li>❌ Không buộc garo quá chặt gây hoại tử</li>
-        <li>❌ Không đắp lá, chườm đá, bôi thuốc dân gian</li>
-        <li>❌ Không uống rượu, cà phê – vì sẽ làm hấp thụ độc nhanh hơn</li>
-        <li>✅ Ghi nhớ màu sắc, hình dạng rắn nếu có thể – hỗ trợ bác sĩ xử lý đúng loại huyết thanh</li>
-      </ul>
-  
-      <h2>5. Lưu Ý Khi Đi Cắm Trại Ở Vùng Có Rắn</h2>
-      <ul>
-        <li>Không đi vào bụi rậm, cỏ cao nếu không có giày dài và quần dài</li>
-        <li>Luôn mang theo đèn pin, thuốc sát trùng, gạc y tế</li>
-        <li>Không nằm ngủ sát nền đất hoặc khu ẩm thấp</li>
-        <li>Trang bị sẵn bộ sơ cứu và học kỹ năng xử lý tình huống khẩn cấp</li>
-      </ul>
-  
-      <h2>Kết Luận</h2>
-      <p>Hiểu rõ cách <strong>sơ cứu rắn cắn</strong> là kỹ năng sinh tồn quan trọng khi đi cắm trại, trekking, hoặc du lịch khám phá thiên nhiên. Việc xử lý đúng cách và kịp thời có thể giúp cứu sống người bị nạn. Hãy luôn chuẩn bị đầy đủ kiến thức, dụng cụ y tế và tránh các khu vực nguy hiểm nếu chưa có kinh nghiệm.</p>
-  
-      <p><strong>Từ khóa liên quan:</strong> sơ cứu rắn cắn, dấu hiệu rắn độc, rắn hổ mang, cách xử lý khi bị rắn cắn, tránh rắn khi đi rừng, kỹ năng sinh tồn khi đi cắm trại.</p>
-    `
-  },  
-  
 
   {
     slug: '7-meo-tranh-bi-trom-khi-cam-trai',
     title: '7 Mẹo Hạn Chế Bị Trộm Cắp Khi Cắm Trại Ngoài Trời',
     description: 'Trộm cắp khi cắm trại là tình huống không hiếm gặp. Dưới đây là 7 mẹo đơn giản, hiệu quả giúp bạn bảo vệ đồ dùng cá nhân và an toàn cho bản thân trong mỗi chuyến đi.',
-    image: anhmau.src,
+    image: anh12.src,
     date: '2023-09-01',
     content: `
       <p>Trong những chuyến <strong>cắm trại tự túc</strong>, ngoài việc tận hưởng thiên nhiên, bạn cũng cần đề cao cảnh giác với tình huống trộm cắp có thể xảy ra – đặc biệt vào ban đêm hoặc khi rời khu trại. Dưới đây là 7 mẹo giúp bạn giữ an toàn cho thiết bị, tài sản cá nhân và cả sự an toàn của bản thân.</p>

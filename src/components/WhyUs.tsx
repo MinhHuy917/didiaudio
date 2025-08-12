@@ -22,7 +22,7 @@ const featureList = [
   },
   {
     title: 'Tư vấn địa điểm miễn phí',
-    desc: 'Cập nhật các địa điểm cắm trại miễn phí hoặc bãi có phí trên website mới nhất.',
+    desc: 'Cập nhật các địa điểm cắm trại miễn phí.',
   },
 ]
 
@@ -39,7 +39,7 @@ const stats = [
   },
   {
     icon: Smile,
-    value: '99%',
+    value: '100%',
     label: 'Hài Lòng',
   },
   {

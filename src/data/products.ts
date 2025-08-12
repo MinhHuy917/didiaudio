@@ -85,6 +85,13 @@ import gheanh3 from '/src/images/ghe/3.png'
 import gheanh4 from '/src/images/ghe/4.png'
 import gheanh5 from '/src/images/ghe/5.png'
 
+import bo2caychongtang from '/src/images/bo2caychongtang/0.jpeg'
+import bo2caychongtanganh1 from '/src/images/bo2caychongtang/1.png'
+import bo2caychongtanganh2 from '/src/images/bo2caychongtang/2.png'
+import bo2caychongtanganh3 from '/src/images/bo2caychongtang/3.jpeg'
+import bo2caychongtanganh4 from '/src/images/bo2caychongtang/4.png'
+import bo2caychongtanganh5 from '/src/images/bo2caychongtang/5.png'
+
 import gheNH1 from '/src/images/gheNH16J001-J/1.jpg'
 import gheNH2 from '/src/images/gheNH16J001-J/2.png'
 import gheNH3 from '/src/images/gheNH16J001-J/3.jpg'
@@ -218,6 +225,13 @@ import loaanh3 from '/src/images/loa/3.png'
 import loaanh4 from '/src/images/loa/4.png'
 import loaanh5 from '/src/images/loa/5.png'
 
+import loakaraoke from '/src/images/loakaraoke/0.jpg'
+import loakaraoke1 from '/src/images/loakaraoke/1.jpg'
+import loakaraoke2 from '/src/images/loakaraoke/2.jpg'
+import loakaraoke3 from '/src/images/loakaraoke/3.jpg'
+import loakaraoke4 from '/src/images/loakaraoke/4.jpg'
+import loakaraoke5 from '/src/images/loakaraoke/5.jpg'
+
 
 import quatanh1 from '/src/images/quat/1.png'
 import quatanh2 from '/src/images/quat/2.png'
@@ -244,6 +258,13 @@ import bepnuonganh2 from '/src/images/bepnuong/2.png'
 import bepnuonganh3 from '/src/images/bepnuong/3.png'
 import bepnuonganh4 from '/src/images/bepnuong/4.png'
 import bepnuonganh5 from '/src/images/bepnuong/5.png'
+
+import bepnuongMT3 from '/src/images/bepnuongMT3/0.png'
+import bepnuongMT3anh1 from '/src/images/bepnuongMT3/1.jpg'
+import bepnuongMT3anh2 from '/src/images/bepnuongMT3/2.png'
+import bepnuongMT3anh3 from '/src/images/bepnuongMT3/3.jpg'
+import bepnuongMT3anh4 from '/src/images/bepnuongMT3/4.png'
+import bepnuongMT3anh5 from '/src/images/bepnuongMT3/5.png'
 
 import bepcuianh1 from '/src/images/bepcui/1.png'
 import bepcuianh2 from '/src/images/bepcui/2.png'
@@ -338,6 +359,14 @@ import thungda25Lanh2 from '/src/images/thungda25L/2.png'
 import thungda25Lanh3 from '/src/images/thungda25L/3.png'
 import thungda25Lanh4 from '/src/images/thungda25L/4.png'
 import thungda25Lanh5 from '/src/images/thungda25L/5.png'
+
+
+import thungda45Lanh1 from '/src/images/thungda45L/1.jpeg'
+import thungda45Lanh2 from '/src/images/thungda45L/2.jpg'
+import thungda45Lanh3 from '/src/images/thungda45L/3.jpg'
+import thungda45Lanh4 from '/src/images/thungda45L/4.jpg'
+import thungda45Lanh5 from '/src/images/thungda45L/5.jpg'
+import thungda45Lanh6 from '/src/images/thungda45L/6.jpg'
 
 
 
@@ -473,7 +502,7 @@ export const products = [
   {
     id: 'tang-9m2',
     name: 'Tăng 4-6 người - diện tích 9m2',
-    catalogue: '(3mx3m, kèm 2 trụ chống)',
+    catalogue: '(3mx3m, kèm 2 trụ chống tăng)',
     image: tang3m.src,
     image1: tang3manh1.src,
     image2: tang3manh2.src,
@@ -491,7 +520,7 @@ export const products = [
   {
     id: 'tang-20m2',
     name: 'Tăng 8-12 người - diện tích 20m2',
-    catalogue: '(4m5x4m5, kèm 2 trụ chống)',
+    catalogue: '(4m5x4m5, kèm 2 trụ chống tăng)',
     image: tang.src,
     image1: tang4m5anh1.src,
     image2: tang4m5anh2.src,
@@ -505,7 +534,25 @@ export const products = [
     detail3: 'Kèm 2 trụ thép, cọc và dây dù – dễ dựng và cố định chắc chắn ở nhiều địa hình.',
     detail4: 'Gấp gọn trong túi 60x15cm – tiện lợi mang theo đi cắm trại, dã ngoại, picnic.',
     videoId: '7lWx-hpQdAs',
-  },  
+  },
+  {
+    id: 'bo-2-cay-chong-tang',
+    name: 'Bộ 2 Cây Chống Tăng Naturehike',
+    catalogue: '(Ống sắt mạ kẽm, dài 2m, bộ 2 cây)',
+    image: bo2caychongtang.src,
+    image1: bo2caychongtanganh1.src,
+    image2: bo2caychongtanganh2.src,
+    image3: bo2caychongtanganh3.src,
+    image4: bo2caychongtanganh4.src,
+    image5: bo2caychongtanganh5.src,
+    price: 20,
+    quantity: 1,
+    detail1: 'Chất liệu ống sắt mạ kẽm Ø16mm, chống gỉ, dẻo dai và bền chắc.',
+    detail2: 'Bộ gồm 2 cây, mỗi cây dài 2m, ghép từ 4 đoạn 50cm, có đầu nhọn móc khoen bạt.',
+    detail3: 'Trọng lượng 0.84kg, kích thước đóng gọn 60x12cm, có túi đựng tiện lợi.',
+    detail4: 'Phù hợp chống tăng bạt, mái che lều khi cắm trại, picnic, dã ngoại.'
+  },
+  
   {
     id: 'tham-da-ngoai',
     name: 'Thảm dã ngoại',
@@ -813,6 +860,25 @@ export const products = [
     detail3: 'Kết nối Bluetooth 5.3 ổn định, phạm vi lên đến 18m; hỗ trợ ghép đôi 2 loa với công nghệ True Wireless Stereo (TWS).',
     detail4: 'Chống nước IPX7, nhỏ gọn dễ mang theo, có đèn LED đổi màu theo nhạc giúp tăng không khí cho buổi cắm trại.'
   },
+
+  {
+    id: 'loa-karaoke-xach-tay',
+    name: 'Loa Karaoke Xách Tay Z20 PRO MAX',
+    catalogue: 'Loa karaoke công suất lớn 500-850W, pin 12V10Ah dùng liên tục khoảng 4 giờ, hệ thống 16 loa cho âm thanh mạnh mẽ, phù hợp sự kiện ngoài trời.',
+    image: loakaraoke.src,
+    image1: loakaraoke1.src,
+    image2: loakaraoke2.src,
+    image3: loakaraoke3.src,
+    image4: loakaraoke4.src,
+    image5: loakaraoke5.src,
+    price: 350,
+    quantity: 1,
+    detail1: 'Âm thanh cực mạnh với hệ thống 16 loa: 2 bass 20cm từ 176 coil 51 sườn nhôm đúc, 12 loa trung, 2 treble – đáp ứng tốt cả nhạc nền nhẹ nhàng lẫn karaoke công suất lớn.',
+    detail2: 'Pin 12V10Ah sử dụng liên tục khoảng 4 giờ – phù hợp cho tiệc cưới, sinh nhật, hội họp, camping ngoài trời.',
+    detail3: 'Mạch K18 echo delay reverb giúp tiếng hát mượt mà, micro không dây chống hú kèm 2 màn hình hiển thị – dễ dàng chỉnh âm lượng và hiệu ứng khi đang hát.',
+    detail4: 'Kết nối đa dạng: Bluetooth, USB, HDMI, TF, OPT in, AUX, MIC, GUITAR – dễ dàng phát nhạc từ điện thoại, USB hoặc nhạc cụ.',
+    detail5: 'Thiết kế sang trọng với vỏ bọc da, mặt nạ gỗ lưới sắt chắc chắn; kích thước gọn (52×33×26cm), trọng lượng 18kg, có tay cầm.'
+  },
   
   {
     id: 'quat-tich-dien',
@@ -864,6 +930,24 @@ export const products = [
     detail3: 'Chất liệu inox 201 cao cấp, chống gỉ, bền bỉ. Trọng lượng nhẹ 2.5kg, dễ dàng mang theo và sử dụng ngoài trời.',
     detail4: 'Kích thước tổng thể: 73cm x 22cm x 20cm. Bếp sử dụng than, dễ lắp ráp, điều chỉnh khoảng cách giữa lửa và thực phẩm dễ dàng.'
   },
+
+  {
+    id: 'bep-nuong-campingmoon-mt3',
+    name: 'Bếp Nướng Campingmoon MT3',
+    catalogue: '(Kèm 2 kẹp inox, 73cm x 22cm x 20cm)',
+    image: bepnuongMT3.src,
+    image1: bepnuongMT3anh1.src,
+    image2: bepnuongMT3anh2.src,
+    image3: bepnuongMT3anh3.src,
+    image4: bepnuongMT3anh4.src,
+    image5: bepnuongMT3anh5.src,
+    price: 70,
+    quantity: 1,
+    detail1: 'Chất liệu inox không gỉ cao cấp, chịu nhiệt tốt, tuổi thọ cao',
+    detail2: 'Kích thước mở: 49 x 34 x 26cm | Gấp gọn: 49 x 20 x 9cm | Trọng lượng: 4.3kg',
+    detail3: 'Vỉ nướng điều chỉnh độ cao, tháo lắp nhanh, dễ vệ sinh',
+    detail4: 'Phù hợp cho nhóm 8-10 người, lý tưởng cho dã ngoại, picnic, BBQ ngoài trời'
+  },  
   
   {
     id: 'bep-cui',
@@ -967,6 +1051,24 @@ export const products = [
     quantity: 1,
     detail1: 'Thùng đá 25L chính hãng Nhựa Duy Tân – sản xuất tại Việt Nam. Thiết kế bền chắc, dung tích lớn, phù hợp cho các buổi dã ngoại, tiệc ngoài trời.',
     detail2: 'Kích thước: 47.0 x 33.7 x 33.7 cm. Dung tích sử dụng: 26.4L',
+    detail3: 'Chất liệu nhựa PP và PU cao cấp, an toàn thực phẩm, có khả năng giữ lạnh hiệu quả. Không chứa BPA.',
+    detail4: 'Thiết kế nắp đậy kín, tay xách tiện lợi. Bề mặt nhẵn dễ vệ sinh. Phù hợp sử dụng cho gia đình, đi cắm trại.'
+  },  
+
+  {
+    id: 'thung-da-45l',
+    name: 'Thùng đá 45L',
+    catalogue: '(thể tích 45L)',
+    image: thungda45Lanh1.src,
+    image1: thungda45Lanh2.src,
+    image2: thungda45Lanh3.src,
+    image3: thungda45Lanh4.src,
+    image4: thungda45Lanh5.src,
+    image5: thungda45Lanh6.src,
+    price: 60,
+    quantity: 1,
+    detail1: 'Thùng đá 45L chính hãng Nhựa Duy Tân – sản xuất tại Việt Nam. Thiết kế bền chắc, dung tích lớn, phù hợp cho các buổi dã ngoại, tiệc ngoài trời.',
+    detail2: 'Kích thước: 60.5 x 39.6 x 41 cm. Dung tích sử dụng: 45L',
     detail3: 'Chất liệu nhựa PP và PU cao cấp, an toàn thực phẩm, có khả năng giữ lạnh hiệu quả. Không chứa BPA.',
     detail4: 'Thiết kế nắp đậy kín, tay xách tiện lợi. Bề mặt nhẵn dễ vệ sinh. Phù hợp sử dụng cho gia đình, đi cắm trại.'
   },  
@@ -1143,7 +1245,7 @@ export const products = [
     image3: vienmoithan4.src,
     image4: vienmoithan5.src,
     image5: vienmoithan6.src,
-    price: 8,
+    price: 5,
     quantity: 1,
     detail1: 'Chỉ cần 1-2 viên là đủ mồi cho bếp than, giúp bạn bắt đầu bữa tiệc BBQ nhanh chóng.',
     detail2: 'Phù hợp khi cắm trại, picnic, tiệc tại nhà hay quán ăn. Không cần loay hoay tìm củi, giấy hay cồn lỏng.',

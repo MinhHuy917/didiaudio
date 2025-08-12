@@ -34,9 +34,9 @@ const ProductList: React.FC = () => {
     all: () => true,
     tent: (p) => p.name.includes('Lều') || p.name.includes('Võng') || p.name.includes('Gối') || p.name.includes('Tấm cách nhiệt'),
     table: (p) => p.name.includes('Bàn') || p.name.includes('Ghế') || p.name.includes('Khăn') ,
-    mat: (p) => p.name.includes('Tăng') || p.name.includes('Thảm'),
+    mat: (p) => p.name.includes('Tăng') || p.name.includes('Bộ 2 Cây Chống Tăng') || p.name.includes('Thảm'),
     light: (p) => p.name.includes('Đèn') || p.name.includes('Giá chân treo đèn 1m') || p.name.includes('Cây trụ treo đèn 1m8') ,
-    accessory: (p) => p.name.includes('Loa') || p.name.includes('Quạt') || p.name.includes('Tripod') || p.name.includes('Sạc') || p.name.includes('Bộ bài'),
+    accessory: (p) => p.name.includes('Loa') || p.name.includes('Loa') || p.name.includes('Quạt') || p.name.includes('Tripod') || p.name.includes('Sạc') || p.name.includes('Bộ bài'),
     cooking: (p) => p.name.includes('Bếp') || p.name.includes('nồi') || p.name.includes('Nồi') || p.name.includes('Ấm') || p.name.includes('Tay quay nướng inox') || p.name.includes('Máy nướng tự động') || p.name.includes('Đầu khò') || p.name.includes('Bình gas') || p.name.includes('Than gáo dừa') || p.name.includes('Viên mồi than'),
     ice: (p) => p.name.includes('Thùng') || p.name.includes('Túi đựng nước'),
   }
@@ -62,7 +62,7 @@ const ProductList: React.FC = () => {
       </h2>
 
       {/* Filter Section */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+      {/* <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
         <input
           type="text"
           placeholder="Tìm kiếm sản phẩm..."
@@ -81,7 +81,7 @@ const ProductList: React.FC = () => {
             </option>
           ))}
         </select>
-      </div>
+      </div> */}
 
       {/* Product Grid */}
       {filteredProducts.length > 0 ? (
