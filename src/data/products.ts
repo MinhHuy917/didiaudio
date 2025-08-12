@@ -411,7 +411,7 @@ export const products = [
   {
     id: 'leu-6',
     name: 'Lều 6',
-    catalogue: '(Lều 6 người, cao thoáng, chống mưa tốt)',
+    catalogue: '(2 lớp chống mưa, 3m x 2.7m x 1.9m)',
     image: leu6.src,
     image1: leu6anh1.src,
     image2: leu6anh2.src,
@@ -430,7 +430,7 @@ export const products = [
   {
     id: 'leu-8',
     name: 'Lều 8',
-    catalogue: '(Dragon Dome 8P – Lều 8 người, rộng rãi, chống mưa tốt)',
+    catalogue: '(2 lớp chống mưa, 4m x 2m x 1.6m)',
     image: leu8.src,
     image1: leu8anh1.src,
     image2: leu8anh2.src,
@@ -448,7 +448,7 @@ export const products = [
   {
     id: 'vong-don',
     name: 'Võng đơn NatureHike',
-    catalogue: '(Chống thấm, chịu lực tốt, gấp gọn tiện lợi, kèm túi đựng)',
+    catalogue: '(Chống thấm, chịu lực tốt, gấp gọn)',
     image: vong.src,
     image1: vonganh1.src,
     image4: vonganh4.src,
@@ -483,7 +483,7 @@ export const products = [
   {
     id: 'tam-cach-nhiet',
     name: 'Tấm cách nhiệt',
-    catalogue: '(lót dưới lều khi mùa nóng, lót trong lều khi trời lạnh)',
+    catalogue: '(cách hơi đất)',
     image: cachnhiet.src,
     image2: cachnhietanh2.src,
     image3: cachnhietanh3.src,
@@ -502,7 +502,7 @@ export const products = [
   {
     id: 'tang-9m2',
     name: 'Tăng 4-6 người - diện tích 9m2',
-    catalogue: '(3mx3m, kèm 2 trụ chống tăng)',
+    catalogue: '(kèm 2 trụ chống tăng, 3m x 3m)',
     image: tang3m.src,
     image1: tang3manh1.src,
     image2: tang3manh2.src,
@@ -520,7 +520,7 @@ export const products = [
   {
     id: 'tang-20m2',
     name: 'Tăng 8-12 người - diện tích 20m2',
-    catalogue: '(4m5x4m5, kèm 2 trụ chống tăng)',
+    catalogue: '(kèm 2 trụ chống tăng, 4.5mx4.5m)',
     image: tang.src,
     image1: tang4m5anh1.src,
     image2: tang4m5anh2.src,
@@ -538,7 +538,7 @@ export const products = [
   {
     id: 'bo-2-cay-chong-tang',
     name: 'Bộ 2 Cây Chống Tăng Naturehike',
-    catalogue: '(Ống sắt mạ kẽm, dài 2m, bộ 2 cây)',
+    catalogue: '(bộ 2 cây, dài 2m)',
     image: bo2caychongtang.src,
     image1: bo2caychongtanganh1.src,
     image2: bo2caychongtanganh2.src,
@@ -574,7 +574,7 @@ export const products = [
   {
     id: 'tham-vintage',
     name: 'Thảm Vintage',
-    catalogue: '(2mx2m, thảm chống thấm dùng lót trong lều hoặc để ngồi)',
+    catalogue: '(chống thấm, 2mx2m)',
     image: thamvintage.src,
     image1: thamvintageannh1.src,
     image2: thamvintageannh2.src,
@@ -592,7 +592,7 @@ export const products = [
   {
     id: 'ghe-mat-trang',
     name: 'Ghế mặt trăng',
-    catalogue: '(màu trắng, 2.5kg)',
+    catalogue: '(2.5kg)',
     image: ghe.src,
     image1: gheanh1.src,
     image2: gheanh2.src,
@@ -610,7 +610,7 @@ export const products = [
   {
     id: 'ghe-naturehike-nh16j001-j',
     name: 'Ghế Naturehike',
-    catalogue: '(màu kaki, 1.3kg)',
+    catalogue: '(1.3kg)',
     image: gheNH1.src,
     image1: gheNH5.src,
     image2: gheNH11.src,
@@ -631,7 +631,7 @@ export const products = [
   {
     id: 'ban-nhom',
     name: 'Bàn nhôm',
-    catalogue: '(màu vàng, 90x60cm, 4kg)',
+    catalogue: '(90x60cm, 4kg)',
     image: ban.src,
     image1: bananh1.src,
     image2: bananh2.src,
@@ -649,7 +649,7 @@ export const products = [
   {
     id: 'ban-nhom-naturehike-cnh22ju050',
     name: 'Bàn nhôm Naturehike',
-    catalogue: '(màu kaki, 40x30cm, 1kg)',
+    catalogue: '(40x30cm, 1kg)',
     image: banNH1.src,
     image1: banNH2.src,
     image2: banNH3.src,
@@ -683,7 +683,7 @@ export const products = [
   {
     id: 'den-cam-tay',
     name: 'Đèn cầm tay',
-    catalogue: '(đã sạc đầy pin, thời gian chiếu sáng 7-9h)',
+    catalogue: '(thời gian chiếu sáng 7-9h)',
     image: dencamtay.src,
     image1: dencamtayannh1.src,
     image2: dencamtayannh2.src,
@@ -701,7 +701,7 @@ export const products = [
   {
     id: 'den-doi-dau',
     name: 'Đèn đội đầu',
-    catalogue: '(đã sạc đầy pin, thời gian chiếu sáng 8-10h)',
+    catalogue: '(thời gian chiếu sáng 8-10h)',
     image: dendoidau.src,
     image1: dendoidauannh1.src,
     image2: dendoidauannh2.src,
@@ -719,7 +719,7 @@ export const products = [
   {
     id: 'den-vintage',
     name: 'Đèn Vintage',
-    catalogue: '(đã kèm pin, 8–10h (sáng vừa)',
+    catalogue: '(thời gian chiếu sáng 4–8h)',
     image: dendeban.src,
     image1: denvintageannh1.src,
     image2: denvintageannh2.src,
@@ -737,7 +737,7 @@ export const products = [
   {
     id: 'den-led-tron',
     name: 'Đèn led tròn',
-    catalogue: '(đã kèm pin, thời gian chiếu sáng 8-10h)',
+    catalogue: '(thời gian chiếu sáng 8-10h)',
     image: denled.src,
     image1: denledtronannh1.src,
     image2: denledtronannh2.src,
@@ -755,7 +755,7 @@ export const products = [
   {
     id: 'den-led-ngoi-sao',
     name: 'Đèn led ngôi sao',
-    catalogue: '(đã kèm pin, thời gian chiếu sáng 8-10h)',
+    catalogue: '(thời gian chiếu sáng 8-10h)',
     image: denngoisao.src,
     image1: denngoisaoannh1.src,
     image2: denngoisaoannh2.src,
@@ -773,7 +773,7 @@ export const products = [
   {
     id: 'den-sinh-hoat',
     name: 'Đèn sinh hoạt',
-    catalogue: '(kèm cặp pin thêm miễn phí, tổng thời gian chiếu sáng 2 cặp pin là 8-12h)',
+    catalogue: '(kèm cặp pin thêm, tổng thời gian chiếu sáng 8-12h)',
     image: densinhhoat.src,
     image1: densinhhoatannh1.src,
     image2: densinhhoatannh2.src,
@@ -829,7 +829,7 @@ export const products = [
   {
     id: 'sac-du-phong',
     name: 'Sạc dự phòng',
-    catalogue: '(đã sạc đầy pin, dung lượng 20.000 mAh, và kèm dây sạc 3 đầu)',
+    catalogue: '(dung lượng 20.000 mAh,kèm dây sạc 3 đầu)',
     image: sacduphong.src,
     image1: sacduphongannh1.src,
     image2: sacduphongannh2.src,
@@ -846,7 +846,7 @@ export const products = [
   {
     id: 'loa-mini',
     name: 'Loa Tronsmart T7 Mini',
-    catalogue: 'Loa công suất 15W, dùng đến 12h (bật đèn) và 18h (tắt đèn), Chống nước nhẹ, dải tần 20Hz–20kHz.',
+    catalogue: 'Loa công suất 15W,bật đèn sử dụng 12h và tắt đèn 18h',
     image: loa.src,
     image1: loaanh1.src,
     image2: loaanh2.src,
@@ -864,7 +864,7 @@ export const products = [
   {
     id: 'loa-karaoke-xach-tay',
     name: 'Loa Karaoke Xách Tay Z20 PRO MAX',
-    catalogue: 'Loa karaoke công suất lớn 500-850W, pin 12V10Ah dùng liên tục khoảng 4 giờ, hệ thống 16 loa cho âm thanh mạnh mẽ, phù hợp sự kiện ngoài trời.',
+    catalogue: 'Loa karaoke công suất lớn 500-850W, pin dùng liên tục khoảng 4 giờ.',
     image: loakaraoke.src,
     image1: loakaraoke1.src,
     image2: loakaraoke2.src,
@@ -916,7 +916,7 @@ export const products = [
   },
     {id: 'bep-nuong',
     name: 'Bếp nướng',
-    catalogue: '(có kèm 2 kẹp inox, 73cm x 22cm x 20cm)',
+    catalogue: '(kèm 2 kẹp inox)',
     image: bepnuong.src,
     image1: bepnuonganh1.src,
     image2: bepnuonganh2.src,
@@ -934,7 +934,7 @@ export const products = [
   {
     id: 'bep-nuong-campingmoon-mt3',
     name: 'Bếp Nướng Campingmoon MT3',
-    catalogue: '(Kèm 2 kẹp inox, 73cm x 22cm x 20cm)',
+    catalogue: '(kèm 2 kẹp inox)',
     image: bepnuongMT3.src,
     image1: bepnuongMT3anh1.src,
     image2: bepnuongMT3anh2.src,
@@ -950,9 +950,9 @@ export const products = [
   },  
   
   {
-    id: 'bep-cui',
-    name: 'Bếp củi',
-    catalogue: '(125 x 125 x 16cm)',
+    id: 'bep-cui-da-ngoai-ti-artisan-thep-khong-gi',
+    name: 'Bếp củi dã ngoại Ti Artisan thép không gỉ 304',
+    catalogue: '(125 x 125 x 160mm)',
     image: bepcui.src,
     image1: bepcuianh1.src,
     image2: bepcuianh2.src,
@@ -961,10 +961,11 @@ export const products = [
     image5: bepcuianh5.src,
     price: 40,
     quantity: 1,
-    detail1: 'Bếp củi dã ngoại được chế tạo bằng thép không gỉ, chống ăn mòn, cực kỳ bền bỉ. Thiết kế dễ lắp ráp chỉ trong vài giây.',
-    detail2: 'Sử dụng nhiên liệu tự nhiên như củi, cành cây, lá khô,... không cần gas hay nhiên liệu hóa học. Thân thiện môi trường, không khí thải độc hại.',
-    detail3: 'Thiết kế thông minh giúp cải thiện luồng không khí, tăng hiệu suất đốt. Chân đế chữ thập tạo sự ổn định, dùng được với nhiều loại nồi.',
-    detail4: 'Kích thước: 125 x 125 x 160mm. Trọng lượng chỉ 448g. Gấp gọn và dễ dàng mang theo trong ba lô. Kích thước gói: 190 x 170 x 15mm.'
+    detail1: 'Làm từ thép không gỉ 304, chứa >11% Crom, chống ăn mòn, bền bỉ và dễ vệ sinh.',
+    detail2: 'Thiết kế gấp gọn, đi kèm túi đựng, tiện mang theo khi leo núi, cắm trại.',
+    detail3: 'Sử dụng nhiên liệu tự nhiên như củi, cành cây, lá khô… thân thiện môi trường, không cần gas.',
+    detail4: 'Tối ưu luồng khí giúp đốt hiệu quả, chân đế chữ thập chắc chắn, dùng được với nhiều loại nồi.',
+    detail5: 'Kích thước: 125 x 125 x 160mm | Trọng lượng: 448g'
   },  
   {
     id: 'bep-gas',
@@ -987,7 +988,7 @@ export const products = [
   {
     id: 'bep-con',
     name: 'Bếp cồn',
-    catalogue: '(có núm vặn lấy khay cồn, và cần gạt bỏ cồn an toàn)',
+    catalogue: '(khay bỏ cồn an toàn)',
     image: bepcon.src,
     image1: bepconanh1.src,
     image2: bepconanh2.src,
@@ -1189,7 +1190,7 @@ export const products = [
     image3: daukhoanh3.src,
     image4: daukhoanh4.src,
     image5: daukhoanh5.src,
-    price: 10,
+    price: 20,
     quantity: 1,
     detail1: 'Đầu khò gas Namilux TS1719RN công suất cao – hỗ trợ mồi lửa nhanh, tiện lợi khi nhóm củi, than, đốt lửa trại.',
     detail2: 'Sử dụng dễ dàng với bình gas mini (loại lon nhỏ phổ biến), không cần dây dẫn.',
@@ -1281,7 +1282,7 @@ export const products = [
     image3: TuiMangNuocCoVoi5.src,
     image4: TuiMangNuocCoVoi6.src,
     image5: TuiMangNuocCoVoi7.src,
-    price: 10,
+    price: 15,
     quantity: 1,
     detail1: 'Thiết kế túi nước 10L phù hợp sử dụng trong các chuyến dã ngoại, picnic, cắm trại dài ngày, tích trữ đủ lượng nước sinh hoạt, nấu ăn hay giải khát.',
     detail2: 'Có thể gấp gọn chung với hành lý khi không sử dụng, tiết kiệm diện tích, thuận tiện mang theo trong balo hoặc cốp xe.',
