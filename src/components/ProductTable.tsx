@@ -4,6 +4,19 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { products } from "@/data/products"
 import Link from 'next/link'
+import { IconAll, IconTent, IconMat, IconTable, IconLight, IconAccessory, IconCooking, IconIce } from "@/components/icons/CampIcons";
+
+const CATEGORY_DEFS = [
+  { label: 'Tất cả', value: 'all', Icon: IconAll },
+  { label: 'Lều & Võng', value: 'tent', Icon: IconTent },
+  { label: 'Tăng, Thảm', value: 'mat', Icon: IconMat },
+  { label: 'Bàn Ghế', value: 'table', Icon: IconTable },
+  { label: 'Đèn & Giá treo', value: 'light', Icon: IconLight },
+  { label: 'Loa, Quạt, Sạc', value: 'accessory', Icon: IconAccessory },
+  { label: 'Dụng cụ nấu', value: 'cooking', Icon: IconCooking },
+  { label: 'Thùng đá', value: 'ice', Icon: IconIce },
+] as const;
+
 
 type Product = {
   id: any
@@ -14,6 +27,40 @@ type Product = {
   quantity: number
   isRental?: boolean
 }
+
+const FilterBar: React.FC<{ selected: string; onChange: (v: string) => void; }> = ({ selected, onChange }) => {
+  return (
+    <div className="mb-8">
+      <div className="grid grid-cols-2 gap-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
+        {CATEGORY_DEFS.map(({ value, label, Icon }) => {
+          const active = selected === value;
+          return (
+            <button
+              key={value}
+              onClick={() => onChange(value)}
+              aria-pressed={active}
+              className={[
+                "group flex items-center rounded-xl border transition-all duration-200",
+                "px-3 py-2 text-[13px] sm:px-4 sm:py-2.5 sm:text-sm",
+                active
+                  ? "border-green-700 bg-green-50 text-green-900 shadow-sm"
+                  : "border-gray-200 bg-white text-gray-800 hover:border-green-600 hover:bg-green-50",
+                "focus:outline-none focus:ring-2 focus:ring-green-600/30"
+              ].join(" ")}
+            >
+              <span className={["mr-2 flex-shrink-0", active ? "text-green-700" : "text-gray-700", "h-6 w-6 sm:h-7 sm:w-7"].join(" ")}>
+                <Icon className="h-full w-full" />
+              </span>
+              <span className="truncate">{label}</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+
 
 const categoryOptions = [
   { label: 'Tất cả', value: 'all' },
@@ -50,6 +97,7 @@ const ProductList: React.FC = () => {
     return matchesCategory && matchesText
   }
 
+
   const filteredProducts = products.filter(combinedFilter)
 
   return (
@@ -62,7 +110,7 @@ const ProductList: React.FC = () => {
       </h2>
 
       {/* Filter Section */}
-      {/* <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
         <input
           type="text"
           placeholder="Tìm kiếm sản phẩm..."
@@ -70,18 +118,13 @@ const ProductList: React.FC = () => {
           onChange={(e) => setFilterText(e.target.value)}
           className="w-full sm:w-1/2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600"
         />
-        <select
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
-          className="w-full sm:w-1/3 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600"
-        >
-          {categoryOptions.map((cat) => (
-            <option key={cat.value} value={cat.value}>
-              {cat.label}
-            </option>
-          ))}
-        </select>
-      </div> */}
+      
+      </div>
+
+{/* Filter Section (new, no scroll) */}
+<FilterBar selected={selectedCategory} onChange={setSelectedCategory} />
+
+
 
       {/* Product Grid */}
       {filteredProducts.length > 0 ? (

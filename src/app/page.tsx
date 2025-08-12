@@ -21,13 +21,11 @@ export default async function Home() {
       {/* ✅ Giới thiệu về Dì Đi Camping */}
         <AboutSection />
 
-      {/* ✅ Vì sao chọn chúng tôi */}
-        <WhyUs />
-
-      {/* ✅ Đánh giá khách hàng */}
-        <Testimonials />
- 
       <ProductList />
+        {/* ✅ Vì sao chọn chúng tôi */}
+        <WhyUs />
+          {/* ✅ Đánh giá khách hàng */}
+          <Testimonials />
       <FAQ />
       <FAQSchema />
       <div className='mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 font-sans text-[#1F3329]'>
