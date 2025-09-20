@@ -9,6 +9,7 @@ import { NavigationV2 } from '@/components/RootLayout'
 import Testimonials from '@/components/Testimonials'
 import WhyUs from '@/components/WhyUs'
 import SpecialNoticeBanner from '@/components/SpecialNoticeBanner'
+import BlogCamTrai from '@/components/BlogCamTrai'
 
 export const metadata: Metadata = {
   description:
@@ -30,6 +31,7 @@ export default async function Home() {
           {/* ✅ Đánh giá khách hàng */}
           <Testimonials />
       <FAQ />
+       <BlogCamTrai />
       <FAQSchema />
       <div className='mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 font-sans text-[#1F3329]'>
 
