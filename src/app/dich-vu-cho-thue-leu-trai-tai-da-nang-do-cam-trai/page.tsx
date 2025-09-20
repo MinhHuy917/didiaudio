@@ -49,6 +49,7 @@ import than1 from '/src/images/than/1.png'
 import caytrutreodenanh2 from '/src/images/caytrutreoden/2.png'
 import binhgas1 from '/src/images/binhgas/1.jpg'
 import TuiMangNuocCoVoi1 from '/src/images/TuiMangNuocCoVoi/1.jpg'
+import loakaraoke from '/src/images/loakaraoke/0.jpg'
 import Link from 'next/link'
 
 const rentalItems = [
@@ -84,6 +85,7 @@ const rentalItems = [
   // Tiện ích
   { id: 'sac-du-phong', name: 'Sạc dự phòng 20.000 mAh', price: '30.000 VNĐ', type: 'ngày', image: sacduphong },
   { id: 'loa-mini', name: 'Loa Tronsmart T7 Mini', price: '50.000 VNĐ', type: 'ngày', image: loa },
+  { id: 'loa-karaoke-xach-tay', name: 'Loa Karaoke Xách Tay Z20 PRO MAX', price: '250.000 VNĐ', type: 'ngày', image: loakaraoke },
   {  id: 'quat-tich-dien', name: 'Quạt tích điện (pin 20.000 mAh + đèn)', price: '60.000 VNĐ', type: 'ngày', image: quat },
   { id: 'trippd', name: 'Tripod (remote)', price: '40.000 VNĐ', type: 'ngày', image: tripod },
   { name: 'Bộ bài ma sói', price: '10.000 VNĐ', type: 'ngày', image: baimasoi },

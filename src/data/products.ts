@@ -508,7 +508,7 @@ export const products = [
   {
     id: 'tang-9m2',
     name: 'Tăng 4-6 người - diện tích 9m2',
-    catalogue: '(kèm 2 trụ chống tăng, 3m x 3m)',
+    catalogue: '(kèm búa, cọc , dây, và 2 trụ, 3m x 3m)',
     image: tang3m.src,
     image1: tang3manh1.src,
     image2: tang3manh2.src,
@@ -527,7 +527,7 @@ export const products = [
   {
     id: 'tang-20m2',
     name: 'Tăng 8-12 người - diện tích 20m2',
-    catalogue: '(kèm 2 trụ chống tăng, 4.5mx4.5m)',
+    catalogue: '(kèm búa, cọc , dây, và 2 trụ, 4.5mx4.5m)',
     image: tang.src,
     image1: tang4m5anh1.src,
     image2: tang4m5anh2.src,
@@ -896,7 +896,7 @@ export const products = [
     image4: loakaraoke4.src,
     image5: loakaraoke5.src,
     originalPrice: 350, 
-    price: 290,
+    price: 250,
     quantity: 1,
     detail1: 'Âm thanh cực mạnh với hệ thống 16 loa: 2 bass 20cm từ 176 coil 51 sườn nhôm đúc, 12 loa trung, 2 treble – đáp ứng tốt cả nhạc nền nhẹ nhàng lẫn karaoke công suất lớn.',
     detail2: 'Pin 12V10Ah sử dụng liên tục khoảng 4 giờ – phù hợp cho tiệc cưới, sinh nhật, hội họp, camping ngoài trời.',
