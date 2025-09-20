@@ -51,21 +51,22 @@ import binhgas1 from '/src/images/binhgas/1.jpg'
 import TuiMangNuocCoVoi1 from '/src/images/TuiMangNuocCoVoi/1.jpg'
 import loakaraoke from '/src/images/loakaraoke/0.jpg'
 import Link from 'next/link'
+import bepnuongMT3 from '/src/images/bepnuongMT3/0.png'
 
 const rentalItems = [
   // Lều trại
-  { id: 'leu-2', name: 'Lều 2P (2 lớp, 1.4 × 2 m)', price: '70.000 VNĐ', type: 'ngày', image: leu2 },
-  { id: 'leu-4', name: 'Lều 4P (2 lớp, 2.1 × 2.1 m)', price: '90.000 VNĐ', type: 'ngày', image: leu4anh2 },
-  { id: 'leu-6', name: 'Lều 6P (cao thoáng, chống mưa tốt)', price: '140.000 VNĐ', type: 'ngày', image: leu6anh1 },
-  { id: 'leu-8', name: 'Lều 8P Dragon Dome', price: '180.000 VNĐ', type: 'ngày', image: leu8 },
+  { id: 'thue-leu-2-da-nang', name: 'Lều 2P (2 lớp, 1.4 × 2 m)', price: '70.000 VNĐ', type: 'ngày', image: leu2 },
+  { id: 'thue-leu-4-da-nang', name: 'Lều 4P (2 lớp, 2.1 × 2.1 m)', price: '90.000 VNĐ', type: 'ngày', image: leu4anh2 },
+  { id: 'thue-leu-6-da-nang', name: 'Lều 6P (cao thoáng, chống mưa tốt)', price: '140.000 VNĐ', type: 'ngày', image: leu6anh1 },
+  { id: 'thue-leu-8-da-nang', name: 'Lều 8P Dragon Dome', price: '180.000 VNĐ', type: 'ngày', image: leu8 },
   // Võng, gối, cách nhiệt
   {  id: 'vong-don', name: 'Võng đơn NatureHike', price: '40.000 VNĐ', type: 'ngày', image: vonganh1 },
   {  id: 'goi-hoi-intex', name: 'Gối hơi Intex (kèm bơm)', price: '5.000 VNĐ', type: 'ngày', image: goihoianh2 },
   { id: 'tam-cach-nhiet', name: 'Tấm cách nhiệt', price: 'Miễn phí', type: 'ngày', image: cachnhiet },
   // Bàn ghế
-  {  id: 'ghe-mat-trang', name: 'Ghế mặt trăng', price: '20.000 VNĐ', type: 'ngày', image: ghe },
+  {  id: 'thue-ghe-camping-da-nang', name: 'Ghế mặt trăng', price: '20.000 VNĐ', type: 'ngày', image: ghe },
   {  id: 'ghe-naturehike-nh16j001-j', name: 'Ghế NatureHike', price: '30.000 VNĐ', type: 'ngày', image: gheNH1 },
-  { id: 'ban-nhom', name: 'Bàn nhôm 90×60 cm', price: '50.000 VNĐ', type: 'ngày', image: ban },
+  { id: 'thue-ban-camping-da-nang', name: 'Bàn nhôm 90×60 cm', price: '50.000 VNĐ', type: 'ngày', image: ban },
   {  id: 'ban-nhom-naturehike-cnh22ju050', name: 'Bàn NatureHike 40×30 cm', price: '60.000 VNĐ', type: 'ngày', image: banNH1 },
   {  id: 'khan-ban-tho-cam', name: 'Khăn bàn thổ cẩm', price: '10.000 VNĐ', type: 'ngày', image: khanban },
   {  id: 'chan-treo-den', name: 'Giá chân treo đèn 1m', price: '20.000 VNĐ', type: 'ngày', image: chanden },
@@ -84,13 +85,14 @@ const rentalItems = [
   { id: 'den-sinh-hoat', name: 'Đèn sinh hoạt', price: '30.000 VNĐ', type: 'ngày', image: densinhhoat },
   // Tiện ích
   { id: 'sac-du-phong', name: 'Sạc dự phòng 20.000 mAh', price: '30.000 VNĐ', type: 'ngày', image: sacduphong },
-  { id: 'loa-mini', name: 'Loa Tronsmart T7 Mini', price: '50.000 VNĐ', type: 'ngày', image: loa },
-  { id: 'loa-karaoke-xach-tay', name: 'Loa Karaoke Xách Tay Z20 PRO MAX', price: '250.000 VNĐ', type: 'ngày', image: loakaraoke },
+  { id: 'thue-loa-nghe-nhac-da-nang', name: 'Loa Tronsmart T7 Mini', price: '50.000 VNĐ', type: 'ngày', image: loa },
+  { id: 'thue-loa-karaoke-xach-tay-da-nang', name: 'Loa Karaoke Xách Tay Z20 PRO MAX', price: '250.000 VNĐ', type: 'ngày', image: loakaraoke },
   {  id: 'quat-tich-dien', name: 'Quạt tích điện (pin 20.000 mAh + đèn)', price: '60.000 VNĐ', type: 'ngày', image: quat },
-  { id: 'trippd', name: 'Tripod (remote)', price: '40.000 VNĐ', type: 'ngày', image: tripod },
+  { id: 'thue-trippd-da-nang', name: 'Tripod (remote)', price: '40.000 VNĐ', type: 'ngày', image: tripod },
   { name: 'Bộ bài ma sói', price: '10.000 VNĐ', type: 'ngày', image: baimasoi },
   // Nấu ăn
-  { id: 'bep-nuong', name: 'Bếp nướng inox', price: '40.000 VNĐ', type: 'ngày', image: bepnuong },
+  { id: 'thue-bep-nuong-da-nang', name: 'Bếp nướng inox', price: '40.000 VNĐ', type: 'ngày', image: bepnuong },
+  { id: 'cho-thue-bep-nuong-da-nang', name: 'Bếp Nướng Campingmoon MT3', price: '70.000 VNĐ', type: 'ngày', image: bepnuongMT3 },
   {  id: 'bep-cui', name: 'Bếp củi', price: '40.000 VNĐ', type: 'ngày', image: bepcui },
   {  id: 'bep-con', name: 'Bếp gas (không gas)', price: '50.000 VNĐ', type: 'ngày', image: bepgas },
   { name: 'Bếp cồn', price: '20.000 VNĐ', type: 'ngày', image: bepcon },

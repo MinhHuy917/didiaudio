@@ -372,7 +372,7 @@ import thungda45Lanh6 from '/src/images/thungda45L/6.jpg'
 
 export const products = [
   {
-    id: 'leu-2',
+    id: 'thue-leu-2-da-nang',
     name: 'Lều 2',
     catalogue: '(2 lớp chống mưa, 1m4x2m)',
     image: leu2.src,
@@ -392,7 +392,7 @@ export const products = [
   }
   ,
   {
-    id: 'leu-4',
+    id: 'thue-leu-4-da-nang',
     name: 'Lều 4',
     catalogue: '(2 lớp chống mưa, 2m1x2m1)',
     image: leu4.src,
@@ -411,7 +411,7 @@ export const products = [
     videoId: 'LW_kzZD7uwE?t=375',
   },
   {
-    id: 'leu-6',
+    id: 'thue-leu-6-da-nang',
     name: 'Lều 6',
     catalogue: '(2 lớp chống mưa, 3m x 2.7m x 1.9m)',
     image: leu6.src,
@@ -431,7 +431,7 @@ export const products = [
   },
   
   {
-    id: 'leu-8',
+    id: 'thue-leu-8-da-nang',
     name: 'Lều 8',
     catalogue: '(2 lớp chống mưa, 4m x 2m x 1.6m)',
     image: leu8.src,
@@ -601,7 +601,7 @@ export const products = [
   },
 
   {
-    id: 'ghe-mat-trang',
+    id: 'thue-ghe-camping-da-nang',
     name: 'Ghế mặt trăng',
     catalogue: '(2.5kg)',
     image: ghe.src,
@@ -641,7 +641,7 @@ export const products = [
 
   
   {
-    id: 'ban-nhom',
+    id: 'thue-ban-camping-da-nang',
     name: 'Bàn nhôm',
     catalogue: '(90x60cm, 4kg)',
     image: ban.src,
@@ -867,7 +867,7 @@ export const products = [
   },
   
   {
-    id: 'loa-mini',
+    id: 'thue-loa-nghe-nhac-da-nang',
     name: 'Loa Tronsmart T7 Mini',
     catalogue: 'Loa công suất 15W,bật đèn sử dụng 12h và tắt đèn 18h',
     image: loa.src,
@@ -886,8 +886,8 @@ export const products = [
   },
 
   {
-    id: 'loa-karaoke-xach-tay',
-    name: 'Loa Karaoke Xách Tay Z20 PRO MAX',
+    id: 'thue-loa-karaoke-xach-tay-da-nang',
+    name: 'Loa Karaoke xách tay',
     catalogue: 'Loa karaoke công suất lớn 500-850W, pin dùng liên tục khoảng 4 giờ.',
     image: loakaraoke.src,
     image1: loakaraoke1.src,
@@ -924,7 +924,7 @@ export const products = [
     detail4: 'Thiết kế nhỏ gọn, phù hợp treo lều, để bàn, xe ô tô, dùng khi mất điện hay đi dã ngoại. Màu: Cam, Xanh. Trọng lượng 1.2kg.'
   },  
   {
-    id: 'trippd',
+    id: 'thue-trippd-da-nang',
     name: 'Tripod',
     catalogue: '(có remote, dùng cho cả máy ảnh và điện thoại)',
     image: tripod.src,
@@ -941,7 +941,7 @@ export const products = [
     detail3: 'Đầu tripod xoay 360°, có thể lật ngang 90°, hỗ trợ chụp dọc và ngang. Tích hợp thước đo cân bằng cho ảnh phong cảnh, công trình.',
     detail4: 'Ống trục giữa có thể xoay để tăng lực giữ, phù hợp cả máy nặng. Trọng lượng 1.2kg, đường kính ống 21.2*16.2cm, tiện mang đi dã ngoại.'
   },
-    {id: 'bep-nuong',
+    {id: 'thue-bep-nuong-da-nang',
     name: 'Bếp nướng',
     catalogue: '(kèm 2 kẹp inox)',
     image: bepnuong.src,
@@ -960,7 +960,7 @@ export const products = [
   },
 
   {
-    id: 'bep-nuong-campingmoon-mt3',
+    id: 'cho-thue-bep-nuong-da-nang',
     name: 'Bếp Nướng Campingmoon MT3',
     catalogue: '(kèm 2 kẹp inox)',
     image: bepnuongMT3.src,
