@@ -1,9 +1,9 @@
 'use client'
-import Link from 'next/link'
-import Image from 'next/image'
-import { useState } from 'react'
-import anh from '/src/images/leu4/1.png'
 import { articles } from '@/data/blog'
+import anh0 from '@/images/blog/0.jpeg'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useState } from 'react'
 
 export default function BlogCamTrai() {
   const [visibleCount, setVisibleCount] = useState(6)
@@ -14,15 +14,12 @@ export default function BlogCamTrai() {
     <div className="max-w-7xl mx-auto px-4 py-16">
       {/* Banner */}
       <div className="relative w-full h-[500px] mb-24 my-20">
-        <Image src={anh.src} alt="Camping Hero" fill className="object-cover" />
+        <Image src={anh0.src} alt="Camping Hero" fill className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/80" />
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-center px-6">
+        <div className="absolute top-16 left-1/2 -translate-x-1/2 text-center px-6">
           <h1 className="text-5xl font-serif font-bold text-white drop-shadow-[0_4px_10px_rgba(0,0,0,0.7)]">
-            Hành Trình Cắm Trại Thiên Nhiên
+           Blog Cắm Trại
           </h1>
-          <p className="mt-4 text-lg text-white/90 max-w-xl mx-auto">
-            Gợi cảm hứng từ rừng xanh, núi cao và những khoảnh khắc hoang dã. Cùng khám phá nhé!
-          </p>
         </div>
       </div>
 

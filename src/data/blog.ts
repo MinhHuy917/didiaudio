@@ -1,8 +1,8 @@
-import anhmau from '@/images/leu4/5.png'
+import anh from '@/images/leu4/5.png'
 
-import anh1 from '@/images/blog/1.jpg'
-import anh2 from '@/images/blog/2.jpg'
-import anh3 from '@/images/blog/3.jpg'
+import anh1 from '@/images/blog/1.jpeg'
+import anh2 from '@/images/blog/2.jpeg'
+import anh3 from '@/images/blog/3.jpeg'
 import anh4 from '@/images/blog/4.jpg'
 import anh5 from '@/images/blog/5.jpg'
 import anh6 from '@/images/blog/6.jpg'
@@ -12,10 +12,55 @@ import anh9 from '@/images/blog/9.jpg'
 import anh10 from '@/images/blog/10.jpg'
 import anh11 from '@/images/blog/11.jpg'
 import anh12 from '@/images/blog/12.jpg'
-import anh13 from '@/images/blog/13.jpg'
-import anh14 from '@/images/blog/14.jpg'
-import anh15 from '@/images/blog/15.jpg'
-import anh16 from '@/images/blog/16.jpg'
+import anh13 from '@/images/blog/13.jpeg'
+import anh14 from '@/images/blog/14.jpeg'
+import anh15 from '@/images/blog/15.jpeg'
+import anh16 from '@/images/blog/16.jpeg'
+import anh17 from '@/images/blog/17.jpeg'
+import anh18 from '@/images/blog/18.jpeg'
+import anh19 from '@/images/blog/19.jpeg'
+import anh20 from '@/images/blog/20.jpeg'
+import anh21 from '@/images/blog/21.jpeg'
+import anh22 from '@/images/blog/22.jpeg'
+import anh23 from '@/images/blog/23.jpeg'
+import anh24 from '@/images/blog/24.jpeg'
+import anh25 from '@/images/blog/25.jpeg'
+import anh26 from '@/images/blog/26.jpeg'
+import anh27 from '@/images/blog/27.jpeg'
+import anh28 from '@/images/blog/28.jpeg'
+import anh29 from '@/images/blog/29.jpeg'
+import anh30 from '@/images/blog/30.jpeg'
+import anh31 from '@/images/blog/31.jpeg'
+import anh32 from '@/images/blog/32.jpeg'
+import anh33 from '@/images/blog/33.jpeg'
+import anh34 from '@/images/blog/34.jpeg'
+import anh35 from '@/images/blog/35.jpeg'
+import anh36 from '@/images/blog/36.jpeg'
+import anh37 from '@/images/blog/37.jpeg'
+import anh38 from '@/images/blog/38.jpeg'
+import anh39 from '@/images/blog/39.jpeg'
+import anh40 from '@/images/blog/40.jpeg'
+import anh41 from '@/images/blog/41.jpeg'
+import anh42 from '@/images/blog/42.jpeg'
+import anh43 from '@/images/blog/43.jpeg'
+import anh44 from '@/images/blog/44.jpeg'
+import anh45 from '@/images/blog/45.jpeg'
+import anh46 from '@/images/blog/46.jpeg'
+import anh47 from '@/images/blog/47.jpeg'
+import anh48 from '@/images/blog/48.jpeg'
+import anh49 from '@/images/blog/49.jpeg'
+import anh50 from '@/images/blog/50.jpeg'
+import anh51 from '@/images/blog/51.jpeg'
+import anh52 from '@/images/blog/52.jpeg'
+import anh53 from '@/images/blog/53.jpeg'
+import anh54 from '@/images/blog/54.jpeg'
+import anh55 from '@/images/blog/55.jpeg'
+import anh56 from '@/images/blog/56.jpeg'
+import anh57 from '@/images/blog/57.jpeg'
+import anh58 from '@/images/blog/58.jpeg'
+import anh59 from '@/images/blog/59.jpeg'
+import anh60 from '@/images/blog/60.jpeg'
+import anh61 from '@/images/blog/61.jpeg'
 
 // Define the Blog interface
 interface Blog {
@@ -685,7 +730,7 @@ export const articles = [
     slug: '5-loi-ich-cam-trai-tuyet-voi',
     title: '5 Lợi Ích Tuyệt Vời Mà Cắm Trại Mang Lại Cho Cơ Thể Và Tâm Trí',
     description: 'Cắm trại không chỉ là một hoạt động vui chơi ngoài trời, mà còn mang đến nhiều lợi ích cho sức khỏe thể chất, tinh thần và phát triển tư duy. Khám phá 5 lợi ích thiết thực mà cắm trại mang lại.',
-    image: anhmau.src,
+    image: anh13.src,
     date: '2023-09-01',
     content: `
       <p>Cắm trại là một trong những cách hiệu quả nhất để tái tạo năng lượng, hòa mình với thiên nhiên và rũ bỏ những căng thẳng trong cuộc sống hiện đại. Không chỉ dừng lại ở việc “đi chơi”, <strong>cắm trại mang lại nhiều lợi ích tuyệt vời</strong> cho cả thể chất lẫn tinh thần. Dưới đây là 5 lợi ích nổi bật mà bạn có thể cảm nhận ngay sau một chuyến đi.</p>
@@ -722,7 +767,7 @@ export const articles = [
     slug: '10-sai-lam-khi-cam-trai',
     title: '10 Sai Lầm Khi Cắm Trại Có Thể Phá Hỏng Cả Chuyến Đi',
     description: 'Bạn sắp đi cắm trại? Tránh ngay 10 sai lầm phổ biến sau để chuyến đi của bạn không bị gián đoạn bởi sự cố đáng tiếc. Đây là những kinh nghiệm thực tế không nên bỏ qua.',
-    image: anhmau.src,
+    image: anh14.src,
     date: '2023-09-01',
     content: `
       <p><strong>Cắm trại</strong> là một trải nghiệm thư giãn tuyệt vời giúp bạn rời xa cuộc sống bộn bề, hòa mình vào thiên nhiên. Tuy nhiên, chỉ một vài sai sót nhỏ cũng có thể khiến cả chuyến đi trở thành kỷ niệm không mấy dễ chịu. Dưới đây là <strong>10 sai lầm phổ biến khi đi cắm trại</strong> mà bạn cần tránh để đảm bảo an toàn và tận hưởng trọn vẹn chuyến đi.</p>
@@ -767,7 +812,7 @@ export const articles = [
     slug: '3-meo-bo-tri-cho-cam-trai',
     title: '3 Mẹo Bố Trí Chỗ Cắm Trại Giúp Chuyến Đi Gọn Gàng & Thoải Mái',
     description: 'Cắm trại không chỉ là dựng lều và ngủ ngoài trời – đó là nghệ thuật sắp xếp không gian sống giữa thiên nhiên. Khám phá 3 mẹo bố trí khu cắm trại giúp bạn ngăn nắp, an toàn và tận hưởng chuyến đi trọn vẹn.',
-    image: anhmau.src,
+    image: anh15.src,
     date: '2023-09-01',
     content: `
       <p>Việc <strong>bố trí khu cắm trại gọn gàng và thoải mái</strong> sẽ giúp chuyến đi của bạn trở nên thư giãn và dễ chịu hơn. Dưới đây là <strong>3 mẹo thiết thực</strong> để tổ chức không gian cắm trại như một “ngôi nhà di động” giữa thiên nhiên.</p>
@@ -794,7 +839,7 @@ export const articles = [
     slug: 'leu-bi-dong-suong-va-cach-xu-ly',
     title: 'Lều Bị Đọng Sương Khi Cắm Trại? Đây Là 3 Cách Xử Lý Hiệu Quả',
     description: 'Lều bị đọng sương là tình trạng thường gặp khi cắm trại vào ban đêm hoặc trời mưa. Bài viết mách bạn 3 cách xử lý đơn giản nhưng hiệu quả giúp lều khô ráo và ngủ ngon hơn.',
-    image: anhmau.src,
+    image: anh16.src,
     date: '2023-09-01',
     content: `
       <p>Khi cắm trại vào ban đêm hoặc trong điều kiện trời mưa, <strong>lều bị đọng sương</strong> là hiện tượng thường gặp, ngay cả với những chiếc lều cao cấp. Sương đọng có thể khiến bạn ướt, lạnh và khó ngủ. Vậy làm sao để hạn chế hiện tượng này? Dưới đây là <strong>3 cách xử lý hiệu quả</strong> mà bạn nên áp dụng.</p>
@@ -829,7 +874,7 @@ export const articles = [
     slug: '5-kinh-nghiem-cam-trai-trong-rung',
     title: '5 Kinh Nghiệm Cắm Trại Trong Rừng Giúp Bạn An Toàn & Trải Nghiệm Trọn Vẹn',
     description: 'Cắm trại trong rừng là một hành trình tuyệt vời nhưng cũng tiềm ẩn rủi ro. Trang bị ngay 5 kinh nghiệm thiết yếu giúp bạn an toàn, chủ động và tận hưởng chuyến đi một cách trọn vẹn nhất.',
-    image: anhmau.src,
+    image: anh17.src,
     date: '2023-09-01',
     content: `
       <p><strong>Cắm trại trong rừng</strong> là trải nghiệm gần gũi thiên nhiên, đưa bạn rời xa ồn ào thành phố để hòa mình vào không gian tĩnh lặng, chỉ còn tiếng suối chảy và lá rừng xào xạc. Tuy nhiên, môi trường rừng hoang dã tiềm ẩn nhiều nguy cơ – từ lạc đường đến thời tiết thất thường. Dưới đây là <strong>5 kinh nghiệm quan trọng</strong> giúp bạn có một chuyến cắm trại trong rừng an toàn và đáng nhớ.</p>
@@ -859,7 +904,7 @@ export const articles = [
     slug: '5-meo-bo-me-cho-con-di-cam-trai',
     title: '5 Mẹo Giúp Bố Mẹ Yên Tâm Cho Con Đi Cắm Trại',
     description: 'Cắm trại là cách tuyệt vời để trẻ khám phá thiên nhiên, nhưng cũng khiến nhiều phụ huynh lo lắng. Dưới đây là 5 mẹo thiết thực giúp bố mẹ yên tâm hơn khi cho con đi cắm trại ngoài trời.',
-    image: anhmau.src,
+    image: anh18.src,
     date: '2023-09-01',
     content: `
       <p><strong>Cho con đi cắm trại</strong> là trải nghiệm tuyệt vời để các bé rời xa thiết bị điện tử, hòa mình vào thiên nhiên và phát triển kỹ năng sống. Tuy nhiên, hành trình này cũng đặt ra nhiều lo lắng cho các bậc phụ huynh – từ sức khỏe đến an toàn. Dưới đây là <strong>5 mẹo giúp bố mẹ yên tâm</strong> khi cho trẻ đi cắm trại.</p>
@@ -896,7 +941,7 @@ export const articles = [
     slug: 'so-sanh-leu-tu-bung-va-leu-tu-dung',
     title: 'So Sánh Lều Tự Bung và Lều Tự Dựng: Nên Chọn Loại Nào Cho Chuyến Cắm Trại?',
     description: 'Bạn phân vân giữa lều tự bung và lều tự dựng cho chuyến đi sắp tới? Bài viết này giúp bạn hiểu rõ sự khác biệt, ưu – nhược điểm của từng loại để chọn đúng lều phù hợp với nhu cầu.',
-    image: anhmau.src,
+    image: anh19.src,
     date: '2023-09-01',
     content: `
       <p><strong>Lều cắm trại</strong> là món đồ không thể thiếu trong các hoạt động dã ngoại, leo núi, câu cá hay trekking. Trên thị trường hiện nay, phổ biến nhất là hai loại: <strong>lều tự bung</strong> và <strong>lều tự dựng</strong>. Vậy loại nào phù hợp hơn với bạn? Cùng khám phá sự khác biệt qua bài viết sau.</p>
@@ -954,7 +999,7 @@ export const articles = [
     slug: 'su-khac-biet-giua-da-ngoai-va-cam-trai',
     title: 'Sự Khác Biệt Giữa Dã Ngoại Và Cắm Trại: Chọn Hoạt Động Phù Hợp Cho Bạn',
     description: 'Dã ngoại và cắm trại đều là hoạt động ngoài trời thú vị, nhưng có những điểm khác biệt rõ ràng về mục đích, chuẩn bị và trải nghiệm. Bài viết giúp bạn phân biệt để chọn đúng hành trình cho mình.',
-    image: anhmau.src,
+    image: anh20.src,
     date: '2023-09-01',
     content: `
       <p><strong>Dã ngoại (Picnic)</strong> và <strong>cắm trại (Camping)</strong> là hai hình thức vui chơi ngoài trời được nhiều người yêu thích. Dù đều giúp giải tỏa căng thẳng và gần gũi với thiên nhiên, nhưng mỗi loại hoạt động lại mang đặc trưng riêng về mục tiêu, mức độ chuẩn bị và cảm xúc trải nghiệm. Bài viết dưới đây sẽ giúp bạn phân biệt rõ ràng sự khác biệt giữa hai hình thức này.</p>
@@ -992,7 +1037,7 @@ export const articles = [
     slug: '5-kinh-nghiem-chon-mua-leu-cam-trai',
     title: '5 Kinh Nghiệm Chọn Mua Lều Cắm Trại Phù Hợp Cho Mọi Chuyến Đi',
     description: 'Không biết chọn lều cắm trại như thế nào giữa hàng trăm mẫu mã trên thị trường? Đừng bỏ qua 5 kinh nghiệm quan trọng giúp bạn chọn được chiếc lều phù hợp nhất về kích thước, chất liệu, loại lều, phụ kiện và giá cả.',
-    image: anhmau.src,
+    image: anh21.src,
     date: '2023-09-01',
     content: `
       <p><strong>Lều cắm trại</strong> là món đồ không thể thiếu trong mỗi chuyến đi dã ngoại hay khám phá thiên nhiên. Tuy nhiên, giữa hàng trăm mẫu mã và mức giá khác nhau, việc lựa chọn lều phù hợp không hề đơn giản. Dưới đây là <strong>5 kinh nghiệm chọn mua lều cắm trại</strong> giúp bạn đưa ra quyết định chính xác, đảm bảo an toàn và thoải mái trong mỗi chuyến đi.</p>
@@ -1044,7 +1089,7 @@ export const articles = [
     slug: '4-kinh-nghiem-nuong-bbq-ngoai-troi',
     title: 'Bỏ Túi 4 Kinh Nghiệm Nướng BBQ Ngoài Trời An Toàn & Ngon Miệng',
     description: 'Bạn đang chuẩn bị tổ chức bữa tiệc BBQ ngoài trời cho chuyến cắm trại sắp tới? Đừng bỏ qua 4 kinh nghiệm thực tế dưới đây để có một buổi tiệc an toàn, tiết kiệm và thật đáng nhớ giữa thiên nhiên.',
-    image: anhmau.src,
+    image: anh22.src,
     date: '2023-09-01',
     content: `
       <p><strong>Nướng BBQ ngoài trời</strong> là hoạt động không thể thiếu trong các chuyến cắm trại, dã ngoại hay tụ họp bạn bè. Nhưng để có một bữa tiệc thật trọn vẹn, bạn cần lưu ý nhiều điều – từ địa điểm, dụng cụ, thực đơn cho đến việc vệ sinh sau bữa tiệc. Dưới đây là <strong>4 kinh nghiệm nướng BBQ ngoài trời</strong> giúp bạn chuẩn bị kỹ càng và tận hưởng buổi tiệc an toàn, vui vẻ.</p>
@@ -1095,7 +1140,7 @@ export const articles = [
     slug: '2-ky-nang-khi-di-cam-trai',
     title: '2 Kỹ Năng Sống Còn Khi Đi Cắm Trại Và Những Lưu Ý An Toàn',
     description: 'Trang bị kỹ năng sinh tồn và hiểu biết về địa điểm là yếu tố then chốt giúp bạn có một chuyến cắm trại an toàn, ý nghĩa. Cùng tìm hiểu 2 kỹ năng quan trọng và những lưu ý không thể bỏ qua.',
-    image: anhmau.src,
+    image: anh23.src,
     date: '2023-08-18',
     content: `
       <p><strong>Đi cắm trại</strong> là trải nghiệm tuyệt vời để kết nối với thiên nhiên, nhưng cũng ẩn chứa nhiều rủi ro nếu bạn thiếu kỹ năng và chuẩn bị sơ sài. Bài viết này sẽ giúp bạn hiểu rõ <strong>2 kỹ năng quan trọng khi đi cắm trại</strong> và những lưu ý thiết yếu để đảm bảo an toàn trong suốt chuyến đi.</p>
@@ -1145,7 +1190,7 @@ export const articles = [
     slug: 'cam-trai-qua-dem-va-7-dieu-can-tranh',
     title: 'Cắm Trại Qua Đêm: 7 Điều Cần Tránh Để Vui Và An Toàn',
     description: 'Đi cắm trại qua đêm mang lại trải nghiệm tuyệt vời nhưng cũng tiềm ẩn nhiều rủi ro nếu không chuẩn bị kỹ. Dưới đây là 7 điều quan trọng bạn cần tránh để đảm bảo chuyến đi an toàn và đáng nhớ.',
-    image: anhmau.src,
+    image: anh24.src,
     date: '2023-08-18',
     content: `
       <p><strong>Cắm trại qua đêm</strong> là một cách tuyệt vời để tận hưởng trọn vẹn thiên nhiên, nghỉ ngơi và kết nối với bạn bè, người thân. Nhưng đằng sau những phút giây lãng mạn bên ánh lửa trại là những nguy cơ tiềm ẩn nếu bạn thiếu kinh nghiệm hoặc chuẩn bị chưa kỹ. Hãy cùng điểm qua <strong>7 điều cần tránh</strong> để đảm bảo chuyến cắm trại đêm thật vui mà vẫn an toàn.</p>
@@ -1181,7 +1226,7 @@ export const articles = [
     slug: 'di-cam-trai-mac-gi-de-thoai-mai',
     title: 'Đi Cắm Trại Mặc Gì Để Luôn Thoải Mái, Dễ Chịu Và Hợp Thời Trang?',
     description: 'Chọn trang phục khi đi cắm trại không chỉ để thoải mái vận động mà còn giúp bảo vệ cơ thể và thể hiện cá tính. Bài viết chia sẻ những gợi ý mặc gì khi đi cắm trại để vừa dễ chịu, an toàn, lại hợp gu thời trang.',
-    image: anhmau.src,
+    image: anh25.src,
     date: '2023-08-18',
     content: `
       <p>Khi đi <strong>cắm trại</strong>, việc lựa chọn trang phục phù hợp sẽ ảnh hưởng trực tiếp đến trải nghiệm của bạn. Bạn không cần ăn mặc cầu kỳ, nhưng cần đảm bảo sự <strong>thoải mái, bảo vệ cơ thể và phù hợp với môi trường</strong>. Bài viết này sẽ gợi ý chi tiết <strong>nên mặc gì khi đi cắm trại</strong> để luôn tự tin và dễ chịu trong suốt hành trình.</p>
@@ -1217,7 +1262,7 @@ export const articles = [
     slug: '4-mon-do-can-chuan-bi-khi-di-cam-trai',
     title: '4 Món Đồ Dùng Cần Chuẩn Bị Khi Đi Cắm Trại: Từ Cơ Bản Đến Đầy Đủ',
     description: 'Bạn đang lên kế hoạch cho chuyến đi cắm trại? Hãy xem ngay 4 nhóm vật dụng không thể thiếu giúp bạn dựng trại chuyên nghiệp, nấu ăn tiện lợi và thoải mái tận hưởng không gian thiên nhiên.',
-    image: anhmau.src,
+    image: anh26.src,
     date: '2023-08-18',
     content: `
       <p>Trước khi bước vào một chuyến <strong>cắm trại</strong> đáng nhớ, việc chuẩn bị hành trang đầy đủ sẽ giúp bạn tiết kiệm thời gian, tránh thiếu sót và tận hưởng trọn vẹn từng khoảnh khắc ngoài trời. Dưới đây là <strong>4 món đồ dùng cần chuẩn bị khi đi cắm trại</strong> mà ai cũng nên lưu ý.</p>
@@ -1271,7 +1316,7 @@ export const articles = [
     slug: '5-dung-cu-can-thiet-khi-di-leo-nui',
     title: '5 Dụng Cụ Cần Thiết Khi Đi Leo Núi: Chuẩn Bị Kỹ Để Tránh Nguy Hiểm',
     description: 'Leo núi là hoạt động thú vị nhưng tiềm ẩn nhiều rủi ro. Bài viết này liệt kê 5 dụng cụ cần thiết nhất khi đi leo núi để đảm bảo an toàn, tiết kiệm sức và tận hưởng hành trình một cách trọn vẹn.',
-    image: anhmau.src,
+    image: anh27.src,
     date: '2023-08-18',
     content: `
       <p>Sau những ngày làm việc mệt mỏi, nhiều người chọn <strong>leo núi</strong> như một cách để thư giãn và tái tạo năng lượng. Tuy nhiên, để chuyến đi an toàn và trọn vẹn, bạn cần chuẩn bị đầy đủ. Dưới đây là <strong>5 dụng cụ cần thiết khi đi leo núi</strong> mà bất kỳ ai cũng nên mang theo.</p>
@@ -1334,7 +1379,7 @@ export const articles = [
     slug: '4-outfit-dep-khi-di-camping',
     title: '04 Outfit Siêu Đẹp Khi Đi Camping: Vừa Thoải Mái Vừa Chụp Hình Cháy Máy!',
     description: 'Không biết đi camping mặc gì để vừa thoải mái vận động, vừa lên hình xinh lung linh? Khám phá ngay 4 outfit chuẩn đẹp cho chuyến cắm trại, cùng những tips chọn trang phục chống nắng, chống lạnh và chống côn trùng.',
-    image: anhmau.src,
+    image: anh28.src,
     date: '2023-08-06',
     content: `
       <p><strong>Đi camping mặc gì?</strong> Đây là câu hỏi quen thuộc với những ai chuẩn bị cho chuyến đi chơi giữa thiên nhiên. Trang phục không chỉ cần đẹp mà còn phải tiện dụng và bảo vệ bạn khỏi các yếu tố môi trường. Dưới đây là 4 outfit siêu đẹp và những mẹo chọn đồ thông minh giúp bạn “auto” xinh trong mọi khung hình.</p>
@@ -1379,7 +1424,7 @@ export const articles = [
     slug: 'loi-ich-di-cam-trai',
     title: '10 Lợi Ích Tuyệt Vời Khi Đi Cắm Trại: Giải Tỏa Căng Thẳng, Kết Nối & Phát Triển Bản Thân',
     description: 'Đi cắm trại không chỉ giúp bạn thư giãn mà còn nâng cao sức khỏe, phát triển kỹ năng sống và gắn kết gia đình. Khám phá ngay 10 lợi ích tuyệt vời khiến bạn muốn xách balo lên và đi!',
-    image: anhmau.src,
+    image: anh29.src,
     date: '2023-08-06',
     content: `
       <p><strong>Đi cắm trại</strong> là một cách tuyệt vời để thoát khỏi nhịp sống vội vã, hòa mình vào thiên nhiên và tái tạo năng lượng. Không chỉ đơn giản là một chuyến đi dã ngoại, cắm trại còn mang lại vô số giá trị cho thể chất, tinh thần và các mối quan hệ.</p>
@@ -1426,7 +1471,7 @@ export const articles = [
     slug: 'tinh-huong-nguy-hiem-khi-cam-trai',
     title: '12 Tình Huống Nguy Hiểm Khi Đi Cắm Trại Và Cách Xử Lý Khẩn Cấp',
     description: 'Cắm trại là hoạt động thú vị, nhưng cũng tiềm ẩn nhiều rủi ro như rắn cắn, sốt cao, ngộ độc. Bài viết này sẽ giúp bạn nhận diện 12 tình huống nguy hiểm và hướng dẫn xử lý đúng cách để bảo vệ bản thân và gia đình.',
-    image: anhmau.src,
+    image: anh30.src,
     date: '2023-08-04',
     content: `
       <p><strong>Đi cắm trại</strong> giữa thiên nhiên là trải nghiệm tuyệt vời giúp thư giãn và gắn kết. Tuy nhiên, bạn cần chuẩn bị sẵn sàng để đối mặt với các <strong>tình huống bất trắc</strong> có thể xảy ra. Bài viết này sẽ giúp bạn nhận diện và xử lý đúng cách 12 tình huống nguy hiểm phổ biến khi đi cắm trại.</p>
@@ -1490,7 +1535,7 @@ export const articles = [
     slug: 'kinh-nghiem-du-lich-viet-nam-tu-tuc',
     title: '5 Kinh Nghiệm Du Lịch Việt Nam Tự Túc: Tiết Kiệm – Chủ Động – Trọn Vẹn',
     description: 'Lên kế hoạch du lịch tự túc tại Việt Nam chưa bao giờ dễ dàng đến thế! Nắm ngay 5 kinh nghiệm cực hữu ích về đặt vé, đặt phòng, chuẩn bị hành lý, lịch trình và những lưu ý quan trọng để chuyến đi thêm trọn vẹn.',
-    image: anhmau.src,
+    image: anh31.src,
     date: '2023-07-17',
     content: `
       <p><strong>Du lịch tự túc</strong> tại Việt Nam là lựa chọn lý tưởng cho những ai muốn chủ động lịch trình và khám phá theo cách riêng. Không gò bó như đi tour, bạn có thể linh hoạt về thời gian, điểm đến và ngân sách. Bài viết sau sẽ giúp bạn bỏ túi 5 kinh nghiệm vàng để hành trình du lịch tự túc tại Việt Nam thật trọn vẹn và tiết kiệm.</p>
@@ -1528,7 +1573,7 @@ export const articles = [
     slug: 'dung-cu-can-thiet-khi-di-cam-trai',
     title: '12 Dụng Cụ Cần Thiết Khi Đi Cắm Trại Dã Ngoại: Checklist Cho Chuyến Đi Trọn Vẹn',
     description: 'Bạn đang chuẩn bị cho chuyến cắm trại đầu tiên? Đừng quên mang theo 12 món đồ cần thiết từ lều trại, túi ngủ đến đồ nấu ăn và y tế để đảm bảo chuyến đi an toàn, thoải mái và đáng nhớ.',
-    image: anhmau.src,
+    image: anh32.src,
     date: '2023-07-17',
     content: `
       <p><strong>Đi cắm trại</strong> là hoạt động thú vị giúp thư giãn và kết nối bạn bè, đặc biệt với sinh viên hay nhóm bạn trẻ. Tuy nhiên, để có một chuyến đi trọn vẹn, bạn cần chuẩn bị đúng và đủ những dụng cụ cần thiết. Dưới đây là 12 món đồ không thể thiếu trong hành trang của bạn khi đi cắm trại dã ngoại.</p>
@@ -1599,7 +1644,7 @@ export const articles = [
     slug: 'kinh-nghiem-cam-trai-khi-troi-mua',
     title: 'Kinh Nghiệm Chuẩn Bị Đồ Đi Cắm Trại Khi Trời Mưa: Đối Phó Thời Tiết Hiệu Quả',
     description: 'Trời mưa không thể ngăn bạn tận hưởng cắm trại nếu chuẩn bị kỹ càng. Bài viết chia sẻ 8 món đồ và mẹo quan trọng giúp chuyến dã ngoại dưới mưa trở nên an toàn, ấm cúng và đáng nhớ.',
-    image: anhmau.src,
+    image: anh33.src,
     date: '2023-07-17',
     content: `
       <p><strong>Đi cắm trại</strong> dưới trời mưa có thể là trải nghiệm đầy thi vị – miễn là bạn đã sẵn sàng ứng phó với sự thất thường của thời tiết. Dưới đây là những kinh nghiệm thực tế và danh sách đồ dùng bạn cần chuẩn bị khi quyết định cắm trại trong điều kiện mưa gió.</p>
@@ -1640,7 +1685,7 @@ export const articles = [
     slug: 'cach-nhom-than-cui-cam-trai-nhanh-don-gian',
     title: '3 Cách Nhóm Than Củi, Than Hoa Nhanh Và Đơn Giản Khi Đi Cắm Trại',
     description: 'Tiệc BBQ ngoài trời sẽ không còn là “ác mộng nhóm lửa” nữa! Bỏ túi ngay 3 cách nhóm than cực nhanh, cực dễ bằng cồn, khò gas và củi khô để có bữa nướng thơm ngon trọn vẹn khi đi cắm trại.',
-    image: anhmau.src,
+    image: anh34.src,
     date: '2023-07-17',
     content: `
       <p><strong>Nhóm than</strong> khi đi <strong>cắm trại</strong> tưởng dễ mà lại là “nỗi ám ảnh” của nhiều người – đặc biệt là những ai chưa có kinh nghiệm. CHILLCAMP sẽ mách bạn 3 cách nhóm than củi, than hoa cực nhanh, cực đơn giản giúp bạn bắt đầu buổi tiệc BBQ thật suôn sẻ!</p>
@@ -1685,7 +1730,7 @@ export const articles = [
     slug: 'kinh-nghiem-thue-leu-cam-trai',
     title: 'Kinh Nghiệm Thuê Lều Cắm Trại: Cách Chọn Lều Phù Hợp, Tiết Kiệm Và Đúng Nhu Cầu',
     description: 'Thuê lều cắm trại lần đầu? Bài viết chia sẻ đầy đủ kinh nghiệm từ cách chọn kích cỡ, loại lều theo mùa, thời gian thuê, giá cả đến những lưu ý khi chọn đơn vị cho thuê uy tín. Giúp bạn tự tin lên kế hoạch cho chuyến đi hoàn hảo!',
-    image: anhmau.src,
+    image: anh35.src,
     date: '2025-02-20',
     content: `
       <p><strong>Thuê lều cắm trại</strong> là lựa chọn tiện lợi và tiết kiệm cho những ai thích trải nghiệm dã ngoại nhưng chưa đầu tư trang bị riêng. Tuy nhiên, nếu là lần đầu thuê, bạn có thể bỡ ngỡ về loại lều, giá thuê, và các phụ kiện đi kèm. Bài viết sau sẽ giúp bạn có đầy đủ kinh nghiệm để chọn lều phù hợp, tối ưu chi phí và tận hưởng chuyến đi trọn vẹn.</p>
@@ -1742,7 +1787,7 @@ export const articles = [
     slug: 'than-khong-khoi-la-gi',
     title: 'Than Không Khói Là Gì? Ưu Điểm, Phân Loại Và Ứng Dụng Trong Nấu Nướng BBQ',
     description: 'Than không khói là lựa chọn an toàn, thân thiện môi trường cho các bữa tiệc BBQ và dã ngoại. Cùng tìm hiểu đặc điểm, ưu – nhược điểm, các loại than sạch phổ biến và địa chỉ mua than không khói uy tín.',
-    image: anhmau.src,
+    image: anh36.src,
     date: '2025-02-20',
     content: `
       <p><strong>Than không khói</strong> (Smokeless Coal) là loại nhiên liệu được sản xuất bằng kỹ thuật đặc biệt nhằm giảm thiểu tối đa lượng khói sinh ra khi đốt. Đây là lựa chọn lý tưởng cho các bữa tiệc <strong>nướng BBQ</strong>, <strong>cắm trại ngoài trời</strong>, nhà hàng hoặc không gian kín như trung tâm thương mại.</p>
@@ -1816,7 +1861,7 @@ export const articles = [
     slug: 'outdoor-la-gi',
     title: 'Outdoor Là Gì? Tất Tần Tật Kinh Nghiệm Tham Gia Hoạt Động Outdoor An Toàn & Thú Vị',
     description: 'Outdoor là các hoạt động ngoài trời như cắm trại, leo núi, câu cá… mang lại nhiều lợi ích về sức khỏe, tinh thần và gắn kết đội nhóm. Cùng khám phá định nghĩa, các thuật ngữ liên quan và kinh nghiệm chuẩn bị hoạt động outdoor.',
-    image: anhmau.src,
+    image: anh37.src,
     date: '2024-01-14',
     content: `
       <p><strong>Outdoor</strong> là thuật ngữ ngày càng phổ biến, nhất là trong các hoạt động cắm trại, trekking, team building… Nhưng outdoor là gì, có những loại hoạt động nào và cần chuẩn bị những gì để chuyến đi ngoài trời trở nên hoàn hảo? Cùng <strong>Sài Gòn Camp</strong> tìm hiểu ngay trong bài viết dưới đây.</p>
@@ -1882,7 +1927,7 @@ export const articles = [
     slug: 'trekking-la-gi',
     title: 'Trekking Là Gì? Khác Biệt Giữa Trekking Và Hiking, Kinh Nghiệm Chinh Phục Địa Hình Hoang Dã',
     description: 'Trekking là hình thức du lịch mạo hiểm khám phá thiên nhiên hoang dã bằng cách đi bộ đường dài. Cùng tìm hiểu sự khác biệt giữa trekking và hiking, các vật dụng cần chuẩn bị và những kinh nghiệm trekking an toàn.',
-    image: anhmau.src,
+    image: anh38.src,
     date: '2024-01-14',
     content: `
       <p><strong>Trekking</strong> và <strong>Hiking</strong> đều là hoạt động đi bộ khám phá thiên nhiên. Tuy nhiên, điểm khác biệt giữa hai hình thức này lại không nhỏ. Nếu bạn là người mới, hãy cùng <strong>Sài Gòn Camp</strong> tìm hiểu chi tiết để chuẩn bị tốt cho hành trình chinh phục thiên nhiên nhé!</p>
@@ -1980,7 +2025,7 @@ export const articles = [
     slug: 'do-can-thiet-khi-di-cam-trai',
     title: 'Đi Cắm Trại Cần Những Gì? Danh Sách Vật Dụng Cần Thiết Cho Chuyến Dã Ngoại Trọn Vẹn',
     description: 'Đi cắm trại cần mang theo gì để chuyến đi an toàn và đầy trải nghiệm? Cùng khám phá danh sách vật dụng cần thiết cho cắm trại ngày hoặc qua đêm như lều, túi ngủ, đèn pin, bếp nướng, bàn ghế gấp và nhiều hơn nữa.',
-    image: anhmau.src,
+    image: anh39.src,
     date: '2024-01-07',
     content: `
       <p>Chuẩn bị đầy đủ trước chuyến <strong>cắm trại</strong> là yếu tố then chốt để có một hành trình trọn vẹn, thoải mái và an toàn. Nếu bạn đang thắc mắc <strong>“Đi cắm trại cần những gì?”</strong> thì hãy cùng <strong>Tây Camping</strong> điểm qua danh sách những vật dụng không thể thiếu dưới đây nhé!</p>
@@ -2031,7 +2076,7 @@ export const articles = [
     slug: 'quy-tac-an-toan-trekking-can-biet',
     title: 'Những Quy Tắc An Toàn Khi Trekking Bạn Nhất Định Phải Biết',
     description: 'Trekking là hoạt động thú vị nhưng tiềm ẩn nhiều rủi ro. Bài viết này chia sẻ những quy tắc an toàn quan trọng giúp bạn trekking đúng cách, an toàn và trọn vẹn.',
-    image: anhmau.src,
+    image: anh40.src,
     date: '2023-09-05',
     content: `
       <p><strong>Trekking</strong> là một trải nghiệm tuyệt vời để chinh phục thiên nhiên, nhưng cũng tiềm ẩn không ít nguy hiểm. Để đảm bảo an toàn cho bản thân và tận hưởng hành trình một cách trọn vẹn, bạn nhất định phải nắm rõ những <strong>quy tắc an toàn trekking</strong> dưới đây.</p>
@@ -2087,7 +2132,7 @@ export const articles = [
     slug: 'kinh-nghiem-trekking-cho-nguoi-the-luc-yeu',
     title: 'Kinh Nghiệm Trekking Cho Người Thể Lực Yếu: Mẹo Vượt Lên Chính Mình',
     description: 'Thể lực yếu không có nghĩa là không thể trekking! Dưới đây là những kinh nghiệm thực tế giúp bạn chinh phục thử thách một cách an toàn và hiệu quả.',
-    image: anhmau.src,
+    image: anh41.src,
     date: '2023-09-01',
     content: `
       <p><strong>Trekking</strong> là hoạt động giúp rèn luyện thể chất, khám phá thiên nhiên và vượt qua giới hạn bản thân. Ngay cả khi bạn không có thể lực tốt, chỉ cần chuẩn bị đúng cách và tuân thủ một số nguyên tắc, bạn vẫn hoàn toàn có thể tận hưởng trọn vẹn hành trình trekking.</p>
@@ -2129,7 +2174,7 @@ export const articles = [
     slug: 'kinh-nghiem-cam-trai-trong-rung-tu-a-den-z',
     title: 'Tất Tần Tật A-Z Kinh Nghiệm Cắm Trại Trong Rừng Bạn Phải Biết',
     description: 'Cắm trại trong rừng là hành trình đầy phiêu lưu và trải nghiệm. Từ chuẩn bị vật dụng đến kỹ năng sinh tồn – đây là hướng dẫn toàn diện dành cho bạn.',
-    image: anhmau.src,
+    image: anh42.src,
     date: '2023-08-28',
     content: `
       <p><strong>Cắm trại trong rừng</strong> không đơn thuần là một chuyến đi dã ngoại mà còn là hành trình khám phá bản thân, học kỹ năng sinh tồn và kết nối với thiên nhiên. Dưới đây là cẩm nang A-Z giúp bạn chuẩn bị mọi thứ cần thiết để chuyến đi vừa an toàn vừa trọn vẹn.</p>
@@ -2191,7 +2236,7 @@ export const articles = [
     slug: 'kinh-nghiem-di-da-ngoai-cho-nguoi-moi-bat-dau',
     title: 'Kinh Nghiệm Đi Dã Ngoại Đầy Đủ Nhất Cho Người Mới Bắt Đầu',
     description: 'Bạn mới bắt đầu đi dã ngoại? Đừng bỏ qua hướng dẫn chi tiết từ A-Z về cách lập kế hoạch, chuẩn bị đồ dùng, lựa chọn thực phẩm và đảm bảo an toàn trong chuyến đi.',
-    image: anhmau.src,
+    image: anh43.src,
     date: '2023-08-29',
     content: `
       <p><strong>Đi dã ngoại</strong> là một hoạt động thư giãn, kết nối và tái tạo năng lượng sau những ngày làm việc căng thẳng. Với người mới bắt đầu, việc chuẩn bị kỹ lưỡng là yếu tố then chốt để có một chuyến đi suôn sẻ và đáng nhớ. Dưới đây là những kinh nghiệm dã ngoại đầy đủ nhất mà bạn nên nắm vững.</p>
@@ -2258,7 +2303,7 @@ export const articles = [
     slug: 'top-10-tro-choi-cam-trai-cuc-thu-vi',
     title: 'Top 10 Trò Chơi Khi Cắm Trại Cực Thú Vị Giúp Nhóm Bạn Gắn Kết',
     description: 'Gợi ý 10 trò chơi cắm trại vui nhộn, dễ tổ chức giúp khuấy động không khí, kết nối bạn bè, gia đình và tạo nên những kỷ niệm khó quên trong mỗi chuyến đi.',
-    image: anhmau.src,
+    image: anh44.src,
     date: '2023-08-24',
     content: `
       <p>Cắm trại không chỉ là tận hưởng thiên nhiên mà còn là dịp tuyệt vời để gắn kết bạn bè, đồng nghiệp hay gia đình. Những trò chơi phù hợp sẽ giúp buổi cắm trại thêm sôi động, gắn bó và đầy ắp tiếng cười. Dưới đây là <strong>Top 10 trò chơi khi cắm trại</strong> cực kỳ thú vị mà bạn nên thử ít nhất một lần!</p>
@@ -2312,7 +2357,7 @@ export const articles = [
     slug: 'di-trekking-can-chuan-bi-gi',
     title: 'Đi Trekking Cần Chuẩn Bị Gì Để Có Chuyến Đi Trọn Vẹn Nhất?',
     description: 'Lên danh sách những thứ cần chuẩn bị khi đi trekking: từ trang phục, giày, đồ ăn, lều trại đến bộ dụng cụ sinh tồn giúp bạn có một chuyến leo núi an toàn và đầy trải nghiệm.',
-    image: anhmau.src,
+    image: anh45.src,
     date: '2023-08-12',
     content: `
       <p><strong>Trekking</strong> là hành trình khám phá thiên nhiên kết hợp thử thách thể lực và tinh thần. Dù là người mới bắt đầu hay đã có kinh nghiệm, bạn vẫn cần chuẩn bị thật kỹ để chuyến đi được trọn vẹn và an toàn. Dưới đây là tất cả những gì bạn cần biết trước khi lên đường trekking.</p>
@@ -2388,7 +2433,7 @@ export const articles = [
     slug: '5-sai-lam-khi-lan-dau-trekking',
     title: '5 Sai Lầm Khi Lần Đầu Trekking Khiến Bạn Vừa Mệt Vừa Mất Hứng',
     description: 'Đi trekking lần đầu dễ mắc phải 5 sai lầm cơ bản như chọn sai balo, thiếu kỹ năng sinh tồn, hiểu nhầm về hành trình... Cùng khám phá để tránh vỡ mộng khi chinh phục thiên nhiên.',
-    image: anhmau.src,
+    image: anh46.src,
     date: '2023-08-12',
     content: `
       <p><strong>Trekking</strong> là hành trình tuyệt vời để hòa mình vào thiên nhiên và khám phá giới hạn bản thân. Tuy nhiên, nhiều người mới bắt đầu thường mắc phải những sai lầm tưởng nhỏ nhưng lại ảnh hưởng lớn đến trải nghiệm. Dưới đây là <strong>5 sai lầm phổ biến khi lần đầu trekking</strong> và cách khắc phục.</p>
@@ -2449,7 +2494,7 @@ export const articles = [
     slug: 'phan-biet-camping-va-glamping',
     title: 'Phân Biệt Camping Và Glamping: Khác Biệt Giữa Mộc Mạc Và Sang Chảnh',
     description: 'Camping là hình thức cắm trại truyền thống, còn Glamping là phiên bản cao cấp với đầy đủ tiện nghi như khách sạn. Cùng tìm hiểu điểm giống và khác biệt để chọn trải nghiệm phù hợp cho bạn!',
-    image: anhmau.src,
+    image: anh47.src,
     date: '2023-08-08',
     content: `
       <p><strong>Camping</strong> đã quá quen thuộc với những người yêu thiên nhiên, nhưng vài năm trở lại đây, <strong>Glamping</strong> – cắm trại kiểu sang chảnh – lại trở thành xu hướng mới nổi bật. Vậy sự khác biệt giữa hai hình thức này là gì? Cùng khám phá chi tiết nhé!</p>
@@ -2538,7 +2583,7 @@ export const articles = [
     slug: 'cam-trai-hang-dong-va-nhung-vat-dung-can-thiet',
     title: 'Cắm Trại Hang Động: Hành Trình Thám Hiểm & Danh Sách Vật Dụng Cần Mang Theo',
     description: 'Cắm trại trong hang động là trải nghiệm hấp dẫn cho người yêu mạo hiểm. Khám phá danh sách vật dụng cần thiết, trang phục phù hợp và top 3 hang động đẹp nhất Việt Nam.',
-    image: anhmau.src,
+    image: anh48.src,
     date: '2023-08-08',
     content: `
       <p><strong>Cắm trại hang động</strong> là trải nghiệm độc đáo dành cho những ai yêu thích mạo hiểm, thám hiểm và muốn gần gũi thiên nhiên theo cách không giống ai. Với địa hình hiểm trở, tối tăm và ẩm thấp, việc chuẩn bị kỹ càng là điều bắt buộc để đảm bảo an toàn. Bài viết này sẽ giúp bạn liệt kê tất cả những vật dụng cần thiết và gợi ý những hang động nên thử.</p>
@@ -2619,7 +2664,7 @@ export const articles = [
     slug: '10-luu-y-khi-di-trekking-cho-nguoi-moi',
     title: '10 Lưu Ý Quan Trọng Khi Đi Trekking Dành Cho Người Mới Bắt Đầu',
     description: 'Trekking là hành trình đầy thử thách và bổ ích. Khám phá 10 lưu ý quan trọng giúp người mới bắt đầu trekking chuẩn bị tốt nhất, từ chọn cung đường, giày dép đến kỹ năng sinh tồn.',
-    image: anhmau.src,
+    image: anh49.src,
     date: '2023-08-05',
     content: `
       <p><strong>Trekking</strong> không chỉ là hành trình chinh phục núi non mà còn là chuyến đi rèn luyện sức bền, tinh thần và kỹ năng sống. Với người mới bắt đầu, việc chuẩn bị kỹ càng sẽ quyết định trải nghiệm thành công hay thất bại. Dưới đây là 10 lưu ý thực tiễn giúp bạn bắt đầu hành trình trekking một cách suôn sẻ và an toàn.</p>
@@ -2664,7 +2709,7 @@ export const articles = [
     slug: 'huong-dan-chon-dia-diem-cam-trai-phu-hop-nhat',
     title: 'Hướng Dẫn Chọn Địa Điểm Cắm Trại Phù Hợp Nhất Cho Mọi Hành Trình',
     description: 'Chọn địa điểm cắm trại phù hợp sẽ giúp bạn có giấc ngủ ngon, đảm bảo an toàn và tận hưởng khung cảnh thiên nhiên tuyệt đẹp. Tìm hiểu nguyên tắc LNT, cách chọn chỗ bằng phẳng, chống lũ quét và nhiều hơn nữa.',
-    image: anhmau.src,
+    image: anh50.src,
     date: '2023-08-01',
     content: `
       <p>Việc chọn địa điểm cắm trại đúng đắn không chỉ giúp bạn có một đêm nghỉ ngơi thoải mái mà còn đảm bảo an toàn, tránh thời tiết khắc nghiệt và rủi ro tự nhiên. Dưới đây là những nguyên tắc và mẹo thực tiễn để bạn xác định được vị trí cắm trại lý tưởng nhất cho hành trình của mình.</p>
@@ -2709,7 +2754,7 @@ export const articles = [
     slug: 'chuan-bi-gi-khi-di-cam-trai-lan-dau',
     title: 'Chuẩn Bị Gì Khi Đi Cắm Trại Lần Đầu? Danh Sách Đồ Dùng Không Thể Thiếu',
     description: 'Lần đầu đi cắm trại? Bài viết sẽ giúp bạn liệt kê đầy đủ những vật dụng cần thiết như lều, đèn pin, túi ngủ, giày leo núi, bàn ghế gọn nhẹ và dụng cụ nấu ăn để có trải nghiệm trọn vẹn và an toàn.',
-    image: anhmau.src,
+    image: anh51.src,
     date: '2023-07-21',
     content: `
       <p>Không biết nên chuẩn bị gì cho chuyến cắm trại đầu tiên? Việc lên kế hoạch chi tiết và trang bị đầy đủ sẽ giúp bạn tận hưởng hành trình thoải mái, an toàn và nhiều kỷ niệm đáng nhớ. Dưới đây là danh sách những món đồ cần thiết mà bạn không thể bỏ qua.</p>
@@ -2762,7 +2807,7 @@ export const articles = [
     slug: '10-kinh-nghiem-mua-leu-cam-trai-nhat-dinh-phai-biet',
     title: '10 Kinh Nghiệm Mua Lều Cắm Trại Nhất Định Phải Biết',
     description: 'Tìm hiểu 10 kinh nghiệm quan trọng khi chọn mua lều cắm trại: từ mục đích sử dụng, số người, chất liệu đến thiết kế và giá cả. Hướng dẫn chọn lều phù hợp cho chuyến đi dã ngoại của bạn.',
-    image: anhmau.src,
+    image: anh52.src,
     date: '2023-07-19',
     content: `
       <p>Việc chọn mua một chiếc lều cắm trại phù hợp có thể khiến bạn lúng túng bởi có quá nhiều lựa chọn trên thị trường. Bài viết dưới đây sẽ giúp bạn nắm được 10 kinh nghiệm quan trọng để dễ dàng chọn được chiếc lều phù hợp với nhu cầu, địa hình và ngân sách của mình.</p>
@@ -2811,7 +2856,7 @@ export const articles = [
     slug: 'bat-mi-kinh-nghiem-cam-trai-qua-dem-day-du-nhat',
     title: 'Bật Mí Kinh Nghiệm Cắm Trại Qua Đêm Đầy Đủ Nhất',
     description: 'Cắm trại qua đêm là một trải nghiệm đáng nhớ, nhưng cũng tiềm ẩn nhiều rủi ro nếu không chuẩn bị kỹ. Bài viết chia sẻ kinh nghiệm cắm trại đêm: chọn địa điểm, vật dụng cần mang, lưu ý an toàn và mẹo giữ ấm.',
-    image: anhmau.src,
+    image: anh53.src,
     date: '2023-07-18',
     content: `
       <p>Cắm trại qua đêm đang trở thành lựa chọn yêu thích của giới trẻ và các gia đình mỗi dịp cuối tuần. Không gì tuyệt vời hơn khi được quây quần bên lửa trại, cùng nhau ca hát, ăn uống và tận hưởng thiên nhiên. Tuy nhiên, để có một chuyến cắm trại đêm an toàn, thoải mái và đáng nhớ, bạn cần chuẩn bị kỹ lưỡng. Dưới đây là những kinh nghiệm thiết thực để bạn sẵn sàng cho chuyến đi.</p>
@@ -2849,7 +2894,7 @@ export const articles = [
     slug: 'co-nen-su-dung-tui-ngu-khi-di-da-ngoai',
     title: 'Có Nên Sử Dụng Túi Ngủ Khi Đi Dã Ngoại Du Lịch Hay Không?',
     description: 'Túi ngủ là vật dụng thiết yếu trong các chuyến đi dã ngoại, giúp giữ ấm, tránh côn trùng và tạo cảm giác thoải mái khi ngủ. Bài viết phân tích lý do nên dùng túi ngủ và hướng dẫn chọn túi ngủ phù hợp.',
-    image: anhmau.src,
+    image: anh54.src,
     date: '2022-12-14',
     content: `
       <p>Bạn chuẩn bị có chuyến dã ngoại, du lịch và phân vân không biết có nên mua túi ngủ không? Túi ngủ là món đồ quan trọng giúp bạn nghỉ ngơi thoải mái hơn khi ngủ ngoài trời. Dưới đây là những lý do vì sao túi ngủ nên có trong hành trang của bạn, cùng với hướng dẫn chọn lựa túi phù hợp.</p>
@@ -2881,7 +2926,7 @@ export const articles = [
     slug: 'kinh-nghiem-cam-trai-gia-dinh-co-tre-nho',
     title: 'Kinh Nghiệm Đi Cắm Trại Gia Đình Có Trẻ Nhỏ',
     description: 'Đi cắm trại cùng trẻ nhỏ cần chuẩn bị kỹ về địa điểm, vật dụng, thực phẩm và các biện pháp bảo vệ. Bài viết chia sẻ kinh nghiệm giúp gia đình có chuyến dã ngoại vui vẻ, an toàn và ý nghĩa.',
-    image: anhmau.src,
+    image: anh55.src,
     date: '2022-12-15',
     content: `
       <p>Cắm trại là hoạt động thư giãn lý tưởng để gắn kết các thành viên trong gia đình, đặc biệt khi có trẻ nhỏ. Tuy nhiên, việc chuẩn bị cho chuyến đi cùng con trẻ đòi hỏi sự kỹ lưỡng và quan tâm đặc biệt. Dưới đây là những kinh nghiệm hữu ích để bạn có một chuyến dã ngoại trọn vẹn, an toàn và đáng nhớ.</p>
@@ -2927,7 +2972,7 @@ export const articles = [
     slug: 'kinh-nghiem-cam-trai-mot-minh',
     title: 'Những Điều Cần Biết Khi Đi Cắm Trại Một Mình',
     description: 'Cắm trại một mình là trải nghiệm thú vị nhưng đi kèm với nhiều rủi ro. Bài viết chia sẻ các kinh nghiệm quan trọng như chọn địa điểm an toàn, hành trang gọn nhẹ, chuẩn bị đồ ăn và đảm bảo liên lạc khẩn cấp.',
-    image: anhmau.src,
+    image: anh56.src,
     date: '2022-12-14',
     content: `
       <p>Cắm trại một mình là lựa chọn tuyệt vời để thư giãn, tĩnh tâm và hòa mình vào thiên nhiên. Tuy nhiên, việc đi một mình cũng tiềm ẩn nhiều rủi ro nếu bạn không chuẩn bị kỹ lưỡng. Dưới đây là những kinh nghiệm cần thiết giúp chuyến đi của bạn an toàn và ý nghĩa hơn.</p>
@@ -2969,7 +3014,7 @@ export const articles = [
     slug: 'kinh-nghiem-nuong-bbq-ngoai-troi',
     title: 'Kinh Nghiệm Nướng BBQ Ngoài Trời Cho Tín Đồ Mê Đồ Nướng',
     description: 'Tổ chức tiệc nướng BBQ ngoài trời là trải nghiệm hấp dẫn nhưng cần chuẩn bị kỹ lưỡng. Bài viết chia sẻ kinh nghiệm chọn địa điểm, dụng cụ nướng, lên thực đơn, dự trù kinh phí và bảo vệ môi trường sau tiệc.',
-    image: anhmau.src,
+    image: anh57.src,
     date: '2022-12-14',
     content: `
       <p>Nướng BBQ ngoài trời là hoạt động yêu thích của nhiều người, đặc biệt là khi thời tiết se lạnh. Để có một bữa tiệc nướng trọn vẹn, bạn cần chuẩn bị đầy đủ từ thiết bị, nguyên liệu cho đến kế hoạch tổ chức. Bài viết dưới đây sẽ chia sẻ kinh nghiệm tổ chức BBQ ngoài trời mà bạn không nên bỏ qua.</p>
@@ -3009,7 +3054,7 @@ export const articles = [
     slug: 'camping-la-gi-va-vi-sao-thu-hut-gioi-tre',
     title: 'Camping Là Gì? Vì Sao Hoạt Động Cắm Trại Ngoài Trời Lại Thu Hút Giới Trẻ?',
     description: 'Camping là hoạt động cắm trại ngoài trời đang trở thành xu hướng trong giới trẻ. Bài viết giải thích khái niệm camping, các hoạt động phổ biến và lý do vì sao giới trẻ yêu thích loại hình du lịch này.',
-    image: anhmau.src,
+    image: anh58.src,
     date: '2022-12-12',
     content: `
       <p>Camping – hay còn gọi là cắm trại – đang trở thành một xu hướng trải nghiệm đầy hấp dẫn của giới trẻ hiện nay. Đây là hoạt động ngoài trời giúp kết nối con người với thiên nhiên và mang lại cảm giác thư giãn, tự do giữa không gian hoang dã. Vậy camping là gì và vì sao lại thu hút giới trẻ đến vậy?</p>
@@ -3050,7 +3095,7 @@ export const articles = [
     slug: 'bi-quyet-dung-leu-cam-trai-noi-gio-lon',
     title: 'Bí Quyết Dựng Lều Cắm Trại Tại Nơi Có Gió Lớn: Kỹ Năng Sinh Tồn Cần Biết',
     description: 'Dựng lều trong điều kiện gió lớn đòi hỏi kỹ năng và sự chuẩn bị kỹ lưỡng. Bài viết chia sẻ cách dựng lều an toàn, ổn định, chống gió hiệu quả và những lưu ý quan trọng không thể bỏ qua.',
-    image: anhmau.src,
+    image: anh59.src,
     date: '2022-11-17',
     content: `
       <p>Dựng lều khi đi cắm trại tại nơi có gió lớn là thử thách không nhỏ, đặc biệt với người chưa có nhiều kinh nghiệm. Việc chọn hướng gió, xử lý khung lều, buộc dây, và giữ cố định là những kỹ năng quan trọng giúp bạn an toàn và yên tâm khi qua đêm giữa thiên nhiên hoang dã.</p>
@@ -3093,7 +3138,7 @@ export const articles = [
     slug: 'thuc-don-mon-nuong-di-cam-trai',
     title: 'Thực Đơn Các Món Nướng Không Thể Thiếu Khi Đi Cắm Trại',
     description: 'Khám phá danh sách các món nướng hấp dẫn và dễ chế biến cho chuyến cắm trại: thịt ba chỉ, tôm muối ớt, bò cuộn nấm, đùi gà nướng, rau củ xiên, bánh mì mật ong. Gợi ý thực đơn lý tưởng giúp bữa tiệc BBQ ngoài trời thêm trọn vẹn.',
-    image: anhmau.src,
+    image: anh60.src,
     date: '2022-11-18',
     content: `
       <p>Khi đi cắm trại cùng bạn bè hoặc gia đình, không gì tuyệt vời hơn một bữa tiệc nướng thơm lừng, ấm cúng giữa thiên nhiên. Đồ nướng dễ chuẩn bị, hợp khẩu vị nhiều người và mang đến không khí vui tươi, gắn kết. Dưới đây là những món nướng không thể thiếu giúp bạn có một thực đơn BBQ hoàn hảo.</p>
@@ -3144,7 +3189,7 @@ export const articles = [
     slug: 'co-nen-di-du-lich-bui-mot-minh',
     title: '9 Lý Do Bạn Nên Cân Nhắc Du Lịch Bụi Một Mình',
     description: 'Du lịch bụi một mình là trải nghiệm nên thử một lần trong đời. Bài viết chia sẻ 9 lý do thuyết phục để bạn đưa ra quyết định: từ khả năng độc lập, tiết kiệm chi phí, đến cơ hội kết nối và khám phá bản thân.',
-    image: anhmau.src,
+    image: anh61.src,
     date: '2017-06-21',
     content: `
       <p>Du lịch bụi một mình có thể là hành trình thay đổi cuộc sống. Tuy nhiên, để sẵn sàng cho chuyến đi, bạn cần hiểu rõ bản thân và mức độ phù hợp. Nếu bạn có ít nhất 3 dấu hiệu dưới đây, hãy cân nhắc nghiêm túc đến việc xách ba lô và lên đường một mình!</p>
