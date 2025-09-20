@@ -17,6 +17,17 @@ import anh14 from '@/images/blog/14.jpg'
 import anh15 from '@/images/blog/15.jpg'
 import anh16 from '@/images/blog/16.jpg'
 
+// Define the Blog interface
+interface Blog {
+  id: number;
+  title: string;
+  content: string;
+  image: string;
+}
+
+const blogData: Blog[] = [];
+export default blogData;
+
 
 
 export const articles = [
