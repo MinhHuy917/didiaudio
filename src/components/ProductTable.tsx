@@ -148,7 +148,7 @@ const ProductList: React.FC = () => {
                   <h4 className="font-semibold text-sm md:text-base text-[#1F3329] leading-tight">{product.name}</h4>
                   <p className="text-xs text-gray-600 dark:text-[#2D4B3A] mt-1">{product.catalogue}</p>
                 </div>
-                <div className="mt-3 text-sm md:text-base font-semibold text-[#1F3329]">
+                {/* <div className="mt-3 text-sm md:text-base font-semibold text-[#1F3329]">
                   {product.price === 0 ? (
                     <span className="text-green-600">Miễn phí</span>
                   ) : (
@@ -156,7 +156,35 @@ const ProductList: React.FC = () => {
                       {product.price}k{product.isRental ? "" : "/ngày"}
                     </span>
                   )}
-                </div>
+                </div> */}
+          <div className="mt-3">
+  {product.price === 0 ? (
+    <span className="text-green-600 font-semibold text-sm md:text-base">Miễn phí</span>
+  ) : product.originalPrice && product.originalPrice > product.price ? (
+    <div className="flex items-center gap-2 flex-wrap">
+      {/* Giá gốc */}
+      <span className="text-gray-400 line-through text-xs sm:text-sm">
+        {product.originalPrice}k{product.isRental ? "" : "/ngày"}
+      </span>
+
+      {/* Giá sale */}
+      <span className="text-orange-600 font-bold text-sm sm:text-base">
+        {product.price}k{product.isRental ? "" : "/ngày"}
+      </span>
+
+      {/* Badge phần trăm giảm */}
+      <span className="bg-red-100 text-red-600 text-[11px] font-semibold px-2 py-0.5 rounded-full">
+        -{Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}%
+      </span>
+    </div>
+  ) : (
+    <span className="text-orange-600 font-semibold text-sm md:text-base">
+      {product.price}k{product.isRental ? "" : "/ngày"}
+    </span>
+  )}
+</div>
+
+
               </div>
             </Link>
           ))}

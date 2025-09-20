@@ -30,7 +30,7 @@ export default function PromoBanner() {
     {
       icon: '🔥',
       title: 'Hỗ trợ ship gấp khi cần',
-      desc: 'Nếu khách cần gấp, chúng tôi có thể hỗ trợ đặt ship lều nhanh chóng (phí ship khách tự chịu).',
+      desc: 'Nếu khách cần gấp, chúng tôi có thể hỗ trợ đặt giùm grab/now để ship lều nhanh chóng (phí ship khách tự chịu).',
       tag: 'HOT',
     },
     {
