@@ -7,7 +7,7 @@ export default function AboutSection() {
         </h2>
         <p className="text-gray-700 text-lg sm:text-xl leading-relaxed tracking-wide">
 
-        ĐiĐi ra đời để đồng hành cùng bạn trên hành trình trở về với thiên nhiên, mang theo đầy đủ đồ cắm trại tiện ích.
+        ĐiĐi ra đời để đồng hành cùng bạn trên hành trình trở về với thiên nhiên, mang theo đầy đủ đồ cắm trại tiện ích ở Đà Nẵng.
         </p>
       </div>
     </section>

@@ -8,6 +8,7 @@ import ProductList from '@/components/ProductTable'
 import { NavigationV2 } from '@/components/RootLayout'
 import Testimonials from '@/components/Testimonials'
 import WhyUs from '@/components/WhyUs'
+import SpecialNoticeBanner from '@/components/SpecialNoticeBanner'
 
 export const metadata: Metadata = {
   description:
@@ -20,8 +21,10 @@ export default async function Home() {
       <ImageSlider />
       {/* ✅ Giới thiệu về Dì Đi Camping */}
         <AboutSection />
+      <SpecialNoticeBanner />
 
       <ProductList />
+
         {/* ✅ Vì sao chọn chúng tôi */}
         <WhyUs />
           {/* ✅ Đánh giá khách hàng */}
