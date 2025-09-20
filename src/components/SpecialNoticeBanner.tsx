@@ -1,12 +1,11 @@
 import React from 'react'
-import { Tag } from 'lucide-react'
 
 export default function PromoBanner() {
   const promos = [
     {
       icon: '🎓',
-      title: 'Ưu đãi sinh viên & khách cũ',
-      desc: 'Giảm 10% cho sinh viên và khách hàng cũ (vui lòng báo trước khi đặt).',
+      title: 'Ưu đãi sinh viên Đà Nẵng',
+      desc: 'Giảm 10% cho sinh viên học Đà Nẵng (vui lòng nhắn shop, khi thuê luề).',
       tag: 'SALE',
     },
     {

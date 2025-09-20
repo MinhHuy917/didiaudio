@@ -157,32 +157,33 @@ const ProductList: React.FC = () => {
                     </span>
                   )}
                 </div> */}
-          <div className="mt-3">
+  <div className="mt-2">
   {product.price === 0 ? (
-    <span className="text-green-600 font-semibold text-sm md:text-base">Miễn phí</span>
+    <span className="text-green-600 font-medium text-xs sm:text-sm">Miễn phí</span>
   ) : product.originalPrice && product.originalPrice > product.price ? (
-    <div className="flex items-center gap-2 flex-wrap">
+    <div className="flex flex-col">
       {/* Giá gốc */}
-      <span className="text-gray-400 line-through text-xs sm:text-sm">
+      <span className="text-gray-400 line-through text-[11px] sm:text-xs">
         {product.originalPrice}k{product.isRental ? "" : "/ngày"}
       </span>
 
-      {/* Giá sale */}
-      <span className="text-orange-600 font-bold text-sm sm:text-base">
-        {product.price}k{product.isRental ? "" : "/ngày"}
-      </span>
-
-      {/* Badge phần trăm giảm */}
-      <span className="bg-red-100 text-red-600 text-[11px] font-semibold px-2 py-0.5 rounded-full">
-        -{Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}%
-      </span>
+      {/* Giá sale + badge giảm */}
+      <div className="flex items-center gap-1.5">
+        <span className="text-orange-600 font-semibold text-sm sm:text-base">
+          {product.price}k{product.isRental ? "" : "/ngày"}
+        </span>
+        <span className="bg-red-500 text-white text-[9px] sm:text-[10px] font-semibold px-1.5 py-0.5 rounded-full">
+          -{Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}%
+        </span>
+      </div>
     </div>
   ) : (
-    <span className="text-orange-600 font-semibold text-sm md:text-base">
+    <span className="text-orange-600 font-semibold text-sm sm:text-base">
       {product.price}k{product.isRental ? "" : "/ngày"}
     </span>
   )}
 </div>
+
 
 
               </div>
