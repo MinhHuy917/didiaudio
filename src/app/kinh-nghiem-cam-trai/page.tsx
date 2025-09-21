@@ -3,7 +3,7 @@
 import BlogCamTrai from '@/components/BlogCamTrai'
 import { Metadata } from 'next'
 import Image from 'next/image'
-import anh from '/src/images/huy.jpg'
+import anh from '/src/images/one.jpeg'
 
 
 export const metadata: Metadata = {
@@ -20,9 +20,7 @@ export default async function BlogCamTraiPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/80" />
         <div className="absolute top-16 left-1/2 -translate-x-1/2 text-center px-6">
           <h1 className="text-5xl font-serif font-bold text-white drop-shadow-[0_4px_10px_rgba(0,0,0,0.7)]">
-            <span className="bg-gradient-to-r from-green-700 via-emerald-500 to-lime-400 bg-clip-text text-transparent drop-shadow-md">
             Blog cắm trại
-          </span>
           </h1>
         
         </div>

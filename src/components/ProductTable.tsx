@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { products } from "@/data/products"
 import Link from 'next/link'
+import QR from '/src/images/qr2.png'
 import { IconAll, IconTent, IconMat, IconTable, IconLight, IconAccessory, IconCooking, IconIce } from "@/components/icons/CampIcons";
 
 const CATEGORY_DEFS = [
@@ -237,6 +238,22 @@ const ProductList: React.FC = () => {
             Để tránh làm hỏng thiết bị và giữ đồ dùng luôn sạch sẽ, <span className="font-semibold text-red-700">vui lòng KHÔNG sử dụng</span> <span className="font-medium">tấm phủ lều</span> (tấm phủ bên trên lều) và <span className="font-medium">tấm tăng chữ A</span> (tấm che nắng, che mưa dựng kiểu chữ A) để <span className="font-semibold">ngồi, nằm, hoặc trải dưới nền đất</span>.
           </p>
         </div>
+
+          {/* 5.QR */} Thanh toán không tiền mặt
+          <div>
+    <h4 className="text-base font-semibold text-green-700 mt-3 mb-2">💳 Thanh toán không tiền mặt</h4>
+    <p className="text-gray-700 leading-relaxed mb-3">
+      Bạn có thể quét mã QR bên dưới để thanh toán nhanh chóng và tiện lợi.
+    </p>
+    <div className="flex justify-center">
+  <img
+    src={QR.src}
+    alt="QR Thanh toán"
+    className="max-w-xs rounded-lg border border-gray-300 shadow-md bg-white p-2"
+  />
+</div>
+
+  </div>
       </div>
 
     </div>
