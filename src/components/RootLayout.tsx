@@ -191,7 +191,7 @@ export function Navigation() {
         </NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/dia-diem-cam-trai">
+        <NavigationItem href="/nhung-dia-diem-cam-trai-da-nang">
           Địa điểm cắm trại{' '}
         </NavigationItem>
         <NavigationItem href="/kinh-nghiem-cam-trai">Kinh Nghiệm cắm trại</NavigationItem>
@@ -248,7 +248,7 @@ export function NavigationV2() {
 
       <NavigationRowV2>
         <NavigationItemV2
-          href="/dia-diem-cam-trai"
+          href="/nhung-dia-diem-cam-trai-da-nang"
           className="relative sm:bg-none md:bg-none"
         >
           <div

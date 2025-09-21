@@ -27,11 +27,13 @@ export default function PromoBanner() {
       tag: 'FREE',
     },
     {
-      icon: '🔥',
-      title: 'Hỗ trợ ship gấp khi cần',
-      desc: 'Nếu khách cần gấp, chúng tôi có thể hỗ trợ đặt giùm grab/now để ship lều nhanh chóng (phí ship khách tự chịu).',
-      tag: 'HOT',
+      icon: '🎥',
+      title: 'Hỗ trợ dựng lều qua video call',
+      desc: 'Hướng dẫn trực tiếp qua video call cách dựng lều, tăng và sử dụng dụng cụ cắm trại, giúp chuyến đi của bạn thuận lợi hơn.',
+      tag: 'SUPPORT',
     },
+    
+    
     {
       icon: '⛺️',
       title: 'Setup & trang trí lều (có phí)',

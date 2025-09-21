@@ -44,9 +44,10 @@ export default function BlogCamTrai() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-t-3xl" />
                 <div className="absolute bottom-4 left-4 z-10">
-                  <h2 className="text-xl font-semibold text-white drop-shadow-sm font-serif">
-                    {article.title}
-                  </h2>
+                <h2 className="text-xl font-semibold text-yellow-300 drop-shadow-lg font-serif">
+  {article.title}
+</h2>
+
                 </div>
               </div>
               <div className="p-6">
