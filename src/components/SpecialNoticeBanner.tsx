@@ -5,31 +5,31 @@ export default function PromoBanner() {
     {
       icon: '🎓',
       title: 'Ưu đãi sinh viên Đà Nẵng',
-      desc: 'Giảm 10% cho sinh viên học Đà Nẵng (vui lòng nhắn shop, khi thuê luề).',
+      desc: 'Giảm 10% cho sinh viên',
       tag: 'SALE',
     },
     {
       icon: '🚚',
       title: 'Miễn phí giao nhận 5km',
-      desc: 'Áp dụng cho đơn hàng từ 500k trở lên (vui lòng đặt trước 1 ngày shop sắp xếp).',
+      desc: 'Áp dụng cho đơn hàng từ 500k trở lên',
       tag: 'NEW',
     },
     {
       icon: '🛏️',
-      title: 'Tặng gối hơi miễn phí',
-      desc: 'Đơn hàng từ 300k trở lên được tặng kèm gối hơi tiện lợi khi thuê lều cắm trại.',
+      title: 'Thuê gối hơi miễn phí',
+      desc: 'Đơn hàng từ 300k trở lên được tặng kèm gối hơi',
       tag: 'GIFT',
     },
     {
       icon: '🎪',
       title: 'Không phụ thu cuối tuần & lễ Tết',
-      desc: 'Thứ 7, Chủ nhật, ngày lễ và Tết đều không tính phụ thu. Nên đặt trước để giữ lều.',
+      desc: 'Thứ 7, Chủ nhật, ngày lễ và Tết đều không tính phụ thu',
       tag: 'FREE',
     },
     {
       icon: '🎥',
       title: 'Hỗ trợ dựng lều qua video call',
-      desc: 'Hướng dẫn trực tiếp qua video call cách dựng lều, tăng và sử dụng dụng cụ cắm trại, giúp chuyến đi của bạn thuận lợi hơn.',
+      desc: 'Hướng dẫn qua video call cách dựng lều, đồ cắm trại',
       tag: 'SUPPORT',
     },
     
@@ -37,7 +37,7 @@ export default function PromoBanner() {
     {
       icon: '⛺️',
       title: 'Setup & trang trí lều (có phí)',
-      desc: 'Nhận dựng và trang trí theo concept yêu cầu. Chi phí tuỳ địa điểm & mức độ, sẽ thoả thuận trước với khách.',
+      desc: 'Nhận dựng và trang trí theo concept yêu cầu.',
       tag: 'HOT',
     },
   ]
