@@ -51,7 +51,7 @@ const stats = [
 
 export default function WhyUs() {
   return (
-    <section className="py-24 px-6 sm:px-12">
+    <section className="pb-24 pt-16 px-6 sm:px-12">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
         {/* Left: Features */}
         <div className="space-y-6">
