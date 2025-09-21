@@ -31,7 +31,12 @@ export default async function Home() {
           {/* ✅ Đánh giá khách hàng */}
           <Testimonials />
       <FAQ />
+      <div>
+      <h2 className="text-5xl font-bold text-center text-gray-900 mb-10">
+         Blog cắm trại
+          </h2>
        <BlogCamTrai />
+      </div>
       <FAQSchema />
       <div className='mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 font-sans text-[#1F3329]'>
 
