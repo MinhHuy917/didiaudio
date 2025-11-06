@@ -13,7 +13,8 @@ import dendeban from '/src/images/dendeban.jpg'
 import dendoidau from '/src/images/dendoidau.jpg'
 import denled from '/src/images/denled.png'
 import denngoisao from '/src/images/denngoisao.png'
-import densinhhoat from '/src/images/densinhhoat.jpg'
+import denleu from '/src/images/denleu/0.png'
+import densinhhoat from '/src/images/densinhhoat/0.png'
 import ghe from '/src/images/ghe.png'
 import goihoi from '/src/images/goihoi.jpg'
 import khanban from '/src/images/khanbanthocam.png'
@@ -177,17 +178,19 @@ import thamvintageannh3 from '/src/images/thamvintage/3.png'
 import thamvintageannh4 from '/src/images/thamvintage/4.png'
 import thamvintageannh5 from '/src/images/thamvintage/5.png'
 
-import dencamtayannh1 from '/src/images/dencamtay/1.png'
-import dencamtayannh2 from '/src/images/dencamtay/2.png'
-import dencamtayannh3 from '/src/images/dencamtay/3.png'
-import dencamtayannh4 from '/src/images/dencamtay/4.png'
-import dencamtayannh5 from '/src/images/dencamtay/5.png'
+import densinhhoatanh1 from '/src/images/densinhhoat/1.png'
+import densinhhoatanh2 from '/src/images/densinhhoat/2.png'
+import densinhhoatanh3 from '/src/images/densinhhoat/3.png'
+import densinhhoatanh4 from '/src/images/densinhhoat/4.png'
+import densinhhoatanh5 from '/src/images/densinhhoat/5.png'
 
-import dendoidauannh1 from '/src/images/dendoidau/1.png'
-import dendoidauannh2 from '/src/images/dendoidau/2.png'
-import dendoidauannh3 from '/src/images/dendoidau/3.png'
-import dendoidauannh4 from '/src/images/dendoidau/4.png'
-import dendoidauannh5 from '/src/images/dendoidau/5.png'
+
+import denleuanh1 from '/src/images/denleu/1.png'
+import denleuanh2 from '/src/images/denleu/2.png'
+import denleuanh3 from '/src/images/denleu/3.png'
+import denleuanh4 from '/src/images/denleu/4.png'
+import denleuanh5 from '/src/images/denleu/5.png'
+
 
 import denvintageannh1 from '/src/images/denvintage/1.png'
 import denvintageannh2 from '/src/images/denvintage/2.png'
@@ -381,7 +384,7 @@ export const products = [
     image3: leu2anh5.src,
     image4: leu2anh7.src,
     image5: leu2anh3.src,
-    originalPrice: 80, 
+    originalPrice: 80,
     price: 70,
     quantity: 1,
     detail1: 'Lớp chống mưa 2 lớp bảo vệ hiệu quả, vải polyester 210T PU2000mm chống thấm tốt.',
@@ -401,7 +404,7 @@ export const products = [
     image4: leu4anh4.src,
     image5: leu4anh5.src,
     image7: leu4anh7.src,
-    originalPrice: 100, 
+    originalPrice: 100,
     price: 90,
     quantity: 1,
     detail1: 'Thiết kế 2 lớp vải dù 190T Polyester phủ PU 3000mm chống mưa cực tốt, đáy lều bằng bạt PE Tarpaulin phủ PU 5000mm – danh xưng “quái vật chịu mưa”.',
@@ -420,7 +423,7 @@ export const products = [
     image3: leu6anh3.src,
     image4: leu6anh4.src,
     image5: leu6anh5.src,
-    originalPrice: 160, 
+    originalPrice: 160,
     price: 140,
     quantity: 1,
     detail1: 'Lều lớn dành cho 6-8 người, kích thước 3m x 2.7m x cao 1.9m, thoáng mát và thoải mái cho gia đình hoặc nhóm đông người.',
@@ -429,7 +432,7 @@ export const products = [
     detail4: 'Trang bị 1 cửa chính + 3 cửa sổ (đều 2 lớp: vải + lưới B3 chống côn trùng), 3 tai thỏ thông gió, kèm đầy đủ cọc và dây chằng.',
     videoId: 'jUJEb9rUzA4'
   },
-  
+
   {
     id: 'thue-leu-8-da-nang',
     name: 'Lều 8',
@@ -440,7 +443,7 @@ export const products = [
     image3: leu8anh3.src,
     image4: leu8anh4.src,
     image5: leu8anh5.src,
-    originalPrice: 200, 
+    originalPrice: 200,
     price: 180,
     quantity: 1,
     detail1: 'Lều Dragon Dome 8P kích thước 4m x 2m x 1.6m, phù hợp cho 6–8 người sử dụng, màu be và trắng trang nhã.',
@@ -459,14 +462,14 @@ export const products = [
     image5: vonganh5.src,
     image6: vonganh6.src,
     image7: vonganh7.src,
-    originalPrice: 50, 
+    originalPrice: 50,
     price: 40,
     quantity: 1,
     detail1: 'Võng đơn NatureHike chính hãng – làm từ vải Polyester chống thấm nước, chắc chắn và bền bỉ, thích hợp dùng ngoài trời.',
     detail2: 'Tải trọng tối đa 180kg, an toàn cho 1 người lớn sử dụng. Trọng lượng nhẹ chỉ 660g, dễ mang theo.',
     detail3: 'Gấp gọn tiện lợi, kích thước xếp lại chỉ 29×15cm, có túi đựng kèm theo.',
     detail4: 'Màu sắc: xanh dương, cam, xám. Mã sản phẩm: NH21DC001 – thương hiệu uy tín NatureHike.'
-  },  
+  },
   {
     id: 'goi-hoi-intex',
     name: 'Gối hơi Intex',
@@ -477,7 +480,7 @@ export const products = [
     image4: goihoianh4.src,
     image5: goihoianh6.src,
     image6: goihoianh7.src,
-    originalPrice: 8, 
+    originalPrice: 8,
     price: 5,
     quantity: 1,
     detail1: 'Gối hơi Intex cao cấp – chất liệu mềm mại, dễ lau chùi, không thấm nước, phù hợp sử dụng ngoài trời hay trong nhà.',
@@ -485,7 +488,7 @@ export const products = [
     detail3: 'Thao tác sử dụng đơn giản – chỉ vài phút để bơm đầy, có thể gấp gọn mang theo khi đi du lịch, cắm trại, ngủ trưa tại văn phòng.',
     detail4: 'Kèm theo bơm tay tiện dụng giúp bạn dễ dàng bơm gối ở bất kỳ đâu mà không cần dụng cụ điện.',
   },
-  
+
   {
     id: 'tam-cach-nhiet',
     name: 'Tấm cách nhiệt',
@@ -496,7 +499,7 @@ export const products = [
     image4: cachnhietanh4.src,
     image5: cachnhietanh5.src,
     image6: cachnhietanh6.src,
-    price: 0, 
+    price: 0,
     quantity: 1,
     detail1: 'Tấm lót đa năng chống nước, cách nhiệt, dày 2mm, tráng bạc 2 mặt – dùng được cả hai mặt.',
     detail2: 'Chất liệu Aluminum Waterproof PR bền bỉ, chịu ma sát tốt, không dễ rách, dễ vệ sinh, trọng lượng nhẹ 0.4kg.',
@@ -515,7 +518,7 @@ export const products = [
     image3: tang3manh3.src,
     image4: tang3manh4.src,
     image5: tang3manh5.src,
-    originalPrice: 80, 
+    originalPrice: 80,
     price: 50,
     quantity: 1,
     detail1: 'Tấm tăng 3x3m phủ PU2000mm, chống thấm tốt – che mưa nắng hiệu quả cho nhóm 4–6 người.',
@@ -523,7 +526,7 @@ export const products = [
     detail3: 'Kèm 2 trụ thép sơn tĩnh điện, dây dù và cọc ghim – dễ dựng ở nhiều địa hình.',
     detail4: 'Gấp gọn vào túi 60x15cm – tiện mang theo khi đi rừng, biển, cắm trại dài ngày.',
     videoId: '7lWx-hpQdAs',
-  },  
+  },
   {
     id: 'tang-20m2',
     name: 'Tăng 8-12 người - diện tích 20m2',
@@ -534,7 +537,7 @@ export const products = [
     image3: tang4m5anh3.src,
     image4: tang4m5anh4.src,
     image5: tang4m5anh5.src,
-    originalPrice: 150, 
+    originalPrice: 150,
     price: 100,
     quantity: 1,
     detail1: 'Tăng lớn phủ PU2000mm, diện tích 4.5x4.5m – che được 8–12 người, dùng cho nhóm đông.',
@@ -553,7 +556,7 @@ export const products = [
     image3: bo2caychongtanganh3.src,
     image4: bo2caychongtanganh4.src,
     image5: bo2caychongtanganh5.src,
-    originalPrice: 30, 
+    originalPrice: 30,
     price: 20,
     quantity: 1,
     detail1: 'Chất liệu ống sắt mạ kẽm Ø16mm, chống gỉ, dẻo dai và bền chắc.',
@@ -561,7 +564,7 @@ export const products = [
     detail3: 'Trọng lượng 0.84kg, kích thước đóng gọn 60x12cm, có túi đựng tiện lợi.',
     detail4: 'Phù hợp chống tăng bạt, mái che lều khi cắm trại, picnic, dã ngoại.'
   },
-  
+
   {
     id: 'tham-da-ngoai',
     name: 'Thảm dã ngoại',
@@ -572,7 +575,7 @@ export const products = [
     image3: thamdangoaiannh3.src,
     image4: thamdangoaiannh4.src,
     image5: thamdangoaiannh5.src,
-    originalPrice: 30, 
+    originalPrice: 30,
     price: 25,
     quantity: 1,
     detail1: 'Thảm vải dù chống thấm nước, kích thước 2.1x2m',
@@ -580,7 +583,7 @@ export const products = [
     detail3: 'Phù hợp picnic, tắm nắng, đi biển, công viên, chống ẩm và chống xước tốt.',
     detail4: 'Bộ gồm: thảm, túi đựng, móc carabiner và 4 đinh ghim nhựa cố định.'
   },
-  
+
   {
     id: 'tham-vintage',
     name: 'Thảm Vintage',
@@ -591,7 +594,7 @@ export const products = [
     image3: thamvintageannh3.src,
     image4: thamvintageannh4.src,
     image5: thamvintageannh5.src,
-    originalPrice: 50, 
+    originalPrice: 50,
     price: 40,
     quantity: 1,
     detail1: 'Thảm picnic thổ cẩm đỏ chống thấm, dày 3.5mm, kích thước 2x2m hoặc 1.5x2m.',
@@ -610,7 +613,7 @@ export const products = [
     image3: gheanh3.src,
     image4: gheanh4.src,
     image5: gheanh5.src,
-    originalPrice: 30, 
+    originalPrice: 30,
     price: 20,
     quantity: 1,
     detail1: 'Ghế xếp đa năng thư giãn, chịu lực lên đến 130kg, gấp gọn tiện lợi – dùng được trong nhiều tình huống ngoài trời và trong nhà.',
@@ -629,7 +632,7 @@ export const products = [
     image3: gheNH7.src,
     image4: gheNH2.src,
     image5: gheNH10.src,
-    originalPrice: 35, 
+    originalPrice: 35,
     price: 30,
     quantity: 1,
     detail1: 'Ghế xếp mini câu cá, đi du lịch NatureHike NH16J001-J. Là một mẫu ghế dã ngoại được ưa chuộng trong cộng đồng camper với thiết kế đơn giản chắc chắn, gọn nhẹ giúp người sử dụng có thể luôn mang bên mình.',
@@ -639,7 +642,7 @@ export const products = [
   },
 
 
-  
+
   {
     id: 'thue-ban-camping-da-nang',
     name: 'Bàn nhôm',
@@ -650,7 +653,7 @@ export const products = [
     image3: bananh3.src,
     image4: bananh4.src,
     image5: bananh5.src,
-    originalPrice: 60, 
+    originalPrice: 60,
     price: 50,
     quantity: 1,
     detail1: 'Bàn xếp dã ngoại gấp gọn, chất liệu hợp kim nhôm cao cấp siêu nhẹ, tiện lợi cho picnic, du lịch, cắm trại hoặc sử dụng tại nhà.',
@@ -658,7 +661,7 @@ export const products = [
     detail3: 'Màu sắc: màu gỗ trang nhã – thiết kế gọn gàng, chắc chắn, là lựa chọn lý tưởng cho phong cách sống outdoor năng động.',
     detail4: 'Mặt bàn rộng rãi 90x60cm, cao 43cm – đủ để bày nhiều vật dụng cần thiết trong các buổi picnic, ăn uống hoặc ngồi chơi thư giãn ngoài trời.',
   },
-  
+
   {
     id: 'ban-nhom-naturehike-cnh22ju050',
     name: 'Bàn nhôm Naturehike',
@@ -669,7 +672,7 @@ export const products = [
     image3: banNH5.src,
     image4: banNH8.src,
     image5: banNH9.src,
-    originalPrice: 70, 
+    originalPrice: 70,
     price: 60,
     quantity: 1,
     detail1: 'Thiết kế bàn cuộn trứng, dễ dàng lắp ráp và gấp gọn siêu nhỏ, tiện lợi mang theo trong các chuyến cắm trại, dã ngoại hay đi câu cá.',
@@ -683,7 +686,7 @@ export const products = [
     name: 'Khăn bàn thổ cẩm',
     catalogue: '(1m x 1m5)',
     image: khanban.src,
-    originalPrice: 15, 
+    originalPrice: 15,
     price: 10,
     quantity: 1,
     detail1: 'Khăn bàn thổ cẩm với họa tiết truyền thống, mang phong cách boho – thích hợp trang trí bàn ăn, bàn trà, bàn cắm trại hoặc sử dụng làm phông nền chụp ảnh.',
@@ -692,47 +695,46 @@ export const products = [
     detail4: 'Tông màu thổ cẩm bắt mắt, dễ kết hợp với các vật dụng nội thất, mang lại cảm giác ấm cúng, gần gũi thiên nhiên.',
     detail5: 'Có thể sử dụng làm khăn trải bàn, tấm phủ đồ dùng, khăn phủ vali, khăn trải picnic, thảm chụp sản phẩm decor,...'
   },
-  
+  {
+    id: 'den-sinh-hoat',
+    name: 'Đèn Sinh Hoạt',
+    catalogue: '(thời gian chiếu sáng 8-16h)',
+    image: densinhhoatanh5.src,
+    image1: densinhhoatannh2.src,
+    image2: densinhhoatannh1.src,
+    image3: densinhhoatannh3.src,
+    image4: densinhhoatannh4.src,
+    image5: densinhhoat.src,
+    originalPrice: 80,
+    price: 50,
+    quantity: 1,
+    detail1: 'Pin dung lượng cực lớn, có khả năng chiếu sáng liên tục trên 10 giờ ở chế độ sáng cao nhất, đạt độ sáng siêu mạnh mẽ tương đương bóng đèn LED 30W.',
+    detail2: 'Thiết kế gọn nhẹ, lý tưởng để mang theo khi đi cắm trại, du lịch hoặc các hoạt động dã ngoại tiện lợi.',
+    detail3: 'Đèn hỗ trợ thay thế pin dễ dàng và có thể dùng như pin dự phòng để sạc điện thoại và các thiết bị di động.',
+    detail4: 'Đảm bảo thời gian chiếu sáng liên tục hơn 10 giờ ở chế độ sáng cao. Tích hợp móc treo và nam châm hít kim loại cực kỳ tiện dụng.',
+  },
 
-  
   {
-    id: 'den-cam-tay',
-    name: 'Đèn cầm tay',
-    catalogue: '(thời gian chiếu sáng 7-9h)',
-    image: dencamtay.src,
-    image1: dencamtayannh1.src,
-    image2: dencamtayannh2.src,
-    image3: dencamtayannh3.src,
-    image4: dencamtayannh4.src,
-    image5: dencamtayannh5.src,
-    originalPrice: 20, 
-    price: 10,
+    id: 'den-leu',
+    name: 'Đèn lều',
+    catalogue: '(thời gian chiếu sáng 4-8h)',
+    image: denleu.src,
+    image1: denleuanh1.src,
+    image2: denleuanh2.src,
+    image3: denleuanh3.src,
+    image4: denleuanh4.src,
+    image5: denleuanh5.src,
+    originalPrice: 40,
+    price: 20,
     quantity: 1,
-    detail1: 'Đèn pin siêu sáng chiếu xa 200–500m, 3 chế độ sáng: Cao / Thấp / Nhấp nháy.',
-    detail2: 'Bóng LED XHP70, công suất 10W–32W, thân nhựa ABS bền, chống nước, chống cháy.',
-    detail3: 'Thời gian chiếu sáng 7–9 giờ, có đèn báo pin, cổng sạc micro USB tiện lợi.',
-    detail4: 'Tặng kèm cáp sạc, trọng lượng 736g, tuổi thọ lên đến 100.000 giờ.'
+    detail1: 'Đèn tích điện treo lều cắm trại công suất 20W, sử dụng pin sạc rời loại 18650.',
+    detail2: 'Sản phẩm bao gồm: 1 đèn, 2 pin dung lượng 4500mAh mỗi viên, 1 dây sạc USB và hộp đựng pin.',
+    detail3: 'Có thể thay thế pin dễ dàng, phù hợp cho các chuyến đi dài ngày, tiết kiệm và linh hoạt.',
+    detail4: 'Thời gian chiếu sáng: 4h ở chế độ sáng nhất, 5-6h ở chế độ sáng thấp hơn.'
   },
-  
-  {
-    id: 'den-doi-dau',
-    name: 'Đèn đội đầu',
-    catalogue: '(thời gian chiếu sáng 8-10h)',
-    image: dendoidau.src,
-    image1: dendoidauannh1.src,
-    image2: dendoidauannh2.src,
-    image3: dendoidauannh3.src,
-    image4: dendoidauannh4.src,
-    image5: dendoidauannh5.src,
-    originalPrice: 20, 
-    price: 10,
-    quantity: 1,
-    detail1: 'Đèn đeo đầu LED siêu sáng GP-506',
-    detail2: 'Công suất 12W, sử dụng pin sạc, thời gian chiếu sáng 8–10h sau khi sạc đầy.',
-    detail3: 'Thiết kế nhỏ gọn, dây đeo co giãn điều chỉnh dễ dàng, đèn có thể xoay linh hoạt.',
-    detail4: 'Vỏ nhựa bền, chống cháy nổ, dùng tốt trong môi trường ẩm ướt.'
-  },
-  
+
+
+
   {
     id: 'den-vintage',
     name: 'Đèn Vintage',
@@ -743,7 +745,7 @@ export const products = [
     image3: denvintageannh3.src,
     image4: denvintageannh4.src,
     image5: denvintageannh5.src,
-    originalPrice: 25, 
+    originalPrice: 25,
     price: 15,
     quantity: 1,
     detail1: 'Đèn vintage Tmountain DCP10 dùng pin sạc 18650, ánh sáng vàng, thiết kế retro.',
@@ -751,7 +753,7 @@ export const products = [
     detail3: 'Chất liệu nhựa ABS + kim loại cao cấp, có núm xoay điều chỉnh độ sáng.',
     detail4: 'Phù hợp decor phòng, cắm trại, lưu ý không chống nước, tránh rọi trực tiếp vào mắt.'
   },
-  
+
   {
     id: 'den-led-tron',
     name: 'Đèn led tròn',
@@ -762,7 +764,7 @@ export const products = [
     image3: denledtronannh3.src,
     image4: denledtronannh4.src,
     image5: denledtronannh5.src,
-    originalPrice: 30, 
+    originalPrice: 30,
     price: 20,
     quantity: 1,
     detail1: 'Dây đèn led cherry ball dài 6m gồm 40 bóng tròn, dùng trang trí lều trại, glamping, sân vườn.',
@@ -770,7 +772,7 @@ export const products = [
     detail3: 'Chạy bằng 3 pin AA hoặc chân USB (sản phẩm kèm pin, mặc định loại dùng pin).',
     detail4: 'Có 2 chế độ sáng: nhấp nháy và sáng liên tục.'
   },
-  
+
   {
     id: 'den-led-ngoi-sao',
     name: 'Đèn led ngôi sao',
@@ -781,7 +783,7 @@ export const products = [
     image3: denngoisaoannh3.src,
     image4: denngoisaoannh4.src,
     image5: denngoisaoannh5.src,
-    originalPrice: 50, 
+    originalPrice: 50,
     price: 30,
     quantity: 1,
     detail1: 'Dây đèn rèm hình ngôi sao dài 4m với 138 bóng led, gồm 6 ngôi sao lớn và 6 ngôi sao nhỏ.',
@@ -789,25 +791,8 @@ export const products = [
     detail3: 'An toàn cho trẻ nhỏ, không lo rò điện khi dùng ngoài trời hoặc nơi ẩm ướt.',
     detail4: 'Có điều khiển chế độ nhấp nháy hoặc sáng liên tục, phù hợp trang trí lều trại, decor nơi không có điện.'
   },
-  
-  {
-    id: 'den-sinh-hoat',
-    name: 'Đèn sinh hoạt',
-    catalogue: '(kèm cặp pin thêm, tổng thời gian chiếu sáng 8-12h)',
-    image: densinhhoat.src,
-    image1: densinhhoatannh1.src,
-    image2: densinhhoatannh2.src,
-    image3: densinhhoatannh3.src,
-    image4: densinhhoatannh4.src,
-    image5: densinhhoatannh5.src,
-    originalPrice: 40, 
-    price: 30,
-    quantity: 1,
-    detail1: 'Đèn tích điện treo lều cắm trại công suất 20W, sử dụng pin sạc rời loại 18650.',
-    detail2: 'Sản phẩm bao gồm: 1 đèn, 2 pin dung lượng 4500mAh mỗi viên, 1 dây sạc USB và hộp đựng pin.',
-    detail3: 'Có thể thay thế pin dễ dàng, phù hợp cho các chuyến đi dài ngày, tiết kiệm và linh hoạt.',
-    detail4: 'Thời gian chiếu sáng: 4h ở chế độ sáng nhất, 5-6h ở chế độ sáng thấp hơn.'
-  },
+
+
   {
     id: 'chan-treo-den',
     name: 'Giá chân treo đèn 1m',
@@ -818,7 +803,7 @@ export const products = [
     image3: chantreodenannh3.src,
     image4: chantreodenannh4.src,
     image5: chantreodenannh5.src,
-    originalPrice: 25, 
+    originalPrice: 25,
     price: 20,
     quantity: 1,
     detail1: 'Chân treo đèn đa năng dùng để kẹp vào bàn hoặc cắm xuống đất, phù hợp cho các buổi cắm trại, picnic, dã ngoại hoặc sử dụng tại nhà.',
@@ -829,8 +814,8 @@ export const products = [
     detail6: 'Thiết kế tháo ráp nhanh chóng, dễ mang theo trong balo. Màu sắc: Đen – hiện đại và dễ phối với các thiết bị cắm trại khác.'
   },
   {
-    id: 'cay-tru-cot-gia-treo-den',
-    name: 'Cây trụ treo đèn 1m8',
+    id: 'tru-cot-gia-treo-den',
+    name: 'Trụ treo đèn 1m8',
     catalogue: '(phù hợp treo đèn cao)',
     image: caytrutreodenanh2.src,
     image1: caytrutreodenanh1.src,
@@ -838,7 +823,7 @@ export const products = [
     image3: caytrutreodenanh4.src,
     image4: caytrutreodenanh6.src,
     image5: caytrutreodenanh3.src,
-    originalPrice: 35, 
+    originalPrice: 35,
     price: 25,
     quantity: 1,
     detail1: 'Khung nhôm hợp kim siêu nhẹ, kháng nước & kháng gỉ tốt',
@@ -847,7 +832,7 @@ export const products = [
     detail4: 'Phù hợp mang theo khi đi cắm trại, picnic, dã ngoại',
     detail5: 'Đường kính ống nhôm 1.5cm, chịu tải tốt, không cong gãy',
     detail6: 'Trọng lượng chỉ 600g – gồm chân cắm, 4 đoạn trụ & túi đựng'
-  },  
+  },
   {
     id: 'sac-du-phong',
     name: 'Sạc dự phòng',
@@ -858,14 +843,14 @@ export const products = [
     image3: sacduphongannh3.src,
     image4: sacduphongannh4.src,
     image5: sacduphongannh5.src,
-    originalPrice: 50, 
+    originalPrice: 50,
     price: 30,
     quantity: 1,
     detail1: 'Pin sạc dự phòng BINTECH dung lượng 20.000mAh, hỗ trợ sạc nhanh với 2 cổng sạc ra USB và 2 cổng sạc vào (Type-C, Micro USB).',
     detail2: 'Thiết kế bo tròn, gọn nhẹ, dễ cầm nắm, chống trơn trượt và bám vân tay. Lõi pin Li-Po an toàn, công suất 15W.',
     detail3: 'Tích hợp nhiều lớp bảo vệ thông minh: chống quá nhiệt, đoản mạch, quá áp, quá dòng, và hỗ trợ Reset.',
   },
-  
+
   {
     id: 'thue-loa-nghe-nhac-da-nang',
     name: 'Loa Tronsmart T7 Mini',
@@ -876,7 +861,7 @@ export const products = [
     image3: loaanh3.src,
     image4: loaanh4.src,
     image5: loaanh5.src,
-    originalPrice: 70, 
+    originalPrice: 70,
     price: 50,
     quantity: 1,
     detail1: 'Loa bluetooth công suất 15W, âm bass mạnh, phù hợp dùng trong không gian ngoài trời như cắm trại, dã ngoại.',
@@ -895,8 +880,8 @@ export const products = [
     image3: loakaraoke3.src,
     image4: loakaraoke4.src,
     image5: loakaraoke5.src,
-    originalPrice: 350, 
-    price: 250,
+    originalPrice: 350,
+    price: 290,
     quantity: 1,
     detail1: 'Âm thanh cực mạnh với hệ thống 16 loa: 2 bass 20cm từ 176 coil 51 sườn nhôm đúc, 12 loa trung, 2 treble – đáp ứng tốt cả nhạc nền nhẹ nhàng lẫn karaoke công suất lớn.',
     detail2: 'Pin 12V10Ah sử dụng liên tục khoảng 4 giờ – phù hợp cho tiệc cưới, sinh nhật, hội họp, camping ngoài trời.',
@@ -904,7 +889,7 @@ export const products = [
     detail4: 'Kết nối đa dạng: Bluetooth, USB, HDMI, TF, OPT in, AUX, MIC, GUITAR – dễ dàng phát nhạc từ điện thoại, USB hoặc nhạc cụ.',
     detail5: 'Thiết kế sang trọng với vỏ bọc da, mặt nạ gỗ lưới sắt chắc chắn; kích thước gọn (52×33×26cm), trọng lượng 18kg, có tay cầm.'
   },
-  
+
   {
     id: 'quat-tich-dien',
     name: 'Quạt tích điện',
@@ -915,14 +900,14 @@ export const products = [
     image3: quatanh3.src,
     image4: quatanh4.src,
     image5: quatanh5.src,
-    originalPrice: 70, 
+    originalPrice: 70,
     price: 60,
     quantity: 1,
     detail1: 'Quạt tích điện F6 mẫu 2024, pin siêu khủng 20.000mAh, tích hợp đèn chiếu sáng 3 mức, điều khiển từ xa và chức năng hẹn giờ.',
     detail2: 'Thời gian dùng: 70h (mức gió thấp), 11h (gió mạnh nhất), 9h (bật toàn bộ chức năng); đèn sáng liên tục đến 300h.',
     detail3: 'Quạt sử dụng động cơ kép nam châm 9 lõi, cánh quạt kép thổi xa 10m, có thể xoay 180°, dùng như pin sạc dự phòng.',
     detail4: 'Thiết kế nhỏ gọn, phù hợp treo lều, để bàn, xe ô tô, dùng khi mất điện hay đi dã ngoại. Màu: Cam, Xanh. Trọng lượng 1.2kg.'
-  },  
+  },
   {
     id: 'thue-trippd-da-nang',
     name: 'Tripod',
@@ -933,7 +918,7 @@ export const products = [
     image3: tripodanh3.src,
     image4: tripodanh4.src,
     image5: tripodanh5.src,
-    originalPrice: 45, 
+    originalPrice: 45,
     price: 40,
     quantity: 1,
     detail1: 'Tripod đa năng dùng cho điện thoại & máy ảnh, thiết kế hợp kim nhôm nhẹ, bền, có remote điều khiển từ xa.',
@@ -941,8 +926,9 @@ export const products = [
     detail3: 'Đầu tripod xoay 360°, có thể lật ngang 90°, hỗ trợ chụp dọc và ngang. Tích hợp thước đo cân bằng cho ảnh phong cảnh, công trình.',
     detail4: 'Ống trục giữa có thể xoay để tăng lực giữ, phù hợp cả máy nặng. Trọng lượng 1.2kg, đường kính ống 21.2*16.2cm, tiện mang đi dã ngoại.'
   },
-    {id: 'thue-bep-nuong-da-nang',
-    name: 'Bếp nướng',
+  {
+    id: 'thue-bep-nuong-da-nang',
+    name: 'Bếp nướng Nhỏ',
     catalogue: '(kèm 2 kẹp inox)',
     image: bepnuong.src,
     image1: bepnuonganh1.src,
@@ -950,8 +936,8 @@ export const products = [
     image3: bepnuonganh3.src,
     image4: bepnuonganh4.src,
     image5: bepnuonganh5.src,
-    originalPrice: 50, 
-    price: 40, 
+    originalPrice: 50,
+    price: 40,
     quantity: 1,
     detail1: 'Bếp nướng inox nhỏ gọn, phù hợp sử dụng gia đình, dã ngoại, sân thượng, sân vườn. Có kèm 2 kẹp inox, vỉ nướng và túi đựng tiện lợi.',
     detail2: 'Tấm lưới điều chỉnh được 3 mức chiều cao, giúp kiểm soát nhiệt và tránh cháy thức ăn. Tặng kèm 1 đôi găng tay cách nhiệt.',
@@ -961,7 +947,7 @@ export const products = [
 
   {
     id: 'cho-thue-bep-nuong-da-nang',
-    name: 'Bếp Nướng Campingmoon MT3',
+    name: 'Bếp Nướng Lớn',
     catalogue: '(kèm 2 kẹp inox)',
     image: bepnuongMT3.src,
     image1: bepnuongMT3anh1.src,
@@ -969,15 +955,15 @@ export const products = [
     image3: bepnuongMT3anh3.src,
     image4: bepnuongMT3anh4.src,
     image5: bepnuongMT3anh5.src,
-    originalPrice: 80, 
+    originalPrice: 80,
     price: 70,
     quantity: 1,
     detail1: 'Chất liệu inox không gỉ cao cấp, chịu nhiệt tốt, tuổi thọ cao',
     detail2: 'Kích thước mở: 49 x 34 x 26cm | Gấp gọn: 49 x 20 x 9cm | Trọng lượng: 4.3kg',
     detail3: 'Vỉ nướng điều chỉnh độ cao, tháo lắp nhanh, dễ vệ sinh',
     detail4: 'Phù hợp cho nhóm 8-10 người, lý tưởng cho dã ngoại, picnic, BBQ ngoài trời'
-  },  
-  
+  },
+
   {
     id: 'bep-cui-da-ngoai-ti-artisan-thep-khong-gi',
     name: 'Bếp củi dã ngoại Ti Artisan thép không gỉ 304',
@@ -988,7 +974,7 @@ export const products = [
     image3: bepcuianh3.src,
     image4: bepcuianh4.src,
     image5: bepcuianh5.src,
-    originalPrice: 50, 
+    originalPrice: 50,
     price: 40,
     quantity: 1,
     detail1: 'Làm từ thép không gỉ 304, chứa >11% Crom, chống ăn mòn, bền bỉ và dễ vệ sinh.',
@@ -996,7 +982,7 @@ export const products = [
     detail3: 'Sử dụng nhiên liệu tự nhiên như củi, cành cây, lá khô… thân thiện môi trường, không cần gas.',
     detail4: 'Tối ưu luồng khí giúp đốt hiệu quả, chân đế chữ thập chắc chắn, dùng được với nhiều loại nồi.',
     detail5: 'Kích thước: 125 x 125 x 160mm | Trọng lượng: 448g'
-  },  
+  },
   {
     id: 'bep-gas',
     name: 'Bếp gas',
@@ -1007,7 +993,7 @@ export const products = [
     image3: bepgasanh3.src,
     image4: bepgasanh4.src,
     image5: bepgasanh5.src,
-    originalPrice: 60, 
+    originalPrice: 60,
     price: 50,
     quantity: 1,
     detail1: 'Bếp gas mini WAJARIGHT hàng xuất Nhật. Thiết kế cứng cáp, tiện lợi cho du lịch, picnic, cắm trại. Chất liệu: thép không gỉ, đồng, nhôm, nylon.',
@@ -1015,7 +1001,7 @@ export const products = [
     detail3: 'Tích hợp đánh lửa nhanh. Van điện từ an toàn, tự ngắt khi áp suất tăng. Núm điều chỉnh lửa linh hoạt. Giá đỡ có răng cưa giữ nồi chắc chắn.',
     detail4: 'Thiết kế gấp gọn nhanh chóng, tặng kèm túi đựng tiện lợi. Thích hợp cho các hoạt động ngoài trời như cắm trại, câu cá, trekking,...'
   },
-  
+
   {
     id: 'bep-con',
     name: 'Bếp cồn',
@@ -1026,14 +1012,14 @@ export const products = [
     image3: bepconanh3.src,
     image4: bepconanh4.src,
     image5: bepconanh5.src,
-    originalPrice: 30, 
+    originalPrice: 30,
     price: 20,
     quantity: 1,
     detail1: 'Bếp cồn inox 304 dày dặn, chịu nhiệt tốt, an toàn hơn so với bếp gas trong môi trường cắm trại.',
     detail2: 'Thiết kế nhỏ gọn, dễ dàng mang theo, phù hợp nấu lẩu, nấu ăn đơn giản khi đi picnic, dã ngoại.',
     detail3: 'Có cần gạt điều chỉnh lửa to nhỏ linh hoạt, không lo cháy nổ khi dùng với cồn khô.',
     detail4: 'Dễ vệ sinh, không bị gỉ sét, phù hợp với nhiều loại nồi trên thị trường.'
-  },  
+  },
   {
     id: 'thung-da-8l',
     name: 'Thùng đá 8L',
@@ -1044,7 +1030,7 @@ export const products = [
     image3: thungda8Lanh3.src,
     image4: thungda8Lanh4.src,
     image5: thungda8Lanh5.src,
-    originalPrice: 25, 
+    originalPrice: 25,
     price: 20,
     quantity: 1,
     detail1: 'Thùng đá Ruby 8L chính hãng Nhựa Hiệp Thành. Thiết kế hình chữ nhật, có quai xách tiện lợi.',
@@ -1052,7 +1038,7 @@ export const products = [
     detail3: 'Sức chứa: đựng được 8 lon nước ngọt (loại 330ml). Giữ đá lạnh từ 6–8 tiếng, phù hợp cho dã ngoại, picnic, cắm trại.',
     detail4: 'Sản phẩm phù hợp sử dụng cho gia đình, quán nước hoặc đi đường xa.'
   },
-  
+
   {
     id: 'thung-da-16l',
     name: 'Thùng đá 16L',
@@ -1063,7 +1049,7 @@ export const products = [
     image3: thungda16Lanh3.src,
     image4: thungda16Lanh4.src,
     image5: thungda16Lanh5.src,
-    originalPrice: 35, 
+    originalPrice: 35,
     price: 30,
     quantity: 1,
     detail1: 'Thùng đá 16L chính hãng Nhựa Việt Nhật – sản xuất tại Việt Nam. Thiết kế chắc chắn, phù hợp cho các chuyến đi du lịch, dã ngoại.',
@@ -1071,7 +1057,7 @@ export const products = [
     detail3: 'Giữ nhiệt độ ở mức 0°C trong khoảng 4–6 tiếng. Nắp đậy kín, có tay cầm chắc chắn giúp di chuyển dễ dàng.',
     detail4: 'Bề mặt bóng, dễ lau chùi vệ sinh. Lớp nhựa cách nhiệt hiệu quả, giữ lạnh tối ưu. Phù hợp cho gia đình, quán nước, hoặc sử dụng ngoài trời.'
   },
-  
+
   {
     id: 'thung-da-25l',
     name: 'Thùng đá 25L',
@@ -1082,14 +1068,14 @@ export const products = [
     image3: thungda25Lanh3.src,
     image4: thungda25Lanh4.src,
     image5: thungda25Lanh5.src,
-    originalPrice: 45, 
+    originalPrice: 45,
     price: 40,
     quantity: 1,
     detail1: 'Thùng đá 25L chính hãng Nhựa Duy Tân – sản xuất tại Việt Nam. Thiết kế bền chắc, dung tích lớn, phù hợp cho các buổi dã ngoại, tiệc ngoài trời.',
     detail2: 'Kích thước: 47.0 x 33.7 x 33.7 cm. Dung tích sử dụng: 26.4L',
     detail3: 'Chất liệu nhựa PP và PU cao cấp, an toàn thực phẩm, có khả năng giữ lạnh hiệu quả. Không chứa BPA.',
     detail4: 'Thiết kế nắp đậy kín, tay xách tiện lợi. Bề mặt nhẵn dễ vệ sinh. Phù hợp sử dụng cho gia đình, đi cắm trại.'
-  },  
+  },
 
   {
     id: 'thung-da-45l',
@@ -1101,14 +1087,14 @@ export const products = [
     image3: thungda45Lanh4.src,
     image4: thungda45Lanh5.src,
     image5: thungda45Lanh6.src,
-    originalPrice: 70, 
+    originalPrice: 70,
     price: 60,
     quantity: 1,
     detail1: 'Thùng đá 45L chính hãng Nhựa Duy Tân – sản xuất tại Việt Nam. Thiết kế bền chắc, dung tích lớn, phù hợp cho các buổi dã ngoại, tiệc ngoài trời.',
     detail2: 'Kích thước: 60.5 x 39.6 x 41 cm. Dung tích sử dụng: 45L',
     detail3: 'Chất liệu nhựa PP và PU cao cấp, an toàn thực phẩm, có khả năng giữ lạnh hiệu quả. Không chứa BPA.',
     detail4: 'Thiết kế nắp đậy kín, tay xách tiện lợi. Bề mặt nhẵn dễ vệ sinh. Phù hợp sử dụng cho gia đình, đi cắm trại.'
-  },  
+  },
   {
     id: 'bo-noi-4-nguoi',
     name: 'Bộ nồi 3-4 người',
@@ -1119,7 +1105,7 @@ export const products = [
     image3: bonoinhoanh3.src,
     image4: bonoinhoanh4.src,
     image5: bonoinhoanh5.src,
-    originalPrice: 40, 
+    originalPrice: 40,
     price: 30,
     quantity: 1,
     detail1: 'Bộ nồi dã ngoại 3 món gồm ấm nước, nồi, chảo bằng hợp kim nhôm cao cấp, gọn nhẹ, tiện lợi cho 3-4 người. Thích hợp dùng khi cắm trại, picnic, trekking, hoặc sử dụng tại nhà.',
@@ -1127,7 +1113,7 @@ export const products = [
     detail3: 'Chất liệu nhôm cao cấp chống oxy hóa, truyền nhiệt tốt, làm nóng nhanh. Tay cầm nhựa cách nhiệt, chống trượt. Chảo chống dính, dễ vệ sinh. Vòi ấm thiết kế tinh xảo ngăn nước chảy mạnh.',
     detail4: 'Công nghệ xử lý anodizing an toàn, không độc hại. Nồi có thể xếp chồng gọn gàng, quai gấp tiện lợi, tiết kiệm diện tích. Tặng kèm túi lưới bảo quản. Dùng được với bếp gas, bếp củi, bếp cồn.'
   },
-  
+
   {
     id: 'noi-treo-4l',
     name: 'Nồi treo 4L',
@@ -1138,7 +1124,7 @@ export const products = [
     image3: noi4Lanh3.src,
     image4: noi4L.src,
     image5: noi4Lanh5.src,
-    originalPrice: 60, 
+    originalPrice: 60,
     price: 50,
     quantity: 1,
     detail1: 'Nồi dung tích 4L, chất liệu hợp kim nhôm nhẹ, bền, truyền nhiệt tốt – phù hợp nấu ăn nhóm 3–6 người.',
@@ -1146,7 +1132,7 @@ export const products = [
     detail3: 'Chiều cao giá treo sau khi lắp khoảng 80cm, có xích điều chỉnh độ cao nồi dễ dàng.',
     detail4: 'Gấp gọn và có túi đựng riêng – tiện mang theo khi đi rừng, trekking, cắm trại.'
   },
-  
+
   {
     id: 'noi-4l',
     name: 'Nồi 4L',
@@ -1155,15 +1141,15 @@ export const products = [
     image2: noi4Lanh2.src,
     image3: noi4Lanh3.src,
     image4: noi4Lanh4.src,
-    originalPrice: 40, 
+    originalPrice: 40,
     price: 30,
     quantity: 1,
     detail1: 'Nồi dung tích 4L, chất liệu hợp kim nhôm cao cấp, nhẹ và dẫn nhiệt tốt – thích hợp nấu ăn cho nhóm 6-8 người.',
     detail2: 'Thiết kế dạng nồi treo cổ điển, có quai xách bằng kim loại chịu lực, dễ dàng kết hợp với giá treo riêng nếu có.',
-    detail3: 'Không kèm giá treo – có thể nấu bằng bếp củi, bếp gas, bếp cồn ' ,
+    detail3: 'Không kèm giá treo – có thể nấu bằng bếp củi, bếp gas, bếp cồn ',
     detail4: 'Dễ vệ sinh, gọn nhẹ – phù hợp mang theo trong các chuyến cắm trại, dã ngoại hoặc nấu ngoài trời.'
   },
-  
+
   {
     id: 'am-nuoc',
     name: 'Ấm 0.8L',
@@ -1182,7 +1168,7 @@ export const products = [
     detail4: 'Tay cầm có 2 màu: xanh lá cây hoặc cam.',
     detail5: 'Xuất xứ: Chiết Giang – Trung Quốc.'
   },
-  
+
   {
     id: 'tay-quay-nuong-inox',
     name: 'Tay quay nướng inox',
@@ -1193,14 +1179,14 @@ export const products = [
     image3: tayquaynuonggaanh3.src,
     image4: tayquaynuonggaanh4.src,
     image5: tayquaynuonggaanh5.src,
-    originalPrice: 25, 
+    originalPrice: 25,
     price: 20,
     quantity: 1,
     detail1: 'Tay quay nướng dài 65cm, rộng 20cm, dày 4.5mm – làm từ inox chắc chắn, bền bỉ, chịu nhiệt tốt.',
     detail2: 'Phù hợp quay gà, vịt, thỏ, thịt nguyên con, mực, xiên que hải sản,... tiện lợi cho dã ngoại và BBQ.',
     detail3: 'Kèm theo 2 trụ chống giúp cố định tay quay chắc chắn khi nướng ngoài trời.',
     detail4: 'Chuyên dụng cho các buổi tiệc nướng dã ngoại, giúp món nướng chín đều và thơm ngon.'
-  },  
+  },
   {
     id: 'may-nuong-tu-dong',
     name: 'Máy nướng tự động',
@@ -1211,7 +1197,7 @@ export const products = [
     image3: maynuonggatudonganh3.src,
     image4: maynuonggatudonganh4.src,
     image5: maynuonggatudonganh5.src,
-    originalPrice: 70, 
+    originalPrice: 70,
     price: 50,
     quantity: 1,
     detail1: 'Máy nướng dã ngoại sử dụng nguồn USB – tiện lợi dùng với sạc dự phòng, cực kỳ phù hợp cho cắm trại, picnic, phượt hoặc dùng trong gia đình.',
@@ -1220,7 +1206,7 @@ export const products = [
     detail4: 'Trục xiên làm từ inox cao cấp, sạch sẽ, an toàn cho thực phẩm, dễ vệ sinh sau khi sử dụng.',
     detail5: 'Kèm theo 2 trụ chống và quạt mini làm mồi lửa nhanh chóng – không bao gồm sạc dự phòng.',
     detail6: 'Sản phẩm sản xuất tại Việt Nam, dễ tháo lắp và kiểm tra, thiết kế nhỏ gọn dễ mang theo trong mọi hành trình.'
-  },  
+  },
   {
     id: 'dau-kho-namilux',
     name: 'Đầu khò',
@@ -1250,7 +1236,7 @@ export const products = [
     image3: binhgas4.src,
     image4: binhgas5.src,
     image5: binhgas6.src,
-    originalPrice: 35, 
+    originalPrice: 35,
     price: 30,
     quantity: 1,
     detail1: 'Thể tích tăng 14% so với lon gas thông thường, phù hợp cho bếp ga du lịch, đèn khò mini, bếp cắm trại, giúp nấu nướng tiết kiệm và hiệu quả hơn.',
@@ -1270,7 +1256,7 @@ export const products = [
     image3: than4.src,
     image4: than5.src,
     image5: than6.src,
-    originalPrice: 35, 
+    originalPrice: 35,
     price: 30,
     quantity: 1,
     detail1: '100% từ gáo dừa tự nhiên – Không hóa chất độc hại, an toàn cho sức khỏe, không khói độc, không bắn tia lửa.',
@@ -1289,7 +1275,7 @@ export const products = [
     image3: vienmoithan4.src,
     image4: vienmoithan5.src,
     image5: vienmoithan6.src,
-    originalPrice: 8, 
+    originalPrice: 8,
     price: 5,
     quantity: 1,
     detail1: 'Chỉ cần 1-2 viên là đủ mồi cho bếp than, giúp bạn bắt đầu bữa tiệc BBQ nhanh chóng.',
@@ -1298,7 +1284,7 @@ export const products = [
     detail4: 'Viên mồi than 20g, hình khối vuông, tiện bỏ túi hoặc balo mang theo mọi hành trình.',
     isRental: true,
   },
-  
+
   {
     id: 'bo-bai-ma-soi',
     name: 'Bộ bài ma sói',
@@ -1309,7 +1295,7 @@ export const products = [
     image3: bobaimasoianh3.src,
     image4: bobaimasoianh4.src,
     image5: bobaimasoianh5.src,
-    originalPrice: 15, 
+    originalPrice: 15,
     price: 10,
     quantity: 1,
     detail1: 'Board game Ma Sói TOPBOARD1 (7–20 người chơi), phù hợp nhóm bạn, gia đình. Chất liệu bài cứng, nhẹ, dễ mang theo.',
@@ -1327,7 +1313,7 @@ export const products = [
     image3: TuiMangNuocCoVoi5.src,
     image4: TuiMangNuocCoVoi6.src,
     image5: TuiMangNuocCoVoi7.src,
-    originalPrice: 20, 
+    originalPrice: 20,
     price: 15,
     quantity: 1,
     detail1: 'Thiết kế túi nước 10L phù hợp sử dụng trong các chuyến dã ngoại, picnic, cắm trại dài ngày, tích trữ đủ lượng nước sinh hoạt, nấu ăn hay giải khát.',
@@ -1335,8 +1321,8 @@ export const products = [
     detail3: 'Làm từ nhựa PA, PE, PET (3 lớp Composite), an toàn khi đựng nước ngọt, nước có ga hay đồ uống có cồn, giữ nhiệt tốt khi kết hợp với thùng bảo ôn.',
     detail4: 'Trang bị vòi rót tiện lợi, dễ dàng lấy nước hoặc rót đồ uống. Thích hợp mang đi picnic, cắm trại, đi biển hay tổ chức tiệc ngoài trời.'
   },
-  
 
-  
+
+
 ]
 

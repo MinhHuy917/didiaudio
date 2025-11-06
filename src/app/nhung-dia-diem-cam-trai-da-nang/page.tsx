@@ -1,42 +1,53 @@
 import { type Metadata } from 'next'
 import Link from 'next/link'
 import { PageIntro } from '@/components/PageIntro'
+import Image from 'next/image' // <--- Imported Next.js Image component
+import hodongxanhdongnghe from '/src/images/diemcamtrai/dong-xanh-dong-nghe.jpeg'
+import baixep from '/src/images/diemcamtrai/bai-xep.png'
+import dinhbachma from '/src/images/diemcamtrai/dinh-bach-ma.jpg'
+import hohoatrung from '/src/images/diemcamtrai/ho-hoa-trung.jpg'
+import hophuninh from '/src/images/diemcamtrai/ho-phu-ninh.jpeg'
+import ocdaovanbuong from '/src/images/diemcamtrai/oc-dao-van-buong.jpg'
+import dinhhaivan from '/src/images/diemcamtrai/dinh-hai-van.jpg'
+import noctakpo from '/src/images/diemcamtrai/noctakpo.jpg'
+import langrongchoitakpang from '/src/images/diemcamtrai/lang-rong-choi-TakPang.png'
+import dinhque from '/src/images/diemcamtrai/dinh-que.jpg'
+import rungthongbobo from '/src/images/diemcamtrai/rung-thong-bo-bo.png'
+import dongsentraly from '/src/images/diemcamtrai/dong-sen-tra-ly.png'
+import baikecan from '/src/images/diemcamtrai/baikecan.jpg'
+import dinhhoavan from '/src/images/diemcamtrai/dinh-hoa-van.png'
+
 
 type CampLocation = {
   name: string
   icon: string
   colorClass: string
-  imageUrl?: string // Optional property for image URL
+  // The type of imported image modules is typically an object in Next.js/Webpack
+  imageUrl?: any 
   subtitle?: string
 }
 
 const campLocations: CampLocation[] = [
- 
-  
-
-  { name: 'Hồ Đồng Xanh Đồng Nghệ ', icon: '🏔️', colorClass: 'text-gray-500', imageUrl: 'https://tourdanangcity.vn/wp-content/uploads/2022/12/dong-xanh-dong-nghe-1.jpeg' },
-  { name: 'Bãi xếp Sơn Trà', icon: '🏞️', colorClass: 'text-blue-500', imageUrl: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqsxZ8_gRqo8MI5LcLbceVvkmnnBWN2iYHNekzRhOIxwAOXkwVyMhv3wjA6NBN2-PU926Vf81s9kTzYNWB-08jTvTfrZj-De_Rk3hsd_smAAXU2ainyoRrygtl1w_Ph_fTzD_rO=w533-h240-k-no' },
-  { name: 'Đỉnh Bạch Mã', icon: '🛶', colorClass: 'text-blue-500', imageUrl: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr8-AQpjox262qngyXS67ewr3nDnWzC8Dkg1ZzOd9lUQTzzvuJVwnTs3_NcaunckSVNHdGqhPUyGnw2IAQjv7SyaKMW-gfY7ifdTAJ9KuFs6KVvpYOGjJMBxSmnGkEEtBV2p5W9=w408-h244-k-no' },
-  { name: 'Đỉnh Am Thông', icon: '🏔️', colorClass: 'text-gray-500', imageUrl: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrZ2LRAT7dVkTJCf6Dd_HWuoW33MJe21ZMXCHW_5xycmEn1SWwlLCgr0VBZbRGskdTinrXevKZU3x4NBeNgKT7RGw0gYzpludNT6JdWFUcxJy5O8CusrKZMehuk_7YmRZ1QUcDN_w=w243-h174-n-k-no-nu' },
-  { name: 'Hồ Hòa Trung', icon: '🚣‍♂️', colorClass: 'text-blue-500', imageUrl: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4npR2q-2gsui5a0fjvcGxvig4ZcMP4RckuAId53wH3NnQ4xdhTzLLq-8ole4K_M4-XYR-iP2bdYIRyX1aRiGxeGa0xxTAaeSjg9LpsMwT1QGPOrGVXvFhN4RPQKWWZM1Q2kCuE8=w408-h271-k-no' },
-  { name: 'Hồ Phú Ninh', icon: '🏞️', colorClass: 'text-green-500', imageUrl: 'https://lh3.googleusercontent.com/geougc-cs/AB3l90DvodnC-dUzvYyqanTycVxBHUqeK1ZgScDLUpFyGh3GTx3BdR3XpAUjlyuDtU1ISdaL7WvGoiXhi7Z3SU8pAHo-7zeq5P1xOStvluQIF08dqoU9nSiwSYYZLyI6S-58q3wcmDdQNw=w478-h269-p' },
+  // ... (Your campLocations array remains the same)
+  { name: 'Hồ Đồng Xanh Đồng Nghệ ', icon: '🏔️', colorClass: 'text-gray-500', imageUrl: hodongxanhdongnghe },
+  { name: 'Bãi xếp Sơn Trà', icon: '🏞️', colorClass: 'text-blue-500', imageUrl: baixep },
+  { name: 'Đỉnh Bạch Mã', icon: '🛶', colorClass: 'text-blue-500', imageUrl: dinhbachma },
+  { name: 'Hồ Hòa Trung', icon: '🚣‍♂️', colorClass: 'text-blue-500', imageUrl: hohoatrung },
+  { name: 'Hồ Phú Ninh', icon: '🏞️', colorClass: 'text-green-500', imageUrl: hophuninh },
   {
     name: '  Ốc Đảo Vạn Buồng',
     icon: '🌿',
     colorClass: 'text-green-500',
-    imageUrl: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr6-eiVMGnv1HnWinTm0IxOmsu8cM0985WTVWFFB34mxpb3MKuHOFsfX850ZkUFjGJAEWl8XrwLIxL1qtGxPK6HqIM6bJI3nDepNylfpDFherS3VhXfTGuf8vKB9sCNBGZ-xEdw-Q=w243-h304-n-k-no-nu'
+    imageUrl: ocdaovanbuong
   },
-  { name: 'Đỉnh Hải Vân', icon: '🛤️', colorClass: 'text-red-500', imageUrl: 'https://www.didicamping.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg12.abece8ea.jpg&w=828&q=75' },
-  { name: 'Nóc takpo Nam Trà My ', icon: '🏞️', colorClass: 'text-green-500', imageUrl: 'https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2024/4/29/n2-1714355252656884216099-454-130-1340-1822-crop-1714355768345827660332.jpg' },
-  { name: 'Làng Rong Chơi TakPang', icon: '🏔️', colorClass: 'text-gray-500', imageUrl: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nowtcbmisOhNW2t_LeQkbrx9pG8FphvMkbaMqjH5IzRcGs7L3nZBDMNjtN3HZaDzVggME-N2WjDRnKgwWYlJVJanWvraPD9RRxwX_3cuJ7rhgrBNjyd1D-PvWA3vGjJK0pGz14=w243-h406-n-k-no-nu' },
-  { name: 'Đỉnh Quế', icon: '🌅', colorClass: 'text-orange-500', imageUrl: 'https://statics.vinpearl.com/dinh-que-tay-giang-1_1634621616.jpg' },
-  { name: 'Hòn Kẽm Đá Dừng ', icon: '🏞️', colorClass: 'text-blue-500', imageUrl: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrs4PTDMej3f9EE8PCjeP_hV_tBMVKB9oGTRQ4SKgds8eFxhwfyggQCLUw5_BCkpJWSwOnDCk066cFYUMP-dvW7s1RBtANDvSZIPWBg_iSWKgoRMgnj2veKWDOhNZYPwJcYSay6=w243-h174-n-k-no-nu' },
-  { name: 'Rừng thông Bồ Bồ', icon: '🏔️', colorClass: 'text-gray-500', imageUrl: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4noXI1o8ERT1h5JC-wlXTbVl97j2uIAmauvaIiz9Dal3nJyjifHycAjInG1z6VNwLejn61PKssY0xe1n4okBvWaUHK8TPnrm-gGyAdJAzc4NC1L5PrwQwvlOzwdAJRLYnmyb_aLmLb12lR5B=w243-h203-n-k-no-nu' },
-  { name: 'Đồng sen Trà Lý', icon: '🏔️', colorClass: 'text-gray-500', imageUrl: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4noHAvkcDs1w0iHv1pmZSmZVPQ9_gtiDXfncNJiEj4btQAKQGCtsRbVtqBU1Ccn8jC3pEeYXPjXz_opERO5rZabjkHatfaFNzdhar3NcDe77EONlcaYmmGChJZPKWT-eb3y2WQHy3xnxLRZO=w243-h174-n-k-no-nu' },
-  { name: 'Bãi Kè Cạn', icon: '🏔️', colorClass: 'text-gray-500', imageUrl: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrPShp7WVMcDxSNu_CoQ4Wv516NwQkHDPOBfM_LOaJoRZD8uZl04wzmTNFL649XnH4KNaI_ZfMBqK1emv2buKfP38zjCeVl0fm0ERpAo2YmGxg-u-irCpbq-ipjp3B0pNd5k7gr=w243-h174-n-k-no-nu' },
-  { name: 'Mây Treo', icon: '🏔️', colorClass: 'text-gray-500', imageUrl: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4norjfFKpDi86PRx3YnpbIHKrSXdqcZHRgMlA0E7lgVj2SqW4vyKCj1I1hw5PcKO09rpuu_k7FziPbLnZjqMrbvpRDAzdbeqOcVNQkayFRSegdO2okRErKdASXKtttU8j_F96CaV=w408-h542-k-no' },
-  { name: 'Giếng trời', icon: '🏔️', colorClass: 'text-gray-500', imageUrl: 'https://static.vinwonders.com/2022/04/gieng-troi-da-nang-6.jpg' },
-  { name: 'Đỉnh Hòa Vân', icon: '🌲', colorClass: 'text-green-500', imageUrl: 'https://scontent-hkg1-2.xx.fbcdn.net/v/t39.30808-6/485979646_1347944632904532_7631355104494035004_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=LgD-PjYMyLYQ7kNvwG41mMJ&_nc_oc=AdnlpkjrkxP9jkzxVjeK-DTjSw2oaVRb0bn6Trw-G-FMrFMBCVQhAAh8qRdfwH572FD9kqrIP_errdFUvR4L5qbP&_nc_zt=23&_nc_ht=scontent-hkg1-2.xx&_nc_gid=xgOx3Gk2astqZHYDSs7jaw&oh=00_AfYKJSBho88UjLsQQJkHxiHH9EILKZGHyQQSQpjOUD_I_A&oe=68D592E9' },
+  { name: 'Đỉnh Hải Vân', icon: '🛤️', colorClass: 'text-red-500', imageUrl: dinhhaivan },
+  { name: 'Nóc takpo Nam Trà My ', icon: '🏞️', colorClass: 'text-green-500', imageUrl: noctakpo },
+  { name: 'Làng Rong Chơi TakPang', icon: '🏔️', colorClass: 'text-gray-500', imageUrl: langrongchoitakpang },
+  { name: 'Đỉnh Quế', icon: '🌅', colorClass: 'text-orange-500', imageUrl: dinhque },
+  { name: 'Rừng thông Bồ Bồ', icon: '🏔️', colorClass: 'text-gray-500', imageUrl: rungthongbobo },
+  { name: 'Đồng sen Trà Lý', icon: '🏔️', colorClass: 'text-gray-500', imageUrl: dongsentraly },
+  { name: 'Bãi Kè Cạn', icon: '🏔️', colorClass: 'text-gray-500', imageUrl: baikecan },
+  { name: 'Đỉnh Hòa Vân', icon: '🌲', colorClass: 'text-green-500', imageUrl: dinhhoavan },
 ]
 
 export const metadata: Metadata = {
@@ -86,18 +97,22 @@ export default function Work() {
           {campLocations.map((location, index) => (
             <Link
               key={index}
-              href={`https://www.google.com/maps/search/${encodeURIComponent(location.name)}`}
+              href={`https://www.google.com/maps/search/$${encodeURIComponent(location.name)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="group relative flex flex-col overflow-hidden rounded-2xl bg-white/70 backdrop-blur-md p-8 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl dark:bg-gray-900/60"
             >
-              {/* Thumbnail ảnh nền nếu có */}
+              {/* SỬ DỤNG NEXT.JS IMAGE COMPONENT */}
               {location.imageUrl && (
                 <div className="absolute inset-0 z-0">
-                  <img
-                    src={location.imageUrl}
+                  <Image
+                    src={location.imageUrl} // The imported image object is passed here
                     alt={location.name}
-                    className="h-full w-full object-cover brightness-75 group-hover:brightness-90 transition duration-500"
+                    // Next.js Image requires either 'fill' or 'width' and 'height'
+                    fill // Use 'fill' to make the image take up the full size of its parent
+                    // 'sizes' helps Next.js determine which image to load
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+                    className="object-cover brightness-75 group-hover:brightness-90 transition duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                 </div>

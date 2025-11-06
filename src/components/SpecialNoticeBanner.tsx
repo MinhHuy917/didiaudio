@@ -8,38 +8,27 @@ export default function PromoBanner() {
       desc: 'Giảm 10% cho sinh viên',
       tag: 'SALE',
     },
-    {
+   
+      {
       icon: '🚚',
-      title: 'Miễn phí giao nhận 5km',
-      desc: 'Áp dụng cho đơn hàng từ 500k trở lên',
-      tag: 'NEW',
-    },
-    {
-      icon: '🛏️',
-      title: 'Thuê gối hơi miễn phí',
-      desc: 'Đơn hàng từ 300k trở lên được tặng kèm gối hơi',
-      tag: 'GIFT',
-    },
-    {
-      icon: '🎪',
-      title: 'Không phụ thu cuối tuần & lễ Tết',
-      desc: 'Thứ 7, Chủ nhật, ngày lễ và Tết đều không tính phụ thu',
-      tag: 'FREE',
-    },
-    {
-      icon: '🎥',
-      title: 'Hỗ trợ dựng lều qua video call',
-      desc: 'Hướng dẫn qua video call cách dựng lều, đồ cắm trại',
+      title: 'Có giao hàng tận nơi',
+      desc: 'Phí giao hàng tuỳ khoảng cách',
       tag: 'SUPPORT',
     },
-    
-    
+
     {
-      icon: '⛺️',
-      title: 'Setup & trang trí lều (có phí)',
-      desc: 'Nhận dựng và trang trí theo concept yêu cầu.',
-      tag: 'HOT',
+      icon: '🎪',
+      title: 'Không phụ thu mùa lễ',
+      desc: 'Ngày lễ không tính phụ thu',
+      tag: 'FREE',
     },
+    
+    // {
+    //   icon: '⛺️',
+    //   title: 'Setup & trang trí lều (có phí)',
+    //   desc: 'Nhận dựng và trang trí theo concept yêu cầu.',
+    //   tag: 'HOT',
+    // },
   ]
 
   return (

@@ -28,7 +28,8 @@ import dendoidau from '/src/images/dendoidau.jpg'
 import loa from '/src/images/loatronsmart.png'
 import denled from '/src/images/denled.png'
 import denngoisao from '/src/images/denngoisao.png'
-import densinhhoat from '/src/images/densinhhoat.jpg'
+import denleu from '/src/images/denleu/0.png'
+import densinhhoat from '/src/images/densinhhoat/5.png'
 import gheNH1 from '/src/images/gheNH16J001-J/1.jpg'
 import banNH1 from '/src/images/banNH22JU050/1.png'
 import tang3manh1 from '/src/images/tang3m/1.png'
@@ -70,29 +71,29 @@ const rentalItems = [
   {  id: 'ban-nhom-naturehike-cnh22ju050', name: 'Bàn NatureHike 40×30 cm', price: '60.000 VNĐ', type: 'ngày', image: banNH1 },
   {  id: 'khan-ban-tho-cam', name: 'Khăn bàn thổ cẩm', price: '10.000 VNĐ', type: 'ngày', image: khanban },
   {  id: 'chan-treo-den', name: 'Giá chân treo đèn 1m', price: '20.000 VNĐ', type: 'ngày', image: chanden },
-  {  id: 'cay-tru-cot-gia-treo-den', name: 'Cây trụ treo đèn 1m8', price: '25.000 VNĐ', type: 'ngày', image: caytrutreodenanh2 },
+  {  id: 'tru-cot-gia-treo-den', name: 'Trụ treo đèn 1m8', price: '25.000 VNĐ', type: 'ngày', image: caytrutreodenanh2 },
   // Tăng & thảm
   {  id: 'tang-9m2', name: 'Tăng 4–6P (3 × 3 m)', price: '50.000 VNĐ', type: 'ngày', image: tang3manh1 },
   {   id: 'tang-20m2', name: 'Tăng 8–12P (4.5 × 4.5 m)', price: '100.000 VNĐ', type: 'ngày', image: tang4m5anh1 },
   {  id: 'tham-da-ngoai', name: 'Thảm dã ngoại 2.1 × 2 m', price: '25.000 VNĐ', type: 'ngày', image: thamdangoai },
   { id: 'tham-vintage', name: 'Thảm Vintage 2 × 2 m', price: '40.000 VNĐ', type: 'ngày', image: thamvintage },
   // Đèn
-  {   id: 'den-cam-tay', name: 'Đèn cầm tay', price: '10.000 VNĐ', type: 'ngày', image: dencamtay },
-  {   id: 'den-doi-dau', name: 'Đèn đội đầu', price: '10.000 VNĐ', type: 'ngày', image: dendoidau },
+   { id: 'den-sinh-hoat', name: 'Đèn sinh hoạt', price: '50.000 VNĐ', type: 'ngày', image: densinhhoat },
+   { id: 'den-leu', name: 'Đèn lều', price: '20.000 VNĐ', type: 'ngày', image: denleu },
   { id: 'den-vintage', name: 'Đèn Vintage', price: '15.000 VNĐ', type: 'ngày', image: dendeban },
   { id: 'den-led-tron', name: 'Đèn led tròn', price: '20.000 VNĐ', type: 'ngày', image: denled },
   { id: 'den-led-ngoi-sao', name: 'Đèn led ngôi sao', price: '30.000 VNĐ', type: 'ngày', image: denngoisao },
-  { id: 'den-sinh-hoat', name: 'Đèn sinh hoạt', price: '30.000 VNĐ', type: 'ngày', image: densinhhoat },
+ 
   // Tiện ích
   { id: 'sac-du-phong', name: 'Sạc dự phòng 20.000 mAh', price: '30.000 VNĐ', type: 'ngày', image: sacduphong },
   { id: 'thue-loa-nghe-nhac-da-nang', name: 'Loa Tronsmart T7 Mini', price: '50.000 VNĐ', type: 'ngày', image: loa },
-  { id: 'thue-loa-karaoke-xach-tay-da-nang', name: 'Loa Karaoke Xách Tay Z20 PRO MAX', price: '250.000 VNĐ', type: 'ngày', image: loakaraoke },
+  { id: 'thue-loa-karaoke-xach-tay-da-nang', name: 'Loa Karaoke Xách Tay', price: '290.000 VNĐ', type: 'ngày', image: loakaraoke },
   {  id: 'quat-tich-dien', name: 'Quạt tích điện (pin 20.000 mAh + đèn)', price: '60.000 VNĐ', type: 'ngày', image: quat },
   { id: 'thue-trippd-da-nang', name: 'Tripod (remote)', price: '40.000 VNĐ', type: 'ngày', image: tripod },
   { name: 'Bộ bài ma sói', price: '10.000 VNĐ', type: 'ngày', image: baimasoi },
   // Nấu ăn
-  { id: 'thue-bep-nuong-da-nang', name: 'Bếp nướng inox', price: '40.000 VNĐ', type: 'ngày', image: bepnuong },
-  { id: 'cho-thue-bep-nuong-da-nang', name: 'Bếp Nướng Campingmoon MT3', price: '70.000 VNĐ', type: 'ngày', image: bepnuongMT3 },
+  { id: 'thue-bep-nuong-da-nang', name: 'Bếp nướng Nhỏ', price: '40.000 VNĐ', type: 'ngày', image: bepnuong },
+  { id: 'cho-thue-bep-nuong-da-nang', name: 'Bếp Nướng Lớn', price: '70.000 VNĐ', type: 'ngày', image: bepnuongMT3 },
   {  id: 'bep-cui', name: 'Bếp củi', price: '40.000 VNĐ', type: 'ngày', image: bepcui },
   {  id: 'bep-con', name: 'Bếp gas (không gas)', price: '50.000 VNĐ', type: 'ngày', image: bepgas },
   { name: 'Bếp cồn', price: '20.000 VNĐ', type: 'ngày', image: bepcon },

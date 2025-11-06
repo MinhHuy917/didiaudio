@@ -63,47 +63,44 @@ function Header({
         <Link href="/" aria-label="Home">
           <Image src={logo} alt="Logo" width={80} height={80} className="rounded-full object-cover w-[48px] lg:w-[80px] mt-3" />
         </Link>
-        <div className="flex items-center gap-x-8 mt-1">
-          <button
-            ref={toggleRef}
-            type="button"
-            onClick={onToggle}
-            aria-expanded={expanded ? 'true' : 'false'}
-            aria-controls={panelId}
-            className={clsx(
-              'group -m-2.5 rounded-full p-2.5 transition',
-              invert ? 'hover:bg-white/10' : 'hover:bg-neutral-950/10',
-            )}
-            aria-label="Toggle navigation"
-          >
-
-
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className={clsx(
-                'h-6 w-6',
-                expanded ? 'text-black' : 'text-white',
-              )}
-            >
-              <circle cx="5" cy="5" r="1.5" />
-              <circle cx="12" cy="5" r="1.5" />
-              <circle cx="19" cy="5" r="1.5" />
-              <circle cx="5" cy="12" r="1.5" />
-              <circle cx="12" cy="12" r="1.5" />
-              <circle cx="19" cy="12" r="1.5" />
-              <circle cx="5" cy="19" r="1.5" />
-              <circle cx="12" cy="19" r="1.5" />
-              <circle cx="19" cy="19" r="1.5" />
-            </svg>
-
-
-
-
-          </button>
-
-        </div>
+      <div className="flex items-center gap-x-8 mt-1">
+  <button 
+    ref={toggleRef} 
+    type="button" 
+    onClick={onToggle} 
+    aria-expanded={expanded ? 'true' : 'false'} 
+    aria-controls={panelId} 
+    // Nút có nền trắng mờ (50%) và hover thành trắng đậm hơn (70% độ mờ)
+    className={clsx( 
+      'group -m-2.5 rounded-full p-2 transition mr-[1px]', 
+      'bg-white/50', // **THAY ĐỔI: Nền trắng mờ mặc định**
+      // Giữ nguyên logic hover, nhưng điều chỉnh độ mờ để dễ thấy hơn
+      invert ? 'hover:bg-neutral-950/30' : 'hover:bg-white/70', 
+    )} 
+    aria-label="Toggle navigation"
+  >
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 24 24" 
+      fill="currentColor" 
+      className={clsx(
+        'h-6 w-6', 
+        // **THAY ĐỔI: Icon luôn là màu đen (text-black)** để nổi bật trên nền trắng mờ
+        'text-green-700', 
+      )}
+    >
+      <circle cx="5" cy="5" r="1.5" />
+      <circle cx="12" cy="5" r="1.5" />
+      <circle cx="19" cy="5" r="1.5" />
+      <circle cx="5" cy="12" r="1.5" />
+      <circle cx="12" cy="12" r="1.5" />
+      <circle cx="19" cy="12" r="1.5" />
+      <circle cx="5" cy="19" r="1.5" />
+      <circle cx="12" cy="19" r="1.5" />
+      <circle cx="19" cy="19" r="1.5" />
+    </svg>
+  </button>
+</div>
       </div>
     </Container>
   )

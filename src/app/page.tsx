@@ -22,14 +22,14 @@ export default async function Home() {
       <ImageSlider />
       {/* ✅ Giới thiệu về Dì Đi Camping */}
         <AboutSection />
-{/* ✅ Vì sao chọn chúng tôi */}
-<WhyUs />
-          {/* ✅ Đánh giá khách hàng */}
-          <Testimonials />
 
       <SpecialNoticeBanner />
 
       <ProductList />
+{/* ✅ Vì sao chọn chúng tôi */}
+<WhyUs />
+          {/* ✅ Đánh giá khách hàng */}
+          <Testimonials />
 
         
       <div>
