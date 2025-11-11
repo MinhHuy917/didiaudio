@@ -112,6 +112,25 @@ import bananh4 from '/src/images/ban/4.png'
 import bananh5 from '/src/images/ban/5.png'
 
 
+
+import BanNaturehikeSizeManh1 from '/src/images/bannaturehikesizem/00.png'
+import BanNaturehikeSizeManh2 from '/src/images/bannaturehikesizem/2.jpg'
+import BanNaturehikeSizeManh3 from '/src/images/bannaturehikesizem/3.jpg'
+import BanNaturehikeSizeManh4 from '/src/images/bannaturehikesizem/4.jpg'
+import BanNaturehikeSizeManh5 from '/src/images/bannaturehikesizem/m.jpg'
+import BanNaturehikeSizeManh6 from '/src/images/bannaturehikesizem/6.jpg'
+
+
+
+import BanNaturehikeSizeLanh1 from '/src/images/bannaturehikesizel/0.jpg'
+import BanNaturehikeSizeLanh2 from '/src/images/bannaturehikesizel/2.jpg'
+import BanNaturehikeSizeLanh3 from '/src/images/bannaturehikesizel/3.jpg'
+import BanNaturehikeSizeLanh4 from '/src/images/bannaturehikesizel/4.jpg'
+import BanNaturehikeSizeLanh5 from '/src/images/bannaturehikesizel/5.jpg'
+import BanNaturehikeSizeLanh6 from '/src/images/bannaturehikesizel/6.jpg'
+
+
+
 import than1 from '/src/images/than/1.png'
 import than2 from '/src/images/than/2.png'
 import than3 from '/src/images/than/3.png'
@@ -664,7 +683,7 @@ export const products = [
 
   {
     id: 'ban-nhom-naturehike-cnh22ju050',
-    name: 'Bàn nhôm Naturehike',
+    name: 'Bàn nhôm Naturehike CNH22JU050 - Size S',
     catalogue: '(40x30cm, 1kg)',
     image: banNH1.src,
     image1: banNH2.src,
@@ -674,6 +693,44 @@ export const products = [
     image5: banNH9.src,
     originalPrice: 70,
     price: 60,
+    quantity: 1,
+    detail1: 'Thiết kế bàn cuộn trứng, dễ dàng lắp ráp và gấp gọn siêu nhỏ, tiện lợi mang theo trong các chuyến cắm trại, dã ngoại hay đi câu cá.',
+    detail2: 'Sử dụng hợp kim nhôm 6063 dày dặn, kết hợp Inox 304 ở phần đinh tán, đảm bảo sự ổn định cao, bền bỉ trong suốt quá trình sử dụng.',
+    detail3: 'Kích thước sử dụng: 40.5 x 29 x 30.5 cm | Gấp gọn: 11 x 14 x 19 cm | Trọng lượng chỉ khoảng 1kg, phù hợp mang đi bộ đường dài.',
+    detail4: 'Lý tưởng dùng làm bàn ăn, bàn trà, bàn để đồ khi cắm trại – picnic. Mang lại không gian gọn gàng, tiện nghi, giúp bạn tận hưởng thiên nhiên một cách trọn vẹn.',
+  },
+
+    {
+    id: 'ban-nhom-naturehike-NH16Z016L',
+    name: 'Bàn nhôm Naturehike NH16Z016L - Size M',
+    catalogue: '(40x30cm, 1kg)',
+    image: BanNaturehikeSizeManh1.src,
+    image1: BanNaturehikeSizeManh2.src,
+    image2: BanNaturehikeSizeManh3.src,
+    image3: BanNaturehikeSizeManh4.src,
+    image4: BanNaturehikeSizeManh5.src,
+    image5: BanNaturehikeSizeManh6.src,
+    originalPrice: 110,
+    price: 90,
+    quantity: 1,
+    detail1: 'Thiết kế bàn cuộn trứng, dễ dàng lắp ráp và gấp gọn siêu nhỏ, tiện lợi mang theo trong các chuyến cắm trại, dã ngoại hay đi câu cá.',
+    detail2: 'Sử dụng hợp kim nhôm 6063 dày dặn, kết hợp Inox 304 ở phần đinh tán, đảm bảo sự ổn định cao, bền bỉ trong suốt quá trình sử dụng.',
+    detail3: 'Kích thước sử dụng: 40.5 x 29 x 30.5 cm | Gấp gọn: 11 x 14 x 19 cm | Trọng lượng chỉ khoảng 1kg, phù hợp mang đi bộ đường dài.',
+    detail4: 'Lý tưởng dùng làm bàn ăn, bàn trà, bàn để đồ khi cắm trại – picnic. Mang lại không gian gọn gàng, tiện nghi, giúp bạn tận hưởng thiên nhiên một cách trọn vẹn.',
+  },
+
+    {
+    id: 'ban-nhom-naturehike-NH16Z016L',
+    name: 'Bàn nhôm Naturehike NH16Z016L - Size L',
+    catalogue: '(40x30cm, 1kg)',
+    image: BanNaturehikeSizeLanh1.src,
+    image1: BanNaturehikeSizeLanh2.src,
+    image2: BanNaturehikeSizeLanh3.src,
+    image3: BanNaturehikeSizeLanh4.src,
+    image4: BanNaturehikeSizeLanh5.src,
+    image5: BanNaturehikeSizeLanh6.src,
+    originalPrice: 160,
+    price: 140,
     quantity: 1,
     detail1: 'Thiết kế bàn cuộn trứng, dễ dàng lắp ráp và gấp gọn siêu nhỏ, tiện lợi mang theo trong các chuyến cắm trại, dã ngoại hay đi câu cá.',
     detail2: 'Sử dụng hợp kim nhôm 6063 dày dặn, kết hợp Inox 304 ở phần đinh tán, đảm bảo sự ổn định cao, bền bỉ trong suốt quá trình sử dụng.',
