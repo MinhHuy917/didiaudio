@@ -32,6 +32,8 @@ import denleu from '/src/images/denleu/0.png'
 import densinhhoat from '/src/images/densinhhoat/5.png'
 import gheNH1 from '/src/images/gheNH16J001-J/1.jpg'
 import banNH1 from '/src/images/banNH22JU050/1.png'
+import banNHM from '/src/images/bannaturehikesizem/00.png'
+import banNHL from '/src/images/bannaturehikesizel/0.jpg'
 import tang3manh1 from '/src/images/tang3m/1.png'
 import tang4m5anh1 from '/src/images/tang4m5/1.png'
 import maynuongtudong from '/src/images/maynuongtudong.png'
@@ -68,7 +70,9 @@ const rentalItems = [
   {  id: 'thue-ghe-camping-da-nang', name: 'Ghế mặt trăng', price: '20.000 VNĐ', type: 'ngày', image: ghe },
   {  id: 'ghe-naturehike-nh16j001-j', name: 'Ghế NatureHike', price: '30.000 VNĐ', type: 'ngày', image: gheNH1 },
   { id: 'thue-ban-camping-da-nang', name: 'Bàn nhôm 90×60 cm', price: '50.000 VNĐ', type: 'ngày', image: ban },
-  {  id: 'ban-nhom-naturehike-cnh22ju050', name: 'Bàn NatureHike 40×30 cm', price: '60.000 VNĐ', type: 'ngày', image: banNH1 },
+  {  id: 'ban-nhom-naturehike-cnh22ju050', name: 'Bàn nhôm Naturehike CNH22JU050 - Size S', price: '60.000 VNĐ', type: 'ngày', image: banNH1 },
+  {  id: 'ban-nhom-naturehike-NH16Z016L-Size-M', name: 'Bàn nhôm Naturehike NH16Z016L - Size M', price: '80.000 VNĐ', type: 'ngày', image: banNHM },
+  {  id: 'ban-nhom-naturehike-NH16Z016L-Size-L', name: 'Bàn nhôm Naturehike NH16Z016L - Size L', price: '120.000 VNĐ', type: 'ngày', image: banNHL },
   {  id: 'khan-ban-tho-cam', name: 'Khăn bàn thổ cẩm', price: '10.000 VNĐ', type: 'ngày', image: khanban },
   {  id: 'chan-treo-den', name: 'Giá chân treo đèn 1m', price: '20.000 VNĐ', type: 'ngày', image: chanden },
   {  id: 'tru-cot-gia-treo-den', name: 'Trụ treo đèn 1m8', price: '25.000 VNĐ', type: 'ngày', image: caytrutreodenanh2 },
