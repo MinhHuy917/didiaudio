@@ -113,7 +113,7 @@ export default function ChoThueLoaKeoKeoDaNang() {
             <p className="text-gray-700 mt-4">
               Giá cũ: <span className="line-through text-red-500">350.000đ/ngày</span>
             </p>
-            <p className="text-4xl font-bold text-green-700 mt-2">Chỉ còn: 250.000đ/ngày</p>
+            <p className="text-4xl font-bold text-green-700 mt-2">Chỉ còn: 290.000đ/ngày</p>
             <p className="text-gray-600 mt-4">Liên hệ ngay để đặt thuê và nhận ưu đãi!</p>
           </div>
 
