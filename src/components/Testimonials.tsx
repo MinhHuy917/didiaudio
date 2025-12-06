@@ -116,7 +116,7 @@ export default function Testimonials() {
                   height={208}
                   className="rounded-lg mb-4 w-full h-[320px] lg:h-52 object-cover object-top border border-music-purple/20"
                 />
-                <p className="text-gray-300 italic text-base leading-relaxed">"{r.comment}"</p>
+                <p className="text-gray-300 italic text-base leading-relaxed">&quot;{r.comment}&quot;</p>
                 <p className="mt-3 text-right font-semibold text-music-purple">– {r.name}</p>
               </motion.div>
             ))}
