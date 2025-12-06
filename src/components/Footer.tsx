@@ -12,7 +12,7 @@ const navigation = [
     links: [
       { title: "Phone: 0909223917", href: "tel:0909223917" },
       { title: "Zalo: 0909223917", href: "https://zalo.me/0909223917" },
-      { title: "Messenger", href: "//m.me/ThueLeuCamTraiDaNang" },
+      { title: "Messenger", href: "//m.me/ThueLoaKeoDaNang" },
     ],
   },
   {
@@ -38,15 +38,15 @@ function Navigation() {
       <ul role="list" className="grid grid-cols-2 lg:grid-cols-4 gap-8 ">
         {navigation.map((section, sectionIndex) => (
           <li key={sectionIndex}>
-            <div className="!font-[system-ui] font-display text-sm font-semibold tracking-wider text-neutral-950">
+            <div className="!font-[system-ui] font-display text-sm font-semibold tracking-wider text-white">
               {/* {section.title} */}
             </div>
-            <ul role="list" className="mt-4 text-sm text-neutral-700">
+            <ul role="list" className="mt-4 text-sm text-gray-400">
               {section.links.map((link, linkIndex) => (
                 <li key={linkIndex} className="mt-4">
                   <Link
                     href={link.href}
-                    className="!font-[system-ui] transition hover:text-neutral-950"
+                    className="!font-[system-ui] transition hover:text-music-purple"
                   >
                     {link.title}
                   </Link>
@@ -94,8 +94,8 @@ export function Footer() {
             
             <Image src={logo} alt="Logo" width={50} height={30} className="rounded-full object-cover" />
           </Link>
-          <p className="text-sm text-neutral-700">
-            © ĐiĐi Camping {new Date().getFullYear()}
+          <p className="text-sm text-gray-400">
+            © ĐiĐi Audio {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>

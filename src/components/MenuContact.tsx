@@ -114,7 +114,7 @@ export default function MenuContact() {
                 />
               </Link>
               <a
-                href="https://m.me/ThueLeuCamTraiDaNang"
+                href="https://m.me/ThueLoaKeoDaNang"
                 target="_blank"
                 className="group relative flex items-center gap-x-6 rounded-lg p-2 pl-0 hover:bg-gray-50"
               >

@@ -1,26 +1,30 @@
-import React from 'react'
+'use client'
+
+import { motion } from 'framer-motion'
+import { GraduationCap, Truck, Gift } from 'lucide-react'
 
 export default function PromoBanner() {
   const promos = [
     {
-      icon: '🎓',
+      icon: GraduationCap,
       title: 'Ưu đãi sinh viên Đà Nẵng',
       desc: 'Giảm 10% cho sinh viên',
       tag: 'SALE',
+      gradient: 'from-music-purple to-music-pink',
     },
-   
-      {
-      icon: '🚚',
+    {
+      icon: Truck,
       title: 'Có giao hàng tận nơi',
       desc: 'Phí giao hàng tuỳ khoảng cách',
       tag: 'SUPPORT',
+      gradient: 'from-music-pink to-music-cyan',
     },
-
     {
-      icon: '🎪',
+      icon: Gift,
       title: 'Không phụ thu mùa lễ',
       desc: 'Ngày lễ không tính phụ thu',
       tag: 'FREE',
+      gradient: 'from-music-cyan to-music-blue',
     },
     
     // {
@@ -32,30 +36,39 @@ export default function PromoBanner() {
   ]
 
   return (
-    <section className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 py-4 sm:py-6">
+    <section className="relative mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 py-8 sm:py-12 bg-music-dark">
       <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {promos.map((p, i) => (
-          <div
+          <motion.div
             key={i}
-            className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-gradient-to-br from-orange-50 to-amber-100 p-4 sm:p-6 shadow hover:shadow-lg hover:-translate-y-1 transition"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
+            className="relative overflow-hidden rounded-2xl bg-music-light/30 backdrop-blur-sm border border-music-purple/20 p-6 hover:border-music-purple/40 hover:shadow-lg hover:shadow-music-purple/20 transition-all duration-300 group"
           >
             {/* Ribbon */}
-            <div className="absolute top-0 right-0 bg-gradient-to-r from-red-500 to-orange-500 text-white text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 rounded-bl-md sm:rounded-bl-lg shadow">
+            <div className={`absolute top-0 right-0 bg-gradient-to-r ${p.gradient} text-white text-xs font-bold px-3 py-1 rounded-bl-2xl shadow-lg`}>
               {p.tag}
             </div>
 
-            <div className="flex items-start gap-3 sm:gap-4">
-              <div className="text-3xl sm:text-5xl">{p.icon}</div>
-              <div>
-                <h3 className="text-base sm:text-lg font-bold text-[#D1410C]">
+            <div className="flex items-start gap-4">
+              <div className={`w-12 h-12 bg-gradient-to-br ${p.gradient} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
+                <p.icon className="w-6 h-6 text-white" />
+              </div>
+              <div className="flex-1 pt-1">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-2">
                   {p.title}
                 </h3>
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-gray-700 leading-relaxed">
+                <p className="text-sm text-gray-400 leading-relaxed">
                   {p.desc}
                 </p>
               </div>
             </div>
-          </div>
+
+            {/* Hover Glow */}
+            <div className={`absolute inset-0 bg-gradient-to-r ${p.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-2xl`} />
+          </motion.div>
         ))}
       </div>
     </section>

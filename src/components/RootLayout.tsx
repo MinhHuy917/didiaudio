@@ -70,12 +70,10 @@ function Header({
     onClick={onToggle} 
     aria-expanded={expanded ? 'true' : 'false'} 
     aria-controls={panelId} 
-    // Nút có nền trắng mờ (50%) và hover thành trắng đậm hơn (70% độ mờ)
     className={clsx( 
       'group -m-2.5 rounded-full p-2 transition mr-[1px]', 
-      'bg-white/50', // **THAY ĐỔI: Nền trắng mờ mặc định**
-      // Giữ nguyên logic hover, nhưng điều chỉnh độ mờ để dễ thấy hơn
-      invert ? 'hover:bg-neutral-950/30' : 'hover:bg-white/70', 
+      'bg-music-light/30 backdrop-blur-sm border border-music-purple/20',
+      invert ? 'hover:bg-music-light/50 hover:border-music-purple/40' : 'hover:bg-music-light/50 hover:border-music-purple/40', 
     )} 
     aria-label="Toggle navigation"
   >
@@ -85,8 +83,7 @@ function Header({
       fill="currentColor" 
       className={clsx(
         'h-6 w-6', 
-        // **THAY ĐỔI: Icon luôn là màu đen (text-black)** để nổi bật trên nền trắng mờ
-        'text-green-700', 
+        'text-music-purple', 
       )}
     >
       <circle cx="5" cy="5" r="1.5" />
@@ -108,7 +105,7 @@ function Header({
 
 function NavigationRow({ children }: { children: React.ReactNode }) {
   return (
-    <div className="even:mt-px sm:bg-[#EFE9DA]">
+    <div className="even:mt-px sm:bg-music-light/20">
       <Container>
         <div className="grid grid-cols-1 sm:grid-cols-2">{children}</div>
       </Container>
@@ -143,11 +140,11 @@ function NavigationItem({
     <Link
       href={href}
       target={target}
-      className={`font-[system-ui] group relative isolate -mx-6 bg-[#EFE9DA] px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 text-[#1F3329] ${className}`}
+      className={`font-[system-ui] group relative isolate -mx-6 bg-music-light/30 backdrop-blur-sm px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-music-purple/20 sm:even:pl-16 text-white hover:text-music-purple transition-colors ${className}`}
       style={style}
     >
       {children}
-      <span className='absolute inset-y-0 -z-10 w-screen bg-[#EFE9DA] opacity-0 transition group-odd:right-0 group-even:left-0' />
+      <span className='absolute inset-y-0 -z-10 w-screen bg-music-light/50 opacity-0 group-hover:opacity-100 transition group-odd:right-0 group-even:left-0' />
     </Link>
   )
 }
@@ -180,18 +177,30 @@ function NavigationItemV2({
 
 export function Navigation() {
   return (
-    <nav className="mt-px font-display text-3xl lg:text-5xl text-[#DD6B20] font-medium tracking-tight">
+    <nav className="mt-px font-display text-3xl lg:text-5xl font-medium tracking-tight">
       <NavigationRow>
-        <NavigationItem href="/about-didicamping">ĐiĐi Camping Story</NavigationItem>
+        <NavigationItem href="/about-didiaudio">
+          <span className="bg-gradient-to-r from-music-purple to-music-pink bg-clip-text text-transparent">
+            ĐiĐi Audio Story
+          </span>
+        </NavigationItem>
         <NavigationItem target='_blank' href="https://www.facebook.com/groups/695950148016396">
-          Cộng đồng cắm trại
+          <span className="bg-gradient-to-r from-music-pink to-music-cyan bg-clip-text text-transparent">
+            Cộng đồng âm thanh
+          </span>
         </NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/nhung-dia-diem-cam-trai-da-nang">
-          Địa điểm cắm trại{' '}
+        <NavigationItem href="/dich-vu-cho-thue-loa-keo-keo-da-nang">
+          <span className="bg-gradient-to-r from-music-cyan to-music-blue bg-clip-text text-transparent">
+            Dịch vụ cho thuê loa kéo
+          </span>
         </NavigationItem>
-        <NavigationItem href="/kinh-nghiem-cam-trai">Kinh Nghiệm cắm trại</NavigationItem>
+        <NavigationItem href="/thue-loa-keo-keo-da-nang">
+          <span className="bg-gradient-to-r from-music-blue to-music-purple bg-clip-text text-transparent">
+            Thuê loa kéo Đà Nẵng
+          </span>
+        </NavigationItem>
       </NavigationRow>
     </nav>
   )
@@ -203,7 +212,7 @@ export function NavigationV2() {
 
       <NavigationRowV2>
         <NavigationItemV2
-          href="/about-didicamping"
+          href="/about-didiaudio"
           className="relative sm:bg-none md:bg-none"
         >
           <div
@@ -216,7 +225,7 @@ export function NavigationV2() {
               zIndex: -1,
             }}
           />
-          <span className="relative z-10 text-white">ĐiĐi Camping Story</span>
+          <span className="relative z-10 text-white">ĐiĐi Audio Story</span>
         </NavigationItemV2>
       </NavigationRowV2>
 
@@ -237,7 +246,7 @@ export function NavigationV2() {
               zIndex: -1,
             }}
           />
-          <span className="relative z-10 text-white">  Cộng đồng cắm trại Đà Nẵng</span>
+          <span className="relative z-10 text-white">  Cộng đồng âm thanh Đà Nẵng</span>
         </NavigationItemV2>
 
       </NavigationRowV2>
@@ -245,7 +254,7 @@ export function NavigationV2() {
 
       <NavigationRowV2>
         <NavigationItemV2
-          href="/nhung-dia-diem-cam-trai-da-nang"
+          href="/dich-vu-cho-thue-loa-keo-keo-da-nang"
           className="relative sm:bg-none md:bg-none"
         >
           <div
@@ -258,7 +267,7 @@ export function NavigationV2() {
               zIndex: -1,
             }}
           />
-          <span className="relative z-10 text-white">Địa điểm cắm trại Đà Nẵng</span>
+          <span className="relative z-10 text-white">Dịch vụ cho thuê loa kéo Đà Nẵng</span>
         </NavigationItemV2>
 
 
@@ -268,7 +277,7 @@ export function NavigationV2() {
 
       <NavigationRowV2>
         <NavigationItemV2
-          href="/kinh-nghiem-cam-trai"
+          href="/thue-loa-keo-keo-da-nang"
           className="relative sm:bg-none md:bg-none"
         >
           <div
@@ -281,7 +290,7 @@ export function NavigationV2() {
               zIndex: -1,
             }}
           />
-          <span className="relative z-10 text-white">Kinh Nghiệm Cắm trại</span>
+          <span className="relative z-10 text-white">Thuê loa kéo Đà Nẵng</span>
         </NavigationItemV2>
       </NavigationRowV2>
 
@@ -348,15 +357,15 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           layout
           id={panelId}
           style={{ height: expanded ? 'auto' : '0.5rem' }}
-          className="relative z-50 overflow-hidden bg-neutral-950"
+          className="relative z-50 overflow-hidden bg-music-darker"
           aria-hidden={expanded ? undefined : 'true'}
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
           inert={expanded ? undefined : ''}
         >
-          <motion.div layout className="bg-white">
+          <motion.div layout className="bg-music-darker">
             <div ref={navRef} className={clsx(
               'py-10',
-              expanded ? 'bg-[#EFE9DA]' : 'bg-white',
+              expanded ? 'bg-music-light/50' : 'bg-music-darker',
             )}>
               <Header
                 invert
@@ -373,7 +382,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
               />
             </div>
             <Navigation />
-            <div className="relative bg-[#EFE9DA] before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
+            <div className="relative bg-music-light/30 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-music-purple/20">
             </div>
           </motion.div>
         </motion.div>
@@ -381,18 +390,12 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
 
       <motion.div
         layout
-        className="relative flex flex-auto overflow-hidden bg-white"
+        className="relative flex flex-auto overflow-hidden bg-music-darker"
       >
         <motion.div
           layout
           className="relative isolate flex w-full flex-col"
         >
-          <GridPattern
-            className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
-            yOffset={-96}
-            interactive
-          />
-
           <main className="w-full flex-auto">{children}</main>
 
           <Footer />

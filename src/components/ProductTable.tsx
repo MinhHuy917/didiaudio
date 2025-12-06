@@ -4,20 +4,8 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { products } from "@/data/products"
 import Link from 'next/link'
-import QR from '/src/images/qr2.png'
-import { IconAll, IconTent, IconMat, IconTable, IconLight, IconAccessory, IconCooking, IconIce } from "@/components/icons/CampIcons";
-
-const CATEGORY_DEFS = [
-  { label: 'Tất cả', value: 'all', Icon: IconAll },
-  { label: 'Lều & Võng', value: 'tent', Icon: IconTent },
-  { label: 'Tăng, Thảm', value: 'mat', Icon: IconMat },
-  { label: 'Bàn Ghế', value: 'table', Icon: IconTable },
-  { label: 'Đèn & Giá treo', value: 'light', Icon: IconLight },
-  { label: 'Loa, Quạt, Sạc', value: 'accessory', Icon: IconAccessory },
-  { label: 'Dụng cụ nấu', value: 'cooking', Icon: IconCooking },
-  { label: 'Thùng đá', value: 'ice', Icon: IconIce },
-] as const;
-
+import { motion } from 'framer-motion'
+import { Search, Music, Volume2 } from 'lucide-react'
 
 type Product = {
   id: any
@@ -25,239 +13,199 @@ type Product = {
   catalogue: string
   image: any
   price: number
+  originalPrice?: number
   quantity: number
   isRental?: boolean
 }
 
-const FilterBar: React.FC<{ selected: string; onChange: (v: string) => void; }> = ({ selected, onChange }) => {
-  return (
-    <div className="mb-8">
-      <div className="grid grid-cols-2 gap-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
-        {CATEGORY_DEFS.map(({ value, label, Icon }) => {
-          const active = selected === value;
-          return (
-            <button
-              key={value}
-              onClick={() => onChange(value)}
-              aria-pressed={active}
-              className={[
-                "group flex items-center rounded-xl border transition-all duration-200",
-                "px-3 py-2 text-[13px] sm:px-4 sm:py-2.5 sm:text-sm",
-                active
-                  ? "border-green-700 bg-green-50 text-green-900 shadow-sm"
-                  : "border-gray-200 bg-white text-gray-800 hover:border-green-600 hover:bg-green-50",
-                "focus:outline-none focus:ring-2 focus:ring-green-600/30"
-              ].join(" ")}
-            >
-              <span className={["mr-2 flex-shrink-0", active ? "text-green-700" : "text-gray-700", "h-6 w-6 sm:h-7 sm:w-7"].join(" ")}>
-                <Icon className="h-full w-full" />
-              </span>
-              <span className="truncate">{label}</span>
-            </button>
-          );
-        })}
-      </div>
-    </div>
-  );
-};
-
-
-
-const categoryOptions = [
-  { label: 'Tất cả', value: 'all' },
-  { label: 'Lều võng', value: 'tent' },
-  { label: 'Tăng, Thảm', value: 'mat' },
-  { label: 'Bàn Ghế', value: 'table' },
-  { label: 'Đèn, giá treo đèn', value: 'light' },
-  { label: 'Phụ kiện tiện ích', value: 'accessory' },
-  { label: 'Dụng cụ nấu ăn', value: 'cooking' },
-  { label: 'Thùng đá, túi đựng nước', value: 'ice' },
-]
-
 const ProductList: React.FC = () => {
   const [filterText, setFilterText] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('all')
 
-  const categoryFilterMap: Record<string, (p: Product) => boolean> = {
-    all: () => true,
-    tent: (p) => p.name.includes('Lều') || p.name.includes('Võng') || p.name.includes('Gối') || p.name.includes('Tấm cách nhiệt'),
-    table: (p) => p.name.includes('Bàn') || p.name.includes('Ghế') || p.name.includes('Khăn') ,
-    mat: (p) => p.name.includes('Tăng') || p.name.includes('Bộ 2 Cây Chống Tăng') || p.name.includes('Thảm'),
-    light: (p) => p.name.includes('Đèn') || p.name.includes('Giá chân treo đèn 1m') || p.name.includes('Trụ treo đèn 1m8') ,
-    accessory: (p) => p.name.includes('Loa') || p.name.includes('Loa') || p.name.includes('Quạt') || p.name.includes('Tripod') || p.name.includes('Sạc') || p.name.includes('Bộ bài'),
-    cooking: (p) => p.name.includes('Bếp') || p.name.includes('nồi') || p.name.includes('Nồi') || p.name.includes('Ấm') || p.name.includes('Tay quay nướng inox') || p.name.includes('Máy nướng tự động') || p.name.includes('Đầu khò') || p.name.includes('Bình gas') || p.name.includes('Than gáo dừa') || p.name.includes('Viên mồi than'),
-    ice: (p) => p.name.includes('Thùng') || p.name.includes('Túi đựng nước'),
-  }
-
-  const combinedFilter = (p: Product) => {
-    const matchesCategory = categoryFilterMap[selectedCategory](p)
+  const filteredProducts = products.filter((p: Product) => {
     const matchesText =
       filterText === '' ||
       p.name.toLowerCase().includes(filterText.toLowerCase()) ||
       p.catalogue.toLowerCase().includes(filterText.toLowerCase())
-    return matchesCategory && matchesText
-  }
-
-
-  const filteredProducts = products.filter(combinedFilter)
+    return matchesText
+  })
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 font-sans text-[#1F3329]">
-      <h2 className="text-xl md:text-2xl font-bold text-center mb-8 tracking-wide flex items-center justify-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 17v-6h13M9 12h13m0 0V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h10" />
-        </svg>
-        BẢNG GIÁ THUÊ
-      </h2>
-
-      {/* Filter Section */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-        <input
-          type="text"
-          placeholder="Tìm kiếm sản phẩm..."
-          value={filterText}
-          onChange={(e) => setFilterText(e.target.value)}
-          className="w-full sm:w-1/2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600"
-        />
-      
+    <section id="products" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-music-dark overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 right-0 w-96 h-96 bg-music-cyan/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-music-pink/5 rounded-full blur-3xl" />
       </div>
 
-{/* Filter Section (new, no scroll) */}
-<FilterBar selected={selectedCategory} onChange={setSelectedCategory} />
-
-
-
-      {/* Product Grid */}
-      {filteredProducts.length > 0 ? (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-          {filteredProducts.map((product) => (
-            <Link
-              href={`/products/${product.id}`}
-              key={product.id}
-              className="rounded-2xl bg-white dark:bg-[#EFE9DA] shadow hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col"
-            >
-              <Image
-                src={product.image}
-                alt={product.name}
-                width={0}
-                height={0}
-                sizes="(max-width: 768px) 100vw, 200px"
-                className="w-full h-[180px] object-cover rounded"
-              />
-              <div className="p-4 flex-1 flex flex-col justify-between">
-                <div>
-                  <h4 className="font-semibold text-sm md:text-base text-[#1F3329] leading-tight">{product.name}</h4>
-                  <p className="text-xs text-gray-600 dark:text-[#2D4B3A] mt-1">{product.catalogue}</p>
-                </div>
-                {/* <div className="mt-3 text-sm md:text-base font-semibold text-[#1F3329]">
-                  {product.price === 0 ? (
-                    <span className="text-green-600">Miễn phí</span>
-                  ) : (
-                    <span className="text-orange-600">
-                      {product.price}k{product.isRental ? "" : "/ngày"}
-                    </span>
-                  )}
-                </div> */}
-  <div className="mt-2">
-  {product.price === 0 ? (
-    <span className="text-green-600 font-medium text-xs sm:text-sm">Miễn phí</span>
-  ) : product.originalPrice && product.originalPrice > product.price ? (
-    <div className="flex flex-col">
-      {/* Giá gốc */}
-      <span className="text-gray-400 line-through text-[11px] sm:text-xs">
-        {product.originalPrice}k{product.isRental ? "" : "/ngày"}
-      </span>
-
-      {/* Giá sale + badge giảm */}
-      <div className="flex items-center gap-1.5">
-        <span className="text-orange-600 font-semibold text-sm sm:text-base">
-          {product.price}k{product.isRental ? "" : "/ngày"}
-        </span>
-        <span className="bg-red-500 text-white text-[9px] sm:text-[10px] font-semibold px-1.5 py-0.5 rounded-full">
-          -{Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}%
-        </span>
-      </div>
-    </div>
-  ) : (
-    <span className="text-orange-600 font-semibold text-sm sm:text-base">
-      {product.price}k{product.isRental ? "" : "/ngày"}
-    </span>
-  )}
-</div>
-
-
-
-              </div>
-            </Link>
-          ))}
-        </div>
-      ) : (
-        <p className="text-center text-gray-500">Không tìm thấy sản phẩm phù hợp.</p>
-      )}
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-md space-y-6 my-12">
-        <h2 className="text-2xl font-bold text-gray-800">Chính sách thuê lều</h2>
-
-        {/* 1. Đặt cọc & thanh toán */}
-        <div>
-          <h3 className="text-lg font-semibold text-gray-700 mb-1">1. Đặt cọc & Thanh toán</h3>
-          <p className="text-gray-700 leading-relaxed">
-            Khi thuê lều, vui lòng mang theo <span className="font-medium">CCCD hoặc GPLX</span> để bên mình đối chiếu và <span className="font-medium">chụp ảnh làm cơ sở cọc</span> (chỉ lưu thông tin, <span className="italic">không giữ giấy tờ</span>).
-            Đồng thời, bạn cần <span className="font-semibold">thanh toán đầy đủ trước khi nhận lều và đồ cắm trại</span>.
-          </p>
-        </div>
-
-        {/* 2. Thời gian thuê */}
-        <div>
-          <h3 className="text-lg font-semibold text-gray-700 mb-1">2. Thời gian thuê</h3>
-          <p className="text-gray-700 leading-relaxed">
-            Thời gian thuê được tính theo ngày (<span className="font-medium">24 tiếng</span>) kể từ lúc nhận lều và phụ kiện.
-            Tuy nhiên, bên mình có thể <span className="font-medium">hỗ trợ linh hoạt</span> nếu bạn cần nhận sớm hoặc trả trễ.
-          </p>
-          <div className="bg-gray-50 border-l-4 border-blue-400 p-4 mt-3 rounded">
-            <p className="text-gray-700 text-sm leading-relaxed">
-              <span className="font-semibold">Ví dụ:</span> Nếu bạn đi cắm trại vào <span className="font-medium">thứ 7</span> và cần đi sớm, bạn có thể ghé lấy lều từ tối <span className="font-medium">thứ 6</span> mà không tính thêm phí.
-              Khi trả lều, bạn có thể trả trong ngày <span className="font-medium">Chủ Nhật</span>.
-              Nhưng nếu giữ lều qua đêm Chủ Nhật và trả vào <span className="font-medium">thứ 2</span> hoặc sau đó, shop sẽ tính thêm <span className="font-semibold">50% giá thuê cho mỗi ngày tiếp theo</span>.
-            </p>
+      <div className="relative max-w-7xl mx-auto">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <div className="inline-flex items-center gap-2 mb-4">
+            <Volume2 className="w-5 h-5 text-music-purple" />
+            <span className="text-music-purple font-semibold">Sản Phẩm</span>
           </div>
-        </div>
-
-        {/* 3. Đền bù thiệt hại */}
-        <div>
-          <h4 className="text-base font-semibold text-red-700 mt-3 mb-1">📌 Đền bù thiệt hại</h4>
-          <p className="text-gray-700 leading-relaxed">
-            Khi trả lại, nếu <span className="font-medium">thiết bị hư hỏng, mất mát hoặc quá bẩn không thể chùi rửa được</span>,
-            shop sẽ <span className="font-semibold">tính phí vệ sinh, sửa chữa hoặc yêu cầu bồi thường</span> theo <span className="font-semibold text-red-700">giá trị thị trường hiện tại</span> của sản phẩm.
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-music-purple via-music-pink to-music-cyan bg-clip-text text-transparent">
+              Bảng Giá Thuê
+            </span>
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Chọn loa phù hợp với nhu cầu sự kiện của bạn
           </p>
-        </div>
+        </motion.div>
 
-        {/* 4. Những điều không nên */}
-        <div>
-          <h4 className="text-base font-semibold text-yellow-600 mt-3 mb-1">⚠️ Những điều không nên</h4>
-          <p className="text-gray-700 leading-relaxed">
-            Để tránh làm hỏng thiết bị và giữ đồ dùng luôn sạch sẽ, <span className="font-semibold text-red-700">vui lòng KHÔNG sử dụng</span> <span className="font-medium">tấm phủ lều</span> (tấm phủ bên trên lều) và <span className="font-medium">tấm tăng chữ A</span> (tấm che nắng, che mưa dựng kiểu chữ A) để <span className="font-semibold">ngồi, nằm, hoặc trải dưới nền đất</span>.
-          </p>
-        </div>
+        {/* Search Bar */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="max-w-2xl mx-auto mb-12"
+        >
+          <div className="relative">
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <input
+              type="text"
+              placeholder="Tìm kiếm loa..."
+              value={filterText}
+              onChange={(e) => setFilterText(e.target.value)}
+              className="w-full pl-12 pr-4 py-4 bg-music-light/50 backdrop-blur-sm border border-music-purple/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-music-purple/50 focus:ring-2 focus:ring-music-purple/20 transition-all"
+            />
+          </div>
+        </motion.div>
 
-          {/* 5.QR */} Thanh toán không tiền mặt
-          <div>
-    <h4 className="text-base font-semibold text-green-700 mt-3 mb-2">💳 Thanh toán không tiền mặt</h4>
-    <p className="text-gray-700 leading-relaxed mb-3">
-      Bạn có thể quét mã QR bên dưới để thanh toán nhanh chóng và tiện lợi.
-    </p>
-    <div className="flex justify-center">
-  <img
-    src={QR.src}
-    alt="QR Thanh toán"
-    className="max-w-xs rounded-lg border border-gray-300 shadow-md bg-white p-2"
-  />
-</div>
+        {/* Product Grid */}
+        {filteredProducts.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredProducts.map((product, index) => (
+              <motion.div
+                key={product.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Link href={`/products/${product.id}`}>
+                  <div className="group relative bg-music-light/30 backdrop-blur-sm border border-music-purple/20 rounded-2xl overflow-hidden hover:border-music-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-music-purple/20">
+                    {/* Image Container */}
+                    <div className="relative h-64 overflow-hidden bg-music-darker">
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      {/* Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-music-dark via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                      
+                      {/* Price Badge */}
+                      <div className="absolute top-4 right-4">
+                        {product.price === 0 ? (
+                          <span className="px-3 py-1 bg-music-neon/20 backdrop-blur-sm border border-music-neon/30 rounded-full text-music-neon text-sm font-semibold">
+                            Miễn phí
+                          </span>
+                        ) : product.originalPrice && product.originalPrice > product.price ? (
+                          <div className="flex flex-col items-end gap-1">
+                            <span className="px-2 py-1 bg-red-500/80 backdrop-blur-sm rounded text-white text-xs line-through">
+                              {product.originalPrice}k
+                            </span>
+                            <span className="px-3 py-1 bg-gradient-to-r from-music-purple to-music-pink rounded-full text-white text-sm font-bold">
+                              {product.price}k/ngày
+                            </span>
+                          </div>
+                        ) : (
+                          <span className="px-3 py-1 bg-gradient-to-r from-music-purple to-music-pink rounded-full text-white text-sm font-bold">
+                            {product.price}k/ngày
+                          </span>
+                        )}
+                      </div>
+                    </div>
 
-  </div>
+                    {/* Content */}
+                    <div className="p-6">
+                      <div className="flex items-start gap-3 mb-3">
+                        <div className="w-10 h-10 bg-gradient-to-br from-music-purple to-music-pink rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Music className="w-5 h-5 text-white" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-music-purple transition-colors line-clamp-2">
+                            {product.name}
+                          </h3>
+                          <p className="text-sm text-gray-400 line-clamp-2">
+                            {product.catalogue}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* View Details Button */}
+                      <div className="mt-4 pt-4 border-t border-music-purple/10">
+                        <span className="text-sm text-music-purple font-medium group-hover:text-music-pink transition-colors">
+                          Xem chi tiết →
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Hover Glow Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-music-purple/0 via-music-pink/0 to-music-cyan/0 group-hover:from-music-purple/5 group-hover:via-music-pink/5 group-hover:to-music-cyan/5 transition-all duration-500 pointer-events-none rounded-2xl" />
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center py-12"
+          >
+            <p className="text-gray-400 text-lg">Không tìm thấy sản phẩm phù hợp.</p>
+          </motion.div>
+        )}
+
+        {/* Policy Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-20 bg-music-light/30 backdrop-blur-sm border border-music-purple/20 rounded-2xl p-8 space-y-6"
+        >
+          <h2 className="text-2xl font-bold text-white mb-6">Chính sách thuê loa</h2>
+
+          <div className="space-y-4 text-gray-300">
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-2">1. Đặt cọc & Thanh toán</h3>
+              <p className="leading-relaxed">
+                Khi thuê loa, vui lòng mang theo <span className="font-medium text-music-purple">CCCD hoặc GPLX</span> để đối chiếu và chụp ảnh làm cơ sở cọc (chỉ lưu thông tin, không giữ giấy tờ).
+                Thanh toán đầy đủ trước khi nhận loa.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-2">2. Thời gian thuê</h3>
+              <p className="leading-relaxed">
+                Thời gian thuê được tính theo ngày (<span className="font-medium text-music-purple">24 tiếng</span>) kể từ lúc nhận loa.
+                Hỗ trợ linh hoạt nếu cần nhận sớm hoặc trả trễ.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-base font-semibold text-music-pink mb-2">📌 Đền bù thiệt hại</h4>
+              <p className="leading-relaxed">
+                Nếu thiết bị hư hỏng, mất mát hoặc quá bẩn, shop sẽ tính phí vệ sinh, sửa chữa hoặc yêu cầu bồi thường theo giá trị thị trường hiện tại.
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
-
-    </div>
-    
+    </section>
   )
 }
 

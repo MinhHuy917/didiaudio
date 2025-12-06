@@ -9,46 +9,28 @@ import { NavigationV2 } from '@/components/RootLayout'
 import Testimonials from '@/components/Testimonials'
 import WhyUs from '@/components/WhyUs'
 import SpecialNoticeBanner from '@/components/SpecialNoticeBanner'
-import BlogCamTrai from '@/components/BlogCamTrai'
+import HeroSection from '@/components/HeroSection'
 
 export const metadata: Metadata = {
   description:
-  'Dịch vụ cho thuê lều cắm trại chuyên nghiệp tại Đà Nẵng – đồng hành cùng bạn trong mọi chuyến phiêu lưu.',
+  'Dịch vụ cho thuê loa kéo chuyên nghiệp tại Đà Nẵng – đồng hành cùng bạn trong mọi sự kiện và tiệc tùng.',
 }
 
 export default async function Home() {
   return (
     <>
-      <ImageSlider />
-      {/* ✅ Giới thiệu về Dì Đi Camping */}
-        <AboutSection />
-
+      <HeroSection />
+      <AboutSection />
       <SpecialNoticeBanner />
-
       <ProductList />
-{/* ✅ Vì sao chọn chúng tôi */}
-<WhyUs />
-          {/* ✅ Đánh giá khách hàng */}
-          <Testimonials />
-
-        
-      <div>
-      <h2 className="text-5xl font-bold text-center text-gray-900 mb-10">
-         Blog cắm trại
-          </h2>
-       <BlogCamTrai />
-      </div>
+      <WhyUs />
+      <Testimonials />
       <FAQ />
-
       <FAQSchema />
-      <div className='mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 font-sans text-[#1F3329]'>
-
-      <NavigationV2 />
+      <div className='mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 font-sans'>
+        <NavigationV2 />
       </div>
-      
-
       <MenuContact />
-
     </>
   )
 }

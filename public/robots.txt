@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://didicamping.com
+Host: https://didiaudio.vn
 
 # Sitemaps
-Sitemap: https://didicamping.com/sitemap.xml
+Sitemap: https://didiaudio.vn/sitemap.xml

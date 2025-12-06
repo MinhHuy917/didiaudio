@@ -84,10 +84,18 @@ const reviews = [
 export default function Testimonials() {
 
   return (
-    <section className="py-20 px-6 sm:px-12 bg-[#F9FAFB] relative">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-[#1F3329] mb-14">
-        Cảm nhận thực tế từ khách hàng
+    <section className="relative py-24 px-6 sm:px-12 bg-music-dark overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-music-cyan/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-music-pink/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative max-w-6xl mx-auto">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-14">
+          <span className="bg-gradient-to-r from-music-purple via-music-pink to-music-cyan bg-clip-text text-transparent">
+            Cảm nhận thực tế từ khách hàng
+          </span>
         </h2>
 
         <div className="overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory px-1 sm:px-2 hide-scrollbar">
@@ -99,17 +107,17 @@ export default function Testimonials() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="snap-start min-w-[300px] max-w-sm flex-shrink-0 bg-white shadow-lg rounded-2xl p-2 lg:p-6 border hover:shadow-2xl hover:scale-105 transition-transform duration-300"
+                className="snap-start min-w-[300px] max-w-sm flex-shrink-0 bg-music-light/30 backdrop-blur-sm border border-music-purple/20 shadow-lg rounded-2xl p-2 lg:p-6 hover:border-music-purple/40 hover:shadow-2xl hover:shadow-music-purple/20 hover:scale-105 transition-all duration-300"
               >
                 <Image
                   src={r.image}
                   alt={`Đánh giá của ${r.name}`}
                   width={300}
                   height={208}
-                  className="rounded-lg mb-4 w-full h-[320px] lg:h-52 object-cover object-top border border-gray-200"
+                  className="rounded-lg mb-4 w-full h-[320px] lg:h-52 object-cover object-top border border-music-purple/20"
                 />
-                <p className="text-gray-800 italic text-base leading-relaxed">“{r.comment}”</p>
-                <p className="mt-3 text-right font-semibold text-[#1F3329]">– {r.name}</p>
+                <p className="text-gray-300 italic text-base leading-relaxed">"{r.comment}"</p>
+                <p className="mt-3 text-right font-semibold text-music-purple">– {r.name}</p>
               </motion.div>
             ))}
           </div>
@@ -117,13 +125,11 @@ export default function Testimonials() {
       </div>
 
         <motion.div
-          className="absolute right-6 top-[50%] translate-y-[-50%] z-10 text-[#1F3329] opacity-70"
+          className="absolute right-6 top-[50%] translate-y-[-50%] z-10 opacity-70"
           animate={{ x: [0, -20, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
         >
-          <ChevronRight className="w-8 h-8 text-white drop-shadow-lg" />
-
-
+          <ChevronRight className="w-8 h-8 text-music-purple drop-shadow-lg" />
         </motion.div>
     </section>
   )

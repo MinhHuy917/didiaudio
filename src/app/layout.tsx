@@ -7,59 +7,59 @@ import '@/styles/tailwind.css'
 
 // export const metadata: Metadata = {
 //   title: {
-//     template: '%s | ĐiĐi Camping',
-//     default: 'ĐiĐi Camping',
+//     template: '%s | ĐiĐi Audio',
+//     default: 'ĐiĐi Audio',
 //   },
 // }
 
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | ĐiĐi Camping - Thuê lều cắm trại Đà Nẵng',
-    default: 'ĐiĐi Camping - Thuê lều cắm trại Đà Nẵng, lều cắm trại Đà Nẵng giá rẻ',
+    template: '%s | ĐiĐi Audio - Cho thuê loa kéo Đà Nẵng',
+    default: 'ĐiĐi Audio - Cho thuê loa kéo Đà Nẵng, loa kéo giá rẻ, chất lượng',
   },
   description:
-    'ĐiĐi Camping chuyên cho thuê lều cắm trại Đà Nẵng, lều du lịch, lều dã ngoại. Dịch vụ giao tận nơi, đầy đủ thiết bị, giá rẻ, hỗ trợ lắp đặt tận tình.',
+    'ĐiĐi Audio chuyên cho thuê loa kéo tại Đà Nẵng, loa karaoke, loa bluetooth. Dịch vụ giao tận nơi, đầy đủ thiết bị âm thanh, giá rẻ, hỗ trợ lắp đặt tận tình.',
   keywords: [
-    'lều cắm trại Đà Nẵng',
-    'thuê lều cắm trại Đà Nẵng',
-    'thuê lều Đà Nẵng',
-    'cho thuê lều trại Đà Nẵng',
-    'dịch vụ cắm trại Đà Nẵng',
-    'lều du lịch Đà Nẵng',
-    'ĐiĐi Camping',
+    'cho thuê loa kéo Đà Nẵng',
+    'thuê loa kéo Đà Nẵng',
+    'thuê loa karaoke Đà Nẵng',
+    'cho thuê loa Đà Nẵng',
+    'dịch vụ cho thuê loa Đà Nẵng',
+    'loa kéo Đà Nẵng',
+    'ĐiĐi Audio',
   ],
   openGraph: {
-    title: 'ĐiĐi Camping - Thuê lều cắm trại Đà Nẵng, lều du lịch, dã ngoại',
+    title: 'ĐiĐi Audio - Cho thuê loa kéo Đà Nẵng, loa karaoke, loa bluetooth',
     description:
-      'Dịch vụ thuê lều cắm trại tại Đà Nẵng giá rẻ, giao tận nơi. Phù hợp du lịch, dã ngoại, teambuilding. Trang bị đầy đủ, hỗ trợ lắp đặt.',
-    url: 'https://www.didicamping.com',
-    siteName: 'ĐiĐi Camping',
+      'Dịch vụ cho thuê loa kéo tại Đà Nẵng giá rẻ, giao tận nơi. Phù hợp tiệc tùng, sự kiện, karaoke. Trang bị đầy đủ, hỗ trợ lắp đặt.',
+    url: 'https://www.didiaudio.com',
+    siteName: 'ĐiĐi Audio',
     locale: 'vi_VN',
     type: 'website',
     images: [
       {
-        url: 'https://www.didicamping.com/og-image.jpg',
+        url: 'https://www.didiaudio.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Thuê lều cắm trại Đà Nẵng - ĐiĐi Camping',
+        alt: 'Cho thuê loa kéo Đà Nẵng - ĐiĐi Audio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ĐiĐi Camping - Thuê lều cắm trại Đà Nẵng, lều du lịch, dã ngoại',
+    title: 'ĐiĐi Audio - Cho thuê loa kéo Đà Nẵng, loa karaoke, loa bluetooth',
     description:
-      'Dịch vụ thuê lều uy tín tại Đà Nẵng, giao tận nơi, giá rẻ, hỗ trợ lắp đặt.',
-    images: ['https://www.didicamping.com/og-image.jpg'],
+      'Dịch vụ cho thuê loa kéo uy tín tại Đà Nẵng, giao tận nơi, giá rẻ, hỗ trợ lắp đặt.',
+    images: ['https://www.didiaudio.com/og-image.jpg'],
   },
-  metadataBase: new URL('https://www.didicamping.com'),
+  metadataBase: new URL('https://www.didiaudio.com'),
 }
 
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="h-full bg-neutral-950 text-base antialiased">
+    <html lang="vi" className="h-full dark bg-music-darker text-white antialiased">
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-RGJ5VKVX7J"
@@ -74,7 +74,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           `}
         </Script>
       </head>
-      <body className="flex min-h-full flex-col">
+      <body className="flex min-h-full flex-col bg-music-darker">
         <RootLayout>{children}</RootLayout>
       </body>
     </html>

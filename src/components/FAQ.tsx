@@ -15,10 +15,18 @@ export const FAQ = () => {
     }
   
     return (
-      <section id="faq" className="py-16 bg-white px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">
-            Câu hỏi thường gặp
+      <section id="faq" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-music-dark overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-0 w-96 h-96 bg-music-purple/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-music-pink/5 rounded-full blur-3xl" />
+        </div>
+
+        <div className="relative max-w-4xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center mb-12">
+            <span className="bg-gradient-to-r from-music-purple via-music-pink to-music-cyan bg-clip-text text-transparent">
+              Câu hỏi thường gặp
+            </span>
           </h2>
           <div className="space-y-4">
             {faqs.map((item, index) => {
@@ -26,25 +34,25 @@ export const FAQ = () => {
               return (
                 <div
                   key={index}
-                  className="border border-gray-200 rounded-xl shadow-sm overflow-hidden"
+                  className="bg-music-light/30 backdrop-blur-sm border border-music-purple/20 rounded-2xl overflow-hidden hover:border-music-purple/40 transition-all duration-300"
                 >
                   <button
                     onClick={() => toggle(index)}
-                    className="w-full flex items-center justify-between px-6 py-5 bg-white text-left hover:bg-gray-50 transition-all duration-200"
+                    className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-music-light/20 transition-all duration-200"
                   >
-                    <span className="text-base font-medium text-gray-900">
+                    <span className="text-base font-medium text-white pr-4">
                       {item.question}
                     </span>
                     <ChevronDown
                       className={clsx(
-                        'h-5 w-5 text-gray-500 transition-transform duration-300',
+                        'h-5 w-5 text-music-purple transition-transform duration-300 flex-shrink-0',
                         isOpen && 'rotate-180'
                       )}
                     />
                   </button>
                   <div
                     className={clsx(
-                      'px-6 pt-0 pb-5 text-sm text-gray-700 leading-relaxed transition-all duration-300',
+                      'px-6 pt-0 pb-5 text-sm text-gray-300 leading-relaxed transition-all duration-300',
                       isOpen ? 'block' : 'hidden'
                     )}
                   >

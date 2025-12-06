@@ -58,7 +58,7 @@ export const socialMediaProfiles = [
   },
   {
     title: 'Tiktok',
-    href: 'https://www.tiktok.com/@didicamping',
+    href: 'https://www.tiktok.com/@didiaudio',
     icon: TiktokIcon,
   },
 ]
@@ -67,12 +67,12 @@ export const socialMediaProfilesV2 = [
   
   {
     title: 'Instagram',
-    href: 'https://www.instagram.com/didicamping/',
+    href: 'https://www.instagram.com/didiaudio/',
     icon: FacebookIcon,
   },
   {
     title: 'Youtube',
-    href: 'https://www.youtube.com/@didicamping',
+    href: 'https://www.youtube.com/@didiaudio',
     icon: TiktokIcon,
   },
 ]

@@ -1,53 +1,53 @@
 export const faqs = [
     {
-      question: 'Thuê lều cắm trại ở Đà Nẵng ở đâu uy tín, giá rẻ?',
+      question: 'Cho thuê loa kéo ở Đà Nẵng ở đâu uy tín, giá rẻ?',
       answer:
-        'Bạn có thể thuê lều cắm trại chất lượng tại ĐiĐi Camping – dịch vụ uy tín tại Đà Nẵng với giá cả hợp lý, giao tận nơi và hỗ trợ set up.',
+        'Bạn có thể thuê loa kéo chất lượng tại ĐiĐi Audio – dịch vụ uy tín tại Đà Nẵng với giá cả hợp lý, giao tận nơi và hỗ trợ lắp đặt.',
     },
     {
-      question: 'ĐiĐi Camping cung cấp những loại lều cắm trại nào?',
+      question: 'ĐiĐi Audio cung cấp những loại loa kéo nào?',
       answer:
-        'Chúng tôi cung cấp nhiều loại lều từ 2 đến 8 người, bao gồm lều có mái che, lều chống nước, chống gió tốt nhất thị trường',
+        'Chúng tôi cung cấp nhiều loại loa kéo từ loa bluetooth nhỏ gọn đến loa karaoke công suất lớn, phù hợp với mọi nhu cầu từ tiệc nhỏ đến sự kiện lớn.',
     },
     {
-      question: 'Giá thuê lều cắm trại tại Đà Nẵng là bao nhiêu?',
+      question: 'Giá thuê loa kéo tại Đà Nẵng là bao nhiêu?',
       answer:
-        'Giá thuê lều dao động từ 70.000đ – 180.000đ tùy loại lều mà bạn thuê. Bạn có thể xem bảng giá chi tiết trên website hoặc liên hệ trực tiếp để được tư vấn.',
+        'Giá thuê loa kéo dao động từ 50.000đ – 350.000đ tùy loại loa và thời gian thuê. Bạn có thể xem bảng giá chi tiết trên website hoặc liên hệ trực tiếp để được tư vấn.',
     },
     {
-      question: 'Dịch vụ thuê lều có bao gồm giao hàng tận nơi và set up lều không?',
+      question: 'Dịch vụ thuê loa có bao gồm giao hàng tận nơi và lắp đặt không?',
       answer:
-        'Có. ĐiĐi Camping hỗ trợ giao lều tận nơi trong khu vực Đà Nẵng và cung cấp dịch vụ set up lều nhanh chóng, đúng địa điểm bạn yêu cầu.',
+        'Có. ĐiĐi Audio hỗ trợ giao loa tận nơi trong khu vực Đà Nẵng và cung cấp dịch vụ lắp đặt, set-up nhanh chóng, đúng địa điểm bạn yêu cầu.',
     },
     {
-      question: 'Tôi có thể thuê lều trong bao lâu? Có tính thêm phí nếu trả trễ không?',
+      question: 'Tôi có thể thuê loa kéo trong bao lâu? Có tính thêm phí nếu trả trễ không?',
       answer:
-        'Bạn có thể thuê lều theo ngày hoặc nhiều ngày. Trường hợp trả trễ sẽ tính thêm phí theo chính sách thuê lều trên website.',
+        'Bạn có thể thuê loa theo ngày hoặc nhiều ngày. Trường hợp trả trễ sẽ tính thêm phí theo chính sách thuê loa trên website.',
     },
     {
-      question: 'Lều thuê tại ĐiĐi Camping có chống nước, chống gió tốt không?',
+      question: 'Loa kéo thuê tại ĐiĐi Audio có chất lượng âm thanh tốt không?',
       answer:
-        'Tất cả lều của chúng tôi đều là lều du lịch chất lượng cao, có khả năng chống nước, chống gió, phù hợp với nhiều điều kiện thời tiết ở Đà Nẵng.',
+        'Tất cả loa của chúng tôi đều là loa chất lượng cao, được bảo dưỡng thường xuyên, đảm bảo âm thanh rõ ràng, bass mạnh, phù hợp với nhiều loại sự kiện.',
     },
     {
-      question: 'Khi thuê lều cắm trại, tôi cần chuẩn bị gì thêm không?',
+      question: 'Khi thuê loa kéo, tôi có được cung cấp micro và phụ kiện không?',
       answer:
-        'Bạn chỉ cần mang theo đồ cá nhân và thực phẩm. Chúng tôi cung cấp đầy đủ lều, tấm cách nhiệt, đèn, bàn ghế, bếp gas mini và các vật dụng cơ bản khác.',
+        'Có. Chúng tôi cung cấp đầy đủ micro không dây, dây kết nối, và các phụ kiện cần thiết để bạn có thể sử dụng ngay.',
     },
     {
-      question: 'ĐiĐi Camping có hỗ trợ thuê lều cho teambuilding hoặc nhóm đông người không?',
+      question: 'ĐiĐi Audio có hỗ trợ thuê loa cho sự kiện lớn hoặc đám cưới không?',
       answer:
-        'Có. Chúng tôi chuyên cung cấp dịch vụ thuê lều cho đoàn thể, sự kiện teambuilding, dã ngoại nhóm lớn với số lượng lều và thiết bị đầy đủ.',
+        'Có. Chúng tôi chuyên cung cấp dịch vụ thuê loa cho các sự kiện lớn, đám cưới, tiệc tùng, teambuilding với số lượng loa và thiết bị đầy đủ.',
     },
     {
-      question: 'Có cần cọc khi thuê lều cắm trại không? Chính sách hoàn cọc thế nào?',
+      question: 'Có cần cọc khi thuê loa kéo không? Chính sách hoàn cọc thế nào?',
       answer:
-        'Không. Bạn chỉ cần mang theo CCCD/GPLX để bên mình đối chiếu và chụp ảnh làm cơ sở cọc (chỉ lưu thông tin, không giữ giấy tờ).',
+        'Có. Bạn cần đặt cọc để đảm bảo thiết bị. Cọc sẽ được hoàn lại đầy đủ khi trả loa đúng hạn và không có hư hỏng.',
     },
     {
-      question: 'Tôi nên đặt thuê lều trước bao lâu để đảm bảo có lều?',
+      question: 'Tôi nên đặt thuê loa trước bao lâu để đảm bảo có loa?',
       answer:
-        'Bạn nên đặt trước ít nhất 2–4 ngày, đặc biệt vào cuối tuần hoặc mùa du lịch để đảm bảo có lều đúng nhu cầu và không bị hết thiết bị và cọc 100k để giữ chỗ vào những mùa cao điểm).',
+        'Bạn nên đặt trước ít nhất 2–3 ngày, đặc biệt vào cuối tuần hoặc mùa lễ hội để đảm bảo có loa đúng nhu cầu và không bị hết thiết bị.',
     },
   ]
   
