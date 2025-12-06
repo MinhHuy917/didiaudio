@@ -8,7 +8,7 @@ import Image from "next/image"
 import PromoBanner from "@/components/SpecialNoticeBanner"
 
 type Product = {
-  id: number
+  id: string | number
   name: string
   catalogue: string
   image: string
@@ -17,21 +17,22 @@ type Product = {
   image3?: string
   image4?: string
   image5?: string
-  image6?: string
-  image7?: string
+  originalPrice?: number
   price: number
   quantity: number
   detail1?: string
   detail2?: string
   detail3?: string
   detail4?: string
+  detail5?: string
   videoId?: string
+  isRental?: boolean
 }
 
 export default function ProductPage({ params }: { params: { id: string } }) {
   const router = useRouter()
 
-  const product = products.find((p: any) => p.id.toString() === params.id) ?? null
+  const product = products.find((p: any) => p.id.toString() === params.id) as Product | undefined
 
   const images = [
     product?.image,
@@ -40,8 +41,6 @@ export default function ProductPage({ params }: { params: { id: string } }) {
     product?.image3,
     product?.image4,
     product?.image5,
-    product?.image6,
-    product?.image7,
   ].filter(Boolean) as string[]
 
   const [mainImage, setMainImage] = useState(images[0] ?? "")
@@ -121,7 +120,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 </div>
 
                 {/* Video demo */}
-                {product.videoId && (
+                {product && 'videoId' in product && product.videoId && (
                   <div className="mt-6">
                     <p className="font-semibold mb-2">Video hướng dẫn sử dụng:</p>
                     <iframe
