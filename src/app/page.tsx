@@ -10,10 +10,11 @@ import Testimonials from '@/components/Testimonials'
 import WhyUs from '@/components/WhyUs'
 import SpecialNoticeBanner from '@/components/SpecialNoticeBanner'
 import HeroSection from '@/components/HeroSection'
+import UseCaseSection from '@/components/UseCaseSection'
 
 export const metadata: Metadata = {
   description:
-  'Dịch vụ cho thuê loa kéo chuyên nghiệp tại Đà Nẵng – đồng hành cùng bạn trong mọi sự kiện và tiệc tùng.',
+  'Cho thuê loa kéo JBL chính hãng tại Đà Nẵng. Giao nhanh 30-60 phút, setup miễn phí, hỗ trợ 24/7. Phù hợp du lịch, cắm trại, sinh nhật, team building.',
 }
 
 export default async function Home() {
@@ -23,6 +24,7 @@ export default async function Home() {
       <AboutSection />
       <SpecialNoticeBanner />
       <ProductList />
+      <UseCaseSection />
       <WhyUs />
       <Testimonials />
       <FAQ />

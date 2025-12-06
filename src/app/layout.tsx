@@ -19,20 +19,21 @@ export const metadata: Metadata = {
     default: 'ĐiĐi Audio - Cho thuê loa kéo Đà Nẵng, loa kéo giá rẻ, chất lượng',
   },
   description:
-    'ĐiĐi Audio chuyên cho thuê loa kéo tại Đà Nẵng, loa karaoke, loa bluetooth. Dịch vụ giao tận nơi, đầy đủ thiết bị âm thanh, giá rẻ, hỗ trợ lắp đặt tận tình.',
+    'ĐiĐi Audio - Cho thuê loa kéo JBL chính hãng tại Đà Nẵng. Giao nhanh 30-60 phút, setup miễn phí, hỗ trợ 24/7. Phù hợp du lịch, cắm trại, sinh nhật, team building.',
   keywords: [
-    'cho thuê loa kéo Đà Nẵng',
-    'thuê loa kéo Đà Nẵng',
+    'cho thuê loa kéo JBL Đà Nẵng',
+    'thuê loa kéo JBL Đà Nẵng',
     'thuê loa karaoke Đà Nẵng',
-    'cho thuê loa Đà Nẵng',
-    'dịch vụ cho thuê loa Đà Nẵng',
-    'loa kéo Đà Nẵng',
+    'cho thuê loa JBL chính hãng',
+    'dịch vụ cho thuê loa kéo Đà Nẵng',
+    'loa kéo JBL Đà Nẵng',
     'ĐiĐi Audio',
+    'thuê loa party Đà Nẵng',
   ],
   openGraph: {
-    title: 'ĐiĐi Audio - Cho thuê loa kéo Đà Nẵng, loa karaoke, loa bluetooth',
+    title: 'ĐiĐi Audio - Cho thuê loa kéo JBL chính hãng Đà Nẵng | Giao nhanh 30-60 phút',
     description:
-      'Dịch vụ cho thuê loa kéo tại Đà Nẵng giá rẻ, giao tận nơi. Phù hợp tiệc tùng, sự kiện, karaoke. Trang bị đầy đủ, hỗ trợ lắp đặt.',
+      'Cho thuê loa kéo JBL chính hãng tại Đà Nẵng. Giao nhanh 30-60 phút, setup miễn phí, hỗ trợ 24/7. Phù hợp du lịch, cắm trại, sinh nhật, team building.',
     url: 'https://www.didiaudio.com',
     siteName: 'ĐiĐi Audio',
     locale: 'vi_VN',
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="vi" className="h-full dark bg-music-darker text-white antialiased">
+    <html lang="vi" className="h-full dark bg-audio-darker text-white antialiased">
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-RGJ5VKVX7J"
@@ -74,7 +75,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           `}
         </Script>
       </head>
-      <body className="flex min-h-full flex-col bg-music-darker">
+      <body className="flex min-h-full flex-col bg-audio-darker">
         <RootLayout>{children}</RootLayout>
       </body>
     </html>

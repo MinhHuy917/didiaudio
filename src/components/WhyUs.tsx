@@ -6,33 +6,33 @@ import { motion } from 'framer-motion'
 const featureList = [
   {
     icon: MapPin,
-    title: 'Vị trí thuận tiện tại Đà Nẵng',
-    desc: 'Cửa hàng nằm ngay trung tâm, dễ dàng đến lấy và trả loa.',
-    color: 'from-music-purple to-music-pink',
-  },
-  {
-    icon: Package,
-    title: 'Loa kéo, micro, phụ kiện đầy đủ',
-    desc: 'Không cần mang theo gì – mọi thiết bị âm thanh đã sẵn sàng.',
-    color: 'from-music-pink to-music-cyan',
-  },
-  {
-    icon: Headphones,
-    title: 'Đa dạng loại loa cho mọi nhu cầu',
-    desc: 'Tiệc nhỏ, sự kiện lớn, karaoke – có đủ lựa chọn.',
-    color: 'from-music-cyan to-music-blue',
+    title: 'JBL Chính Hãng',
+    desc: '100% loa JBL chính hãng, chất lượng đảm bảo, bảo hành đầy đủ.',
+    color: 'from-audio-electricBlue to-audio-neonPurple',
   },
   {
     icon: Truck,
-    title: 'Hỗ trợ lắp đặt và vận chuyển',
-    desc: 'Giao tận nơi, set-up nhanh chóng, hỗ trợ tận tình.',
-    color: 'from-music-blue to-music-purple',
+    title: 'Giao 30-60 Phút',
+    desc: 'Giao hàng siêu nhanh trong nội thành Đà Nẵng, setup miễn phí.',
+    color: 'from-audio-neonPurple to-audio-neonOrange',
+  },
+  {
+    icon: Headphones,
+    title: 'Hỗ Trợ Kỹ Thuật',
+    desc: 'Tư vấn chọn loa phù hợp, hỗ trợ setup và xử lý sự cố 24/7.',
+    color: 'from-audio-neonOrange to-audio-electricBlue',
+  },
+  {
+    icon: Package,
+    title: 'Phụ Kiện Đầy Đủ',
+    desc: 'Micro, dây kết nối, sạc pin - mọi thứ đã sẵn sàng.',
+    color: 'from-audio-electricBlue to-audio-neonOrange',
   },
   {
     icon: MessageCircle,
-    title: 'Tư vấn thiết bị miễn phí',
-    desc: 'Tư vấn chọn loa phù hợp với nhu cầu và không gian sự kiện.',
-    color: 'from-music-purple to-music-cyan',
+    title: 'Giá Cả Minh Bạch',
+    desc: 'Bảng giá rõ ràng, không phụ thu ẩn, ưu đãi cho sinh viên.',
+    color: 'from-audio-neonPurple to-audio-electricBlue',
   },
 ]
 
@@ -41,35 +41,35 @@ const stats = [
     icon: Users,
     value: '1000+',
     label: 'Khách Hàng',
-    gradient: 'from-music-purple to-music-pink',
+    gradient: 'from-audio-electricBlue to-audio-neonPurple',
   },
   {
     icon: Star,
     value: '5.0',
     label: 'Đánh Giá',
-    gradient: 'from-music-pink to-music-cyan',
+    gradient: 'from-audio-neonPurple to-audio-neonOrange',
   },
   {
     icon: Smile,
     value: '100%',
     label: 'Hài Lòng',
-    gradient: 'from-music-cyan to-music-blue',
+    gradient: 'from-audio-neonOrange to-audio-electricBlue',
   },
   {
     icon: Heart,
-    value: '7+',
-    label: 'Năm Kinh Nghiệm',
-    gradient: 'from-music-blue to-music-purple',
+    value: '30-60p',
+    label: 'Giao Hàng',
+    gradient: 'from-audio-electricBlue to-audio-neonOrange',
   },
 ]
 
 export default function WhyUs() {
   return (
-    <section className="relative py-24 px-6 sm:px-12 bg-music-dark overflow-hidden">
+    <section className="relative py-24 px-6 sm:px-12 bg-audio-dark overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-music-purple/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-music-pink/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-audio-electricBlue/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-audio-neonPurple/5 rounded-full blur-3xl" />
       </div>
 
       <div className="relative max-w-7xl mx-auto">
@@ -80,13 +80,13 @@ export default function WhyUs() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+          <h2 className="text-4xl sm:text-5xl font-black mb-4">
             Tại Sao Chọn{' '}
-            <span className="bg-gradient-to-r from-music-purple via-music-pink to-music-cyan bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-audio-electricBlue via-audio-neonPurple to-audio-neonOrange bg-clip-text text-transparent">
               ĐiĐi Audio?
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-audio-textMuted text-lg max-w-2xl mx-auto">
             Chúng tôi cam kết mang đến trải nghiệm âm thanh tốt nhất cho mọi sự kiện của bạn
           </p>
         </motion.div>
@@ -108,7 +108,7 @@ export default function WhyUs() {
                 </div>
                 <div className="flex-1">
                   <p className="font-semibold text-white text-lg mb-1">{item.title}</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-audio-textMuted text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -123,7 +123,7 @@ export default function WhyUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="relative bg-music-light/30 backdrop-blur-sm border border-music-purple/20 rounded-2xl p-6 text-center hover:border-music-purple/40 transition-all group"
+                className="relative bg-audio-light/30 backdrop-blur-sm border border-audio-electricBlue/20 rounded-2xl p-6 text-center hover:border-audio-electricBlue/40 transition-all group"
               >
                 <div className={`w-14 h-14 bg-gradient-to-br ${stat.gradient} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
                   <stat.icon className="w-7 h-7 text-white" />

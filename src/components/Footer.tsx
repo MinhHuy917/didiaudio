@@ -46,7 +46,7 @@ function Navigation() {
                 <li key={linkIndex} className="mt-4">
                   <Link
                     href={link.href}
-                    className="!font-[system-ui] transition hover:text-music-purple"
+                    className="!font-[system-ui] transition hover:text-audio-electricBlue"
                   >
                     {link.title}
                   </Link>
@@ -90,9 +90,16 @@ export function Footer() {
             <Navigation />
         </div>
         <div className="mb-20 mt-24 flex flex-wrap items-end items-center justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
-          <Link href="/" aria-label="Home">
-            
-            <Image src={logo} alt="Logo" width={50} height={30} className="rounded-full object-cover" />
+          <Link href="/" aria-label="Home" className="block">
+            <div className="relative w-12 h-12 rounded-full overflow-hidden bg-audio-light/20 backdrop-blur-sm border border-audio-electricBlue/20 shadow-md hover:shadow-audio-electricBlue/50 transition-all duration-300 hover:scale-105">
+              <Image 
+                src={logo} 
+                alt="ĐiĐi Audio Logo" 
+                fill
+                className="object-cover rounded-full p-0.5"
+                sizes="48px"
+              />
+            </div>
           </Link>
           <p className="text-sm text-gray-400">
             © ĐiĐi Audio {new Date().getFullYear()}

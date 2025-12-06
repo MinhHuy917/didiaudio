@@ -23,12 +23,12 @@ export default function ImageSlider() {
     <div className="w-full px-4 mt-2">
       <Swiper
         modules={[Autoplay, Pagination]}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 4000 }}
         loop={true}
         pagination={{ clickable: true }}
         spaceBetween={20}
         slidesPerView={1}
-        className="rounded-2xl overflow-hidden"
+        className="rounded-3xl overflow-hidden border border-audio-electricBlue/20 shadow-2xl shadow-audio-electricBlue/10"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>

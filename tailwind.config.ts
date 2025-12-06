@@ -20,22 +20,25 @@ export default {
     },
     extend: {
       colors: {
-        music: {
-          dark: '#0a0a0f',
-          darker: '#050508',
-          light: '#1a1a24',
-          purple: '#8b5cf6',
-          pink: '#ec4899',
-          cyan: '#06b6d4',
-          blue: '#3b82f6',
-          neon: '#00ff88',
+        audio: {
+          dark: '#0a0a0a',
+          darker: '#000000',
+          light: '#1a1a1a',
+          gray: '#2a2a2a',
+          electricBlue: '#00d4ff',
+          neonPurple: '#a855f7',
+          neonOrange: '#ff6b35',
+          accent: '#ff6b35',
+          text: '#ffffff',
+          textMuted: '#a0a0a0',
         },
       },
       backgroundImage: {
-        'gradient-music': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        'gradient-music-2': 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-        'gradient-music-3': 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-        'gradient-dark': 'linear-gradient(180deg, #0a0a0f 0%, #1a1a24 100%)',
+        'gradient-audio': 'linear-gradient(135deg, #00d4ff 0%, #a855f7 100%)',
+        'gradient-audio-2': 'linear-gradient(135deg, #ff6b35 0%, #f7931e 100%)',
+        'gradient-audio-3': 'linear-gradient(135deg, #00d4ff 0%, #0066ff 100%)',
+        'gradient-dark': 'linear-gradient(180deg, #000000 0%, #1a1a1a 100%)',
+        'gradient-speaker': 'radial-gradient(circle at center, rgba(0,212,255,0.1) 0%, transparent 70%)',
       },
       animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
