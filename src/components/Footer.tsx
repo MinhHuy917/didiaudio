@@ -75,21 +75,12 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export function Footer() {
   return (
-    <Container as="footer" className="mt-12 w-full sm:mt-16 lg:mt-20">
+    <Container as="footer" className="mt-12 w-full sm:mt-16 lg:mt-20 bg-audio-darker">
       <FadeIn>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15334.657814147615!2d108.14981161384843!3d16.08289293907161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142192b5b9c5953%3A0xab6abe8718988a4!2zxJDDoCBO4bq1bmcgQ2FtcGVycyAtIENobyBUaHXDqiBM4buBdSDEkMOgIE7hurVuZw!5e0!3m2!1sen!2s!4v1725334728408!5m2!1sen!2s"
-          width="100%"
-          height="450"
-          style={{ border: 0 }}
-          allowFullScreen={false}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-          <div className="mt-12 sm:mt-16 lg:mt-20">
-            <Navigation />
+        <div className="mt-12 sm:mt-16 lg:mt-20">
+          <Navigation />
         </div>
-        <div className="mb-20 mt-24 flex flex-wrap items-end items-center justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
+        <div className="mb-20 mt-24 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-audio-electricBlue/20 pt-12">
           <Link href="/" aria-label="Home" className="block">
             <div className="relative w-12 h-12 rounded-full overflow-hidden bg-audio-light/20 backdrop-blur-sm border border-audio-electricBlue/20 shadow-md hover:shadow-audio-electricBlue/50 transition-all duration-300 hover:scale-105">
               <Image 

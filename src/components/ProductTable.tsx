@@ -44,18 +44,18 @@ const ProductList: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
-          <div className="inline-flex items-center gap-2 mb-4">
-            <Volume2 className="w-5 h-5 text-audio-electricBlue" />
-            <span className="text-audio-electricBlue font-semibold">Sản Phẩm</span>
+          <div className="inline-flex items-center gap-2 mb-3 sm:mb-4">
+            <Volume2 className="w-4 h-4 sm:w-5 sm:h-5 text-audio-electricBlue" />
+            <span className="text-sm sm:text-base text-audio-electricBlue font-semibold">Sản Phẩm</span>
           </div>
-          <h2 className="text-4xl sm:text-5xl font-black mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-3 sm:mb-4">
             <span className="bg-gradient-to-r from-audio-electricBlue via-audio-neonPurple to-audio-neonOrange bg-clip-text text-transparent">
               Loa Kéo JBL Chính Hãng
             </span>
           </h2>
-          <p className="text-audio-textMuted max-w-2xl mx-auto text-lg">
+          <p className="text-audio-textMuted max-w-2xl mx-auto text-sm sm:text-base lg:text-lg px-4">
             Chọn loa phù hợp với nhu cầu sự kiện của bạn
           </p>
         </motion.div>
@@ -66,7 +66,7 @@ const ProductList: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="max-w-2xl mx-auto mb-12"
+          className="max-w-2xl mx-auto mb-8 sm:mb-12 px-4"
         >
           <div className="relative">
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-audio-textMuted" />
@@ -82,7 +82,7 @@ const ProductList: React.FC = () => {
 
         {/* Product Grid */}
         {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 px-4">
             {filteredProducts.map((product, index) => (
               <motion.div
                 key={product.id}
@@ -195,9 +195,9 @@ const ProductList: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-20 bg-audio-light/30 backdrop-blur-sm border border-audio-electricBlue/20 rounded-3xl p-8 space-y-6"
+          className="mt-12 sm:mt-20 bg-audio-light/30 backdrop-blur-sm border border-audio-electricBlue/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 space-y-4 sm:space-y-6 mx-4"
         >
-          <h2 className="text-2xl font-black text-white mb-6">Chính sách thuê loa</h2>
+          <h2 className="text-xl sm:text-2xl font-black text-white mb-4 sm:mb-6">Chính sách thuê loa</h2>
 
           <div className="space-y-4 text-audio-textMuted">
             <div>

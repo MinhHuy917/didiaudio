@@ -36,8 +36,8 @@ export default function HeroSection() {
         <div className="h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left: Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -59,7 +59,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 leading-tight"
             >
               <span className="bg-gradient-to-r from-audio-electricBlue via-audio-neonPurple to-audio-neonOrange bg-clip-text text-transparent">
                 Cho Thuê Loa Kéo
@@ -67,14 +67,14 @@ export default function HeroSection() {
               <br />
               <span className="text-white">JBL Chính Hãng</span>
               <br />
-              <span className="text-audio-textMuted text-4xl sm:text-5xl lg:text-6xl">Đà Nẵng</span>
+              <span className="text-audio-textMuted text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Đà Nẵng</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-xl text-audio-textMuted mb-8 max-w-2xl mx-auto lg:mx-0"
+              className="text-base sm:text-lg lg:text-xl text-audio-textMuted mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0"
             >
               Bass mạnh • Pin lâu • Bluetooth • Phù hợp du lịch, cắm trại, sinh nhật, team building
             </motion.p>
@@ -103,20 +103,20 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
             >
               <Link
                 href="#products"
-                className="px-8 py-4 bg-gradient-to-r from-audio-electricBlue to-audio-neonPurple rounded-full font-bold text-white hover:shadow-lg hover:shadow-audio-electricBlue/50 transition-all duration-300 transform hover:scale-105 text-center"
+                className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-audio-electricBlue to-audio-neonPurple rounded-full font-bold text-white hover:shadow-lg hover:shadow-audio-electricBlue/50 transition-all duration-300 transform hover:scale-105 text-center text-sm sm:text-base"
               >
                 Thuê Ngay
               </Link>
               <Link
                 href="tel:0909223917"
-                className="px-8 py-4 bg-audio-neonOrange rounded-full font-bold text-white hover:bg-audio-neonOrange/90 transition-all duration-300 transform hover:scale-105 text-center flex items-center justify-center gap-2"
+                className="px-6 sm:px-8 py-3 sm:py-4 bg-audio-neonOrange rounded-full font-bold text-white hover:bg-audio-neonOrange/90 transition-all duration-300 transform hover:scale-105 text-center flex items-center justify-center gap-2 text-sm sm:text-base"
               >
-                <Phone className="w-5 h-5" />
-                Gọi Ngay: 0909223917
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="hidden sm:inline">Gọi Ngay: </span>0909223917
               </Link>
             </motion.div>
 
@@ -125,27 +125,27 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="flex items-center gap-6 mt-12 justify-center lg:justify-start"
+              className="flex items-center gap-4 sm:gap-6 mt-8 sm:mt-12 justify-center lg:justify-start"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-audio-electricBlue to-audio-neonPurple bg-clip-text text-transparent">
+                <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-audio-electricBlue to-audio-neonPurple bg-clip-text text-transparent">
                   5.0
                 </div>
-                <div className="text-xs text-audio-textMuted mt-1">⭐ Đánh Giá</div>
+                <div className="text-[10px] sm:text-xs text-audio-textMuted mt-1">⭐ Đánh Giá</div>
               </div>
-              <div className="h-12 w-px bg-audio-gray" />
+              <div className="h-10 sm:h-12 w-px bg-audio-gray" />
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-audio-neonPurple to-audio-neonOrange bg-clip-text text-transparent">
+                <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-audio-neonPurple to-audio-neonOrange bg-clip-text text-transparent">
                   1000+
                 </div>
-                <div className="text-xs text-audio-textMuted mt-1">Khách Hàng</div>
+                <div className="text-[10px] sm:text-xs text-audio-textMuted mt-1">Khách Hàng</div>
               </div>
-              <div className="h-12 w-px bg-audio-gray" />
+              <div className="h-10 sm:h-12 w-px bg-audio-gray" />
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-audio-neonOrange to-audio-electricBlue bg-clip-text text-transparent">
+                <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-audio-neonOrange to-audio-electricBlue bg-clip-text text-transparent">
                   30-60p
                 </div>
-                <div className="text-xs text-audio-textMuted mt-1">Giao Hàng</div>
+                <div className="text-[10px] sm:text-xs text-audio-textMuted mt-1">Giao Hàng</div>
               </div>
             </motion.div>
           </motion.div>
@@ -155,7 +155,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            className="relative hidden lg:block"
           >
             {/* Audio Visualizer */}
             <div className="relative bg-audio-light/30 backdrop-blur-md rounded-3xl p-8 border border-audio-electricBlue/20">
