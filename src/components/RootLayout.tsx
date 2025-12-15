@@ -44,68 +44,64 @@ function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 function Header({
   panelId,
-  icon: Icon,
   expanded,
   onToggle,
   toggleRef,
-  invert = false,
 }: {
   panelId: string
-  icon: React.ComponentType<{ className?: string }>
   expanded: boolean
   onToggle: () => void
   toggleRef: React.RefObject<HTMLButtonElement>
-  invert?: boolean
 }) {
   return (
     <Container>
-      <div className="flex items-center justify-between z-100">
-        <Link href="/" aria-label="Home" className="block">
-          <div className="relative w-[48px] h-[48px] lg:w-[80px] lg:h-[80px] mt-3 rounded-full overflow-hidden bg-audio-light/20 backdrop-blur-sm border border-audio-electricBlue/30 shadow-lg hover:shadow-audio-electricBlue/50 transition-all duration-300 hover:scale-105">
-            <Image 
-              src={logo} 
-              alt="ĐiĐi Audio Logo" 
+      <div className="flex items-center justify-between py-4">
+        <Link href="/" aria-label="Home" className="flex items-center gap-3">
+          <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-audio-light/30 backdrop-blur-sm border border-audio-electricBlue/30 shadow-md">
+            <Image
+              src={logo}
+              alt="ĐiĐi Audio Logo"
               fill
               className="object-cover rounded-full p-1"
-              sizes="(max-width: 768px) 48px, 80px"
+              sizes="48px"
             />
           </div>
+          <div className="hidden sm:block">
+            <p className="text-white font-bold text-base">ĐiĐi Audio</p>
+            <p className="text-white text-xs">Loa kéo JBL • Đà Nẵng</p>
+          </div>
         </Link>
-      <div className="flex items-center gap-x-8 mt-1">
-  <button 
-    ref={toggleRef} 
-    type="button" 
-    onClick={onToggle} 
-    aria-expanded={expanded ? 'true' : 'false'} 
-    aria-controls={panelId} 
-    className={clsx( 
-      'group -m-2.5 rounded-full p-2 transition mr-[1px]', 
-      'bg-audio-light/30 backdrop-blur-sm border border-audio-electricBlue/20',
-      invert ? 'hover:bg-audio-light/50 hover:border-audio-electricBlue/40' : 'hover:bg-audio-light/50 hover:border-audio-electricBlue/40', 
-    )} 
-    aria-label="Toggle navigation"
-  >
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 24 24" 
-      fill="currentColor" 
-      className={clsx(
-        'h-6 w-6', 
-        'text-audio-electricBlue', 
-      )}
-    >
-      <circle cx="5" cy="5" r="1.5" />
-      <circle cx="12" cy="5" r="1.5" />
-      <circle cx="19" cy="5" r="1.5" />
-      <circle cx="5" cy="12" r="1.5" />
-      <circle cx="12" cy="12" r="1.5" />
-      <circle cx="19" cy="12" r="1.5" />
-      <circle cx="5" cy="19" r="1.5" />
-      <circle cx="12" cy="19" r="1.5" />
-      <circle cx="19" cy="19" r="1.5" />
-    </svg>
-  </button>
-</div>
+
+        <div className="flex items-center gap-2 sm:gap-3">
+          <Link
+            href="#products"
+            className="hidden sm:inline-flex px-4 py-2 rounded-full bg-gradient-to-r from-audio-electricBlue to-audio-neonPurple text-white text-sm font-semibold hover:shadow-lg hover:shadow-audio-electricBlue/40 transition-all"
+          >
+            Thuê ngay
+          </Link>
+          <Link
+            href="tel:0339197917"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-audio-neonOrange text-white text-sm font-semibold hover:bg-audio-neonOrange/90 transition-all"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72c.12.81.37 1.6.73 2.33a2 2 0 0 1-.45 2.23l-1.27 1.27a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.23-.45c.73.36 1.52.61 2.33.73A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            0339197917
+          </Link>
+          <button
+            ref={toggleRef}
+            type="button"
+            onClick={onToggle}
+            aria-expanded={expanded ? 'true' : 'false'}
+            aria-controls={panelId}
+            className="sm:hidden inline-flex items-center justify-center rounded-full p-2 bg-audio-light/30 border border-audio-electricBlue/30 text-audio-electricBlue hover:bg-audio-light/50"
+            aria-label="Toggle navigation"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </div>
     </Container>
   )
@@ -148,11 +144,15 @@ function NavigationItem({
     <Link
       href={href}
       target={target}
-      className={`font-[system-ui] group relative isolate -mx-6 bg-audio-light/30 backdrop-blur-sm px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-audio-electricBlue/20 sm:even:pl-16 text-white hover:text-audio-electricBlue transition-colors ${className}`}
+      className={clsx(
+        'font-[system-ui] inline-flex items-center gap-2 px-4 py-2 rounded-full',
+        'bg-audio-light/30 backdrop-blur-sm border border-audio-electricBlue/20 text-white',
+        'hover:border-audio-electricBlue/40 hover:text-audio-electricBlue transition-colors',
+        className,
+      )}
       style={style}
     >
       {children}
-      <span className='absolute inset-y-0 -z-10 w-screen bg-audio-light/50 opacity-0 group-hover:opacity-100 transition group-odd:right-0 group-even:left-0' />
     </Link>
   )
 }
@@ -185,31 +185,16 @@ function NavigationItemV2({
 
 export function Navigation() {
   return (
-    <nav className="mt-px font-display text-3xl lg:text-5xl font-medium tracking-tight">
-      <NavigationRow>
-        <NavigationItem href="/about-didiaudio">
-          <span className="bg-gradient-to-r from-audio-electricBlue to-audio-neonPurple bg-clip-text text-transparent">
-            ĐiĐi Audio Story
-          </span>
-        </NavigationItem>
-        <NavigationItem target='_blank' href="https://www.facebook.com/groups/695950148016396">
-          <span className="bg-gradient-to-r from-audio-neonPurple to-audio-neonOrange bg-clip-text text-transparent">
-            Cộng đồng âm thanh
-          </span>
-        </NavigationItem>
-      </NavigationRow>
-      <NavigationRow>
-        <NavigationItem href="/dich-vu-cho-thue-loa-keo-keo-da-nang">
-          <span className="bg-gradient-to-r from-audio-neonOrange to-audio-electricBlue bg-clip-text text-transparent">
-            Dịch vụ cho thuê loa kéo
-          </span>
-        </NavigationItem>
-        <NavigationItem href="/thue-loa-keo-keo-da-nang">
-          <span className="bg-gradient-to-r from-audio-electricBlue to-audio-neonPurple bg-clip-text text-transparent">
-            Thuê loa kéo Đà Nẵng
-          </span>
-        </NavigationItem>
-      </NavigationRow>
+    <nav className="mt-6">
+      <Container>
+        <ul className="flex flex-wrap gap-3">
+          <li><NavigationItem href="#about">Về chúng tôi</NavigationItem></li>
+          <li><NavigationItem href="#products">Sản phẩm</NavigationItem></li>
+          <li><NavigationItem href="#usecases">Ứng dụng</NavigationItem></li>
+          <li><NavigationItem href="#faq">Câu hỏi</NavigationItem></li>
+          <li><NavigationItem href="tel:0339197917" className="bg-audio-neonOrange border-audio-neonOrange text-white hover:text-white">Gọi ngay</NavigationItem></li>
+        </ul>
+      </Container>
     </nav>
   )
 }

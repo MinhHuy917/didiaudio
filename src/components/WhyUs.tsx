@@ -86,7 +86,7 @@ export default function WhyUs() {
               ĐiĐi Audio?
             </span>
           </h2>
-          <p className="text-audio-textMuted text-lg max-w-2xl mx-auto">
+          <p className="text-white text-lg max-w-2xl mx-auto">
             Chúng tôi cam kết mang đến trải nghiệm âm thanh tốt nhất cho mọi sự kiện của bạn
           </p>
         </motion.div>
@@ -108,7 +108,7 @@ export default function WhyUs() {
                 </div>
                 <div className="flex-1">
                   <p className="font-semibold text-white text-lg mb-1">{item.title}</p>
-                  <p className="text-audio-textMuted text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-white text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -131,7 +131,7 @@ export default function WhyUs() {
                 <p className={`text-3xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent mb-1`}>
                   {stat.value}
                 </p>
-                <p className="text-sm text-gray-400">{stat.label}</p>
+                <p className="text-sm text-white">{stat.label}</p>
               </motion.div>
             ))}
           </div>

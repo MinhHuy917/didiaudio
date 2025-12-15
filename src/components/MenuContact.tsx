@@ -10,7 +10,7 @@ export default function MenuContact() {
   const [copied, setCopied] = useState(false)
 
   const copyPhone = () => {
-    navigator.clipboard.writeText('0909223917')
+    navigator.clipboard.writeText('0339197917')
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -21,14 +21,14 @@ export default function MenuContact() {
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-audio-darker/95 backdrop-blur-md border-t border-audio-electricBlue/20">
         <div className="flex items-center justify-around px-4 py-3">
           <Link
-            href="tel:0909223917"
+            href="tel:0339197917"
             className="flex-1 flex flex-col items-center gap-1 px-4 py-2 bg-gradient-to-r from-audio-electricBlue to-audio-neonPurple rounded-xl text-white font-bold text-sm active:scale-95 transition-transform"
           >
             <Phone className="w-5 h-5" />
             <span>Gọi Ngay</span>
           </Link>
           <Link
-            href="https://zalo.me/0909223917"
+            href="https://zalo.me/0339197917"
             target="_blank"
             className="flex-1 flex flex-col items-center gap-1 px-4 py-2 bg-audio-light/50 border border-audio-electricBlue/30 rounded-xl text-white font-semibold text-sm active:scale-95 transition-transform"
           >
@@ -74,11 +74,11 @@ export default function MenuContact() {
         <div className="fixed bottom-20 right-4 md:bottom-24 md:right-6 mt-5 z-50">
           <div className="flex-auto overflow-hidden rounded-3xl bg-audio-light/95 backdrop-blur-md text-sm leading-6 shadow-2xl border border-audio-electricBlue/30 ring-1 ring-audio-electricBlue/20">
             <div className="p-4 space-y-2">
-              <Link href="tel:0909223917">
+              <Link href="tel:0339197917">
                 <MenuItem
                   icon={<Phone className="w-5 h-5" />}
                   title="Gọi Ngay"
-                  subtitle="0909223917"
+                  subtitle="0339197917"
                   className="bg-gradient-to-r from-audio-electricBlue to-audio-neonPurple text-white"
                 />
               </Link>
@@ -87,12 +87,12 @@ export default function MenuContact() {
                 <MenuItem
                   icon={copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
                   title={copied ? "Đã copy!" : "Copy số điện thoại"}
-                  subtitle="0909223917"
+                  subtitle="0339197917"
                   className="bg-audio-light/50 border border-audio-electricBlue/30 text-white hover:bg-audio-light transition-colors"
                 />
               </button>
 
-              <Link href="https://zalo.me/0909223917" target="_blank">
+              <Link href="https://zalo.me/0339197917" target="_blank">
                 <MenuItem
                   icon={
                     <svg
@@ -188,7 +188,7 @@ export default function MenuContact() {
                 </div>
                 <div>
                   <span className="font-sans font-bold text-white text-sm">Địa điểm cửa hàng</span>
-                  <p className="text-xs text-audio-textMuted">86 Lê Thiệt, Liên Chiểu</p>
+                  <p className="text-xs text-white">86 Lê Thiệt, Liên Chiểu</p>
                 </div>
               </Link>
             </div>

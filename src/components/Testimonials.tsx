@@ -110,7 +110,7 @@ export default function Testimonials() {
               Cảm Nhận Thực Tế
             </span>
           </h2>
-          <p className="text-audio-textMuted text-sm sm:text-base lg:text-lg px-4">
+          <p className="text-white text-sm sm:text-base lg:text-lg px-4">
             Hơn 1000+ khách hàng đã tin tưởng và hài lòng với dịch vụ của chúng tôi
           </p>
         </motion.div>
@@ -159,7 +159,7 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <p className="text-white font-semibold text-sm">{review.name}</p>
-                  <p className="text-audio-textMuted text-xs">Khách hàng đã thuê</p>
+                  <p className="text-white text-xs">Khách hàng đã thuê</p>
                 </div>
               </div>
             </motion.div>

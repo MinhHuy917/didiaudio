@@ -54,8 +54,8 @@ const ProductList: React.FC = () => {
             <span className="bg-gradient-to-r from-audio-electricBlue via-audio-neonPurple to-audio-neonOrange bg-clip-text text-transparent">
               Loa Kéo JBL Chính Hãng
             </span>
-          </h2>
-          <p className="text-audio-textMuted max-w-2xl mx-auto text-sm sm:text-base lg:text-lg px-4">
+      </h2>
+          <p className="text-white max-w-2xl mx-auto text-sm sm:text-base lg:text-lg px-4">
             Chọn loa phù hợp với nhu cầu sự kiện của bạn
           </p>
         </motion.div>
@@ -69,35 +69,35 @@ const ProductList: React.FC = () => {
           className="max-w-2xl mx-auto mb-8 sm:mb-12 px-4"
         >
           <div className="relative">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-audio-textMuted" />
-            <input
-              type="text"
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white" />
+        <input
+          type="text"
               placeholder="Tìm kiếm loa..."
-              value={filterText}
-              onChange={(e) => setFilterText(e.target.value)}
+          value={filterText}
+          onChange={(e) => setFilterText(e.target.value)}
               className="w-full pl-12 pr-4 py-4 bg-audio-light/50 backdrop-blur-sm border border-audio-electricBlue/20 rounded-xl text-white placeholder-audio-textMuted focus:outline-none focus:border-audio-electricBlue/50 focus:ring-2 focus:ring-audio-electricBlue/20 transition-all"
-            />
-          </div>
+        />
+      </div>
         </motion.div>
 
-        {/* Product Grid */}
-        {filteredProducts.length > 0 ? (
+      {/* Product Grid */}
+      {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 px-4">
             {filteredProducts.map((product, index) => (
               <motion.div
-                key={product.id}
+              key={product.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
+            >
                 <Link href={`/products/${product.id}`}>
                   <div className="group relative bg-audio-light/30 backdrop-blur-sm border border-audio-electricBlue/20 rounded-3xl overflow-hidden hover:border-audio-electricBlue/40 transition-all duration-300 hover:shadow-2xl hover:shadow-audio-electricBlue/20">
                     {/* Image Container */}
                     <div className="relative h-80 overflow-hidden bg-audio-darker">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
+              <Image
+                src={product.image}
+                alt={product.name}
                         fill
                         sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -107,25 +107,25 @@ const ProductList: React.FC = () => {
                       
                       {/* Price Badge */}
                       <div className="absolute top-6 right-6">
-                        {product.price === 0 ? (
+                  {product.price === 0 ? (
                           <span className="px-4 py-2 bg-audio-neonOrange/20 backdrop-blur-sm border border-audio-neonOrange/30 rounded-full text-audio-neonOrange text-sm font-bold">
                             Miễn phí
-                          </span>
-                        ) : product.originalPrice && product.originalPrice > product.price ? (
+                    </span>
+  ) : product.originalPrice && product.originalPrice > product.price ? (
                           <div className="flex flex-col items-end gap-2">
-                            <span className="px-3 py-1 bg-audio-gray/80 backdrop-blur-sm rounded-lg text-audio-textMuted text-xs line-through">
+                            <span className="px-3 py-1 bg-audio-gray/80 backdrop-blur-sm rounded-lg text-white text-xs line-through">
                               {product.originalPrice}k
-                            </span>
+      </span>
                             <span className="px-4 py-2 bg-gradient-to-r from-audio-electricBlue to-audio-neonPurple rounded-full text-white text-base font-black shadow-lg">
                               {product.price}k/ngày
-                            </span>
-                          </div>
-                        ) : (
+        </span>
+    </div>
+  ) : (
                           <span className="px-4 py-2 bg-gradient-to-r from-audio-electricBlue to-audio-neonPurple rounded-full text-white text-base font-black shadow-lg">
                             {product.price}k/ngày
-                          </span>
-                        )}
-                      </div>
+    </span>
+  )}
+</div>
 
                       {/* Highlights Badge */}
                       <div className="absolute bottom-6 left-6 flex gap-2">
@@ -137,8 +137,8 @@ const ProductList: React.FC = () => {
                           <Bluetooth className="w-3 h-3 text-audio-neonPurple" />
                           Bluetooth
                         </div>
-                      </div>
-                    </div>
+              </div>
+        </div>
 
                     {/* Content */}
                     <div className="p-8">
@@ -146,10 +146,10 @@ const ProductList: React.FC = () => {
                         <h3 className="text-2xl font-black text-white mb-2 group-hover:text-audio-electricBlue transition-colors">
                           {product.name}
                         </h3>
-                        <p className="text-audio-textMuted">
+                        <p className="text-white">
                           {product.catalogue}
-                        </p>
-                      </div>
+          </p>
+        </div>
 
                       {/* Features */}
                       <div className="flex flex-wrap gap-2 mb-6">
@@ -169,8 +169,8 @@ const ProductList: React.FC = () => {
                         <div className="w-full px-6 py-3 bg-gradient-to-r from-audio-electricBlue to-audio-neonPurple rounded-xl text-white font-bold text-center group-hover:shadow-lg group-hover:shadow-audio-electricBlue/50 transition-all">
                           Thuê Ngay →
                         </div>
-                      </div>
-                    </div>
+          </div>
+        </div>
 
                     {/* Hover Glow Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-audio-electricBlue/0 via-audio-neonPurple/0 to-audio-neonOrange/0 group-hover:from-audio-electricBlue/5 group-hover:via-audio-neonPurple/5 group-hover:to-audio-neonOrange/5 transition-all duration-500 pointer-events-none rounded-3xl" />
@@ -185,7 +185,7 @@ const ProductList: React.FC = () => {
             animate={{ opacity: 1 }}
             className="text-center py-12"
           >
-            <p className="text-audio-textMuted text-lg">Không tìm thấy sản phẩm phù hợp.</p>
+            <p className="text-white text-lg">Không tìm thấy sản phẩm phù hợp.</p>
           </motion.div>
         )}
 
@@ -199,30 +199,29 @@ const ProductList: React.FC = () => {
         >
           <h2 className="text-xl sm:text-2xl font-black text-white mb-4 sm:mb-6">Chính sách thuê loa</h2>
 
-          <div className="space-y-4 text-audio-textMuted">
+          <div className="space-y-4 text-white">
             <div>
-              <h3 className="text-lg font-bold text-white mb-2">1. Đặt cọc & Thanh toán</h3>
-              <p className="leading-relaxed">
-                Khi thuê loa, vui lòng mang theo <span className="font-semibold text-audio-electricBlue">CCCD hoặc GPLX</span> để đối chiếu và chụp ảnh làm cơ sở cọc (chỉ lưu thông tin, không giữ giấy tờ).
-                Thanh toán đầy đủ trước khi nhận loa.
-              </p>
+              <h3 className="text-lg font-bold text-white mb-2">1. Đặt cọc & hợp đồng</h3>
+              <ul className="list-disc pl-5 space-y-2 leading-relaxed">
+                <li>Cọc bằng <span className="font-semibold text-audio-electricBlue">CCCD & GPLX</span> và kèm hợp đồng thuê loa .</li>
+                <li>Thanh toán <span className="font-semibold text-audio-electricBlue">tiền thuê + phí ship (nếu có)</span> trước khi bàn giao loa.</li>
+              </ul>
             </div>
 
             <div>
               <h3 className="text-lg font-bold text-white mb-2">2. Thời gian thuê</h3>
               <p className="leading-relaxed">
-                Thời gian thuê được tính theo ngày (<span className="font-semibold text-audio-electricBlue">24 tiếng</span>) kể từ lúc nhận loa.
-                Hỗ trợ linh hoạt nếu cần nhận sớm hoặc trả trễ.
+              Thời gian thuê được tính theo ngày (24 giờ) kể từ thời điểm nhận loa; từ ngày thuê thứ hai trở đi, mỗi ngày tiếp theo được áp dụng mức phí bằng 50% giá thuê ngày đầu.
               </p>
             </div>
 
-            <div>
+          <div>
               <h4 className="text-base font-bold text-audio-neonOrange mb-2">📌 Đền bù thiệt hại</h4>
               <p className="leading-relaxed">
-                Nếu thiết bị hư hỏng, mất mát hoặc quá bẩn, shop sẽ tính phí vệ sinh, sửa chữa hoặc yêu cầu bồi thường theo giá trị thị trường hiện tại.
+                Nếu thiết bị hư hỏng, shop sẽ tính phí sửa chữa hoặc yêu cầu bồi thường theo giá trị thị trường hiện tại.
               </p>
-            </div>
-          </div>
+</div>
+  </div>
         </motion.div>
       </div>
     </section>

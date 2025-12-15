@@ -52,7 +52,7 @@ export default function HeroSection() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-audio-light/50 backdrop-blur-sm border border-audio-electricBlue/30 mb-6"
             >
               <Volume2 className="w-4 h-4 text-audio-electricBlue" />
-              <span className="text-sm text-audio-textMuted">JBL Chính Hãng • Giao Nhanh 30-60 Phút</span>
+              <span className="text-sm text-white">JBL Chính Hãng • Giao Nhanh 30-60 Phút</span>
             </motion.div>
 
             <motion.h1
@@ -67,14 +67,14 @@ export default function HeroSection() {
               <br />
               <span className="text-white">JBL Chính Hãng</span>
               <br />
-              <span className="text-audio-textMuted text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Đà Nẵng</span>
+              <span className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Đà Nẵng</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-base sm:text-lg lg:text-xl text-audio-textMuted mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0"
+              className="text-base sm:text-lg lg:text-xl text-white mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0"
             >
               Bass mạnh • Pin lâu • Bluetooth • Phù hợp du lịch, cắm trại, sinh nhật, team building
             </motion.p>
@@ -112,11 +112,11 @@ export default function HeroSection() {
                 Thuê Ngay
               </Link>
               <Link
-                href="tel:0909223917"
+                href="tel:0339197917"
                 className="px-6 sm:px-8 py-3 sm:py-4 bg-audio-neonOrange rounded-full font-bold text-white hover:bg-audio-neonOrange/90 transition-all duration-300 transform hover:scale-105 text-center flex items-center justify-center gap-2 text-sm sm:text-base"
               >
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span className="hidden sm:inline">Gọi Ngay: </span>0909223917
+                <span className="hidden sm:inline">Gọi Ngay: </span>0339197917
               </Link>
             </motion.div>
 
@@ -131,21 +131,21 @@ export default function HeroSection() {
                 <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-audio-electricBlue to-audio-neonPurple bg-clip-text text-transparent">
                   5.0
                 </div>
-                <div className="text-[10px] sm:text-xs text-audio-textMuted mt-1">⭐ Đánh Giá</div>
+                <div className="text-[10px] sm:text-xs text-white mt-1">⭐ Đánh Giá</div>
               </div>
               <div className="h-10 sm:h-12 w-px bg-audio-gray" />
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-audio-neonPurple to-audio-neonOrange bg-clip-text text-transparent">
                   1000+
                 </div>
-                <div className="text-[10px] sm:text-xs text-audio-textMuted mt-1">Khách Hàng</div>
+                <div className="text-[10px] sm:text-xs text-white mt-1">Khách Hàng</div>
               </div>
               <div className="h-10 sm:h-12 w-px bg-audio-gray" />
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-audio-neonOrange to-audio-electricBlue bg-clip-text text-transparent">
                   30-60p
                 </div>
-                <div className="text-[10px] sm:text-xs text-audio-textMuted mt-1">Giao Hàng</div>
+                <div className="text-[10px] sm:text-xs text-white mt-1">Giao Hàng</div>
               </div>
             </motion.div>
           </motion.div>

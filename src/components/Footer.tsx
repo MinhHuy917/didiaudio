@@ -10,8 +10,8 @@ const navigation = [
   {
     title: "Liên Hệ",
     links: [
-      { title: "Phone: 0909223917", href: "tel:0909223917" },
-      { title: "Zalo: 0909223917", href: "https://zalo.me/0909223917" },
+      { title: "Phone: 0339197917", href: "tel:0339197917" },
+      { title: "Zalo: 0339197917", href: "https://zalo.me/0339197917" },
       { title: "Messenger", href: "//m.me/ThueLoaKeoDaNang" },
     ],
   },
@@ -41,7 +41,7 @@ function Navigation() {
             <div className="!font-[system-ui] font-display text-sm font-semibold tracking-wider text-white">
               {/* {section.title} */}
             </div>
-            <ul role="list" className="mt-4 text-sm text-gray-400">
+            <ul role="list" className="mt-4 text-sm text-white">
               {section.links.map((link, linkIndex) => (
                 <li key={linkIndex} className="mt-4">
                   <Link
@@ -92,7 +92,7 @@ export function Footer() {
               />
             </div>
           </Link>
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-white">
             © ĐiĐi Audio {new Date().getFullYear()}
           </p>
         </div>

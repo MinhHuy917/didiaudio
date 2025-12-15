@@ -58,7 +58,7 @@ export default function UseCaseSection() {
               Phù Hợp Cho Mọi Sự Kiện
             </span>
           </h2>
-          <p className="text-audio-textMuted text-lg max-w-2xl mx-auto">
+          <p className="text-white text-lg max-w-2xl mx-auto">
             Loa kéo JBL chính hãng - đồng hành cùng bạn trong mọi khoảnh khắc
           </p>
         </motion.div>
@@ -81,7 +81,7 @@ export default function UseCaseSection() {
 
                 {/* Content */}
                 <h3 className="text-xl font-black text-white mb-2">{useCase.title}</h3>
-                <p className="text-sm text-audio-textMuted leading-relaxed">{useCase.desc}</p>
+                <p className="text-sm text-white leading-relaxed">{useCase.desc}</p>
 
                 {/* Hover Glow */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${useCase.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-2xl pointer-events-none`} />

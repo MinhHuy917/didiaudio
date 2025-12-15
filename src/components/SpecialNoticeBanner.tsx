@@ -15,7 +15,7 @@ export default function PromoBanner() {
     {
       icon: Truck,
       title: 'Có giao hàng tận nơi',
-      desc: 'Phí giao hàng tuỳ khoảng cách',
+      desc: 'Miễn phí giao hàng trong 5km, trên 5km tính phí theo Grab Express.',
       tag: 'SUPPORT',
       gradient: 'from-audio-neonPurple to-audio-neonOrange',
     },
@@ -60,7 +60,7 @@ export default function PromoBanner() {
                 <h3 className="text-base sm:text-lg font-bold text-white mb-2">
                   {p.title}
                 </h3>
-                <p className="text-sm text-gray-400 leading-relaxed">
+                <p className="text-sm text-white leading-relaxed">
                   {p.desc}
                 </p>
               </div>

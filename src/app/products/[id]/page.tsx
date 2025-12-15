@@ -3,6 +3,7 @@
 import React, { useState } from "react"
 import Head from "next/head"
 import { products } from "@/data/products"
+import { motion } from 'framer-motion'
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 import PromoBanner from "@/components/SpecialNoticeBanner"
@@ -64,7 +65,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 text-gray-700"
+                  className="w-6 h-6 text-white"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -106,9 +107,9 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               <div className="flex-1 flex flex-col justify-between">
                 <div>
                   <p className="text-2xl text-green-600 font-semibold mt-4">{product.price}k</p>
-                  <p className="text-gray-700 mt-2">Phân loại: {product.catalogue}</p>
+                  <p className="text-white mt-2">Phân loại: {product.catalogue}</p>
 
-                  <div className="mt-6 text-gray-600 leading-relaxed">
+                  <div className="mt-6 text-white leading-relaxed">
                     <p><strong>Chi tiết sản phẩm:</strong></p>
                     <ul className="list-disc list-inside mt-2">
                       {product.detail1 && <li>{product.detail1}</li>}
@@ -143,54 +144,39 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
      <div>
       <PromoBanner /> 
-      <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 py-4 sm:py-6">
+      <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-12 sm:mt-20 bg-audio-light/30 backdrop-blur-sm border border-audio-electricBlue/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 space-y-4 sm:space-y-6 mx-4"
+        >
+          <h2 className="text-xl sm:text-2xl font-black text-white mb-4 sm:mb-6">Chính sách thuê loa</h2>
 
-      <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-md space-y-6 my-12">
-        <h2 className="text-2xl font-bold text-gray-800">Chính sách thuê lều</h2>
+          <div className="space-y-4 text-white">
+            <div>
+              <h3 className="text-lg font-bold text-white mb-2">1. Đặt cọc & hợp đồng</h3>
+              <ul className="list-disc pl-5 space-y-2 leading-relaxed">
+                <li>Cọc bằng <span className="font-semibold text-audio-electricBlue">CCCD & GPLX</span> và kèm hợp đồng thuê loa .</li>
+                <li>Thanh toán <span className="font-semibold text-audio-electricBlue">tiền thuê + phí ship (nếu có)</span> trước khi bàn giao loa.</li>
+              </ul>
+            </div>
 
-        {/* 1. Đặt cọc & thanh toán */}
-        <div>
-          <h3 className="text-lg font-semibold text-gray-700 mb-1">1. Đặt cọc & Thanh toán</h3>
-          <p className="text-gray-700 leading-relaxed">
-            Khi thuê lều, vui lòng mang theo <span className="font-medium">CCCD hoặc GPLX</span> để bên mình đối chiếu và <span className="font-medium">chụp ảnh làm cơ sở cọc</span> (chỉ lưu thông tin, <span className="italic">không giữ giấy tờ</span>).
-            Đồng thời, bạn cần <span className="font-semibold">thanh toán đầy đủ trước khi nhận lều và đồ cắm trại</span>.
-          </p>
-        </div>
+            <div>
+              <h3 className="text-lg font-bold text-white mb-2">2. Thời gian thuê</h3>
+              <p className="leading-relaxed">
+              Thời gian thuê được tính theo ngày (24 giờ) kể từ thời điểm nhận loa; từ ngày thuê thứ hai trở đi, mỗi ngày tiếp theo được áp dụng mức phí bằng 50% giá thuê ngày đầu.
+              </p>
+            </div>
 
-        {/* 2. Thời gian thuê */}
-        <div>
-          <h3 className="text-lg font-semibold text-gray-700 mb-1">2. Thời gian thuê</h3>
-          <p className="text-gray-700 leading-relaxed">
-            Thời gian thuê được tính theo ngày (<span className="font-medium">24 tiếng</span>) kể từ lúc nhận lều và phụ kiện.
-            Tuy nhiên, bên mình có thể <span className="font-medium">hỗ trợ linh hoạt</span> nếu bạn cần nhận sớm hoặc trả trễ.
-          </p>
-          <div className="bg-gray-50 border-l-4 border-blue-400 p-4 mt-3 rounded">
-            <p className="text-gray-700 text-sm leading-relaxed">
-              <span className="font-semibold">Ví dụ:</span> Nếu bạn đi cắm trại vào <span className="font-medium">thứ 7</span> và cần đi sớm, bạn có thể ghé lấy lều từ tối <span className="font-medium">thứ 6</span> mà không tính thêm phí.
-              Khi trả lều, bạn có thể trả trong ngày <span className="font-medium">Chủ Nhật</span>.
-              Nhưng nếu giữ lều qua đêm Chủ Nhật và trả vào <span className="font-medium">thứ 2</span> hoặc sau đó, shop sẽ tính thêm <span className="font-semibold">50% giá thuê cho mỗi ngày tiếp theo</span>.
-            </p>
-          </div>
-        </div>
-
-        {/* 3. Đền bù thiệt hại */}
-        <div>
-          <h4 className="text-base font-semibold text-red-700 mt-3 mb-1">📌 Đền bù thiệt hại</h4>
-          <p className="text-gray-700 leading-relaxed">
-            Khi trả lại, nếu <span className="font-medium">thiết bị hư hỏng, mất mát hoặc quá bẩn không thể chùi rửa được</span>,
-            shop sẽ <span className="font-semibold">tính phí vệ sinh, sửa chữa hoặc yêu cầu bồi thường</span> theo <span className="font-semibold text-red-700">giá trị thị trường hiện tại</span> của sản phẩm.
-          </p>
-        </div>
-
-        {/* 4. Những điều không nên */}
-        <div>
-          <h4 className="text-base font-semibold text-yellow-600 mt-3 mb-1">⚠️ Những điều không nên</h4>
-          <p className="text-gray-700 leading-relaxed">
-            Để tránh làm hỏng thiết bị và giữ đồ dùng luôn sạch sẽ, <span className="font-semibold text-red-700">vui lòng KHÔNG sử dụng</span> <span className="font-medium">tấm phủ lều</span> (tấm phủ bên trên lều) và <span className="font-medium">tấm tăng chữ A</span> (tấm che nắng, che mưa dựng kiểu chữ A) để <span className="font-semibold">ngồi, nằm, hoặc trải dưới nền đất</span>.
-          </p>
-        </div>
-      </div>
-      </div>
+          <div>
+              <h4 className="text-base font-bold text-audio-neonOrange mb-2">📌 Đền bù thiệt hại</h4>
+              <p className="leading-relaxed">
+                Nếu thiết bị hư hỏng, shop sẽ tính phí sửa chữa hoặc yêu cầu bồi thường theo giá trị thị trường hiện tại.
+              </p>
+</div>
+  </div>
+        </motion.div>
      </div>
       
     </>
