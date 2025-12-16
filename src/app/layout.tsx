@@ -61,23 +61,26 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="vi" className="h-full dark bg-audio-darker text-white antialiased">
-      <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-RGJ5VKVX7J"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-RGJ5VKVX7J');
-          `}
-        </Script>
-      </head>
-      <body className="flex min-h-full flex-col bg-audio-darker">
-        <RootLayout>{children}</RootLayout>
-      </body>
-    </html>
+    <head>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-CJQJY8V1EV"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-CJQJY8V1EV');
+        `}
+      </Script>
+    </head>
+  
+    <body className="flex min-h-full flex-col bg-audio-darker">
+      <RootLayout>{children}</RootLayout>
+    </body>
+  </html>
+  
   )
 }
+
