@@ -47,17 +47,21 @@ function Header({
   expanded,
   onToggle,
   toggleRef,
+  icon: Icon = MenuIcon,
+  invert = false,
 }: {
   panelId: string
   expanded: boolean
   onToggle: () => void
   toggleRef: React.RefObject<HTMLButtonElement>
+  icon?: React.ComponentType<React.ComponentPropsWithoutRef<'svg'>>
+  invert?: boolean
 }) {
   return (
     <Container>
       <div className="flex items-center justify-between py-4">
-        <Link href="/" aria-label="Home" className="flex items-center gap-3">
-          <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-audio-light/30 backdrop-blur-sm border border-audio-electricBlue/30 shadow-md">
+        <Link href="/" aria-label="Home" className="flex items-center gap-3 group">
+          <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 shadow-md group-hover:border-cyan-500/50 transition-all">
             <Image
               src={logo}
               alt="ĐiĐi Audio Logo"
@@ -66,22 +70,18 @@ function Header({
               sizes="48px"
             />
           </div>
-          <div className="hidden sm:block">
-            <p className="text-white font-bold text-base">ĐiĐi Audio</p>
-            <p className="text-white text-xs">Loa kéo JBL • Đà Nẵng</p>
-          </div>
         </Link>
 
         <div className="flex items-center gap-2 sm:gap-3">
           <Link
             href="#products"
-            className="hidden sm:inline-flex px-4 py-2 rounded-full bg-gradient-to-r from-audio-electricBlue to-audio-neonPurple text-white text-sm font-semibold hover:shadow-lg hover:shadow-audio-electricBlue/40 transition-all"
+            className="hidden sm:inline-flex px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-semibold hover:shadow-lg hover:shadow-cyan-500/40 transition-all"
           >
             Thuê ngay
           </Link>
           <Link
             href="tel:0339197917"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-audio-neonOrange text-white text-sm font-semibold hover:bg-audio-neonOrange/90 transition-all"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-pink-600 text-white text-sm font-semibold hover:bg-pink-700 transition-all"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72c.12.81.37 1.6.73 2.33a2 2 0 0 1-.45 2.23l-1.27 1.27a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.23-.45c.73.36 1.52.61 2.33.73A2 2 0 0 1 22 16.92z"/>
@@ -94,12 +94,15 @@ function Header({
             onClick={onToggle}
             aria-expanded={expanded ? 'true' : 'false'}
             aria-controls={panelId}
-            className="sm:hidden inline-flex items-center justify-center rounded-full p-2 bg-audio-light/30 border border-audio-electricBlue/30 text-audio-electricBlue hover:bg-audio-light/50"
+            className={clsx(
+              'sm:hidden inline-flex items-center justify-center rounded-xl p-2 border transition-all',
+              invert
+                ? 'bg-white/10 border-white/30 text-white hover:bg-white/20'
+                : 'bg-white/5 border-white/10 text-white hover:bg-white/10 hover:border-cyan-500/50',
+            )}
             aria-label="Toggle navigation"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            <Icon className="h-5 w-5" />
           </button>
         </div>
       </div>

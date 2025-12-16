@@ -1,10 +1,10 @@
 import Link from 'next/link'
-
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { socialMediaProfiles, socialMediaProfilesV2 } from '@/components/SocialMedia'
 import logo from '@/images/logo.png'
 import Image from 'next/image'
+import { Music, Phone, MapPin } from 'lucide-react'
 
 const navigation = [
   {
@@ -29,25 +29,23 @@ const navigation = [
     title: 'Về chúng tôi',
     links: socialMediaProfilesV2,
   },
- 
 ]
 
 function Navigation() {
   return (
     <nav>
-      <ul role="list" className="grid grid-cols-2 lg:grid-cols-4 gap-8 ">
+      <ul role="list" className="grid grid-cols-2 lg:grid-cols-4 gap-8">
         {navigation.map((section, sectionIndex) => (
           <li key={sectionIndex}>
-            <div className="!font-[system-ui] font-display text-sm font-semibold tracking-wider text-white">
-              {/* {section.title} */}
-            </div>
-            <ul role="list" className="mt-4 text-sm text-white">
+            <ul role="list" className="space-y-3">
               {section.links.map((link, linkIndex) => (
-                <li key={linkIndex} className="mt-4">
+                <li key={linkIndex}>
                   <Link
                     href={link.href}
-                    className="!font-[system-ui] transition hover:text-audio-electricBlue"
+                    className="text-sm text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2"
                   >
+                    {linkIndex === 0 && sectionIndex === 0 && <Phone className="w-4 h-4" />}
+                    {linkIndex === 0 && sectionIndex === 1 && <MapPin className="w-4 h-4" />}
                     {link.title}
                   </Link>
                 </li>
@@ -60,29 +58,16 @@ function Navigation() {
   )
 }
 
-function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 16 6" aria-hidden="true" {...props}>
-      <path
-        fill="currentColor"
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M16 3 10 .5v2H0v1h10v2L16 3Z"
-      />
-    </svg>
-  )
-}
-
 export function Footer() {
   return (
-    <Container as="footer" className="mt-12 w-full sm:mt-16 lg:mt-20 bg-audio-darker">
+    <Container as="footer" className="mt-12 w-full sm:mt-16 lg:mt-20 bg-gradient-to-b from-black via-gray-900 to-black">
       <FadeIn>
         <div className="mt-12 sm:mt-16 lg:mt-20">
           <Navigation />
         </div>
-        <div className="mb-20 mt-24 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-audio-electricBlue/20 pt-12">
-          <Link href="/" aria-label="Home" className="block">
-            <div className="relative w-12 h-12 rounded-full overflow-hidden bg-audio-light/20 backdrop-blur-sm border border-audio-electricBlue/20 shadow-md hover:shadow-audio-electricBlue/50 transition-all duration-300 hover:scale-105">
+        <div className="mb-20 mt-24 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-white/10 pt-12">
+          <Link href="/" aria-label="Home" className="block group">
+            <div className="relative w-12 h-12 rounded-full overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 shadow-md hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 group-hover:border-cyan-500/50">
               <Image 
                 src={logo} 
                 alt="ĐiĐi Audio Logo" 
@@ -92,9 +77,12 @@ export function Footer() {
               />
             </div>
           </Link>
-          <p className="text-sm text-white">
-            © ĐiĐi Audio {new Date().getFullYear()}
-          </p>
+          <div className="flex items-center gap-2">
+            <Music className="w-4 h-4 text-cyan-400" />
+            <p className="text-sm text-gray-300">
+              © ĐiĐi Audio {new Date().getFullYear()}
+            </p>
+          </div>
         </div>
       </FadeIn>
     </Container>

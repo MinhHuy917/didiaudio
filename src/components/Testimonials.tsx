@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Star, Quote } from 'lucide-react'
+import { Star, Quote, Music } from 'lucide-react'
 import Image from 'next/image'
 import reviewanh1 from '/src/images/review/1.jpg'
 import reviewanh2 from '/src/images/review/2.jpg'
@@ -86,11 +86,11 @@ const reviews = [
 
 export default function Testimonials() {
   return (
-    <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-audio-darker overflow-hidden">
+    <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-audio-electricBlue/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-audio-neonOrange/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl" />
       </div>
 
       <div className="relative max-w-7xl mx-auto">
@@ -102,15 +102,15 @@ export default function Testimonials() {
           className="text-center mb-12"
         >
           <div className="inline-flex items-center gap-2 mb-4">
-            <Star className="w-6 h-6 text-audio-neonOrange fill-audio-neonOrange" />
-            <span className="text-audio-electricBlue font-semibold">Đánh Giá Khách Hàng</span>
+            <Star className="w-6 h-6 text-pink-400 fill-pink-400" />
+            <span className="text-cyan-400 font-semibold">Đánh Giá Khách Hàng</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-3 sm:mb-4">
-            <span className="bg-gradient-to-r from-audio-electricBlue via-audio-neonPurple to-audio-neonOrange bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               Cảm Nhận Thực Tế
             </span>
           </h2>
-          <p className="text-white text-sm sm:text-base lg:text-lg px-4">
+          <p className="text-gray-300 text-sm sm:text-base lg:text-lg">
             Hơn 1000+ khách hàng đã tin tưởng và hài lòng với dịch vụ của chúng tôi
           </p>
         </motion.div>
@@ -124,11 +124,11 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative bg-audio-light/30 backdrop-blur-sm border border-audio-electricBlue/20 rounded-2xl p-6 hover:border-audio-electricBlue/40 hover:shadow-2xl hover:shadow-audio-electricBlue/20 transition-all duration-300"
+              className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 group"
             >
               {/* Quote Icon */}
-              <div className="absolute top-4 right-4 opacity-20">
-                <Quote className="w-12 h-12 text-audio-electricBlue" />
+              <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-30 transition-opacity">
+                <Quote className="w-12 h-12 text-cyan-400" />
               </div>
 
               {/* Rating Stars */}
@@ -136,19 +136,19 @@ export default function Testimonials() {
                 {[...Array(review.rating)].map((_, idx) => (
                   <Star
                     key={idx}
-                    className="w-4 h-4 text-audio-neonOrange fill-audio-neonOrange"
+                    className="w-4 h-4 text-pink-400 fill-pink-400"
                   />
                 ))}
               </div>
 
               {/* Comment */}
-              <p className="text-white text-sm leading-relaxed mb-4 relative z-10">
+              <p className="text-gray-200 text-sm leading-relaxed mb-4 relative z-10">
                 &quot;{review.comment}&quot;
               </p>
 
               {/* Customer Info */}
-              <div className="flex items-center gap-3 pt-4 border-t border-audio-electricBlue/10">
-                <div className="relative w-10 h-10 rounded-full overflow-hidden bg-audio-electricBlue/20 border border-audio-electricBlue/30">
+              <div className="flex items-center gap-3 pt-4 border-t border-white/10">
+                <div className="relative w-10 h-10 rounded-full overflow-hidden bg-cyan-500/20 border border-cyan-500/30">
                   <Image
                     src={review.image}
                     alt={review.name}
@@ -159,7 +159,7 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <p className="text-white font-semibold text-sm">{review.name}</p>
-                  <p className="text-white text-xs">Khách hàng đã thuê</p>
+                  <p className="text-gray-400 text-xs">Khách hàng đã thuê</p>
                 </div>
               </div>
             </motion.div>
@@ -173,9 +173,9 @@ export default function Testimonials() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-audio-light/30 backdrop-blur-sm border border-audio-electricBlue/20 rounded-full text-audio-electricBlue hover:border-audio-electricBlue/40 transition-all cursor-pointer">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-cyan-400 hover:border-cyan-500/50 transition-all cursor-pointer">
             <span className="text-sm font-semibold">Xem thêm {reviews.length - 6} đánh giá</span>
-            <Star className="w-4 h-4 fill-audio-neonOrange text-audio-neonOrange" />
+            <Star className="w-4 h-4 fill-pink-400 text-pink-400" />
           </div>
         </motion.div>
       </div>
