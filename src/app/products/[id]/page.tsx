@@ -265,7 +265,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               <h3 className="text-lg font-bold text-white mb-2">1. Đặt cọc & hợp đồng</h3>
               <ul className="list-disc pl-5 space-y-2 leading-relaxed text-sm sm:text-base">
                 <li>
-                  Cọc bằng <span className="font-semibold text-audio-electricBlue">CCCD & GPLX</span> và kèm hợp đồng thuê loa.
+                  Cọc bằng <span className="font-semibold text-audio-electricBlue">CCCD hoặc GPLX</span> và kèm hợp đồng thuê loa.
                 </li>
                 <li>
                   Thanh toán <span className="font-semibold text-audio-electricBlue">tiền thuê + phí ship (nếu có)</span> trước khi bàn giao loa.

@@ -103,127 +103,8 @@ const ProductList: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Search and Filter Bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="max-w-4xl mx-auto mb-8 sm:mb-12"
-        >
-          <div className="flex flex-col sm:flex-row gap-4">
-            {/* Search */}
-            <div className="relative flex-1">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Tìm kiếm loa..."
-                value={searchText}
-                onChange={(e) => setSearchText(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 sm:py-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all"
-              />
-            </div>
-
-            {/* Filter Toggle */}
-            <button
-              onClick={() => setShowFilters(!showFilters)}
-              className={`px-6 py-3 sm:py-4 rounded-2xl border transition-all flex items-center justify-center gap-2 ${
-                showFilters || hasActiveFilters
-                  ? 'bg-cyan-500/10 border-cyan-500/50 text-cyan-400'
-                  : 'bg-white/5 border-white/10 text-white hover:border-cyan-500/50'
-              }`}
-            >
-              <SlidersHorizontal className="w-5 h-5" />
-              <span className="hidden sm:inline">Lọc</span>
-              {hasActiveFilters && (
-                <span className="w-2 h-2 bg-cyan-400 rounded-full" />
-              )}
-            </button>
-          </div>
-
-          {/* Filter Panel */}
-          <AnimatePresence>
-            {showFilters && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                className="mt-4 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl space-y-4 overflow-hidden"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-white font-bold flex items-center gap-2">
-                    <Filter className="w-5 h-5 text-cyan-400" />
-                    Bộ lọc
-                  </h3>
-                  {hasActiveFilters && (
-                    <button
-                      onClick={clearFilters}
-                      className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-1"
-                    >
-                      <X className="w-4 h-4" />
-                      Xóa bộ lọc
-                    </button>
-                  )}
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  {/* Power Filter */}
-                  <div>
-                    <label className="block text-sm text-gray-400 mb-2">Công suất</label>
-                    <select
-                      value={selectedPower}
-                      onChange={(e) => setSelectedPower(e.target.value)}
-                      className="w-full px-4 py-2.5 bg-black/50 border border-white/10 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 transition-colors"
-                    >
-                      <option value="all">Tất cả</option>
-                      <option value="low">Dưới 100W</option>
-                      <option value="medium">100W - 500W</option>
-                      <option value="high">Trên 500W</option>
-                    </select>
-                  </div>
-
-                  {/* Price Filter */}
-                  <div>
-                    <label className="block text-sm text-gray-400 mb-2">Giá thuê</label>
-                    <select
-                      value={selectedPriceRange}
-                      onChange={(e) => setSelectedPriceRange(e.target.value)}
-                      className="w-full px-4 py-2.5 bg-black/50 border border-white/10 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 transition-colors"
-                    >
-                      <option value="all">Tất cả</option>
-                      <option value="budget">Dưới 100k/ngày</option>
-                      <option value="mid">100k - 500k/ngày</option>
-                      <option value="premium">Trên 500k/ngày</option>
-                    </select>
-                  </div>
-
-                  {/* Brand Filter */}
-                  <div>
-                    <label className="block text-sm text-gray-400 mb-2">Thương hiệu</label>
-                    <select
-                      value={selectedBrand}
-                      onChange={(e) => setSelectedBrand(e.target.value)}
-                      className="w-full px-4 py-2.5 bg-black/50 border border-white/10 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 transition-colors"
-                    >
-                      <option value="all">Tất cả</option>
-                      <option value="jbl">JBL</option>
-                      <option value="other">Khác</option>
-                    </select>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </motion.div>
-
-        {/* Results Count */}
-        {filteredProducts.length > 0 && (
-          <div className="text-center mb-6">
-            <p className="text-gray-400 text-sm">
-              Tìm thấy <span className="text-cyan-400 font-semibold">{filteredProducts.length}</span> sản phẩm
-            </p>
-          </div>
-        )}
+  
+      
 
         {/* Product Grid */}
         {filteredProducts.length > 0 ? (
@@ -269,7 +150,7 @@ const ProductList: React.FC = () => {
               <h3 className="text-lg font-bold text-white mb-3">1. Đặt cọc & hợp đồng</h3>
               <ul className="list-disc pl-5 space-y-2 leading-relaxed text-sm sm:text-base text-gray-300">
                 <li>
-                  Cọc bằng <span className="font-semibold text-cyan-400">CCCD & GPLX</span> và kèm hợp đồng thuê loa.
+                  Cọc bằng <span className="font-semibold text-cyan-400">CCCD hoặc GPLX</span> và kèm hợp đồng thuê loa.
                 </li>
                 <li>
                   Thanh toán <span className="font-semibold text-cyan-400">tiền thuê + phí ship (nếu có)</span> trước khi bàn giao loa.

@@ -1,11 +1,3 @@
-import loa from '@/images/loatronsmart.png'
-import loaanh1 from '/src/images/loa/1.png'
-import loaanh2 from '/src/images/loa/2.png'
-import loaanh3 from '/src/images/loa/3.png'
-import loaanh4 from '/src/images/loa/4.png'
-import loaanh5 from '/src/images/loa/5.png'
-
-
 import loajblpartyboxencore2 from '/src/images/loajblpartyboxencore2/0.png'
 import loajblpartyboxencore21 from '/src/images/loajblpartyboxencore2/1.png'
 import loajblpartyboxencore22 from '/src/images/loajblpartyboxencore2/2.png'
@@ -35,25 +27,7 @@ import loajblpartyboxultimate4 from '/src/images/loajblpartyboxultimate/4.jpg'
 import loajblpartyboxultimate5 from '/src/images/loajblpartyboxultimate/5.jpg'
 
 export const products = [
-  {
-    id: 'thue-loa-bluetooth-da-nang',
-    name: 'Loa Bluetooth Tronsmart T7 Mini',
-    catalogue: 'Loa công suất 15W, bật đèn sử dụng 12h và tắt đèn 18h',
-    image: loa.src,
-    image1: loaanh1.src,
-    image2: loaanh2.src,
-    image3: loaanh3.src,
-    image4: loaanh4.src,
-    image5: loaanh5.src,
-    originalPrice: 70,
-    price: 50,
-    quantity: 1,
-    detail1: 'Loa bluetooth công suất 15W, âm bass mạnh, phù hợp dùng cho tiệc nhỏ, sinh nhật, dã ngoại, hoặc không gian ngoài trời.',
-    detail2: 'Thời lượng pin lên đến 18h khi tắt đèn và 12h khi bật đèn; sạc đầy trong khoảng 3 giờ qua cổng Type-C.',
-    detail3: 'Kết nối Bluetooth 5.3 ổn định, phạm vi lên đến 18m; hỗ trợ ghép đôi 2 loa với công nghệ True Wireless Stereo (TWS) để tăng cường âm thanh.',
-    detail4: 'Chống nước IPX7, nhỏ gọn dễ mang theo, có đèn LED đổi màu theo nhạc giúp tăng không khí cho buổi tiệc và sự kiện.'
-  },
-
+ 
   {
     id: 'loa-jbl-partyBox-encore-2',
     name: 'Loa JBL PartyBox Encore 2',
@@ -110,24 +84,5 @@ export const products = [
   detail3: 'Hệ thống đèn LED Futuristic lightshow (hiệu ứng đèn vô cực) cực kỳ ấn tượng, đồng bộ theo nhịp điệu, biến mọi không gian thành sàn nhảy.',
   detail4: 'Kết nối Bluetooth 5.4, tích hợp Auracast để ghép nối không giới hạn nhiều loa, có đầy đủ cổng Mic/Guitar-In, Aux-In, Line-In, và chống nước IPX4.',
 },
-
-{
-  id: 'loa-jbl-party-box-ultimate',
-  name: 'Loa JBL PartyBox Ultimate',
-  catalogue: 'Loa tiệc tùng cao cấp, âm thanh 3 đường tiếng, hỗ trợ Wi-fi, Dolby Atmos, chống nước IPX4.',
-  image: loajblpartyboxultimate.src,
-  image1: loajblpartyboxultimate1.src,
-  image2: loajblpartyboxultimate2.src,
-  image3: loajblpartyboxultimate3.src,
-  image4: loajblpartyboxultimate4.src,
-  image5: loajblpartyboxultimate5.src,
-  originalPrice: 1800,
-  price: 1600,
-  quantity: 1,
-  detail1: 'Âm thanh JBL Pro Sound huyền thoại với hệ thống 3 đường tiếng (2 treble, 2 mid, 2 subwoofer) mạnh mẽ, bao phủ không gian rộng lớn.',
-  detail2: 'Kết nối cao cấp qua Wi-fi cho âm nhạc chất lượng cao, bao gồm cả âm thanh 3D Dolby Atmos, bên cạnh Bluetooth 5.3 thế hệ mới.',
-  detail3: 'Trình diễn ánh sáng đa chiều sinh động (Cool light trails, strobes) đồng bộ hoàn hảo với nhạc, có thể điều khiển qua nút bấm hoặc ứng dụng JBL One.',
-  detail4: 'Tích hợp JBL PartyPad để phối hiệu ứng DJ trực tiếp, có đầy đủ cổng Mic/Guitar, hỗ trợ ghép đôi không dây nhiều loa và chống nước IPX4.',
-}
 
 ]
