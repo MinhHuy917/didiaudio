@@ -18,7 +18,10 @@ export default function MenuContact() {
   return (
     <>
       {/* Sticky Action Buttons - Mobile First */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-audio-darker/95 backdrop-blur-md border-t border-audio-electricBlue/20">
+      <div
+        className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-audio-darker/95 backdrop-blur-md border-t border-audio-electricBlue/20"
+        style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px))' }}
+      >
         <div className="flex items-center justify-around px-4 py-3">
           <Link
             href="tel:0339197917"

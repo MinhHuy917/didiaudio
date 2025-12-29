@@ -40,28 +40,7 @@ export default function AboutSection() {
         </motion.div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
-          {[
-            { icon: Music2, label: 'JBL Chính Hãng', color: 'cyan' },
-            { icon: Volume2, label: 'Bass Mạnh', color: 'purple' },
-            { icon: Headphones, label: 'Hỗ Trợ 24/7', color: 'pink' },
-            { icon: Radio, label: 'Giao Nhanh', color: 'cyan' },
-          ].map((feature, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:border-cyan-500/50 transition-all group"
-            >
-              <div className={`w-12 h-12 bg-gradient-to-br from-${feature.color}-500 to-${feature.color}-600 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform`}>
-                <feature.icon className="w-6 h-6 text-white" />
-              </div>
-              <p className="text-sm text-white font-medium">{feature.label}</p>
-            </motion.div>
-          ))}
-        </div>
+     
       </div>
     </section>
   )

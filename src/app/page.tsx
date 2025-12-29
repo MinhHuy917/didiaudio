@@ -10,6 +10,7 @@ import WhyUs from '@/components/WhyUs'
 import SpecialNoticeBanner from '@/components/SpecialNoticeBanner'
 import HeroSection from '@/components/HeroSection'
 import UseCaseSection from '@/components/UseCaseSection'
+import BlogCamTrai from '@/components/BlogCamTrai'
 
 export const metadata: Metadata = {
   title: 'Cho Thuê Loa Kéo Đà Nẵng | Loa Kéo JBL Chính Hãng Giá Rẻ - ĐiĐi Audio',
@@ -31,13 +32,13 @@ export const metadata: Metadata = {
     title: 'Cho Thuê Loa Kéo Đà Nẵng | Loa Kéo JBL Chính Hãng Giá Rẻ',
     description:
       'Cho thuê loa kéo JBL chính hãng tại Đà Nẵng. Giao nhanh 30-60 phút, setup miễn phí, hỗ trợ 24/7. Phù hợp du lịch, cắm trại, sinh nhật, team building.',
-    url: 'https://www.didiaudio.com',
+    url: 'https://www.didi-audio.com',
     siteName: 'ĐiĐi Audio',
     locale: 'vi_VN',
     type: 'website',
     images: [
       {
-        url: 'https://www.didiaudio.com/og-image.jpg',
+        url: 'https://www.didi-audio.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Cho thuê loa kéo Đà Nẵng - ĐiĐi Audio',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://www.didiaudio.com',
+    canonical: 'https://www.didi-audio.com',
   },
 }
 
@@ -53,7 +54,6 @@ export default async function Home() {
   return (
     <>
       {/* Hero Section - H1 sẽ được đặt trong HeroSection */}
-      <HeroSection />
       
       {/* About Section */}
       <AboutSection />
@@ -69,6 +69,8 @@ export default async function Home() {
       
       {/* Why Us Section */}
       <WhyUs />
+
+      <BlogCamTrai />
       
       {/* Testimonials Section */}
       <Testimonials />

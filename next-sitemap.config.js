@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://didiaudio.com',
+    siteUrl: 'https://didi-audio.com',
     generateRobotsTxt: true, // Tự động tạo robots.txt luôn
   }
   

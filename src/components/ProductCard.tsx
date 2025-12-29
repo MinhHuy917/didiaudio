@@ -3,9 +3,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Battery, Bluetooth, Volume2, Music, Play } from 'lucide-react'
+import { Battery, Bluetooth, Volume2, Music, Phone } from 'lucide-react'
 import { useState } from 'react'
-import BookingFlow from './BookingFlow'
 
 interface ProductCardProps {
   product: {
@@ -20,7 +19,6 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product, index = 0 }: ProductCardProps) {
-  const [showBooking, setShowBooking] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
 
   // Extract key info from catalogue
@@ -129,16 +127,16 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
 
             {/* CTA Buttons */}
             <div className="flex gap-3">
-              <button
-                onClick={() => setShowBooking(true)}
-                className="flex-1 group/btn relative px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl text-white font-bold text-sm hover:shadow-lg hover:shadow-cyan-500/50 transition-all overflow-hidden"
+              <Link
+                href="tel:0339197917"
+                className="flex-1 group/btn relative px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl text-white font-bold text-sm hover:shadow-lg hover:shadow-cyan-500/50 transition-all overflow-hidden text-center"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
-                  <Play className="w-4 h-4" />
+                  <Phone className="w-4 h-4" />
                   Thuê Ngay
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover/btn:opacity-100 transition-opacity" />
-              </button>
+              </Link>
               <Link
                 href={`/products/${product.id}`}
                 className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white font-semibold text-sm hover:bg-white/10 hover:border-cyan-500/50 transition-all"
@@ -152,15 +150,6 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-purple-500/0 to-pink-500/0 group-hover:from-cyan-500/5 group-hover:via-purple-500/5 group-hover:to-pink-500/5 transition-all duration-500 pointer-events-none rounded-3xl" />
         </div>
       </motion.div>
-
-      {showBooking && (
-        <BookingFlow
-          productId={product.id}
-          productName={product.name}
-          productPrice={product.price}
-          onClose={() => setShowBooking(false)}
-        />
-      )}
     </>
   )
 }

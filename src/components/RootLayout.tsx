@@ -72,39 +72,6 @@ function Header({
           </div>
         </Link>
 
-        <div className="flex items-center gap-2 sm:gap-3">
-          <Link
-            href="#products"
-            className="hidden sm:inline-flex px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-semibold hover:shadow-lg hover:shadow-cyan-500/40 transition-all"
-          >
-            Thuê ngay
-          </Link>
-          <Link
-            href="tel:0339197917"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-pink-600 text-white text-sm font-semibold hover:bg-pink-700 transition-all"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72c.12.81.37 1.6.73 2.33a2 2 0 0 1-.45 2.23l-1.27 1.27a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.23-.45c.73.36 1.52.61 2.33.73A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            0339197917
-          </Link>
-          <button
-            ref={toggleRef}
-            type="button"
-            onClick={onToggle}
-            aria-expanded={expanded ? 'true' : 'false'}
-            aria-controls={panelId}
-            className={clsx(
-              'sm:hidden inline-flex items-center justify-center rounded-xl p-2 border transition-all',
-              invert
-                ? 'bg-white/10 border-white/30 text-white hover:bg-white/20'
-                : 'bg-white/5 border-white/10 text-white hover:bg-white/10 hover:border-cyan-500/50',
-            )}
-            aria-label="Toggle navigation"
-          >
-            <Icon className="h-5 w-5" />
-          </button>
-        </div>
       </div>
     </Container>
   )
