@@ -18,7 +18,7 @@ const navigation = [
   {
     title: "Thông Tin Cửa Hàng",
     links: [
-      { title: "86 Lê Thiệt, Quận Liên Chiểu, TP. Đà Nẵng", href: "https://maps.app.goo.gl/xtErkxmAs9pYEY1B9" },
+      { title: "43 Tống Duy Tân, Quận Liên Chiểu, TP. Đà Nẵng", href: "https://maps.app.goo.gl/xtErkxmAs9pYEY1B9" },
     ],
   },
   {

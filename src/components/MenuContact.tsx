@@ -191,7 +191,7 @@ export default function MenuContact() {
                 </div>
                 <div>
                   <span className="font-sans font-bold text-white text-sm">Địa điểm cửa hàng</span>
-                  <p className="text-xs text-white">86 Lê Thiệt, Liên Chiểu</p>
+                  <p className="text-xs text-white">43 Tống Duy Tân, Liên Chiểu</p>
                 </div>
               </Link>
             </div>
