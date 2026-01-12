@@ -116,8 +116,8 @@ export const articles = [
       <table>
         <thead><tr><th>Model</th><th>Công suất</th><th>Giá/ngày</th><th>Ngày 2+</th></tr></thead>
         <tbody>
-          <tr><td>JBL Encore 2</td><td>100W</td><td>350k</td><td>175k</td></tr>
-          <tr><td>JBL Stage 320</td><td>240W</td><td>550k</td><td>275k</td></tr>
+          <tr><td>JBL Encore 2</td><td>100W</td><td>290k</td><td>175k</td></tr>
+          <tr><td>JBL Stage 320</td><td>240W</td><td>490k</td><td>275k</td></tr>
           <tr><td>JBL 720</td><td>800W</td><td>1.200k</td><td>600k</td></tr>
           <tr><td>JBL Ultimate</td><td>3 đường tiếng</td><td>1.600k</td><td>800k</td></tr>
         </tbody>

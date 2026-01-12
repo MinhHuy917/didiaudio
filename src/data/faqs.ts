@@ -12,7 +12,7 @@ export const faqs = [
     {
       question: 'Giá thuê loa kéo tại Đà Nẵng là bao nhiêu?',
       answer:
-        'Giá thuê loa kéo dao động từ 50.000đ – 350.000đ tùy loại loa và thời gian thuê. Bạn có thể xem bảng giá chi tiết trên website hoặc liên hệ trực tiếp để được tư vấn.',
+        'Giá thuê loa kéo dao động từ 290.000đ – 1.200.000đ tùy loại loa và thời gian thuê. Bạn có thể xem bảng giá chi tiết trên website hoặc liên hệ trực tiếp để được tư vấn.',
     },
     {
       question: 'Dịch vụ thuê loa có bao gồm giao hàng tận nơi và lắp đặt không?',

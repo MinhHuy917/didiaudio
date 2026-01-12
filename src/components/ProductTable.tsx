@@ -1,10 +1,10 @@
 'use client'
 
-import React, { useState, useMemo } from 'react'
 import { products } from '@/data/products'
+import { motion } from 'framer-motion'
+import { Music, Volume2 } from 'lucide-react'
+import React, { useMemo, useState } from 'react'
 import ProductCard from './ProductCard'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Search, Filter, Volume2, X, Music, SlidersHorizontal } from 'lucide-react'
 
 type Product = {
   id: any
