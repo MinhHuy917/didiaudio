@@ -187,12 +187,6 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
             {/* CTA Buttons */}
             <div className="space-y-3 mb-6 sm:mb-8">
-              <button
-                onClick={() => setShowBooking(true)}
-                className="w-full px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-audio-electricBlue to-audio-neonPurple rounded-xl text-white font-bold text-base sm:text-lg hover:shadow-lg hover:shadow-audio-electricBlue/50 transition-all"
-              >
-                Đặt Thuê Ngay
-              </button>
               
               {/* Contact Buttons */}
               <div className="flex gap-3">
