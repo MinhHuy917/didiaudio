@@ -54,7 +54,7 @@ export default async function Home() {
   return (
     <>
       {/* Hero Section - H1 sẽ được đặt trong HeroSection */}
-      
+      <ImageSlider />
       {/* About Section */}
       <AboutSection />
       

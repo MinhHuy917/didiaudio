@@ -53,12 +53,12 @@ export const socialMediaProfiles = [
   
   {
     title: 'Facebook',
-    href: 'https://www.facebook.com/ThueLeuCamTraiDaNang/',
+    href: 'https://www.facebook.com/chothueloakeokeodanang/',
     icon: FacebookIcon,
   },
   {
     title: 'Tiktok',
-    href: 'https://www.tiktok.com/@didiaudio',
+    href: 'https://www.tiktok.com/@thueloakeokeodanang',
     icon: TiktokIcon,
   },
 ]
@@ -67,12 +67,12 @@ export const socialMediaProfilesV2 = [
   
   {
     title: 'Instagram',
-    href: 'https://www.instagram.com/didiaudio/',
+    href: 'https://www.instagram.com/chothueloakeokeodanang/',
     icon: FacebookIcon,
   },
   {
     title: 'Youtube',
-    href: 'https://www.youtube.com/@didiaudio',
+    href: 'https://www.youtube.com/@thueloakeodanang',
     icon: TiktokIcon,
   },
 ]

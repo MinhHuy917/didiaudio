@@ -30,12 +30,10 @@ export default function AboutSection() {
               ĐiĐi Audio
             </span>
             <br />
-            <span className="text-white">Âm Thanh Chất Lượng</span>
           </h2>
           
-          <p className="text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto">
-            Chuyên cho thuê loa kéo JBL chính hãng tại Đà Nẵng. Giao nhanh 30-60 phút, hướng dẫn sử dụng tận tâm, 
-            hỗ trợ kỹ thuật 24/7. Đồng hành cùng bạn trong mọi sự kiện và tiệc tùng.
+          <p className="text-blod text-white text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto">
+            Cửa hàng cho thuê loa kéo Đà Nẵng , chuyên dòng loa JBL PartyBox chính hãng. Phù hợp buổi tiệc, sự kiện, dã ngoại, sinh nhật, team building,...
           </p>
         </motion.div>
 

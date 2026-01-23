@@ -5,17 +5,15 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import { Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import img12 from '/src/images/img12.jpg'
-import img2 from '/src/images/img2.jpg'
-import img3 from '/src/images/img3.jpg'
-import img4 from '/src/images/img4.jpg'
-import img5 from '/src/images/img5.jpg'
-import img6 from '/src/images/img6.jpg'
-import img7 from '/src/images/img7.jpg'
-import img8 from '/src/images/img8.jpg'
+import img2 from '/src/images/img/img1.png'
+import img3 from '/src/images/img/img2.png'
+import img4 from '/src/images/img/img3.jpg'
+import img5 from '/src/images/img/img4.png'
+import img6 from '/src/images/img/img5.png'
+import img7 from '/src/images/img/img6.png'
 
 const images = [
-   img8, img12, img2, img3, img4, img5, img6, img7,
+   img2, img3, img4, img5, img6, img7,
 ]
 
 export default function ImageSlider() {
