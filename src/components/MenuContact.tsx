@@ -130,27 +130,7 @@ export default function MenuContact() {
           font-sans text-sm font-bold leading-6 text-white
         `}
       >
-        <div className="flex items-center justify-center rounded-full bg-gradient-to-r from-audio-electricBlue to-audio-neonPurple p-3 shadow-lg hover:shadow-audio-electricBlue/50 transition-all">
-          {isMenu.visible ? (
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8 8L16 16M8 16l8-8"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          ) : (
-            <Phone className="w-6 h-6" />
-          )}
-        </div>
+   
       </button>
 
       {isMenu.visible && (
