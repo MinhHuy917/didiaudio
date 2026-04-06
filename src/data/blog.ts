@@ -74,7 +74,7 @@ export const articles = [
       <ul>
         <li>Phòng khách &lt;25m²: 80–120W (JBL Encore 2).</li>
         <li>Sân vườn 30–50 khách: 200–300W (JBL Stage 320).</li>
-        <li>Ngoài trời đông: 500–800W (JBL 720/Ultimate).</li>
+        <li>Ngoài trời đông: 500W+ (JBL Ultimate hoặc ghép đôi Stage 320).</li>
       </ul>
       <h2>2. Pin & thời gian dùng</h2>
       <p>Pin rời &gt;12h tiện thay nhanh; pin liền 6–8h đủ tiệc tối. Ưu tiên sạc nhanh 10 phút nghe 60–120 phút.</p>
@@ -108,7 +108,7 @@ export const articles = [
   },
   {
     slug: 'bang-gia-thue-loa-keo-jbl-da-nang-2024',
-    title: 'Bảng giá thuê loa kéo JBL Đà Nẵng 2024 (Encore 2, 320, 720, Ultimate)',
+    title: 'Bảng giá thuê loa kéo JBL Đà Nẵng 2024 (Encore 2, Stage 320, Ultimate)',
     description: 'Giá thuê theo ngày, giảm 50% từ ngày thứ 2. Giao nhanh 30–60 phút, setup miễn phí.',
     image: img2.src,
     date: '2024-11-05',
@@ -118,7 +118,6 @@ export const articles = [
         <tbody>
           <tr><td>JBL Encore 2</td><td>100W</td><td>290k</td><td>175k</td></tr>
           <tr><td>JBL Stage 320</td><td>240W</td><td>490k</td><td>275k</td></tr>
-          <tr><td>JBL 720</td><td>800W</td><td>1.200k</td><td>600k</td></tr>
           <tr><td>JBL Ultimate</td><td>3 đường tiếng</td><td>1.600k</td><td>800k</td></tr>
         </tbody>
       </table>
@@ -238,7 +237,7 @@ export const articles = [
     image: img10.src,
     date: '2024-10-02',
     content: `
-      <p>Chọn Stage 320 (240W) hoặc 720 (800W) tùy sân. Chuẩn bị sạc dự phòng, che mưa nhẹ, test mic trước khi bắt đầu trò chơi.</p>
+      <p>Chọn Stage 320 (240W) cho sân vừa; nếu cần phủ âm rộng hãy ghép đôi Stage 320. Chuẩn bị sạc dự phòng, che mưa nhẹ, test mic trước khi bắt đầu trò chơi.</p>
     `,
   },
   {
@@ -420,7 +419,7 @@ export const articles = [
     slug: 'chon-loa-keo-cho-quay-roadshow',
     title: 'Chọn loa kéo cho roadshow: công suất, pin, di động',
     description:
-      'Công suất 300–500W, bánh xe, pin đủ 6–8h hoặc nguồn ngoài, 2 mic cho MC. JBL 720 phù hợp không gian mở.',
+      'Công suất 300–500W, bánh xe, pin đủ 6–8h hoặc nguồn ngoài, 2 mic cho MC. Stage 320 hoặc phương án ghép đôi phù hợp không gian mở.',
     image: img24.src,
     date: '2024-08-21',
     content: `

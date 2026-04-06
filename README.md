@@ -30,3 +30,8 @@ To learn more about the technologies used in this site template, see the followi
 - [Next.js](https://nextjs.org/docs) - the official Next.js documentation
 - [Framer Motion](https://www.framer.com/docs/) - the official Framer Motion documentation
 - [MDX](https://mdxjs.com/) - the official MDX documentation
+
+## Redesign planning docs
+
+- Chi tiết checklist redesign theo yêu cầu: `docs/redesign-jbl-danang-checklist.md`
+
