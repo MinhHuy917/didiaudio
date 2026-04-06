@@ -1,15 +1,7 @@
 import { type Metadata } from 'next'
+import Script from 'next/script'
 
-import AboutSection from '@/components/AboutSection'
-import { FAQ, FAQSchema } from '@/components/FAQ'
-import MenuContact from '@/components/MenuContact'
-import ProductList from '@/components/ProductTable'
-import Testimonials from '@/components/Testimonials'
-import WhyUs from '@/components/WhyUs'
-import SpecialNoticeBanner from '@/components/SpecialNoticeBanner'
-import HeroSection from '@/components/HeroSection'
-import UseCaseSection from '@/components/UseCaseSection'
-import BlogCamTrai from '@/components/BlogCamTrai'
+import PremiumLanding from '@/components/PremiumLanding'
 
 export const metadata: Metadata = {
   title: 'Cho Thuê Loa Kéo Đà Nẵng | Loa Kéo JBL Chính Hãng Giá Rẻ - ĐiĐi Audio',
@@ -50,36 +42,29 @@ export const metadata: Metadata = {
 }
 
 export default async function Home() {
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'ĐiDi Audio - Thuê loa JBL Đà Nẵng',
+    image: 'https://www.didi-audio.com/og-image.jpg',
+    telephone: '+84-339-197-917',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Đà Nẵng',
+      addressCountry: 'VN',
+    },
+    areaServed: 'Đà Nẵng',
+    url: 'https://www.didi-audio.com',
+  }
+
   return (
     <>
-      {/* Hero Section - phong cách hiện đại tối giản */}
-      <HeroSection />
-      {/* About Section */}
-      <AboutSection />
-      
-      {/* Special Notice Banner */}
-      <SpecialNoticeBanner />
-      
-      {/* Products Section - H2 sẽ được đặt trong ProductList */}
-      <ProductList />
-      
-      {/* Use Cases Section */}
-      <UseCaseSection />
-      
-      {/* Why Us Section */}
-      <WhyUs />
-
-      <BlogCamTrai />
-      
-      {/* Testimonials Section */}
-      <Testimonials />
-      
-      {/* FAQ Section */}
-      <FAQ />
-      <FAQSchema />
-      
-      {/* Contact Section */}
-      <MenuContact />
+      <Script
+        id="local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <PremiumLanding />
     </>
   )
 }
