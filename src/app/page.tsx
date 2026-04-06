@@ -2,7 +2,6 @@ import { type Metadata } from 'next'
 
 import AboutSection from '@/components/AboutSection'
 import { FAQ, FAQSchema } from '@/components/FAQ'
-import ImageSlider from '@/components/ImageSlider'
 import MenuContact from '@/components/MenuContact'
 import ProductList from '@/components/ProductTable'
 import Testimonials from '@/components/Testimonials'
@@ -53,8 +52,8 @@ export const metadata: Metadata = {
 export default async function Home() {
   return (
     <>
-      {/* Hero Section - H1 sẽ được đặt trong HeroSection */}
-      <ImageSlider />
+      {/* Hero Section - phong cách hiện đại tối giản */}
+      <HeroSection />
       {/* About Section */}
       <AboutSection />
       

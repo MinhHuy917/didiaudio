@@ -59,19 +59,77 @@ function Header({
 }) {
   return (
     <Container>
-      <div className="flex items-center justify-between py-4">
-        <Link href="/" aria-label="Home" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 shadow-md group-hover:border-cyan-500/50 transition-all">
-            <Image
-              src={logo}
-              alt="ĐiĐi Audio Logo"
-              fill
-              className="object-cover rounded-full p-1"
-              sizes="48px"
-            />
-          </div>
-        </Link>
+      <div
+        className={clsx(
+          'mt-2 rounded-2xl border px-4 py-3 sm:px-6',
+          'backdrop-blur-xl shadow-2xl',
+          invert
+            ? 'border-white/15 bg-audio-light/40'
+            : 'border-white/10 bg-audio-darker/70',
+        )}
+      >
+        <div className="flex items-center justify-between gap-4">
+          <Link href="/" aria-label="Home" className="flex items-center gap-3 group">
+            <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden bg-white/5 border border-white/20 shadow-md group-hover:border-audio-neonOrange/70 transition-all">
+              <Image
+                src={logo}
+                alt="ĐiĐi Audio Logo"
+                fill
+                className="object-cover rounded-xl p-1"
+                sizes="48px"
+              />
+            </div>
+            <div className="hidden sm:block">
+              <p className="text-sm text-audio-neonOrange font-semibold tracking-wide uppercase">ĐiĐi Audio</p>
+              <p className="text-xs text-audio-textMuted">Thuê loa JBL tại Đà Nẵng</p>
+            </div>
+          </Link>
 
+          <div className="hidden lg:flex items-center gap-2">
+            <NavigationItem href="#products" className="px-4 py-2 text-sm font-semibold">
+              Sản phẩm
+            </NavigationItem>
+            <NavigationItem href="#usecases" className="px-4 py-2 text-sm font-semibold">
+              Ứng dụng
+            </NavigationItem>
+            <NavigationItem href="#faq" className="px-4 py-2 text-sm font-semibold">
+              FAQ
+            </NavigationItem>
+            <NavigationItem
+              href="tel:0339197917"
+              className="px-4 py-2 text-sm font-bold bg-audio-neonOrange border-audio-neonOrange text-white hover:text-white"
+            >
+              Gọi ngay
+            </NavigationItem>
+          </div>
+
+          <button
+            ref={toggleRef}
+            type="button"
+            onClick={onToggle}
+            aria-expanded={expanded}
+            aria-controls={panelId}
+            aria-label={expanded ? 'Đóng menu' : 'Mở menu'}
+            className={clsx(
+              'inline-flex h-10 w-10 items-center justify-center rounded-xl border transition-colors lg:hidden',
+              invert
+                ? 'border-white/20 bg-white/10 text-white hover:bg-white/20'
+                : 'border-audio-electricBlue/40 bg-audio-light/50 text-white hover:border-audio-electricBlue',
+            )}
+          >
+            <Icon className="h-5 w-5" />
+          </button>
+        </div>
+
+        <div className="mt-3 flex items-center justify-between lg:hidden">
+          <p className="text-xs text-audio-textMuted">Giao nhanh 30-60 phút • Setup miễn phí</p>
+          <Link
+            href="tel:0339197917"
+            className="text-xs font-semibold text-audio-neonOrange hover:text-white transition-colors"
+          >
+            Hotline 0339 197 917
+          </Link>
+        </div>
       </div>
     </Container>
   )
@@ -157,12 +215,13 @@ export function Navigation() {
   return (
     <nav className="mt-6">
       <Container>
-        <ul className="flex flex-wrap gap-3">
-          <li><NavigationItem href="#about">Về chúng tôi</NavigationItem></li>
-          <li><NavigationItem href="#products">Sản phẩm</NavigationItem></li>
-          <li><NavigationItem href="#usecases">Ứng dụng</NavigationItem></li>
-          <li><NavigationItem href="#faq">Câu hỏi</NavigationItem></li>
-          <li><NavigationItem href="tel:0339197917" className="bg-audio-neonOrange border-audio-neonOrange text-white hover:text-white">Gọi ngay</NavigationItem></li>
+        <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <li><NavigationItem href="#about" className="justify-center sm:justify-start">Về chúng tôi</NavigationItem></li>
+          <li><NavigationItem href="#products" className="justify-center sm:justify-start">Sản phẩm</NavigationItem></li>
+          <li><NavigationItem href="#usecases" className="justify-center sm:justify-start">Ứng dụng</NavigationItem></li>
+          <li><NavigationItem href="#faq" className="justify-center sm:justify-start">Câu hỏi thường gặp</NavigationItem></li>
+          <li><NavigationItem href="/kinh-nghiem-chon-loa-keo-cho-tiec-gia-dinh" className="justify-center sm:justify-start">Bài viết mới</NavigationItem></li>
+          <li><NavigationItem href="tel:0339197917" className="justify-center bg-audio-neonOrange border-audio-neonOrange text-white hover:text-white">Gọi hotline</NavigationItem></li>
         </ul>
       </Container>
     </nav>
