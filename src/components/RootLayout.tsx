@@ -58,22 +58,53 @@ function Header({
   invert?: boolean
 }) {
   return (
-    <Container>
-      <div className="flex items-center justify-between py-4">
-        <Link href="/" aria-label="Home" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 shadow-md group-hover:border-cyan-500/50 transition-all">
-            <Image
-              src={logo}
-              alt="ĐiĐi Audio Logo"
-              fill
-              className="object-cover rounded-full p-1"
-              sizes="48px"
-            />
-          </div>
-        </Link>
+    <header className="w-full">
+      <Container>
+        <div className="flex items-center justify-between gap-4 py-4">
+          <Link href="/" aria-label="ĐiĐi Audio" className="flex items-center gap-3 group">
+            <div className="relative h-10 w-10 overflow-hidden rounded-full border border-white/10 bg-white/5 shadow-md backdrop-blur-sm transition-all group-hover:border-cyan-500/50 sm:h-12 sm:w-12">
+              <Image
+                src={logo}
+                alt="ĐiĐi Audio Logo"
+                fill
+                className="rounded-full object-cover p-1"
+                sizes="48px"
+                priority
+              />
+            </div>
+            <div className="hidden sm:block">
+              <p className="text-sm font-semibold text-white">ĐiĐi Audio</p>
+              <p className="text-xs text-gray-300">Thuê loa kéo Đà Nẵng</p>
+            </div>
+          </Link>
 
-      </div>
-    </Container>
+          <div className="hidden items-center gap-2 lg:flex">
+            <NavigationItem href="/#products">Bảng giá</NavigationItem>
+            <NavigationItem href="/#blog">Blog</NavigationItem>
+            <NavigationItem href="tel:0339197917" className="bg-audio-neonOrange border-audio-neonOrange text-white hover:text-white">
+              0339 197 917
+            </NavigationItem>
+          </div>
+
+          <button
+            ref={toggleRef}
+            type="button"
+            aria-expanded={expanded}
+            aria-controls={panelId}
+            aria-label={expanded ? 'Đóng menu' : 'Mở menu'}
+            onClick={onToggle}
+            className={clsx(
+              'inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors',
+              invert
+                ? 'border-cyan-500/40 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20'
+                : 'border-white/20 bg-white/10 text-white hover:border-cyan-500/50 hover:text-cyan-300',
+            )}
+          >
+            <Icon className="h-5 w-5" />
+          </button>
+        </div>
+      </Container>
+    </header>
   )
 }
 
