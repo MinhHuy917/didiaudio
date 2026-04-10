@@ -44,7 +44,7 @@ export default function BlogCamTrai() {
   }
 
   return (
-    <section className="bg-gradient-to-b from-black via-gray-900 to-black text-white">
+    <section id="blog" className="bg-gradient-to-b from-black via-gray-900 to-black text-white" aria-labelledby="blog-heading">
       {/* Hero Banner */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-10 sm:pt-16 sm:pb-14">
         <div className="flex flex-col gap-6 sm:gap-8 lg:flex-row lg:items-center lg:justify-between">
@@ -53,11 +53,11 @@ export default function BlogCamTrai() {
               <Music className="w-4 h-4 text-cyan-400" />
               <span className="text-xs sm:text-sm font-semibold text-cyan-200">Blog • Mẹo thuê loa & trải nghiệm</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
+            <h2 id="blog-heading" className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                 Kinh nghiệm âm thanh & sự kiện
               </span>
-            </h1>
+            </h2>
             <p className="text-gray-300 text-base sm:text-lg max-w-2xl">
               Tips chọn loa, setup karaoke, đến các mẹo tổ chức tiệc ngoài trời tại Đà Nẵng. Tất cả gói gọn cho bạn thuê loa nhanh, nhẹ, chuẩn.
             </p>
@@ -73,7 +73,7 @@ export default function BlogCamTrai() {
             </div>
           </div>
           <Link
-            href="#products"
+            href="/#products"
             className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 font-semibold text-white hover:shadow-lg hover:shadow-cyan-500/40 transition-all"
           >
             <Play className="w-4 h-4" />
