@@ -8,7 +8,6 @@ import ProductList from '@/components/ProductTable'
 import Testimonials from '@/components/Testimonials'
 import WhyUs from '@/components/WhyUs'
 import SpecialNoticeBanner from '@/components/SpecialNoticeBanner'
-import HeroSection from '@/components/HeroSection'
 import UseCaseSection from '@/components/UseCaseSection'
 import BlogCamTrai from '@/components/BlogCamTrai'
 
@@ -45,41 +44,46 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ĐiĐi Audio - Cho thuê loa kéo JBL Đà Nẵng',
+    description: 'Dịch vụ cho thuê loa kéo JBL chính hãng, giao nhanh và hỗ trợ 24/7 tại Đà Nẵng.',
+    images: ['https://www.didi-audio.com/og-image.jpg'],
+  },
   alternates: {
     canonical: 'https://www.didi-audio.com',
   },
 }
 
 export default async function Home() {
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'ĐiĐi Audio',
+    image: 'https://www.didi-audio.com/og-image.jpg',
+    url: 'https://www.didi-audio.com',
+    telephone: '0339197917',
+    areaServed: 'Đà Nẵng',
+    sameAs: ['https://www.didi-audio.com'],
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
       {/* Hero Section - H1 sẽ được đặt trong HeroSection */}
       <ImageSlider />
-      {/* About Section */}
       <AboutSection />
-      
-      {/* Special Notice Banner */}
       <SpecialNoticeBanner />
-      
-      {/* Products Section - H2 sẽ được đặt trong ProductList */}
       <ProductList />
-      
-      {/* Use Cases Section */}
       <UseCaseSection />
-      
-      {/* Why Us Section */}
       <WhyUs />
-
       <BlogCamTrai />
-      
-      {/* Testimonials Section */}
       <Testimonials />
-      
-      {/* FAQ Section */}
       <FAQ />
       <FAQSchema />
-      
-      {/* Contact Section */}
       <MenuContact />
     </>
   )
