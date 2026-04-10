@@ -33,7 +33,7 @@ export default function AboutSection() {
           </h2>
           
           <p className="text-blod text-white text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto">
-            Cửa hàng cho thuê loa kéo Đà Nẵng , chuyên dòng loa JBL PartyBox chính hãng. Phù hợp buổi tiệc, sự kiện, dã ngoại, sinh nhật, team building,...
+            Cửa hàng cho thuê loa JBL PartyBox Đà Nẵng
           </p>
         </motion.div>
 

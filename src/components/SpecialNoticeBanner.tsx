@@ -15,7 +15,7 @@ export default function PromoBanner() {
     {
       icon: Truck,
       title: 'Có giao hàng tận nơi',
-      desc: 'Miễn phí giao trong bán kính 5km từ 43 Tống Duy Tân - Ngoài 5km: hỗ trợ 1 chiều, chiều còn lại tính phí theo Grab Express.',
+      desc: 'Miễn phí giao trong trung tâm Đà Nẵng',
       tag: 'SUPPORT',
       gradient: 'from-purple-500 to-pink-600',
     },
