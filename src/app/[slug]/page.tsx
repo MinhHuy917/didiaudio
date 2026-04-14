@@ -82,6 +82,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       content={article.content}
       image={article.image}
       date={article.date}
+      faqs={article.faqs}
     />
   )
 }

@@ -67,6 +67,12 @@ type Article = {
   image: string
   date: string
   content: string
+  faqs?: FAQ[]
+}
+
+type FAQ = {
+  question: string
+  answer: string
 }
 
 const normalizeMetaDescription = (title: string, description: string) => {
@@ -85,52 +91,39 @@ const normalizeMetaDescription = (title: string, description: string) => {
 
 const stripTitlePrefix = (title: string) => title.replace(/^[^:–-]+[:–-]\s*/u, '').trim() || title
 
-const buildFaqSchema = (faqs: Array<{ question: string; answer: string }>) => `
-<pre><code>{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-${faqs
-  .map(
-    (faq, index) => `    {
-      "@type": "Question",
-      "name": "${faq.question.replace(/"/g, '\\"')}",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "${faq.answer.replace(/"/g, '\\"')}"
-      }
-    }${index < faqs.length - 1 ? ',' : ''}`,
-  )
-  .join('\n')}
-  ]
-}</code></pre>`
+const buildArticleFaqs = (mainKeyword: string): FAQ[] => [
+  {
+    question: `Chi phí ${mainKeyword.toLowerCase()} tại Đà Nẵng thường bao nhiêu?`,
+    answer:
+      'Chi phí phụ thuộc công suất, thời gian thuê và khu vực giao nhận. Bạn nên chốt rõ số lượng khách, bối cảnh sử dụng và thời gian setup để được báo giá chính xác.',
+  },
+  {
+    question: 'Nên đặt dịch vụ trước bao lâu để không hết lịch?',
+    answer:
+      'Với cuối tuần hoặc mùa cao điểm du lịch, nên đặt trước 3–7 ngày. Nếu sự kiện lớn hoặc đi bán đảo Sơn Trà, suối, bãi biển xa trung tâm thì nên đặt sớm hơn.',
+  },
+  {
+    question: 'Có cần test thiết bị trước khi nhận không?',
+    answer:
+      'Có. Bạn nên test nhanh micro, Bluetooth/AUX, mức pin, phụ kiện đi kèm và lưu hotline kỹ thuật để xử lý ngay nếu phát sinh trong sự kiện.',
+  },
+  {
+    question: 'Dùng loa kéo ngoài trời cần lưu ý gì để âm thanh không hụt?',
+    answer:
+      'Đặt loa cao hơn mặt đất, hướng về khu vực người nghe, tránh vật cản, giữ âm lượng ở ngưỡng an toàn và chuẩn bị phương án che mưa nhẹ cho loa và micro.',
+  },
+  {
+    question: 'Muốn tối ưu chuyển đổi khi viết blog dịch vụ thì nên thêm gì?',
+    answer:
+      'Hãy có CTA rõ ràng, nêu khung giá tham khảo, thời gian giao thiết bị, khu vực phục vụ và liên kết nội bộ đến các bài cùng chủ đề để người đọc dễ ra quyết định.',
+  },
+]
 
 const buildSeoArticleContent = (article: Article, index: number, allArticles: Article[]) => {
   const mainKeyword = stripTitlePrefix(article.title)
   const secondaryKeywords = ['thuê loa kéo Đà Nẵng', 'camping Đà Nẵng', 'du lịch ngoài trời', 'setup karaoke']
   const related = allArticles.filter((_, i) => i !== index).slice(index % 8, (index % 8) + 3)
-  const faqs = [
-    {
-      question: `Chi phí ${mainKeyword.toLowerCase()} tại Đà Nẵng thường bao nhiêu?`,
-      answer:
-        'Chi phí phụ thuộc công suất, thời gian thuê và khu vực giao nhận. Bạn nên chốt rõ số lượng khách, bối cảnh sử dụng và thời gian setup để được báo giá chính xác.',
-    },
-    {
-      question: 'Nên đặt dịch vụ trước bao lâu để không hết lịch?',
-      answer:
-        'Với cuối tuần hoặc mùa cao điểm du lịch, nên đặt trước 3–7 ngày. Nếu sự kiện lớn hoặc đi bán đảo Sơn Trà, suối, bãi biển xa trung tâm thì nên đặt sớm hơn.',
-    },
-    {
-      question: 'Có cần test thiết bị trước khi nhận không?',
-      answer:
-        'Có. Bạn nên test nhanh micro, Bluetooth/AUX, mức pin, phụ kiện đi kèm và lưu hotline kỹ thuật để xử lý ngay nếu phát sinh trong sự kiện.',
-    },
-    {
-      question: 'Dùng loa kéo ngoài trời cần lưu ý gì để âm thanh không hụt?',
-      answer:
-        'Đặt loa cao hơn mặt đất, hướng về khu vực người nghe, tránh vật cản, giữ âm lượng ở ngưỡng an toàn và chuẩn bị phương án che mưa nhẹ cho loa và micro.',
-    },
-  ]
+  const faqs = buildArticleFaqs(mainKeyword)
 
   return `
     <p><strong>Meta description:</strong> ${normalizeMetaDescription(article.title, article.description)}</p>
@@ -184,6 +177,69 @@ const buildSeoArticleContent = (article: Article, index: number, allArticles: Ar
       <li><strong>Chạy thử 1 bài + 1 đoạn MC:</strong> xác nhận trước khi vào chương trình chính.</li>
     </ol>
 
+    <h2>Bảng ngân sách tham khảo theo nhu cầu thực tế</h2>
+    <p>Bạn có thể dùng bảng dưới đây như khung dự trù ban đầu, sau đó tinh chỉnh theo địa điểm, số giờ và mức độ hỗ trợ kỹ thuật mong muốn.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Nhu cầu</th>
+          <th>Quy mô đề xuất</th>
+          <th>Mục tiêu âm thanh</th>
+          <th>Gợi ý tối ưu chi phí</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tiệc gia đình</td>
+          <td>15–30 khách</td>
+          <td>Nhạc nền + karaoke nhẹ</td>
+          <td>Chọn 1 loa gọn + 2 micro, tránh thuê dư công suất</td>
+        </tr>
+        <tr>
+          <td>Camping/du lịch nhóm</td>
+          <td>20–50 khách</td>
+          <td>Phủ âm đều khu vực mở</td>
+          <td>Ưu tiên pin bền, có phương án AUX dự phòng</td>
+        </tr>
+        <tr>
+          <td>Sự kiện mini có MC</td>
+          <td>40–80 khách</td>
+          <td>Rõ lời, ít hú, ổn định dài giờ</td>
+          <td>Test mic trước giờ chạy chương trình 30 phút</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Mẫu timeline vận hành để tránh rối trước giờ G</h2>
+    <h3>Trước sự kiện 1–3 ngày</h3>
+    <ul>
+      <li>Chốt lại địa điểm, số lượng người tham gia, giờ bắt đầu/kết thúc.</li>
+      <li>Khoanh vùng điểm đặt loa và luồng di chuyển để không chắn tầm nhìn.</li>
+      <li>Lên danh sách nhạc + phương án phát dự phòng.</li>
+    </ul>
+    <h3>Trước sự kiện 2 giờ</h3>
+    <ul>
+      <li>Nhận thiết bị và kiểm tra checklist bàn giao.</li>
+      <li>Chạy test 1 bài nhạc và 1 đoạn nói có micro.</li>
+      <li>Khóa preset cơ bản để tránh chỉnh tay quá nhiều trong chương trình.</li>
+    </ul>
+    <h3>Trong sự kiện</h3>
+    <ul>
+      <li>Giữ âm lượng ổn định theo khung hoạt động: đón khách, giao lưu, cao trào, kết thúc.</li>
+      <li>Ưu tiên độ rõ lời với MC, giảm hiệu ứng khi nói chuyện hoặc phát biểu.</li>
+      <li>Kiểm tra pin micro định kỳ 60–90 phút/lần.</li>
+    </ul>
+
+    <h2>Chiến lược SEO nội dung cho cụm chủ đề thuê loa kéo / camping / du lịch</h2>
+    <p>Ngoài việc viết dài, bài viết muốn lên top cần đúng search intent. Với từ khóa dịch vụ địa phương như Đà Nẵng, bạn nên kết hợp:</p>
+    <ul>
+      <li><strong>Từ khóa chính:</strong> bám sát nhu cầu giao dịch (thuê loa kéo, setup karaoke, giao tận nơi).</li>
+      <li><strong>Từ khóa phụ:</strong> mở rộng ngữ cảnh sử dụng (camping, du lịch, team building, tiệc gia đình).</li>
+      <li><strong>Liên kết nội bộ:</strong> dẫn về trang tổng hợp và các bài cùng cụm chủ đề.</li>
+      <li><strong>CTA chuyển đổi:</strong> rõ hotline, thời gian phản hồi, khu vực phục vụ.</li>
+    </ul>
+    <p>Khi các yếu tố này xuất hiện tự nhiên trong nội dung, bài viết vừa phục vụ người đọc tốt hơn vừa có tín hiệu SEO bền vững hơn so với cách nhồi keyword.</p>
+
     <h2>Sai lầm thường gặp khiến trải nghiệm giảm mạnh</h2>
     <ul>
       <li>Chọn loa quá nhỏ so với số lượng người tham gia.</li>
@@ -222,9 +278,6 @@ const buildSeoArticleContent = (article: Article, index: number, allArticles: Ar
     `,
       )
       .join('')}
-
-    <h2>FAQ Schema (text)</h2>
-    ${buildFaqSchema(faqs)}
 
     <p><em>Từ khóa chính:</em> ${mainKeyword.toLowerCase()}.</p>
     <p><em>Từ khóa phụ:</em> ${secondaryKeywords.join(', ')}.</p>
@@ -896,4 +949,5 @@ export const articles: Article[] = rawArticles.map((article, index, allArticles)
   ...article,
   description: normalizeMetaDescription(article.title, article.description),
   content: buildSeoArticleContent(article, index, allArticles),
+  faqs: buildArticleFaqs(stripTitlePrefix(article.title)),
 }))
