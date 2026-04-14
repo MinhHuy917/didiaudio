@@ -9,9 +9,10 @@ type Props = {
   content: string
   image: string
   date: string
+  faqs?: Array<{ question: string; answer: string }>
 }
 
-export default function BlogArticlePage({ slug, title, description, content, image, date }: Props) {
+export default function BlogArticlePage({ slug, title, description, content, image, date, faqs = [] }: Props) {
   const articleUrl = `https://www.didi-audio.com/${slug}`
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -62,6 +63,22 @@ export default function BlogArticlePage({ slug, title, description, content, ima
     ],
   }
 
+  const faqSchema =
+    faqs.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: faq.answer,
+            },
+          })),
+        }
+      : null
+
   return (
     <article className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white" itemScope itemType="https://schema.org/Article">
       <script
@@ -72,6 +89,12 @@ export default function BlogArticlePage({ slug, title, description, content, ima
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {faqSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      ) : null}
 
       <header className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
         <div className="flex items-center gap-3 text-sm text-gray-300 mb-6" aria-label="Breadcrumb">
