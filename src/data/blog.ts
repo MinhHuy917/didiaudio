@@ -60,8 +60,179 @@ interface Blog {
 const blogData: Blog[] = []
 export default blogData
 
+type Article = {
+  slug: string
+  title: string
+  description: string
+  image: string
+  date: string
+  content: string
+}
+
+const normalizeMetaDescription = (title: string, description: string) => {
+  const suffix = ' | ĐiĐi Audio Đà Nẵng'
+  const base = description.replace(/\s+/g, ' ').trim()
+  if (base.length >= 150 && base.length <= 160) return base
+
+  const expanded = `${base} Bài viết thực chiến giúp bạn setup nhanh, tránh lỗi và tối ưu ngân sách.`.trim()
+  if (expanded.length + suffix.length <= 160) return `${expanded}${suffix}`
+  if (expanded.length > 160) return expanded.slice(0, 157).trimEnd() + '...'
+
+  const withTitle = `${title}: ${expanded}`
+  if (withTitle.length <= 160) return withTitle
+  return withTitle.slice(0, 157).trimEnd() + '...'
+}
+
+const stripTitlePrefix = (title: string) => title.replace(/^[^:–-]+[:–-]\s*/u, '').trim() || title
+
+const buildFaqSchema = (faqs: Array<{ question: string; answer: string }>) => `
+<pre><code>{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+${faqs
+  .map(
+    (faq, index) => `    {
+      "@type": "Question",
+      "name": "${faq.question.replace(/"/g, '\\"')}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "${faq.answer.replace(/"/g, '\\"')}"
+      }
+    }${index < faqs.length - 1 ? ',' : ''}`,
+  )
+  .join('\n')}
+  ]
+}</code></pre>`
+
+const buildSeoArticleContent = (article: Article, index: number, allArticles: Article[]) => {
+  const mainKeyword = stripTitlePrefix(article.title)
+  const secondaryKeywords = ['thuê loa kéo Đà Nẵng', 'camping Đà Nẵng', 'du lịch ngoài trời', 'setup karaoke']
+  const related = allArticles.filter((_, i) => i !== index).slice(index % 8, (index % 8) + 3)
+  const faqs = [
+    {
+      question: `Chi phí ${mainKeyword.toLowerCase()} tại Đà Nẵng thường bao nhiêu?`,
+      answer:
+        'Chi phí phụ thuộc công suất, thời gian thuê và khu vực giao nhận. Bạn nên chốt rõ số lượng khách, bối cảnh sử dụng và thời gian setup để được báo giá chính xác.',
+    },
+    {
+      question: 'Nên đặt dịch vụ trước bao lâu để không hết lịch?',
+      answer:
+        'Với cuối tuần hoặc mùa cao điểm du lịch, nên đặt trước 3–7 ngày. Nếu sự kiện lớn hoặc đi bán đảo Sơn Trà, suối, bãi biển xa trung tâm thì nên đặt sớm hơn.',
+    },
+    {
+      question: 'Có cần test thiết bị trước khi nhận không?',
+      answer:
+        'Có. Bạn nên test nhanh micro, Bluetooth/AUX, mức pin, phụ kiện đi kèm và lưu hotline kỹ thuật để xử lý ngay nếu phát sinh trong sự kiện.',
+    },
+    {
+      question: 'Dùng loa kéo ngoài trời cần lưu ý gì để âm thanh không hụt?',
+      answer:
+        'Đặt loa cao hơn mặt đất, hướng về khu vực người nghe, tránh vật cản, giữ âm lượng ở ngưỡng an toàn và chuẩn bị phương án che mưa nhẹ cho loa và micro.',
+    },
+  ]
+
+  return `
+    <p><strong>Meta description:</strong> ${normalizeMetaDescription(article.title, article.description)}</p>
+
+    <p>Bạn đang tìm giải pháp <strong>${mainKeyword.toLowerCase()}</strong> nhưng lại sợ gặp tình trạng “âm thanh nhỏ, micro hú, setup rối, phát sinh chi phí”? Đây là vấn đề rất phổ biến với các buổi tiệc gia đình, camping, gala mini hoặc hoạt động ngoài trời tại Đà Nẵng.</p>
+    <p>Bài viết này tổng hợp kinh nghiệm thực chiến từ nhiều bối cảnh khác nhau: tiệc tại nhà, đi biển, tổ chức picnic ở Hòa Bắc, sự kiện nhóm tại công viên và các buổi giao lưu nhỏ. Mục tiêu là giúp bạn làm đúng ngay từ đầu: chọn thiết bị phù hợp, setup nhanh, tiết kiệm và vẫn đảm bảo trải nghiệm chuyên nghiệp.</p>
+
+    <h2>Tại sao ${mainKeyword.toLowerCase()} lại quan trọng với trải nghiệm sự kiện?</h2>
+    <p>Khi phần âm thanh ổn định, mọi hoạt động đều “mượt”: MC nói rõ, nhạc nền vừa đủ, karaoke không hú, không bị ngắt quãng. Ngược lại, chỉ cần một lỗi nhỏ như pin yếu, bố trí loa sai hướng hay chọn công suất không phù hợp là cả chương trình dễ mất năng lượng.</p>
+    <p>Đặc biệt ở Đà Nẵng, nhiều sự kiện tổ chức trong không gian mở như bãi biển Mỹ Khê, khu cắm trại gần đèo Hải Vân hoặc khu sân vườn nhà dân. Điều kiện gió, độ ẩm và mật độ người tham gia thay đổi liên tục nên bạn cần một checklist rõ ràng trước khi bắt đầu.</p>
+
+    <h2>Checklist chuẩn SEO + chuẩn vận hành cho người mới</h2>
+    <h3>1) Xác định bối cảnh và mục tiêu sử dụng</h3>
+    <ul>
+      <li>Số lượng người tham gia thực tế (không chỉ số khách mời trên giấy).</li>
+      <li>Không gian: phòng kín, sân vườn hay ngoài trời hoàn toàn.</li>
+      <li>Mục tiêu chính: phát nhạc nền, karaoke, MC, trò chơi team building.</li>
+      <li>Thời lượng chương trình: 2 giờ, nửa ngày hay cả ngày.</li>
+    </ul>
+
+    <h3>2) Chọn công suất và hệ thiết bị vừa đủ</h3>
+    <p>Nguyên tắc là <strong>đủ headroom</strong> để loa không phải chạy quá tải. Nếu bạn thường mở 90–100% volume, chất âm sẽ dễ méo và nóng thiết bị. Hãy chọn cấu hình lớn hơn nhu cầu thực tế khoảng 20–30% để âm thanh sạch hơn.</p>
+    <ul>
+      <li>Nhóm 10–20 người: ưu tiên loa gọn, pin khỏe, dễ di chuyển.</li>
+      <li>Nhóm 20–50 người: nên có 2 micro UHF và phương án nguồn dự phòng.</li>
+      <li>Nhóm lớn hơn hoặc không gian mở: cân nhắc ghép đôi loa để phủ âm đều.</li>
+    </ul>
+
+    <h3>3) Tối ưu micro để giảm hú và rõ lời</h3>
+    <p>Giữ khoảng cách micro 5–8cm, cầm lệch góc 45°, không hướng đầu mic về phía loa. Nếu phòng vang, giảm echo trước khi tăng treble. Với sự kiện có MC, ưu tiên độ rõ lời thay vì hiệu ứng quá dày.</p>
+
+    <blockquote><strong>Lưu ý quan trọng:</strong> Âm lượng “vừa đủ nghe rõ” luôn hiệu quả hơn “càng to càng vui”. Đây là cách giữ chất âm ổn định, bảo vệ tai trẻ em và tránh mệt cho người nói lâu.</blockquote>
+
+    <h2>Kịch bản thực tế tại Đà Nẵng: áp dụng như thế nào cho đúng?</h2>
+    <h3>Scenario A – Tiệc sinh nhật tại nhà (20–30 khách)</h3>
+    <p>Không gian sân nhà phố thường có phản xạ âm từ tường và mái che. Bạn nên đặt loa cao hơn mặt đất, quay nhẹ về khu vực khách ngồi, giảm bass 1–2 nấc nếu nghe bị ù. Đối với phần karaoke, chỉ cần echo nhẹ là đủ dày giọng.</p>
+
+    <h3>Scenario B – Camping cuối tuần (Sơn Trà/Hòa Bắc)</h3>
+    <p>Ngoài trời có gió nên micro dễ nhiễu và tiếng treble có thể gắt. Hãy chuẩn bị bọc đầu micro, pin dự phòng, dây AUX dự phòng để phòng khi Bluetooth chập chờn. Chọn playlist theo khung giờ: chill buổi chiều, tăng nhịp nhẹ sau 20h để giữ năng lượng mà không gây ồn quá mức.</p>
+
+    <h3>Scenario C – Du lịch kết hợp trải nghiệm nhóm</h3>
+    <p>Khi lịch trình di chuyển nhiều điểm, yếu tố quan trọng nhất là thiết bị gọn, bền và setup nhanh. Chỉ cần một bộ loa kéo đúng chuẩn + checklist nhận bàn giao rõ ràng là đã giảm phần lớn rủi ro kỹ thuật.</p>
+
+    <h2>Quy trình 6 bước triển khai nhanh trong 15 phút</h2>
+    <ol>
+      <li><strong>Khảo sát nhanh vị trí:</strong> điểm đặt loa, luồng di chuyển, vị trí MC.</li>
+      <li><strong>Kiểm tra nguồn:</strong> pin, sạc, ổ cắm, dây nối dài.</li>
+      <li><strong>Test nguồn nhạc:</strong> Bluetooth trước, AUX làm backup.</li>
+      <li><strong>Test micro:</strong> tăng gain từ thấp lên, xử lý hú ngay từ đầu.</li>
+      <li><strong>Cân chỉnh EQ cơ bản:</strong> ưu tiên rõ lời, bass vừa phải.</li>
+      <li><strong>Chạy thử 1 bài + 1 đoạn MC:</strong> xác nhận trước khi vào chương trình chính.</li>
+    </ol>
+
+    <h2>Sai lầm thường gặp khiến trải nghiệm giảm mạnh</h2>
+    <ul>
+      <li>Chọn loa quá nhỏ so với số lượng người tham gia.</li>
+      <li>Không test thiết bị trước giờ bắt đầu.</li>
+      <li>Phụ thuộc hoàn toàn vào Bluetooth, không có phương án dự phòng.</li>
+      <li>Mở âm lượng tối đa liên tục gây méo tiếng và nóng loa.</li>
+      <li>Bỏ qua điều kiện thời tiết (gió, ẩm, mưa nhẹ) khi tổ chức ngoài trời.</li>
+    </ul>
+
+    <h2>Gợi ý internal link để tăng trải nghiệm đọc và SEO</h2>
+    <ul>
+      <li>Xem toàn bộ chuyên mục: <a href="/blog">/blog</a></li>
+      ${related.map((item) => `<li>Bài liên quan: <a href="/blog/${item.slug}">${item.title}</a></li>`).join('\n')}
+    </ul>
+
+    <h2>Kết luận</h2>
+    <p>${mainKeyword} không chỉ là chọn một chiếc loa “nghe cho to”, mà là thiết kế trải nghiệm âm thanh phù hợp bối cảnh, mục tiêu và ngân sách. Khi có kế hoạch rõ ràng, bạn sẽ tiết kiệm rất nhiều thời gian xử lý sự cố trong lúc chương trình đang diễn ra.</p>
+    <p>Nếu bạn muốn được tư vấn cấu hình nhanh theo số lượng khách và địa điểm cụ thể tại Đà Nẵng, hãy liên hệ ĐiĐi Audio để được đề xuất gói phù hợp, giao nhanh và hỗ trợ setup thực tế. Đây là cách đơn giản nhất để sự kiện diễn ra trọn vẹn ngay từ lần đầu tổ chức.</p>
+    <p><strong>CTA:</strong> Cần thuê loa kéo Đà Nẵng cho tiệc gia đình, camping hoặc chuyến du lịch ngoài trời? Gọi ngay hotline để chốt thiết bị trong vài phút và nhận hướng dẫn setup tận nơi.</p>
+
+    <h2>Image suggestions</h2>
+    <ol>
+      <li><strong>Ảnh cover sự kiện ngoài trời:</strong> nhóm bạn hát karaoke tại bãi biển Đà Nẵng, loa đặt cao, không gian hoàng hôn. <em>Alt:</em> “thuê loa kéo Đà Nẵng cho tiệc ngoài trời”.</li>
+      <li><strong>Ảnh setup kỹ thuật:</strong> cận cảnh chỉnh micro/echo trên loa kéo. <em>Alt:</em> “hướng dẫn chỉnh micro chống hú khi hát karaoke”.</li>
+      <li><strong>Ảnh tình huống camping:</strong> lều trại, loa kéo, đèn camp, nhóm 20 người. <em>Alt:</em> “loa kéo cho camping và dã ngoại tại Đà Nẵng”.</li>
+      <li><strong>Ảnh checklist bàn giao:</strong> bộ phụ kiện gồm micro, sạc, dây AUX được sắp xếp rõ. <em>Alt:</em> “checklist thuê loa kéo trước sự kiện”.</li>
+      <li><strong>Ảnh CTA dịch vụ:</strong> nhân viên giao loa tận nơi tại Đà Nẵng. <em>Alt:</em> “dịch vụ giao và setup loa kéo nhanh tại Đà Nẵng”.</li>
+    </ol>
+
+    <h2>FAQ</h2>
+    ${faqs
+      .map(
+        (faq) => `
+      <h3>${faq.question}</h3>
+      <p>${faq.answer}</p>
+    `,
+      )
+      .join('')}
+
+    <h2>FAQ Schema (text)</h2>
+    ${buildFaqSchema(faqs)}
+
+    <p><em>Từ khóa chính:</em> ${mainKeyword.toLowerCase()}.</p>
+    <p><em>Từ khóa phụ:</em> ${secondaryKeywords.join(', ')}.</p>
+  `
+}
+
 // 50 bài blog về loa/thuê loa, tối ưu SEO
-export const articles = [
+const rawArticles: Article[] = [
   {
     slug: 'kinh-nghiem-chon-loa-keo-cho-tiec-gia-dinh',
     title: 'Kinh nghiệm chọn loa kéo cho tiệc gia đình: công suất, pin, mic',
@@ -721,3 +892,8 @@ export const articles = [
   },
 ]
 
+export const articles: Article[] = rawArticles.map((article, index, allArticles) => ({
+  ...article,
+  description: normalizeMetaDescription(article.title, article.description),
+  content: buildSeoArticleContent(article, index, allArticles),
+}))
