@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import LocaleSuggestion from '@/components/LocaleSuggestion'
 import { localeFromPath, withLocalePrefix } from '@/lib/i18n'
+import { getRootCopy } from '@/lib/ui-copy'
 import { createContext, useEffect, useId, useRef, useState } from 'react'
 
 import { Container, ContainerV2 } from '@/components/Container'
@@ -62,6 +63,7 @@ function Header({
 }) {
   const pathname = usePathname() || '/'
   const locale = localeFromPath(pathname)
+  const copy = getRootCopy(locale)
 
   return (
     <header className="w-full">
@@ -80,13 +82,13 @@ function Header({
             </div>
             <div className="hidden sm:block">
               <p className="text-sm font-semibold text-white">ĐiĐi Audio</p>
-              <p className="text-xs text-gray-300">Thuê loa kéo Đà Nẵng</p>
+              <p className="text-xs text-gray-300">{copy.brandTagline}</p>
             </div>
           </Link>
 
           <div className="hidden items-center gap-2 lg:flex">
-            <NavigationItem href={withLocalePrefix(locale, '/#products')}>Bảng giá</NavigationItem>
-            <NavigationItem href={withLocalePrefix(locale, '/#blog')}>Blog</NavigationItem>
+            <NavigationItem href={withLocalePrefix(locale, '/#products')}>{copy.navPricing}</NavigationItem>
+            <NavigationItem href={withLocalePrefix(locale, '/#blog')}>{copy.navBlog}</NavigationItem>
             <NavigationItem href="tel:0339197917" className="bg-audio-neonOrange border-audio-neonOrange text-white hover:text-white">
               0339 197 917
             </NavigationItem>
@@ -205,6 +207,10 @@ function NavigationItemV2({
 }
 
 export function Navigation() {
+  const pathname = usePathname() || '/'
+  const locale = localeFromPath(pathname)
+  const copy = getRootCopy(locale)
+
   return (
     <nav className="mt-6">
       <Container>
@@ -213,7 +219,7 @@ export function Navigation() {
           <li><NavigationItem href="#products">Sản phẩm</NavigationItem></li>
           <li><NavigationItem href="#usecases">Ứng dụng</NavigationItem></li>
           <li><NavigationItem href="#faq">Câu hỏi</NavigationItem></li>
-          <li><NavigationItem href="tel:0339197917" className="bg-audio-neonOrange border-audio-neonOrange text-white hover:text-white">Gọi ngay</NavigationItem></li>
+          <li><NavigationItem href="tel:0339197917" className="bg-audio-neonOrange border-audio-neonOrange text-white hover:text-white">{copy.ctaCallNow}</NavigationItem></li>
         </ul>
       </Container>
     </nav>
@@ -221,6 +227,10 @@ export function Navigation() {
 }
 
 export function NavigationV2() {
+  const pathname = usePathname() || '/'
+  const locale = localeFromPath(pathname)
+  const copy = getRootCopy(locale)
+
   return (
     <nav className="mt-2 space-y-2 font-display text-white text-xl lg:text-4xl font-black tracking-tight">
 
@@ -304,7 +314,7 @@ export function NavigationV2() {
               zIndex: -1,
             }}
           />
-          <span className="relative z-10 text-white">Thuê loa kéo Đà Nẵng</span>
+          <span className="relative z-10 text-white">{copy.brandTagline}</span>
         </NavigationItemV2>
       </NavigationRowV2>
 

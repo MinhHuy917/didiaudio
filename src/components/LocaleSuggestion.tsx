@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 
 import { mapLocalizedSlug } from '@/data/blog-i18n'
 import { localeFromPath, localeMeta, locales, removeLocalePrefix, type Locale, withLocalePrefix } from '@/lib/i18n'
+import { getLocaleSuggestionCopy } from '@/lib/ui-copy'
 
 function detectBrowserLocale(): Locale | null {
   if (typeof navigator === 'undefined') return null
@@ -30,6 +31,7 @@ export default function LocaleSuggestion() {
   const pathname = usePathname() || '/'
   const [targetLocale, setTargetLocale] = useState<Locale | null>(null)
   const currentLocale = localeFromPath(pathname)
+  const copy = getLocaleSuggestionCopy(currentLocale)
 
   useEffect(() => {
     const saved = window.localStorage.getItem('preferred-locale')
@@ -51,7 +53,7 @@ export default function LocaleSuggestion() {
   return (
     <div className="fixed bottom-4 left-1/2 z-[70] w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 rounded-2xl border border-cyan-400/30 bg-black/85 p-3 text-sm text-white shadow-xl backdrop-blur">
       <p className="mb-2">
-        We detected your browser language as <strong>{localeMeta[targetLocale].label}</strong>. Switch now?
+        {copy.message.replace('{language}', localeMeta[targetLocale].label)}
       </p>
       <div className="flex gap-2">
         <Link
@@ -63,7 +65,7 @@ export default function LocaleSuggestion() {
             setTargetLocale(null)
           }}
         >
-          Switch
+          {copy.switch}
         </Link>
         <button
           type="button"
@@ -73,7 +75,7 @@ export default function LocaleSuggestion() {
             setTargetLocale(null)
           }}
         >
-          Keep current
+          {copy.keepCurrent}
         </button>
       </div>
     </div>

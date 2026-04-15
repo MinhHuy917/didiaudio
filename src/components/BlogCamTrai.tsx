@@ -7,13 +7,15 @@ import { usePathname } from 'next/navigation'
 import { Music, Play, Calendar, ArrowLeft, ArrowRight } from 'lucide-react'
 
 import { multilingualArticles } from '@/data/blog-i18n'
-import { localeFromPath, withLocalePrefix } from '@/lib/i18n'
+import { localeFromPath, localeMeta, withLocalePrefix } from '@/lib/i18n'
+import { getBlogCopy } from '@/lib/ui-copy'
 
 const ITEMS_PER_PAGE = 6
 
 export default function BlogCamTrai() {
   const pathname = usePathname() || '/'
   const locale = localeFromPath(pathname)
+  const copy = getBlogCopy(locale)
   const [currentPage, setCurrentPage] = useState(1)
 
   const localizedArticles = multilingualArticles.map((article) => ({
@@ -38,11 +40,11 @@ export default function BlogCamTrai() {
           <div className="space-y-4 max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30">
               <Music className="w-4 h-4 text-cyan-400" />
-              <span className="text-xs sm:text-sm font-semibold text-cyan-200">Blog • Multilingual SEO</span>
+              <span className="text-xs sm:text-sm font-semibold text-cyan-200">{copy.badge}</span>
             </div>
             <h2 id="blog-heading" className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Blog knowledge base
+                {copy.heading}
               </span>
             </h2>
           </div>
@@ -51,7 +53,7 @@ export default function BlogCamTrai() {
             className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 font-semibold text-white hover:shadow-lg hover:shadow-cyan-500/40 transition-all"
           >
             <Play className="w-4 h-4" />
-            Book speaker now
+            {copy.ctaBook}
           </Link>
         </div>
       </div>
@@ -70,7 +72,7 @@ export default function BlogCamTrai() {
                 <div className="absolute bottom-4 left-4 right-4 z-10 space-y-2">
                   <div className="flex items-center gap-2 text-xs text-gray-200">
                     <Calendar className="w-4 h-4 text-cyan-300" />
-                    <span>{new Date(article.date).toLocaleDateString()}</span>
+                    <span>{new Date(article.date).toLocaleDateString(localeMeta[locale].languageTag)}</span>
                   </div>
                   <h2 className="text-lg sm:text-xl font-bold text-white drop-shadow-lg leading-snug line-clamp-2">{article.localized.title}</h2>
                 </div>
@@ -78,7 +80,7 @@ export default function BlogCamTrai() {
               <div className="p-6 space-y-4">
                 <p className="text-sm text-gray-300 leading-relaxed line-clamp-3">{article.localized.description}</p>
                 <span className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400">
-                  Read more
+                  {copy.readMore}
                   <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
