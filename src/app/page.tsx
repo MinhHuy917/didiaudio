@@ -1,15 +1,18 @@
 import { type Metadata } from 'next'
+import dynamic from 'next/dynamic'
 
 import AboutSection from '@/components/AboutSection'
-import { FAQ, FAQSchema } from '@/components/FAQ'
 import ImageSlider from '@/components/ImageSlider'
-import MenuContact from '@/components/MenuContact'
 import ProductList from '@/components/ProductTable'
-import Testimonials from '@/components/Testimonials'
-import WhyUs from '@/components/WhyUs'
 import SpecialNoticeBanner from '@/components/SpecialNoticeBanner'
-import UseCaseSection from '@/components/UseCaseSection'
-import BlogCamTrai from '@/components/BlogCamTrai'
+
+const UseCaseSection = dynamic(() => import('@/components/UseCaseSection'))
+const WhyUs = dynamic(() => import('@/components/WhyUs'))
+const BlogCamTrai = dynamic(() => import('@/components/BlogCamTrai'))
+const Testimonials = dynamic(() => import('@/components/Testimonials'))
+const FAQ = dynamic(() => import('@/components/FAQ').then((module) => module.FAQ))
+const FAQSchema = dynamic(() => import('@/components/FAQ').then((module) => module.FAQSchema))
+const MenuContact = dynamic(() => import('@/components/MenuContact'))
 
 export const metadata: Metadata = {
   title: 'Cho Thuê Loa Kéo Đà Nẵng | Loa Kéo JBL Chính Hãng Giá Rẻ - ĐiĐi Audio',

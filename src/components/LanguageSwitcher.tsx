@@ -23,6 +23,56 @@ const LANGUAGE_OPTIONS: LanguageOption[] = [
   { id: 'ms', code: 'ms', label: 'Bahasa Melayu', flag: '🇲🇾' },
 ]
 
+declare global {
+  interface Window {
+    google?: any
+    googleTranslateElementInit?: () => void
+    __googleTranslateReady?: Promise<void>
+  }
+}
+
+function ensureGoogleTranslateLoaded() {
+  if (typeof window === 'undefined') return Promise.resolve()
+  if (window.__googleTranslateReady) return window.__googleTranslateReady
+
+  window.__googleTranslateReady = new Promise<void>((resolve) => {
+    const initialize = () => {
+      const target = document.getElementById('google_translate_element')
+      if (!target || !window.google?.translate) {
+        resolve()
+        return
+      }
+
+      if (!target.childElementCount) {
+        new window.google.translate.TranslateElement(
+          {
+            pageLanguage: 'vi',
+            includedLanguages: 'en,ko,ru,zh-CN,zh-TW,th,hi,ja,ms,vi',
+            autoDisplay: false,
+          },
+          'google_translate_element',
+        )
+      }
+      resolve()
+    }
+
+    if (window.google?.translate) {
+      initialize()
+      return
+    }
+
+    window.googleTranslateElementInit = initialize
+
+    const script = document.createElement('script')
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'
+    script.async = true
+    script.defer = true
+    document.body.appendChild(script)
+  })
+
+  return window.__googleTranslateReady
+}
+
 function setGoogleTranslateCookie(languageCode: string) {
   const cookieValue = `/vi/${languageCode}`
   document.cookie = `googtrans=${cookieValue}; path=/`
@@ -68,6 +118,10 @@ export function LanguageSwitcher() {
     const languageCode = readGoogleTranslateLanguageCode()
     const matchingLanguage = LANGUAGE_OPTIONS.find((language) => language.code === languageCode)
     setCurrentLanguageId(matchingLanguage?.id || 'vi')
+
+    if (languageCode !== 'vi') {
+      void ensureGoogleTranslateLoaded()
+    }
   }, [])
 
   useEffect(() => {
@@ -92,7 +146,9 @@ export function LanguageSwitcher() {
 
     window.localStorage.setItem('preferred-language-id', language.id)
     setGoogleTranslateCookie(language.code)
-    window.location.reload()
+    void ensureGoogleTranslateLoaded().finally(() => {
+      window.location.reload()
+    })
   }
 
   return (
