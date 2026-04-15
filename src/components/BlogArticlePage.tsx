@@ -12,7 +12,82 @@ type Props = {
   faqs?: Array<{ question: string; answer: string }>
 }
 
+const escapeHtml = (text: string) =>
+  text
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;')
+
+const normalizeTextBlogContent = (raw: string) => {
+  const lines = raw
+    .replaceAll('\r\n', '\n')
+    .split('\n')
+    .map((line) => line.trim())
+
+  const blocks: string[] = []
+  let i = 0
+
+  while (i < lines.length) {
+    const line = lines[i]
+    if (!line) {
+      i += 1
+      continue
+    }
+
+    if (line.startsWith('### ')) {
+      blocks.push(`<h3>${escapeHtml(line.slice(4))}</h3>`)
+      i += 1
+      continue
+    }
+
+    if (line.startsWith('## ')) {
+      blocks.push(`<h2>${escapeHtml(line.slice(3))}</h2>`)
+      i += 1
+      continue
+    }
+
+    if (/^\d+[).]\s+/.test(line)) {
+      const items: string[] = []
+      while (i < lines.length && /^\d+[).]\s+/.test(lines[i])) {
+        items.push(`<li>${escapeHtml(lines[i].replace(/^\d+[).]\s+/, ''))}</li>`)
+        i += 1
+      }
+      blocks.push(`<ol>${items.join('')}</ol>`)
+      continue
+    }
+
+    if (/^[-•]\s+/.test(line)) {
+      const items: string[] = []
+      while (i < lines.length && /^[-•]\s+/.test(lines[i])) {
+        items.push(`<li>${escapeHtml(lines[i].replace(/^[-•]\s+/, ''))}</li>`)
+        i += 1
+      }
+      blocks.push(`<ul>${items.join('')}</ul>`)
+      continue
+    }
+
+    const paragraph: string[] = [escapeHtml(line)]
+    i += 1
+    while (i < lines.length && lines[i] && !lines[i].startsWith('## ') && !lines[i].startsWith('### ')) {
+      if (/^[-•]\s+/.test(lines[i]) || /^\d+[).]\s+/.test(lines[i])) break
+      paragraph.push(escapeHtml(lines[i]))
+      i += 1
+    }
+    blocks.push(`<p>${paragraph.join('<br />')}</p>`)
+  }
+
+  return blocks.join('\n')
+}
+
+const formatBlogContent = (raw: string) => {
+  const hasHtmlBlocks = /<(p|h1|h2|h3|ul|ol|li|table|thead|tbody|tr|td|th|blockquote|pre|figure|img)\b/i.test(raw)
+  return hasHtmlBlocks ? raw : normalizeTextBlogContent(raw)
+}
+
 export default function BlogArticlePage({ slug, title, description, content, image, date, faqs = [] }: Props) {
+  const articleContent = formatBlogContent(content)
   const articleUrl = `https://www.didi-audio.com/${slug}`
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -158,9 +233,12 @@ export default function BlogArticlePage({ slug, title, description, content, ima
       </header>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14">
-        <div className="bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 lg:p-10 backdrop-blur-md">
-          <div className="prose prose-invert prose-lg max-w-none prose-headings:font-black prose-a:text-cyan-400 hover:prose-a:text-cyan-300 prose-strong:text-white prose-li:marker:text-cyan-400" itemProp="articleBody">
-            <div dangerouslySetInnerHTML={{ __html: content }} />
+        <div className="bg-white/[0.06] border border-white/10 rounded-3xl p-5 sm:p-8 lg:p-10 backdrop-blur-md shadow-2xl shadow-black/20">
+          <div
+            className="prose prose-invert max-w-none text-[15px] sm:text-base lg:text-lg leading-8 prose-p:leading-8 prose-p:text-gray-200 prose-headings:font-black prose-headings:text-white prose-h2:mt-10 prose-h2:mb-4 prose-h2:text-2xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-xl prose-a:text-cyan-400 hover:prose-a:text-cyan-300 prose-strong:text-white prose-li:my-1 prose-li:leading-8 prose-li:marker:text-cyan-400 prose-blockquote:border-l-cyan-400 prose-blockquote:bg-white/5 prose-blockquote:rounded-r-xl prose-blockquote:px-4 prose-blockquote:py-2 prose-table:block prose-table:overflow-x-auto prose-table:border prose-table:border-white/10 prose-table:rounded-xl prose-th:bg-white/5 prose-th:text-white prose-th:px-3 prose-th:py-2 prose-td:px-3 prose-td:py-2 whitespace-pre-line"
+            itemProp="articleBody"
+          >
+            <div dangerouslySetInnerHTML={{ __html: articleContent }} />
           </div>
         </div>
       </div>
