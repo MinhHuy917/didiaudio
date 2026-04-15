@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 type LanguageOption = {
   id: string
@@ -39,8 +39,24 @@ function readGoogleTranslateLanguageCode() {
   return parts[2] || 'vi'
 }
 
+function ChevronIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" {...props}>
+      <path
+        d="M5 7.5 10 12.5 15 7.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
 export function LanguageSwitcher() {
   const [currentLanguageId, setCurrentLanguageId] = useState('vi')
+  const [isOpen, setIsOpen] = useState(false)
+  const wrapperRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const savedLanguageId = window.localStorage.getItem('preferred-language-id')
@@ -54,7 +70,24 @@ export function LanguageSwitcher() {
     setCurrentLanguageId(matchingLanguage?.id || 'vi')
   }, [])
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!wrapperRef.current?.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+
+    window.addEventListener('click', handleClickOutside)
+    return () => window.removeEventListener('click', handleClickOutside)
+  }, [])
+
+  const activeLanguage =
+    LANGUAGE_OPTIONS.find((language) => language.id === currentLanguageId) ||
+    LANGUAGE_OPTIONS[0]
+
   const handleChangeLanguage = (language: LanguageOption) => {
+    setIsOpen(false)
+
     if (language.id === currentLanguageId) return
 
     window.localStorage.setItem('preferred-language-id', language.id)
@@ -63,27 +96,47 @@ export function LanguageSwitcher() {
   }
 
   return (
-    <div className="inline-flex max-w-[220px] items-center gap-1 rounded-full border border-white/20 bg-black/25 p-1">
-      {LANGUAGE_OPTIONS.map((language) => {
-        const isActive = language.id === currentLanguageId
+    <div ref={wrapperRef} className="relative">
+      <button
+        type="button"
+        aria-haspopup="menu"
+        aria-expanded={isOpen}
+        aria-label="Chọn ngôn ngữ"
+        onClick={() => setIsOpen((open) => !open)}
+        className="inline-flex h-10 items-center gap-2 rounded-full border border-white/20 bg-black/25 px-3 text-sm font-semibold text-white transition hover:bg-white/10"
+      >
+        <span className="text-base" aria-hidden="true">{activeLanguage.flag}</span>
+        <span className="hidden sm:inline">{activeLanguage.label}</span>
+        <ChevronIcon className={`h-4 w-4 text-gray-300 transition ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
 
-        return (
-          <button
-            key={language.id}
-            type="button"
-            aria-label={language.label}
-            title={language.label}
-            onClick={() => handleChangeLanguage(language)}
-            className={`flex h-8 w-8 items-center justify-center rounded-full text-base transition ${
-              isActive
-                ? 'bg-cyan-400/20 ring-1 ring-cyan-300/60'
-                : 'hover:bg-white/10'
-            }`}
-          >
-            <span aria-hidden="true">{language.flag}</span>
-          </button>
-        )
-      })}
+      {isOpen && (
+        <div
+          role="menu"
+          className="absolute right-0 top-12 z-50 w-56 rounded-xl border border-white/20 bg-audio-darker/95 p-1 shadow-2xl backdrop-blur"
+        >
+          {LANGUAGE_OPTIONS.map((language) => {
+            const isActive = language.id === currentLanguageId
+
+            return (
+              <button
+                key={language.id}
+                type="button"
+                role="menuitem"
+                onClick={() => handleChangeLanguage(language)}
+                className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-sm transition ${
+                  isActive
+                    ? 'bg-cyan-500/20 text-cyan-200'
+                    : 'text-white hover:bg-white/10'
+                }`}
+              >
+                <span aria-hidden="true" className="text-base">{language.flag}</span>
+                <span>{language.label}</span>
+              </button>
+            )
+          })}
+        </div>
+      )}
     </div>
   )
 }
