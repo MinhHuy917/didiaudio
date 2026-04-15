@@ -1,4 +1,5 @@
 import { type Metadata } from 'next'
+import { buildLocaleAlternates } from '@/lib/seo'
 
 import AboutSection from '@/components/AboutSection'
 import { FAQ, FAQSchema } from '@/components/FAQ'
@@ -52,6 +53,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://www.didi-audio.com',
+    languages: buildLocaleAlternates('/'),
   },
 }
 

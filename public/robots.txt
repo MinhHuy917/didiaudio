@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://didi-audio.com
+Host: https://www.didi-audio.com
 
 # Sitemaps
-Sitemap: https://didi-audio.com/sitemap.xml
+Sitemap: https://www.didi-audio.com/sitemap.xml
