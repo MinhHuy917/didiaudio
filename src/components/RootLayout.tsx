@@ -4,6 +4,9 @@ import clsx from 'clsx'
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
+import LocaleSuggestion from '@/components/LocaleSuggestion'
+import { localeFromPath, withLocalePrefix } from '@/lib/i18n'
 import { createContext, useEffect, useId, useRef, useState } from 'react'
 
 import { Container, ContainerV2 } from '@/components/Container'
@@ -57,11 +60,14 @@ function Header({
   icon?: React.ComponentType<React.ComponentPropsWithoutRef<'svg'>>
   invert?: boolean
 }) {
+  const pathname = usePathname() || '/'
+  const locale = localeFromPath(pathname)
+
   return (
     <header className="w-full">
       <Container>
         <div className="flex items-center justify-between gap-4 py-4">
-          <Link href="/" aria-label="ĐiĐi Audio" className="flex items-center gap-3 group">
+          <Link href={withLocalePrefix(locale, '/')} aria-label="ĐiĐi Audio" className="flex items-center gap-3 group">
             <div className="relative h-10 w-10 overflow-hidden rounded-full border border-white/10 bg-white/5 shadow-md backdrop-blur-sm transition-all group-hover:border-cyan-500/50 sm:h-12 sm:w-12">
               <Image
                 src={logo}
@@ -79,12 +85,14 @@ function Header({
           </Link>
 
           <div className="hidden items-center gap-2 lg:flex">
-            <NavigationItem href="/#products">Bảng giá</NavigationItem>
-            <NavigationItem href="/#blog">Blog</NavigationItem>
+            <NavigationItem href={withLocalePrefix(locale, '/#products')}>Bảng giá</NavigationItem>
+            <NavigationItem href={withLocalePrefix(locale, '/#blog')}>Blog</NavigationItem>
             <NavigationItem href="tel:0339197917" className="bg-audio-neonOrange border-audio-neonOrange text-white hover:text-white">
               0339 197 917
             </NavigationItem>
           </div>
+
+          <LanguageSwitcher />
 
           <button
             ref={toggleRef}
@@ -109,6 +117,9 @@ function Header({
 }
 
 function NavigationRow({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname() || '/'
+  const locale = localeFromPath(pathname)
+
   return (
     <div className="even:mt-px sm:bg-audio-light/20">
       <Container>
@@ -119,6 +130,9 @@ function NavigationRow({ children }: { children: React.ReactNode }) {
 }
 
 function NavigationRowV2({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname() || '/'
+  const locale = localeFromPath(pathname)
+
   return (
     <div className="even:mt-px rounded-lg">
       <ContainerV2 className='px-0 rounded-lg'>
@@ -141,6 +155,9 @@ function NavigationItem({
   className?: any
   style?: any
 }) {
+  const pathname = usePathname() || '/'
+  const locale = localeFromPath(pathname)
+
   return (
     <Link
       href={href}
@@ -171,6 +188,9 @@ function NavigationItemV2({
   className?: any
   style?: any
 }) {
+  const pathname = usePathname() || '/'
+  const locale = localeFromPath(pathname)
+
   return (
     <Link
       href={href}
@@ -391,6 +411,8 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           className="relative isolate flex w-full flex-col"
         >
           <main className="w-full flex-auto">{children}</main>
+
+          <LocaleSuggestion />
 
           <Footer />
         </motion.div>
