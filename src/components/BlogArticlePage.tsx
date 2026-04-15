@@ -80,7 +80,7 @@ export default function BlogArticlePage({ slug, title, description, content, ima
       : null
 
   return (
-    <article className="relative min-h-screen overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black text-white" itemScope itemType="https://schema.org/Article">
+    <article className="relative min-h-screen overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black pt-24 text-white sm:pt-28" itemScope itemType="https://schema.org/Article">
       <div className="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full bg-cyan-500/20 blur-3xl" />
       <div className="pointer-events-none absolute -right-20 bottom-20 h-80 w-80 rounded-full bg-purple-500/20 blur-3xl" />
 
@@ -99,7 +99,7 @@ export default function BlogArticlePage({ slug, title, description, content, ima
         />
       ) : null}
 
-      <header className="relative z-10 mx-auto max-w-6xl px-4 pb-6 pt-8 sm:px-6 sm:pb-8 sm:pt-14 lg:px-8">
+      <header className="relative z-10 mx-auto max-w-6xl px-4 pb-6 pt-4 sm:px-6 sm:pb-8 sm:pt-6 lg:px-8">
         <div className="mb-5 flex flex-wrap items-center gap-2 text-xs text-gray-300 sm:text-sm" aria-label="Breadcrumb">
           <Link
             href="/"
