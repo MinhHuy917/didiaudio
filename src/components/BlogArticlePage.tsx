@@ -13,6 +13,11 @@ type Props = {
 }
 
 export default function BlogArticlePage({ slug, title, description, content, image, date, faqs = [] }: Props) {
+  const normalizedContent = content.replace(
+    /<p>\s*<strong>\s*Meta description:\s*<\/strong>[\s\S]*?<\/p>/i,
+    '',
+  )
+
   const articleUrl = `https://www.didi-audio.com/${slug}`
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -171,8 +176,13 @@ export default function BlogArticlePage({ slug, title, description, content, ima
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8">
         <div className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl sm:p-8 lg:p-10">
-          <div className="prose prose-invert prose-base max-w-none sm:prose-lg prose-headings:font-black prose-headings:text-white prose-a:text-cyan-300 hover:prose-a:text-cyan-200 prose-strong:text-white prose-li:marker:text-cyan-300" itemProp="articleBody">
-            <div dangerouslySetInnerHTML={{ __html: content }} />
+          <div className="mx-auto max-w-4xl">
+            <div
+              className="prose prose-invert prose-base max-w-none sm:prose-lg prose-p:leading-8 prose-p:text-gray-200 prose-headings:scroll-mt-28 prose-headings:font-black prose-headings:text-white prose-strong:font-extrabold prose-strong:text-white prose-a:font-semibold prose-a:text-cyan-300 hover:prose-a:text-cyan-200 prose-li:my-1 prose-li:text-gray-200 prose-li:marker:text-cyan-300 [&>*+*]:mt-5 [&_h2]:mt-12 [&_h2]:border-l-4 [&_h2]:border-cyan-400/70 [&_h2]:pl-4 [&_h2]:text-2xl [&_h2]:text-cyan-100 [&_h3]:mt-8 [&_h3]:text-xl [&_h3]:text-purple-100 [&_blockquote]:rounded-2xl [&_blockquote]:border-cyan-400/40 [&_blockquote]:bg-cyan-500/5 [&_blockquote]:px-5 [&_blockquote]:py-4 [&_blockquote]:text-cyan-50 [&_table]:block [&_table]:w-full [&_table]:overflow-x-auto [&_table]:rounded-2xl [&_table]:border [&_table]:border-white/10 [&_table]:bg-black/20 [&_thead]:bg-white/5 [&_th]:whitespace-nowrap [&_th]:px-4 [&_th]:py-3 [&_th]:text-left [&_th]:text-sm [&_th]:font-bold [&_th]:text-cyan-100 [&_td]:min-w-[140px] [&_td]:border-t [&_td]:border-white/10 [&_td]:px-4 [&_td]:py-3 [&_td]:align-top [&_td]:text-sm [&_td]:text-gray-200"
+              itemProp="articleBody"
+            >
+              <div dangerouslySetInnerHTML={{ __html: normalizedContent }} />
+            </div>
           </div>
         </div>
       </div>
