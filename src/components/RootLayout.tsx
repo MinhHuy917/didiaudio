@@ -61,7 +61,7 @@ function Header({
   return (
     <header className="w-full">
       <Container>
-        <div className="flex items-center justify-between gap-4 py-4">
+        <div className="flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-black/35 px-3 py-3 backdrop-blur-xl sm:gap-4 sm:px-4 sm:py-4">
           <Link href="/" aria-label="ĐiĐi Audio" className="flex items-center gap-3 group">
             <div className="relative h-10 w-10 overflow-hidden rounded-full border border-white/10 bg-white/5 shadow-md backdrop-blur-sm transition-all group-hover:border-cyan-500/50 sm:h-12 sm:w-12">
               <Image
@@ -100,7 +100,7 @@ function Header({
             aria-label={expanded ? 'Đóng menu' : 'Mở menu'}
             onClick={onToggle}
             className={clsx(
-              'inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors',
+              'inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors shadow-lg',
               invert
                 ? 'border-cyan-500/40 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20'
                 : 'border-white/20 bg-white/10 text-white hover:border-cyan-500/50 hover:text-cyan-300',
@@ -192,14 +192,14 @@ function NavigationItemV2({
 
 export function Navigation() {
   return (
-    <nav className="mt-6">
+    <nav className="mt-3 sm:mt-6">
       <Container>
-        <ul className="flex flex-wrap gap-3">
-          <li><NavigationItem href="#about">Về chúng tôi</NavigationItem></li>
-          <li><NavigationItem href="#products">Sản phẩm</NavigationItem></li>
-          <li><NavigationItem href="#usecases">Ứng dụng</NavigationItem></li>
-          <li><NavigationItem href="#faq">Câu hỏi</NavigationItem></li>
-          <li><NavigationItem href="tel:0339197917" className="bg-audio-neonOrange border-audio-neonOrange text-white hover:text-white">Gọi ngay</NavigationItem></li>
+        <ul className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-3">
+          <li><NavigationItem href="#about" className="w-full justify-center">Về chúng tôi</NavigationItem></li>
+          <li><NavigationItem href="#products" className="w-full justify-center">Sản phẩm</NavigationItem></li>
+          <li><NavigationItem href="#usecases" className="w-full justify-center">Ứng dụng</NavigationItem></li>
+          <li><NavigationItem href="#faq" className="w-full justify-center">Câu hỏi</NavigationItem></li>
+          <li className="col-span-2 sm:col-span-1"><NavigationItem href="tel:0339197917" className="w-full justify-center bg-audio-neonOrange border-audio-neonOrange text-white hover:text-white">Gọi ngay</NavigationItem></li>
         </ul>
       </Container>
     </nav>
@@ -334,7 +334,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
       <>
         <div
-          className="absolute left-0 right-0 top-2 z-40"
+          className="absolute left-0 right-0 top-2 z-40 px-2 sm:px-0"
           aria-hidden={expanded ? 'true' : undefined}
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
           inert={expanded ? '' : undefined}
@@ -364,7 +364,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
         >
           <motion.div layout className="bg-audio-darker">
             <div ref={navRef} className={clsx(
-              'py-10',
+              'px-2 py-6 sm:px-0 sm:py-10',
               expanded ? 'bg-audio-light/50' : 'bg-audio-darker',
             )}>
               <Header

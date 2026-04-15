@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { articles } from '@/data/blog'
-import { Music, Play, Calendar, ArrowLeft, ArrowRight } from 'lucide-react'
+import { Music, Play, Calendar, ArrowLeft, ArrowRight, Sparkles } from 'lucide-react'
 
 const ITEMS_PER_PAGE = 6
 
@@ -44,54 +44,63 @@ export default function BlogCamTrai() {
   }
 
   return (
-    <section id="blog" className="bg-gradient-to-b from-black via-gray-900 to-black text-white" aria-labelledby="blog-heading">
-      {/* Hero Banner */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-10 sm:pt-16 sm:pb-14">
-        <div className="flex flex-col gap-6 sm:gap-8 lg:flex-row lg:items-center lg:justify-between">
-          <div className="space-y-4 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30">
-              <Music className="w-4 h-4 text-cyan-400" />
-              <span className="text-xs sm:text-sm font-semibold text-cyan-200">Blog • Mẹo thuê loa & trải nghiệm</span>
+    <section
+      id="blog"
+      className="relative overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black text-white"
+      aria-labelledby="blog-heading"
+    >
+      <div className="pointer-events-none absolute -left-20 top-20 h-64 w-64 rounded-full bg-cyan-500/20 blur-3xl" />
+      <div className="pointer-events-none absolute -right-20 bottom-20 h-72 w-72 rounded-full bg-purple-500/20 blur-3xl" />
+
+      <div className="mx-auto max-w-7xl px-4 pb-12 pt-10 sm:px-6 sm:pb-14 sm:pt-16 lg:px-8">
+        <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-xl sm:p-8">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div className="space-y-4 max-w-3xl">
+              <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-2">
+                <Sparkles className="h-4 w-4 text-cyan-300" />
+                <span className="text-xs font-semibold text-cyan-100 sm:text-sm">Blog cao cấp • Mẹo thuê loa thực chiến</span>
+              </div>
+              <h2 id="blog-heading" className="text-2xl font-black leading-tight sm:text-4xl lg:text-5xl">
+                <span className="bg-gradient-to-r from-cyan-300 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Blog âm thanh xịn xò,
+                </span>{' '}
+                <span className="text-white">đọc là áp dụng được ngay</span>
+              </h2>
+              <p className="max-w-2xl text-sm leading-relaxed text-gray-300 sm:text-base sm:leading-7">
+                Tổng hợp các bài hướng dẫn dễ hiểu cho người mới: chọn loa đúng nhu cầu, setup nhanh trong 10 phút, tối ưu karaoke ngoài trời và tránh lỗi hú mic.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {['Chọn loa', 'Setup nhanh', 'Karaoke', 'Dã ngoại', 'Party'].map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-gray-200 sm:text-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-            <h2 id="blog-heading" className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Kinh nghiệm âm thanh & sự kiện
-              </span>
-            </h2>
-            <p className="text-gray-300 text-base sm:text-lg max-w-2xl">
-              Tips chọn loa, setup karaoke, đến các mẹo tổ chức tiệc ngoài trời tại Đà Nẵng. Tất cả gói gọn cho bạn thuê loa nhanh, nhẹ, chuẩn.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {['Chọn loa', 'Setup nhanh', 'Karaoke', 'Dã ngoại', 'Party'].map((tag) => (
-                <span
-                  key={tag}
-                  className="px-3 py-1 rounded-full text-xs sm:text-sm bg-white/5 border border-white/10 text-gray-200"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+
+            <Link
+              href="/#products"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-500/30 transition-all hover:scale-[1.02] hover:shadow-cyan-500/50 sm:text-base"
+            >
+              <Play className="h-4 w-4" />
+              Thuê loa ngay
+            </Link>
           </div>
-          <Link
-            href="/#products"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 font-semibold text-white hover:shadow-lg hover:shadow-cyan-500/40 transition-all"
-          >
-            <Play className="w-4 h-4" />
-            Thuê loa ngay
-          </Link>
         </div>
       </div>
 
-      {/* Articles */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
+        <div className="grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {currentArticles.map((article) => (
             <Link
               key={article.slug}
               href={`/${article.slug}`}
-              className="group rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300"
+              className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/60 hover:shadow-2xl hover:shadow-cyan-500/10"
             >
-              <div className="relative h-56 sm:h-64 w-full overflow-hidden">
+              <div className="relative h-52 w-full overflow-hidden sm:h-60">
                 <Image
                   src={article.image}
                   alt={article.title}
@@ -100,90 +109,90 @@ export default function BlogCamTrai() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 z-10 space-y-2">
-                  <div className="flex items-center gap-2 text-xs text-gray-200">
-                    <Calendar className="w-4 h-4 text-cyan-300" />
+                  <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-2.5 py-1 text-xs text-gray-200">
+                    <Calendar className="h-3.5 w-3.5 text-cyan-300" />
                     <span>{new Date(article.date).toLocaleDateString('vi-VN')}</span>
                   </div>
-                  <h2 className="text-lg sm:text-xl font-bold text-white drop-shadow-lg leading-snug line-clamp-2">
+                  <h3 className="line-clamp-2 text-base font-bold leading-snug text-white drop-shadow-lg sm:text-lg">
                     {article.title}
-                  </h2>
+                  </h3>
                 </div>
               </div>
-              <div className="p-6 space-y-4">
-                <p className="text-sm text-gray-300 leading-relaxed line-clamp-3">
-                  {article.description}
-                </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400">
-                  Đọc tiếp
-                  <ArrowRight className="w-4 h-4" />
+
+              <div className="space-y-3 p-5">
+                <p className="line-clamp-3 text-sm leading-relaxed text-gray-300">{article.description}</p>
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-300">
+                  Đọc bài này
+                  <ArrowRight className="h-4 w-4" />
                 </span>
               </div>
             </Link>
           ))}
         </div>
 
-        {/* Pagination */}
         {totalPages > 1 && (
-          <div className="mt-12 flex flex-col items-center gap-4">
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => handlePageChange(currentPage - 1)}
-                disabled={currentPage === 1}
-                className={`px-4 py-2 rounded-xl font-semibold inline-flex items-center gap-2 transition-colors ${
-                  currentPage === 1
-                    ? 'bg-white/5 text-gray-500 cursor-not-allowed border border-white/10'
-                    : 'bg-white/5 text-white border border-white/10 hover:border-cyan-500/50'
-                }`}
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Trước
-              </button>
+          <div className="mt-10 flex flex-col items-center gap-4">
+            <div className="w-full max-w-xl rounded-2xl border border-white/10 bg-white/5 p-3 sm:p-4">
+              <div className="flex items-center justify-between gap-2">
+                <button
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className={`inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold transition-colors sm:px-4 ${
+                    currentPage === 1
+                      ? 'cursor-not-allowed border border-white/10 bg-white/5 text-gray-500'
+                      : 'border border-white/15 bg-white/10 text-white hover:border-cyan-500/50'
+                  }`}
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                  Trước
+                </button>
 
-              <div className="flex items-center gap-1">
-                {getPageNumbers().map((page, index) => {
-                  if (page === '...') {
+                <div className="flex items-center gap-1 overflow-x-auto">
+                  {getPageNumbers().map((page, index) => {
+                    if (page === '...') {
+                      return (
+                        <span key={`ellipsis-${index}`} className="px-1.5 text-sm text-gray-500">
+                          ...
+                        </span>
+                      )
+                    }
+
+                    const pageNum = page as number
                     return (
-                      <span key={`ellipsis-${index}`} className="px-2 text-gray-500">
-                        ...
-                      </span>
+                      <button
+                        key={pageNum}
+                        onClick={() => handlePageChange(pageNum)}
+                        className={`min-w-[38px] rounded-lg px-2.5 py-2 text-sm font-semibold transition-colors ${
+                          currentPage === pageNum
+                            ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
+                            : 'border border-white/10 bg-white/5 text-white hover:border-cyan-500/50'
+                        }`}
+                      >
+                        {pageNum}
+                      </button>
                     )
-                  }
+                  })}
+                </div>
 
-                  const pageNum = page as number
-                  return (
-                    <button
-                      key={pageNum}
-                      onClick={() => handlePageChange(pageNum)}
-                      className={`min-w-[40px] px-3 py-2 rounded-xl font-semibold transition-colors ${
-                        currentPage === pageNum
-                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
-                          : 'bg-white/5 text-white border border-white/10 hover:border-cyan-500/50'
-                      }`}
-                    >
-                      {pageNum}
-                    </button>
-                  )
-                })}
+                <button
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className={`inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold transition-colors sm:px-4 ${
+                    currentPage === totalPages
+                      ? 'cursor-not-allowed border border-white/10 bg-white/5 text-gray-500'
+                      : 'border border-white/15 bg-white/10 text-white hover:border-cyan-500/50'
+                  }`}
+                >
+                  Sau
+                  <ArrowRight className="h-4 w-4" />
+                </button>
               </div>
-
-              <button
-                onClick={() => handlePageChange(currentPage + 1)}
-                disabled={currentPage === totalPages}
-                className={`px-4 py-2 rounded-xl font-semibold inline-flex items-center gap-2 transition-colors ${
-                  currentPage === totalPages
-                    ? 'bg-white/5 text-gray-500 cursor-not-allowed border border-white/10'
-                    : 'bg-white/5 text-white border border-white/10 hover:border-cyan-500/50'
-                }`}
-              >
-                Sau
-                <ArrowRight className="w-4 h-4" />
-              </button>
             </div>
 
             <p className="text-sm text-gray-400">
-              Trang {currentPage} / {totalPages} ({articles.length} bài viết)
+              Trang {currentPage} / {totalPages} • {articles.length} bài viết
             </p>
           </div>
         )}
