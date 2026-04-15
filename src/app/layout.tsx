@@ -78,9 +78,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <head>
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-CJQJY8V1EV"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
-      <Script id="google-analytics" strategy="afterInteractive">
+      <Script id="google-analytics" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -88,26 +88,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           gtag('config', 'G-CJQJY8V1EV');
         `}
       </Script>
-
-      <Script id="google-translate-init" strategy="afterInteractive">
-        {`
-          window.googleTranslateElementInit = function () {
-            new window.google.translate.TranslateElement(
-              {
-                pageLanguage: 'vi',
-                includedLanguages: 'en,ko,ru,zh-CN,zh-TW,th,hi,ja,ms,vi',
-                autoDisplay: false,
-              },
-              'google_translate_element',
-            );
-          };
-        `}
-      </Script>
-      <Script
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-        strategy="afterInteractive"
-      />
-      <Script id="organization-schema" type="application/ld+json" strategy="afterInteractive">
+      <Script id="organization-schema" type="application/ld+json">
         {JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'LocalBusiness',
@@ -135,4 +116,3 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   
   )
 }
-
