@@ -88,6 +88,25 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           gtag('config', 'G-CJQJY8V1EV');
         `}
       </Script>
+
+      <Script id="google-translate-init" strategy="afterInteractive">
+        {`
+          window.googleTranslateElementInit = function () {
+            new window.google.translate.TranslateElement(
+              {
+                pageLanguage: 'vi',
+                includedLanguages: 'en,ko,ru,vi',
+                autoDisplay: false,
+              },
+              'google_translate_element',
+            );
+          };
+        `}
+      </Script>
+      <Script
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        strategy="afterInteractive"
+      />
       <Script id="organization-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify({
           '@context': 'https://schema.org',
@@ -109,6 +128,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     </head>
   
     <body className="flex min-h-full flex-col bg-audio-darker">
+      <div id="google_translate_element" className="hidden" />
       <RootLayout>{children}</RootLayout>
     </body>
   </html>

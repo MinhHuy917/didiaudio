@@ -17,6 +17,7 @@ import bg1 from '/src/images/bg1.png'
 import bg4 from '/src/images/bg4.png'
 import bg6 from '/src/images/bg6.png'
 import bgAbout from '/src/images/bgAbout.png'
+import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 
 
 const RootLayoutContext = createContext<{
@@ -84,6 +85,11 @@ function Header({
             <NavigationItem href="tel:0339197917" className="bg-audio-neonOrange border-audio-neonOrange text-white hover:text-white">
               0339 197 917
             </NavigationItem>
+            <LanguageSwitcher />
+          </div>
+
+          <div className="lg:hidden">
+            <LanguageSwitcher />
           </div>
 
           <button
