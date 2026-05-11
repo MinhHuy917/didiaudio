@@ -13,9 +13,9 @@ import UseCaseSection from '@/components/UseCaseSection'
 import BlogCamTrai from '@/components/BlogCamTrai'
 
 export const metadata: Metadata = {
-  title: 'Cho Thuê Loa Kéo Đà Nẵng | Loa Kéo JBL Chính Hãng Giá Rẻ - ĐiĐi Audio',
+  title: 'Cho Thuê Loa Kéo Đà Nẵng | cho thuê loa kẹo kéo đà nẵng | thuê loa kẹo kéo đà nẵng  ',
   description:
-    'Cho thuê loa kéo JBL chính hãng tại Đà Nẵng. Giao nhanh 30-60 phút, setup miễn phí, hỗ trợ 24/7. Phù hợp du lịch, cắm trại, sinh nhật, team building. Giá từ 50k/ngày.',
+    'Cho thuê loa JBL chính hãng tại Đà Nẵng. Giao nhanh 30-60 phút, setup miễn phí, hỗ trợ 24/7. Phù hợp du lịch, cắm trại, sinh nhật, team building. Giá từ 50k/ngày.',
   keywords: [
     'cho thuê loa kéo đà nẵng',
     'thuê loa kéo đà nẵng',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     'cho thuê loa bluetooth đà nẵng',
   ],
   openGraph: {
-    title: 'Cho Thuê Loa Kéo Đà Nẵng | Loa Kéo JBL Chính Hãng Giá Rẻ',
+    title: 'Cho Thuê Loa Kéo Đà Nẵng | | cho thuê loa kẹo kéo đà nẵng | thuê loa kẹo kéo đà nẵng',
     description:
       'Cho thuê loa kéo JBL chính hãng tại Đà Nẵng. Giao nhanh 30-60 phút, setup miễn phí, hỗ trợ 24/7. Phù hợp du lịch, cắm trại, sinh nhật, team building.',
     url: 'https://www.didi-audio.com',

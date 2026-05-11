@@ -11,7 +11,6 @@ const navigation = [
     title: "Liên Hệ",
     links: [
       { title: "Phone: 0339197917", href: "tel:0339197917" },
-      { title: "Zalo: 0339197917", href: "https://zalo.me/0339197917" },
       { title: "Messenger", href: "//m.me/chothueloakeokeodanang" },
     ],
   },
