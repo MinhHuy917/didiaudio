@@ -60,6 +60,20 @@ export const metadata: Metadata = {
     images: ['https://www.didi-audio.com/og-image.jpg'],
   },
   metadataBase: new URL('https://www.didi-audio.com'),
+  alternates: {
+    canonical: 'https://www.didi-audio.com',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
 }
 
 
@@ -79,9 +93,47 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           gtag('config', 'G-CJQJY8V1EV');
         `}
       </Script>
+
+      <Script id="google-translate-init" strategy="afterInteractive">
+        {`
+          window.googleTranslateElementInit = function () {
+            new window.google.translate.TranslateElement(
+              {
+                pageLanguage: 'vi',
+                includedLanguages: 'en,ko,ru,zh-CN,zh-TW,th,hi,ja,ms,vi',
+                autoDisplay: false,
+              },
+              'google_translate_element',
+            );
+          };
+        `}
+      </Script>
+      <Script
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        strategy="afterInteractive"
+      />
+      <Script id="organization-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'LocalBusiness',
+          name: 'ĐiĐi Audio',
+          url: 'https://www.didi-audio.com',
+          image: 'https://www.didi-audio.com/og-image.jpg',
+          telephone: '0339197917',
+          areaServed: 'Đà Nẵng',
+          priceRange: '50.000đ - 1.600.000đ',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Đà Nẵng',
+            addressCountry: 'VN',
+          },
+        })}
+      </Script>
+
     </head>
   
     <body className="flex min-h-full flex-col bg-audio-darker">
+      <div id="google_translate_element" className="hidden" />
       <RootLayout>{children}</RootLayout>
     </body>
   </html>
