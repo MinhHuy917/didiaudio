@@ -147,7 +147,7 @@ const ProductList: React.FC = () => {
 
           <div className="space-y-6 text-white">
             <div>
-              <h3 className="text-lg font-bold text-white mb-3">1. Đặt cọc & hợp đồng</h3>
+              <h3 className="text-lg font-bold text-white mb-3">1. Thủ tục thuê loa</h3>
               <ul className="list-disc pl-5 space-y-2 leading-relaxed text-sm sm:text-base text-gray-300">
                 <li>
                   Khách vui lòng{" "}

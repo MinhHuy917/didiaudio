@@ -317,14 +317,19 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           <h2 className="text-lg sm:text-xl lg:text-2xl font-black text-white mb-3 sm:mb-4 lg:mb-6">Chính sách thuê loa</h2>
 
           <div className="space-y-3 sm:space-y-4 text-white">
-            <div>
-              <h3 className="text-base sm:text-lg font-bold text-white mb-2">1. Đặt cọc & hợp đồng</h3>
-              <ul className="list-disc pl-4 sm:pl-5 space-y-1.5 sm:space-y-2 leading-relaxed text-sm sm:text-base">
-                <li className="break-words overflow-wrap-anywhere">
-                  Cọc bằng <span className="font-semibold text-audio-electricBlue">CCCD hoặc GPLX</span> và kèm hợp đồng thuê loa.
+          <div>
+              <h3 className="text-lg font-bold text-white mb-3">1. Thủ tục thuê loa</h3>
+              <ul className="list-disc pl-5 space-y-2 leading-relaxed text-sm sm:text-base text-gray-300">
+                <li>
+                  Khách vui lòng{" "}
+                  <span className="font-semibold text-cyan-400">
+                    xuất trình CCCD gốc hoặc VNeID định danh mức 2
+                  </span>{" "}
+                  để shop chụp ảnh xác minh thông tin khi nhận đồ. Không chấp nhận ảnh CCCD
+                  chụp sẵn trong điện thoại hoặc ảnh gửi qua tin nhắn.
                 </li>
-                <li className="break-words overflow-wrap-anywhere">
-                  Thanh toán <span className="font-semibold text-audio-electricBlue">tiền thuê + phí ship (nếu có)</span> trước khi bàn giao loa.
+                <li>
+                  Thanh toán <span className="font-semibold text-cyan-400">tiền thuê + phí ship (nếu có)</span> trước khi nhận loa.
                 </li>
               </ul>
             </div>
