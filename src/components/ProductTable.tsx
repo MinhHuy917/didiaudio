@@ -103,8 +103,8 @@ const ProductList: React.FC = () => {
           </p>
         </motion.div>
 
-  
-      
+
+
 
         {/* Product Grid */}
         {filteredProducts.length > 0 ? (
@@ -150,10 +150,15 @@ const ProductList: React.FC = () => {
               <h3 className="text-lg font-bold text-white mb-3">1. Đặt cọc & hợp đồng</h3>
               <ul className="list-disc pl-5 space-y-2 leading-relaxed text-sm sm:text-base text-gray-300">
                 <li>
-                  Cọc bằng <span className="font-semibold text-cyan-400">CCCD hoặc GPLX</span> và kèm hợp đồng thuê loa.
+                  Khách vui lòng{" "}
+                  <span className="font-semibold text-cyan-400">
+                    xuất trình CCCD gốc hoặc VNeID định danh mức 2
+                  </span>{" "}
+                  để shop chụp ảnh xác minh thông tin khi nhận đồ. Không chấp nhận ảnh CCCD
+                  chụp sẵn trong điện thoại hoặc ảnh gửi qua tin nhắn.
                 </li>
                 <li>
-                  Thanh toán <span className="font-semibold text-cyan-400">tiền thuê + phí ship (nếu có)</span> trước khi bàn giao loa.
+                  Thanh toán <span className="font-semibold text-cyan-400">tiền thuê + phí ship (nếu có)</span> trước khi nhận loa.
                 </li>
               </ul>
             </div>
@@ -161,7 +166,7 @@ const ProductList: React.FC = () => {
             <div>
               <h3 className="text-lg font-bold text-white mb-3">2. Thời gian thuê</h3>
               <p className="leading-relaxed text-sm sm:text-base text-gray-300">
-                Thời gian thuê được tính theo ngày (24 giờ) kể từ thời điểm nhận loa; từ ngày thuê thứ hai trở đi, mỗi ngày tiếp theo được áp dụng mức phí bằng 50% giá thuê ngày đầu.
+                Thời gian thuê được tính theo ngày (24 giờ) kể từ thời điểm nhận loa, từ ngày thuê thứ hai trở đi, mỗi ngày tiếp theo được áp dụng mức phí bằng 50% giá thuê ngày đầu.
               </p>
             </div>
 

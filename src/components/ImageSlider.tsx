@@ -18,7 +18,7 @@ const images = [
 
 export default function ImageSlider() {
   return (
-    <div className="w-full px-4 mt-2">
+    <div className="w-full px-4 mt-24">
       <Swiper
         modules={[Autoplay, Pagination]}
         autoplay={{ delay: 4000 }}
@@ -26,7 +26,7 @@ export default function ImageSlider() {
         pagination={{ clickable: true }}
         spaceBetween={20}
         slidesPerView={1}
-        className="rounded-3xl overflow-hidden border border-audio-electricBlue/20 shadow-2xl shadow-audio-electricBlue/10"
+        className="rounded-3xl overflow-hidden border-2 border-audio-electricBlue/40 shadow-[0_0_20px_rgba(0,210,255,0.15)] shadow-audio-electricBlue/20"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>

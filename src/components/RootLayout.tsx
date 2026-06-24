@@ -106,7 +106,9 @@ function Header({
                 : 'border-white/20 bg-white/10 text-white hover:border-cyan-500/50 hover:text-cyan-300',
             )}
           >
-            <Icon className="h-5 w-5" />
+            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 text-white fill-current">
+  <path d="M2 6h20v2H2zM2 16h20v2H2z" />
+</svg>
           </button>
         </div>
       </Container>

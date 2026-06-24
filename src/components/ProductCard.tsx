@@ -126,24 +126,18 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
             </Link>
 
             {/* CTA Buttons */}
-            <div className="flex gap-3">
-              <Link
-                href="tel:0339197917"
-                className="flex-1 group/btn relative px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl text-white font-bold text-sm hover:shadow-lg hover:shadow-cyan-500/50 transition-all overflow-hidden text-center"
-              >
-                <span className="relative z-10 flex items-center justify-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  Thuê Ngay
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover/btn:opacity-100 transition-opacity" />
-              </Link>
-              <Link
-                href={`/products/${product.id}`}
-                className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white font-semibold text-sm hover:bg-white/10 hover:border-cyan-500/50 transition-all"
-              >
-                Chi tiết
-              </Link>
-            </div>
+            <div className="flex justify-center w-full mt-6">
+  <Link
+    href={`/products/${product.id}`}
+    className="group relative inline-flex items-center justify-center px-12 py-3 font-bold text-white transition-all duration-300 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 rounded-2xl hover:scale-105 hover:shadow-[0_0_25px_rgba(6,182,212,0.5)] active:scale-95 overflow-hidden"
+  >
+    {/* Hiệu ứng tia sáng chạy qua khi hover */}
+    <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></span>
+    
+    <span className="relative">Xem chi tiết</span>
+  </Link>
+</div>
+
           </div>
 
           {/* Hover Glow Effect */}
