@@ -342,8 +342,6 @@ const rawArticles: Article[] = [
         <tbody>
           <tr><td>JBL Encore 2</td><td>100W</td><td>290k</td><td>175k</td></tr>
           <tr><td>JBL Stage 320</td><td>240W</td><td>490k</td><td>275k</td></tr>
-          <tr><td>JBL 720</td><td>800W</td><td>1.200k</td><td>600k</td></tr>
-          <tr><td>JBL Ultimate</td><td>3 đường tiếng</td><td>1.600k</td><td>800k</td></tr>
         </tbody>
       </table>
       <p>Giá gồm: 2 micro UHF, dây AUX, hướng dẫn nhanh, hỗ trợ 24/7. Giao 30–60 phút nội thành.</p>
