@@ -10,10 +10,11 @@ import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { TagList, TagListItem } from '@/components/TagList'
-import imgAbout1 from '@/images/about/imgAbout1.png'
-import imgAbout3 from '@/images/about/imgAbout2.jpg'
-import imgAbout2 from '@/images/about/imgAbout3.jpg'
 
+// Giữ nguyên các import ảnh của bạn
+import imgAbout1 from '/src/images/loajblpartyboxstage320/0.png'
+import imgAbout2 from '/src/images/loajblpartyboxencore2/0.png'
+import imgAbout3 from '/src/images/loajblpartyboxstage320/2.png'
 
 function Section({
   title,
@@ -39,10 +40,10 @@ function Section({
         <div className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first">
           <FadeIn>
             <div
-              className="font-display text-base font-semibold before:text-neutral-300 before:content-['/_'] after:text-neutral-950 after:content-[counter(section,decimal-leading-zero)]"
+              className="font-display text-base font-semibold  before:content-['/_'] text-white after:content-[counter(section,decimal-leading-zero)]"
               aria-hidden="true"
             />
-            <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
+            <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-white sm:text-4xl">
               {title}
             </h2>
             <div className="mt-6">{children}</div>
@@ -55,27 +56,27 @@ function Section({
 
 function Discover() {
   return (
-    <Section title="Khởi nguồn" image={{ src: imgAbout1 }}>
-      <div className="space-y-6 text-base text-neutral-600">
+    <Section title="Khởi nguồn đam mê âm thanh" image={{ src: imgAbout1 }}>
+      <div className="space-y-6 text-base text-white">
         <p>
-          Có những ngày cuối tuần, chỉ cần rời thành phố một đoạn, dựng tạm chiếc lều bên suối mát hay dưới tán cây rừng, ta đã thấy lòng nhẹ tênh. Nhưng không phải ai cũng có đủ đồ nghề để bắt đầu.
+          Trong mỗi cuộc vui tại Đà Nẵng, từ những buổi picnic trên bán đảo Sơn Trà đến những bữa tiệc BBQ bên bờ biển Mỹ Khê, âm nhạc luôn là sợi dây gắn kết mọi người. Tuy nhiên, việc sở hữu và bảo trì một dàn âm thanh chất lượng không phải lúc nào cũng thuận tiện.
         </p>
         <p>
-          ĐiĐi Audio được sinh ra từ chính sự thiếu thốn nhỏ ấy – và cả mong muốn sẻ chia. Chúng tôi cho thuê những món đồ cần thiết để bạn không cần sắm sửa vội vàng: từ lều trại, bếp nướng đến đèn pin và túi ngủ.
+          <strong>ĐiĐi Audio</strong> ra đời từ mong muốn mang lại giải pháp giải trí di động hoàn hảo. Chúng tôi thấu hiểu rằng khách hàng cần một dịch vụ <em>thuê loa kéo Đà Nẵng</em> nhanh chóng, thiết bị phải luôn trong tình trạng tốt nhất để cuộc vui không bị gián đoạn.
         </p>
         <p>
-          Chúng tôi tin rằng việc chuẩn bị cho một chuyến đi nên là phần thú vị, không phải là trở ngại. Và bạn xứng đáng có những khoảnh khắc thật đẹp với thiên nhiên, một cách gọn gàng và chỉn chu nhất.
+          Chúng tôi tin rằng âm nhạc chất lượng không nên là một sự xa xỉ. Chỉ với một cuộc gọi, bạn sẽ có ngay dàn âm thanh chuyên nghiệp để cháy hết mình cùng bạn bè và người thân.
         </p>
       </div>
 
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Bao gồm trong giai đoạn này
+      <h3 className="mt-12 font-display text-base font-semibold text-white">
+        Triết lý dịch vụ của chúng tôi
       </h3>
       <TagList className="mt-4">
-        <TagListItem>Lắng nghe nhu cầu thực tế</TagListItem>
-        <TagListItem>Chọn lọc thiết bị dễ sử dụng</TagListItem>
-        <TagListItem>Kiểm định độ an toàn và bền bỉ</TagListItem>
-        <TagListItem>Tập trung vào trải nghiệm tối giản</TagListItem>
+        <TagListItem>Âm thanh trung thực, sống động</TagListItem>
+        <TagListItem>Thiết bị đời mới, hoạt động ổn định</TagListItem>
+        <TagListItem>Kết nối Bluetooth 5.0 nhanh chóng</TagListItem>
+        <TagListItem>Hỗ trợ kỹ thuật tận tâm 24/7</TagListItem>
       </TagList>
     </Section>
   )
@@ -83,58 +84,39 @@ function Discover() {
 
 function Build() {
   return (
-    <Section title="Dịch vụ cho thuê thiết bị" image={{ src: imgAbout2, shape: 1 }}>
-      <div className="space-y-6 text-base text-neutral-600">
+    <Section title="Hệ thống loa kéo chuyên nghiệp" image={{ src: imgAbout2, shape: 1 }}>
+      <div className="space-y-6 text-base text-white">
         <p>
-          Từ một chiếc lều 2 người đến một bộ bàn ghế nhỏ gọn, từ bếp nướng than thơm lừng đến đèn lều nhẹ dịu trong đêm – tất cả đều có sẵn tại ĐiĐi Audio.
+          Tại ĐiĐi Audio, chúng tôi cung cấp đa dạng các dòng <strong>loa kéo cho thuê tại Đà Nẵng</strong>, từ những mẫu loa cầm tay nhỏ gọn cho hội thảo đến những dàn loa công suất lớn phục vụ tiệc cưới, sinh nhật hay sự kiện ngoài trời.
         </p>
         <p>
-          Chúng tôi chuẩn bị sẵn sàng từng món đồ: sạch sẽ, đầy đủ phụ kiện, dễ sử dụng. Mỗi khách hàng khi nhận thiết bị đều cảm thấy như có người bạn thân đã lo chu toàn trước.
+          Mỗi bộ thiết bị bao gồm đầy đủ 2 micro không dây cao cấp, sạc pin dự phòng và dây kết nối cần thiết. Chúng tôi ưu tiên lựa chọn các thương hiệu âm thanh danh tiếng để đảm bảo độ vang, độ ấm và khả năng chống hú tuyệt vời.
         </p>
         <p>
-          Chúng tôi không chạy theo số lượng. Chúng tôi chọn sự chỉn chu. Vì một đêm ngoài trời không nên bắt đầu bằng việc thiếu dây buộc hay quên bếp gas. 
+          Sự chỉn chu thể hiện ở việc chúng tôi luôn sạc đầy pin và kiểm tra chất lượng âm thanh kỹ lưỡng trước khi bàn giao cho khách hàng. Với ĐiĐi Audio, chất lượng thiết bị là danh dự của chúng tôi.
         </p>
       </div>
 
-      <Blockquote
-        author={{ name: 'Hoàng Nhật', role: 'Khách thuê thiết bị' }}
-        className="mt-12"
-      >
-        Thiết bị đầy đủ, sạch sẽ, chất lượng tốt. Nhờ ĐiĐi Audio mà nhóm mình có buổi cắm trại đầu tiên rất suôn sẻ và vui vẻ!
-      </Blockquote>
     </Section>
   )
 }
 
 function Deliver() {
   return (
-    <Section title="Vận hành & chăm sóc" image={{ src: imgAbout3, shape: 2 }}>
-      <div className="space-y-6 text-base text-neutral-600">
+    <Section title="Giao hàng siêu tốc & Hỗ trợ tận nơi" image={{ src: imgAbout3, shape: 2 }}>
+      <div className="space-y-6 text-base text-white">
         <p>
-          Khi bạn đặt thuê, chúng tôi không chỉ giao đồ. Chúng tôi chuẩn bị kỹ, kiểm tra từng bộ phận nhỏ, gấp gọn và sẵn sàng để bạn chỉ việc dùng.
+          Hiểu được tính chất của các bữa tiệc, dịch vụ <strong>cho thuê loa di động Đà Nẵng</strong> của chúng tôi cam kết giao hàng siêu tốc chỉ trong 30 phút. Dù bạn ở Hải Châu, Thanh Khê, Sơn Trà hay bất cứ đâu tại Đà Nẵng, âm nhạc sẽ luôn đến đúng lúc.
         </p>
         <p>
-          Sau mỗi lần sử dụng, đồ được vệ sinh sạch sẽ, phơi khô và kiểm tra kỹ lưỡng trước khi quay lại kho. Với chúng tôi, mỗi món đồ đều có một câu chuyện, một lần phục vụ – và cần được chăm chút đúng nghĩa.
+          Sau mỗi lần khách sử dụng, toàn bộ thiết bị và đặc biệt là micro đều được vệ sinh, khử khuẩn sạch sẽ. Đây là tiêu chuẩn bắt buộc tại ĐiĐi Audio để đảm bảo an toàn và trải nghiệm tốt nhất cho người dùng tiếp theo.
         </p>
         <p>
-          Chúng tôi làm việc như thể chính mình sẽ là người dùng tiếp theo. Sự chuyên nghiệp không nằm ở quy mô, mà ở từng chi tiết nhỏ được thực hiện nghiêm túc mỗi ngày.
+          Đội ngũ kỹ thuật của chúng tôi luôn sẵn sàng hỗ trợ bạn setup, hướng dẫn chỉnh âm thanh sao cho phù hợp nhất với không gian và giọng hát của từng người.
         </p>
       </div>
 
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Bao gồm trong giai đoạn này
-      </h3>
-      <List className="mt-8">
-        <ListItem title="Thiết bị đã sẵn sàng">
-          Không chỉ sạch, mà còn gọn – được chuẩn bị như thể hôm nay chính bạn sẽ lên đường.
-        </ListItem>
-        <ListItem title="Chăm sóc sau sử dụng">
-          Không bỏ sót chi tiết nào – từ dây buộc, ống bơm, lưới chống muỗi… mọi món đều được kiểm tra kỹ lưỡng.
-        </ListItem>
-        <ListItem title="Hỗ trợ nhẹ nhàng, không gấp gáp">
-          Chúng tôi luôn lắng nghe và trả lời tận tình – vì việc thuê thiết bị cũng cần sự tử tế.
-        </ListItem>
-      </List>
+     
     </Section>
   )
 }
@@ -151,32 +133,32 @@ function Values() {
 
       <SectionIntro
         eyebrow="Giá trị cốt lõi"
-        title="Dụng cụ chỉ là phương tiện – cảm xúc mới là đích đến"
+        title="Âm thanh dẫn lối cảm xúc, gắn kết mọi niềm vui"
       >
-        <p>
-          Tại ĐiĐi Audio, mỗi thiết bị được chọn lựa không chỉ vì chức năng, mà còn vì cảm giác nó mang lại. Một đêm ngủ ngon trong lều ấm, một bữa tối bên bếp than đỏ lửa – tất cả bắt đầu từ sự chuẩn bị chỉnh chu.
+        <p className='text-white'>
+          Tại ĐiĐi Audio, chúng tôi không chỉ cho thuê thiết bị, chúng tôi mang đến giải pháp kết nối mọi người thông qua âm nhạc đỉnh cao tại Đà Nẵng.
         </p>
       </SectionIntro>
 
-      <Container className="mt-24">
+      <Container className="mt-24 text-white">
         <GridList>
-          <GridListItem title="Thật thà">
-            Nói đúng khả năng, cho thuê đúng chất lượng – không hứa hẹn thừa.
+          <GridListItem title="Uy tín hàng đầu">
+            Cung cấp dịch vụ thuê loa kéo chuyên nghiệp nhất tại khu vực Đà Nẵng.
           </GridListItem>
-          <GridListItem title="Chỉn chu">
-            Mỗi món đồ đều được gấp gọn, kiểm tra trước và sau khi thuê.
+          <GridListItem title="Thiết bị hiện đại">
+            Luôn cập nhật những mẫu loa kéo, loa bluetooth đời mới nhất thị trường.
           </GridListItem>
-          <GridListItem title="Thân thiện">
-            Hỗ trợ nhẹ nhàng, không thúc ép, luôn sẵn sàng lắng nghe.
+          <GridListItem title="Phục vụ tận tâm">
+            Hỗ trợ khách hàng nhiệt tình từ khâu chọn loa đến khi kết thúc buổi tiệc.
           </GridListItem>
-          <GridListItem title="Chuyên tâm">
-            Làm nghề bằng sự chăm chút – vì chúng tôi cũng yêu thiên nhiên như bạn.
+          <GridListItem title="Giá thuê cạnh tranh">
+            Mức giá thuê loa kéo tốt nhất Đà Nẵng đi kèm chất lượng vượt trội.
           </GridListItem>
-          <GridListItem title="Linh hoạt">
-            Tùy vào nhu cầu, không áp đặt combo, không ràng buộc.
+          <GridListItem title="Linh hoạt thời gian">
+            Cho thuê theo giờ hoặc theo ngày tùy theo nhu cầu thực tế của khách hàng.
           </GridListItem>
-          <GridListItem title="Trách nhiệm">
-            Giao đúng giờ, đúng món, đúng như cam kết – để bạn yên tâm mà đi.
+          <GridListItem title="Kết nối nhanh chóng">
+            Thủ tục thuê đơn giản, nhanh gọn, hỗ trợ ship loa tận nơi 24/7.
           </GridListItem>
         </GridList>
       </Container>
@@ -185,16 +167,16 @@ function Values() {
 }
 
 export const metadata: Metadata = {
-  title: 'Cho thuê lều và thiết bị cắm trại tại Đà Nẵng | ĐiĐi Audio',
-  description: 'Thuê lều trại, bàn ghế, bếp nướng, túi ngủ, đèn pin, thảm, tăng và hàng chục thiết bị dã ngoại khác tại ĐiĐi Audio. Thiết bị chỉn chu – phục vụ tận tâm – cảm xúc trọn vẹn.',
+  title: 'Thuê loa kéo Đà Nẵng giá rẻ - Cho thuê loa âm thanh chuyên nghiệp',
+  description: 'Dịch vụ cho thuê loa kéo Đà Nẵng uy tín, giao nhanh 30 phút. Loa kéo công suất lớn, âm thanh cực hay, micro không dây cao cấp. Thuê loa bluetooth, loa sự kiện giá tốt tại ĐiĐi Audio.',
 }
 
 export default function Aboutdidiaudio() {
   return (
     <>
-      <PageIntro eyebrow="Giới thiệu dịch vụ" title="ĐiĐi Audio – Thiết bị chỉn chu, cảm xúc trọn vẹn">
-        <p>
-        Mỗi chuyến đi bắt đầu bằng một hành trang gọn gàng. Với ĐiĐi Audio, bạn không chỉ thuê lều và thiết bị cắm trại tại Đà Nẵng – bạn mang theo sự an tâm, cảm hứng và tinh thần sẵn sàng cho những trải nghiệm giữa thiên nhiên.
+      <PageIntro eyebrow="Giới thiệu về ĐiĐi Audio" title="Dịch vụ cho thuê loa kéo Đà Nẵng uy tín, chuyên nghiệp">
+        <p className='text-white'>
+          Chào mừng bạn đến với ĐiĐi Audio – đơn vị hàng đầu chuyên cung cấp giải pháp <strong>cho thuê loa âm thanh tại Đà Nẵng</strong>. Chúng tôi đồng hành cùng bạn trong mọi sự kiện, từ party gia đình, picnic ngoài trời đến các buổi hội thảo chuyên nghiệp với thiết bị hiện đại và dịch vụ tận tâm.
         </p>
       </PageIntro>
 

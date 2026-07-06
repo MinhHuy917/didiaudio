@@ -4,6 +4,12 @@ import loajblpartyboxencore22 from '/src/images/loajblpartyboxencore2/2.png'
 import loajblpartyboxencore23 from '/src/images/loajblpartyboxencore2/3.png'
 import loajblpartyboxencore24 from '/src/images/loajblpartyboxencore2/4.png'
 import loajblpartyboxencore25 from '/src/images/loajblpartyboxencore2/5.png'
+import loaencore2anh1 from '/src/images/loaencore2/1.jpg'
+import loaencore2anh2 from '/src/images/loaencore2/2.jpg'
+import loaencore2anh3 from '/src/images/loaencore2/3.jpg'
+import loaencore2anh4 from '/src/images/loaencore2/4.jpg'
+import loaencore2anh5 from '/src/images/loaencore2/5.jpg'
+import loaencore2anh6 from '/src/images/loaencore2/6.jpg'
 
 import loajblpartyboxstage320 from '/src/images/loajblpartyboxstage320/0.png'
 import loajblpartyboxstage3201 from '/src/images/loajblpartyboxstage320/1.png'
@@ -11,6 +17,13 @@ import loajblpartyboxstage3202 from '/src/images/loajblpartyboxstage320/2.png'
 import loajblpartyboxstage3203 from '/src/images/loajblpartyboxstage320/3.png'
 import loajblpartyboxstage3204 from '/src/images/loajblpartyboxstage320/4.png'
 import loajblpartyboxstage3205 from '/src/images/loajblpartyboxstage320/5.png'
+import loa320anh1 from '/src/images/loa320/1.jpg'
+import loa320anh2 from '/src/images/loa320/2.jpg'
+import loa320anh3 from '/src/images/loa320/3.jpg'
+import loa320anh4 from '/src/images/loa320/4.jpg'
+import loa320anh5 from '/src/images/loa320/5.jpg'
+import loa320anh6 from '/src/images/loa320/6.jpg'
+import loa320anh7 from '/src/images/loa320/7.jpg'
 
 
 
@@ -26,6 +39,12 @@ export const products = [
     image3: loajblpartyboxencore23.src,
     image4: loajblpartyboxencore24.src,
     image5: loajblpartyboxencore25.src,
+    image6: loaencore2anh1.src,
+    image7: loaencore2anh2.src,
+    image8: loaencore2anh3.src,
+    image9: loaencore2anh4.src,
+    image10: loaencore2anh5.src,
+    image11: loaencore2anh6.src,
     originalPrice: 350,
     price: 290,
     quantity: 1,
@@ -45,6 +64,13 @@ export const products = [
   image3: loajblpartyboxstage3203.src,
   image4: loajblpartyboxstage3204.src,
   image5: loajblpartyboxstage3205.src,
+  image6: loa320anh1.src,
+  image7: loa320anh2.src,
+  image8: loa320anh3.src,
+  image9: loa320anh4.src,
+  image10: loa320anh5.src,
+  image11: loa320anh6.src,
+  image12: loa320anh7.src,
   originalPrice: 600,
   price: 490,
   quantity: 1,

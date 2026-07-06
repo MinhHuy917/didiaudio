@@ -1,75 +1,91 @@
 'use client'
 
 import clsx from 'clsx'
-import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
+import { motion, MotionConfig, useReducedMotion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { createContext, useEffect, useId, useRef, useState } from 'react'
 
-import { Container, ContainerV2 } from '@/components/Container'
+import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
-import { GridPattern } from '@/components/GridPattern'
-import { Offices } from '@/components/Offices'
-import { SocialMedia } from '@/components/SocialMedia'
 import logo from '@/images/logo.png'
 import Image from 'next/image'
-import bg1 from '/src/images/bg1.png'
-import bg4 from '/src/images/bg4.png'
-import bg6 from '/src/images/bg6.png'
-import bgAbout from '/src/images/bgAbout.png'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
-
 
 const RootLayoutContext = createContext<{
   logoHovered: boolean
   setLogoHovered: React.Dispatch<React.SetStateAction<boolean>>
 } | null>(null)
 
-function XIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+// --- Components nhỏ hỗ trợ UI ---
+
+function NavLink({ href, children, external = false }: { href: string, children: React.ReactNode, external?: boolean }) {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path d="m5.636 4.223 14.142 14.142-1.414 1.414L4.222 5.637z" />
-      <path d="M4.222 18.363 18.364 4.22l1.414 1.414L5.636 19.777z" />
-    </svg>
+    <Link
+      href={href}
+      target={external ? '_blank' : undefined}
+      className="relative group px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:text-white"
+    >
+      <span>{children}</span>
+      <span className="absolute inset-x-3 -bottom-px h-px bg-gradient-to-r from-cyan-500/0 via-cyan-500/70 to-cyan-500/0 opacity-0 transition-opacity group-hover:opacity-100" />
+    </Link>
   )
 }
 
-function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function ContactButton({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path d="M2 6h20v2H2zM2 16h20v2H2z" />
-    </svg>
+    <Link
+      href="tel:0339197917"
+      className={clsx(
+        "group relative inline-flex items-center justify-center rounded-full bg-cyan-600 px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-cyan-500 hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] active:scale-95",
+        className
+      )}
+    >
+      <span className="relative flex items-center gap-2">
+        <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
+          <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" />
+        </svg>
+        0339 197 917
+      </span>
+    </Link>
   )
 }
 
+// --- Header Chính ---
 
 function Header({
-  panelId,
   expanded,
   onToggle,
-  toggleRef,
-  icon: Icon = MenuIcon,
-  invert = false,
+  isScrolled
 }: {
-  panelId: string
   expanded: boolean
   onToggle: () => void
-  toggleRef: React.RefObject<HTMLButtonElement>
-  icon?: React.ComponentType<React.ComponentPropsWithoutRef<'svg'>>
-  invert?: boolean
+  isScrolled: boolean
 }) {
   return (
-    <header className="w-full">
+    <header 
+      className={clsx(
+        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+        isScrolled ? "py-2" : "py-4 sm:py-6"
+      )}
+    >
       <Container>
-        <div className="flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-black/35 px-3 py-3 backdrop-blur-xl sm:gap-4 sm:px-4 sm:py-4">
-          <Link href="/" aria-label="ĐiĐi Audio" className="flex items-center gap-3 group">
-            <div className="relative h-10 w-10 overflow-hidden rounded-full border border-white/10 bg-white/5 shadow-md backdrop-blur-sm transition-all group-hover:border-cyan-500/50 sm:h-12 sm:w-12">
+        <div 
+          className={clsx(
+            "relative flex items-center justify-between gap-4 rounded-2xl border transition-all duration-300 px-4 py-2",
+            isScrolled 
+              ? "border-white/10 bg-black/60 backdrop-blur-xl shadow-2xl" 
+              : "border-transparent bg-transparent"
+          )}
+        >
+          {/* Logo Section */}
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative h-10 w-10 overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-transform group-hover:scale-105 sm:h-11 sm:w-11">
               <Image
                 src={logo}
-                alt="ĐiĐi Audio Logo"
+                alt="ĐiĐi Audio"
                 fill
-                className="rounded-full object-cover p-1"
-                sizes="48px"
+                className="object-cover p-1.5"
                 priority
               />
             </div>
@@ -79,341 +95,151 @@ function Header({
             </div>
           </Link>
 
+          {/* Desktop Navigation */}
           <div className="hidden items-center gap-2 lg:flex">
-            <NavigationItem href="/#products">Bảng giá</NavigationItem>
-            <NavigationItem href="/#blog">Blog</NavigationItem>
-            <NavigationItem href="tel:0339197917" className="bg-audio-neonOrange border-audio-neonOrange text-white hover:text-white">
-              0339 197 917
-            </NavigationItem>
+            <nav className="flex items-center gap-1 mr-4">
+              <NavLink href="/#products">Bảng giá</NavLink>
+              <NavLink href="/#usecases">Dịch vụ</NavLink>
+              <NavLink href="/about-didiaudio">Về chúng tôi</NavLink>
+              <NavLink href="/#blog">Blog</NavLink>
+            </nav>
+            <div className="h-6 w-px bg-white/10 mx-2" />
             <LanguageSwitcher />
+            <ContactButton className="ml-2" />
           </div>
 
-          <div className="lg:hidden">
+          {/* Mobile Right Section */}
+          <div className="flex items-center gap-3 lg:hidden">
             <LanguageSwitcher />
+            <button
+              onClick={onToggle}
+              className="relative flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/10"
+              aria-label="Toggle Menu"
+            >
+              <div className="relative h-5 w-5">
+                <span className={clsx(
+                  "absolute block h-0.5 w-5 bg-current transition-all duration-300",
+                  expanded ? "top-2 rotate-45" : "top-1"
+                )} />
+                <span className={clsx(
+                  "absolute block h-0.5 w-5 bg-current transition-all duration-300",
+                  expanded ? "top-2 -rotate-45" : "top-3"
+                )} />
+              </div>
+            </button>
           </div>
-
-          <button
-            ref={toggleRef}
-            type="button"
-            aria-expanded={expanded}
-            aria-controls={panelId}
-            aria-label={expanded ? 'Đóng menu' : 'Mở menu'}
-            onClick={onToggle}
-            className={clsx(
-              'inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors shadow-lg',
-              invert
-                ? 'border-cyan-500/40 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20'
-                : 'border-white/20 bg-white/10 text-white hover:border-cyan-500/50 hover:text-cyan-300',
-            )}
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 text-white fill-current">
-  <path d="M2 6h20v2H2zM2 16h20v2H2z" />
-</svg>
-          </button>
         </div>
       </Container>
     </header>
   )
 }
 
-function NavigationRow({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="even:mt-px sm:bg-audio-light/20">
-      <Container>
-        <div className="grid grid-cols-1 sm:grid-cols-2">{children}</div>
-      </Container>
-    </div>
-  )
-}
+// --- Mobile Menu Overlay ---
 
-function NavigationRowV2({ children }: { children: React.ReactNode }) {
+function MobileMenu({ expanded, onClose }: { expanded: boolean, onClose: () => void }) {
   return (
-    <div className="even:mt-px rounded-lg">
-      <ContainerV2 className='px-0 rounded-lg'>
-        <div className="grid grid-cols-1 sm:grid-cols-1 rounded-lg">{children}</div>
-      </ContainerV2>
-    </div>
-  )
-}
-
-function NavigationItem({
-  href,
-  children,
-  target,
-  className,
-  style,
-}: {
-  href: string
-  children: React.ReactNode
-  target?: string
-  className?: any
-  style?: any
-}) {
-  return (
-    <Link
-      href={href}
-      target={target}
-      className={clsx(
-        'font-[system-ui] inline-flex items-center gap-2 px-4 py-2 rounded-full',
-        'bg-audio-light/30 backdrop-blur-sm border border-audio-electricBlue/20 text-white',
-        'hover:border-audio-electricBlue/40 hover:text-audio-electricBlue transition-colors',
-        className,
+    <AnimatePresence>
+      {expanded && (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          className="fixed inset-0 z-40 lg:hidden"
+        >
+          {/* Backdrop */}
+          <div className="absolute inset-0 bg-black/90 backdrop-blur-2xl" onClick={onClose} />
+          
+          <nav className="relative flex flex-col justify-center h-full px-6 space-y-1">
+  {[
+    { label: 'Trang chủ', href: '/' },
+    { label: 'Bảng giá thuê', href: '/#products' },
+    { label: 'Dịch vụ loa kéo', href: '/dich-vu-cho-thue-loa-keo-keo-da-nang' },
+    { label: 'Cộng đồng âm thanh', href: 'https://facebook.com/...' },
+    { label: 'Về ĐiĐi Audio', href: '/about-didiaudio' },
+  ].map((item, idx) => (
+    <motion.div
+      key={item.href}
+      initial={{ opacity: 0, x: -10 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: idx * 0.05 }}
+    >
+      <Link 
+        href={item.href} 
+        onClick={onClose}
+        // Thêm padding, bo góc nhẹ và hiệu ứng khi nhấn (active:scale)
+        className="block py-4 px-4 text-2xl font-bold text-white/90 hover:text-cyan-400 active:bg-white/5 active:scale-[0.98] rounded-2xl transition-all"
+      >
+        {item.label}
+      </Link>
+    </motion.div>
+  ))}
+  
+  <motion.div 
+    initial={{ opacity: 0 }} 
+    animate={{ opacity: 1 }} 
+    transition={{ delay: 0.4 }}
+    className="pt-8 mt-4 border-t border-white/10 px-4"
+  >
+    <ContactButton className="w-full py-4 text-lg font-bold rounded-xl bg-cyan-500 text-white shadow-lg shadow-cyan-500/20" />
+  </motion.div>
+</nav>
+        </motion.div>
       )}
-      style={style}
-    >
-      {children}
-    </Link>
+    </AnimatePresence>
   )
 }
-
-function NavigationItemV2({
-  href,
-  children,
-  target,
-  className,
-  style,
-}: {
-  href: string
-  children: React.ReactNode
-  target?: string
-  className?: any
-  style?: any
-}) {
-  return (
-    <Link
-      href={href}
-      target={target}
-      className={`font-[system-ui] group relative isolate -mx-6 bg-audio-light/30 backdrop-blur-sm px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-20 sm:pl-6 sm:odd:pr-16 rounded-lg sm:even:mt-0 sm:even:border-l sm:even:border-audio-electricBlue/20 sm:even:pl-16 text-white hover:text-audio-electricBlue transition-colors ${className}`}
-      style={style}
-    >
-      {children}
-      <span className='absolute inset-y-0 -z-10 w-screen bg-audio-light/50 opacity-0 group-hover:opacity-100 transition group-odd:right-0 group-even:left-0' />
-    </Link>
-  )
-}
-
-export function Navigation() {
-  return (
-    <nav className="mt-3 sm:mt-6">
-      <Container>
-        <ul className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-3">
-          <li><NavigationItem href="#about" className="w-full justify-center">Về chúng tôi</NavigationItem></li>
-          <li><NavigationItem href="#products" className="w-full justify-center">Sản phẩm</NavigationItem></li>
-          <li><NavigationItem href="#usecases" className="w-full justify-center">Ứng dụng</NavigationItem></li>
-          <li><NavigationItem href="#faq" className="w-full justify-center">Câu hỏi</NavigationItem></li>
-          <li className="col-span-2 sm:col-span-1"><NavigationItem href="tel:0339197917" className="w-full justify-center bg-audio-neonOrange border-audio-neonOrange text-white hover:text-white">Gọi ngay</NavigationItem></li>
-        </ul>
-      </Container>
-    </nav>
-  )
-}
-
-export function NavigationV2() {
-  return (
-    <nav className="mt-2 space-y-2 font-display text-white text-xl lg:text-4xl font-black tracking-tight">
-
-      <NavigationRowV2>
-        <NavigationItemV2
-          href="/about-didiaudio"
-          className="relative sm:bg-none md:bg-none"
-        >
-          <div
-            className="absolute inset-0 "
-            style={{
-              backgroundImage: `url(${bgAbout.src})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              borderRadius: '8px',
-              zIndex: -1,
-            }}
-          />
-          <span className="relative z-10 text-white">ĐiĐi Audio Story</span>
-        </NavigationItemV2>
-      </NavigationRowV2>
-
-      <NavigationRowV2>
-
-        <NavigationItemV2
-          href="https://www.facebook.com/groups/695950148016396"
-          target='_blank'
-          className="relative sm:bg-none md:bg-none"
-        >
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `url(${bg6.src})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              borderRadius: '8px',
-              zIndex: -1,
-            }}
-          />
-          <span className="relative z-10 text-white">  Cộng đồng âm thanh Đà Nẵng</span>
-        </NavigationItemV2>
-
-      </NavigationRowV2>
-
-
-      <NavigationRowV2>
-        <NavigationItemV2
-          href="/dich-vu-cho-thue-loa-keo-keo-da-nang"
-          className="relative sm:bg-none md:bg-none"
-        >
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `url(${bg1.src})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              borderRadius: '8px',
-              zIndex: -1,
-            }}
-          />
-          <span className="relative z-10 text-white">Dịch vụ cho thuê loa kéo Đà Nẵng</span>
-        </NavigationItemV2>
-
-
-      </NavigationRowV2>
-
-
-
-      <NavigationRowV2>
-        <NavigationItemV2
-          href="/thue-loa-keo-keo-da-nang"
-          className="relative sm:bg-none md:bg-none"
-        >
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `url(${bg4.src})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              borderRadius: '8px',
-              zIndex: -1,
-            }}
-          />
-          <span className="relative z-10 text-white">Thuê loa kéo Đà Nẵng</span>
-        </NavigationItemV2>
-      </NavigationRowV2>
-
-
-
-
-
-
-
-    </nav>
-  )
-}
-
 
 function RootLayoutInner({ children }: { children: React.ReactNode }) {
-  let panelId = useId()
-  let [expanded, setExpanded] = useState(false)
-  let openRef = useRef<React.ElementRef<'button'>>(null)
-  let closeRef = useRef<React.ElementRef<'button'>>(null)
-  let navRef = useRef<React.ElementRef<'div'>>(null)
-  let shouldReduceMotion = useReducedMotion()
+  const [expanded, setExpanded] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const shouldReduceMotion = useReducedMotion()
 
+  // Xử lý scroll để thay đổi header
   useEffect(() => {
-    function onClick(event: MouseEvent) {
-      if (
-        event.target instanceof HTMLElement &&
-        event.target.closest('a')?.href === window.location.href
-      ) {
-        setExpanded(false)
-      }
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
     }
-
-    window.addEventListener('click', onClick)
-
-    return () => {
-      window.removeEventListener('click', onClick)
-    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Đóng menu khi đổi route
+  const pathname = usePathname()
+  useEffect(() => {
+    setExpanded(false)
+  }, [pathname])
+
   return (
-    <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
-      <>
-        <div
-          className="absolute left-0 right-0 top-2 z-40 px-2 sm:px-0"
-          aria-hidden={expanded ? 'true' : undefined}
-          // @ts-ignore (https://github.com/facebook/react/issues/17157)
-          inert={expanded ? '' : undefined}
-        >
-          <Header
-            panelId={panelId}
-            icon={MenuIcon}
-            toggleRef={openRef}
-            expanded={expanded}
-            onToggle={() => {
-              setExpanded((expanded) => !expanded)
-              window.setTimeout(() =>
-                closeRef.current?.focus({ preventScroll: true }),
-              )
-            }}
-          />
-        </div>
+    <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : { type: 'spring', bounce: 0, duration: 0.4 }}>
+      <div className="relative flex min-h-full flex-col bg-audio-darker font-sans antialiased selection:bg-cyan-500/30">
+        
+        <Header 
+          expanded={expanded} 
+          onToggle={() => setExpanded(!expanded)} 
+          isScrolled={isScrolled} 
+        />
 
-        <motion.div
-          layout
-          id={panelId}
-          style={{ height: expanded ? 'auto' : '0.5rem' }}
-          className="relative z-50 overflow-hidden bg-audio-darker"
-          aria-hidden={expanded ? undefined : 'true'}
-          // @ts-ignore (https://github.com/facebook/react/issues/17157)
-          inert={expanded ? undefined : ''}
-        >
-          <motion.div layout className="bg-audio-darker">
-            <div ref={navRef} className={clsx(
-              'px-2 py-6 sm:px-0 sm:py-10',
-              expanded ? 'bg-audio-light/50' : 'bg-audio-darker',
-            )}>
-              <Header
-                invert
-                panelId={panelId}
-                icon={XIcon}
-                toggleRef={closeRef}
-                expanded={expanded}
-                onToggle={() => {
-                  setExpanded((expanded) => !expanded)
-                  window.setTimeout(() =>
-                    openRef.current?.focus({ preventScroll: true }),
-                  )
-                }}
-              />
-            </div>
-            <Navigation />
-            <div className="relative bg-audio-light/30 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-audio-electricBlue/20">
-            </div>
-          </motion.div>
-        </motion.div>
-      </>
+        <MobileMenu 
+          expanded={expanded} 
+          onClose={() => setExpanded(false)} 
+        />
 
-      <motion.div
-        layout
-        className="relative flex flex-auto overflow-hidden bg-audio-darker"
-      >
-        <motion.div
-          layout
-          className="relative isolate flex w-full flex-col"
-        >
-          <main className="w-full flex-auto">{children}</main>
+        <main className="relative flex-auto pt-24 sm:pt-32">
+          {children}
+        </main>
 
-          <Footer />
-        </motion.div>
-      </motion.div>
+        <Footer />
+      </div>
     </MotionConfig>
   )
 }
 
 export function RootLayout({ children }: { children: React.ReactNode }) {
-  let pathname = usePathname()
-  let [logoHovered, setLogoHovered] = useState(false)
+  const [logoHovered, setLogoHovered] = useState(false)
 
   return (
     <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
-      <RootLayoutInner key={pathname}>{children}</RootLayoutInner>
+      <RootLayoutInner>{children}</RootLayoutInner>
     </RootLayoutContext.Provider>
   )
 }

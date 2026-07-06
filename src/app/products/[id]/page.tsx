@@ -19,6 +19,13 @@ type Product = {
   image3?: string
   image4?: string
   image5?: string
+  image6?: string
+  image7?: string
+  image8?: string
+  image9?: string
+  image10?: string
+  image11?: string
+  image12?: string
   originalPrice?: number
   price: number
   quantity: number
@@ -44,6 +51,13 @@ export default function ProductPage({ params }: { params: { id: string } }) {
     product?.image3,
     product?.image4,
     product?.image5,
+    product?.image6,
+    product?.image7,
+    product?.image8,
+    product?.image9,
+    product?.image10,
+    product?.image11,
+    product?.image12,
   ].filter(Boolean) as string[]
 
   if (!mainImage && images.length > 0) {
