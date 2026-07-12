@@ -166,7 +166,7 @@ const ProductList: React.FC = () => {
             <div>
               <h3 className="text-lg font-bold text-white mb-3">2. Thời gian thuê</h3>
               <p className="leading-relaxed text-sm sm:text-base text-gray-300">
-                Thời gian thuê được tính theo ngày (24 giờ) kể từ thời điểm nhận loa, từ ngày thuê thứ hai trở đi, mỗi ngày tiếp theo được áp dụng mức phí bằng 50% giá thuê ngày đầu.
+                Thời gian thuê được tính theo ngày (24 giờ) kể từ thời điểm nhận loa.
               </p>
             </div>
 

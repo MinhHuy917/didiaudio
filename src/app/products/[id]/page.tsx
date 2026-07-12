@@ -351,7 +351,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             <div>
               <h3 className="text-base sm:text-lg font-bold text-white mb-2">2. Thời gian thuê</h3>
               <p className="leading-relaxed text-sm sm:text-base break-words overflow-wrap-anywhere">
-                Thời gian thuê được tính theo ngày (24 giờ) kể từ thời điểm nhận loa; từ ngày thuê thứ hai trở đi, mỗi ngày tiếp theo được áp dụng mức phí bằng 50% giá thuê ngày đầu.
+                Thời gian thuê được tính theo ngày (24 giờ) kể từ thời điểm nhận loa.
               </p>
             </div>
 

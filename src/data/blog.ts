@@ -333,7 +333,7 @@ const rawArticles: Article[] = [
   {
     slug: 'bang-gia-thue-loa-keo-jbl-da-nang-2024',
     title: 'Bảng giá thuê loa kéo JBL Đà Nẵng 2024 (Encore 2, 320, 720, Ultimate)',
-    description: 'Giá thuê theo ngày, giảm 50% từ ngày thứ 2. Giao nhanh 30–60 phút, setup miễn phí.',
+    description: 'Giao nhanh 30–60 phút, setup miễn phí.',
     image: img2.src,
     date: '2024-11-05',
     content: `
