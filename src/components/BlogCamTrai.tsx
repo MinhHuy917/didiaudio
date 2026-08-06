@@ -17,7 +17,6 @@ export default function BlogCamTrai() {
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const getPageNumbers = () => {
