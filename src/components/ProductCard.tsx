@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Battery, Bluetooth, Volume2, Music } from 'lucide-react'
+import { useState } from 'react'
 
 interface ProductCardProps {
   product: {
@@ -13,11 +14,21 @@ interface ProductCardProps {
     image: string
     price: number
     originalPrice?: number
+    [key: string]: any
   }
   index?: number
 }
 
 export default function ProductCard({ product, index = 0 }: ProductCardProps) {
+  const [currentImage, setCurrentImage] = useState(product.image)
+
+  // Extract up to 4 images for the mini gallery (main + 3 additional)
+  const galleryImages = [
+    product.image,
+    product.image1,
+    product.image2,
+    product.image3
+  ].filter(Boolean)
   // Extract key info from catalogue
   const extractPower = (text: string) => {
     const match = text.match(/(\d+)W/)
@@ -50,7 +61,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
         {/* Image Container */}
         <Link href={`/products/${product.id}`} className="block relative h-64 sm:h-72 overflow-hidden bg-black">
           <Image
-            src={product.image}
+            src={currentImage}
             alt={product.name}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -115,6 +126,33 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
               )}
             </div>
           </Link>
+
+          {/* Mini Gallery */}
+          {galleryImages.length > 1 && (
+            <div className="flex gap-2 mb-4">
+              {galleryImages.map((imgSrc, idx) => (
+                <button
+                  key={idx}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    setCurrentImage(imgSrc)
+                  }}
+                  onMouseEnter={() => setCurrentImage(imgSrc)}
+                  className={`relative w-12 h-12 rounded-md overflow-hidden border-2 transition-all ${
+                    currentImage === imgSrc ? 'border-cyan-500 scale-110 z-10' : 'border-transparent hover:border-cyan-500/50'
+                  }`}
+                >
+                  <Image
+                    src={imgSrc}
+                    alt={`${product.name} thumbnail ${idx + 1}`}
+                    fill
+                    sizes="48px"
+                    className="object-cover"
+                  />
+                </button>
+              ))}
+            </div>
+          )}
 
           {/* CTA Button */}
           <Link
