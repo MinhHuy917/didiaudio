@@ -108,7 +108,7 @@ const ProductList: React.FC = () => {
 
         {/* Product Grid */}
         {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch gap-6 sm:gap-8 max-w-5xl mx-auto">
             {filteredProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}
