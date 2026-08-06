@@ -1,0 +1,63 @@
+
+> tailwindui-studio@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.3
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+   automatically enabled Fast Refresh for 1 custom loader
+ ✓ Ready in 3.6s
+ ○ Compiling / ...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+ ✓ Compiled / in 9.9s (1569 modules)
+Warning: Invalid DOM property `stop-color`. Did you mean `stopColor`?
+    at stop
+    at radialGradient
+    at svg
+    at a
+    at LinkComponent (webpack-internal:///(ssr)/./node_modules/next/dist/client/link.js:110:19)
+    at div
+    at div
+    at MenuContact (webpack-internal:///(ssr)/./src/components/MenuContact.tsx:20:82)
+    at Lazy
+    at InnerLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:242:11)
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at NotFoundErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:346:11)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at Lazy
+    at OuterLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:366:11)
+    at Lazy
+    at main
+    at div
+    at MotionConfig (webpack-internal:///(ssr)/./node_modules/framer-motion/dist/es/components/MotionConfig/index.mjs:32:25)
+    at RootLayoutInner (webpack-internal:///(ssr)/./src/components/RootLayout.tsx:409:28)
+    at RootLayout (webpack-internal:///(ssr)/./src/components/RootLayout.tsx:481:23)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:556:13)
+    at Lazy
+    at r1 (/app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:18701)
+    at r1 (/app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:18701)
+    at ServerInsertedHTMLProvider (/app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:24131)
+ GET / 200 in 10879ms
+ GET / 200 in 108ms
