@@ -22,12 +22,21 @@ interface ProductCardProps {
 export default function ProductCard({ product, index = 0 }: ProductCardProps) {
   const [currentImage, setCurrentImage] = useState(product.image)
 
-  // Extract up to 4 images for the mini gallery (main + 3 additional)
+  // Extract all images for the mini gallery (main + up to 12 additional)
   const galleryImages = [
     product.image,
     product.image1,
     product.image2,
-    product.image3
+    product.image3,
+    product.image4,
+    product.image5,
+    product.image6,
+    product.image7,
+    product.image8,
+    product.image9,
+    product.image10,
+    product.image11,
+    product.image12
   ].filter(Boolean)
   // Extract key info from catalogue
   const extractPower = (text: string) => {
@@ -129,7 +138,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
 
           {/* Mini Gallery */}
           {galleryImages.length > 1 && (
-            <div className="flex gap-2 mb-4">
+            <div className="flex flex-wrap gap-2 mb-4">
               {galleryImages.map((imgSrc, idx) => (
                 <button
                   key={idx}
