@@ -6,16 +6,21 @@
   - Local:        http://localhost:3000
 
  ✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
 Browserslist: caniuse-lite is outdated. Please run:
   npx update-browserslist-db@latest
   Why you should do it regularly: https://github.com/browserslist/update-db#readme
    automatically enabled Fast Refresh for 1 custom loader
- ✓ Ready in 3.6s
+ ✓ Ready in 3.5s
  ○ Compiling / ...
 Browserslist: caniuse-lite is outdated. Please run:
   npx update-browserslist-db@latest
   Why you should do it regularly: https://github.com/browserslist/update-db#readme
- ✓ Compiled / in 9.9s (1569 modules)
+ ✓ Compiled / in 9.8s (1569 modules)
 Warning: Invalid DOM property `stop-color`. Did you mean `stopColor`?
     at stop
     at radialGradient
@@ -59,5 +64,419 @@ Warning: Invalid DOM property `stop-color`. Did you mean `stopColor`?
     at r1 (/app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:18701)
     at r1 (/app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:18701)
     at ServerInsertedHTMLProvider (/app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:24131)
- GET / 200 in 10879ms
- GET / 200 in 108ms
+ GET / 200 in 10951ms
+ ✓ Compiled in 1054ms (1543 modules)
+galleryImages length:  12 [
+  '/_next/static/media/0.85c3f05f.png',
+  '/_next/static/media/1.1c47ed59.png',
+  '/_next/static/media/2.8326e25e.png',
+  '/_next/static/media/3.c7a7fe55.png',
+  '/_next/static/media/4.22cf5129.png',
+  '/_next/static/media/5.1a067391.png',
+  '/_next/static/media/1.47733823.jpg',
+  '/_next/static/media/2.8e0fb06f.jpg',
+  '/_next/static/media/3.072961b6.jpg',
+  '/_next/static/media/4.8fab1161.jpg',
+  '/_next/static/media/5.aed554d0.jpg',
+  '/_next/static/media/6.ab045a52.jpg'
+]
+galleryImages length:  13 [
+  '/_next/static/media/0.49068519.png',
+  '/_next/static/media/1.6c1c9e65.png',
+  '/_next/static/media/2.e8293fa4.png',
+  '/_next/static/media/3.4be7442f.png',
+  '/_next/static/media/4.af3fc6e2.png',
+  '/_next/static/media/5.383f8811.png',
+  '/_next/static/media/1.1092756f.jpg',
+  '/_next/static/media/2.220a2e5f.jpg',
+  '/_next/static/media/3.68f2a991.jpg',
+  '/_next/static/media/4.301273c3.jpg',
+  '/_next/static/media/5.17d6cba1.jpg',
+  '/_next/static/media/6.7dbc0ff4.jpg',
+  '/_next/static/media/7.da31b38a.jpg'
+]
+Warning: Invalid DOM property `stop-color`. Did you mean `stopColor`?
+    at stop
+    at radialGradient
+    at svg
+    at a
+    at LinkComponent (webpack-internal:///(ssr)/./node_modules/next/dist/client/link.js:110:19)
+    at div
+    at div
+    at MenuContact (webpack-internal:///(ssr)/./src/components/MenuContact.tsx:20:82)
+    at Lazy
+    at InnerLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:242:11)
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at NotFoundErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:346:11)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at Lazy
+    at OuterLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:366:11)
+    at Lazy
+    at main
+    at div
+    at MotionConfig (webpack-internal:///(ssr)/./node_modules/framer-motion/dist/es/components/MotionConfig/index.mjs:32:25)
+    at RootLayoutInner (webpack-internal:///(ssr)/./src/components/RootLayout.tsx:409:28)
+    at RootLayout (webpack-internal:///(ssr)/./src/components/RootLayout.tsx:481:23)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:556:13)
+    at Lazy
+    at r1 (/app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:18701)
+    at r1 (/app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:18701)
+    at ServerInsertedHTMLProvider (/app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:24131)
+ GET / 200 in 387ms
+galleryImages length:  12 [
+  '/_next/static/media/0.85c3f05f.png',
+  '/_next/static/media/1.1c47ed59.png',
+  '/_next/static/media/2.8326e25e.png',
+  '/_next/static/media/3.c7a7fe55.png',
+  '/_next/static/media/4.22cf5129.png',
+  '/_next/static/media/5.1a067391.png',
+  '/_next/static/media/1.47733823.jpg',
+  '/_next/static/media/2.8e0fb06f.jpg',
+  '/_next/static/media/3.072961b6.jpg',
+  '/_next/static/media/4.8fab1161.jpg',
+  '/_next/static/media/5.aed554d0.jpg',
+  '/_next/static/media/6.ab045a52.jpg'
+]
+galleryImages length:  13 [
+  '/_next/static/media/0.49068519.png',
+  '/_next/static/media/1.6c1c9e65.png',
+  '/_next/static/media/2.e8293fa4.png',
+  '/_next/static/media/3.4be7442f.png',
+  '/_next/static/media/4.af3fc6e2.png',
+  '/_next/static/media/5.383f8811.png',
+  '/_next/static/media/1.1092756f.jpg',
+  '/_next/static/media/2.220a2e5f.jpg',
+  '/_next/static/media/3.68f2a991.jpg',
+  '/_next/static/media/4.301273c3.jpg',
+  '/_next/static/media/5.17d6cba1.jpg',
+  '/_next/static/media/6.7dbc0ff4.jpg',
+  '/_next/static/media/7.da31b38a.jpg'
+]
+ GET / 200 in 133ms
+ ✓ Compiled in 1117ms (1543 modules)
+galleryImages length:  12 [
+  '/_next/static/media/0.85c3f05f.png',
+  '/_next/static/media/1.1c47ed59.png',
+  '/_next/static/media/2.8326e25e.png',
+  '/_next/static/media/3.c7a7fe55.png',
+  '/_next/static/media/4.22cf5129.png',
+  '/_next/static/media/5.1a067391.png',
+  '/_next/static/media/1.47733823.jpg',
+  '/_next/static/media/2.8e0fb06f.jpg',
+  '/_next/static/media/3.072961b6.jpg',
+  '/_next/static/media/4.8fab1161.jpg',
+  '/_next/static/media/5.aed554d0.jpg',
+  '/_next/static/media/6.ab045a52.jpg'
+]
+galleryImages length:  13 [
+  '/_next/static/media/0.49068519.png',
+  '/_next/static/media/1.6c1c9e65.png',
+  '/_next/static/media/2.e8293fa4.png',
+  '/_next/static/media/3.4be7442f.png',
+  '/_next/static/media/4.af3fc6e2.png',
+  '/_next/static/media/5.383f8811.png',
+  '/_next/static/media/1.1092756f.jpg',
+  '/_next/static/media/2.220a2e5f.jpg',
+  '/_next/static/media/3.68f2a991.jpg',
+  '/_next/static/media/4.301273c3.jpg',
+  '/_next/static/media/5.17d6cba1.jpg',
+  '/_next/static/media/6.7dbc0ff4.jpg',
+  '/_next/static/media/7.da31b38a.jpg'
+]
+Warning: Invalid DOM property `stop-color`. Did you mean `stopColor`?
+    at stop
+    at radialGradient
+    at svg
+    at a
+    at LinkComponent (webpack-internal:///(ssr)/./node_modules/next/dist/client/link.js:110:19)
+    at div
+    at div
+    at MenuContact (webpack-internal:///(ssr)/./src/components/MenuContact.tsx:20:82)
+    at Lazy
+    at InnerLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:242:11)
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at NotFoundErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:346:11)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at Lazy
+    at OuterLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:366:11)
+    at Lazy
+    at main
+    at div
+    at MotionConfig (webpack-internal:///(ssr)/./node_modules/framer-motion/dist/es/components/MotionConfig/index.mjs:32:25)
+    at RootLayoutInner (webpack-internal:///(ssr)/./src/components/RootLayout.tsx:409:28)
+    at RootLayout (webpack-internal:///(ssr)/./src/components/RootLayout.tsx:481:23)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:556:13)
+    at Lazy
+    at r1 (/app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:18701)
+    at r1 (/app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:18701)
+    at ServerInsertedHTMLProvider (/app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:24131)
+ GET / 200 in 347ms
+ ✓ Compiled in 722ms (763 modules)
+galleryImages length:  12 [
+  '/_next/static/media/0.85c3f05f.png',
+  '/_next/static/media/1.1c47ed59.png',
+  '/_next/static/media/2.8326e25e.png',
+  '/_next/static/media/3.c7a7fe55.png',
+  '/_next/static/media/4.22cf5129.png',
+  '/_next/static/media/5.1a067391.png',
+  '/_next/static/media/1.47733823.jpg',
+  '/_next/static/media/2.8e0fb06f.jpg',
+  '/_next/static/media/3.072961b6.jpg',
+  '/_next/static/media/4.8fab1161.jpg',
+  '/_next/static/media/5.aed554d0.jpg',
+  '/_next/static/media/6.ab045a52.jpg'
+]
+galleryImages length:  13 [
+  '/_next/static/media/0.49068519.png',
+  '/_next/static/media/1.6c1c9e65.png',
+  '/_next/static/media/2.e8293fa4.png',
+  '/_next/static/media/3.4be7442f.png',
+  '/_next/static/media/4.af3fc6e2.png',
+  '/_next/static/media/5.383f8811.png',
+  '/_next/static/media/1.1092756f.jpg',
+  '/_next/static/media/2.220a2e5f.jpg',
+  '/_next/static/media/3.68f2a991.jpg',
+  '/_next/static/media/4.301273c3.jpg',
+  '/_next/static/media/5.17d6cba1.jpg',
+  '/_next/static/media/6.7dbc0ff4.jpg',
+  '/_next/static/media/7.da31b38a.jpg'
+]
+ GET / 200 in 92ms
+galleryImages length:  12 [
+  '/_next/static/media/0.85c3f05f.png',
+  '/_next/static/media/1.1c47ed59.png',
+  '/_next/static/media/2.8326e25e.png',
+  '/_next/static/media/3.c7a7fe55.png',
+  '/_next/static/media/4.22cf5129.png',
+  '/_next/static/media/5.1a067391.png',
+  '/_next/static/media/1.47733823.jpg',
+  '/_next/static/media/2.8e0fb06f.jpg',
+  '/_next/static/media/3.072961b6.jpg',
+  '/_next/static/media/4.8fab1161.jpg',
+  '/_next/static/media/5.aed554d0.jpg',
+  '/_next/static/media/6.ab045a52.jpg'
+]
+galleryImages length:  13 [
+  '/_next/static/media/0.49068519.png',
+  '/_next/static/media/1.6c1c9e65.png',
+  '/_next/static/media/2.e8293fa4.png',
+  '/_next/static/media/3.4be7442f.png',
+  '/_next/static/media/4.af3fc6e2.png',
+  '/_next/static/media/5.383f8811.png',
+  '/_next/static/media/1.1092756f.jpg',
+  '/_next/static/media/2.220a2e5f.jpg',
+  '/_next/static/media/3.68f2a991.jpg',
+  '/_next/static/media/4.301273c3.jpg',
+  '/_next/static/media/5.17d6cba1.jpg',
+  '/_next/static/media/6.7dbc0ff4.jpg',
+  '/_next/static/media/7.da31b38a.jpg'
+]
+ GET / 200 in 89ms
+galleryImages length:  12 [
+  '/_next/static/media/0.85c3f05f.png',
+  '/_next/static/media/1.1c47ed59.png',
+  '/_next/static/media/2.8326e25e.png',
+  '/_next/static/media/3.c7a7fe55.png',
+  '/_next/static/media/4.22cf5129.png',
+  '/_next/static/media/5.1a067391.png',
+  '/_next/static/media/1.47733823.jpg',
+  '/_next/static/media/2.8e0fb06f.jpg',
+  '/_next/static/media/3.072961b6.jpg',
+  '/_next/static/media/4.8fab1161.jpg',
+  '/_next/static/media/5.aed554d0.jpg',
+  '/_next/static/media/6.ab045a52.jpg'
+]
+galleryImages length:  13 [
+  '/_next/static/media/0.49068519.png',
+  '/_next/static/media/1.6c1c9e65.png',
+  '/_next/static/media/2.e8293fa4.png',
+  '/_next/static/media/3.4be7442f.png',
+  '/_next/static/media/4.af3fc6e2.png',
+  '/_next/static/media/5.383f8811.png',
+  '/_next/static/media/1.1092756f.jpg',
+  '/_next/static/media/2.220a2e5f.jpg',
+  '/_next/static/media/3.68f2a991.jpg',
+  '/_next/static/media/4.301273c3.jpg',
+  '/_next/static/media/5.17d6cba1.jpg',
+  '/_next/static/media/6.7dbc0ff4.jpg',
+  '/_next/static/media/7.da31b38a.jpg'
+]
+ GET / 200 in 99ms
+ ✓ Compiled in 2.7s (1543 modules)
+ ✓ Compiled /_not-found in 386ms (1526 modules)
+ GET / 404 in 695ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 565ms (824 modules)
+Could not find files for /_error in .next/build-manifest.json
+Could not find files for /_error in .next/build-manifest.json
+Could not find files for /_error in .next/build-manifest.json
+Could not find files for /_error in .next/build-manifest.json
+ GET /_next/static/media/logo.7cfccebc.png 404 in 969ms
+ ⨯ The requested resource isn't a valid image for /_next/static/media/logo.7cfccebc.png received text/html; charset=utf-8
+ GET /_next/static/css/app/layout.css?v=1786106330422 404 in 974ms
+ImageError: The requested resource isn't a valid image.
+    at imageOptimizer (/app/node_modules/next/dist/server/image-optimizer.js:637:19)
+    at DevServer.imageOptimizer (/app/node_modules/next/dist/server/next-server.js:651:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async cacheEntry.imageResponseCache.get.incrementalCache (/app/node_modules/next/dist/server/next-server.js:182:65)
+    at async /app/node_modules/next/dist/server/response-cache/index.js:90:36
+    at async /app/node_modules/next/dist/lib/batcher.js:45:32 {
+  statusCode: 400
+}
+ GET /_next/static/chunks/app-pages-internals.js 404 in 1189ms
+ GET /_next/static/chunks/main-app.js?v=1786106330422 404 in 1194ms
+ GET /_next/static/chunks/app/not-found.js 404 in 1189ms
+ GET /_next/static/chunks/app/layout.js 404 in 1191ms
+ GET /_next/static/media/logo.7cfccebc.png 404 in 36ms
+ ⨯ The requested resource isn't a valid image for /_next/static/media/logo.7cfccebc.png received text/html; charset=utf-8
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at loadManifest (/app/node_modules/next/dist/server/load-manifest.js:35:27)
+    at getMaybePagePath (/app/node_modules/next/dist/server/require.js:57:59)
+    at getPagePath (/app/node_modules/next/dist/server/require.js:92:22)
+    at requirePage (/app/node_modules/next/dist/server/require.js:99:22)
+    at /app/node_modules/next/dist/server/load-components.js:98:84
+    at async loadComponentsImpl (/app/node_modules/next/dist/server/load-components.js:98:26)
+    at async DevServer.findPageComponentsImpl (/app/node_modules/next/dist/server/next-server.js:710:36)
+    at async DevServer.findPageComponents (/app/node_modules/next/dist/server/dev/next-dev-server.js:577:20)
+    at async DevServer.renderErrorToResponseImpl (/app/node_modules/next/dist/server/base-server.js:2090:30)
+    at async DevServer.pipeImpl (/app/node_modules/next/dist/server/base-server.js:920:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/next/dist/server/next-server.js:231:21)
+    at async DevServer.handleRequestImpl (/app/node_modules/next/dist/server/base-server.js:816:17)
+    at async /app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/app/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/app/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/app/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/app/node_modules/next/dist/server/lib/start-server.js:141:13)
+   automatically enabled Fast Refresh for 1 custom loader
+ GET / 500 in 2729ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/app/.next/server/app'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/_not-found/page' in /app/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/app/.next/server/app/_not-found/page.js', but to 'Error: Can't resolve '../../../../.next/server/app/_not-found/page' in '/app/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/_not-found/page (expected /app/.next/server/app/_not-found/page.js)
+<w>  at file dependencies /app/node_modules/next/dist/server/require.js
+<w>  at file /app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /app/node_modules/next/dist/server/load-components.js
+<w>  at file /app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /app/node_modules/next/dist/build/utils.js
+<w>  at file /app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /app/node_modules/next/dist/build/webpack/plugins/flight-client-entry-plugin.js
+<w>  at file /app/node_modules/next/dist/build/webpack/plugins/flight-client-entry-plugin.js
+<w>  at file dependencies /app/node_modules/next/dist/build/webpack-config.js
+<w>  at file /app/node_modules/next/dist/build/webpack-config.js
+<w>  at file dependencies /app/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /app/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /app/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/pages/_error' in /app/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/app/.next/server/pages/_error.js', but to 'Error: Can't resolve '../../../../.next/server/pages/_error' in '/app/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/pages/_error (expected /app/.next/server/pages/_error.js)
+<w>  at file dependencies /app/node_modules/next/dist/server/require.js
+<w>  at file /app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /app/node_modules/next/dist/server/load-components.js
+<w>  at file /app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /app/node_modules/next/dist/build/utils.js
+<w>  at file /app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /app/node_modules/next/dist/build/webpack/plugins/flight-client-entry-plugin.js
+<w>  at file /app/node_modules/next/dist/build/webpack/plugins/flight-client-entry-plugin.js
+<w>  at file dependencies /app/node_modules/next/dist/build/webpack-config.js
+<w>  at file /app/node_modules/next/dist/build/webpack-config.js
+<w>  at file dependencies /app/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /app/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /app/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/pages/_app' in /app/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/app/.next/server/pages/_app.js', but to 'Error: Can't resolve '../../../../.next/server/pages/_app' in '/app/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/pages/_app (expected /app/.next/server/pages/_app.js)
+<w>  at file dependencies /app/node_modules/next/dist/server/require.js
+<w>  at file /app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /app/node_modules/next/dist/server/load-components.js
+<w>  at file /app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /app/node_modules/next/dist/build/utils.js
+<w>  at file /app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /app/node_modules/next/dist/build/webpack/plugins/flight-client-entry-plugin.js
+<w>  at file /app/node_modules/next/dist/build/webpack/plugins/flight-client-entry-plugin.js
+<w>  at file dependencies /app/node_modules/next/dist/build/webpack-config.js
+<w>  at file /app/node_modules/next/dist/build/webpack-config.js
+<w>  at file dependencies /app/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /app/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /app/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/pages/_document' in /app/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/app/.next/server/pages/_document.js', but to 'Error: Can't resolve '../../../../.next/server/pages/_document' in '/app/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/pages/_document (expected /app/.next/server/pages/_document.js)
+<w>  at file dependencies /app/node_modules/next/dist/server/require.js
+<w>  at file /app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /app/node_modules/next/dist/server/load-components.js
+<w>  at file /app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /app/node_modules/next/dist/build/utils.js
+<w>  at file /app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /app/node_modules/next/dist/build/webpack/plugins/flight-client-entry-plugin.js
+<w>  at file /app/node_modules/next/dist/build/webpack/plugins/flight-client-entry-plugin.js
+<w>  at file dependencies /app/node_modules/next/dist/build/webpack-config.js
+<w>  at file /app/node_modules/next/dist/build/webpack-config.js
+<w>  at file dependencies /app/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /app/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /app/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/app/.next/server/app'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/pages/_error' in /app/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/app/.next/server/pages/_error.js', but to 'Error: Can't resolve '../../../../.next/server/pages/_error' in '/app/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/pages/_error (expected /app/.next/server/pages/_error.js)
+<w>  at file dependencies /app/node_modules/next/dist/server/require.js
+<w>  at file /app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /app/node_modules/next/dist/server/load-components.js
+<w>  at file /app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /app/node_modules/next/dist/build/utils.js
+<w>  at file /app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/_not-found/page' in /app/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/app/.next/server/app/_not-found/page.js', but to 'Error: Can't resolve '../../../../.next/server/app/_not-found/page' in '/app/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/_not-found/page (expected /app/.next/server/app/_not-found/page.js)
+<w>  at file dependencies /app/node_modules/next/dist/server/require.js
+<w>  at file /app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /app/node_modules/next/dist/server/load-components.js
+<w>  at file /app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /app/node_modules/next/dist/build/utils.js
+<w>  at file /app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/pages/_app' in /app/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/app/.next/server/pages/_app.js', but to 'Error: Can't resolve '../../../../.next/server/pages/_app' in '/app/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/pages/_app (expected /app/.next/server/pages/_app.js)
+<w>  at file dependencies /app/node_modules/next/dist/server/require.js
+<w>  at file /app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /app/node_modules/next/dist/server/load-components.js
+<w>  at file /app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /app/node_modules/next/dist/build/utils.js
+<w>  at file /app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+[?25h

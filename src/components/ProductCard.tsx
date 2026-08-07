@@ -104,7 +104,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
 
         {/* Content Area */}
         <div className="p-6 sm:p-8 flex flex-col flex-1">
-          <Link href={`/products/${product.id}`} className="block flex-1">
+          <Link href={`/products/${product.id}`} className="block mb-auto">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors line-clamp-2">
               {product.name}
             </h3>
