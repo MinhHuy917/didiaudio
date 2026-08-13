@@ -10,6 +10,7 @@ import WhyUs from '@/components/WhyUs'
 import SpecialNoticeBanner from '@/components/SpecialNoticeBanner'
 import UseCaseSection from '@/components/UseCaseSection'
 import BlogCamTrai from '@/components/BlogCamTrai'
+import SecondaryServices from '@/components/SecondaryServices'
 
 export const metadata: Metadata = {
   title: 'Cho Thuê Loa Kéo Đà Nẵng | cho thuê loa kẹo kéo đà nẵng | thuê loa kẹo kéo đà nẵng  ',
@@ -82,6 +83,7 @@ export default async function Home() {
       <WhyUs />
       <BlogCamTrai />
       <Testimonials />
+      <SecondaryServices />
       <FAQ />
       <FAQSchema />
       <MenuContact />
