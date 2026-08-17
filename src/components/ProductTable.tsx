@@ -150,15 +150,17 @@ const ProductList: React.FC = () => {
               <h3 className="text-lg font-bold text-white mb-3">1. Thủ tục thuê loa</h3>
               <ul className="list-disc pl-5 space-y-2 leading-relaxed text-sm sm:text-base text-gray-300">
                 <li>
-                  Khách vui lòng{" "}
                   <span className="font-semibold text-cyan-400">
-                    xuất trình CCCD gốc hoặc VNeID định danh mức 2
+                    Khách xuất trình CCCD gốc hoặc VNeID mức 2
                   </span>{" "}
-                  để shop chụp ảnh xác minh thông tin khi nhận đồ. Không chấp nhận ảnh CCCD
-                  chụp sẵn trong điện thoại hoặc ảnh gửi qua tin nhắn.
+                  để shop xác minh khi nhận loa. Không nhận ảnh CCCD
+                  có sẵn hoặc gửi qua tin nhắn.
                 </li>
                 <li>
-                  Thanh toán <span className="font-semibold text-cyan-400">tiền thuê + phí ship (nếu có)</span> trước khi nhận loa.
+                  Thanh toán: <span className="font-semibold text-cyan-400">Tiền thuê + phí ship (nếu có) + cọc 500.000đ</span> trước khi nhận loa.
+                </li>
+                <li>
+                  Hoàn cọc 500.000đ sau khi trả loa đầy đủ và không có hư hỏng, mất mát.
                 </li>
               </ul>
             </div>
