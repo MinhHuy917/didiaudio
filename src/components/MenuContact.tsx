@@ -78,6 +78,28 @@ export default function MenuContact() {
                     </svg>
             <span>Messenger</span>
           </Link>
+
+          <Link
+            href="https://zalo.me/0909223917"
+            target="_blank"
+            className="flex-1 flex flex-col items-center gap-1 px-4 py-2 bg-gradient-to-r from-[#0068FF] to-[#0091FF] rounded-xl text-white font-semibold text-sm active:scale-95 transition-transform"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-message-circle"
+            >
+              <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+            </svg>
+            <span>Zalo</span>
+          </Link>
       
         </div>
       </div>
@@ -155,6 +177,30 @@ export default function MenuContact() {
                   title="Messenger"
                   subtitle="Chat ngay"
                   className="bg-audio-light/50 border border-audio-electricBlue/30 text-white hover:bg-audio-light transition-colors"
+                />
+              </Link>
+
+              <Link href="https://zalo.me/0909223917" target="_blank">
+                <MenuItem
+                  icon={
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-message-circle text-[#0068FF]"
+                    >
+                      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+                    </svg>
+                  }
+                  title="Zalo"
+                  subtitle="Nhắn tin"
+                  className="bg-audio-light/50 border border-[#0068FF]/30 text-white hover:bg-audio-light transition-colors"
                 />
               </Link>
 

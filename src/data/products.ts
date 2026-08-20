@@ -72,7 +72,7 @@ export const products = [
   image11: loa320anh6.src,
   image12: loa320anh7.src,
   originalPrice: 600,
-  price: 490,
+  price: 390,
   quantity: 1,
   detail1: 'Công suất khủng 240W RMS từ cấu trúc 4 loa (2 Bass 165mm + 2 Tweeter 25mm), tích hợp công nghệ AI Sound Boost giúp tối ưu và chống méo tiếng.',
   detail2: 'Thời lượng pin cực dài lên đến 18 giờ, hỗ trợ sạc nhanh (10 phút sạc cho 2 giờ sử dụng) và khả năng chống nước chuẩn IPX4.',

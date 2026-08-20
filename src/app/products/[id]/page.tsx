@@ -259,6 +259,27 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                   <span className="text-center leading-tight">Messenger</span>
                 </Link>
              
+                <Link
+                  href="https://zalo.me/0909223917"
+                  target="_blank"
+                  className="flex-1 flex flex-col items-center justify-center gap-1 px-2 sm:px-4 py-3 bg-audio-light/50 border border-blue-500/30 rounded-xl text-white font-semibold text-xs sm:text-sm active:scale-95 transition-transform hover:bg-audio-light/70 bg-gradient-to-r from-[#0068FF] to-[#0091FF]"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-message-circle"
+                  >
+                    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+                  </svg>
+                  <span className="text-center leading-tight">Zalo</span>
+                </Link>
               </div>
             </div>
 
@@ -351,7 +372,19 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             </div>
 
             <div>
-              <h3 className="text-base sm:text-lg font-bold text-white mb-2">2. Thời gian thuê</h3>
+              <h3 className="text-base sm:text-lg font-bold text-white mb-2">2. Giao hàng</h3>
+              <div className="space-y-1 text-sm sm:text-base break-words overflow-wrap-anywhere text-gray-300">
+                <p className="font-bold text-cyan-400 uppercase">🚚 FREE SHIP 2 CHIỀU trong bán kính 5km</p>
+                <ul className="list-none space-y-1 pl-4">
+                  <li>- 6–10km: +50.000đ</li>
+                  <li>- 11–15km: +100.000đ</li>
+                  <li>- Trên 16km: báo phí riêng</li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-base sm:text-lg font-bold text-white mb-2">3. Thời gian thuê</h3>
               <p className="leading-relaxed text-sm sm:text-base break-words overflow-wrap-anywhere">
                 Thời gian thuê được tính theo ngày (24 giờ) kể từ thời điểm nhận loa.
               </p>
