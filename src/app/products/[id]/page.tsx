@@ -384,13 +384,6 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             </div>
 
             <div>
-              <h3 className="text-base sm:text-lg font-bold text-white mb-2">3. Thời gian thuê</h3>
-              <p className="leading-relaxed text-sm sm:text-base break-words overflow-wrap-anywhere">
-                Thời gian thuê được tính theo ngày (24 giờ) kể từ thời điểm nhận loa.
-              </p>
-            </div>
-
-            <div>
               <h4 className="text-sm sm:text-base font-bold text-audio-neonOrange mb-2">📌 Đền bù thiệt hại</h4>
               <p className="leading-relaxed text-sm sm:text-base break-words overflow-wrap-anywhere">
                 Nếu thiết bị hư hỏng, shop sẽ tính phí sửa chữa hoặc yêu cầu bồi thường theo giá trị thị trường hiện tại.

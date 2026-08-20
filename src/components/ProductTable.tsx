@@ -178,13 +178,6 @@ const ProductList: React.FC = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-bold text-white mb-3">3. Thời gian thuê</h3>
-              <p className="leading-relaxed text-sm sm:text-base text-gray-300">
-                Thời gian thuê được tính theo ngày (24 giờ) kể từ thời điểm nhận loa.
-              </p>
-            </div>
-
-            <div>
               <h4 className="text-base font-bold text-pink-400 mb-2">📌 Đền bù thiệt hại</h4>
               <p className="leading-relaxed text-sm sm:text-base text-gray-300">
                 Nếu thiết bị hư hỏng, shop sẽ tính phí sửa chữa hoặc yêu cầu bồi thường theo giá trị thị trường hiện tại.
