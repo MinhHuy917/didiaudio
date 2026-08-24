@@ -1,6 +1,6 @@
 import { type Metadata } from 'next'
-import InternationalLanding from '@/components/InternationalLanding'
 import { landingPagesData } from '@/data/landing-pages'
+import InternationalLandingWrapper from '@/components/InternationalLandingWrapper'
 
 export const metadata: Metadata = {
   title: 'Premium JBL Speaker Rental in Da Nang | Delivery in 30 mins',
@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 }
 
 export default function EnglishLandingPage() {
-  return <InternationalLanding content={landingPagesData.en} />
+  return <InternationalLandingWrapper content={landingPagesData.en} />
 }

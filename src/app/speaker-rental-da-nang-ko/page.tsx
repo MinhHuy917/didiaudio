@@ -1,6 +1,6 @@
 import { type Metadata } from 'next'
-import InternationalLanding from '@/components/InternationalLanding'
 import { landingPagesData } from '@/data/landing-pages'
+import InternationalLandingWrapper from '@/components/InternationalLandingWrapper'
 
 export const metadata: Metadata = {
   title: '다낭 JBL 스피커 대여 | 프리미엄 블루투스 스피커 | 빠른 배송',
@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 }
 
 export default function KoreanLandingPage() {
-  return <InternationalLanding content={landingPagesData.ko} />
+  return <InternationalLandingWrapper content={landingPagesData.ko} />
 }

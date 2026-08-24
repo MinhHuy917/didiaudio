@@ -51,10 +51,10 @@ export function LanguageSwitcher() {
     // Redirect to custom localized pages for specific languages
     if (['en', 'ko', 'zh-cn', 'ru'].includes(language.id)) {
       const routeMap: Record<string, string> = {
-        'en': '/en',
-        'ko': '/ko',
-        'zh-cn': '/zh',
-        'ru': '/ru'
+        'en': '/speaker-rental-da-nang',
+        'ko': '/speaker-rental-da-nang-ko',
+        'zh-cn': '/speaker-rental-da-nang-zh',
+        'ru': '/speaker-rental-da-nang-ru'
       }
       window.location.href = routeMap[language.id]
       return
