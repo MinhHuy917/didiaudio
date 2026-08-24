@@ -47,9 +47,23 @@ export function LanguageSwitcher() {
 
   const handleChangeLanguage = (language: LanguageOption) => {
     if (language.id === currentLanguageId) return
+
+    // Redirect to custom localized pages for specific languages
+    if (['en', 'ko', 'zh-cn', 'ru'].includes(language.id)) {
+      const routeMap: Record<string, string> = {
+        'en': '/en',
+        'ko': '/ko',
+        'zh-cn': '/zh',
+        'ru': '/ru'
+      }
+      window.location.href = routeMap[language.id]
+      return
+    }
+
+    // Default Google Translate behavior for other languages
     window.localStorage.setItem('preferred-language-id', language.id)
     setGoogleTranslateCookie(language.code)
-    window.location.reload()
+    window.location.href = '/' // redirect to home and let translate take over
   }
 
   return (
