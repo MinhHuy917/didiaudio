@@ -127,7 +127,7 @@ export default function MenuContact() {
         <div className="fixed bottom-20 left-4 right-4 md:hidden mt-5 z-50">
           <div className="flex-auto overflow-hidden rounded-3xl bg-audio-light/95 backdrop-blur-md text-sm leading-6 shadow-2xl border border-audio-electricBlue/30 ring-1 ring-audio-electricBlue/20">
             <div className="p-4 space-y-2">
-              <Link href="https://m.me/chothueloakeokeodanang" target="_blank">
+              <Link href="https://m.me/thueloakeodanang.didiaudio" target="_blank">
                 <MenuItem
                   icon={icons.messenger}
                   title="Messenger"
@@ -178,7 +178,7 @@ export default function MenuContact() {
           bgColor="bg-[#0068FF]"
         />
         <DesktopMenuItem
-          href="https://m.me/chothueloakeokeodanang"
+          href="https://m.me/thueloakeodanang.didiaudio"
           icon={icons.messenger}
           label="Messenger"
           bgColor="bg-audio-electricBlue"
