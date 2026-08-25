@@ -53,7 +53,7 @@ export const socialMediaProfiles = [
   
   {
     title: 'Facebook',
-    href: 'https://www.facebook.com/chothueloakeokeodanang/',
+    href: 'https://www.facebook.com/thueloakeodanang.didiaudio/',
     icon: FacebookIcon,
   },
   {

@@ -211,7 +211,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 </Link>
                
                 <Link
-                  href="https://m.me/chothueloakeokeodanang"
+                  href="https://m.me/thueloakeodanang.didiaudio"
                   target="_blank"
                   className="flex-1 flex flex-col items-center justify-center gap-1 px-2 sm:px-4 py-3 bg-audio-light/50 border border-audio-electricBlue/30 rounded-xl text-white font-semibold text-xs sm:text-sm active:scale-95 transition-transform hover:bg-audio-light/70 bg-gradient-to-r from-audio-electricBlue to-audio-neonPurple"
                 >
