@@ -38,6 +38,7 @@ export default function ImageSlider() {
                 className="object-cover rounded-2xl"
                 sizes="(max-width: 768px) 100vw, 768px"
                 priority={index === 0}
+                quality={75}
               />
             </div>
           </SwiperSlide>

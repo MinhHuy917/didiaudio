@@ -1,15 +1,19 @@
 import { type Metadata } from 'next'
+import dynamic from 'next/dynamic'
 
-import AboutSection from '@/components/AboutSection'
-import { FAQ, FAQSchema } from '@/components/FAQ'
 import ImageSlider from '@/components/ImageSlider'
-import MenuContact from '@/components/MenuContact'
-import ProductList from '@/components/ProductTable'
-import Testimonials from '@/components/Testimonials'
-import WhyUs from '@/components/WhyUs'
-import SpecialNoticeBanner from '@/components/SpecialNoticeBanner'
-import UseCaseSection from '@/components/UseCaseSection'
-import BlogCamTrai from '@/components/BlogCamTrai'
+import { FAQSchema } from '@/components/FAQ'
+
+const AboutSection = dynamic(() => import('@/components/AboutSection'))
+const FAQ = dynamic(() => import('@/components/FAQ').then(mod => mod.FAQ))
+const MenuContact = dynamic(() => import('@/components/MenuContact'))
+const ProductList = dynamic(() => import('@/components/ProductTable'))
+const Testimonials = dynamic(() => import('@/components/Testimonials'))
+const WhyUs = dynamic(() => import('@/components/WhyUs'))
+const SpecialNoticeBanner = dynamic(() => import('@/components/SpecialNoticeBanner'))
+const UseCaseSection = dynamic(() => import('@/components/UseCaseSection'))
+const BlogCamTrai = dynamic(() => import('@/components/BlogCamTrai'))
+
 
 export const metadata: Metadata = {
   title: 'Cho Thuê Loa Kéo Đà Nẵng | cho thuê loa kẹo kéo đà nẵng | thuê loa kẹo kéo đà nẵng  ',
