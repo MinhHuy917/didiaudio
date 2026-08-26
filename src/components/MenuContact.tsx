@@ -104,7 +104,7 @@ export default function MenuContact() {
           </Link>
 
           <Link
-            href="https://zalo.me/0909223917"
+            href="https://zalo.me/0339197917"
             target="_blank"
             className="flex-1 flex flex-col items-center gap-1 px-2 py-2 bg-gradient-to-r from-[#0068FF] to-[#0091FF] rounded-xl text-white font-semibold text-sm active:scale-95 transition-transform"
           >
@@ -136,7 +136,7 @@ export default function MenuContact() {
                 />
               </Link>
 
-              <Link href="https://wa.me/84909223917" target="_blank">
+              <Link href="https://wa.me/84339197917" target="_blank">
                 <MenuItem
                   icon={icons.whatsapp}
                   title="WhatsApp"
@@ -172,7 +172,7 @@ export default function MenuContact() {
           bgColor="bg-green-500"
         />
         <DesktopMenuItem
-          href="https://zalo.me/0909223917"
+          href="https://zalo.me/0339197917"
           icon={icons.zalo}
           label="Zalo"
           bgColor="bg-[#0068FF]"
@@ -184,7 +184,7 @@ export default function MenuContact() {
           bgColor="bg-audio-electricBlue"
         />
         <DesktopMenuItem
-          href="https://wa.me/84909223917"
+          href="https://wa.me/84339197917"
           icon={icons.whatsapp}
           label="WhatsApp"
           bgColor="bg-[#25D366]"
