@@ -260,7 +260,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 </Link>
              
                 <Link
-                  href="https://zalo.me/0909223917"
+                  href="https://zalo.me/0339197917"
                   target="_blank"
                   className="flex-1 flex flex-col items-center justify-center gap-1 px-2 sm:px-4 py-3 bg-audio-light/50 border border-blue-500/30 rounded-xl text-white font-semibold text-xs sm:text-sm active:scale-95 transition-transform hover:bg-audio-light/70 bg-gradient-to-r from-[#0068FF] to-[#0091FF]"
                 >
