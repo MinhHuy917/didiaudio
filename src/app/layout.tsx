@@ -83,9 +83,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <head>
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-CJQJY8V1EV"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
-      <Script id="google-analytics" strategy="afterInteractive">
+      <Script id="google-analytics" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -94,7 +94,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         `}
       </Script>
 
-      <Script id="google-translate-init" strategy="afterInteractive">
+      <Script id="google-translate-init" strategy="lazyOnload">
         {`
           window.googleTranslateElementInit = function () {
             new window.google.translate.TranslateElement(
@@ -110,7 +110,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Script>
       <Script
         src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
       <Script id="organization-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify({
