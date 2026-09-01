@@ -72,7 +72,7 @@ function Header({
       <Container>
         <div 
           className={clsx(
-            "relative flex items-center justify-between gap-4 rounded-2xl border transition-all duration-300 px-4 py-2",
+            "relative flex items-center justify-between gap-4 rounded-2xl border transition-all duration-300 px-4 py-2 ",
             isScrolled 
               ? "border-white/10 bg-black/60 backdrop-blur-xl shadow-2xl" 
               : "border-transparent bg-transparent"
@@ -80,19 +80,15 @@ function Header({
         >
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative h-10 w-10 overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-transform group-hover:scale-105 sm:h-11 sm:w-11">
-              <Image
-                src={logo}
-                alt="ĐiĐi Audio"
-                fill
-                className="object-cover p-1.5"
-                priority
-              />
-            </div>
-            <div className="hidden sm:block">
-              <p className="text-sm font-semibold text-white">ĐiĐi Audio</p>
-              <p className="text-xs text-gray-300">Thuê loa kéo Đà Nẵng</p>
-            </div>
+          <Image 
+                  src={logo} 
+                  alt="ĐiĐi Audio"
+                  width={60}
+                  height={60}
+                  className="w-auto object-cover "
+                  priority
+                />
+          
           </Link>
 
           {/* Desktop Navigation */}

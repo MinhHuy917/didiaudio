@@ -66,15 +66,14 @@ export function Footer() {
         </div>
         <div className="mb-20 mt-24 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-white/10 pt-12">
           <Link href="/" aria-label="Home" className="block group">
-            <div className="relative w-12 h-12 rounded-full overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 shadow-md hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 group-hover:border-cyan-500/50">
-              <Image 
-                src={logo} 
-                alt="ĐiĐi Audio Logo" 
-                fill
-                className="object-cover rounded-full p-0.5"
-                sizes="48px"
-              />
-            </div>
+            <Image 
+                  src={logo} 
+                  alt="ĐiĐi Audio"
+                  width={60}
+                  height={60}
+                  className="w-auto object-cover "
+                  priority
+                />
           </Link>
           <div className="flex items-center gap-2">
             <Music className="w-4 h-4 text-cyan-400" />
