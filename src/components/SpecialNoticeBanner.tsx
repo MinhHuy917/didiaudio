@@ -29,7 +29,7 @@ export default function PromoBanner() {
   ]
 
   return (
-    <section className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12 bg-gradient-to-b from-black via-gray-900 to-black">
+    <section id="promos" className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12 bg-gradient-to-b from-black via-gray-900 to-black">
       <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {promos.map((p, i) => (
           <motion.div
