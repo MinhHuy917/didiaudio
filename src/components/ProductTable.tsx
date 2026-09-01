@@ -170,6 +170,7 @@ const ProductList: React.FC = () => {
               <div className="space-y-1 text-sm sm:text-base text-gray-300">
                 <p className="font-bold text-cyan-400 uppercase">🚚 FREE SHIP 2 CHIỀU trong bán kính 5km</p>
                 <ul className="list-none space-y-1 pl-4">
+                  <li>- 0–5km: Miễn phí</li>
                   <li>- 6–10km: +50.000đ</li>
                   <li>- 11–15km: +100.000đ</li>
                   <li>- Trên 16km: báo phí riêng</li>
