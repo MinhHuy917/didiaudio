@@ -95,9 +95,11 @@ function Header({
           
             <nav className="hidden lg:flex flex items-center gap-1 mr-4">
               <NavLink href="/about-didiaudio">Về chúng tôi</NavLink>
-              <NavLink href="/#usecases">Dịch vụ</NavLink>
               <NavLink href="/#products">Bảng giá</NavLink>
+              <NavLink href="/#chinh-sach">Chính Sách</NavLink>
+              <NavLink href="/#promos">Dịch Vụ</NavLink>
               <NavLink href="/#blog">Blog</NavLink>
+              <NavLink href="/#faq">FAQ</NavLink>
             </nav>
             <div className='hidden lg:flex'>
 
@@ -150,9 +152,11 @@ function MobileMenu({ expanded, onClose }: { expanded: boolean, onClose: () => v
   {[
     { label: 'Trang chủ', href: '/' },
     { label: 'Bảng giá thuê', href: '/#products' },
-    { label: 'Dịch vụ loa kéo', href: '/dich-vu-cho-thue-loa-keo-keo-da-nang' },
+    { label: 'Chính Sách', href: '/#chinh-sach' },
+    { label: 'Dịch Vụ', href: '/#promos' },
     { label: 'Cộng đồng âm thanh', href: 'https://facebook.com/...' },
     { label: 'Về ĐiĐi Audio', href: '/about-didiaudio' },
+    { label: 'FAQ', href: '/#faq' },
   ].map((item, idx) => (
     <motion.div
       key={item.href}
