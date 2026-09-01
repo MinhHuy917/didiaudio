@@ -72,7 +72,7 @@ function Header({
       <Container>
         <div 
           className={clsx(
-            "relative flex items-center justify-between gap-4 rounded-2xl border transition-all duration-300 px-4 py-2 ",
+            "relative flex items-center justify-between gap-3 rounded-2xl border transition-all duration-300 px-4 py-2 ",
             isScrolled 
               ? "border-white/10 bg-black/60 backdrop-blur-xl shadow-2xl" 
               : "border-transparent bg-transparent"
@@ -92,17 +92,18 @@ function Header({
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center gap-2 lg:flex">
-            <nav className="flex items-center gap-1 mr-4">
-              <NavLink href="/#products">Bảng giá</NavLink>
-              <NavLink href="/#usecases">Dịch vụ</NavLink>
+          
+            <nav className="hidden lg:flex flex items-center gap-1 mr-4">
               <NavLink href="/about-didiaudio">Về chúng tôi</NavLink>
+              <NavLink href="/#usecases">Dịch vụ</NavLink>
+              <NavLink href="/#products">Bảng giá</NavLink>
               <NavLink href="/#blog">Blog</NavLink>
             </nav>
-            <div className="h-6 w-px bg-white/10 mx-2" />
+            <div className='hidden lg:flex'>
+
             <LanguageSwitcher />
-            <ContactButton className="ml-2" />
-          </div>
+            </div>
+      
 
           {/* Mobile Right Section */}
           <div className="flex items-center gap-3 lg:hidden">
