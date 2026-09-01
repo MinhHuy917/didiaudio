@@ -192,9 +192,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                   {product.price}k/ngày
                 </div>
               )}
-              <p className="text-xs sm:text-sm text-audio-textMuted">
-                Từ ngày thứ 2: {Math.floor(product.price * 0.5)}k/ngày
-              </p>
+             
             </div>
 
             {/* CTA Buttons */}
