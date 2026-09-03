@@ -75,10 +75,15 @@ export function Footer() {
                   priority
                 />
           </Link>
-          <div className="flex items-center gap-2">
-            <Music className="w-4 h-4 text-cyan-400" />
-            <p className="text-sm text-gray-300">
-              © ĐiĐi Audio {new Date().getFullYear()}
+          <div className="flex flex-col items-start sm:items-end gap-2 mt-4 sm:mt-0">
+            <div className="flex items-center gap-2">
+              <Music className="w-4 h-4 text-cyan-400" />
+              <p className="text-sm text-gray-300">
+                © ĐiĐi Audio {new Date().getFullYear()}
+              </p>
+            </div>
+            <p className="text-xs sm:text-sm text-gray-500 sm:text-right mt-1">
+              Website được thiết kế & phát triển bởi <a href="https://huyseolocal.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors">Huy SEO Local</a> · <a href="https://huyseolocal.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors">huyseolocal.com</a> Dịch vụ thiết kế website & SEO chuyên nghiệp — Inbox để được tư vấn.
             </p>
           </div>
         </div>
