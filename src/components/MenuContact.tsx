@@ -4,6 +4,10 @@ import useVisible from '@/hoooks/useVisible'
 import Link from 'next/link'
 import { Phone, Copy, Check, MoreHorizontal, MapPin } from 'lucide-react'
 import { useState } from 'react'
+import Image from 'next/image'
+import iconMaps from '/src/images/contact/IconGGMaps.jpg'
+import iconZalo from '/src/images/contact/IconZalo.jpg'
+
 
 export default function MenuContact() {
   const isMenu = useVisible(false)
@@ -108,7 +112,7 @@ export default function MenuContact() {
             target="_blank"
             className="flex-1 flex flex-col items-center gap-1 px-2 py-2 bg-gradient-to-r from-[#0068FF] to-[#0091FF] rounded-xl text-white font-semibold text-sm active:scale-95 transition-transform"
           >
-            {icons.zalo}
+           {<Image src={iconZalo} alt="Zalo" width={24} height={24} className="w-6 h-6 rounded-full" />}
             <span>Zalo</span>
           </Link>
 
@@ -173,15 +177,15 @@ export default function MenuContact() {
         />
         <DesktopMenuItem
           href="https://zalo.me/0339197917"
-          icon={icons.zalo}
+          icon={<Image src={iconZalo} alt="Bản Đồ" width={28} height={28} className="w-8 h-8" />}
           label="Zalo"
-          bgColor="bg-[#0068FF]"
+          bgColor="bg-white"
         />
         <DesktopMenuItem
           href="https://m.me/thueloakeodanang.didiaudio"
           icon={icons.messenger}
           label="Messenger"
-          bgColor="bg-audio-electricBlue"
+          bgColor="bg-[#A033FF]"
         />
         <DesktopMenuItem
           href="https://wa.me/84339197917"
@@ -191,9 +195,9 @@ export default function MenuContact() {
         />
         <DesktopMenuItem
           href="https://www.google.com/maps/dir//43+Tống+Duy+Tân,+Liên+Chiểu,+Đà+Nẵng"
-          icon={<MapPin className="w-6 h-6 text-white" />}
+          icon={<Image src={iconMaps} alt="Bản Đồ" width={24} height={24} className="w-8 h-8" />}
           label="Bản Đồ"
-          bgColor="bg-[#EAEAEA] text-black"
+          bgColor="bg-white text-black"
           iconColor="text-red-500"
         />
       </div>
