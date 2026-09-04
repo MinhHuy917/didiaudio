@@ -80,22 +80,37 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="vi" className="h-full dark bg-audio-darker text-white antialiased">
-    <head>
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-CJQJY8V1EV"
-        strategy="lazyOnload"
-      />
-      <Script id="google-analytics" strategy="lazyOnload">
-        {`
+      <head>
+        {/* Google Ads */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18429521617"
+          strategy="lazyOnload"
+        />
+
+        <Script id="google-ads" strategy="lazyOnload">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18429521617');
+  `}
+        </Script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-CJQJY8V1EV"
+          strategy="lazyOnload"
+        />
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-CJQJY8V1EV');
         `}
-      </Script>
+        </Script>
 
-      <Script id="google-translate-init" strategy="lazyOnload">
-        {`
+        <Script id="google-translate-init" strategy="lazyOnload">
+          {`
           window.googleTranslateElementInit = function () {
             new window.google.translate.TranslateElement(
               {
@@ -107,37 +122,39 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             );
           };
         `}
-      </Script>
-      <Script
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-        strategy="lazyOnload"
-      />
-      <Script id="organization-schema" type="application/ld+json" strategy="afterInteractive">
-        {JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'LocalBusiness',
-          name: 'ĐiĐi Audio',
-          url: 'https://www.didi-audio.com',
-          image: 'https://www.didi-audio.com/og-image.jpg',
-          telephone: '0339197917',
-          areaServed: 'Đà Nẵng',
-          priceRange: '50.000đ - 1.600.000đ',
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: 'Đà Nẵng',
-            addressCountry: 'VN',
-          },
-        })}
-      </Script>
+        </Script>
+        <Script
+          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+          strategy="lazyOnload"
+        />
+        <Script id="organization-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            name: 'ĐiĐi Audio',
+            url: 'https://www.didi-audio.com',
+            image: 'https://www.didi-audio.com/og-image.jpg',
+            telephone: '0339197917',
+            areaServed: 'Đà Nẵng',
+            priceRange: '50.000đ - 1.600.000đ',
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'Đà Nẵng',
+              addressCountry: 'VN',
+            },
+          })}
+        </Script>
 
-    </head>
-  
-    <body className="flex min-h-full flex-col bg-audio-darker">
-      <div id="google_translate_element" className="hidden" />
-      <RootLayout>{children}</RootLayout>
-    </body>
-  </html>
-  
+
+
+      </head>
+
+      <body className="flex min-h-full flex-col bg-audio-darker">
+        <div id="google_translate_element" className="hidden" />
+        <RootLayout>{children}</RootLayout>
+      </body>
+    </html>
+
   )
 }
 
