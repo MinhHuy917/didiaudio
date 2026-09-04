@@ -6,16 +6,16 @@ import { GraduationCap, Truck, Gift, Music } from 'lucide-react'
 export default function PromoBanner() {
   const promos = [
     {
-      icon: GraduationCap,
-      title: 'Ưu đãi sinh viên Đà Nẵng',
-      desc: 'Giảm 10% cho sinh viên',
-      tag: 'SALE',
+      icon: Music,
+      title: 'Kèm 2 micro không dây',
+      desc: 'Độc quyền cho khách hàng',
+      tag: 'NEW',
       gradient: 'from-cyan-500 to-purple-600',
     },
     {
       icon: Truck,
       title: 'Có giao hàng tận nơi',
-      desc: 'Miễn phí giao trong trung tâm Đà Nẵng',
+      desc: 'Miễn phí giao hàng bán kính 5km',
       tag: 'SUPPORT',
       gradient: 'from-purple-500 to-pink-600',
     },

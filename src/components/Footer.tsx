@@ -83,7 +83,7 @@ export function Footer() {
               </p>
             </div>
             <p className="text-xs sm:text-sm text-gray-500 sm:text-right mt-1">
-              Website được thiết kế & phát triển bởi <a href="https://huyseolocal.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors">Huy SEO Local</a> · <a href="https://huyseolocal.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors">huyseolocal.com</a> Dịch vụ thiết kế website & SEO chuyên nghiệp — Inbox để được tư vấn.
+              Website được thiết kế & phát triển bởi <a href="https://huyseolocal.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors">huyseolocal.com</a>
             </p>
           </div>
         </div>
