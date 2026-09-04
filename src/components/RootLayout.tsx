@@ -11,6 +11,7 @@ import { Footer } from '@/components/Footer'
 import logo from '@/images/logo.png'
 import Image from 'next/image'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
+import { ScrollToTop } from '@/components/ScrollToTop'
 
 const RootLayoutContext = createContext<{
   logoHovered: boolean
@@ -230,6 +231,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
         </main>
 
         <Footer />
+        <ScrollToTop />
       </div>
     </MotionConfig>
   )
