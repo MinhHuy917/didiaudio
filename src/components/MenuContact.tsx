@@ -154,8 +154,8 @@ export default function MenuContact() {
                 target="_blank"
                 className="group relative flex items-center gap-x-4 rounded-xl p-3 hover:bg-audio-light/30 transition-all border border-audio-electricBlue/10"
               >
-                <div className="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-audio-electricBlue/20">
-                  {icons.map}
+                <div className="flex h-10 w-10 flex-none items-center justify-center">
+                {<Image src={iconMaps} alt="Bản Đồ" width={24} height={24} className="w-6 h-6 rounded-lg" />}
                 </div>
                 <div>
                   <span className="font-sans font-bold text-white text-sm">Địa điểm cửa hàng</span>
