@@ -64,7 +64,7 @@ export function Footer() {
         <div className="mt-12 sm:mt-16 lg:mt-20">
           <Navigation />
         </div>
-        <div className="mb-20 mt-24 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-white/10 pt-12">
+        <div className="mb-40 mt-24 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-white/10 pt-12">
           <Link href="/" aria-label="Home" className="block group">
             <Image 
                   src={logo} 
