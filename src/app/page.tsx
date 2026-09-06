@@ -20,6 +20,18 @@ export const metadata: Metadata = {
   description:
     'Cho thuê loa JBL chính hãng tại Đà Nẵng. Giao nhanh 30-60 phút, setup miễn phí, hỗ trợ 24/7. Phù hợp du lịch, cắm trại, sinh nhật, team building. Giá từ 50k/ngày.',
   keywords: [
+    'cho thuê loa kẹo kéo đà nẵng',
+    'cho thuê loa kéo JBL đà nẵng',
+    'thuê loa kẹo kéo đà nẵng',
+    'cho thuê loa đà nẵng',
+    'thuê loa đà nẵng',
+    'thuê loa kéo kéo thanh khê đà nẵng',
+    'cho thuê loa kéo tại đà nẵng',
+    'cho thue loa keo da nang',
+    'thuê loa kéo kéo sơn trà đà nẵng',
+    'thuê loa kéo kéo đà nẵng',
+    'thuê loa kẹo kéo liên chiểu đà nẵng',
+    'thuê loa kẹo kéo hoà khánh đà nẵng',
     'cho thuê loa kéo đà nẵng',
     'thuê loa kéo đà nẵng',
     'thuê loa kẹo kéo đà nẵng giá rẻ',
@@ -29,10 +41,9 @@ export const metadata: Metadata = {
     'dịch vụ cho thuê loa kéo đà nẵng',
     'loa kéo JBL đà nẵng',
     'thuê loa party đà nẵng',
-    'cho thuê loa bluetooth đà nẵng',
   ],
   openGraph: {
-    title: 'Cho Thuê Loa Kéo Đà Nẵng | | cho thuê loa kẹo kéo đà nẵng | thuê loa kẹo kéo đà nẵng',
+    title: 'Cho Thuê Loa Kéo Đà Nẵng | | Cho Thuê Loa Kẹo Kéo An Nhơn nẵng | Thuê Loa Kẹo Kéo Đà Nẵng',
     description:
       'Cho thuê loa kéo JBL chính hãng tại Đà Nẵng. Giao nhanh 30-60 phút, setup miễn phí, hỗ trợ 24/7. Phù hợp du lịch, cắm trại, sinh nhật, team building.',
     url: 'https://www.didi-audio.com',
@@ -78,9 +89,9 @@ export default async function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       {/* Hero Section - H1 sẽ được đặt trong HeroSection */}
-      <ImageSlider />
+      {/* <ImageSlider /> */}
       <AboutSection />
-      <SpecialNoticeBanner />
+      {/* <SpecialNoticeBanner /> */}
       <ProductList />
       <UseCaseSection />
       <WhyUs />

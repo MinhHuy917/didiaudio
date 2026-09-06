@@ -50,18 +50,13 @@ const ProductList: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 sm:mb-16"
         >
-          <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20">
-            <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" />
-            <span className="text-sm sm:text-base text-cyan-400 font-semibold tracking-wide uppercase">Sản Phẩm Bán Chạy Nhất</span>
-          </div>
+          
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               {product.name}
             </span>
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto text-base sm:text-lg lg:text-xl leading-relaxed">
-            Sự lựa chọn hoàn hảo cho mọi buổi tiệc. Âm thanh bùng nổ, thiết kế di động, thời lượng pin cực khủng.
-          </p>
+          
         </motion.div>
 
         {/* Featured Product Layout */}
@@ -86,21 +81,7 @@ const ProductList: React.FC = () => {
                     priority
                   />
                 </div>
-                {/* Floating Badges */}
-                <div className="absolute top-6 left-6 flex flex-col gap-3">
-                  <div className="flex items-center gap-2 px-4 py-2 bg-black/60 backdrop-blur-md rounded-full border border-white/10 shadow-lg">
-                    <Volume2 className="w-5 h-5 text-cyan-400" />
-                    <span className="font-bold text-white">240W RMS</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-black/60 backdrop-blur-md rounded-full border border-white/10 shadow-lg">
-                    <Battery className="w-5 h-5 text-purple-400" />
-                    <span className="font-bold text-white">Pin 18 Giờ</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-black/60 backdrop-blur-md rounded-full border border-white/10 shadow-lg">
-                    <Bluetooth className="w-5 h-5 text-blue-400" />
-                    <span className="font-bold text-white">Bluetooth 5.3</span>
-                  </div>
-                </div>
+              
               </div>
 
               {/* Right: Content & Pricing */}
@@ -109,9 +90,7 @@ const ProductList: React.FC = () => {
                   <Music className="w-32 h-32 text-white" />
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 relative z-10">
-                  Sức Mạnh Âm Thanh Đỉnh Cao
-                </h3>
+               
                 <p className="text-gray-400 text-lg mb-8 leading-relaxed relative z-10">
                   {product.catalogue}
                 </p>
@@ -140,11 +119,7 @@ const ProductList: React.FC = () => {
                 <div className="space-y-4 mb-10 relative z-10">
                   <div className="flex items-center gap-3 text-gray-300">
                     <Zap className="w-5 h-5 text-purple-400" />
-                    <span>Bao gồm 2 micro không dây UHF cao cấp & dây sạc</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <ShieldCheck className="w-5 h-5 text-green-400" />
-                    <span>Hàng chính hãng 100%, nguyên bản</span>
+                    <span>Bao gồm 2 micro không dây, dây sạc & pin</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-300">
                     <Zap className="w-5 h-5 text-yellow-400" />
@@ -157,7 +132,7 @@ const ProductList: React.FC = () => {
                   href={"/products/" + product.id}
                   className="relative z-10 w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl hover:shadow-[0_0_30px_rgba(6,182,212,0.4)] hover:scale-[1.02] active:scale-[0.98]"
                 >
-                  Xem chi tiết & Đặt thuê ngay
+                  Xem chi tiết
                 </Link>
               </div>
             </div>
@@ -229,11 +204,11 @@ const ProductList: React.FC = () => {
               <ul className="space-y-3 text-sm sm:text-base text-gray-300">
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" />
-                  <p><span className="font-semibold text-cyan-400">Khách xuất trình CCCD gốc hoặc VNeID mức 2</span> để shop xác minh khi nhận loa. Không nhận ảnh CCCD có sẵn hoặc gửi qua tin nhắn.</p>
+                  <p><span className="font-semibold text-cyan-400">Khách xuất trình CCCD gốc hoặc VNeID mức 2</span> để shop xác minh khi nhận loa.</p>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" />
-                  <p>Thanh toán: <span className="font-semibold text-cyan-400">Tiền thuê + phí ship (nếu có) + cọc 1tr đối với loa</span> trước khi nhận loa.</p>
+                  <p>Thanh toán: <span className="font-semibold text-cyan-400">Tiền thuê & cọc 1tr </span> trước khi nhận loa.</p>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" />

@@ -351,20 +351,22 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
           <div className="space-y-3 sm:space-y-4 text-white">
           <div>
-              <h3 className="text-lg font-bold text-white mb-3">1. Thủ tục thuê loa</h3>
-              <ul className="list-disc pl-5 space-y-2 leading-relaxed text-sm sm:text-base text-gray-300">
-                <li>
-                  <span className="font-semibold text-cyan-400">
-                    Khách xuất trình CCCD gốc hoặc VNeID mức 2
-                  </span>{" "}
-                  để shop xác minh khi nhận loa. Không nhận ảnh CCCD
-                  có sẵn hoặc gửi qua tin nhắn.
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <span className="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 text-sm">1</span>
+                Thủ tục thuê loa
+              </h3>
+              <ul className="space-y-3 text-sm sm:text-base text-gray-300">
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" />
+                  <p><span className="font-semibold text-cyan-400">Khách xuất trình CCCD gốc hoặc VNeID mức 2</span> để shop xác minh khi nhận loa.</p>
                 </li>
-                <li>
-                  Thanh toán: <span className="font-semibold text-cyan-400">Tiền thuê + phí ship (nếu có) + cọc 1tr đối với loa</span> trước khi nhận loa.
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" />
+                  <p>Thanh toán: <span className="font-semibold text-cyan-400">Tiền thuê & cọc 1tr </span> trước khi nhận loa.</p>
                 </li>
-                <li>
-                  Hoàn cọc sau khi trả loa đầy đủ và không có hư hỏng, mất mát.
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" />
+                  <p>Hoàn cọc sau khi trả loa đầy đủ và không có hư hỏng, mất mát.</p>
                 </li>
               </ul>
             </div>
