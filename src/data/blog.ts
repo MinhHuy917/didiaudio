@@ -1,9 +1,3 @@
-import img0 from '/src/images/loajblpartyboxencore2/0.png'
-import img1 from '/src/images/loajblpartyboxencore2/1.png'
-import img2 from '/src/images/loajblpartyboxencore2/2.png'
-import img3 from '/src/images/loajblpartyboxencore2/3.png'
-import img4 from '/src/images/loajblpartyboxencore2/4.png'
-import img5 from '/src/images/loajblpartyboxencore2/5.png'
 import img6 from '/src/images/loajblpartyboxstage320/0.png'
 import img7 from '/src/images/loajblpartyboxstage320/1.png'
 import img8 from '/src/images/loajblpartyboxstage320/2.png'
@@ -291,12 +285,12 @@ const rawArticles: Article[] = [
     title: 'Kinh nghiệm chọn loa kéo cho tiệc gia đình: công suất, pin, mic',
     description:
       'Checklist nhanh chọn loa kéo cho tiệc gia đình: công suất, pin, micro chống hú, Bluetooth ổn định.',
-    image: img0.src,
+    image: img6.src,
     date: '2024-11-10',
     content: `
       <h2>1. Chọn công suất theo không gian</h2>
       <ul>
-        <li>Phòng khách &lt;25m²: 80–120W (JBL Encore 2).</li>
+        <li>Phòng khách &lt;25m²: 80–120W.</li>
         <li>Sân vườn 30–50 khách: 200–300W (JBL Stage 320).</li>
         <li>Ngoài trời đông: 500–800W (JBL 720/Ultimate).</li>
       </ul>
@@ -313,7 +307,7 @@ const rawArticles: Article[] = [
     title: 'Setup karaoke 5 phút với loa kéo JBL: không hú, hát hay',
     description:
       'Cắm điện, ghép Bluetooth, chỉnh echo/mic trong 5 phút. Checklist chống hú và preset nhanh.',
-    image: img1.src,
+    image: img7.src,
     date: '2024-11-08',
     content: `
       <h2>1. Ghép Bluetooth & nguồn nhạc</h2>
@@ -332,15 +326,15 @@ const rawArticles: Article[] = [
   },
   {
     slug: 'bang-gia-thue-loa-keo-jbl-da-nang-2024',
-    title: 'Bảng giá thuê loa kéo JBL Đà Nẵng 2024 (Encore 2, 320, 720, Ultimate)',
+    title: 'Bảng giá thuê loa kéo JBL Đà Nẵng 2024 (320, 720, Ultimate)',
     description: 'Giao nhanh 30–60 phút, setup miễn phí.',
-    image: img2.src,
+    image: img8.src,
     date: '2024-11-05',
     content: `
       <table>
         <thead><tr><th>Model</th><th>Công suất</th><th>Giá/ngày</th><th>Ngày 2+</th></tr></thead>
         <tbody>
-          <tr><td>JBL Encore 2</td><td>100W</td><td>290k</td><td>175k</td></tr>
+
           <tr><td>JBL Stage 320</td><td>240W</td><td>490k</td><td>275k</td></tr>
         </tbody>
       </table>
@@ -352,7 +346,7 @@ const rawArticles: Article[] = [
     title: 'Mẹo chơi nhạc ngoài trời không mất tiếng, không hụt bass',
     description:
       'Chọn loa chống nước, kê cao 80–120cm, che mưa nhẹ, dự phòng pin/sạc, hướng loa vào khán giả.',
-    image: img3.src,
+    image: img9.src,
     date: '2024-11-01',
     content: `
       <ul>
@@ -369,7 +363,7 @@ const rawArticles: Article[] = [
     title: 'Chọn micro không dây hát karaoke hay: UHF, pin, chống hú',
     description:
       'Chọn micro UHF ổn định, có chống hú, pin tốt. Ưu tiên micro đi kèm loa JBL hoặc UHF rời chất lượng.',
-    image: img4.src,
+    image: img10.src,
     date: '2024-10-28',
     content: `
       <h2>1. Dải tần & ổn định</h2>
@@ -385,7 +379,7 @@ const rawArticles: Article[] = [
     title: 'Checklist thuê loa kéo trước sự kiện: 6 phút kiểm tra',
     description:
       '6 mục cần check: công suất, pin, micro, kết nối, phụ kiện, giao nhận. Tránh thiếu đồ và trễ giờ.',
-    image: img5.src,
+    image: img11.src,
     date: '2024-10-22',
     content: `
       <ol>
@@ -413,11 +407,11 @@ const rawArticles: Article[] = [
     slug: 'loa-keo-cho-sinh-nhat-tai-nha',
     title: 'Loa kéo cho sinh nhật tại nhà: gọn, pin lâu, mic hay',
     description:
-      'Tiệc 15–25 người: 100–150W, pin 8–12h, 2 mic UHF, bánh xe kéo. Ưu tiên JBL Encore 2.',
+      'Tiệc 15–25 người: 100–150W, pin 8–12h, 2 mic UHF, bánh xe kéo.',
     image: img7.src,
     date: '2024-10-12',
     content: `
-      <p>Encore 2: 100W, pin 15h, 2 mic UHF, đèn LED. Đủ cho phòng khách, sân nhỏ. Setup 5 phút: cắm điện, ghép Bluetooth, chỉnh echo nhẹ.</p>
+      <p>Loa JBL công suất vừa đủ cho phòng khách, sân nhỏ. Setup 5 phút: cắm điện, ghép Bluetooth, chỉnh echo nhẹ.</p>
     `,
   },
   {
@@ -499,11 +493,11 @@ const rawArticles: Article[] = [
     slug: 'chon-loa-keo-cho-lop-hoc-yoga-dance',
     title: 'Chọn loa kéo cho lớp yoga/dance: nhẹ, pin lâu, Bluetooth ổn',
     description:
-      'Ưu tiên loa nhẹ &lt;10kg, pin 8–12h, Bluetooth ổn định, có bánh xe. Encore 2 phù hợp phòng studio nhỏ.',
+      'Ưu tiên loa nhẹ &lt;10kg, pin 8–12h, Bluetooth ổn định, có bánh xe.',
     image: img13.src,
     date: '2024-09-22',
     content: `
-      <p>Studio nhỏ: Encore 2. Phòng lớn hơn: Stage 320. Giữ âm lượng 60–70% để nhạc không bị méo khi tập lâu.</p>
+      <p>Phòng lớn sử dụng Stage 320. Giữ âm lượng 60–70% để nhạc không bị méo khi tập lâu.</p>
     `,
   },
   {
@@ -525,26 +519,7 @@ const rawArticles: Article[] = [
     image: img15.src,
     date: '2024-09-15',
     content: `
-      <p>Encore 2 phù hợp picnic nhỏ; Stage 320 cho nhóm 20–40 người. Mang theo sạc nhanh và bạt che mưa nhẹ.</p>
-    `,
-  },
-  {
-    slug: 'so-sanh-loa-keo-jbl-encore-2-va-stage-320',
-    title: 'So sánh JBL Encore 2 vs Stage 320: chọn loa nào?',
-    description:
-      'Encore 2: 100W, gọn nhẹ, pin lâu. Stage 320: 240W, pin dài, bánh xe kéo, phủ sân rộng hơn.',
-    image: img16.src,
-    date: '2024-09-12',
-    content: `
-      <table>
-        <thead><tr><th>Tiêu chí</th><th>Encore 2</th><th>Stage 320</th></tr></thead>
-        <tbody>
-          <tr><td>Công suất</td><td>100W</td><td>240W</td></tr>
-          <tr><td>Pin</td><td>~15h</td><td>~18h</td></tr>
-          <tr><td>Trọng lượng</td><td>~7kg</td><td>~16kg</td></tr>
-        </tbody>
-      </table>
-      <p>Tiệc nhỏ chọn Encore 2, sân vườn chọn Stage 320.</p>
+      <p>Stage 320 cho nhóm 20–40 người. Mang theo sạc nhanh và bạt che mưa nhẹ.</p>
     `,
   },
   {
@@ -890,7 +865,7 @@ const rawArticles: Article[] = [
     image: img45.src,
     date: '2024-06-20',
     content: `
-      <p>Dùng Encore 2 cho lớp nhỏ. Giữ volume 60–70% để giọng không méo, giảm bass, tăng mid/treble cho rõ lời.</p>
+      <p>Giữ volume 60–70% để giọng không méo, giảm bass, tăng mid/treble cho rõ lời.</p>
     `,
   },
   {
