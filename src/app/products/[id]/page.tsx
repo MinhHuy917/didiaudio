@@ -361,7 +361,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                   có sẵn hoặc gửi qua tin nhắn.
                 </li>
                 <li>
-                  Thanh toán: <span className="font-semibold text-cyan-400">Tiền thuê + phí ship (nếu có) + cọc 500k đối với loa Encore 2, 1tr đối với loa 320</span> trước khi nhận loa.
+                  Thanh toán: <span className="font-semibold text-cyan-400">Tiền thuê + phí ship (nếu có) + cọc 1tr đối với loa</span> trước khi nhận loa.
                 </li>
                 <li>
                   Hoàn cọc sau khi trả loa đầy đủ và không có hư hỏng, mất mát.

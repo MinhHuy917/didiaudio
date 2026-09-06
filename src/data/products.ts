@@ -1,16 +1,3 @@
-import loajblpartyboxencore2 from '/src/images/loajblpartyboxencore2/0.png'
-import loajblpartyboxencore21 from '/src/images/loajblpartyboxencore2/1.png'
-import loajblpartyboxencore22 from '/src/images/loajblpartyboxencore2/2.png'
-import loajblpartyboxencore23 from '/src/images/loajblpartyboxencore2/3.png'
-import loajblpartyboxencore24 from '/src/images/loajblpartyboxencore2/4.png'
-import loajblpartyboxencore25 from '/src/images/loajblpartyboxencore2/5.png'
-import loaencore2anh1 from '/src/images/loaencore2/1.jpg'
-import loaencore2anh2 from '/src/images/loaencore2/2.jpg'
-import loaencore2anh3 from '/src/images/loaencore2/3.jpg'
-import loaencore2anh4 from '/src/images/loaencore2/4.jpg'
-import loaencore2anh5 from '/src/images/loaencore2/5.jpg'
-import loaencore2anh6 from '/src/images/loaencore2/6.jpg'
-
 import loajblpartyboxstage320 from '/src/images/loajblpartyboxstage320/0.png'
 import loajblpartyboxstage3201 from '/src/images/loajblpartyboxstage320/1.png'
 import loajblpartyboxstage3202 from '/src/images/loajblpartyboxstage320/2.png'
@@ -28,31 +15,6 @@ import loa320anh7 from '/src/images/loa320/7.jpg'
 
 
 export const products = [
- 
-  {
-    id: 'loa-jbl-partyBox-encore-2',
-    name: 'Loa JBL PartyBox Encore 2',
-    catalogue: 'Loa karaoke di động công suất 100W, pin rời 15 giờ, chống nước IPX4.',
-    image: loajblpartyboxencore2.src,
-    image1: loajblpartyboxencore21.src,
-    image2: loajblpartyboxencore22.src,
-    image3: loajblpartyboxencore23.src,
-    image4: loajblpartyboxencore24.src,
-    image5: loajblpartyboxencore25.src,
-    image6: loaencore2anh1.src,
-    image7: loaencore2anh2.src,
-    image8: loaencore2anh3.src,
-    image9: loaencore2anh4.src,
-    image10: loaencore2anh5.src,
-    image11: loaencore2anh6.src,
-    originalPrice: 350,
-    price: 290,
-    quantity: 1,
-    detail1: 'Âm thanh JBL Pro Sound mạnh mẽ 100W (1 woofer 135mm + 2 tweeter 25mm), tích hợp công nghệ AI Sound Boost hạn chế méo tiếng.',
-    detail2: 'Thời lượng pin khủng lên tới 15 giờ, có tính năng sạc nhanh (10 phút sạc cho 80 phút phát lại) và đặc biệt là sử dụng pin có thể tháo rời.',
-    detail3: 'Đi kèm 2 micro không dây, có thể điều chỉnh echo, bass, treble trực tiếp, cùng khả năng chống nước IPX4, lý tưởng cho tiệc ngoài trời.',
-    detail4: 'Thiết kế di động với tay xách, hệ thống đèn LED RGB đồng bộ theo nhạc, hỗ trợ Bluetooth 5.4 LE và tính năng kết nối nhiều loa qua Auracast.',
-},
 
 {
   id: 'loa-jbl-partyBox-stage-320',
