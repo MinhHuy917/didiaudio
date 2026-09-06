@@ -19,7 +19,7 @@ export const products = [
 {
   id: 'loa-jbl-partyBox-stage-320',
   name: 'Loa JBL PartyBox Stage 320',
-  catalogue: 'Loa karaoke di động công suất 240W RMS, pin 18 giờ, chống nước IPX4, Auracast.',
+  catalogue: 'Loa kéo di động công suất 240W RMS, pin 18 giờ, chống nước IPX4, Auracast.',
   image: loajblpartyboxstage320.src,
   image1: loajblpartyboxstage3201.src,
   image2: loajblpartyboxstage3202.src,
