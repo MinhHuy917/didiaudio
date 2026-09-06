@@ -6,10 +6,32 @@ import { Battery, Bluetooth, Music, Volume2, ShieldCheck, Zap } from 'lucide-rea
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Pagination, Navigation } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 
 const ProductList: React.FC = () => {
   // Now we only have 1 product, JBL PartyBox Stage 320
   const product = products[0]
+
+  const sliderImages = [
+    product.image,
+    product.image1,
+    product.image2,
+    product.image3,
+    product.image4,
+    product.image5,
+    product.image6,
+    product.image7,
+    product.image8,
+    product.image9,
+    product.image10,
+    product.image11,
+    product.image12
+  ].filter(Boolean) as string[]
+
 
   return (
     <section id="products" className="relative py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden">
@@ -117,6 +139,10 @@ const ProductList: React.FC = () => {
 
                 <div className="space-y-4 mb-10 relative z-10">
                   <div className="flex items-center gap-3 text-gray-300">
+                    <Zap className="w-5 h-5 text-purple-400" />
+                    <span>Bao gồm 2 micro không dây UHF cao cấp & dây sạc</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
                     <ShieldCheck className="w-5 h-5 text-green-400" />
                     <span>Hàng chính hãng 100%, nguyên bản</span>
                   </div>
@@ -137,6 +163,46 @@ const ProductList: React.FC = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Slider Section */}
+        {sliderImages.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-16 max-w-6xl mx-auto"
+          >
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center">Hình ảnh thực tế</h3>
+            <Swiper
+              modules={[Autoplay, Pagination, Navigation]}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              loop={true}
+              pagination={{ clickable: true }}
+              navigation={true}
+              breakpoints={{
+                320: { slidesPerView: 1, spaceBetween: 10 },
+                640: { slidesPerView: 2, spaceBetween: 20 },
+                1024: { slidesPerView: 3, spaceBetween: 30 }
+              }}
+              className="rounded-2xl pb-12"
+            >
+              {sliderImages.map((imgSrc, index) => (
+                <SwiperSlide key={index}>
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 group bg-[#111111]">
+                    <Image
+                      src={imgSrc}
+                      alt={`${product.name} hình ${index + 1}`}
+                      fill
+                      className="object-contain transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </motion.div>
+        )}
 
         {/* Policy Section */}
         <motion.div
