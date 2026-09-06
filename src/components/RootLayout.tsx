@@ -154,8 +154,6 @@ function MobileMenu({ expanded, onClose }: { expanded: boolean, onClose: () => v
     { label: 'Trang chủ', href: '/' },
     { label: 'Bảng giá thuê', href: '/#products' },
     { label: 'Chính Sách', href: '/#chinh-sach' },
-    { label: 'Dịch Vụ', href: '/#promos' },
-    { label: 'Cộng đồng âm thanh', href: 'https://facebook.com/...' },
     { label: 'Về ĐiĐi Audio', href: '/about-didiaudio' },
     { label: 'FAQ', href: '/#faq' },
   ].map((item, idx) => (
@@ -176,14 +174,7 @@ function MobileMenu({ expanded, onClose }: { expanded: boolean, onClose: () => v
     </motion.div>
   ))}
   
-  <motion.div 
-    initial={{ opacity: 0 }} 
-    animate={{ opacity: 1 }} 
-    transition={{ delay: 0.4 }}
-    className="pt-8 mt-4 border-t border-white/10 px-4"
-  >
-    <ContactButton className="w-full py-4 text-lg font-bold rounded-xl bg-cyan-500 text-white shadow-lg shadow-cyan-500/20" />
-  </motion.div>
+  
 </nav>
         </motion.div>
       )}
