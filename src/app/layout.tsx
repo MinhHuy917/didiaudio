@@ -1,9 +1,16 @@
 import { type Metadata } from 'next'
 import Script from 'next/script';
+import { Inter } from 'next/font/google';
 
 import { RootLayout } from '@/components/RootLayout'
 
 import '@/styles/tailwind.css'
+
+const inter = Inter({
+  subsets: ['latin', 'vietnamese'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 // export const metadata: Metadata = {
 //   title: {
@@ -79,7 +86,7 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="vi" className="h-full dark bg-audio-darker text-white antialiased">
+    <html lang="vi" className={`h-full dark bg-audio-darker text-white antialiased ${inter.variable}`}>
       <head>
         {/* Google Ads */}
         <Script
