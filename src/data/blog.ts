@@ -387,7 +387,7 @@ const rawArticles: Article[] = [
         <li>Pin/nguồn rõ ràng, sạc nhanh.</li>
         <li>2 mic UHF, test chống hú.</li>
         <li>Kết nối Bluetooth/AUX, ghép đôi.</li>
-        <li>Phụ kiện: sạc, AUX, chân/kẹ.</li>
+        <li>Phụ kiện: sạc, AUX, chân/kẹ.</li>
         <li>Giao nhận: hẹn giờ, lưu hotline.</li>
       </ol>
     `,
