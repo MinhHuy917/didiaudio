@@ -3,7 +3,7 @@
 import SpecialNoticeBanner from '@/components/SpecialNoticeBanner'
 import { products } from '@/data/products'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Battery, Bluetooth, Check, Phone, Volume2 } from 'lucide-react'
+import { ArrowLeft, Battery, Bluetooth, Check, Phone, Volume2, MapPin } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -375,12 +375,21 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               <h3 className="text-base sm:text-lg font-bold text-white mb-2">2. Giao hàng</h3>
               <div className="space-y-1 text-sm sm:text-base break-words overflow-wrap-anywhere text-gray-300">
                 <p className="font-bold text-cyan-400 uppercase">🚚 FREE SHIP 2 CHIỀU trong bán kính 5km</p>
-                <ul className="list-none space-y-1 pl-4">
+                <ul className="list-none space-y-1 pl-4 mb-4">
                 <li>- 0–5km: Miễn phí</li>
                   <li>- 6–10km: +50.000đ</li>
                   <li>- 11–15km: +100.000đ</li>
                   <li>- Trên 16km: báo phí riêng</li>
                 </ul>
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=43+Tống+Duy+Tân,+Liên+Chiểu,+Đà+Nẵng"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#4285F4] hover:bg-[#3367D6] text-white rounded-lg text-sm font-medium transition-colors w-full sm:w-auto justify-center mt-2"
+                >
+                  <MapPin className="w-4 h-4" />
+                  Kiểm tra khoảng cách của bạn tới cửa hàng
+                </a>
               </div>
             </div>
 

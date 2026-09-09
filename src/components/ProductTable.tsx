@@ -2,7 +2,7 @@
 
 import { products } from '@/data/products'
 import { motion } from 'framer-motion'
-import { Battery, Bluetooth, Music, Volume2, ShieldCheck, Zap } from 'lucide-react'
+import { Battery, Bluetooth, Music, Volume2, ShieldCheck, Zap, MapPin } from 'lucide-react'
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -227,12 +227,21 @@ const ProductList: React.FC = () => {
                   <p className="font-bold text-cyan-400 uppercase mb-2 flex items-center gap-2">
                     <span>🚚</span> FREE SHIP 2 CHIỀU trong bán kính 5km
                   </p>
-                  <ul className="space-y-1 text-gray-400">
+                  <ul className="space-y-1 text-gray-400 mb-4">
                     <li className="flex justify-between"><span>0–5km:</span> <span>Miễn phí</span></li>
                     <li className="flex justify-between"><span>6–10km:</span> <span>+50.000đ</span></li>
                     <li className="flex justify-between"><span>11–15km:</span> <span>+100.000đ</span></li>
                     <li className="flex justify-between"><span>Trên 16km:</span> <span>Báo phí riêng</span></li>
                   </ul>
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=43+Tống+Duy+Tân,+Liên+Chiểu,+Đà+Nẵng"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#4285F4] hover:bg-[#3367D6] text-white rounded-lg text-sm font-medium transition-colors w-full justify-center"
+                  >
+                    <MapPin className="w-4 h-4" />
+                    Kiểm tra khoảng cách của bạn tới cửa hàng
+                  </a>
                 </div>
                 <div className="bg-pink-500/5 rounded-xl p-4 border border-pink-500/10">
                   <h4 className="font-bold text-pink-400 mb-1 flex items-center gap-2">
