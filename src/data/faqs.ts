@@ -40,11 +40,6 @@ export const faqs = [
         'Có. Chúng tôi chuyên cung cấp dịch vụ thuê loa cho các sự kiện lớn, đám cưới, tiệc tùng, teambuilding với số lượng loa và thiết bị đầy đủ.',
     },
     {
-      question: 'Có cần cọc khi thuê loa kéo không? Chính sách hoàn cọc thế nào?',
-      answer:
-        'Có. Bạn cần đặt cọc để đảm bảo thiết bị. Cọc sẽ được hoàn lại đầy đủ khi trả loa đúng hạn và không có hư hỏng.',
-    },
-    {
       question: 'Tôi nên đặt thuê loa trước bao lâu để đảm bảo có loa?',
       answer:
         'Bạn nên đặt trước ít nhất 2–3 ngày, đặc biệt vào cuối tuần hoặc mùa lễ hội để đảm bảo có loa đúng nhu cầu và không bị hết thiết bị.',
