@@ -765,14 +765,14 @@ const rawArticles: Article[] = [
     slug: 'huong-dan-dat-lich-thue-loa-online',
     title: 'Hướng dẫn đặt lịch thuê loa online: 3 bước',
     description:
-      'Chọn model, chọn thời gian, xác nhận giao/nhận. Chuẩn bị CCCD/GPLX và cọc nếu cần.',
+      'Chọn model, chọn thời gian, xác nhận giao/nhận. Chuẩn bị CCCD/GPLX.',
     image: img37.src,
     date: '2024-07-14',
     content: `
       <ol>
         <li>Chọn loa theo quy mô sự kiện.</li>
         <li>Chọn ngày/giờ giao, địa chỉ.</li>
-        <li>Chuẩn bị giấy tờ và cọc (nếu áp dụng).</li>
+        <li>Chuẩn bị giấy tờ.</li>
       </ol>
     `,
   },

@@ -208,11 +208,7 @@ const ProductList: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" />
-                  <p>Thanh toán: <span className="font-semibold text-cyan-400">Tiền thuê & cọc 1tr </span> trước khi nhận loa.</p>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" />
-                  <p>Hoàn cọc sau khi trả loa đầy đủ và không có hư hỏng, mất mát.</p>
+                  <p>Thanh toán: <span className="font-semibold text-cyan-400">Tiền thuê</span> trước khi nhận loa.</p>
                 </li>
               </ul>
             </div>
