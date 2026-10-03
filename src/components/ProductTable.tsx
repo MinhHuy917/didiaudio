@@ -201,16 +201,77 @@ const ProductList: React.FC = () => {
                 <span className="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 text-sm">1</span>
                 Thủ tục thuê loa
               </h3>
-              <ul className="space-y-3 text-sm sm:text-base text-gray-300">
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" />
-                  <p><span className="font-semibold text-cyan-400">Khách xuất trình CCCD gốc hoặc VNeID mức 2</span> để shop xác minh khi nhận loa.</p>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" />
-                  <p>Thanh toán: <span className="font-semibold text-cyan-400">Tiền thuê</span> trước khi nhận loa.</p>
-                </li>
-              </ul>
+              <div className="space-y-4 text-sm sm:text-base text-gray-300">
+                <div>
+                  <h4 className="font-bold text-cyan-400 mb-2">1. Xác minh thông tin</h4>
+                  <ul className="space-y-1.5 pl-4">
+                    <li className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
+                      <p>Khách Việt: CCCD gốc hoặc VNeID mức 2.</p>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
+                      <p>Khách nước ngoài: Passport.</p>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
+                      <p>Shop chỉ chụp ảnh giấy tờ để xác minh thông tin, không giữ giấy tờ gốc.</p>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
+                      <p>Cung cấp số điện thoại đang sử dụng.</p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-cyan-400 mb-2">2. Thanh toán</h4>
+                  <ul className="space-y-1.5 pl-4">
+                    <li className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
+                      <p>Thanh toán tiền thuê + tiền cọc trước khi nhận loa.</p>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
+                      <p>Khách Việt: cọc 3.000.000đ.</p>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
+                      <p>Khách nước ngoài: cọc 6.000.000đ.</p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-cyan-400 mb-2">3. Ký hợp đồng</h4>
+                  <ul className="space-y-1.5 pl-4">
+                    <li className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
+                      <p>Ký hợp đồng thuê loa trước khi nhận thiết bị.</p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-cyan-400 mb-2">4. Bàn giao</h4>
+                  <ul className="space-y-1.5 pl-4">
+                    <li className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
+                      <p>ĐiĐi Audio quay video bàn giao để xác nhận người nhận và tình trạng loa, micro, phụ kiện.</p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-cyan-400 mb-2">5. Hoàn cọc</h4>
+                  <ul className="space-y-1.5 pl-4">
+                    <li className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
+                      <p>Cọc được hoàn lại sau khi trả đủ thiết bị và kiểm tra không có mất mát hoặc hư hỏng.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <div>
