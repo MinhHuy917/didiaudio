@@ -207,15 +207,11 @@ const ProductList: React.FC = () => {
                   <ul className="space-y-1.5 pl-4">
                     <li className="flex items-start gap-2">
                       <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
-                      <p>Khách Việt: CCCD gốc hoặc VNeID mức 2.</p>
+                      <p>Khách Việt: Cọc CCCD gốc.</p>
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
-                      <p>Khách nước ngoài: Passport.</p>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
-                      <p>Shop chỉ chụp ảnh giấy tờ để xác minh thông tin, không giữ giấy tờ gốc.</p>
+                      <p>Khách nước ngoài: Cọc Passport gốc.</p>
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
@@ -233,27 +229,17 @@ const ProductList: React.FC = () => {
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
-                      <p>Khách Việt: cọc 3.000.000đ.</p>
+                      <p>Khách Việt: cọc 2.000.000đ.</p>
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
-                      <p>Khách nước ngoài: cọc 6.000.000đ.</p>
+                      <p>Khách nước ngoài: cọc 4.000.000đ.</p>
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-cyan-400 mb-2">3. Ký hợp đồng</h4>
-                  <ul className="space-y-1.5 pl-4">
-                    <li className="flex items-start gap-2">
-                      <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
-                      <p>Ký hợp đồng thuê loa trước khi nhận thiết bị.</p>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="font-bold text-cyan-400 mb-2">4. Bàn giao</h4>
+                  <h4 className="font-bold text-cyan-400 mb-2">3. Bàn giao</h4>
                   <ul className="space-y-1.5 pl-4">
                     <li className="flex items-start gap-2">
                       <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
@@ -263,7 +249,7 @@ const ProductList: React.FC = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-cyan-400 mb-2">5. Hoàn cọc</h4>
+                  <h4 className="font-bold text-cyan-400 mb-2">4. Hoàn cọc</h4>
                   <ul className="space-y-1.5 pl-4">
                     <li className="flex items-start gap-2">
                       <div className="w-1 h-1 rounded-full bg-gray-500 mt-2.5 shrink-0" />
