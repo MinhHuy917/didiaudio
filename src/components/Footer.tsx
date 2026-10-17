@@ -61,6 +61,18 @@ export function Footer() {
   return (
     <Container as="footer" className="mt-12 w-full sm:mt-16 lg:mt-20 bg-gradient-to-b from-black via-gray-900 to-black">
       <FadeIn>
+        <div className="mt-12 sm:mt-16 lg:mt-20 mb-12 rounded-2xl overflow-hidden shadow-lg border border-white/10 w-full h-[300px] sm:h-[400px]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15336.348734909721!2d108.15024628715824!3d16.060965000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421935304a993f%3A0x56bbafed0c339859!2zVGh1w6ogTG9hIEvDqW8gxJDDoCBO4bq1bmcgLSDEkGnEkGkgQXVkaW8!5e0!3m2!1svi!2s!4v1792200380493!5m2!1svi!2s"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen={false}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Bản đồ ĐiĐi Audio"
+          ></iframe>
+        </div>
         <div className="mt-12 sm:mt-16 lg:mt-20">
           <Navigation />
         </div>
