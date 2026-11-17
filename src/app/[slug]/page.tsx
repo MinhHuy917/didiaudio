@@ -14,23 +14,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   if (!article) return {}
 
   const canonicalUrl = `${SITE_URL}/${article.slug}`
-  const keywordSet = new Set<string>([
-    'thuê loa kéo đà nẵng',
-    'kinh nghiệm thuê loa kéo',
-    'mẹo setup karaoke',
-    article.slug.replaceAll('-', ' '),
-    ...article.title
-      .toLowerCase()
-      .replace(/[|,:()]/g, ' ')
-      .split(' ')
-      .filter((word) => word.length > 3)
-      .slice(0, 8),
-  ])
 
   return {
-    title: article.title,
+    title: { absolute: `${article.title} | ĐiĐi Audio` },
     description: article.description,
-    keywords: Array.from(keywordSet),
     alternates: {
       canonical: canonicalUrl,
     },

@@ -1,4 +1,4 @@
-import { type Metadata } from 'next'
+import { createPageMetadata } from '@/lib/seo'
 
 import { Blockquote } from '@/components/Blockquote'
 import { Container } from '@/components/Container'
@@ -28,8 +28,8 @@ function Section({
   return (
     <Container className="group/section [counter-increment:section]">
       <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
-        <div className="flex justify-center">
-          <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
+        <div className="flex min-w-0 flex-1 justify-center">
+          <FadeIn className="w-full max-w-[33.75rem] lg:max-w-[45rem]">
             <StylizedImage
               {...image}
               sizes="(min-width: 1024px) 41rem, 31rem"
@@ -166,10 +166,11 @@ function Values() {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'Thuê loa kéo Đà Nẵng giá rẻ - Cho thuê loa âm thanh chuyên nghiệp',
-  description: 'Dịch vụ cho thuê loa kéo Đà Nẵng uy tín, giao nhanh 30 phút. Loa kéo công suất lớn, âm thanh cực hay, micro không dây cao cấp. Thuê loa bluetooth, loa sự kiện giá tốt tại ĐiĐi Audio.',
-}
+export const metadata = createPageMetadata({
+  title: 'Về ĐiĐi Audio | Dịch vụ thuê loa tại Đà Nẵng',
+  description: 'Tìm hiểu ĐiĐi Audio và dịch vụ cho thuê loa tại Đà Nẵng. Xem thiết bị, cách liên hệ và trao đổi thông tin thuê trước khi xác nhận lịch.',
+  path: '/about-didiaudio',
+})
 
 export default function Aboutdidiaudio() {
   return (

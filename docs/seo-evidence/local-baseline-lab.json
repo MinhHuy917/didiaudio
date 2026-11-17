@@ -1,0 +1,62 @@
+{
+  "origin": "http://127.0.0.1:4174",
+  "startedAt": "2026-11-16T21:05:41.340Z",
+  "finishedAt": "2026-11-16T21:06:24.387Z",
+  "method": "Fresh context perroute/viewport; 3-second snapshot; no throttling; thirdparty requests blocked. Lab snapshots, not full CLS/session windows nor field CWV.",
+  "samples": [
+    {
+      "width": 1440,
+      "route": "/",
+      "lcpMs": 792,
+      "ttfbMs": 8,
+      "layoutShiftEntrySum": 0.0024392661179698217,
+      "maxLongTaskMs": 84,
+      "knownTransferBytes": 479754
+    },
+    {
+      "width": 1440,
+      "route": "/products/loa-jbl-partyBox-stage-320",
+      "lcpMs": 992,
+      "ttfbMs": 20.299999997019768,
+      "layoutShiftEntrySum": 0,
+      "maxLongTaskMs": 57,
+      "knownTransferBytes": 431085
+    },
+    {
+      "width": 1440,
+      "route": "/kinh-nghiem-chon-loa-keo-cho-tiec-gia-dinh",
+      "lcpMs": 208,
+      "ttfbMs": 5.600000001490116,
+      "layoutShiftEntrySum": 0,
+      "maxLongTaskMs": 0,
+      "knownTransferBytes": 398032
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "lcpMs": 968,
+      "ttfbMs": 15.600000001490116,
+      "layoutShiftEntrySum": 0,
+      "maxLongTaskMs": 73,
+      "knownTransferBytes": 422609
+    },
+    {
+      "width": 390,
+      "route": "/products/loa-jbl-partyBox-stage-320",
+      "lcpMs": 144,
+      "ttfbMs": 20.099999994039536,
+      "layoutShiftEntrySum": 0,
+      "maxLongTaskMs": 0,
+      "knownTransferBytes": 416160
+    },
+    {
+      "width": 390,
+      "route": "/kinh-nghiem-chon-loa-keo-cho-tiec-gia-dinh",
+      "lcpMs": 168,
+      "ttfbMs": 5.4000000059604645,
+      "layoutShiftEntrySum": 0,
+      "maxLongTaskMs": 55,
+      "knownTransferBytes": 387442
+    }
+  ]
+}

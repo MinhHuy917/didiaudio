@@ -1,6 +1,8 @@
 import { type Metadata } from 'next'
-import Script from 'next/script';
-import { Inter } from 'next/font/google';
+import Script from 'next/script'
+import { Inter } from 'next/font/google'
+
+import { seoSite, organizationSchema, jsonLd } from '@/lib/seo'
 
 import { RootLayout } from '@/components/RootLayout'
 
@@ -10,83 +12,29 @@ const inter = Inter({
   subsets: ['latin', 'vietnamese'],
   display: 'swap',
   variable: '--font-inter',
-});
-
-// export const metadata: Metadata = {
-//   title: {
-//     template: '%s | ĐiĐi Audio',
-//     default: 'ĐiĐi Audio',
-//   },
-// }
-
+})
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | ĐiĐi Audio - Cho thuê loa kéo Đà Nẵng',
-    default: 'ĐiĐi Audio - Cho thuê loa kéo Đà Nẵng, loa kéo giá rẻ, chất lượng',
+    template: '%s | ĐiĐi Audio',
+    default: 'ĐiĐi Audio | Dịch vụ thuê loa tại Đà Nẵng',
   },
   description:
-    'ĐiĐi Audio - Cho thuê loa kéo JBL chính hãng tại Đà Nẵng. Giao nhanh 30-60 phút, setup miễn phí, hỗ trợ 24/7. Phù hợp du lịch, cắm trại, sinh nhật, team building.',
-  keywords: [
-    'cho thuê loa kẹo kéo đà nẵng',
-    'cho thuê loa kéo đà nẵng',
-    'thuê loa kẹo kéo đà nẵng',
-    'thue loa keo da nang',
-    'dịch vụ cho thuê loa kéo Đà Nẵng',
-    'thuê loa kéo đà nẵng',
-    'thuê loa kéo kéo liên chiểu đà nẵng ',
-    'cho thuê loa kéo tại đà nẵng',
-    'cho thue loa keo da nang',
-    'cho thuê loa kẹo kéo tại đà nẵng',
-    'thuê loa kéo kéo liên chiểu đà nẵng',
-    'thuê loa kéo kéo thanh khê đà nẵng',
-    'thuê loa kéo kéo hải châu đà nẵng',
-  ],
-  openGraph: {
-    title: 'ĐiĐi Audio - Cho thuê loa kéo JBL chính hãng Đà Nẵng | Giao nhanh 30-60 phút',
-    description:
-      'Cho thuê loa kéo JBL chính hãng tại Đà Nẵng. Giao nhanh 30-60 phút, setup miễn phí, hỗ trợ 24/7. Phù hợp du lịch, cắm trại, sinh nhật, team building.',
-    url: 'https://www.didi-audio.com',
-    siteName: 'ĐiĐi Audio',
-    locale: 'vi_VN',
-    type: 'website',
-    images: [
-      {
-        url: 'https://www.didi-audio.com/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Cho thuê loa kéo Đà Nẵng - ĐiĐi Audio',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'ĐiĐi Audio - Cho thuê loa kéo Đà Nẵng, loa karaoke, loa bluetooth',
-    description:
-      'Dịch vụ cho thuê loa kéo uy tín tại Đà Nẵng, giao tận nơi, giá rẻ, hỗ trợ lắp đặt.',
-    images: ['https://www.didi-audio.com/og-image.jpg'],
-  },
-  metadataBase: new URL('https://www.didi-audio.com'),
-  alternates: {
-    canonical: 'https://www.didi-audio.com',
-  },
+    'ĐiĐi Audio cung cấp dịch vụ cho thuê loa tại Đà Nẵng. Xem thiết bị, giá theo ngày và liên hệ để xác nhận thông tin thuê.',
+  metadataBase: new URL(seoSite.url),
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-      'max-video-preview': -1,
-    },
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
   },
 }
 
-
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="vi" className={`h-full dark bg-audio-darker text-white antialiased ${inter.variable}`}>
+    <html
+      lang="vi"
+      className={`dark h-full bg-audio-darker text-white antialiased ${inter.variable}`}
+    >
       <head>
         {/* Google Ads */}
         <Script
@@ -134,26 +82,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
           strategy="lazyOnload"
         />
-        <Script id="organization-schema" type="application/ld+json" strategy="afterInteractive">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'ĐiĐi Audio',
-            url: 'https://www.didi-audio.com',
-            image: 'https://www.didi-audio.com/og-image.jpg',
-            telephone: '0339197917',
-            areaServed: 'Đà Nẵng',
-            priceRange: '50.000đ - 1.600.000đ',
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: 'Đà Nẵng',
-              addressCountry: 'VN',
-            },
-          })}
-        </Script>
-
-
-
+        <script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd(organizationSchema()) }}
+        />
       </head>
 
       <body className="flex min-h-full flex-col bg-audio-darker">
@@ -161,7 +94,5 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <RootLayout>{children}</RootLayout>
       </body>
     </html>
-
   )
 }
-

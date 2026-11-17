@@ -1,3 +1,7 @@
+import { products } from './products'
+
+const stage320 = products.find((product) => product.id === 'loa-jbl-partyBox-stage-320')
+
 export const faqs = [
     {
       question: 'Cho thuê loa kéo ở Đà Nẵng ở đâu uy tín, giá rẻ?',
@@ -12,7 +16,9 @@ export const faqs = [
     {
       question: 'Giá thuê loa kéo tại Đà Nẵng là bao nhiêu?',
       answer:
-        'Giá thuê loa kéo JBL PatyBox Stage 320 chỉ 390k/ngày',
+        stage320
+          ? `Giá thuê ${stage320.name} là ${stage320.price}k/ngày.`
+          : 'Liên hệ ĐiĐi Audio qua 0339 197 917 để xác nhận giá thuê loa hiện có.',
     },
     {
       question: 'Dịch vụ thuê loa có bao gồm giao hàng tận nơi và lắp đặt không?',
@@ -45,4 +51,3 @@ export const faqs = [
         'Bạn nên đặt trước ít nhất 2–3 ngày, đặc biệt vào cuối tuần hoặc mùa lễ hội để đảm bảo có loa đúng nhu cầu và không bị hết thiết bị.',
     },
   ]
-  

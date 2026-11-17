@@ -1,104 +1,47 @@
-import { type Metadata } from 'next'
+import { createPageMetadata, rentalServiceSchema, jsonLd } from '@/lib/seo'
 import dynamic from 'next/dynamic'
-
-import ImageSlider from '@/components/ImageSlider'
-import { FAQSchema } from '@/components/FAQ'
+import { articles } from '@/data/blog'
+import { RentalProcess } from '@/components/RentalProcess'
 
 const AboutSection = dynamic(() => import('@/components/AboutSection'))
-const FAQ = dynamic(() => import('@/components/FAQ').then(mod => mod.FAQ))
+const FAQ = dynamic(() => import('@/components/FAQ').then((mod) => mod.FAQ))
 const MenuContact = dynamic(() => import('@/components/MenuContact'))
 const ProductList = dynamic(() => import('@/components/ProductTable'))
 const Testimonials = dynamic(() => import('@/components/Testimonials'))
 const WhyUs = dynamic(() => import('@/components/WhyUs'))
-const SpecialNoticeBanner = dynamic(() => import('@/components/SpecialNoticeBanner'))
 const UseCaseSection = dynamic(() => import('@/components/UseCaseSection'))
 const BlogCamTrai = dynamic(() => import('@/components/BlogCamTrai'))
 
-
-export const metadata: Metadata = {
-  title: 'Cho Thuê Loa Kéo Đà Nẵng | cho thuê loa kẹo kéo đà nẵng | thuê loa kẹo kéo đà nẵng  ',
+export const metadata = createPageMetadata({
+  title: 'Thuê Loa Kẹo Kéo Đà Nẵng | Thuê Loa Kéo - ĐiĐi Audio',
   description:
-    'Cho thuê loa JBL chính hãng tại Đà Nẵng. Giao nhanh 30-60 phút, setup miễn phí, hỗ trợ 24/7. Phù hợp du lịch, cắm trại, sinh nhật, team building. Giá từ 50k/ngày.',
-  keywords: [
-    'cho thuê loa kẹo kéo đà nẵng',
-    'cho thuê loa kéo JBL đà nẵng',
-    'thuê loa kẹo kéo đà nẵng',
-    'cho thuê loa đà nẵng',
-    'thuê loa đà nẵng',
-    'thuê loa kéo kéo thanh khê đà nẵng',
-    'cho thuê loa kéo tại đà nẵng',
-    'cho thue loa keo da nang',
-    'thuê loa kéo kéo sơn trà đà nẵng',
-    'thuê loa kéo kéo đà nẵng',
-    'thuê loa kẹo kéo liên chiểu đà nẵng',
-    'thuê loa kẹo kéo hoà khánh đà nẵng',
-    'cho thuê loa kéo đà nẵng',
-    'thuê loa kéo đà nẵng',
-    'thuê loa kẹo kéo đà nẵng giá rẻ',
-    'cho thuê loa kéo JBL đà nẵng',
-    'thuê loa karaoke đà nẵng',
-    'cho thuê loa JBL chính hãng',
-    'dịch vụ cho thuê loa kéo đà nẵng',
-    'loa kéo JBL đà nẵng',
-    'thuê loa party đà nẵng',
-  ],
-  openGraph: {
-    title: 'Cho Thuê Loa Kéo Đà Nẵng | | Cho Thuê Loa Kẹo Kéo An Nhơn nẵng | Thuê Loa Kẹo Kéo Đà Nẵng',
-    description:
-      'Cho thuê loa kéo JBL chính hãng tại Đà Nẵng. Giao nhanh 30-60 phút, setup miễn phí, hỗ trợ 24/7. Phù hợp du lịch, cắm trại, sinh nhật, team building.',
-    url: 'https://www.didi-audio.com',
-    siteName: 'ĐiĐi Audio',
-    locale: 'vi_VN',
-    type: 'website',
-    images: [
-      {
-        url: 'https://www.didi-audio.com/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Cho thuê loa kéo Đà Nẵng - ĐiĐi Audio',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'ĐiĐi Audio - Cho thuê loa kéo JBL Đà Nẵng',
-    description: 'Dịch vụ cho thuê loa kéo JBL chính hãng, giao nhanh và hỗ trợ 24/7 tại Đà Nẵng.',
-    images: ['https://www.didi-audio.com/og-image.jpg'],
-  },
-  alternates: {
-    canonical: 'https://www.didi-audio.com',
-  },
-}
+    'ĐiĐi Audio cung cấp dịch vụ thuê loa kẹo kéo, loa kéo tại Đà Nẵng. Xem loa JBL PartyBox, giá thuê theo ngày và liên hệ tư vấn theo nhu cầu.',
+  path: '/',
+})
 
 export default async function Home() {
-  const localBusinessSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'ĐiĐi Audio',
-    image: 'https://www.didi-audio.com/og-image.jpg',
-    url: 'https://www.didi-audio.com',
-    telephone: '0339197917',
-    areaServed: 'Đà Nẵng',
-    sameAs: ['https://www.didi-audio.com'],
-  }
-
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(rentalServiceSchema()) }}
       />
-      {/* Hero Section - H1 sẽ được đặt trong HeroSection */}
-      {/* <ImageSlider /> */}
       <AboutSection />
-      {/* <SpecialNoticeBanner /> */}
       <ProductList />
+      <RentalProcess />
       <UseCaseSection />
       <WhyUs />
-      <BlogCamTrai />
+      <BlogCamTrai
+        articles={articles.map(({ slug, title, description, image, date }) => ({
+          slug,
+          title,
+          description,
+          image,
+          date,
+        }))}
+      />
       <Testimonials />
       <FAQ />
-      <FAQSchema />
       <MenuContact />
     </>
   )

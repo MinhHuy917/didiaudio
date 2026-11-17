@@ -1,13 +1,14 @@
-import { type Metadata } from 'next'
+import { createPageMetadata } from '@/lib/seo'
 import { landingPagesData } from '@/data/landing-pages'
 import InternationalLandingWrapper from '@/components/InternationalLandingWrapper'
 
-export const metadata: Metadata = {
-  title: 'Premium JBL Speaker Rental in Da Nang | Delivery in 30 mins',
-  description: 'Rent original JBL PartyBox speakers in Da Nang. Perfect for beach parties, pool villas, and BBQs. Fast delivery and easy setup. Contact via WhatsApp.',
-  keywords: ['speaker rental da nang', 'jbl rental da nang', 'bluetooth speaker da nang', 'party speaker da nang', 'rent speaker da nang'],
-}
+export const metadata = createPageMetadata({
+  title: 'JBL Speaker Rental in Da Nang | ĐiĐi Audio',
+  description: 'Explore JBL PartyBox speaker rental in Da Nang. View the current speaker, daily rental price and contact ĐiĐi Audio to confirm rental details.',
+  path: '/speaker-rental-da-nang',
+  locale: 'en_US',
+})
 
 export default function EnglishLandingPage() {
-  return <InternationalLandingWrapper content={landingPagesData.en} />
+  return <InternationalLandingWrapper language="en" content={landingPagesData.en} />
 }

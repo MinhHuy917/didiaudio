@@ -1,13 +1,14 @@
-import { type Metadata } from 'next'
+import { createPageMetadata } from '@/lib/seo'
 import { landingPagesData } from '@/data/landing-pages'
 import InternationalLandingWrapper from '@/components/InternationalLandingWrapper'
 
-export const metadata: Metadata = {
-  title: '岘港JBL音响租赁 | 高端蓝牙音箱 | 快速配送',
-  description: '在岘港租赁正品JBL PartyBox音箱。非常适合海滩派对、泳池别墅和烧烤。快速配送，轻松设置。通过WeChat联系。',
-  keywords: ['岘港音响租赁', '岘港蓝牙音箱', '岘港jbl租赁', '岘港派对音响', '岘港租音响'],
-}
+export const metadata = createPageMetadata({
+  title: '岘港 JBL 音箱租赁 | ĐiĐi Audio',
+  description: '了解岘港 JBL PartyBox 音箱租赁信息，查看现有型号、每日租金和联系方式，并向 ĐiĐi Audio 确认租赁日期及相关细节。',
+  path: '/speaker-rental-da-nang-zh',
+  locale: 'zh_CN',
+})
 
 export default function ChineseLandingPage() {
-  return <InternationalLandingWrapper content={landingPagesData.zh} />
+  return <InternationalLandingWrapper language="zh" content={landingPagesData.zh} />
 }

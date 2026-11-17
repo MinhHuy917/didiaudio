@@ -245,8 +245,8 @@ const buildSeoArticleContent = (article: Article, index: number, allArticles: Ar
 
     <h2>Gợi ý internal link để tăng trải nghiệm đọc và SEO</h2>
     <ul>
-      <li>Xem toàn bộ chuyên mục: <a href="/blog">/blog</a></li>
-      ${related.map((item) => `<li>Bài liên quan: <a href="/blog/${item.slug}">${item.title}</a></li>`).join('\n')}
+      <li>Xem toàn bộ chuyên mục: <a href="/#blog">Danh sách bài viết</a></li>
+      ${related.map((item) => `<li>Bài liên quan: <a href="/${item.slug}">${item.title}</a></li>`).join('\n')}
     </ul>
 
     <h2>Kết luận</h2>

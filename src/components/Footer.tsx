@@ -1,23 +1,28 @@
 import Link from 'next/link'
 import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
-import { socialMediaProfiles, socialMediaProfilesV2 } from '@/components/SocialMedia'
+import {
+  socialMediaProfiles,
+  socialMediaProfilesV2,
+} from '@/components/SocialMedia'
 import logo from '@/images/logo.png'
 import Image from 'next/image'
 import { Music, Phone, MapPin } from 'lucide-react'
 
 const navigation = [
   {
-    title: "Liên Hệ",
+    title: 'Liên Hệ',
     links: [
-      { title: "Phone: 0339197917", href: "tel:0339197917" },
-      { title: "Messenger", href: "//m.me/thueloakeodanang.didiaudio" },
+      { title: 'Phone: 0339197917', href: 'tel:0339197917' },
+      { title: 'Messenger', href: '//m.me/thueloakeodanang.didiaudio' },
     ],
   },
   {
-    title: "Thông Tin Cửa Hàng",
+    title: 'Thông Tin Cửa Hàng',
     links: [
-      { title: "43 Tống Duy Tân, Quận Liên Chiểu, TP. Đà Nẵng", href: "https://maps.app.goo.gl/xtErkxmAs9pYEY1B9" },
+      {
+        title: '41 Tống Duy Tân, Đà Nẵng',
+        href: 'https://www.google.com/maps/search/?api=1&query=41+T%E1%BB%91ng+Duy+T%C3%A2n%2C+%C4%90%C3%A0+N%E1%BA%B5ng',
+      },
     ],
   },
   {
@@ -33,7 +38,7 @@ const navigation = [
 function Navigation() {
   return (
     <nav>
-      <ul role="list" className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <ul role="list" className="grid grid-cols-2 gap-8 lg:grid-cols-4">
         {navigation.map((section, sectionIndex) => (
           <li key={sectionIndex}>
             <ul role="list" className="space-y-3">
@@ -41,10 +46,14 @@ function Navigation() {
                 <li key={linkIndex}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2"
+                    className="flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-cyan-400"
                   >
-                    {linkIndex === 0 && sectionIndex === 0 && <Phone className="w-4 h-4" />}
-                    {linkIndex === 0 && sectionIndex === 1 && <MapPin className="w-4 h-4" />}
+                    {linkIndex === 0 && sectionIndex === 0 && (
+                      <Phone className="h-4 w-4" />
+                    )}
+                    {linkIndex === 0 && sectionIndex === 1 && (
+                      <MapPin className="h-4 w-4" />
+                    )}
                     {link.title}
                   </Link>
                 </li>
@@ -59,11 +68,14 @@ function Navigation() {
 
 export function Footer() {
   return (
-    <Container as="footer" className="mt-12 w-full sm:mt-16 lg:mt-20 bg-gradient-to-b from-black via-gray-900 to-black">
-      <FadeIn>
-        <div className="mt-12 sm:mt-16 lg:mt-20 mb-12 rounded-2xl overflow-hidden shadow-lg border border-white/10 w-full h-[300px] sm:h-[400px]">
+    <Container
+      as="footer"
+      className="mt-12 w-full bg-gradient-to-b from-black via-gray-900 to-black sm:mt-16 lg:mt-20"
+    >
+      <div>
+        <div className="mb-12 mt-12 h-[300px] w-full overflow-hidden rounded-2xl border border-white/10 shadow-lg sm:mt-16 sm:h-[400px] lg:mt-20">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15336.348734909721!2d108.15024628715824!3d16.060965000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421935304a993f%3A0x56bbafed0c339859!2zVGh1w6ogTG9hIEvDqW8gxJDDoCBO4bq1bmcgLSDEkGnEkGkgQXVkaW8!5e0!3m2!1svi!2s!4v1792200380493!5m2!1svi!2s"
+            src="https://www.google.com/maps?q=41+T%E1%BB%91ng+Duy+T%C3%A2n%2C+%C4%90%C3%A0+N%E1%BA%B5ng&amp;output=embed"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -74,32 +86,73 @@ export function Footer() {
           ></iframe>
         </div>
         <div className="mt-12 sm:mt-16 lg:mt-20">
+          <nav
+            aria-label="Các trang ngôn ngữ"
+            className="mb-8 flex flex-wrap gap-4 text-sm text-gray-300"
+          >
+            <Link
+              href="/speaker-rental-da-nang"
+              lang="en"
+              className="inline-flex min-h-11 items-center underline"
+            >
+              English
+            </Link>
+            <Link
+              href="/speaker-rental-da-nang-ko"
+              lang="ko"
+              className="inline-flex min-h-11 items-center underline"
+            >
+              한국어
+            </Link>
+            <Link
+              href="/speaker-rental-da-nang-ru"
+              lang="ru"
+              className="inline-flex min-h-11 items-center underline"
+            >
+              Русский
+            </Link>
+            <Link
+              href="/speaker-rental-da-nang-zh"
+              lang="zh"
+              className="inline-flex min-h-11 items-center underline"
+            >
+              中文
+            </Link>
+          </nav>
           <Navigation />
         </div>
         <div className="mb-40 mt-24 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-white/10 pt-12">
-          <Link href="/" aria-label="Home" className="block group">
-            <Image 
-                  src={logo} 
-                  alt="ĐiĐi Audio"
-                  width={60}
-                  height={60}
-                  className="w-auto object-cover "
-                  priority
-                />
+          <Link href="/" aria-label="Home" className="group block">
+            <Image
+              src={logo}
+              alt="ĐiĐi Audio"
+              width={60}
+              height={60}
+              className="w-auto object-cover "
+              priority
+            />
           </Link>
-          <div className="flex flex-col items-start sm:items-end gap-2 mt-4 sm:mt-0">
+          <div className="mt-4 flex flex-col items-start gap-2 sm:mt-0 sm:items-end">
             <div className="flex items-center gap-2">
-              <Music className="w-4 h-4 text-cyan-400" />
+              <Music className="h-4 w-4 text-cyan-400" />
               <p className="text-sm text-gray-300">
                 © ĐiĐi Audio {new Date().getFullYear()}
               </p>
             </div>
-            <p className="text-xs sm:text-sm text-gray-500 sm:text-right mt-1">
-              Website được thiết kế & phát triển bởi <a href="https://huyseolocal.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors">huyseolocal.com</a>
+            <p className="mt-1 text-xs text-gray-500 sm:text-right sm:text-sm">
+              Website được thiết kế & phát triển bởi{' '}
+              <a
+                href="https://huyseolocal.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 transition-colors hover:text-cyan-400"
+              >
+                huyseolocal.com
+              </a>
             </p>
           </div>
         </div>
-      </FadeIn>
+      </div>
     </Container>
   )
 }

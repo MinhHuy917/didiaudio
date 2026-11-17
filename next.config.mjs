@@ -23,6 +23,16 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'didi-audio.com' }],
+        destination: 'https://www.didi-audio.com/:path*',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 function remarkMDXLayout(source, metaName) {
@@ -80,7 +90,9 @@ export default async function config() {
             [[remarkMDXLayout, '@/app/blog/wrapper', 'article']],
           ],
           [
-            new RegExp(`^${escapeStringRegexp(path.resolve('src/app/dia-diem-cam-trai'))}`),
+            new RegExp(
+              `^${escapeStringRegexp(path.resolve('src/app/dia-diem-cam-trai'))}`,
+            ),
             [[remarkMDXLayout, '@/app/dia-diem-cam-trai/wrapper', 'caseStudy']],
           ],
         ],

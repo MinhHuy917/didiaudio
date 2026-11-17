@@ -2,12 +2,26 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
-import { articles } from '@/data/blog'
-import { Music, Play, Calendar, ArrowLeft, ArrowRight, Sparkles } from 'lucide-react'
+import {
+  Music,
+  Play,
+  Calendar,
+  ArrowLeft,
+  ArrowRight,
+  Sparkles,
+} from 'lucide-react'
 
 const ITEMS_PER_PAGE = 6
 
-export default function BlogCamTrai() {
+type ArticleCard = {
+  slug: string
+  title: string
+  description: string
+  image: string
+  date: string
+}
+
+export default function BlogCamTrai({ articles }: { articles: ArticleCard[] }) {
   const [currentPage, setCurrentPage] = useState(1)
 
   const totalPages = Math.ceil(articles.length / ITEMS_PER_PAGE)
@@ -54,22 +68,35 @@ export default function BlogCamTrai() {
       <div className="mx-auto max-w-7xl px-4 pb-12 pt-10 sm:px-6 sm:pb-14 sm:pt-16 lg:px-8">
         <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-xl sm:p-8">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-            <div className="space-y-4 max-w-3xl">
+            <div className="max-w-3xl space-y-4">
               <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-2">
                 <Sparkles className="h-4 w-4 text-cyan-300" />
-                <span className="text-xs font-semibold text-cyan-100 sm:text-sm">Blog cao cấp • Mẹo thuê loa thực chiến</span>
+                <span className="text-xs font-semibold text-cyan-100 sm:text-sm">
+                  Blog cao cấp • Mẹo thuê loa thực chiến
+                </span>
               </div>
-              <h2 id="blog-heading" className="text-2xl font-black leading-tight sm:text-4xl lg:text-5xl">
+              <h2
+                id="blog-heading"
+                className="text-2xl font-black leading-tight sm:text-4xl lg:text-5xl"
+              >
                 <span className="bg-gradient-to-r from-cyan-300 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Blog âm thanh xịn xò,
                 </span>{' '}
                 <span className="text-white">đọc là áp dụng được ngay</span>
               </h2>
               <p className="max-w-2xl text-sm leading-relaxed text-gray-300 sm:text-base sm:leading-7">
-                Tổng hợp các bài hướng dẫn dễ hiểu cho người mới: chọn loa đúng nhu cầu, setup nhanh trong 10 phút, tối ưu karaoke ngoài trời và tránh lỗi hú mic.
+                Tổng hợp các bài hướng dẫn dễ hiểu cho người mới: chọn loa đúng
+                nhu cầu, setup nhanh trong 10 phút, tối ưu karaoke ngoài trời và
+                tránh lỗi hú mic.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['Chọn loa', 'Setup nhanh', 'Karaoke', 'Dã ngoại', 'Party'].map((tag) => (
+                {[
+                  'Chọn loa',
+                  'Setup nhanh',
+                  'Karaoke',
+                  'Dã ngoại',
+                  'Party',
+                ].map((tag) => (
                   <span
                     key={tag}
                     className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-gray-200 sm:text-sm"
@@ -112,7 +139,9 @@ export default function BlogCamTrai() {
                 <div className="absolute bottom-4 left-4 right-4 z-10 space-y-2">
                   <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-2.5 py-1 text-xs text-gray-200">
                     <Calendar className="h-3.5 w-3.5 text-cyan-300" />
-                    <span>{new Date(article.date).toLocaleDateString('vi-VN')}</span>
+                    <span>
+                      {new Date(article.date).toLocaleDateString('vi-VN')}
+                    </span>
                   </div>
                   <h3 className="line-clamp-2 text-base font-bold leading-snug text-white drop-shadow-lg sm:text-lg">
                     {article.title}
@@ -121,7 +150,9 @@ export default function BlogCamTrai() {
               </div>
 
               <div className="space-y-3 p-5">
-                <p className="line-clamp-3 text-sm leading-relaxed text-gray-300">{article.description}</p>
+                <p className="line-clamp-3 text-sm leading-relaxed text-gray-300">
+                  {article.description}
+                </p>
                 <span className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-300">
                   Đọc bài này
                   <ArrowRight className="h-4 w-4" />
@@ -152,7 +183,10 @@ export default function BlogCamTrai() {
                   {getPageNumbers().map((page, index) => {
                     if (page === '...') {
                       return (
-                        <span key={`ellipsis-${index}`} className="px-1.5 text-sm text-gray-500">
+                        <span
+                          key={`ellipsis-${index}`}
+                          className="px-1.5 text-sm text-gray-500"
+                        >
                           ...
                         </span>
                       )
@@ -195,6 +229,23 @@ export default function BlogCamTrai() {
             </p>
           </div>
         )}
+        <details className="mt-6 rounded-xl border border-white/10 p-4">
+          <summary className="min-h-11 cursor-pointer py-2 font-semibold text-cyan-200">
+            Xem tất cả bài viết
+          </summary>
+          <ul className="mt-4 grid gap-x-6 sm:grid-cols-2">
+            {articles.map((article) => (
+              <li key={article.slug}>
+                <Link
+                  href={`/${article.slug}`}
+                  className="flex min-h-11 items-center py-2 text-sm text-gray-200 underline underline-offset-4"
+                >
+                  {article.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </details>
       </div>
     </section>
   )

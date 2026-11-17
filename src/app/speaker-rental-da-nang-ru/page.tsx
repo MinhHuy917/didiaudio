@@ -1,13 +1,14 @@
-import { type Metadata } from 'next'
+import { createPageMetadata } from '@/lib/seo'
 import { landingPagesData } from '@/data/landing-pages'
 import InternationalLandingWrapper from '@/components/InternationalLandingWrapper'
 
-export const metadata: Metadata = {
-  title: 'Аренда колонок JBL в Дананге | Премиум Bluetooth колонки',
-  description: 'Аренда оригинальных колонок JBL PartyBox в Дананге. Идеально для пляжных вечеринок, вилл с бассейном и барбекю. Быстрая доставка. Пишите в Telegram.',
-  keywords: ['аренда колонок дананг', 'bluetooth колонка дананг', 'аренда jbl дананг', 'колонки для вечеринки дананг', 'прокат звука дананг'],
-}
+export const metadata = createPageMetadata({
+  title: 'Аренда колонок JBL в Дананге | ĐiĐi Audio',
+  description: 'Информация об аренде колонок JBL PartyBox в Дананге: модель, стоимость аренды за день и контакты ĐiĐi Audio для уточнения условий и дат аренды.',
+  path: '/speaker-rental-da-nang-ru',
+  locale: 'ru_RU',
+})
 
 export default function RussianLandingPage() {
-  return <InternationalLandingWrapper content={landingPagesData.ru} />
+  return <InternationalLandingWrapper language="ru" content={landingPagesData.ru} />
 }

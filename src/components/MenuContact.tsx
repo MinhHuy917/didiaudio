@@ -150,7 +150,7 @@ export default function MenuContact() {
               </Link>
 
               <Link
-                href="https://www.google.com/maps/dir//43+Tống+Duy+Tân,+Liên+Chiểu,+Đà+Nẵng"
+                href="https://www.google.com/maps/dir//41+Tống+Duy+Tân,+Đà+Nẵng"
                 target="_blank"
                 className="group relative flex items-center gap-x-4 rounded-xl p-3 hover:bg-audio-light/30 transition-all border border-audio-electricBlue/10"
               >
@@ -159,7 +159,7 @@ export default function MenuContact() {
                 </div>
                 <div>
                   <span className="font-sans font-bold text-white text-sm">Địa điểm cửa hàng</span>
-                  <p className="text-xs text-white">43 Tống Duy Tân, Liên Chiểu</p>
+                  <p className="text-xs text-white">41 Tống Duy Tân, Đà Nẵng</p>
                 </div>
               </Link>
             </div>
@@ -194,7 +194,7 @@ export default function MenuContact() {
           bgColor="bg-[#25D366]"
         />
         <DesktopMenuItem
-          href="https://www.google.com/maps/dir//43+Tống+Duy+Tân,+Liên+Chiểu,+Đà+Nẵng"
+          href="https://www.google.com/maps/dir//41+Tống+Duy+Tân,+Đà+Nẵng"
           icon={<Image src={iconMaps} alt="Bản Đồ" width={24} height={24} className="w-8 h-8" />}
           label="Bản Đồ"
           bgColor="bg-white text-black"

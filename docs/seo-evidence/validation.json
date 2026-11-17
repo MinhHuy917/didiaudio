@@ -1,0 +1,22 @@
+{
+  "startedAt": "2026-11-17T04:24:20.756Z",
+  "checks": [
+    "crawl completed with 56 HTML pages, three bot samples, 12 browser samples and no collection errors",
+    "JSON-LD serialization preserves Vietnamese text and escapes script-breaking markup",
+    "all 56 preserved URLs return200, self-canonical, unique title and one H1 in raw HTML",
+    "raw JSON-LD has one verified LocalBusiness, no fabricated ratings/hours/stock or FAQ rich-result markup",
+    "all internal page/anchor links resolve and all56 URLs are reachable from homepage raw link graph",
+    "sitemap only includes the canonical56 pages and robots allows crawl without redirect/noindex/error URLs",
+    "unknown product and unknown slug return real404 with noindex",
+    "Googlebot-UA simulation receives same title/canonical/H1 without crawler-only content",
+    "no-JS home exposes visible H1 and non-transparent current price",
+    "application non-www redirect is permanent and preserves path/query in one hop",
+    "responsive, current NAP, contact hrefs and gallery regression 360",
+    "responsive, current NAP, contact hrefs and gallery regression 390",
+    "responsive, current NAP, contact hrefs and gallery regression 768",
+    "responsive, current NAP, contact hrefs and gallery regression 1440",
+    "no browser runtime errors"
+  ],
+  "errors": [],
+  "finishedAt": "2026-11-17T04:24:50.197Z"
+}

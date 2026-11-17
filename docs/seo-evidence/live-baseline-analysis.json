@@ -1,0 +1,920 @@
+{
+  "timestamp": "2026-11-16T21:03:46.634Z",
+  "intendedPageCount": 56,
+  "rawCrawled": 56,
+  "missingH1": [
+    "/"
+  ],
+  "multipleH1": [],
+  "missingDescription": [],
+  "nonSelfCanonical": [
+    {
+      "route": "/speaker-rental-da-nang-ko",
+      "canonical": [
+        "https://www.didi-audio.com"
+      ]
+    },
+    {
+      "route": "/speaker-rental-da-nang",
+      "canonical": [
+        "https://www.didi-audio.com"
+      ]
+    },
+    {
+      "route": "/about-didiaudio",
+      "canonical": [
+        "https://www.didi-audio.com"
+      ]
+    },
+    {
+      "route": "/speaker-rental-da-nang-zh",
+      "canonical": [
+        "https://www.didi-audio.com"
+      ]
+    },
+    {
+      "route": "/speaker-rental-da-nang-ru",
+      "canonical": [
+        "https://www.didi-audio.com"
+      ]
+    },
+    {
+      "route": "/products/loa-jbl-partyBox-stage-320",
+      "canonical": [
+        "https://www.didi-audio.com"
+      ]
+    }
+  ],
+  "canonicalGroups": [
+    {
+      "canonical": "https://www.didi-audio.com",
+      "pages": [
+        "/",
+        "/speaker-rental-da-nang-ko",
+        "/speaker-rental-da-nang",
+        "/about-didiaudio",
+        "/speaker-rental-da-nang-zh",
+        "/speaker-rental-da-nang-ru",
+        "/products/loa-jbl-partyBox-stage-320"
+      ]
+    }
+  ],
+  "unknownInternalTargets": [
+    {
+      "route": "/blog/meo-choi-nhac-ngoai-troi-khong-mat-tieng",
+      "occurrences": 18,
+      "status": 404
+    },
+    {
+      "route": "/blog/bang-gia-thue-loa-keo-jbl-da-nang-2024",
+      "occurrences": 18,
+      "status": 404
+    },
+    {
+      "route": "/blog/setup-karaoke-5-phut-voi-loa-keo-jbl",
+      "occurrences": 12,
+      "status": 404
+    },
+    {
+      "route": "/blog",
+      "occurrences": 49,
+      "status": 404
+    },
+    {
+      "route": "/blog/chon-micro-khong-day-hat-karaoke-hay",
+      "occurrences": 18,
+      "status": 404
+    },
+    {
+      "route": "/blog/checklist-thue-loa-keo-truoc-su-kien",
+      "occurrences": 18,
+      "status": 404
+    },
+    {
+      "route": "/blog/loa-keo-cho-sinh-nhat-tai-nha",
+      "occurrences": 18,
+      "status": 404
+    },
+    {
+      "route": "/blog/chon-loa-keo-cho-restaurant-cafe-live-music",
+      "occurrences": 18,
+      "status": 404
+    },
+    {
+      "route": "/blog/ghep-doi-nhieu-loa-jbl-bang-auracast",
+      "occurrences": 13,
+      "status": 404
+    },
+    {
+      "route": "/blog/meo-hat-karaoke-it-met-hoi",
+      "occurrences": 7,
+      "status": 404
+    },
+    {
+      "route": "/blog/chon-loa-keo-cho-team-building-50-nguoi",
+      "occurrences": 1,
+      "status": 404
+    },
+    {
+      "route": "/blog/kinh-nghiem-chon-loa-keo-cho-tiec-gia-dinh",
+      "occurrences": 6,
+      "status": 404
+    }
+  ],
+  "missingAnchors": [
+    {
+      "source": "/",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/",
+      "target": "/#promos"
+    },
+    {
+      "source": "/speaker-rental-da-nang-ko",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/speaker-rental-da-nang-ko",
+      "target": "/#promos"
+    },
+    {
+      "source": "/speaker-rental-da-nang",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/speaker-rental-da-nang",
+      "target": "/#promos"
+    },
+    {
+      "source": "/about-didiaudio",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/about-didiaudio",
+      "target": "/#promos"
+    },
+    {
+      "source": "/kinh-nghiem-chon-loa-keo-cho-tiec-gia-dinh",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/kinh-nghiem-chon-loa-keo-cho-tiec-gia-dinh",
+      "target": "/#promos"
+    },
+    {
+      "source": "/speaker-rental-da-nang-zh",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/speaker-rental-da-nang-zh",
+      "target": "/#promos"
+    },
+    {
+      "source": "/speaker-rental-da-nang-ru",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/speaker-rental-da-nang-ru",
+      "target": "/#promos"
+    },
+    {
+      "source": "/products/loa-jbl-partyBox-stage-320",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/products/loa-jbl-partyBox-stage-320",
+      "target": "/#promos"
+    },
+    {
+      "source": "/bang-gia-thue-loa-keo-jbl-da-nang-2024",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/bang-gia-thue-loa-keo-jbl-da-nang-2024",
+      "target": "/#promos"
+    },
+    {
+      "source": "/setup-karaoke-5-phut-voi-loa-keo-jbl",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/setup-karaoke-5-phut-voi-loa-keo-jbl",
+      "target": "/#promos"
+    },
+    {
+      "source": "/meo-choi-nhac-ngoai-troi-khong-mat-tieng",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/meo-choi-nhac-ngoai-troi-khong-mat-tieng",
+      "target": "/#promos"
+    },
+    {
+      "source": "/chon-micro-khong-day-hat-karaoke-hay",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/chon-micro-khong-day-hat-karaoke-hay",
+      "target": "/#promos"
+    },
+    {
+      "source": "/checklist-thue-loa-keo-truoc-su-kien",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/checklist-thue-loa-keo-truoc-su-kien",
+      "target": "/#promos"
+    },
+    {
+      "source": "/loa-keo-cho-sinh-nhat-tai-nha",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/loa-keo-cho-sinh-nhat-tai-nha",
+      "target": "/#promos"
+    },
+    {
+      "source": "/ghep-doi-nhieu-loa-jbl-bang-auracast",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/ghep-doi-nhieu-loa-jbl-bang-auracast",
+      "target": "/#promos"
+    },
+    {
+      "source": "/chon-loa-keo-cho-restaurant-cafe-live-music",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/chon-loa-keo-cho-restaurant-cafe-live-music",
+      "target": "/#promos"
+    },
+    {
+      "source": "/chong-hu-micro-loa-keo",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/chong-hu-micro-loa-keo",
+      "target": "/#promos"
+    },
+    {
+      "source": "/chon-loa-keo-cho-team-building-50-nguoi",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/chon-loa-keo-cho-team-building-50-nguoi",
+      "target": "/#promos"
+    },
+    {
+      "source": "/meo-hat-karaoke-it-met-hoi",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/meo-hat-karaoke-it-met-hoi",
+      "target": "/#promos"
+    },
+    {
+      "source": "/bao-quan-loa-keo-sau-su-dung",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/bao-quan-loa-keo-sau-su-dung",
+      "target": "/#promos"
+    },
+    {
+      "source": "/cham-soc-pin-loa-keo-de-khong-chai",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/cham-soc-pin-loa-keo-de-khong-chai",
+      "target": "/#promos"
+    },
+    {
+      "source": "/chon-loa-keo-cho-lop-hoc-yoga-dance",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/chon-loa-keo-cho-lop-hoc-yoga-dance",
+      "target": "/#promos"
+    },
+    {
+      "source": "/loa-keo-cho-du-lich-da-ngoai",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/loa-keo-cho-du-lich-da-ngoai",
+      "target": "/#promos"
+    },
+    {
+      "source": "/ket-noi-loa-keo-voi-tivi-xem-phim-hat-karaoke",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/ket-noi-loa-keo-voi-tivi-xem-phim-hat-karaoke",
+      "target": "/#promos"
+    },
+    {
+      "source": "/huong-dan-dung-mixer-kem-loa-keo",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/huong-dan-dung-mixer-kem-loa-keo",
+      "target": "/#promos"
+    },
+    {
+      "source": "/meo-chinh-eq-cho-nhac-vang-nhac-tre",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/meo-chinh-eq-cho-nhac-vang-nhac-tre",
+      "target": "/#promos"
+    },
+    {
+      "source": "/chon-loa-keo-cho-phong-gym",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/chon-loa-keo-cho-phong-gym",
+      "target": "/#promos"
+    },
+    {
+      "source": "/ket-noi-micro-co-day-vao-loa-keo",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/ket-noi-micro-co-day-vao-loa-keo",
+      "target": "/#promos"
+    },
+    {
+      "source": "/bao-hanh-va-bao-tri-loa-keo-khi-thue",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/bao-hanh-va-bao-tri-loa-keo-khi-thue",
+      "target": "/#promos"
+    },
+    {
+      "source": "/chon-loa-keo-cho-quay-roadshow",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/chon-loa-keo-cho-quay-roadshow",
+      "target": "/#promos"
+    },
+    {
+      "source": "/thu-loa-truoc-khi-thue-5-phut",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/thu-loa-truoc-khi-thue-5-phut",
+      "target": "/#promos"
+    },
+    {
+      "source": "/top-5-bai-test-loa-keo-khi-thu-am-thanh",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/top-5-bai-test-loa-keo-khi-thu-am-thanh",
+      "target": "/#promos"
+    },
+    {
+      "source": "/ket-noi-nhac-cu-guitar-voi-loa-keo",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/ket-noi-nhac-cu-guitar-voi-loa-keo",
+      "target": "/#promos"
+    },
+    {
+      "source": "/huong-dan-dung-echo-de-hat-khong-bi-loang",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/huong-dan-dung-echo-de-hat-khong-bi-loang",
+      "target": "/#promos"
+    },
+    {
+      "source": "/chon-loa-keo-cho-lop-hoc-ngoai-troi",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/chon-loa-keo-cho-lop-hoc-ngoai-troi",
+      "target": "/#promos"
+    },
+    {
+      "source": "/su-khac-nhau-giua-loa-keo-va-loa-partybox",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/su-khac-nhau-giua-loa-keo-va-loa-partybox",
+      "target": "/#promos"
+    },
+    {
+      "source": "/huong-dan-ve-sinh-loa-keo",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/huong-dan-ve-sinh-loa-keo",
+      "target": "/#promos"
+    },
+    {
+      "source": "/cach-dat-loa-de-bass-day-hon",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/cach-dat-loa-de-bass-day-hon",
+      "target": "/#promos"
+    },
+    {
+      "source": "/phong-tranh-loa-bi-nong-khi-chay-lau",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/phong-tranh-loa-bi-nong-khi-chay-lau",
+      "target": "/#promos"
+    },
+    {
+      "source": "/kiem-tra-phu-kien-loa-keo-truoc-khi-nhan",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/kiem-tra-phu-kien-loa-keo-truoc-khi-nhan",
+      "target": "/#promos"
+    },
+    {
+      "source": "/tai-sao-nen-chon-loa-jbl-chinh-hang-khi-thue",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/tai-sao-nen-chon-loa-jbl-chinh-hang-khi-thue",
+      "target": "/#promos"
+    },
+    {
+      "source": "/huong-dan-dat-lich-thue-loa-online",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/huong-dan-dat-lich-thue-loa-online",
+      "target": "/#promos"
+    },
+    {
+      "source": "/ket-noi-loa-keo-voi-phan-mem-hat-karaoke",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/ket-noi-loa-keo-voi-phan-mem-hat-karaoke",
+      "target": "/#promos"
+    },
+    {
+      "source": "/chon-loa-keo-cho-phong-thu-nho",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/chon-loa-keo-cho-phong-thu-nho",
+      "target": "/#promos"
+    },
+    {
+      "source": "/loi-thuong-gap-khi-dung-loa-keo-va-cach-khac-phuc",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/loi-thuong-gap-khi-dung-loa-keo-va-cach-khac-phuc",
+      "target": "/#promos"
+    },
+    {
+      "source": "/cach-chon-nhac-nen-cho-party-ngoai-troi",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/cach-chon-nhac-nen-cho-party-ngoai-troi",
+      "target": "/#promos"
+    },
+    {
+      "source": "/nen-thue-hay-mua-loa-keo",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/nen-thue-hay-mua-loa-keo",
+      "target": "/#promos"
+    },
+    {
+      "source": "/giu-am-thanh-on-dinh-khi-troi-mua",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/giu-am-thanh-on-dinh-khi-troi-mua",
+      "target": "/#promos"
+    },
+    {
+      "source": "/chon-loa-keo-cho-lop-hoc-ngoai-ngu",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/chon-loa-keo-cho-lop-hoc-ngoai-ngu",
+      "target": "/#promos"
+    },
+    {
+      "source": "/am-thanh-cho-le-cuoi-tai-nha",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/am-thanh-cho-le-cuoi-tai-nha",
+      "target": "/#promos"
+    },
+    {
+      "source": "/ket-noi-loa-keo-voi-laptop-trinh-chieu",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/ket-noi-loa-keo-voi-laptop-trinh-chieu",
+      "target": "/#promos"
+    },
+    {
+      "source": "/huong-dan-ghi-am-nhanh-voi-loa-keo-va-dien-thoai",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/huong-dan-ghi-am-nhanh-voi-loa-keo-va-dien-thoai",
+      "target": "/#promos"
+    },
+    {
+      "source": "/kiem-soat-am-luong-khi-co-tre-em",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/kiem-soat-am-luong-khi-co-tre-em",
+      "target": "/#promos"
+    },
+    {
+      "source": "/huong-dan-update-firmware-loa-jbl",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/huong-dan-update-firmware-loa-jbl",
+      "target": "/#promos"
+    },
+    {
+      "source": "/bat-kenh-uhf-micro-tranh-nhieu",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/bat-kenh-uhf-micro-tranh-nhieu",
+      "target": "/#promos"
+    },
+    {
+      "source": "/cach-dung-den-led-tren-loa-partybox",
+      "target": "/#chinh-sach"
+    },
+    {
+      "source": "/cach-dung-den-led-tren-loa-partybox",
+      "target": "/#promos"
+    }
+  ],
+  "reachableFromHomeViaRawLinks": [
+    "/",
+    "/about-didiaudio",
+    "/products/loa-jbl-partyBox-stage-320",
+    "/kinh-nghiem-chon-loa-keo-cho-tiec-gia-dinh",
+    "/setup-karaoke-5-phut-voi-loa-keo-jbl",
+    "/bang-gia-thue-loa-keo-jbl-da-nang-2024",
+    "/meo-choi-nhac-ngoai-troi-khong-mat-tieng",
+    "/chon-micro-khong-day-hat-karaoke-hay",
+    "/checklist-thue-loa-keo-truoc-su-kien"
+  ],
+  "notReachableFromHomeViaRawLinks": [
+    "/speaker-rental-da-nang-ko",
+    "/speaker-rental-da-nang",
+    "/speaker-rental-da-nang-zh",
+    "/speaker-rental-da-nang-ru",
+    "/loa-keo-cho-sinh-nhat-tai-nha",
+    "/ghep-doi-nhieu-loa-jbl-bang-auracast",
+    "/chon-loa-keo-cho-restaurant-cafe-live-music",
+    "/chong-hu-micro-loa-keo",
+    "/chon-loa-keo-cho-team-building-50-nguoi",
+    "/meo-hat-karaoke-it-met-hoi",
+    "/bao-quan-loa-keo-sau-su-dung",
+    "/cham-soc-pin-loa-keo-de-khong-chai",
+    "/chon-loa-keo-cho-lop-hoc-yoga-dance",
+    "/loa-keo-cho-du-lich-da-ngoai",
+    "/ket-noi-loa-keo-voi-tivi-xem-phim-hat-karaoke",
+    "/huong-dan-dung-mixer-kem-loa-keo",
+    "/meo-chinh-eq-cho-nhac-vang-nhac-tre",
+    "/chon-loa-keo-cho-phong-gym",
+    "/ket-noi-micro-co-day-vao-loa-keo",
+    "/bao-hanh-va-bao-tri-loa-keo-khi-thue",
+    "/chon-loa-keo-cho-quay-roadshow",
+    "/thu-loa-truoc-khi-thue-5-phut",
+    "/top-5-bai-test-loa-keo-khi-thu-am-thanh",
+    "/ket-noi-nhac-cu-guitar-voi-loa-keo",
+    "/huong-dan-dung-echo-de-hat-khong-bi-loang",
+    "/chon-loa-keo-cho-lop-hoc-ngoai-troi",
+    "/su-khac-nhau-giua-loa-keo-va-loa-partybox",
+    "/huong-dan-ve-sinh-loa-keo",
+    "/cach-dat-loa-de-bass-day-hon",
+    "/phong-tranh-loa-bi-nong-khi-chay-lau",
+    "/kiem-tra-phu-kien-loa-keo-truoc-khi-nhan",
+    "/tai-sao-nen-chon-loa-jbl-chinh-hang-khi-thue",
+    "/huong-dan-dat-lich-thue-loa-online",
+    "/ket-noi-loa-keo-voi-phan-mem-hat-karaoke",
+    "/chon-loa-keo-cho-phong-thu-nho",
+    "/loi-thuong-gap-khi-dung-loa-keo-va-cach-khac-phuc",
+    "/cach-chon-nhac-nen-cho-party-ngoai-troi",
+    "/nen-thue-hay-mua-loa-keo",
+    "/giu-am-thanh-on-dinh-khi-troi-mua",
+    "/chon-loa-keo-cho-lop-hoc-ngoai-ngu",
+    "/am-thanh-cho-le-cuoi-tai-nha",
+    "/ket-noi-loa-keo-voi-laptop-trinh-chieu",
+    "/huong-dan-ghi-am-nhanh-voi-loa-keo-va-dien-thoai",
+    "/kiem-soat-am-luong-khi-co-tre-em",
+    "/huong-dan-update-firmware-loa-jbl",
+    "/bat-kenh-uhf-micro-tranh-nhieu",
+    "/cach-dung-den-led-tren-loa-partybox"
+  ],
+  "directNoIncoming": [
+    "/speaker-rental-da-nang-ko",
+    "/speaker-rental-da-nang",
+    "/speaker-rental-da-nang-zh",
+    "/speaker-rental-da-nang-ru",
+    "/loa-keo-cho-sinh-nhat-tai-nha",
+    "/ghep-doi-nhieu-loa-jbl-bang-auracast",
+    "/chon-loa-keo-cho-restaurant-cafe-live-music",
+    "/chong-hu-micro-loa-keo",
+    "/chon-loa-keo-cho-team-building-50-nguoi",
+    "/meo-hat-karaoke-it-met-hoi",
+    "/bao-quan-loa-keo-sau-su-dung",
+    "/cham-soc-pin-loa-keo-de-khong-chai",
+    "/chon-loa-keo-cho-lop-hoc-yoga-dance",
+    "/loa-keo-cho-du-lich-da-ngoai",
+    "/ket-noi-loa-keo-voi-tivi-xem-phim-hat-karaoke",
+    "/huong-dan-dung-mixer-kem-loa-keo",
+    "/meo-chinh-eq-cho-nhac-vang-nhac-tre",
+    "/chon-loa-keo-cho-phong-gym",
+    "/ket-noi-micro-co-day-vao-loa-keo",
+    "/bao-hanh-va-bao-tri-loa-keo-khi-thue",
+    "/chon-loa-keo-cho-quay-roadshow",
+    "/thu-loa-truoc-khi-thue-5-phut",
+    "/top-5-bai-test-loa-keo-khi-thu-am-thanh",
+    "/ket-noi-nhac-cu-guitar-voi-loa-keo",
+    "/huong-dan-dung-echo-de-hat-khong-bi-loang",
+    "/chon-loa-keo-cho-lop-hoc-ngoai-troi",
+    "/su-khac-nhau-giua-loa-keo-va-loa-partybox",
+    "/huong-dan-ve-sinh-loa-keo",
+    "/cach-dat-loa-de-bass-day-hon",
+    "/phong-tranh-loa-bi-nong-khi-chay-lau",
+    "/kiem-tra-phu-kien-loa-keo-truoc-khi-nhan",
+    "/tai-sao-nen-chon-loa-jbl-chinh-hang-khi-thue",
+    "/huong-dan-dat-lich-thue-loa-online",
+    "/ket-noi-loa-keo-voi-phan-mem-hat-karaoke",
+    "/chon-loa-keo-cho-phong-thu-nho",
+    "/loi-thuong-gap-khi-dung-loa-keo-va-cach-khac-phuc",
+    "/cach-chon-nhac-nen-cho-party-ngoai-troi",
+    "/nen-thue-hay-mua-loa-keo",
+    "/giu-am-thanh-on-dinh-khi-troi-mua",
+    "/chon-loa-keo-cho-lop-hoc-ngoai-ngu",
+    "/am-thanh-cho-le-cuoi-tai-nha",
+    "/ket-noi-loa-keo-voi-laptop-trinh-chieu",
+    "/huong-dan-ghi-am-nhanh-voi-loa-keo-va-dien-thoai",
+    "/kiem-soat-am-luong-khi-co-tre-em",
+    "/huong-dan-update-firmware-loa-jbl",
+    "/bat-kenh-uhf-micro-tranh-nhieu",
+    "/cach-dung-den-led-tren-loa-partybox"
+  ],
+  "graph": {
+    "/": [
+      "/",
+      "/about-didiaudio",
+      "/products/loa-jbl-partyBox-stage-320",
+      "/kinh-nghiem-chon-loa-keo-cho-tiec-gia-dinh",
+      "/setup-karaoke-5-phut-voi-loa-keo-jbl",
+      "/bang-gia-thue-loa-keo-jbl-da-nang-2024",
+      "/meo-choi-nhac-ngoai-troi-khong-mat-tieng",
+      "/chon-micro-khong-day-hat-karaoke-hay",
+      "/checklist-thue-loa-keo-truoc-su-kien"
+    ],
+    "/speaker-rental-da-nang-ko": [
+      "/",
+      "/about-didiaudio",
+      "/products/loa-jbl-partyBox-stage-320"
+    ],
+    "/speaker-rental-da-nang": [
+      "/",
+      "/about-didiaudio",
+      "/products/loa-jbl-partyBox-stage-320"
+    ],
+    "/about-didiaudio": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/kinh-nghiem-chon-loa-keo-cho-tiec-gia-dinh": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/speaker-rental-da-nang-zh": [
+      "/",
+      "/about-didiaudio",
+      "/products/loa-jbl-partyBox-stage-320"
+    ],
+    "/speaker-rental-da-nang-ru": [
+      "/",
+      "/about-didiaudio",
+      "/products/loa-jbl-partyBox-stage-320"
+    ],
+    "/products/loa-jbl-partyBox-stage-320": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/bang-gia-thue-loa-keo-jbl-da-nang-2024": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/setup-karaoke-5-phut-voi-loa-keo-jbl": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/meo-choi-nhac-ngoai-troi-khong-mat-tieng": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/chon-micro-khong-day-hat-karaoke-hay": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/checklist-thue-loa-keo-truoc-su-kien": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/loa-keo-cho-sinh-nhat-tai-nha": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/ghep-doi-nhieu-loa-jbl-bang-auracast": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/chon-loa-keo-cho-restaurant-cafe-live-music": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/chong-hu-micro-loa-keo": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/chon-loa-keo-cho-team-building-50-nguoi": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/meo-hat-karaoke-it-met-hoi": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/bao-quan-loa-keo-sau-su-dung": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/cham-soc-pin-loa-keo-de-khong-chai": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/chon-loa-keo-cho-lop-hoc-yoga-dance": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/loa-keo-cho-du-lich-da-ngoai": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/ket-noi-loa-keo-voi-tivi-xem-phim-hat-karaoke": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/huong-dan-dung-mixer-kem-loa-keo": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/meo-chinh-eq-cho-nhac-vang-nhac-tre": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/chon-loa-keo-cho-phong-gym": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/ket-noi-micro-co-day-vao-loa-keo": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/bao-hanh-va-bao-tri-loa-keo-khi-thue": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/chon-loa-keo-cho-quay-roadshow": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/thu-loa-truoc-khi-thue-5-phut": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/top-5-bai-test-loa-keo-khi-thu-am-thanh": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/ket-noi-nhac-cu-guitar-voi-loa-keo": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/huong-dan-dung-echo-de-hat-khong-bi-loang": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/chon-loa-keo-cho-lop-hoc-ngoai-troi": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/su-khac-nhau-giua-loa-keo-va-loa-partybox": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/huong-dan-ve-sinh-loa-keo": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/cach-dat-loa-de-bass-day-hon": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/phong-tranh-loa-bi-nong-khi-chay-lau": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/kiem-tra-phu-kien-loa-keo-truoc-khi-nhan": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/tai-sao-nen-chon-loa-jbl-chinh-hang-khi-thue": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/huong-dan-dat-lich-thue-loa-online": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/ket-noi-loa-keo-voi-phan-mem-hat-karaoke": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/chon-loa-keo-cho-phong-thu-nho": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/loi-thuong-gap-khi-dung-loa-keo-va-cach-khac-phuc": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/cach-chon-nhac-nen-cho-party-ngoai-troi": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/nen-thue-hay-mua-loa-keo": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/giu-am-thanh-on-dinh-khi-troi-mua": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/chon-loa-keo-cho-lop-hoc-ngoai-ngu": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/am-thanh-cho-le-cuoi-tai-nha": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/ket-noi-loa-keo-voi-laptop-trinh-chieu": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/huong-dan-ghi-am-nhanh-voi-loa-keo-va-dien-thoai": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/kiem-soat-am-luong-khi-co-tre-em": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/huong-dan-update-firmware-loa-jbl": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/bat-kenh-uhf-micro-tranh-nhieu": [
+      "/",
+      "/about-didiaudio"
+    ],
+    "/cach-dung-den-led-tren-loa-partybox": [
+      "/",
+      "/about-didiaudio"
+    ]
+  }
+}
