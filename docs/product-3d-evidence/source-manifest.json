@@ -1,0 +1,18 @@
+{
+  "baselineCommit": "a1690d3aa98d03cdf5f747458b305a33a2cd56d4",
+  "sourceMatchesIsolatedBuild": true,
+  "sourceHashes": {
+    "src/components/ProductDetailClient.tsx": "7fd1e1bcd7d05a60570e2a2cc879c4a2cadc94da4a29e4bce0fd63285963d80e",
+    "src/components/product-3d/Product3D.tsx": "571d2884170627b7de2f8013c71b7f9cd4933c1572497298a529377f993ccc10",
+    "src/components/product-3d/Product3DViewer.tsx": "1a92239154e07f36d8fcebea76a151887b4e63f35f2629af042d75ec45942400",
+    "src/lib/product-3d.ts": "6d4b0bba179b24ffdc6075fddefd654327fa4c40dc569ebc9db8c9bc3c578b69",
+    "src/data/product-3d.ts": "a963f5440984a086d0f77ac17f8d5d46db21eb3fe5c487041dc8c2b3ec86b80a",
+    "public/models/stage-320/stage-320.glb": "3e7ec221d6525960f21b5d310cd087d8d29baf65eb61e5644926b5b4f3eea822",
+    "package.json": "f2758daa2bba712d74d6a0be6cc42825158fea2880419441cdce54f00bb17b21",
+    "package-lock.json": "d7423d39b677515b52788fc7835b696137bda1ca99f655a8ccd94422aff8c983",
+    "yarn.lock": "9047c345109a26aed934af232fe92ce5f6a812aac9f838b2df85cca283af296d"
+  },
+  "stage320Enabled360": true,
+  "stage320EnabledAR": false,
+  "deployed": false
+}

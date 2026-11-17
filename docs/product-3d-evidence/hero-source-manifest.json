@@ -1,0 +1,15 @@
+{
+  "sourceHashes": {
+    "src/app/page.tsx": "2398d76ba1ff7c905351b74af176572216b32c8a7bc1fa6ca427cff29cb6dafb",
+    "src/components/AboutSection.tsx": "87e942d3a2ddfe91f6cdf04ed135e33c1f413f7c3ae7b05e2a971bf6ce29c224",
+    "src/components/product-3d/Product3D.tsx": "c6d4eea725263d4ad47d9d49af928a790530f75eadac9276322b0dcda64a82d5"
+  },
+  "isolatedBuildSourceMatches": true,
+  "viewportChecks": [
+    360,
+    390,
+    768,
+    1440
+  ],
+  "deployed": false
+}

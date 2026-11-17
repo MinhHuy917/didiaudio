@@ -1,0 +1,4 @@
+PASS hero 360 H1, links, no preload, 3D render, AR off, Escape/focus, no overflow/runtime errors
+PASS hero 390 H1, links, no preload, 3D render, AR off, Escape/focus, no overflow/runtime errors
+PASS hero 768 H1, links, no preload, 3D render, AR off, Escape/focus, no overflow/runtime errors
+PASS hero 1440 H1, links, no preload, 3D render, AR off, Escape/focus, no overflow/runtime errors

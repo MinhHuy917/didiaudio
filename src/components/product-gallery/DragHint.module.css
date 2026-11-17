@@ -1,0 +1,20 @@
+.hand {
+  filter: drop-shadow(0 3px 5px rgb(0 0 0 / 0.4));
+}
+.animate {
+  animation: swipe 2.4s ease-in-out infinite;
+}
+@keyframes swipe {
+  0%,
+  100% {
+    transform: translateX(-10px) rotate(-8deg);
+  }
+  50% {
+    transform: translateX(12px) rotate(7deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate {
+    animation: none;
+  }
+}

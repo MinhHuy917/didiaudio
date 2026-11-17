@@ -1,12 +1,15 @@
 'use client'
 
+import { getProductGallery } from '@/lib/product-gallery'
+import ProductMediaGallery from '@/components/product-gallery/ProductMediaGallery'
+import { product3D } from '@/data/product-3d'
+
 import SpecialNoticeBanner from '@/components/SpecialNoticeBanner'
 import { motion } from 'framer-motion'
 import { ArrowLeft, Battery, Bluetooth, Check, Phone, Volume2, MapPin } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { useState } from 'react'
+
 
 type Product = {
   id: string | number
@@ -39,28 +42,10 @@ type Product = {
 
 export default function ProductDetailClient({ product }: { product: Product }) {
   const router = useRouter()
-  const [mainImage, setMainImage] = useState<string>('')
 
 
-  const images = [
-    product?.image,
-    product?.image1,
-    product?.image2,
-    product?.image3,
-    product?.image4,
-    product?.image5,
-    product?.image6,
-    product?.image7,
-    product?.image8,
-    product?.image9,
-    product?.image10,
-    product?.image11,
-    product?.image12,
-  ].filter(Boolean) as string[]
 
-  if (!mainImage && images.length > 0) {
-    setMainImage(images[0])
-  }
+  const images = getProductGallery(product)
 
   // Extract key info
   const extractPower = (text: string) => {
@@ -92,42 +77,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
           {/* Left: Images */}
           <div className="min-w-0">
-            <div className="relative aspect-square bg-audio-darker rounded-xl sm:rounded-2xl overflow-hidden mb-3 sm:mb-4">
-              {mainImage && (
-                <Image
-                  src={mainImage}
-                  alt={product.name}
-                  fill
-                  className="object-contain"
-                  priority
-                  sizes="(min-width: 1024px) 576px, calc(100vw - 24px)"
-                />
-              )}
-            </div>
-            {images.length > 1 && (
-              <div className="flex gap-2 sm:gap-3 overflow-x-auto overflow-y-hidden pb-2 scrollbar-hide snap-x snap-mandatory -mx-3 px-3" style={{ WebkitOverflowScrolling: 'touch' }}>
-                {images.map((img, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setMainImage(img)}
-                    className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all touch-manipulation snap-start ${
-                      mainImage === img
-                        ? 'border-audio-electricBlue'
-                        : 'border-audio-gray hover:border-audio-electricBlue/50 active:border-audio-electricBlue/70'
-                    }`}
-                  >
-                    <Image
-                      src={img}
-                      alt={`${product.name} ${idx + 1}`}
-                      width={80}
-                      height={80}
-                      className="w-full h-full object-cover pointer-events-none"
-                      loading="lazy"
-                    />
-                  </button>
-                ))}
-              </div>
-            )}
+            <ProductMediaGallery name={product.name} images={images} config={product3D[String(product.id)]} />
           </div>
 
           {/* Right: Product Info */}

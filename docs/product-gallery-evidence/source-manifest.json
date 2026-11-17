@@ -1,0 +1,15 @@
+{
+  "baselineCommit": "a1690d3aa98d03cdf5f747458b305a33a2cd56d4",
+  "sourceMatchesIsolatedBuild": true,
+  "sourceHashes": {
+    "src/components/product-gallery/ProductMediaGallery.tsx": "2aa438412e5605d916384887c2edfb90c01b5a43f04d4738d92c7b02e6a8ca99",
+    "src/components/product-gallery/DragHint.tsx": "ac89bd27924808836cd13c1585d402542dc3e7ae02da92a5b94cf73071e79064",
+    "src/components/product-gallery/DragHint.module.css": "b648aa50a431da3b8f12f6a97fa4e6721807895808d25a90e925bcd0b4c7815d",
+    "src/components/product-3d/Product3DViewer.tsx": "1e0db1338a1de82e7df43208d8000f280d052891cac416fd2773bc8cbb664adc",
+    "src/components/ProductDetailClient.tsx": "396d160b30821d43d1d610101b5dea0f1dfbdc4c3dad46aa577c17c28c874912",
+    "src/components/AboutSection.tsx": "1faae0db3e224026453a624d6528ed7325de96d2b34909ce66cf268a1f782630"
+  },
+  "browserGroupsPassed": 11,
+  "arEnabled": false,
+  "deployed": false
+}

@@ -1,6 +1,10 @@
 import { createPageMetadata, rentalServiceSchema, jsonLd } from '@/lib/seo'
 import dynamic from 'next/dynamic'
 import { articles } from '@/data/blog'
+import { products } from '@/data/products'
+import { getProductGallery } from '@/lib/product-gallery'
+import { product3D } from '@/data/product-3d'
+import { canView3D } from '@/lib/product-3d'
 import { RentalProcess } from '@/components/RentalProcess'
 
 const AboutSection = dynamic(() => import('@/components/AboutSection'))
@@ -20,13 +24,26 @@ export const metadata = createPageMetadata({
 })
 
 export default async function Home() {
+  const featured = products.find((product) => canView3D(product3D[product.id]))
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLd(rentalServiceSchema()) }}
       />
-      <AboutSection />
+      <AboutSection
+        speaker={
+          featured
+            ? {
+                name: featured.name,
+                image: featured.image,
+                images: getProductGallery(featured),
+                href: `/products/${featured.id}`,
+                model: product3D[featured.id],
+              }
+            : undefined
+        }
+      />
       <ProductList />
       <RentalProcess />
       <UseCaseSection />

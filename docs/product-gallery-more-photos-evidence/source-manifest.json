@@ -1,0 +1,18 @@
+{
+  "photosPerGallery": 28,
+  "totalSlides": 29,
+  "newPhotos": 15,
+  "sourceMatchesBuild": true,
+  "sourceHashes": {
+    "src/app/page.tsx": "293fcacf2c4e5f7ea273bef58a4c9f7011d5d0fbf8bdb4e7695f9e664f05c7d5",
+    "src/components/AboutSection.tsx": "c2e9062dbe4c958b79e5f7d4dcf29de99d23bbb4833c100dc723dbd339910904",
+    "src/components/ProductDetailClient.tsx": "61b7849ff944a116c4f98cbb7f5b268fc7dd4b5e5d1f48e5158c33bd3e7e87d0",
+    "src/components/product-gallery/ProductMediaGallery.tsx": "c3576c38960304e1a095a033583c0c2431812786647fd44111512e40c8d2306c",
+    "src/data/product-gallery.ts": "9259ca15357daa23a04b264fcd330890d2f110cb01bbb105c091deda8c4c3cf8",
+    "src/lib/product-gallery.ts": "f258906cd612bc5ace4af6dc42e000fb7c14fa17271a0566855ff4290bef0596",
+    "src/lib/product-gallery-types.ts": "d9c1f19e29b64d559f53cf2938a698122ccabe415f5daa1c37e55cc7c1c46555"
+  },
+  "newImageOriginalBytes": 35774698,
+  "newImageWebPBytes": 1929604,
+  "deployed": false
+}

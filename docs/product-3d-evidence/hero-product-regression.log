@@ -1,0 +1,4 @@
+PASS 360 no preload, gallery/price/contact, real model render, zoom/reset/rotation, fullscreen, AR gate, keyboard/focus, no overflow or pageerror
+PASS 390 no preload, gallery/price/contact, real model render, zoom/reset/rotation, fullscreen, AR gate, keyboard/focus, no overflow or pageerror
+PASS 768 no preload, gallery/price/contact, real model render, zoom/reset/rotation, fullscreen, AR gate, keyboard/focus, no overflow or pageerror
+PASS 1440 no preload, gallery/price/contact, real model render, zoom/reset/rotation, fullscreen, AR gate, keyboard/focus, no overflow or pageerror

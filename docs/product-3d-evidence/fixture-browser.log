@@ -1,0 +1,2 @@
+PASS viewport 390 lazy load, model render, controls, AR fallback, keyboard close/focus, missing model, gallery unchanged
+PASS viewport 1440 lazy load, model render, controls, AR fallback, keyboard close/focus, missing model, gallery unchanged
