@@ -1,6 +1,6 @@
 import { type Metadata } from 'next'
 import Script from 'next/script'
-import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 
 import { seoSite, organizationSchema, jsonLd } from '@/lib/seo'
 
@@ -8,8 +8,10 @@ import { RootLayout } from '@/components/RootLayout'
 
 import '@/styles/tailwind.css'
 
-const inter = Inter({
-  subsets: ['latin', 'vietnamese'],
+const inter = localFont({
+  src: '../fonts/InterVariable.woff2',
+  weight: '100 900',
+  style: 'normal',
   display: 'swap',
   variable: '--font-inter',
 })
