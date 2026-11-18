@@ -1,0 +1,2 @@
+PASS /: 48 main images decode; all 20 reference credits/links; mobile overflow; keyboard focus; zero runtime errors.
+PASS /products/loa-jbl-partyBox-stage-320: 48 main images decode; all 20 reference credits/links; mobile overflow; keyboard focus; zero runtime errors.

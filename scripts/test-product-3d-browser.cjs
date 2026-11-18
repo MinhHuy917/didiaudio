@@ -38,7 +38,7 @@ const product = '/products/loa-jbl-partyBox-stage-320'
         })
         const first = gallery.getByRole('tab', { name: 'Ảnh 1', exact: true })
         assert.equal(await first.getAttribute('aria-selected'), 'true')
-        assert.equal(await gallery.getByRole('tab').count(), 29)
+        assert.equal(await gallery.getByRole('tab').count(), 49)
         await page.waitForFunction(
           () => document.querySelector('model-viewer')?.loaded,
           undefined,
@@ -54,8 +54,19 @@ const product = '/products/loa-jbl-partyBox-stage-320'
         )
         await first.focus()
         await page.keyboard.press('End')
-        const last = gallery.getByRole('tab', { name: 'Ảnh 28', exact: true })
+        const last = gallery.getByRole('tab', { name: 'Ảnh 48', exact: true })
         assert.equal(await last.getAttribute('aria-selected'), 'true')
+        assert.equal(
+          await gallery
+            .getByRole('link', { name: 'Digital Trends', exact: true })
+            .getAttribute('href'),
+          'https://www.digitaltrends.com/home-theater/jbl-partybox-stage-320-review/',
+        )
+        assert.ok(
+          (await gallery.innerText()).includes(
+            'Không phải ảnh ĐiĐi Audio tự chụp.',
+          ),
+        )
         await gallery
           .getByRole('tabpanel')
           .getByRole('img')

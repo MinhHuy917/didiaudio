@@ -25,7 +25,13 @@ const control =
   'inline-flex h-11 min-w-11 shrink-0 scroll-mb-28 scroll-mt-28 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition-colors hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300'
 
 type Slide =
-  | { type: 'photo'; image: string; alt: string; photo: number }
+  | {
+      type: 'photo'
+      image: string
+      alt: string
+      photo: number
+      source?: GalleryPhoto['source']
+    }
   | { type: 'interactive' }
 export default function ProductMediaGallery({
   name,
@@ -85,6 +91,7 @@ export default function ProductMediaGallery({
     type: 'photo',
     image: image.src,
     alt: image.alt,
+    source: 'source' in image ? image.source : undefined,
     photo,
   }))
   const interactive = canView3D(config)
@@ -126,7 +133,11 @@ export default function ProductMediaGallery({
           ) : (
             <ImageIcon aria-hidden="true" className="h-4 w-4 text-gray-300" />
           )}
-          {slide.type === 'interactive' ? '360° · Kéo để xoay' : 'Ảnh sản phẩm'}
+          {slide.type === 'interactive'
+            ? '360° · Kéo để xoay'
+            : slide.source
+              ? 'Ảnh chụp tham khảo'
+              : 'Ảnh sản phẩm'}
         </span>
         <span aria-hidden="true" className="text-xs tabular-nums text-gray-400">
           {index + 1}/{slides.length}
@@ -247,7 +258,8 @@ export default function ProductMediaGallery({
               draggable={false}
             />
             <span className="absolute bottom-3 left-3 rounded-full border border-white/15 bg-black/70 px-3 py-1 text-xs text-gray-200">
-              Ảnh tĩnh · {slide.photo + 1}/{photos.length}
+              {slide.source ? 'Ảnh tham khảo' : 'Ảnh tĩnh'} · {slide.photo + 1}/
+              {photos.length}
             </span>
           </div>
         )}
@@ -271,11 +283,28 @@ export default function ProductMediaGallery({
         )}
       </div>
       {slide.type === 'photo' && (
-        <p className="order-1 px-4 pb-3 pt-2 text-xs leading-relaxed text-gray-300">
-          {interactive
-            ? 'Chọn slide 2 để kéo xoay loa 360°. AR là chế độ đặt loa vào không gian thật.'
-            : 'Vuốt ảnh hoặc dùng các nút bên dưới để xem thêm góc chụp.'}
-        </p>
+        <div className="order-1 px-4 pb-3 pt-2 text-xs leading-relaxed text-gray-300">
+          {slide.source && (
+            <p className="mb-2">
+              Ảnh tham khảo từ{' '}
+              <a
+                href={slide.source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-11 items-center rounded-sm text-cyan-200 underline underline-offset-4 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
+              >
+                {slide.source.name}
+              </a>
+              . Credit: {slide.source.credit}. Không phải ảnh ĐiĐi Audio tự
+              chụp.
+            </p>
+          )}
+          <p>
+            {interactive
+              ? 'Chọn slide 2 để kéo xoay loa 360°. AR là chế độ đặt loa vào không gian thật.'
+              : 'Vuốt ảnh hoặc dùng các nút bên dưới để xem thêm góc chụp.'}
+          </p>
+        </div>
       )}
       <p
         role="status"

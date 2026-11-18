@@ -1,0 +1,16 @@
+TAP version 13
+# Subtest: 20 distinct reference photographs have working local files, source credits and bounded dimensions
+ok 1 - 20 distinct reference photographs have working local files, source credits and bounded dimensions
+  ---
+  duration_ms: 466.251462
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 473.191575

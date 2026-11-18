@@ -1,4 +1,5 @@
 import type { GalleryPhoto } from '@/lib/product-gallery-types'
+import { stage320ReferencePhotos } from './product-real-photos'
 
 // Official additional views; provenance is in public/images/stage-320-gallery/SOURCE.md.
 export const productPhotoOrder: Record<string, (number | GalleryPhoto)[]> = {
@@ -76,5 +77,6 @@ export const productPhotoOrder: Record<string, (number | GalleryPhoto)[]> = {
     10,
     11,
     12,
+    ...stage320ReferencePhotos,
   ],
 }

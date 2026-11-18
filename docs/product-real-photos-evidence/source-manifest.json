@@ -1,0 +1,125 @@
+{
+  "buildDirectory": "/private/tmp/didi-real-gallery-260z53cp",
+  "files": [
+    {
+      "file": "src/data/product-real-photos.ts",
+      "sha256": "517e2b1212ca60dcc062b62f18b996240553f94b9655a1e93b121ca9799d2ecc",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "src/data/product-gallery.ts",
+      "sha256": "7c5ca4ceb2ce11cb1b0fd109f026047674982d24defdf884e1ea2c1e35a934e5",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "src/lib/product-gallery-types.ts",
+      "sha256": "7c0eb1f61592b1bb63c48319db0bf1a7b60e649bf912d8b23860ca215d70ee01",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "src/components/product-gallery/ProductMediaGallery.tsx",
+      "sha256": "783133e3c6dfcd71626fe2b792a3dedf1ed86db2b780776bed415250fdab89b3",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/rear-panel.webp",
+      "sha256": "643075093c1006d6640ed40ad8532338736ffb60a0d838c736a26653cc39d86f",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/veranda-handle.webp",
+      "sha256": "1ce94441b3ba407b25a82f8d7a2242473c584056c90d30d6cc7c8cfd978a8ec6",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/rear-battery.webp",
+      "sha256": "12e668752223c12a0162226f4679d98aa6600bdf4e32cd84a0f8821a98b62b29",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/wheel-closeup.webp",
+      "sha256": "419e3d5b33f4cb824862dc4cb3bce76e0a32572edbe88ee4195759c99569142b",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/battery-removal.webp",
+      "sha256": "840edb411016e59d930eeb621f13a1b2873e7d103aaef35220de32384da05a0d",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/controls-hand.webp",
+      "sha256": "c3b7417aad73f0bdb9054e665d6b358293262cab973887e4544875340b123457",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/outdoor-seat.webp",
+      "sha256": "9447e760fb09849e0ed32bb893c3eac817ad755ab2cfef2ec5744dea2e2d65e4",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/studio-lights.webp",
+      "sha256": "ea035efe56fb41905a176093f01529cf9fc922c29cdf8a7387d3d88af0747119",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/veranda-top.webp",
+      "sha256": "cc8feea978c431a4a65dfbf9cb3e8b3d5a777a8b96eef5fca4011310ca528301",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/battery-closeup.webp",
+      "sha256": "d4bad7cd02709cc5fe18e76b5471300c78dd2a62b9ec4ad41fcac746348c6976",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/extended-handle.webp",
+      "sha256": "920c5faf2b23a996d6b37c5a0722bda878269a13d9715e03e7bcbe2d767f629a",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/veranda-side.webp",
+      "sha256": "ddf75f4ddc3869e8f92df69989a95e00f5be903ac5c7cd51402c769f6da0b85f",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/veranda-back.webp",
+      "sha256": "0e6f45f643a0ed819587d3405e029c0962c7fea88e472be20817df4cd5f999e1",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/controls-overhead.webp",
+      "sha256": "bb305d11d72bde594696ba3aa0abc0003520f6c34a44814fc415bb9fc9ba00b4",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/studio-side.webp",
+      "sha256": "6cfeaa8b1bdbf22796e7edb36bb83906e2e6245da976b8cb36c369c9135be122",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/blue-lights.webp",
+      "sha256": "e6e1b5a3a6ac4815e628178a539c21fcfad25b5ac58feea9ba7ebefe4adc53b9",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/garden-back.webp",
+      "sha256": "dd67ec327ade0bc0ee2360b0d55b90f26eb86e2387e1a5afa077251ce20756fa",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/veranda-front.webp",
+      "sha256": "a1797247933f6d83c51d326f0d5037c7e375d2fe4866431c26a8573deb51f360",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/garden-front.webp",
+      "sha256": "10e539b538b78f2f081a4c81545e63b28fb218684b5136de4817914e24b5a954",
+      "matchesProductionBuild": true
+    },
+    {
+      "file": "public/images/stage-320-real/rear-connections.webp",
+      "sha256": "13d5cfc2a63ee89ca62627640872583cd08f62125e9051486e34d871a9ec669b",
+      "matchesProductionBuild": true
+    }
+  ]
+}

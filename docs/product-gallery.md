@@ -79,3 +79,38 @@ Model khoảng9.9MB sẽ được tải tự động cho khách vào trang có g
 PASS lint/typecheck/yarn build.11 nhóm browser tại360/390/768/1440 xác nhận loaded trong khi ảnh1 còn được chọn, viewer ẩn, hoạt động khi chuyển360°, AR gate, reduced-motion, controls/fullscreen, focus, lỗi/retry/WebGL fallback. Kiểm tra bổ sung trên cả2route:4 lần đổi qua lại dùng **cùng DOM/model**, đúng **1 request GLB/route**, không auto-rotate khi ẩn. Bản build riêng `/private/tmp/didi-preload-t3cg650s`; chưa deploy.
 
 Files: ProductMediaGallery.tsx (schedule/retain), Product3DViewer.tsx (active/eager/pause), test-product-3d-browser.cjs (contract mới). Evidence: [build](product-preload-evidence/build.log), [browser](product-preload-evidence/browser.log), [chuyển qua lại](product-preload-evidence/repeated.log), [source hashes](product-preload-evidence/source-manifest.json). Các kết quả no-preload trước đó là snapshot hành vi cũ, đã được thay thế theo yêu cầu này.
+
+## Bổ sung 20 ảnh chụp tham khảo — 18/11/2026
+
+Theo yêu cầu bổ sung ảnh trên mạng, đã chọn 20 ảnh chụp Stage 320 từ bốn bài trải nghiệm gốc: SoundGuys (6), Tom’s Guide (5), STEREO GUIDE (5), Digital Trends (4). Đã xem contact sheet của 21 ứng viên và loại một ảnh mặt trước trên hiên nhà gần trùng góc. Bộ ảnh gồm mặt trước có/không bật đèn, mặt bên, mặt sau, bảng điều khiển, tay kéo, ngăn pin, cổng kết nối, bánh xe và bối cảnh trong nhà/ngoài trời. Không thêm render, biểu đồ, screenshot ứng dụng hoặc model loa khác.
+
+Giữ nguyên 28 ảnh hiện có, thêm 20 ảnh cuối danh sách: **48 ảnh + slide 360° thứ hai = 49 slide**. Cùng một nguồn dữ liệu phục vụ homepage `/` và `/products/loa-jbl-partyBox-stage-320`. Không sửa giá, policy, thông số, URL, chức năng đặt thuê, cấu hình AR hoặc cơ chế preload model.
+
+Các ảnh mới hiển thị “Ảnh chụp tham khảo”, có liên kết bài gốc, credit và thông báo không phải ảnh ĐiĐi Audio tự chụp. Không trình bày chúng như ảnh thiết bị đang cho thuê hay trải nghiệm khách hàng ĐiĐi Audio. Bản quyền thuộc chủ sở hữu nguồn; chưa xác minh giấy phép mở/quyền tái sử dụng, cần chủ website xác nhận trước khi xuất bản production. Chưa deploy/push.
+
+20 WebP tổng **2.106.242 byte**, tối đa 1200px mỗi chiều, quality85, không phóng lớn/cắt khung hay xóa watermark. Giữ lazy loading và responsive sizes của Next Image; ảnh đầu vẫn được ưu tiên. Chi tiết asset URL, source page, tác giả, dimensions và SHA-256 ở [sources.json](../public/images/stage-320-real/sources.json), [SOURCE.md](../public/images/stage-320-real/SOURCE.md).
+
+Files thay đổi:
+
+- `src/data/product-real-photos.ts`: danh sách 20 ảnh và metadata nguồn.
+- `src/data/product-gallery.ts`: nối bộ ảnh vào gallery hiện có.
+- `src/lib/product-gallery-types.ts`: metadata nguồn optional, tương thích ảnh cũ.
+- `src/components/product-gallery/ProductMediaGallery.tsx`: nhãn và credit/link có keyboard focus, touch target 44px.
+- `public/images/stage-320-real/`: 20 WebP và hồ sơ nguồn.
+- `scripts/test-product-3d-browser.cjs`: cập nhật 49 slide và kiểm tra nguồn.
+- `scripts/test-product-reference-photos.cjs`: uniqueness/hash, decode ảnh, credit, dimensions, dung lượng.
+- `scripts/test-product-reference-photos-browser.cjs`: kiểm tra đủ 48 ảnh, 20 credit/link, keyboard focus và mobile overflow trên cả hai routes.
+- `docs/product-real-photos-evidence/`, mục tài liệu này: log và bằng chứng.
+
+Validation: PASS `yarn lint`, `tsc --noEmit --incremental false`, `node scripts/test-product-3d.cjs` (3 nhóm), `node scripts/check-product-3d.cjs`, `node scripts/test-product-reference-photos.cjs` (20 file decode/hash hợp lệ), **`yarn build` production**. Bản build riêng `/private/tmp/didi-real-gallery-260z53cp`, dùng Node22 và dependency của repository; không đụng cache dev `.next`.
+
+Browser Chrome: **11 nhóm PASS** trên homepage/product ở 360/390/768/1440px; kiểm tra photo-first, slide360 thứ hai, preload/retain model, controls, keyboard, reduced-motion, links, không overflow, lỗi model/retry và WebGL fallback. Kiểm tra bổ sung mở/decode đủ 48 ảnh trên mỗi route ở390px, tất cả20 nguồn ảnh/link và focus; không runtime error. Chưa đo field Core Web Vitals, không tuyên bố thay đổi chỉ số performance thực tế.
+
+Bằng chứng: [build](product-real-photos-evidence/build.log), [lint](product-real-photos-evidence/lint.log), [asset tests](product-real-photos-evidence/assets.log), [11 browser groups](product-real-photos-evidence/browser.log), [all images browser](product-real-photos-evidence/all-photos-browser.log), [mobile hero](product-real-photos-evidence/hero-reference-390.png), [mobile product](product-real-photos-evidence/product-reference-390.png).
+
+Chạy lại browser checks với Chrome/Playwright có sẵn trong môi trường, không thêm dependency cho website:
+
+```sh
+TEST_BASE_URL=http://127.0.0.1:4186 PLAYWRIGHT_MODULE=/private/tmp/didi-ux-audit/node_modules/playwright-core node scripts/test-product-3d-browser.cjs
+TEST_BASE_URL=http://127.0.0.1:4186 PLAYWRIGHT_MODULE=/private/tmp/didi-ux-audit/node_modules/playwright-core node scripts/test-product-reference-photos-browser.cjs
+```
