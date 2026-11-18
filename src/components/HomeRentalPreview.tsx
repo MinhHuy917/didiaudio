@@ -16,7 +16,7 @@ export function HomeRentalPreview({
       className="mx-auto max-w-xl scroll-mt-28 px-4 py-8 sm:px-6"
     >
       <h2 id="rental-preview-title" className="text-center text-2xl font-bold">
-        Khám phá loa 360°
+        Xem loa từ mọi góc
       </h2>
       <div className="mt-4 rounded-3xl border border-white/10 bg-white/[0.03] p-4 sm:p-6">
         <Product3D

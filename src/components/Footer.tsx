@@ -99,13 +99,6 @@ export function Footer() {
               English
             </Link>
             <Link
-              href="/speaker-rental-da-nang-ko"
-              lang="ko"
-              className="inline-flex min-h-11 items-center underline"
-            >
-              한국어
-            </Link>
-            <Link
               href="/speaker-rental-da-nang-ru"
               lang="ru"
               className="inline-flex min-h-11 items-center underline"

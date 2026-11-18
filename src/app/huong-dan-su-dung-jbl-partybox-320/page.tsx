@@ -97,17 +97,19 @@ export default function GuidePage(props: Props) {
           <span aria-current="page">{m.title}</span>
         </nav>
         <nav aria-label={m.language} className="mb-7 flex flex-wrap gap-2">
-          {videoLocales.map((lang) => (
-            <a
-              key={lang}
-              href={guideHref(lang)}
-              lang={lang}
-              aria-current={lang === locale ? 'page' : undefined}
-              className={`inline-flex min-h-11 items-center rounded-full border px-4 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 ${lang === locale ? 'border-cyan-300 text-cyan-200' : 'border-white/15 text-gray-300 hover:bg-white/10'}`}
-            >
-              {labels[lang]}
-            </a>
-          ))}
+          {videoLocales
+            .filter((lang) => lang !== 'ko')
+            .map((lang) => (
+              <a
+                key={lang}
+                href={guideHref(lang)}
+                lang={lang}
+                aria-current={lang === locale ? 'page' : undefined}
+                className={`inline-flex min-h-11 items-center rounded-full border px-4 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 ${lang === locale ? 'border-cyan-300 text-cyan-200' : 'border-white/15 text-gray-300 hover:bg-white/10'}`}
+              >
+                {labels[lang]}
+              </a>
+            ))}
         </nav>
         <header
           id="guide-top"

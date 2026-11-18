@@ -72,7 +72,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             new window.google.translate.TranslateElement(
               {
                 pageLanguage: 'vi',
-                includedLanguages: 'en,ko,ru,zh-CN,zh-TW,th,hi,ja,ms,vi',
+                includedLanguages: 'en,ru,zh-CN,zh-TW,th,hi,ja,ms,vi',
                 autoDisplay: false,
               },
               'google_translate_element',

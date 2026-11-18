@@ -2,7 +2,7 @@
 
 import { createElement, useEffect, useRef, useState } from 'react'
 import type { ModelViewerElement } from '@google/model-viewer'
-import { Maximize, Minimize, Minus, Plus, X } from 'lucide-react'
+import { Maximize, Minimize, Minus, Plus, Rotate3d, X } from 'lucide-react'
 import { ARButton } from './ARButton'
 import DragHint from '@/components/product-gallery/DragHint'
 import type { Product3DConfig } from '@/lib/product-3d'
@@ -69,7 +69,6 @@ function ViewerSession({
 }: ViewerProps & { onRetry: () => void }) {
   const [interacted, setInteracted] = useState(false)
   const [hintVisible, setHintVisible] = useState(true)
-  const [arActivated, setArActivated] = useState(initiallyActivated)
   const [ready, setReady] = useState(false)
   const [loaded, setLoaded] = useState(false)
   const [error, setError] = useState('')
@@ -367,16 +366,21 @@ function ViewerSession({
             </div>
           </>
         )}
-        {embedded && loaded && !error && (
-          <ARButton
-            active={arActivated}
-            label={ar ? 'AR · Thử trong phòng' : 'AR · Kích hoạt xem 360°'}
-            onClick={() => {
-              setArActivated(true)
-              if (ar) void launchAR()
-            }}
-          />
-        )}
+        {embedded &&
+          loaded &&
+          !error &&
+          (ar ? (
+            <ARButton
+              active
+              label="AR · Thử trong phòng"
+              onClick={() => void launchAR()}
+            />
+          ) : (
+            <span className="pointer-events-none absolute bottom-3 right-3 inline-flex min-h-11 items-center gap-1.5 rounded-full border border-white/15 bg-black/60 px-3 text-sm font-medium text-white backdrop-blur-md">
+              <Rotate3d aria-hidden="true" className="h-4 w-4" />
+              360°
+            </span>
+          ))}
       </div>
       {notice && (
         <p role="status" className="text-sm leading-relaxed text-cyan-100">

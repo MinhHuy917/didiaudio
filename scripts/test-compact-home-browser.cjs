@@ -80,23 +80,24 @@ const fs = require('node:fs')
         '10',
         '11',
       ])
-      const arButton = p
-        .locator('#products')
-        .getByRole('button', { name: 'AR · Kích hoạt xem 360°', exact: true })
-      assert.equal(await arButton.getAttribute('aria-pressed'), 'false')
       assert.equal(
-        await arButton.evaluate((e) => getComputedStyle(e).opacity),
-        '0.5',
+        await p.locator('#rental-preview-title').innerText(),
+        'Xem loa từ mọi góc',
       )
-      assert.ok(
-        await arButton.evaluate((e) => {
-          const button = e.getBoundingClientRect()
-          const frame = e.parentElement.getBoundingClientRect()
-          return (
-            Math.abs(frame.right - button.right - 12) < 1 &&
-            button.top >= frame.top
+      const trigger = p
+        .locator('#products')
+        .getByRole('button', { name: 'Bấm để xoay loa 360°', exact: true })
+      assert.equal(
+        await trigger.evaluate((e) => getComputedStyle(e).opacity),
+        '1',
+      )
+      assert.equal(
+        await p
+          .locator(
+            '[title="한국어"], a[lang="ko"], a[href*="lang=ko"], a[href="/speaker-rental-da-nang-ko"]',
           )
-        }),
+          .count(),
+        0,
       )
       assert.equal(
         await hero.evaluate((e) => e.nextElementSibling.id),
@@ -121,27 +122,19 @@ const fs = require('node:fs')
         .locator('.swiper-slide-active img')
         .evaluate((image) => image.decode())
       await p.screenshot({ path: `${out}/home-${width}.png`, fullPage: true })
+      await p
+        .locator('#products')
+        .screenshot({ path: `${out}/360-poster-${width}.png` })
       if (width === 390) {
-        const trigger = p.getByRole('button', {
-          name: 'AR · Kích hoạt xem 360°',
-          exact: true,
-        })
-        await trigger.click()
+        await trigger.locator('img').click()
         await p.waitForFunction(
           () => document.querySelector('model-viewer')?.loaded,
           undefined,
           { timeout: 60000 },
         )
-        const activated = p
-          .locator('#products')
-          .getByRole('button', { name: 'AR · Kích hoạt xem 360°', exact: true })
-        assert.equal(await activated.getAttribute('aria-pressed'), 'true')
-        assert.equal(
-          await activated.evaluate((e) => getComputedStyle(e).opacity),
-          '1',
-        )
+        assert.equal(await trigger.count(), 0)
         const stage = p.locator('#products model-viewer').locator('..')
-        assert.equal((await stage.innerText()).trim(), 'AR')
+        assert.equal((await stage.innerText()).trim(), '360°')
         for (const name of [
           'Phóng to',
           'Thu nhỏ',
@@ -171,6 +164,20 @@ const fs = require('node:fs')
         await booking.click()
         await p.waitForURL('**/products/loa-jbl-partyBox-stage-320#dat-thue')
         await p.locator('#dat-thue').waitFor()
+        for (const route of [
+          '/video-jbl-partybox-320',
+          '/huong-dan-su-dung-jbl-partybox-320',
+        ]) {
+          await p.goto(base + route, { waitUntil: 'domcontentloaded' })
+          assert.equal(
+            await p
+              .locator(
+                '[title="한국어"], a[lang="ko"], a[href*="lang=ko"], a[href="/speaker-rental-da-nang-ko"]',
+              )
+              .count(),
+            0,
+          )
+        }
       }
       assert.deepEqual(errors, [])
       console.log(

@@ -16,7 +16,6 @@ const LANGUAGE_OPTIONS: LanguageOption[] = [
   { id: 'vi', code: 'vi', label: 'Việt Nam', flag: '🇻🇳' },
   { id: 'en', code: 'en', label: 'English', flag: '🇺🇸' },
   { id: 'ru', code: 'ru', label: 'Русский', flag: '🇷🇺' },
-  { id: 'ko', code: 'ko', label: '한국어', flag: '🇰🇷' },
   { id: 'zh-cn', code: 'zh-CN', label: '中文', flag: '🇨🇳' },
 ]
 
@@ -67,10 +66,9 @@ export function LanguageSwitcher() {
     }
 
     // Redirect to custom localized pages for specific languages
-    if (['en', 'ko', 'zh-cn', 'ru'].includes(language.id)) {
+    if (['en', 'zh-cn', 'ru'].includes(language.id)) {
       const routeMap: Record<string, string> = {
         'en': '/speaker-rental-da-nang',
-        'ko': '/speaker-rental-da-nang-ko',
         'zh-cn': '/speaker-rental-da-nang-zh',
         'ru': '/speaker-rental-da-nang-ru'
       }

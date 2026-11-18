@@ -86,13 +86,8 @@ const product = '/products/loa-jbl-partyBox-stage-320'
             .getAttribute('aria-selected'),
           'true',
         )
-        const arButton = gallery.getByRole('button', {
-          name: 'AR · Kích hoạt xem 360°',
-          exact: true,
-        })
-        assert.equal(await arButton.getAttribute('aria-pressed'), 'false')
         assert.equal(
-          await gallery.getByRole('button', { name: /AR.*Thử/ }).count(),
+          await gallery.getByRole('button', { name: /AR/ }).count(),
           0,
         )
         assert.equal(
@@ -110,9 +105,6 @@ const product = '/products/loa-jbl-partyBox-stage-320'
             .evaluate((e) => getComputedStyle(e).animationName),
           'none',
         )
-        await arButton.click()
-        assert.equal(await arButton.getAttribute('aria-pressed'), 'true')
-        await hint.waitFor({ state: 'detached' })
         const radius = await page.evaluate(
           () => document.querySelector('model-viewer').getCameraOrbit().radius,
         )
@@ -124,6 +116,7 @@ const product = '/products/loa-jbl-partyBox-stage-320'
             document.querySelector('model-viewer').getCameraOrbit().radius < r,
           radius,
         )
+        await hint.waitFor({ state: 'detached' })
         await gallery
           .getByRole('button', { name: 'Thu nhỏ', exact: true })
           .click()
