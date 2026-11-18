@@ -1,0 +1,37 @@
+{
+  "build": "Final Node22 yarn build in /Users/gemi/didiaudio",
+  "files": [
+    {
+      "file": "src/data/rental-microphone.ts",
+      "sha256": "df1df58efc31d62d4074add9985e419aa7c49eacdf8aea0a5aa7271e1f4d1f35"
+    },
+    {
+      "file": "src/data/rental-microphone-video.ts",
+      "sha256": "dab3fe20f94b2c18aee9a8354dd6569a1726570b255968e51880dbdfd5df4e51"
+    },
+    {
+      "file": "src/data/guide-content.ts",
+      "sha256": "7c57a727148a41686273cbbc4c11ad94172e1cb0edc6dcca37de57cc90eb2baa"
+    },
+    {
+      "file": "src/data/guide-messages.ts",
+      "sha256": "2def364f84c24f402f77466493cc14206c615eb61c9047c8c780c8dd19560e26"
+    },
+    {
+      "file": "src/data/guide-sources.ts",
+      "sha256": "b5e7c7f54225656bbcf020ab81e7a70af7bfbc243754f18537451e65a972ef8a"
+    },
+    {
+      "file": "src/lib/product-guide.ts",
+      "sha256": "0dfce7b5ba20206fddf86ff14c149df66b6c1bcae6b966c8db4dd464ea8af509"
+    },
+    {
+      "file": "src/components/guide/GuideCenter.tsx",
+      "sha256": "013746a5e44e8de1e350e2a546bb34a88b9a3c7fbdc90194d1c688822ff49e63"
+    },
+    {
+      "file": "src/app/huong-dan-su-dung-jbl-partybox-320/page.tsx",
+      "sha256": "dc5f3a25137fef07cc1b3f5599a7baf5408076e9d487f1cf213bf09947074fc0"
+    }
+  ]
+}

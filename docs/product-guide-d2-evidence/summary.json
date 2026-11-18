@@ -1,0 +1,43 @@
+{
+  "softwareStatus": "PASS",
+  "ownerConfirmedModel": "Alpha Works D2",
+  "manufacturerFactsVerified": true,
+  "hardwareTested": false,
+  "prepairedAtHandover": null,
+  "deployed": false,
+  "unitGroups": 6,
+  "browserGroups": 8,
+  "viewportWidths": [
+    360,
+    390,
+    768,
+    1440
+  ],
+  "locales": [
+    "vi",
+    "en",
+    "ko",
+    "ru",
+    "zh"
+  ],
+  "lint": "PASS",
+  "typecheck": "PASS",
+  "productionBuild": "PASS",
+  "d2Video": {
+    "id": "ZhCmbAet46M",
+    "watchMetadataEmbeddable": true,
+    "observedYouTubeError": 150,
+    "finalMode": "Direct watch link; no attempted embed"
+  },
+  "progress": "v2 preserves unrelated v1 progress, clears changed microphone entries, retains v1",
+  "passes": [
+    "PASS 360px: all46 instructions/checklists, keyboard/native accordion, progress restore/undo, accent search/empty state, quick anchors, images, support links, lazy video and focus",
+    "PASS 390px: all46 instructions/checklists, keyboard/native accordion, progress restore/undo, accent search/empty state, quick anchors, images, support links, lazy video and focus",
+    "PASS 768px: all46 instructions/checklists, keyboard/native accordion, progress restore/undo, accent search/empty state, quick anchors, images, support links, lazy video and focus",
+    "PASS 1440px: all46 instructions/checklists, keyboard/native accordion, progress restore/undo, accent search/empty state, quick anchors, images, support links, lazy video and focus",
+    "PASS five SSR translations, localized schema/canonical, inline/header language switch and six home/product teaser integrations",
+    "PASS no-JavaScript: all guide HTML, native accordions and direct video links remain usable",
+    "PASS blocked session storage: checklist and guide remain usable with no runtime error",
+    "PASS D2 update migrates progress: preserve other topics, require rereading microphone steps, keep original session data"
+  ]
+}

@@ -6,6 +6,8 @@ import { getProductGallery } from '@/lib/product-gallery'
 import { product3D } from '@/data/product-3d'
 import { canView3D } from '@/lib/product-3d'
 import { RentalProcess } from '@/components/RentalProcess'
+import { VideoSection } from '@/components/video/VideoSection'
+import { GuideTeaser } from '@/components/guide/GuideTeaser'
 
 const AboutSection = dynamic(() => import('@/components/AboutSection'))
 const FAQ = dynamic(() => import('@/components/FAQ').then((mod) => mod.FAQ))
@@ -45,7 +47,9 @@ export default async function Home() {
         }
       />
       <ProductList />
+      <VideoSection />
       <RentalProcess />
+      <GuideTeaser />
       <UseCaseSection />
       <WhyUs />
       <BlogCamTrai

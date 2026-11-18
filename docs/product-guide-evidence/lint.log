@@ -1,0 +1,7 @@
+yarn run v1.22.22
+warning Skipping preferred cache folder "/Users/gemi/Library/Caches/Yarn" because it is not writable.
+warning Selected the next writable cache folder in the list, will be "/var/folders/xp/my70k5cj3pb9hnkp03t8x2p40000gn/T/.yarn-cache-501".
+$ next lint
+warning Cannot find a suitable global folder. Tried these: "/usr/local, /Users/gemi/.yarn"
+✔ No ESLint warnings or errors
+Done in 2.97s.

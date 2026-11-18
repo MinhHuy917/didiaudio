@@ -1,0 +1,11 @@
+FAIL page.goto: Timeout 60000ms exceeded.
+Call log:
+[2m  - navigating to "http://127.0.0.1:4188/video-jbl-partybox-320", waiting until "networkidle"[22m
+
+Pending [
+  {
+    url: 'http://127.0.0.1:4188/_next/image?url=%2Fimages%2Fstage-320-videos%2FSIGaLIY2nmI.webp&w=640&q=75',
+    age: 59697
+  }
+]
+UI [ 'Video thực tế JBL PartyBox Stage 320' ] 6

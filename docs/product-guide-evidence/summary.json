@@ -1,0 +1,36 @@
+{
+  "softwareStatus": "PASS",
+  "microphoneSpecificInstructions": "PENDING_OWNER_EQUIPMENT_FACTS",
+  "hardwareTested": false,
+  "deployed": false,
+  "guideTopics": 6,
+  "instructionSteps": 46,
+  "preparationChecks": 4,
+  "locales": [
+    "vi",
+    "en",
+    "ko",
+    "ru",
+    "zh"
+  ],
+  "lint": "PASS: no warnings/errors",
+  "typecheck": "PASS",
+  "productionBuild": "PASS: Node22 yarn build",
+  "guideUnitGroups": 4,
+  "guideBrowserGroups": 7,
+  "legacyVideoUnitGroups": 4,
+  "legacyVideoBrowserGroups": 6,
+  "legacy3DUnitGroups": 3,
+  "legacy3DBrowserGroups": 11,
+  "legacyReferencePhotosValidated": 20,
+  "canonicalRoutes": 58,
+  "googlebotSamples": 3,
+  "crawlBrowserSamples": 12,
+  "seoValidationGroups": 17,
+  "seoRuntimeErrors": [],
+  "notes": [
+    "All46 instruction UI flows were exercised at360/390/768/1440px. This is not a physical Bluetooth/microphone/charging test.",
+    "Microphone model, power, receiver and pairing method remain unverified; unknown fields are null and UI explicitly asks users to confirm their supplied kit.",
+    "Video regression observed a stalled Next Image request locally; source decoding and AVIF conversion were valid. Fresh test server plus decoding all nine thumbnails before closing contexts passed."
+  ]
+}

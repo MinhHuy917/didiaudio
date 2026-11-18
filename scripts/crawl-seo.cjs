@@ -41,6 +41,8 @@ const { products } = load(root + '/src/data/products.ts')
 const routes = [
   '/',
   '/about-didiaudio',
+  '/video-jbl-partybox-320',
+  '/huong-dan-su-dung-jbl-partybox-320',
   '/speaker-rental-da-nang',
   '/speaker-rental-da-nang-ko',
   '/speaker-rental-da-nang-ru',

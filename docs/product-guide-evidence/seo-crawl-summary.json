@@ -1,0 +1,471 @@
+{
+  "startedAt": "2026-11-18T06:15:31.555Z",
+  "finishedAt": "2026-11-18T06:16:17.409Z",
+  "raw": [
+    {
+      "route": "/about-didiaudio",
+      "status": 200,
+      "title": "Về ĐiĐi Audio | Dịch vụ thuê loa tại Đà Nẵng",
+      "canonical": [
+        "https://www.didi-audio.com/about-didiaudio"
+      ]
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "title": "Thuê Loa Kẹo Kéo Đà Nẵng | Thuê Loa Kéo - ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com"
+      ]
+    },
+    {
+      "route": "/video-jbl-partybox-320",
+      "status": 200,
+      "title": "Video thực tế JBL PartyBox Stage 320 | ĐiĐi Audio Đà Nẵng",
+      "canonical": [
+        "https://www.didi-audio.com/video-jbl-partybox-320"
+      ]
+    },
+    {
+      "route": "/huong-dan-su-dung-jbl-partybox-320",
+      "status": 200,
+      "title": "Hướng dẫn kết nối & sử dụng JBL PartyBox Stage 320 | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/huong-dan-su-dung-jbl-partybox-320"
+      ]
+    },
+    {
+      "route": "/speaker-rental-da-nang",
+      "status": 200,
+      "title": "JBL Speaker Rental in Da Nang | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/speaker-rental-da-nang"
+      ]
+    },
+    {
+      "route": "/speaker-rental-da-nang-ko",
+      "status": 200,
+      "title": "다낭 JBL 스피커 대여 | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/speaker-rental-da-nang-ko"
+      ]
+    },
+    {
+      "route": "/speaker-rental-da-nang-ru",
+      "status": 200,
+      "title": "Аренда колонок JBL в Дананге | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/speaker-rental-da-nang-ru"
+      ]
+    },
+    {
+      "route": "/speaker-rental-da-nang-zh",
+      "status": 200,
+      "title": "岘港 JBL 音箱租赁 | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/speaker-rental-da-nang-zh"
+      ]
+    },
+    {
+      "route": "/products/loa-jbl-partyBox-stage-320",
+      "status": 200,
+      "title": "Thuê JBL PartyBox Stage 320 tại Đà Nẵng | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/products/loa-jbl-partyBox-stage-320"
+      ]
+    },
+    {
+      "route": "/setup-karaoke-5-phut-voi-loa-keo-jbl",
+      "status": 200,
+      "title": "Setup karaoke 5 phút với loa kéo JBL: không hú, hát hay | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/setup-karaoke-5-phut-voi-loa-keo-jbl"
+      ]
+    },
+    {
+      "route": "/kinh-nghiem-chon-loa-keo-cho-tiec-gia-dinh",
+      "status": 200,
+      "title": "Kinh nghiệm chọn loa kéo cho tiệc gia đình: công suất, pin, mic | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/kinh-nghiem-chon-loa-keo-cho-tiec-gia-dinh"
+      ]
+    },
+    {
+      "route": "/bang-gia-thue-loa-keo-jbl-da-nang-2024",
+      "status": 200,
+      "title": "Bảng giá thuê loa kéo JBL Đà Nẵng 2024 (320, 720, Ultimate) | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/bang-gia-thue-loa-keo-jbl-da-nang-2024"
+      ]
+    },
+    {
+      "route": "/meo-choi-nhac-ngoai-troi-khong-mat-tieng",
+      "status": 200,
+      "title": "Mẹo chơi nhạc ngoài trời không mất tiếng, không hụt bass | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/meo-choi-nhac-ngoai-troi-khong-mat-tieng"
+      ]
+    },
+    {
+      "route": "/chon-micro-khong-day-hat-karaoke-hay",
+      "status": 200,
+      "title": "Chọn micro không dây hát karaoke hay: UHF, pin, chống hú | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/chon-micro-khong-day-hat-karaoke-hay"
+      ]
+    },
+    {
+      "route": "/checklist-thue-loa-keo-truoc-su-kien",
+      "status": 200,
+      "title": "Checklist thuê loa kéo trước sự kiện: 6 phút kiểm tra | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/checklist-thue-loa-keo-truoc-su-kien"
+      ]
+    },
+    {
+      "route": "/chon-loa-keo-cho-restaurant-cafe-live-music",
+      "status": 200,
+      "title": "Chọn loa kéo cho quán cafe/restaurant có live music | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/chon-loa-keo-cho-restaurant-cafe-live-music"
+      ]
+    },
+    {
+      "route": "/loa-keo-cho-sinh-nhat-tai-nha",
+      "status": 200,
+      "title": "Loa kéo cho sinh nhật tại nhà: gọn, pin lâu, mic hay | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/loa-keo-cho-sinh-nhat-tai-nha"
+      ]
+    },
+    {
+      "route": "/ghep-doi-nhieu-loa-jbl-bang-auracast",
+      "status": 200,
+      "title": "Ghép đôi nhiều loa JBL bằng Auracast/PartyBoost | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/ghep-doi-nhieu-loa-jbl-bang-auracast"
+      ]
+    },
+    {
+      "route": "/chon-loa-keo-cho-team-building-50-nguoi",
+      "status": 200,
+      "title": "Chọn loa kéo cho team building 50 người | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/chon-loa-keo-cho-team-building-50-nguoi"
+      ]
+    },
+    {
+      "route": "/meo-hat-karaoke-it-met-hoi",
+      "status": 200,
+      "title": "Mẹo hát karaoke ít mệt: chỉnh echo, chọn tông, đứng đúng vị trí | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/meo-hat-karaoke-it-met-hoi"
+      ]
+    },
+    {
+      "route": "/bao-quan-loa-keo-sau-su-dung",
+      "status": 200,
+      "title": "Bảo quản loa kéo sau sử dụng: 5 bước nhanh | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/bao-quan-loa-keo-sau-su-dung"
+      ]
+    },
+    {
+      "route": "/chong-hu-micro-loa-keo",
+      "status": 200,
+      "title": "Chống hú micro loa kéo: 6 kỹ thuật cơ bản | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/chong-hu-micro-loa-keo"
+      ]
+    },
+    {
+      "route": "/chon-loa-keo-cho-lop-hoc-yoga-dance",
+      "status": 200,
+      "title": "Chọn loa kéo cho lớp yoga/dance: nhẹ, pin lâu, Bluetooth ổn | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/chon-loa-keo-cho-lop-hoc-yoga-dance"
+      ]
+    },
+    {
+      "route": "/ket-noi-loa-keo-voi-tivi-xem-phim-hat-karaoke",
+      "status": 200,
+      "title": "Kết nối loa kéo với TV để xem phim & karaoke | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/ket-noi-loa-keo-voi-tivi-xem-phim-hat-karaoke"
+      ]
+    },
+    {
+      "route": "/loa-keo-cho-du-lich-da-ngoai",
+      "status": 200,
+      "title": "Loa kéo cho du lịch dã ngoại: chống nước, pin dài, gọn nhẹ | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/loa-keo-cho-du-lich-da-ngoai"
+      ]
+    },
+    {
+      "route": "/cham-soc-pin-loa-keo-de-khong-chai",
+      "status": 200,
+      "title": "Chăm sóc pin loa kéo để không chai nhanh | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/cham-soc-pin-loa-keo-de-khong-chai"
+      ]
+    },
+    {
+      "route": "/huong-dan-dung-mixer-kem-loa-keo",
+      "status": 200,
+      "title": "Hướng dẫn dùng mixer kèm loa kéo để hát hay hơn | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/huong-dan-dung-mixer-kem-loa-keo"
+      ]
+    },
+    {
+      "route": "/chon-loa-keo-cho-phong-gym",
+      "status": 200,
+      "title": "Chọn loa kéo cho phòng gym: bền, bass khỏe, chạy dài giờ | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/chon-loa-keo-cho-phong-gym"
+      ]
+    },
+    {
+      "route": "/ket-noi-micro-co-day-vao-loa-keo",
+      "status": 200,
+      "title": "Kết nối micro có dây vào loa kéo: chống hú và an toàn | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/ket-noi-micro-co-day-vao-loa-keo"
+      ]
+    },
+    {
+      "route": "/bao-hanh-va-bao-tri-loa-keo-khi-thue",
+      "status": 200,
+      "title": "Bảo hành & bảo trì loa kéo khi thuê: cần hỏi gì? | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/bao-hanh-va-bao-tri-loa-keo-khi-thue"
+      ]
+    },
+    {
+      "route": "/meo-chinh-eq-cho-nhac-vang-nhac-tre",
+      "status": 200,
+      "title": "Mẹo chỉnh EQ cho nhạc vàng và nhạc trẻ trên loa kéo | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/meo-chinh-eq-cho-nhac-vang-nhac-tre"
+      ]
+    },
+    {
+      "route": "/thu-loa-truoc-khi-thue-5-phut",
+      "status": 200,
+      "title": "Thử loa trước khi thuê trong 5 phút | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/thu-loa-truoc-khi-thue-5-phut"
+      ]
+    },
+    {
+      "route": "/chon-loa-keo-cho-quay-roadshow",
+      "status": 200,
+      "title": "Chọn loa kéo cho roadshow: công suất, pin, di động | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/chon-loa-keo-cho-quay-roadshow"
+      ]
+    },
+    {
+      "route": "/top-5-bai-test-loa-keo-khi-thu-am-thanh",
+      "status": 200,
+      "title": "Top 5 bài test loa kéo khi thử âm thanh | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/top-5-bai-test-loa-keo-khi-thu-am-thanh"
+      ]
+    },
+    {
+      "route": "/huong-dan-dung-echo-de-hat-khong-bi-loang",
+      "status": 200,
+      "title": "Dùng echo thế nào để hát không bị loãng? | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/huong-dan-dung-echo-de-hat-khong-bi-loang"
+      ]
+    },
+    {
+      "route": "/su-khac-nhau-giua-loa-keo-va-loa-partybox",
+      "status": 200,
+      "title": "Khác nhau giữa loa kéo và loa partybox | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/su-khac-nhau-giua-loa-keo-va-loa-partybox"
+      ]
+    },
+    {
+      "route": "/huong-dan-ve-sinh-loa-keo",
+      "status": 200,
+      "title": "Hướng dẫn vệ sinh loa kéo: an toàn cho màng loa | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/huong-dan-ve-sinh-loa-keo"
+      ]
+    },
+    {
+      "route": "/ket-noi-nhac-cu-guitar-voi-loa-keo",
+      "status": 200,
+      "title": "Kết nối guitar với loa kéo: tránh méo và hú | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/ket-noi-nhac-cu-guitar-voi-loa-keo"
+      ]
+    },
+    {
+      "route": "/chon-loa-keo-cho-lop-hoc-ngoai-troi",
+      "status": 200,
+      "title": "Chọn loa kéo cho lớp học ngoài trời | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/chon-loa-keo-cho-lop-hoc-ngoai-troi"
+      ]
+    },
+    {
+      "route": "/kiem-tra-phu-kien-loa-keo-truoc-khi-nhan",
+      "status": 200,
+      "title": "Kiểm tra phụ kiện loa kéo trước khi nhận | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/kiem-tra-phu-kien-loa-keo-truoc-khi-nhan"
+      ]
+    },
+    {
+      "route": "/cach-dat-loa-de-bass-day-hon",
+      "status": 200,
+      "title": "Cách đặt loa để bass dày hơn mà không ù | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/cach-dat-loa-de-bass-day-hon"
+      ]
+    },
+    {
+      "route": "/ket-noi-loa-keo-voi-phan-mem-hat-karaoke",
+      "status": 200,
+      "title": "Kết nối loa kéo với app karaoke: giảm trễ, giữ chất âm | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/ket-noi-loa-keo-voi-phan-mem-hat-karaoke"
+      ]
+    },
+    {
+      "route": "/phong-tranh-loa-bi-nong-khi-chay-lau",
+      "status": 200,
+      "title": "Phòng tránh loa kéo bị nóng khi chạy lâu | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/phong-tranh-loa-bi-nong-khi-chay-lau"
+      ]
+    },
+    {
+      "route": "/chon-loa-keo-cho-phong-thu-nho",
+      "status": 200,
+      "title": "Chọn loa kéo cho phòng thu nhỏ tại nhà | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/chon-loa-keo-cho-phong-thu-nho"
+      ]
+    },
+    {
+      "route": "/tai-sao-nen-chon-loa-jbl-chinh-hang-khi-thue",
+      "status": 200,
+      "title": "Vì sao nên chọn loa JBL chính hãng khi thuê? | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/tai-sao-nen-chon-loa-jbl-chinh-hang-khi-thue"
+      ]
+    },
+    {
+      "route": "/huong-dan-dat-lich-thue-loa-online",
+      "status": 200,
+      "title": "Hướng dẫn đặt lịch thuê loa online: 3 bước | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/huong-dan-dat-lich-thue-loa-online"
+      ]
+    },
+    {
+      "route": "/cach-chon-nhac-nen-cho-party-ngoai-troi",
+      "status": 200,
+      "title": "Cách chọn nhạc nền cho party ngoài trời | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/cach-chon-nhac-nen-cho-party-ngoai-troi"
+      ]
+    },
+    {
+      "route": "/loi-thuong-gap-khi-dung-loa-keo-va-cach-khac-phuc",
+      "status": 200,
+      "title": "Lỗi thường gặp khi dùng loa kéo và cách khắc phục | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/loi-thuong-gap-khi-dung-loa-keo-va-cach-khac-phuc"
+      ]
+    },
+    {
+      "route": "/nen-thue-hay-mua-loa-keo",
+      "status": 200,
+      "title": "Nên thuê hay mua loa kéo? Quyết định nhanh trong 3 câu hỏi | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/nen-thue-hay-mua-loa-keo"
+      ]
+    },
+    {
+      "route": "/am-thanh-cho-le-cuoi-tai-nha",
+      "status": 200,
+      "title": "Âm thanh cho lễ cưới tại nhà: rõ lời, nhạc nền dễ nghe | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/am-thanh-cho-le-cuoi-tai-nha"
+      ]
+    },
+    {
+      "route": "/huong-dan-ghi-am-nhanh-voi-loa-keo-va-dien-thoai",
+      "status": 200,
+      "title": "Ghi âm nhanh với loa kéo và điện thoại | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/huong-dan-ghi-am-nhanh-voi-loa-keo-va-dien-thoai"
+      ]
+    },
+    {
+      "route": "/giu-am-thanh-on-dinh-khi-troi-mua",
+      "status": 200,
+      "title": "Giữ âm thanh ổn định khi trời mưa nhẹ | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/giu-am-thanh-on-dinh-khi-troi-mua"
+      ]
+    },
+    {
+      "route": "/ket-noi-loa-keo-voi-laptop-trinh-chieu",
+      "status": 200,
+      "title": "Kết nối loa kéo với laptop khi trình chiếu | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/ket-noi-loa-keo-voi-laptop-trinh-chieu"
+      ]
+    },
+    {
+      "route": "/bat-kenh-uhf-micro-tranh-nhieu",
+      "status": 200,
+      "title": "Bật kênh UHF micro để tránh nhiễu | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/bat-kenh-uhf-micro-tranh-nhieu"
+      ]
+    },
+    {
+      "route": "/chon-loa-keo-cho-lop-hoc-ngoai-ngu",
+      "status": 200,
+      "title": "Chọn loa kéo cho lớp học ngoại ngữ | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/chon-loa-keo-cho-lop-hoc-ngoai-ngu"
+      ]
+    },
+    {
+      "route": "/cach-dung-den-led-tren-loa-partybox",
+      "status": 200,
+      "title": "Cách dùng đèn LED trên loa partybox cho tiệc | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/cach-dung-den-led-tren-loa-partybox"
+      ]
+    },
+    {
+      "route": "/kiem-soat-am-luong-khi-co-tre-em",
+      "status": 200,
+      "title": "Kiểm soát âm lượng loa kéo khi có trẻ em | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/kiem-soat-am-luong-khi-co-tre-em"
+      ]
+    },
+    {
+      "route": "/huong-dan-update-firmware-loa-jbl",
+      "status": 200,
+      "title": "Hướng dẫn cập nhật firmware loa JBL (nếu hỗ trợ) | ĐiĐi Audio",
+      "canonical": [
+        "https://www.didi-audio.com/huong-dan-update-firmware-loa-jbl"
+      ]
+    }
+  ],
+  "errors": []
+}

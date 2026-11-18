@@ -3,6 +3,7 @@
 import { getProductGallery } from '@/lib/product-gallery'
 import ProductMediaGallery from '@/components/product-gallery/ProductMediaGallery'
 import { product3D } from '@/data/product-3d'
+import { GuideTeaser } from '@/components/guide/GuideTeaser'
 
 import SpecialNoticeBanner from '@/components/SpecialNoticeBanner'
 import { motion } from 'framer-motion'
@@ -128,7 +129,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
             </div>
 
             {/* CTA Buttons */}
-            <div className="space-y-3 mb-6 sm:mb-8">
+            <div id="dat-thue" className="space-y-3 mb-6 sm:mb-8 scroll-mt-32">
               
               {/* Contact Buttons */}
               <div className="flex gap-3">
@@ -214,6 +215,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
             </div>
 
             {/* Product Details */}
+            {String(product.id) === 'loa-jbl-partyBox-stage-320' && <GuideTeaser compact />}
             <div className="space-y-3 sm:space-y-4">
               <h2 className="text-xl sm:text-2xl font-black text-white mb-3 sm:mb-4">Chi tiết sản phẩm</h2>
               <ul className="space-y-2 sm:space-y-3">

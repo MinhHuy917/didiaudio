@@ -1,0 +1,6 @@
+PASS 360px: grid, filters, pagination, lazy thumbnails/player, schema, modal/focus/Escape, playback errors, share/fallback, CTA and overflow
+PASS 390px: grid, filters, pagination, lazy thumbnails/player, schema, modal/focus/Escape, playback errors, share/fallback, CTA and overflow
+PASS 768px: grid, filters, pagination, lazy thumbnails/player, schema, modal/focus/Escape, playback errors, share/fallback, CTA and overflow
+PASS 1440px: grid, filters, pagination, lazy thumbnails/player, schema, modal/focus/Escape, playback errors, share/fallback, CTA and overflow
+PASS all five localized sections/libraries, header language switch and existing rental/contact links
+PASS blocked YouTube API falls back to direct link and dialog can close

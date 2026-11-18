@@ -1,6 +1,9 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { videoLocale } from '@/lib/product-videos'
+import { guidePath } from '@/lib/product-guide'
+import { usePathname } from 'next/navigation'
 
 type LanguageOption = {
   id: string
@@ -32,9 +35,16 @@ function readGoogleTranslateLanguageCode() {
 }
 
 export function LanguageSwitcher() {
+  const pathname = usePathname()
   const [currentLanguageId, setCurrentLanguageId] = useState('vi')
 
   useEffect(() => {
+    if (['/video-jbl-partybox-320', guidePath].includes(window.location.pathname)) {
+      const query = new URLSearchParams(window.location.search)
+      const lang = videoLocale(query.getAll('lang').length === 1 ? query.get('lang') || undefined : undefined)
+      setCurrentLanguageId(lang === 'zh' ? 'zh-cn' : lang)
+      return
+    }
     const savedLanguageId = window.localStorage.getItem('preferred-language-id')
     if (savedLanguageId && LANGUAGE_OPTIONS.some((lang) => lang.id === savedLanguageId)) {
       setCurrentLanguageId(savedLanguageId)
@@ -43,10 +53,18 @@ export function LanguageSwitcher() {
     const languageCode = readGoogleTranslateLanguageCode()
     const matchingLanguage = LANGUAGE_OPTIONS.find((lang) => lang.code === languageCode)
     setCurrentLanguageId(matchingLanguage?.id || 'vi')
-  }, [])
+  }, [pathname])
 
   const handleChangeLanguage = (language: LanguageOption) => {
     if (language.id === currentLanguageId) return
+    if (['/video-jbl-partybox-320', guidePath].includes(window.location.pathname)) {
+      const locale = language.id === 'zh-cn' ? 'zh' : language.id
+      const path = window.location.pathname
+      window.location.href = locale === 'vi'
+        ? path
+        : `${path}?lang=${locale}`
+      return
+    }
 
     // Redirect to custom localized pages for specific languages
     if (['en', 'ko', 'zh-cn', 'ru'].includes(language.id)) {

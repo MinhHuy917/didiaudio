@@ -13,6 +13,7 @@ const navigation = [
     title: 'Liên Hệ',
     links: [
       { title: 'Phone: 0339197917', href: 'tel:0339197917' },
+      { title: 'Video JBL PartyBox Stage 320', href: '/video-jbl-partybox-320' },
       { title: 'Messenger', href: '//m.me/thueloakeodanang.didiaudio' },
     ],
   },

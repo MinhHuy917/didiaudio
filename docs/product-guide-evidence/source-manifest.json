@@ -1,0 +1,70 @@
+{
+  "buildDirectory": "/private/tmp/didi-guide-build-m07tiut_",
+  "files": [
+    {
+      "file": "src/lib/product-guide.ts",
+      "sha256": "17a574f4d28d8f15b1c52d238eb19185e65e83ba400016734f0803bc2a952f09",
+      "matchesBuild": true
+    },
+    {
+      "file": "src/data/guide-content.ts",
+      "sha256": "149a144bf3f7458825d6c82618e6f5fb2ffe112d189c3ee93aa40978dea048f9",
+      "matchesBuild": true
+    },
+    {
+      "file": "src/data/guide-messages.ts",
+      "sha256": "d54a2cb1a26e510e94baa88d7c6ca0673213de461522cfe50146a7cdeeab1eab",
+      "matchesBuild": true
+    },
+    {
+      "file": "src/data/guide-sources.ts",
+      "sha256": "185bd680ef3ad882188cbf7d419df3e2b2bf909edce998577e7ae9770b69284b",
+      "matchesBuild": true
+    },
+    {
+      "file": "src/data/rental-microphone.ts",
+      "sha256": "faf2dcb078cd9d940c3c4d101c028252522b2014aba315335ab8a986a73625e3",
+      "matchesBuild": true
+    },
+    {
+      "file": "src/components/guide/GuideCenter.tsx",
+      "sha256": "d4a47302c5b24f0ae99109e4ef3a07ee90fca108085393966a39b46034e4f968",
+      "matchesBuild": true
+    },
+    {
+      "file": "src/components/guide/GuideTeaser.tsx",
+      "sha256": "f8b96c7d085f9c0728dcdc337effd30fb4ad42b9dbbf60b3ea72be13b883aead",
+      "matchesBuild": true
+    },
+    {
+      "file": "src/app/huong-dan-su-dung-jbl-partybox-320/page.tsx",
+      "sha256": "06682eefdb91ce16986c0951fbd878413d1279de41ac5fb9b3d2d2ab9ad5666e",
+      "matchesBuild": true
+    },
+    {
+      "file": "src/app/page.tsx",
+      "sha256": "24306800a957d46bf2ceb2943e93eaf29902ae83b8ab1a12250e3cb126e3f681",
+      "matchesBuild": true
+    },
+    {
+      "file": "src/components/InternationalLandingWrapper.tsx",
+      "sha256": "928274b50a5db263ed6cfed57e7bdcca0840cacd5f61c5443118837763a16c6f",
+      "matchesBuild": true
+    },
+    {
+      "file": "src/components/ProductDetailClient.tsx",
+      "sha256": "dc8ecebc3e1d193b95b627cdf8272dee57e6f33d8bc542a2bf78021d48f26e06",
+      "matchesBuild": true
+    },
+    {
+      "file": "src/components/LanguageSwitcher.tsx",
+      "sha256": "4eef667a924a8d377cd8eb4ab8fca5b11f9a340777e15752ab921604cd2cdd53",
+      "matchesBuild": true
+    },
+    {
+      "file": "next-sitemap.config.js",
+      "sha256": "e5269e7931232ae8f2b014eadb6383c5723be538b75b0c7a229fcfc16b2a2b0f",
+      "matchesBuild": true
+    }
+  ]
+}

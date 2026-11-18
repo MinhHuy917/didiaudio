@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "deployed": false,
+  "lint": "PASS; zero ESLint warnings/errors",
+  "typecheck": "PASS; tsc --noEmit --incremental false",
+  "build": "PASS; yarn build and next-sitemap",
+  "videoUnitGroups": 4,
+  "videoBrowserGroups": 6,
+  "legacy3DUnitGroups": 3,
+  "legacy3DBrowserGroups": 11,
+  "referencePhotoFilesValidated": 20,
+  "canonicalURLCount": 57,
+  "seoValidationGroups": 16,
+  "seoBrowserRuntimeErrors": [],
+  "realYouTubeDefaultChrome": {
+    "frames": [
+      {
+        "src": "https://www.youtube-nocookie.com/embed/wx5IPeEge4g?autoplay=1&playsinline=1&origin=http%3A%2F%2F127.0.0.1%3A4187&hl=vi&enablejsapi=1&widgetid=1&forigin=http%3A%2F%2F127.0.0.1%3A4187%2Fvideo-jbl-partybox-320&aoriginsup=1&vf=6",
+        "title": "JBL PartyBox Stage 320 | How to setup and use your speaker",
+        "width": 894,
+        "height": 503,
+        "referrerPolicy": "strict-origin-when-cross-origin"
+      }
+    ],
+    "playback": [
+      {
+        "url": "https://www.youtube-nocookie.com/embed/wx5IPeEge4g?autoplay=1&playsinline=1&origin=http%3A%2F%2F127.0.0.1%3A4187&hl=vi&enablejsapi=1&widgetid=1&forigin=http%3A%2F%2F127.0.0.1%3A4187%2Fvideo-jbl-partybox-320&aoriginsup=1&vf=6",
+        "state": 1,
+        "error": {
+          "status": "OK",
+          "playableInEmbed": true,
+          "contextParams": "Q0FFU0FnZ0M="
+        },
+        "seconds": 10.286848,
+        "paused": false
+      }
+    ],
+    "events": [],
+    "fallback": 0
+  },
+  "notes": [
+    "9 public/embeddable video metadata records verified on 2026-11-18. Real playback test covers one official JBL video, not all nine streams.",
+    "Responsive checked at360/390/768/1440px; UI localized in vi/en/ko/ru/zh.",
+    "No field CWV, ranking, indexing or conversion-lift claim. No production deployment."
+  ]
+}

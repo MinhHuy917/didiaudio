@@ -1,0 +1,101 @@
+{
+  "build": "yarn build in /Users/gemi/didiaudio, Node22",
+  "files": [
+    {
+      "file": "src/components/video/VideoSection.tsx",
+      "sha256": "0d0e805ba5d671cdcecea6f74a71f63df22bb2c064a677815265eb1b31427b89"
+    },
+    {
+      "file": "src/components/video/VideoGallery.tsx",
+      "sha256": "a5280345ee16ef301a6a05e2ee6d3f74964bd9022f8b143132dfaad197a202e3"
+    },
+    {
+      "file": "src/components/video/VideoPlayerDialog.tsx",
+      "sha256": "d21228026bc98135bad5f626133778c8e11df5577d3e4da61d7f27743b769d36"
+    },
+    {
+      "file": "src/app/video-jbl-partybox-320/page.tsx",
+      "sha256": "1815a9e400b83d1467e0cdc36f8fcd2f44bed0a36d033781a5e935774f1a01d7"
+    },
+    {
+      "file": "src/lib/product-videos.ts",
+      "sha256": "e635b16c207542b045c6333d75c77f68e7ed45e971e1aab63aaca05e34d3824a"
+    },
+    {
+      "file": "src/lib/video-schema.ts",
+      "sha256": "e884ce7d84d82ff7f9e8083b2cee28ab1a2f41b67077dd4b0f8662d13a352e36"
+    },
+    {
+      "file": "src/lib/youtube-player.ts",
+      "sha256": "10795f76007cb9d242005f8e2c0c7c2cbcf1a66a09ee8dd4cd0ad8aaf567b9ea"
+    },
+    {
+      "file": "src/data/product-videos.ts",
+      "sha256": "0375cf2ea0893fbaf029a7f0cf04e8ddff3248c9060749d69da32dc45399e877"
+    },
+    {
+      "file": "src/data/video-messages.ts",
+      "sha256": "b2aa3eaba7e50059611d0fbf2f6ef8a45826798187b95a33943b77d686f3a2d8"
+    },
+    {
+      "file": "src/app/page.tsx",
+      "sha256": "09176795e700f071bdbe7449853315f43695f4f940b0bff2c7939d3025e6ae17"
+    },
+    {
+      "file": "src/components/LanguageSwitcher.tsx",
+      "sha256": "6723fd1b7cf43c53298e45b9d12aae3b0eb3d9a8d7d87171dc3e5e8ef456ad2b"
+    },
+    {
+      "file": "src/components/Footer.tsx",
+      "sha256": "433876dfbc2d310a189c193f1551cc653b0c3c8c9d7c0ef0bb21047579c9c735"
+    },
+    {
+      "file": "src/components/ProductDetailClient.tsx",
+      "sha256": "e56898d0ccba8b9082f9c4e69bf0947493a76f59a0168579298492d816208f3e"
+    },
+    {
+      "file": "src/components/InternationalLandingWrapper.tsx",
+      "sha256": "5102a4ba9d13a09d1209278ea5a1d7aa6899eb8078555048cbc39156d5657842"
+    },
+    {
+      "file": "next-sitemap.config.js",
+      "sha256": "4f17a14dc135ae8ca794685747b1d1160488754eefcd8b28228c1e9427cd8fd8"
+    },
+    {
+      "file": "public/images/stage-320-videos/bny5v3Gt4Xc.webp",
+      "sha256": "b889f42f17b1a211fbab38d7c9c5fafd1679ce917a69cc42aa9d3da9910afa6b"
+    },
+    {
+      "file": "public/images/stage-320-videos/vTfyHozpYeI.webp",
+      "sha256": "7d52c93ecb0d5586671e2278e2acfc606e044f1db105787000ee8c2924ef274f"
+    },
+    {
+      "file": "public/images/stage-320-videos/vvPqgsxmtpk.webp",
+      "sha256": "93c5d04f700bb877862ce1d49f5e7bf8014da9a848cf31905f4648c0c79d6e42"
+    },
+    {
+      "file": "public/images/stage-320-videos/nkdQlX2FOCM.webp",
+      "sha256": "dda7807410b831a62e94461660f3a1c4255c67813c930e461002fba1481c3fe9"
+    },
+    {
+      "file": "public/images/stage-320-videos/wx5IPeEge4g.webp",
+      "sha256": "0740bb4748a4c5cbe3633dab8a6943e3014f847f1d3d337d98d4b79dd3678de0"
+    },
+    {
+      "file": "public/images/stage-320-videos/jqOj1Ca6NBE.webp",
+      "sha256": "eae6cd63926e67c1045ab4073741f1a2d989503249d2b633e937783760eaab18"
+    },
+    {
+      "file": "public/images/stage-320-videos/SIGaLIY2nmI.webp",
+      "sha256": "69d63b2bb1aec4cf3f5a8b86b653fdf98374fbe54a043a2f49c3ea17c4350daa"
+    },
+    {
+      "file": "public/images/stage-320-videos/OBn77FdFdTM.webp",
+      "sha256": "8f0af5e896a73e6018a378ee88dcc6403195a6deeb05ea8e4fbbaf5d395261cd"
+    },
+    {
+      "file": "public/images/stage-320-videos/sic-FK3xL1o.webp",
+      "sha256": "3aa608eae720fbedd7c7504b896adcc8e5d2e3dd5b70bb2f00f79c6a75d848a0"
+    }
+  ]
+}

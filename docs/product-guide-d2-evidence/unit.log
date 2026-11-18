@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: all five locales have six topics, seven cause/recovery cases, 46 steps and the same stable progress IDs
+ok 1 - all five locales have six topics, seven cause/recovery cases, 46 steps and the same stable progress IDs
+  ---
+  duration_ms: 2.259417
+  type: 'test'
+  ...
+# Subtest: Vietnamese search ignores accents/case/whitespace and supports all search terms without inventing results
+ok 2 - Vietnamese search ignores accents/case/whitespace and supports all search terms without inventing results
+  ---
+  duration_ms: 2.973392
+  type: 'test'
+  ...
+# Subtest: session progress accepts only known IDs and safely rejects corrupt/untrusted values
+ok 3 - session progress accepts only known IDs and safely rejects corrupt/untrusted values
+  ---
+  duration_ms: 0.505461
+  type: 'test'
+  ...
+# Subtest: technical sources are primary HTTPS sources and microphone facts cannot silently be invented
+ok 4 - technical sources are primary HTTPS sources and microphone facts cannot silently be invented
+  ---
+  duration_ms: 0.369652
+  type: 'test'
+  ...
+# Subtest: D2 setup facts and progress migration follow owner confirmation and manufacturer documentation
+ok 5 - D2 setup facts and progress migration follow owner confirmation and manufacturer documentation
+  ---
+  duration_ms: 0.632885
+  type: 'test'
+  ...
+# Subtest: D2 tutorial remains a direct link after live YouTube error150; original JBL catalog is unchanged
+ok 6 - D2 tutorial remains a direct link after live YouTube error150; original JBL catalog is unchanged
+  ---
+  duration_ms: 23.861153
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 54.392409

@@ -2,9 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url><loc>https://www.didi-audio.com/about-didiaudio</loc></url>
 <url><loc>https://www.didi-audio.com/products/loa-jbl-partyBox-stage-320</loc></url>
-<url><loc>https://www.didi-audio.com</loc></url>
 <url><loc>https://www.didi-audio.com/speaker-rental-da-nang-ko</loc></url>
-<url><loc>https://www.didi-audio.com/speaker-rental-da-nang-zh</loc></url>
 <url><loc>https://www.didi-audio.com/kinh-nghiem-chon-loa-keo-cho-tiec-gia-dinh</loc></url>
 <url><loc>https://www.didi-audio.com/setup-karaoke-5-phut-voi-loa-keo-jbl</loc></url>
 <url><loc>https://www.didi-audio.com/bang-gia-thue-loa-keo-jbl-da-nang-2024</loc></url>
@@ -54,6 +52,10 @@
 <url><loc>https://www.didi-audio.com/cach-dung-den-led-tren-loa-partybox</loc></url>
 <url><loc>https://www.didi-audio.com/kiem-soat-am-luong-khi-co-tre-em</loc></url>
 <url><loc>https://www.didi-audio.com/huong-dan-update-firmware-loa-jbl</loc></url>
-<url><loc>https://www.didi-audio.com/speaker-rental-da-nang</loc></url>
+<url><loc>https://www.didi-audio.com</loc></url>
 <url><loc>https://www.didi-audio.com/speaker-rental-da-nang-ru</loc></url>
+<url><loc>https://www.didi-audio.com/speaker-rental-da-nang-zh</loc></url>
+<url><loc>https://www.didi-audio.com/speaker-rental-da-nang</loc></url>
+<url><loc>https://www.didi-audio.com/video-jbl-partybox-320</loc></url>
+<url><loc>https://www.didi-audio.com/huong-dan-su-dung-jbl-partybox-320</loc></url>
 </urlset>

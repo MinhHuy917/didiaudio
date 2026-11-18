@@ -1,0 +1,26 @@
+{
+  "frames": [
+    {
+      "src": "https://www.youtube-nocookie.com/embed/wx5IPeEge4g?autoplay=1&playsinline=1&origin=http%3A%2F%2F127.0.0.1%3A4187&hl=vi&enablejsapi=1&widgetid=1&forigin=http%3A%2F%2F127.0.0.1%3A4187%2Fvideo-jbl-partybox-320&aoriginsup=1&vf=6",
+      "title": "JBL PartyBox Stage 320 | How to setup and use your speaker",
+      "width": 894,
+      "height": 503,
+      "referrerPolicy": "strict-origin-when-cross-origin"
+    }
+  ],
+  "playback": [
+    {
+      "url": "https://www.youtube-nocookie.com/embed/wx5IPeEge4g?autoplay=1&playsinline=1&origin=http%3A%2F%2F127.0.0.1%3A4187&hl=vi&enablejsapi=1&widgetid=1&forigin=http%3A%2F%2F127.0.0.1%3A4187%2Fvideo-jbl-partybox-320&aoriginsup=1&vf=6",
+      "state": 1,
+      "error": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "contextParams": "Q0FFU0FnZ0M="
+      },
+      "seconds": 10.286848,
+      "paused": false
+    }
+  ],
+  "events": [],
+  "fallback": 0
+}

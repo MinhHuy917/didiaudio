@@ -1,4 +1,6 @@
 import ImageSlider from '@/components/ImageSlider'
+import { VideoSection } from '@/components/video/VideoSection'
+import { GuideTeaser } from '@/components/guide/GuideTeaser'
 import MenuContact from '@/components/MenuContact'
 import Testimonials from '@/components/Testimonials'
 import InternationalWhyUs from '@/components/international/InternationalWhyUs'
@@ -51,6 +53,8 @@ export default function InternationalLandingWrapper({
 
       {/* Localized Products */}
       <InternationalProductList content={content.pricing} />
+      <VideoSection locale={language} />
+      <GuideTeaser locale={language} />
 
       {/* Localized Use Cases */}
       <div lang={language}>

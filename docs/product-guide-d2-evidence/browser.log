@@ -1,0 +1,8 @@
+PASS 360px: all46 instructions/checklists, keyboard/native accordion, progress restore/undo, accent search/empty state, quick anchors, images, support links, lazy video and focus
+PASS 390px: all46 instructions/checklists, keyboard/native accordion, progress restore/undo, accent search/empty state, quick anchors, images, support links, lazy video and focus
+PASS 768px: all46 instructions/checklists, keyboard/native accordion, progress restore/undo, accent search/empty state, quick anchors, images, support links, lazy video and focus
+PASS 1440px: all46 instructions/checklists, keyboard/native accordion, progress restore/undo, accent search/empty state, quick anchors, images, support links, lazy video and focus
+PASS five SSR translations, localized schema/canonical, inline/header language switch and six home/product teaser integrations
+PASS no-JavaScript: all guide HTML, native accordions and direct video links remain usable
+PASS blocked session storage: checklist and guide remain usable with no runtime error
+PASS D2 update migrates progress: preserve other topics, require rereading microphone steps, keep original session data

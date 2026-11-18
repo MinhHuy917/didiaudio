@@ -1,0 +1,16 @@
+PASS crawl completed with 57 HTML pages, three bot samples, 12 browser samples and no collection errors
+PASS JSON-LD serialization preserves Vietnamese text and escapes script-breaking markup
+PASS all 56 preserved URLs and the new video library return200, self-canonical, unique title and one H1 in raw HTML
+PASS raw JSON-LD has one verified LocalBusiness, no fabricated ratings/hours/stock or FAQ rich-result markup
+PASS video library exposes six visible, attributed VideoObjects with verified YouTube dates and durations in raw HTML
+PASS all internal page/anchor links resolve and all57 URLs are reachable from homepage raw link graph
+PASS sitemap only includes the canonical57 pages and robots allows crawl without redirect/noindex/error URLs
+PASS unknown product and unknown slug return real404 with noindex
+PASS Googlebot-UA simulation receives same title/canonical/H1 without crawler-only content
+PASS no-JS home exposes visible H1 and non-transparent current price
+PASS application non-www redirect is permanent and preserves path/query in one hop
+PASS responsive, current NAP, contact hrefs and gallery regression 360
+PASS responsive, current NAP, contact hrefs and gallery regression 390
+PASS responsive, current NAP, contact hrefs and gallery regression 768
+PASS responsive, current NAP, contact hrefs and gallery regression 1440
+PASS no browser runtime errors

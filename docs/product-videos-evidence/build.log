@@ -1,0 +1,70 @@
+yarn run v1.22.22
+warning Skipping preferred cache folder "/Users/gemi/Library/Caches/Yarn" because it is not writable.
+warning Selected the next writable cache folder in the list, will be "/var/folders/xp/my70k5cj3pb9hnkp03t8x2p40000gn/T/.yarn-cache-501".
+$ next build
+warning Cannot find a suitable global folder. Tried these: "/usr/local, /Users/gemi/.yarn"
+  ▲ Next.js 14.2.3
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/61) ...
+   Generating static pages (15/61) 
+   Generating static pages (30/61) 
+   Generating static pages (45/61) 
+ ✓ Generating static pages (61/61)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                        Size     First Load JS
+┌ ○ /                                              11.5 kB         197 kB
+├ ○ /_not-found                                    137 B          87.7 kB
+├ ● /[slug]                                        1.81 kB         105 kB
+├   ├ /kinh-nghiem-chon-loa-keo-cho-tiec-gia-dinh
+├   ├ /setup-karaoke-5-phut-voi-loa-keo-jbl
+├   ├ /bang-gia-thue-loa-keo-jbl-da-nang-2024
+├   └ [+46 more paths]
+├ ○ /about-didiaudio                               2.75 kB         128 kB
+├ ● /products/[id]                                 14.3 kB         146 kB
+├   └ /products/loa-jbl-partyBox-stage-320
+├ ○ /speaker-rental-da-nang                        154 B           187 kB
+├ ○ /speaker-rental-da-nang-ko                     154 B           187 kB
+├ ○ /speaker-rental-da-nang-ru                     153 B           187 kB
+├ ○ /speaker-rental-da-nang-zh                     154 B           187 kB
+└ ƒ /video-jbl-partybox-320                        2.59 kB         109 kB
++ First Load JS shared by all                      87.5 kB
+  ├ chunks/23-24b6e279e4ae1c8b.js                  31.5 kB
+  ├ chunks/fd9d1056-844a5cc198651369.js            53.6 kB
+  └ other shared chunks (total)                    2.43 kB
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+
+$ next-sitemap
+warning Cannot find a suitable global folder. Tried these: "/usr/local, /Users/gemi/.yarn"
+✨ [next-sitemap] Loading next-sitemap config: file:///Users/gemi/didiaudio/next-sitemap.config.js
+✅ [next-sitemap] Generation completed
+┌───────────────┬────────┐
+│ (index)       │ Values │
+├───────────────┼────────┤
+│ indexSitemaps │ 1      │
+│ sitemaps      │ 1      │
+└───────────────┴────────┘
+-----------------------------------------------------
+ SITEMAP INDICES 
+-----------------------------------------------------
+
+   ○ https://www.didi-audio.com/sitemap.xml
+
+
+-----------------------------------------------------
+ SITEMAPS 
+-----------------------------------------------------
+
+   ○ https://www.didi-audio.com/sitemap-0.xml
+
+
+Done in 19.59s.

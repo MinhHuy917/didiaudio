@@ -32,18 +32,21 @@ function check(name, run) {
 }
 const urls = new Set(r.raw.map((p) => new URL(p.route, site).href))
 const graph = new Map()
-check('crawl completed with 56 HTML pages, three bot samples, 12 browser samples and no collection errors', () => {
-  assert.ok(r.finishedAt)
-  assert.ok(!r.failure)
-  assert.deepEqual(r.errors, [])
-  assert.equal(r.raw.length, 56)
-  assert.equal(r.googlebot.length, 3)
-  assert.equal(r.browser.length, 12)
-  for (const sample of r.browser) {
-    assert.equal(sample.status, 200)
-    assert.deepEqual(sample.errors, [])
-  }
-})
+check(
+  'crawl completed with 58 HTML pages, three bot samples, 12 browser samples and no collection errors',
+  () => {
+    assert.ok(r.finishedAt)
+    assert.ok(!r.failure)
+    assert.deepEqual(r.errors, [])
+    assert.equal(r.raw.length, 58)
+    assert.equal(r.googlebot.length, 3)
+    assert.equal(r.browser.length, 12)
+    for (const sample of r.browser) {
+      assert.equal(sample.status, 200)
+      assert.deepEqual(sample.errors, [])
+    }
+  },
+)
 check(
   'JSON-LD serialization preserves Vietnamese text and escapes script-breaking markup',
   () => {
@@ -70,9 +73,9 @@ check(
   },
 )
 check(
-  'all 56 preserved URLs return200, self-canonical, unique title and one H1 in raw HTML',
+  'all 57 preserved URLs and the new user guide return200, self-canonical, unique title and one H1 in raw HTML',
   () => {
-    assert.equal(r.raw.length, 56)
+    assert.equal(r.raw.length, 58)
     const titles = new Set()
     for (const p of r.raw) {
       assert.equal(p.status, 200, p.route)
@@ -149,7 +152,80 @@ check(
   },
 )
 check(
-  'all internal page/anchor links resolve and all56 URLs are reachable from homepage raw link graph',
+  'video library exposes six visible, attributed VideoObjects with verified YouTube dates and durations in raw HTML',
+  () => {
+    const page = r.raw.find(
+      (entry) => entry.route === '/video-jbl-partybox-320',
+    )
+    assert.ok(page)
+    const videos = page.schema
+      .flatMap((node) => node['@graph'] || [node])
+      .filter((node) => node['@type'] === 'VideoObject')
+    const sources = JSON.parse(
+      fs.readFileSync('public/images/stage-320-videos/sources.json', 'utf8'),
+    )
+    assert.equal(videos.length, 6)
+    assert.equal(new Set(videos.map((video) => video['@id'])).size, 6)
+    for (const video of videos) {
+      const source = sources.find((entry) => entry.sourcePage === video.url)
+      assert.ok(source && source.public && source.playableInEmbed)
+      assert.equal(video.uploadDate, source.uploadDate)
+      assert.equal(video.duration, `PT${source.durationSeconds}S`)
+      assert.equal(video.author.name, source.channel)
+      assert.ok(page.ids.includes(`video-${source.id}`))
+      assert.ok(page.links.includes(source.sourcePage))
+      assert.ok(
+        page.headings.some(
+          (heading) => heading.level === 'H3' && heading.text === video.name,
+        ),
+      )
+    }
+  },
+)
+check(
+  'guide has six crawlable topics, official references, safe microphone scope and TechArticle/Breadcrumb in raw HTML',
+  () => {
+    const page = r.raw.find(
+      (entry) => entry.route === '/huong-dan-su-dung-jbl-partybox-320',
+    )
+    assert.ok(page)
+    const entities = page.schema.flatMap((node) => node['@graph'] || [node])
+    const article = entities.filter((node) => node['@type'] === 'TechArticle')
+    assert.equal(article.length, 1)
+    assert.equal(article[0].inLanguage, 'vi')
+    assert.ok(
+      article[0].citation.some((url) => url.includes('JBL_PARTYBOX_STAGE_320')),
+    )
+    assert.equal(
+      entities.filter((node) => node['@type'] === 'BreadcrumbList').length,
+      1,
+    )
+    for (const topic of [
+      'bluetooth',
+      'microphone',
+      'controls',
+      'auracast',
+      'charging',
+      'troubleshooting',
+    ])
+      assert.ok(page.ids.includes('guide-' + topic))
+    assert.ok(page.links.includes('tel:0339197917'))
+    assert.ok(page.links.includes('https://zalo.me/0339197917'))
+    assert.ok(
+      page.headings.some(
+        (heading) =>
+          heading.text === 'Cách xử lý' || heading.text.includes('Micro bị hú'),
+      ),
+    )
+    assert.ok(
+      !entities.some(
+        (node) => node['@type'] === 'FAQPage' || node['@type'] === 'HowTo',
+      ),
+    )
+  },
+)
+check(
+  'all internal page/anchor links resolve and all58 URLs are reachable from homepage raw link graph',
   () => {
     for (const p of r.raw) {
       const edges = new Set()
@@ -177,17 +253,17 @@ check(
           visited.add(to)
           queue.push(to)
         }
-    assert.equal(visited.size, 56)
+    assert.equal(visited.size, 58)
   },
 )
 check(
-  'sitemap only includes the canonical56 pages and robots allows crawl without redirect/noindex/error URLs',
+  'sitemap only includes the canonical58 pages and robots allows crawl without redirect/noindex/error URLs',
   () => {
     const xml = r.endpoints.find((e) => e.route === '/sitemap-0.xml')
     assert.equal(xml.status, 200)
     const locs = [...xml.body.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1])
-    assert.equal(locs.length, 56)
-    assert.equal(new Set(locs).size, 56)
+    assert.equal(locs.length, 58)
+    assert.equal(new Set(locs).size, 58)
     assert.ok(locs.every((url) => urls.has(new URL(url).href)))
     assert.ok(!xml.body.includes('<lastmod>'))
     const robots = r.endpoints.find((e) => e.route === '/robots.txt')
@@ -303,7 +379,8 @@ check('no-JS home exposes visible H1 and non-transparent current price', () => {
         )
         if (route === '/') {
           const priceQuestion = page.getByRole('button', {
-            name: 'Giá thuê loa kéo tại Đà Nẵng là bao nhiêu?', exact: true,
+            name: 'Giá thuê loa kéo tại Đà Nẵng là bao nhiêu?',
+            exact: true,
           })
           await priceQuestion.click()
           const answer = await page.locator('#faq').innerText()
@@ -323,20 +400,21 @@ check('no-JS home exposes visible H1 and non-transparent current price', () => {
             'https://m.me/thueloakeodanang.didiaudio',
           ])
             assert.ok(await page.locator(`main a[href="${href}"]`).count())
-          const buttons = page
-            .locator('main button')
+          // Current gallery has 48 photos plus its separate interactive slide.
+          // Read the active panel, not the thumbnail strip's first <img>.
+          const gallery = page.getByRole('region', {
+            name: 'Gallery Loa JBL PartyBox Stage 320',
+            exact: true,
+          })
+          const buttons = gallery
+            .getByRole('tab')
             .filter({ has: page.locator('img') })
-          assert.equal(await buttons.count(), 13)
-          const before = await page
-            .locator('main img')
-            .first()
-            .getAttribute('src')
+          assert.equal(await buttons.count(), 48)
+          const image = gallery.getByRole('tabpanel').getByRole('img')
+          const before = await image.getAttribute('src')
           await buttons.nth(1).focus()
           await page.keyboard.press('Enter')
-          assert.notEqual(
-            await page.locator('main img').first().getAttribute('src'),
-            before,
-          )
+          assert.notEqual(await image.getAttribute('src'), before)
         }
       }
       check(
