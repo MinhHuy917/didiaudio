@@ -1,0 +1,10 @@
+{
+  "sourceHashes": {
+    "src/components/product-gallery/ProductMediaGallery.tsx": "26c2f45c24b3ad7038d6d7f5ad5ec6100e5869a1cd939a30d097d5efe58c1ee0",
+    "src/components/product-3d/Product3DViewer.tsx": "f41ff0ec4bb550bec35e64bae4afc6a1efa0079e65a680cc681a3ac73b7cf0ae"
+  },
+  "buildSourceMatches": true,
+  "browserGroupsPassed": 11,
+  "repeatedSwitchRoutesPassed": 2,
+  "deployed": false
+}

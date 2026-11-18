@@ -39,11 +39,14 @@ const product = '/products/loa-jbl-partyBox-stage-320'
         const first = gallery.getByRole('tab', { name: 'Ảnh 1', exact: true })
         assert.equal(await first.getAttribute('aria-selected'), 'true')
         assert.equal(await gallery.getByRole('tab').count(), 29)
-        assert.equal(models.length, 0)
-        assert.equal(
-          await page.evaluate(() => !!customElements.get('model-viewer')),
-          false,
+        await page.waitForFunction(
+          () => document.querySelector('model-viewer')?.loaded,
+          undefined,
+          { timeout: 60000 },
         )
+        assert.ok(models.length > 0, 'Model must preload before selecting360')
+        const prefetchedRequests = models.length
+        assert.equal(await gallery.locator('model-viewer').isVisible(), false)
         assert.equal(await page.locator('h1').count(), 1)
         assert.equal(
           await page.evaluate(() => document.documentElement.scrollWidth),
@@ -55,7 +58,7 @@ const product = '/products/loa-jbl-partyBox-stage-320'
         assert.equal(await last.getAttribute('aria-selected'), 'true')
         await gallery
           .getByRole('tabpanel')
-          .locator('img')
+          .getByRole('img')
           .evaluate((img) => img.decode())
         assert.equal(
           await last.evaluate((node) => {
@@ -140,7 +143,12 @@ const product = '/products/loa-jbl-partyBox-stage-320'
         )
         await gallery.screenshot({ path: output + '/' + tag + '-360.png' })
         await page.keyboard.press('Escape')
-        await page.locator('model-viewer').waitFor({ state: 'detached' })
+        await page.locator('model-viewer').waitFor({ state: 'hidden' })
+        assert.equal(
+          models.length,
+          prefetchedRequests,
+          'Switching back must keep the prefetched model',
+        )
         await page.waitForFunction(
           () => document.activeElement?.getAttribute('aria-label') === 'Ảnh 1',
         )
@@ -178,7 +186,7 @@ const product = '/products/loa-jbl-partyBox-stage-320'
         console.log(
           'PASS',
           tag,
-          'photo first, interactive second, lazy load, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors',
+          'photo first, interactive second, background preload, retained viewer, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors',
         )
         await context.close()
       }
@@ -277,7 +285,7 @@ const product = '/products/loa-jbl-partyBox-stage-320'
       { timeout: 60000 },
     )
     await broken.getByRole('tab', { name: 'Ảnh 1', exact: true }).click()
-    await broken.locator('model-viewer').waitFor({ state: 'detached' })
+    await broken.locator('model-viewer').waitFor({ state: 'hidden' })
     console.log('PASS missing model, retry and photo fallback')
     await failure.close()
     const noGL = await browser.newContext({

@@ -28,6 +28,7 @@ type ViewerProps = {
   ar: boolean
   showARHelp: boolean
   onClose: () => void
+  active?: boolean
   embedded?: boolean
 }
 
@@ -60,6 +61,7 @@ function ViewerSession({
   showARHelp,
   onClose,
   embedded = false,
+  active = true,
   onRetry,
 }: ViewerProps & { onRetry: () => void }) {
   const [interacted, setInteracted] = useState(false)
@@ -273,11 +275,12 @@ function ViewerSession({
               poster: config.posterUrl || image,
               alt: `Mô hình 3D ${name}. Kéo để xoay, cuộn hoặc chụm hai ngón để phóng to.`,
               'camera-controls': '',
+              loading: 'eager',
               'touch-action': 'pan-y',
               'camera-orbit': '0deg 75deg 105%',
               'rotation-per-second': '8deg',
               'interaction-prompt': 'none',
-              ...(rotate ? { 'auto-rotate': '' } : {}),
+              ...(rotate && active ? { 'auto-rotate': '' } : {}),
               ...(ar
                 ? {
                     ar: '',

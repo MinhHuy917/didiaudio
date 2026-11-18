@@ -66,3 +66,16 @@ Kiểm thử bản build riêng `/private/tmp/didi-extra-photos-_ff1f9x0`: lint,
 Bằng chứng: [browser](product-gallery-more-photos-evidence/browser.log), [kiểm tra mọi ảnh](product-gallery-more-photos-evidence/all.log), [build](product-gallery-more-photos-evidence/build.log), [source hashes](product-gallery-more-photos-evidence/source-manifest.json), [ảnh điều khiển trên hero mobile](product-gallery-more-photos-evidence/hero-390-photo-7.png), [ảnh hộp trên hero mobile](product-gallery-more-photos-evidence/hero-390-photo-19.png). Evidence các thư mục khác là snapshot các lượt triển khai trước.
 
 Nghiệm thu bộ ảnh cuối: **PASS** lint/typecheck/build,11 nhóm browser, và decode28ảnh trên cả2routes.15file WebP khớp SHA-256 bản build; không sửa giá/FAQ, chưa deploy.
+
+
+## Tải sẵn360° khi vào trang —18/11/2026
+
+Theo yêu cầu tiếp theo, thay cơ chế chỉ tải sau click bằng **tải/dựng nền tự động** trên homepage và product detail. Sau sự kiện window load, requestIdleCallback bắt đầu trong tối đa800ms (fallback100ms cho browser thiếu API); bấm slide360° trước đó vẫn khởi động ngay. Ảnh và font ban đầu được ưu tiên. Không kích hoạt AR/camera tự động.
+
+Viewer được mount ẩn với loading=eager, nạp và parse GLB ngay khi còn ở ảnh thường; khi chuyển slide sẽ dùng cùng instance. Khi ẩn: hidden/aria-hidden loại khỏi giao diện và focus, auto-rotate tắt; khi rời trang hoặc retry mới dọn instance. Vì giữ model trong bộ nhớ, đổi ảnh/360° nhiều lần không cần download/parse lại. Đây là thay đổi chủ ý so với cơ chế unmount khi chọn ảnh ở các mục trước.
+
+Model khoảng9.9MB sẽ được tải tự động cho khách vào trang có gallery. Preload cải thiện thời gian chờ lúc chọn360°, không bảo đảm không có loading khi người dùng bấm ngay hoặc mạng chậm. Không tuyên bố field CWV/hiệu năng trên mọi thiết bị; không thêm dependency, giá và AR giữ nguyên.
+
+PASS lint/typecheck/yarn build.11 nhóm browser tại360/390/768/1440 xác nhận loaded trong khi ảnh1 còn được chọn, viewer ẩn, hoạt động khi chuyển360°, AR gate, reduced-motion, controls/fullscreen, focus, lỗi/retry/WebGL fallback. Kiểm tra bổ sung trên cả2route:4 lần đổi qua lại dùng **cùng DOM/model**, đúng **1 request GLB/route**, không auto-rotate khi ẩn. Bản build riêng `/private/tmp/didi-preload-t3cg650s`; chưa deploy.
+
+Files: ProductMediaGallery.tsx (schedule/retain), Product3DViewer.tsx (active/eager/pause), test-product-3d-browser.cjs (contract mới). Evidence: [build](product-preload-evidence/build.log), [browser](product-preload-evidence/browser.log), [chuyển qua lại](product-preload-evidence/repeated.log), [source hashes](product-preload-evidence/source-manifest.json). Các kết quả no-preload trước đó là snapshot hành vi cũ, đã được thay thế theo yêu cầu này.

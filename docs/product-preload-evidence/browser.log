@@ -1,0 +1,11 @@
+PASS hero-360 photo first, interactive second, background preload, retained viewer, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors
+PASS product-360 photo first, interactive second, background preload, retained viewer, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors
+PASS hero-390 photo first, interactive second, background preload, retained viewer, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors
+PASS product-390 photo first, interactive second, background preload, retained viewer, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors
+PASS hero-768 photo first, interactive second, background preload, retained viewer, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors
+PASS product-768 photo first, interactive second, background preload, retained viewer, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors
+PASS hero-1440 photo first, interactive second, background preload, retained viewer, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors
+PASS product-1440 photo first, interactive second, background preload, retained viewer, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors
+PASS photo swipe, idle animation and real drag: hint hidden and auto rotation stopped after interaction
+PASS missing model, retry and photo fallback
+PASS WebGL unavailable: actionable error and photo gallery retained

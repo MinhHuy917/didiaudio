@@ -38,6 +38,29 @@ export default function ProductMediaGallery({
 }) {
   const id = useId()
   const [active, setActive] = useState(0)
+  const [warm, setWarm] = useState(false)
+  useEffect(() => {
+    if (!canView3D(config)) return
+    let cancelled = false
+    let idle: number | undefined
+    let timer: ReturnType<typeof setTimeout> | undefined
+    const start = () => {
+      const load = () => {
+        if (!cancelled) setWarm(true)
+      }
+      if ('requestIdleCallback' in window)
+        idle = window.requestIdleCallback(load, { timeout: 800 })
+      else timer = setTimeout(load, 100)
+    }
+    if (document.readyState === 'complete') start()
+    else window.addEventListener('load', start, { once: true })
+    return () => {
+      cancelled = true
+      window.removeEventListener('load', start)
+      if (idle !== undefined) window.cancelIdleCallback(idle)
+      if (timer !== undefined) clearTimeout(timer)
+    }
+  }, [config])
   const start = useRef<{ x: number; y: number } | null>(null)
   const tabs = useRef<(HTMLButtonElement | null)[]>([])
   const stripRef = useRef<HTMLDivElement>(null)
@@ -78,6 +101,7 @@ export default function ProductMediaGallery({
   const ar = interactive && canUseAR(config)
   function select(next: number, focus = false) {
     const selected = (next + slides.length) % slides.length
+    if (slides[selected]?.type === 'interactive') setWarm(true)
     setActive(selected)
     if (focus)
       requestAnimationFrame(() => {
@@ -192,7 +216,7 @@ export default function ProductMediaGallery({
         tabIndex={0}
         className="order-1 outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-cyan-300"
       >
-        {slide.type === 'photo' ? (
+        {slide.type === 'photo' && (
           <div
             className="relative aspect-square touch-pan-y"
             onPointerDown={(event) => {
@@ -226,11 +250,16 @@ export default function ProductMediaGallery({
               Ảnh tĩnh · {slide.photo + 1}/{photos.length}
             </span>
           </div>
-        ) : (
-          interactive && (
+        )}
+        {interactive && (warm || slide.type === 'interactive') && (
+          <div
+            hidden={slide.type !== 'interactive'}
+            aria-hidden={slide.type !== 'interactive'}
+          >
             <Viewer
               key={`${id}-viewer`}
               embedded
+              active={slide.type === 'interactive'}
               config={config}
               name={name}
               image={photos[0]?.src || config.posterUrl || ''}
@@ -238,7 +267,7 @@ export default function ProductMediaGallery({
               showARHelp={false}
               onClose={() => select(0, true)}
             />
-          )
+          </div>
         )}
       </div>
       {slide.type === 'photo' && (
