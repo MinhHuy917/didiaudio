@@ -4,7 +4,6 @@ import { articles } from '@/data/blog'
 import { products } from '@/data/products'
 import { getProductGallery } from '@/lib/product-gallery'
 import { product3D } from '@/data/product-3d'
-import { canView3D } from '@/lib/product-3d'
 import { RentalProcess } from '@/components/RentalProcess'
 import { VideoSection } from '@/components/video/VideoSection'
 import { GuideTeaser } from '@/components/guide/GuideTeaser'
@@ -12,7 +11,7 @@ import { GuideTeaser } from '@/components/guide/GuideTeaser'
 const AboutSection = dynamic(() => import('@/components/AboutSection'))
 const FAQ = dynamic(() => import('@/components/FAQ').then((mod) => mod.FAQ))
 const MenuContact = dynamic(() => import('@/components/MenuContact'))
-const ProductList = dynamic(() => import('@/components/ProductTable'))
+const ProductPhotos = dynamic(() => import('@/components/ProductTable'))
 const Testimonials = dynamic(() => import('@/components/Testimonials'))
 const WhyUs = dynamic(() => import('@/components/WhyUs'))
 const UseCaseSection = dynamic(() => import('@/components/UseCaseSection'))
@@ -26,7 +25,7 @@ export const metadata = createPageMetadata({
 })
 
 export default async function Home() {
-  const featured = products.find((product) => canView3D(product3D[product.id]))
+  const featured = products[0]
   return (
     <>
       <script
@@ -38,6 +37,7 @@ export default async function Home() {
           featured
             ? {
                 name: featured.name,
+                price: featured.price,
                 image: featured.image,
                 images: getProductGallery(featured),
                 href: `/products/${featured.id}`,
@@ -46,7 +46,7 @@ export default async function Home() {
             : undefined
         }
       />
-      <ProductList />
+      <ProductPhotos />
       <VideoSection />
       <RentalProcess />
       <GuideTeaser />

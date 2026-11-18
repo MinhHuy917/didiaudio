@@ -1,0 +1,13 @@
+{
+  "lint": "PASS",
+  "typecheck": "PASS",
+  "prefetchUnitGroups": 2,
+  "product3dUnitGroups": 3,
+  "modelValidation": "PASS",
+  "productionBuild": "PASS",
+  "browserRegressionGroupsPassed": 11,
+  "startupRoutesPassed": 2,
+  "nativeDeviceTested": false,
+  "deployed": false,
+  "measurementLimit": "Single-run local Chrome lab, 4x CPU; not field CWV"
+}

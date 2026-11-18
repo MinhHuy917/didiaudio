@@ -1,0 +1,15 @@
+{
+  "baselineCommit": "b9afc1704fe287272465b105efa3e9dbe8765194",
+  "builtFiles": [
+    {
+      "path": "src/components/product-gallery/ProductMediaGallery.tsx",
+      "workspaceSha256": "e980cc2e2e86738363e6374421642e993c05ee1268ac02b4bb0b4590efce0d1c",
+      "buildSnapshotSha256": "e980cc2e2e86738363e6374421642e993c05ee1268ac02b4bb0b4590efce0d1c"
+    },
+    {
+      "path": "src/lib/model-prefetch.ts",
+      "workspaceSha256": "fa4726f447d1ba4ddea0913e9ed507d50e7d1bb9c3d46d0861c939327a79f01d",
+      "buildSnapshotSha256": "fa4726f447d1ba4ddea0913e9ed507d50e7d1bb9c3d46d0861c939327a79f01d"
+    }
+  ]
+}

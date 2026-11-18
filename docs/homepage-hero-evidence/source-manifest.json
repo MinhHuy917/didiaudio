@@ -1,0 +1,30 @@
+{
+  "buildSnapshot": "/private/tmp/didi-home-hero-xivsjjxi",
+  "files": [
+    {
+      "path": "src/app/page.tsx",
+      "workspaceSha256": "d7a25b50deb7addda3bbd228bd69cd79d5e5e16f93adc2537eda9e086ade4b45",
+      "buildSha256": "d7a25b50deb7addda3bbd228bd69cd79d5e5e16f93adc2537eda9e086ade4b45"
+    },
+    {
+      "path": "src/components/AboutSection.tsx",
+      "workspaceSha256": "06a3d73cc2e85843fda9c29f130afea55815b84f36fc7af373b4fe9bff4874f0",
+      "buildSha256": "06a3d73cc2e85843fda9c29f130afea55815b84f36fc7af373b4fe9bff4874f0"
+    },
+    {
+      "path": "src/components/ProductTable.tsx",
+      "workspaceSha256": "750fcc78a4e07fa904798a4ce9ff0ec0ddc60edb3b07ba251f719547586c43b8",
+      "buildSha256": "750fcc78a4e07fa904798a4ce9ff0ec0ddc60edb3b07ba251f719547586c43b8"
+    },
+    {
+      "path": "src/components/product-gallery/ProductMediaGallery.tsx",
+      "workspaceSha256": "e980cc2e2e86738363e6374421642e993c05ee1268ac02b4bb0b4590efce0d1c",
+      "buildSha256": "e980cc2e2e86738363e6374421642e993c05ee1268ac02b4bb0b4590efce0d1c"
+    },
+    {
+      "path": "src/lib/model-prefetch.ts",
+      "workspaceSha256": "fa4726f447d1ba4ddea0913e9ed507d50e7d1bb9c3d46d0861c939327a79f01d",
+      "buildSha256": "fa4726f447d1ba4ddea0913e9ed507d50e7d1bb9c3d46d0861c939327a79f01d"
+    }
+  ]
+}

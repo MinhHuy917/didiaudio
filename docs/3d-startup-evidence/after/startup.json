@@ -1,0 +1,86 @@
+{
+  "cpuThrottle": 4,
+  "viewport": 390,
+  "observedBeforeSelection": true,
+  "expectedGated": true,
+  "results": [
+    {
+      "webglCalls": 0,
+      "rendererNodes": 0,
+      "engineRegistered": false,
+      "loaded": false,
+      "maxFrameGapMs": 550,
+      "longTasks": [
+        {
+          "start": 180.1000000089407,
+          "duration": 51
+        },
+        {
+          "start": 418.70000000298023,
+          "duration": 544
+        },
+        {
+          "start": 1003.4000000059605,
+          "duration": 107
+        },
+        {
+          "start": 1127.5,
+          "duration": 76
+        },
+        {
+          "start": 1726.2000000029802,
+          "duration": 76
+        }
+      ],
+      "networkHint": 1,
+      "modelResources": [
+        {
+          "initiator": "link",
+          "transferBytes": 8557070,
+          "durationMs": 423.79999999701977
+        }
+      ],
+      "scrollObservedAfterMs": 125,
+      "scrollY": 720,
+      "route": "/",
+      "errors": []
+    },
+    {
+      "webglCalls": 0,
+      "rendererNodes": 0,
+      "engineRegistered": false,
+      "loaded": false,
+      "maxFrameGapMs": 266.6,
+      "longTasks": [
+        {
+          "start": 255.29999999701977,
+          "duration": 53
+        },
+        {
+          "start": 438.8999999910593,
+          "duration": 284
+        },
+        {
+          "start": 749.1999999880791,
+          "duration": 152
+        },
+        {
+          "start": 933.7999999970198,
+          "duration": 52
+        }
+      ],
+      "networkHint": 1,
+      "modelResources": [
+        {
+          "initiator": "link",
+          "transferBytes": 8557070,
+          "durationMs": 452.29999999701977
+        }
+      ],
+      "scrollObservedAfterMs": 108,
+      "scrollY": 720,
+      "route": "/products/loa-jbl-partyBox-stage-320",
+      "errors": []
+    }
+  ]
+}

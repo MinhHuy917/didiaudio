@@ -31,7 +31,8 @@ const product = '/products/loa-jbl-partyBox-stage-320'
         page.on('request', (r) => {
           if (r.url().endsWith('.glb')) models.push(r.url())
         })
-        await page.goto(base + route, { waitUntil: 'networkidle' })
+        // Background resource hints need not become idle for the gallery to work.
+        await page.goto(base + route, { waitUntil: 'load', timeout: 60000 })
         const gallery = page.getByRole('region', {
           name: 'Gallery Loa JBL PartyBox Stage 320',
           exact: true,
@@ -39,14 +40,11 @@ const product = '/products/loa-jbl-partyBox-stage-320'
         const first = gallery.getByRole('tab', { name: 'Ảnh 1', exact: true })
         assert.equal(await first.getAttribute('aria-selected'), 'true')
         assert.equal(await gallery.getByRole('tab').count(), 49)
-        await page.waitForFunction(
-          () => document.querySelector('model-viewer')?.loaded,
-          undefined,
-          { timeout: 60000 },
+        assert.equal(await gallery.locator('model-viewer').count(), 0)
+        assert.equal(
+          await page.evaluate(() => !!customElements.get('model-viewer')),
+          false,
         )
-        assert.ok(models.length > 0, 'Model must preload before selecting360')
-        const prefetchedRequests = models.length
-        assert.equal(await gallery.locator('model-viewer').isVisible(), false)
         assert.equal(await page.locator('h1').count(), 1)
         assert.equal(
           await page.evaluate(() => document.documentElement.scrollWidth),
@@ -90,6 +88,7 @@ const product = '/products/loa-jbl-partyBox-stage-320'
             document.querySelector('model-viewer')?.modelIsVisible,
           { timeout: 60000 },
         )
+        const loadedModelRequests = models.length
         assert.equal(
           await gallery
             .getByRole('tab', { name: '360° · Tương tác', exact: true })
@@ -157,8 +156,8 @@ const product = '/products/loa-jbl-partyBox-stage-320'
         await page.locator('model-viewer').waitFor({ state: 'hidden' })
         assert.equal(
           models.length,
-          prefetchedRequests,
-          'Switching back must keep the prefetched model',
+          loadedModelRequests,
+          'Switching back must keep the explicitly opened model',
         )
         await page.waitForFunction(
           () => document.activeElement?.getAttribute('aria-label') === 'Ảnh 1',
@@ -197,7 +196,7 @@ const product = '/products/loa-jbl-partyBox-stage-320'
         console.log(
           'PASS',
           tag,
-          'photo first, interactive second, background preload, retained viewer, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors',
+          'photo first, interactive second, no startup renderer, on-demand initialization, retained viewer, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors',
         )
         await context.close()
       }

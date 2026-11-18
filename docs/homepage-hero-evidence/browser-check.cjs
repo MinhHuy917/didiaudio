@@ -1,0 +1,82 @@
+const { chromium } = require('/private/tmp/didi-ux-audit/node_modules/playwright-core')
+const assert = require('node:assert/strict')
+const fs = require('node:fs')
+const base = 'http://127.0.0.1:4194'
+const out = '/private/tmp/didi-home-hero-results'
+;(async () => {
+  fs.mkdirSync(out, { recursive: true })
+  const browser = await chromium.launch({
+    executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+    headless: true,
+    args: ['--enable-unsafe-swiftshader'],
+  })
+  const results = []
+  try {
+    for (const [width, height] of [[360,640], [390,844], [768,1024], [1440,1000]]) {
+      const context = await browser.newContext({ viewport: { width, height }, reducedMotion: 'reduce' })
+      await context.route('**/*', r => r.request().url().startsWith(base) ? r.continue() : r.abort())
+      const page = await context.newPage(), errors = []
+      page.on('pageerror', e => errors.push(e.message))
+      const response = await page.goto(base, { waitUntil: 'load', timeout: 60000 })
+      assert.equal(response.status(), 200)
+      const html = await response.text()
+      assert.ok(html.includes('500.000'))
+      assert.ok(html.includes('id="products"'))
+      const hero = page.getByRole('region', { name: 'Dịch vụ thuê loa tại Đà Nẵng', exact: true })
+      const price = hero.locator('#products')
+      const book = hero.getByRole('link', { name: 'Đặt thuê ngay', exact: true })
+      const advice = hero.getByRole('link', { name: 'Liên hệ tư vấn', exact: true })
+      await book.waitFor()
+      assert.match(await price.innerText(), /500\.000đ\s*\/ ngày/)
+      assert.ok((await price.innerText()).includes('Bao gồm 2 micro không dây · Hỗ trợ setup tận nơi'))
+      assert.equal(await book.getAttribute('href'), '/products/loa-jbl-partyBox-stage-320#dat-thue')
+      assert.equal(await advice.getAttribute('href'), 'tel:0339197917')
+      assert.equal(await page.locator('h1').count(), 1)
+      assert.equal(await page.locator('#products').count(), 1)
+      assert.equal(await page.getByRole('heading', { name: 'Loa JBL PartyBox Stage 320', exact: true }).count(), 0)
+      assert.equal(await hero.getByRole('link', { name: 'Xem loa & giá thuê', exact: true }).count(), 0)
+      const photos = page.getByRole('region', { name: 'Hình ảnh thực tế', exact: true })
+      assert.equal(await hero.evaluate(e => e.nextElementSibling?.id), 'hinh-anh-thuc-te')
+      assert.equal(await photos.locator('img').count(), 13)
+      assert.equal(await photos.getByRole('link').count(), 0)
+      const specs = hero.getByRole('list', { name: 'Thông số nổi bật của loa' })
+      assert.equal(await specs.getByRole('listitem').count(), 3)
+      const gallery = hero.getByRole('region', { name: 'Gallery Loa JBL PartyBox Stage 320', exact: true })
+      assert.equal(await gallery.getByRole('tab').count(), 49)
+      assert.equal(await gallery.locator('model-viewer').count(), 0)
+      assert.equal(await page.evaluate(() => !!customElements.get('model-viewer')), false)
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width)
+      const box = await book.boundingBox(), priceBox = await price.boundingBox()
+      const visible = await book.evaluate(e => {
+        const b = e.getBoundingClientRect()
+        return e.contains(document.elementFromPoint(b.x + b.width/2, b.y + b.height/2))
+      })
+      const sample = { width, height, cta: box, price: priceBox, ctaCenterUnobscured: visible }
+      console.log('MEASURE', JSON.stringify(sample))
+      await page.screenshot({ path: `${out}/diagnostic-${width}.png` })
+      console.log('LAYOUT', await hero.locator('h1, p').evaluateAll(es => es.map(e => ({text:e.innerText, y:e.getBoundingClientRect().y, h:e.getBoundingClientRect().height, style: getComputedStyle(e).fontSize}))))
+      assert.ok(visible, 'Primary CTA must be in the initial viewport and not covered')
+      if (width < 768) assert.ok(box.y + box.height <= height - 96, 'Primary CTA above fixed contact bar')
+      await page.screenshot({ path: `${out}/home-${width}x${height}.png` })
+      await book.focus()
+      assert.ok(await book.evaluate(e => parseFloat(getComputedStyle(e).outlineWidth) >= 2))
+      await page.keyboard.press('Tab')
+      assert.ok(await advice.evaluate(e => document.activeElement === e))
+      await page.keyboard.press('Shift+Tab')
+      await page.keyboard.press('Enter')
+      await page.waitForURL('**/products/loa-jbl-partyBox-stage-320#dat-thue')
+      await page.locator('#dat-thue').waitFor({ state: 'visible' })
+      assert.equal(await page.locator('#dat-thue').getByRole('link', { name: 'Gọi Ngay', exact: true }).getAttribute('href'), 'tel:0339197917')
+      assert.equal(await page.locator('#dat-thue').getByRole('link', { name: 'Zalo', exact: true }).getAttribute('href'), 'https://zalo.me/0339197917')
+      await page.goto(base + '/#products', { waitUntil: 'load', timeout: 60000 })
+      await page.waitForTimeout(250)
+      const anchor = await page.locator('#products').boundingBox()
+      assert.ok(anchor.y >= 100 && anchor.y < height, 'Legacy pricing anchor stays below the sticky header')
+      assert.deepEqual(errors, [])
+      results.push({ ...sample, legacyAnchorY: anchor.y, errors })
+      console.log('PASS', width, 'x', height, 'SSR price, section order, booking keyboard/link, legacy anchor, gallery, overflow')
+      await context.close()
+    }
+    fs.writeFileSync(out + '/validation.json', JSON.stringify({ results }, null, 2))
+  } finally { await browser.close() }
+})().catch(e => { console.error(e); process.exitCode = 1 })

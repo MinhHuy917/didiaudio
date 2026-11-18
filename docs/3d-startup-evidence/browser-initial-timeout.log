@@ -1,0 +1,16 @@
+PASS hero-360 photo first, interactive second, no startup renderer, on-demand initialization, retained viewer, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors
+PASS product-360 photo first, interactive second, no startup renderer, on-demand initialization, retained viewer, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors
+PASS hero-390 photo first, interactive second, no startup renderer, on-demand initialization, retained viewer, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors
+PASS product-390 photo first, interactive second, no startup renderer, on-demand initialization, retained viewer, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors
+PASS hero-768 photo first, interactive second, no startup renderer, on-demand initialization, retained viewer, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors
+PASS product-768 photo first, interactive second, no startup renderer, on-demand initialization, retained viewer, AR state, reduced motion, controls, keyboard/focus, links, overflow and runtime errors
+page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "http://127.0.0.1:4192/", waiting until "networkidle"[22m
+
+    at /Users/gemi/didiaudio/scripts/test-product-3d-browser.cjs:34:20 {
+  log: [
+    '  - navigating to "http://127.0.0.1:4192/", waiting until "networkidle"'
+  ],
+  name: 'TimeoutError'
+}

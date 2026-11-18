@@ -1,0 +1,27 @@
+{
+  "lint": "PASS",
+  "typecheck": "PASS",
+  "productionBuild": "PASS",
+  "homeLayoutBrowserGroups": 4,
+  "galleryRegressionGroups": 11,
+  "viewports": [
+    [
+      360,
+      640
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      768,
+      1024
+    ],
+    [
+      1440,
+      1000
+    ]
+  ],
+  "catalogPriceChanged": false,
+  "deployed": false
+}

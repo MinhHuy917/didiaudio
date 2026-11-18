@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: skip speculative downloads on data saver and slow connections, not explicit 360 use
+ok 1 - skip speculative downloads on data saver and slow connections, not explicit 360 use
+  ---
+  duration_ms: 2.870157
+  type: 'test'
+  ...
+# Subtest: warm only network resources at low priority; deduplicate and clean up hints
+ok 2 - warm only network resources at low priority; deduplicate and clean up hints
+  ---
+  duration_ms: 1.092087
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 41.252651

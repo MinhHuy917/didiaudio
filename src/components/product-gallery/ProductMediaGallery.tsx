@@ -6,6 +6,11 @@ import dynamic from 'next/dynamic'
 import { useEffect, useId, useRef, useState } from 'react'
 import { ChevronLeft, ChevronRight, ImageIcon, Rotate3d } from 'lucide-react'
 import { canUseAR, canView3D, type Product3DConfig } from '@/lib/product-3d'
+import {
+  hintModelDownload,
+  mayPrefetchModel,
+  type ModelConnection,
+} from '@/lib/model-prefetch'
 
 const Viewer = dynamic(
   () => import('@/components/product-3d/Product3DViewer'),
@@ -45,26 +50,32 @@ export default function ProductMediaGallery({
   const id = useId()
   const [active, setActive] = useState(0)
   const [warm, setWarm] = useState(false)
+  const opened = useRef(false)
   useEffect(() => {
     if (!canView3D(config)) return
-    let cancelled = false
-    let idle: number | undefined
     let timer: ReturnType<typeof setTimeout> | undefined
+    let removeHint: (() => void) | undefined
     const start = () => {
-      const load = () => {
-        if (!cancelled) setWarm(true)
-      }
-      if ('requestIdleCallback' in window)
-        idle = window.requestIdleCallback(load, { timeout: 800 })
-      else timer = setTimeout(load, 100)
+      // A network hint is cheap; mounting the hidden viewer here was not.
+      timer = setTimeout(() => {
+        const connection = (
+          navigator as Navigator & { connection?: ModelConnection }
+        ).connection
+        if (
+          opened.current ||
+          document.visibilityState !== 'visible' ||
+          !mayPrefetchModel(connection)
+        )
+          return
+        removeHint = hintModelDownload(config.modelUrl)
+      }, 3000)
     }
     if (document.readyState === 'complete') start()
     else window.addEventListener('load', start, { once: true })
     return () => {
-      cancelled = true
       window.removeEventListener('load', start)
-      if (idle !== undefined) window.cancelIdleCallback(idle)
       if (timer !== undefined) clearTimeout(timer)
+      removeHint?.()
     }
   }, [config])
   const start = useRef<{ x: number; y: number } | null>(null)
@@ -108,7 +119,10 @@ export default function ProductMediaGallery({
   const ar = interactive && canUseAR(config)
   function select(next: number, focus = false) {
     const selected = (next + slides.length) % slides.length
-    if (slides[selected]?.type === 'interactive') setWarm(true)
+    if (slides[selected]?.type === 'interactive') {
+      opened.current = true
+      setWarm(true)
+    }
     setActive(selected)
     if (focus)
       requestAnimationFrame(() => {
@@ -263,7 +277,18 @@ export default function ProductMediaGallery({
             </span>
           </div>
         )}
-        {interactive && (warm || slide.type === 'interactive') && (
+        {slide.type === 'interactive' && !warm && (
+          <div className="flex aspect-square items-center justify-center p-5">
+            <button
+              type="button"
+              onClick={() => select(index)}
+              className={`${control} px-5 text-sm`}
+            >
+              Mở trình xem 360°
+            </button>
+          </div>
+        )}
+        {interactive && warm && (
           <div
             hidden={slide.type !== 'interactive'}
             aria-hidden={slide.type !== 'interactive'}

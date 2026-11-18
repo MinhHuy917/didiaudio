@@ -1,0 +1,124 @@
+MEASURE {"width":360,"height":640,"cta":{"x":16,"y":492.5,"width":126.328125,"height":50},"price":{"x":16,"y":336,"width":328,"height":140.5},"ctaCenterUnobscured":true}
+LAYOUT [
+  {
+    text: 'Thuê loa kẹo kéo tại Đà Nẵng',
+    y: 152,
+    h: 70,
+    style: '28px'
+  },
+  {
+    text: 'Thuê JBL PartyBox Stage 320 tại Đà Nẵng. Liên hệ xác nhận thời gian và địa điểm sử dụng trước khi đặt thuê.',
+    y: 238,
+    h: 78,
+    style: '16px'
+  },
+  { text: 'GIÁ THUÊ ƯU ĐÃI', y: 353, h: 16, style: '12px' },
+  { text: '500.000đ\n/ ngày', y: 373, h: 40, style: '16px' },
+  {
+    text: 'Bao gồm 2 micro không dây · Hỗ trợ setup tận nơi',
+    y: 421,
+    h: 38.5,
+    style: '14px'
+  },
+  {
+    text: 'Chọn slide 2 để kéo xoay loa 360°. AR là chế độ đặt loa vào không gian thật.',
+    y: 1036.5,
+    h: 39,
+    style: '12px'
+  },
+  { text: 'Ảnh 1. Slide 1 trên 49.', y: 667.5, h: 1, style: '16px' }
+]
+PASS 360 x 640 SSR price, section order, booking keyboard/link, legacy anchor, gallery, overflow
+MEASURE {"width":390,"height":844,"cta":{"x":16,"y":492.5,"width":126.328125,"height":50},"price":{"x":16,"y":336,"width":358,"height":140.5},"ctaCenterUnobscured":true}
+LAYOUT [
+  {
+    text: 'Thuê loa kẹo kéo tại Đà Nẵng',
+    y: 152,
+    h: 70,
+    style: '28px'
+  },
+  {
+    text: 'Thuê JBL PartyBox Stage 320 tại Đà Nẵng. Liên hệ xác nhận thời gian và địa điểm sử dụng trước khi đặt thuê.',
+    y: 238,
+    h: 78,
+    style: '16px'
+  },
+  { text: 'GIÁ THUÊ ƯU ĐÃI', y: 353, h: 16, style: '12px' },
+  { text: '500.000đ\n/ ngày', y: 373, h: 40, style: '16px' },
+  {
+    text: 'Bao gồm 2 micro không dây · Hỗ trợ setup tận nơi',
+    y: 421,
+    h: 38.5,
+    style: '14px'
+  },
+  {
+    text: 'Chọn slide 2 để kéo xoay loa 360°. AR là chế độ đặt loa vào không gian thật.',
+    y: 1032.5,
+    h: 39,
+    style: '12px'
+  },
+  { text: 'Ảnh 1. Slide 1 trên 49.', y: 633.5, h: 1, style: '16px' }
+]
+PASS 390 x 844 SSR price, section order, booking keyboard/link, legacy anchor, gallery, overflow
+MEASURE {"width":768,"height":1024,"cta":{"x":24,"y":493.25,"width":147.796875,"height":54},"price":{"x":24,"y":340,"width":720,"height":137.25},"ctaCenterUnobscured":true}
+LAYOUT [
+  {
+    text: 'Thuê loa kẹo kéo tại Đà Nẵng',
+    y: 200,
+    h: 48,
+    style: '40px'
+  },
+  {
+    text: 'Thuê JBL PartyBox Stage 320 tại Đà Nẵng. Liên hệ xác nhận thời gian và địa điểm sử dụng trước khi đặt thuê.',
+    y: 264,
+    h: 56,
+    style: '18px'
+  },
+  { text: 'GIÁ THUÊ ƯU ĐÃI', y: 361, h: 16, style: '12px' },
+  { text: '500.000đ\n/ ngày', y: 381, h: 48, style: '16px' },
+  {
+    text: 'Bao gồm 2 micro không dây · Hỗ trợ setup tận nơi',
+    y: 437,
+    h: 19.25,
+    style: '14px'
+  },
+  {
+    text: 'Chọn slide 2 để kéo xoay loa 360°. AR là chế độ đặt loa vào không gian thật.',
+    y: 1395.25,
+    h: 19.5,
+    style: '12px'
+  },
+  { text: 'Ảnh 1. Slide 1 trên 49.', y: 642.25, h: 1, style: '16px' }
+]
+PASS 768 x 1024 SSR price, section order, booking keyboard/link, legacy anchor, gallery, overflow
+MEASURE {"width":1440,"height":1000,"cta":{"x":144,"y":731.375,"width":147.796875,"height":54},"price":{"x":144,"y":578.125,"width":552,"height":137.25},"ctaCenterUnobscured":true}
+LAYOUT [
+  {
+    text: 'Thuê loa kẹo kéo tại Đà Nẵng',
+    y: 390.125,
+    h: 96,
+    style: '40px'
+  },
+  {
+    text: 'Thuê JBL PartyBox Stage 320 tại Đà Nẵng. Liên hệ xác nhận thời gian và địa điểm sử dụng trước khi đặt thuê.',
+    y: 502.125,
+    h: 56,
+    style: '18px'
+  },
+  { text: 'GIÁ THUÊ ƯU ĐÃI', y: 599.125, h: 16, style: '12px' },
+  { text: '500.000đ\n/ ngày', y: 619.125, h: 48, style: '16px' },
+  {
+    text: 'Bao gồm 2 micro không dây · Hỗ trợ setup tận nơi',
+    y: 675.125,
+    h: 19.25,
+    style: '14px'
+  },
+  {
+    text: 'Chọn slide 2 để kéo xoay loa 360°. AR là chế độ đặt loa vào không gian thật.',
+    y: 782,
+    h: 19.5,
+    style: '12px'
+  },
+  { text: 'Ảnh 1. Slide 1 trên 49.', y: 197, h: 1, style: '16px' }
+]
+PASS 1440 x 1000 SSR price, section order, booking keyboard/link, legacy anchor, gallery, overflow

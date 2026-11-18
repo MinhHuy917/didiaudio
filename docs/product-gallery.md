@@ -1,5 +1,9 @@
 # Gallery ảnh /360° / AR —17/11/2026
 
+## Cập nhật hiệu năng vào trang — 18/11/2026
+
+Thay hành vi tự mount viewer ẩn bằng tải file GLB nền qua resource hint sau `window.load` 3 giây. Chỉ dựng 3D khi khách chọn 360°; giữ viewer sau lần mở thật để chuyển lại nhanh. Skip hint với Save-Data, mạng chậm hoặc tab ẩn. Mục này thay thế mô tả preload bằng renderer ở các snapshot trước; chi tiết đo trước/sau, giới hạn và validation trong [3d-startup-performance.md](3d-startup-performance.md).
+
 ## Phân tích và phương án
 
 Trang chi tiết trước thay đổi có gallery13 ảnh và viewer3D tách riêng bên dưới; hero có ảnh và nút mở viewer riêng. Stack Next14/React18/Tailwind, model-viewer4.4.0 đã có; không cần thêm dependency. Dữ liệu Stage320, giá500k/ngày và model GLB đã có trong repository.
