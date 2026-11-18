@@ -1,49 +1,49 @@
-import Link from 'next/link'
-
+import { CalendarDays, MessageCircle, Speaker } from 'lucide-react'
 export function RentalProcess() {
   return (
     <section
       id="promos"
       aria-labelledby="rental-process-title"
-      className="mx-auto max-w-7xl px-6 py-12 text-white"
+      className="mx-auto max-w-6xl scroll-mt-28 px-4 py-8 sm:px-6"
     >
       <h2
         id="rental-process-title"
-        className="mb-6 text-2xl font-semibold sm:text-3xl"
+        className="mb-5 text-center text-2xl font-bold"
       >
-        Cách thuê loa tại ĐiĐi Audio
+        Thuê loa trong 3 bước
       </h2>
-      <ol className="grid gap-6 sm:grid-cols-3">
-        <li>
-          <h3 className="font-semibold">1. Xem thiết bị và giá</h3>
-          <p className="mt-2 leading-7 text-gray-300">
-            Đối chiếu thông số, phụ kiện và giá theo ngày của loa đang có trong{' '}
-            <Link href="/#products" className="text-cyan-200 underline">
-              danh mục
-            </Link>
-            .
-          </p>
-        </li>
-        <li>
-          <h3 className="font-semibold">2. Trao đổi nhu cầu</h3>
-          <p className="mt-2 leading-7 text-gray-300">
-            Cho ĐiĐi Audio biết thời gian thuê, địa điểm và nhu cầu sử dụng qua{' '}
-            <a href="tel:0339197917" className="text-cyan-200 underline">
-              0339 197 917
-            </a>
-            .
-          </p>
-        </li>
-        <li>
-          <h3 className="font-semibold">3. Xác nhận thông tin thuê</h3>
-          <p className="mt-2 leading-7 text-gray-300">
-            Thống nhất lịch thuê, giao nhận và{' '}
-            <Link href="/#chinh-sach" className="text-cyan-200 underline">
-              các điều kiện cần xác nhận
-            </Link>{' '}
-            trước khi chốt với ĐiĐi Audio.
-          </p>
-        </li>
+      <ol className="grid gap-3 sm:grid-cols-3">
+        {[
+          {
+            Icon: CalendarDays,
+            title: '1. Chọn ngày thuê',
+            text: 'Chuẩn bị ngày, địa điểm và thời gian sử dụng.',
+          },
+          {
+            Icon: MessageCircle,
+            title: '2. Liên hệ xác nhận',
+            text: 'Gọi 0339 197 917 hoặc nhắn Zalo để chốt thông tin.',
+          },
+          {
+            Icon: Speaker,
+            title: '3. Nhận loa & sử dụng',
+            text: 'Thống nhất giao nhận, kiểm tra loa và phụ kiện.',
+          },
+        ].map(({ Icon, title, text }) => (
+          <li
+            key={title}
+            className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+          >
+            <Icon
+              aria-hidden="true"
+              className="mt-1 h-6 w-6 shrink-0 text-cyan-300"
+            />
+            <div>
+              <h3 className="text-sm font-bold">{title}</h3>
+              <p className="mt-1 text-sm leading-6 text-gray-400">{text}</p>
+            </div>
+          </li>
+        ))}
       </ol>
     </section>
   )

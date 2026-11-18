@@ -16,7 +16,8 @@ const product = '/products/loa-jbl-partyBox-stage-320'
   })
   try {
     for (const width of [360, 390, 768, 1440]) {
-      for (const route of ['/', product]) {
+      // The homepage now has a photo-only hero; full media gallery lives on product.
+      for (const route of [product]) {
         const context = await browser.newContext({
           viewport: { width, height: 950 },
           reducedMotion: 'reduce',

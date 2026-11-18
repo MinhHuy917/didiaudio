@@ -1,0 +1,6 @@
+yarn run v1.22.22
+warning Skipping preferred cache folder "/Users/gemi/Library/Caches/Yarn" because it is not writable.
+warning Selected the next writable cache folder in the list, will be "/var/folders/xp/my70k5cj3pb9hnkp03t8x2p40000gn/T/.yarn-cache-501".
+$ /Users/gemi/didiaudio/node_modules/.bin/tsc --noEmit --incremental false
+warning Cannot find a suitable global folder. Tried these: "/usr/local, /Users/gemi/.yarn"
+Done in 8.94s.

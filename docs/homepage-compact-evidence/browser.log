@@ -1,0 +1,4 @@
+PASS 360 layout, slider, sections, resources, price, overflow 
+PASS 390 layout, slider, sections, resources, price, overflow 360 loaded/Escape/focus/booking
+PASS 768 layout, slider, sections, resources, price, overflow 
+PASS 1440 layout, slider, sections, resources, price, overflow 

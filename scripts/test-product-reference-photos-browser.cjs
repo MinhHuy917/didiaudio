@@ -14,7 +14,8 @@ const output = process.env.TEST_OUTPUT || '/tmp/didi-reference-photos-check'
     args: ['--enable-unsafe-swiftshader'],
   })
   try {
-    for (const route of ['/', '/products/loa-jbl-partyBox-stage-320']) {
+    // Full reference collection remains on product; homepage hero shows five photos.
+    for (const route of ['/products/loa-jbl-partyBox-stage-320']) {
       const page = await browser.newPage({
           viewport: { width: 390, height: 950 },
           reducedMotion: 'reduce',

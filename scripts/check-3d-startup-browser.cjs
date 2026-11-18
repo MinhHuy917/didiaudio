@@ -95,7 +95,8 @@ const gated = process.env.EXPECT_GATED !== '0'
         assert.equal(sample.webglCalls, 0)
         assert.equal(sample.rendererNodes, 0)
         assert.equal(sample.engineRegistered, false)
-        assert.ok(sample.networkHint > 0)
+        if (route === '/') assert.equal(sample.networkHint, 0)
+        else assert.ok(sample.networkHint > 0)
         assert.deepEqual(errors, [])
       }
       results.push(sample)

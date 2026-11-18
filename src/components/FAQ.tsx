@@ -24,23 +24,6 @@ export const FAQ = () => {
       </div>
 
       <div className="relative mx-auto max-w-4xl">
-        <div
-          id="chinh-sach"
-          className="mb-8 scroll-mt-28 rounded-2xl border border-white/10 p-6 text-gray-200"
-        >
-          <h2 className="mb-3 text-2xl font-semibold text-white">
-            Thông tin cần xác nhận trước khi thuê
-          </h2>
-          <p className="leading-7">
-            Trao đổi thời gian nhận/trả, cách giao nhận, cọc hoặc giấy tờ nếu có
-            và cách tính phí khi trả trễ. Những điều kiện chưa rõ cần được ĐiĐi
-            Audio xác nhận trực tiếp qua{' '}
-            <a href="tel:0339197917" className="text-cyan-200 underline">
-              0339 197 917
-            </a>
-            ; website chưa có lịch trống theo ngày.
-          </p>
-        </div>
         <h2 className="mb-12 text-center text-4xl font-bold sm:text-5xl">
           <span className="bg-gradient-to-r from-audio-electricBlue via-audio-neonPurple to-audio-neonOrange bg-clip-text text-transparent">
             Câu hỏi thường gặp
