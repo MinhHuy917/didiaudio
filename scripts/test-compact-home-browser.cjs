@@ -31,13 +31,68 @@ const fs = require('node:fs')
         name: 'Dịch vụ thuê loa tại Đà Nẵng',
         exact: true,
       })
-      assert.equal(await hero.getByRole('tab').count(), 5)
+      assert.equal(await hero.getByRole('tab').count(), 12)
       assert.equal(await hero.getByRole('tab', { name: /360/ }).count(), 0)
       assert.equal(
         await p.evaluate(() => document.documentElement.scrollWidth),
         width,
       )
-      assert.match(await p.locator('#products').innerText(), /500.000đ/)
+      assert.doesNotMatch(await p.locator('#products').innerText(), /500.000đ/)
+      const realPhotos = p.locator('#hinh-anh-thuc-te')
+      assert.match(await realPhotos.innerText(), /500.000đ/)
+      assert.equal(await realPhotos.locator('.swiper-slide').count(), 12)
+      assert.ok(
+        await realPhotos
+          .locator('strong')
+          .evaluate(
+            (price) =>
+              price.getBoundingClientRect().top >
+              document
+                .querySelector('#hinh-anh-thuc-te .swiper')
+                .getBoundingClientRect().bottom,
+          ),
+      )
+      const filenames = await hero
+        .getByRole('tab')
+        .locator('img')
+        .evaluateAll((images) =>
+          images.map((image) => {
+            const src = new URL(image.src).searchParams.get('url')
+            return src.split('/').pop().split('.')[0]
+          }),
+        )
+      assert.deepEqual(filenames, [
+        '01',
+        '02',
+        '03',
+        '04',
+        '05',
+        '5',
+        '06',
+        '07',
+        '08',
+        '09',
+        '10',
+        '11',
+      ])
+      const arButton = p
+        .locator('#products')
+        .getByRole('button', { name: 'AR · Kích hoạt xem 360°', exact: true })
+      assert.equal(await arButton.getAttribute('aria-pressed'), 'false')
+      assert.equal(
+        await arButton.evaluate((e) => getComputedStyle(e).opacity),
+        '0.5',
+      )
+      assert.ok(
+        await arButton.evaluate((e) => {
+          const button = e.getBoundingClientRect()
+          const frame = e.parentElement.getBoundingClientRect()
+          return (
+            Math.abs(frame.right - button.right - 12) < 1 &&
+            button.top >= frame.top
+          )
+        }),
+      )
       assert.equal(
         await hero.evaluate((e) => e.nextElementSibling.id),
         'products',
@@ -58,10 +113,14 @@ const fs = require('node:fs')
         assert.equal(res.status(), 200)
       }
       assert.equal(await p.locator('#blog').getAttribute('open'), null)
+      await realPhotos.scrollIntoViewIfNeeded()
+      await realPhotos
+        .locator('.swiper-slide-active img')
+        .evaluate((image) => image.decode())
       await p.screenshot({ path: `${out}/home-${width}.png`, fullPage: true })
       if (width === 390) {
         const trigger = p.getByRole('button', {
-          name: '360° Xem chi tiết',
+          name: 'AR · Kích hoạt xem 360°',
           exact: true,
         })
         await trigger.click()
@@ -70,6 +129,17 @@ const fs = require('node:fs')
           undefined,
           { timeout: 60000 },
         )
+        const activated = p
+          .locator('#products')
+          .getByRole('button', { name: 'AR · Kích hoạt xem 360°', exact: true })
+        assert.equal(await activated.getAttribute('aria-pressed'), 'true')
+        assert.equal(
+          await activated.evaluate((e) => getComputedStyle(e).opacity),
+          '1',
+        )
+        await p
+          .locator('#products')
+          .screenshot({ path: `${out}/ar-active-${width}.png` })
         await p.keyboard.press('Escape')
         await trigger.waitFor({ state: 'visible' })
         assert.ok(await trigger.evaluate((e) => document.activeElement === e))

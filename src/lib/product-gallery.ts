@@ -19,8 +19,11 @@ type GalleryProduct = {
   image12?: string
 }
 
-/** Curated manufacturer order, reusing existing views and preserving all existing photos. */
+/** A configured gallery replaces legacy photos; other products use their own images. */
 export function getProductGallery(product: GalleryProduct): GalleryPhoto[] {
+  const configured = productPhotoOrder[String(product.id)]
+  if (configured) return configured
+
   const existing = [
     product.image,
     product.image1,
@@ -38,15 +41,8 @@ export function getProductGallery(product: GalleryProduct): GalleryPhoto[] {
   ]
     .filter((src): src is string => !!src)
     .map((src, i) => ({ src, alt: `${product.name} — ảnh sản phẩm ${i + 1}` }))
-  const order = productPhotoOrder[String(product.id)] || []
-  const photos = [
-    ...order
-      .map((item) => (typeof item === 'number' ? existing[item] : item))
-      .filter((item): item is GalleryPhoto => !!item),
-    ...existing,
-  ]
   const seen = new Set<string>()
-  return photos.filter(({ src }) => {
+  return existing.filter(({ src }) => {
     if (seen.has(src)) return false
     seen.add(src)
     return true

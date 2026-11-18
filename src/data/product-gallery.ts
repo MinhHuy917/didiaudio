@@ -1,82 +1,36 @@
 import type { GalleryPhoto } from '@/lib/product-gallery-types'
-import { stage320ReferencePhotos } from './product-real-photos'
+import photo01 from '@/images/loajbl320/01.jpg'
+import photo02 from '@/images/loajbl320/02.jpg'
+import photo03 from '@/images/loajbl320/03.jpg'
+import photo04 from '@/images/loajbl320/04.jpg'
+import photo05 from '@/images/loajbl320/05.jpg'
+import photo06 from '@/images/loajbl320/5.jpeg'
+import photo07 from '@/images/loajbl320/06.jpg'
+import photo08 from '@/images/loajbl320/07.jpg'
+import photo09 from '@/images/loajbl320/08.jpg'
+import photo10 from '@/images/loajbl320/09.png'
+import photo11 from '@/images/loajbl320/10.jpg'
+import photo12 from '@/images/loajbl320/11.jpg'
 
-// Official additional views; provenance is in public/images/stage-320-gallery/SOURCE.md.
-export const productPhotoOrder: Record<string, (number | GalleryPhoto)[]> = {
-  'loa-jbl-partyBox-stage-320': [
-    0,
-    1,
-    {
-      src: '/images/stage-320-gallery/back.webp',
-      alt: 'JBL PartyBox Stage 320 — mặt sau',
-    },
-    {
-      src: '/images/stage-320-gallery/left.webp',
-      alt: 'JBL PartyBox Stage 320 — mặt bên trái',
-    },
-    {
-      src: '/images/stage-320-gallery/right.webp',
-      alt: 'JBL PartyBox Stage 320 — mặt bên phải',
-    },
-    {
-      src: '/images/stage-320-gallery/bottom.webp',
-      alt: 'JBL PartyBox Stage 320 — mặt đáy và bánh xe',
-    },
-    3,
-    {
-      src: '/images/stage-320-gallery/handle-left.webp',
-      alt: 'JBL PartyBox Stage 320 — góc chụp tay kéo và mặt bên',
-    },
-    2,
-    {
-      src: '/images/stage-320-gallery/battery.webp',
-      alt: 'JBL PartyBox Stage 320 — cận cảnh ngăn pin phía sau',
-    },
-    {
-      src: '/images/stage-320-gallery/hero-angle.webp',
-      alt: 'JBL PartyBox Stage 320 — góc chụp nghiêng mặt trước',
-    },
-    {
-      src: '/images/stage-320-gallery/handle-front-high.webp',
-      alt: 'JBL PartyBox Stage 320 — mặt trước và bảng điều khiển với tay kéo mở',
-    },
-    {
-      src: '/images/stage-320-gallery/handle-front.webp',
-      alt: 'JBL PartyBox Stage 320 — góc nhìn mặt trước với tay kéo',
-    },
-    {
-      src: '/images/stage-320-gallery/handle-right.webp',
-      alt: 'JBL PartyBox Stage 320 — góc chụp nghiêng bên phải với tay kéo',
-    },
-    {
-      src: '/images/stage-320-gallery/handle-back.webp',
-      alt: 'JBL PartyBox Stage 320 — mặt sau với tay kéo mở',
-    },
-    {
-      src: '/images/stage-320-gallery/wheel.webp',
-      alt: 'JBL PartyBox Stage 320 — cận cảnh bánh xe',
-    },
-    {
-      src: '/images/stage-320-gallery/handle-up.webp',
-      alt: 'JBL PartyBox Stage 320 — mặt trước với tay kéo mở cao',
-    },
-    {
-      src: '/images/stage-320-gallery/handle-up-lights.webp',
-      alt: 'JBL PartyBox Stage 320 — mặt trước với đèn màu và tay kéo mở',
-    },
-    {
-      src: '/images/stage-320-gallery/box.webp',
-      alt: 'Hộp sản phẩm JBL PartyBox Stage 320',
-    },
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    ...stage320ReferencePhotos,
-  ],
+// Numeric filename order; both 05.jpg and 5.jpeg are included.
+export const stage320Photos: GalleryPhoto[] = [
+  photo01,
+  photo02,
+  photo03,
+  photo04,
+  photo05,
+  photo06,
+  photo07,
+  photo08,
+  photo09,
+  photo10,
+  photo11,
+  photo12,
+].map((image, index) => ({
+  src: image.src,
+  alt: `JBL PartyBox Stage 320 — ảnh sản phẩm ${index + 1}`,
+}))
+
+export const productPhotoOrder: Record<string, GalleryPhoto[]> = {
+  'loa-jbl-partyBox-stage-320': stage320Photos,
 }

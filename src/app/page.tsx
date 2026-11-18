@@ -28,21 +28,25 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLd(rentalServiceSchema()) }}
       />
+
       <AboutSection
         speaker={
           featured
             ? {
-                name: featured.name,
-                image: featured.image,
-                images: getProductGallery(featured),
-              }
+              name: featured.name,
+              image: featured.image,
+              images: getProductGallery(featured),
+            }
             : undefined
         }
       />
+      <ProductPhotos />
+
+
       {featured && (
         <HomeRentalPreview product={featured} model={product3D[featured.id]} />
       )}
-      <ProductPhotos />
+
       <RentalProcess />
       <HomeResources />
       <HomeExplore

@@ -1,6 +1,8 @@
 'use client'
 
 import { products } from '@/data/products'
+import { getProductGallery } from '@/lib/product-gallery'
+import { RentalOffer } from '@/components/RentalOffer'
 import { motion } from 'framer-motion'
 import React from 'react'
 import Image from 'next/image'
@@ -14,21 +16,7 @@ const ProductPhotos: React.FC = () => {
   // Now we only have 1 product, JBL PartyBox Stage 320
   const product = products[0]
 
-  const sliderImages = [
-    product.image,
-    product.image1,
-    product.image2,
-    product.image3,
-    product.image4,
-    product.image5,
-    product.image6,
-    product.image7,
-    product.image8,
-    product.image9,
-    product.image10,
-    product.image11,
-    product.image12,
-  ].filter(Boolean) as string[]
+  const sliderImages = getProductGallery(product)
 
   return (
     <section
@@ -52,12 +40,6 @@ const ProductPhotos: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-6xl"
           >
-            <h2
-              id="real-photos-title"
-              className="mb-6 text-center text-xl font-bold text-white sm:text-2xl"
-            >
-              Hình ảnh thực tế
-            </h2>
             <Swiper
               modules={[Autoplay, Pagination, Navigation]}
               autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -71,12 +53,12 @@ const ProductPhotos: React.FC = () => {
               }}
               className="rounded-2xl pb-12"
             >
-              {sliderImages.map((imgSrc, index) => (
-                <SwiperSlide key={index}>
+              {sliderImages.map((photo) => (
+                <SwiperSlide key={photo.src}>
                   <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-[#111111]">
                     <Image
-                      src={imgSrc}
-                      alt={`${product.name} hình ${index + 1}`}
+                      src={photo.src}
+                      alt={photo.alt}
                       fill
                       className="object-contain transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -87,6 +69,7 @@ const ProductPhotos: React.FC = () => {
             </Swiper>
           </motion.div>
         )}
+        <RentalOffer product={product} />
       </div>
     </section>
   )

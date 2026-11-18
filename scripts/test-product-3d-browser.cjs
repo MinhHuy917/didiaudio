@@ -40,7 +40,7 @@ const product = '/products/loa-jbl-partyBox-stage-320'
         })
         const first = gallery.getByRole('tab', { name: 'Ảnh 1', exact: true })
         assert.equal(await first.getAttribute('aria-selected'), 'true')
-        assert.equal(await gallery.getByRole('tab').count(), 49)
+        assert.equal(await gallery.getByRole('tab').count(), 13)
         assert.equal(await gallery.locator('model-viewer').count(), 0)
         assert.equal(
           await page.evaluate(() => !!customElements.get('model-viewer')),
@@ -53,19 +53,9 @@ const product = '/products/loa-jbl-partyBox-stage-320'
         )
         await first.focus()
         await page.keyboard.press('End')
-        const last = gallery.getByRole('tab', { name: 'Ảnh 48', exact: true })
+        const last = gallery.getByRole('tab', { name: 'Ảnh 12', exact: true })
         assert.equal(await last.getAttribute('aria-selected'), 'true')
-        assert.equal(
-          await gallery
-            .getByRole('link', { name: 'Digital Trends', exact: true })
-            .getAttribute('href'),
-          'https://www.digitaltrends.com/home-theater/jbl-partybox-stage-320-review/',
-        )
-        assert.ok(
-          (await gallery.innerText()).includes(
-            'Không phải ảnh ĐiĐi Audio tự chụp.',
-          ),
-        )
+        assert.equal(await gallery.getByRole('link').count(), 0)
         await gallery
           .getByRole('tabpanel')
           .getByRole('img')
@@ -96,7 +86,11 @@ const product = '/products/loa-jbl-partyBox-stage-320'
             .getAttribute('aria-selected'),
           'true',
         )
-        assert.ok((await gallery.innerText()).includes('Chưa bật'))
+        const arButton = gallery.getByRole('button', {
+          name: 'AR · Kích hoạt xem 360°',
+          exact: true,
+        })
+        assert.equal(await arButton.getAttribute('aria-pressed'), 'false')
         assert.equal(
           await gallery.getByRole('button', { name: /AR.*Thử/ }).count(),
           0,
@@ -116,6 +110,9 @@ const product = '/products/loa-jbl-partyBox-stage-320'
             .evaluate((e) => getComputedStyle(e).animationName),
           'none',
         )
+        await arButton.click()
+        assert.equal(await arButton.getAttribute('aria-pressed'), 'true')
+        await hint.waitFor({ state: 'detached' })
         const radius = await page.evaluate(
           () => document.querySelector('model-viewer').getCameraOrbit().radius,
         )

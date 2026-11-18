@@ -79,6 +79,23 @@ export default function ProductDetailClient({ product }: { product: Product }) {
           {/* Left: Images */}
           <div className="min-w-0">
             <ProductMediaGallery name={product.name} images={images} config={product3D[String(product.id)]} />
+            {/* Price */}
+            <div className="mt-4 p-4 sm:p-6 bg-audio-light/30 backdrop-blur-sm border border-audio-electricBlue/20 rounded-xl sm:rounded-2xl">
+              {product.originalPrice && product.originalPrice > product.price ? (
+                <div className="flex flex-wrap items-baseline gap-2 sm:gap-4 mb-2">
+                  <span className="text-xl sm:text-2xl lg:text-3xl font-black text-audio-electricBlue">
+                    {product.price}k/ngày
+                  </span>
+                  <span className="text-base sm:text-lg text-audio-textMuted line-through">
+                    {product.originalPrice}k/ngày
+                  </span>
+                </div>
+              ) : (
+                <div className="text-xl sm:text-2xl lg:text-3xl font-black text-audio-electricBlue mb-2">
+                  {product.price}k/ngày
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Right: Product Info */}
@@ -107,25 +124,6 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                 <Bluetooth className="w-4 h-4 text-audio-neonOrange flex-shrink-0" />
                 <span className="text-xs sm:text-sm font-semibold text-audio-neonOrange whitespace-nowrap">Bluetooth</span>
               </div>
-            </div>
-
-            {/* Price */}
-            <div className="mb-6 sm:mb-8 p-4 sm:p-6 bg-audio-light/30 backdrop-blur-sm border border-audio-electricBlue/20 rounded-xl sm:rounded-2xl">
-              {product.originalPrice && product.originalPrice > product.price ? (
-                <div className="flex flex-wrap items-baseline gap-2 sm:gap-4 mb-2">
-                  <span className="text-xl sm:text-2xl lg:text-3xl font-black text-audio-electricBlue">
-                    {product.price}k/ngày
-                  </span>
-                  <span className="text-base sm:text-lg text-audio-textMuted line-through">
-                    {product.originalPrice}k/ngày
-                  </span>
-                </div>
-              ) : (
-                <div className="text-xl sm:text-2xl lg:text-3xl font-black text-audio-electricBlue mb-2">
-                  {product.price}k/ngày
-                </div>
-              )}
-             
             </div>
 
             {/* CTA Buttons */}

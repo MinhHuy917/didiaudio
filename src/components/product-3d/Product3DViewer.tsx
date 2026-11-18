@@ -2,7 +2,7 @@
 
 import { createElement, useEffect, useRef, useState } from 'react'
 import type { ModelViewerElement } from '@google/model-viewer'
-import { Box } from 'lucide-react'
+import { ARButton } from './ARButton'
 import DragHint from '@/components/product-gallery/DragHint'
 import type { Product3DConfig } from '@/lib/product-3d'
 
@@ -30,6 +30,7 @@ type ViewerProps = {
   onClose: () => void
   active?: boolean
   embedded?: boolean
+  initiallyActivated?: boolean
 }
 
 export default function Product3DViewer(props: ViewerProps) {
@@ -62,9 +63,11 @@ function ViewerSession({
   onClose,
   embedded = false,
   active = true,
+  initiallyActivated = false,
   onRetry,
 }: ViewerProps & { onRetry: () => void }) {
   const [interacted, setInteracted] = useState(false)
+  const [arActivated, setArActivated] = useState(initiallyActivated)
   const [ready, setReady] = useState(false)
   const [loaded, setLoaded] = useState(false)
   const [error, setError] = useState('')
@@ -82,7 +85,8 @@ function ViewerSession({
 
   useEffect(() => {
     if (!embedded) title.current?.focus()
-  }, [embedded])
+    else if (initiallyActivated) frame.current?.focus({ preventScroll: true })
+  }, [embedded, initiallyActivated])
   useEffect(() => {
     let cancelled = false
     setLoaded(false)
@@ -200,6 +204,7 @@ function ViewerSession({
   return (
     <div
       ref={frame}
+      tabIndex={-1}
       className={
         embedded
           ? 'space-y-3 overflow-y-auto bg-black/20 text-white'
@@ -306,26 +311,16 @@ function ViewerSession({
           )
         )}
         {loaded && !error && !interacted && <DragHint animated={rotate} />}
-        {embedded &&
-          loaded &&
-          !error &&
-          (ar ? (
-            <button
-              type="button"
-              onClick={launchAR}
-              className="absolute bottom-3 right-3 z-20 inline-flex min-h-[44px] items-center gap-2 rounded-2xl border border-cyan-300 bg-white px-4 py-2 text-sm font-bold text-gray-950 shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
-            >
-              <Box aria-hidden="true" className="h-5 w-5" />
-              AR · Thử trong phòng
-            </button>
-          ) : (
-            <span className="pointer-events-none absolute bottom-3 right-3 z-20 inline-flex min-h-[44px] items-center gap-2 rounded-2xl border border-white/20 bg-black/80 px-3 py-2 text-xs text-gray-200">
-              <Box aria-hidden="true" className="h-5 w-5" />
-              <span>
-                <strong className="block text-sm text-white">AR</strong>Chưa bật
-              </span>
-            </span>
-          ))}
+        {embedded && loaded && !error && (
+          <ARButton
+            active={arActivated}
+            label={ar ? 'AR · Thử trong phòng' : 'AR · Kích hoạt xem 360°'}
+            onClick={() => {
+              setArActivated(true)
+              if (ar) void launchAR()
+            }}
+          />
+        )}
       </div>
       <p
         className={`text-xs leading-relaxed text-gray-300 ${embedded ? 'px-4' : ''}`}
