@@ -2,7 +2,6 @@
 
 import { products } from '@/data/products'
 import { getProductGallery } from '@/lib/product-gallery'
-import { RentalOffer } from '@/components/RentalOffer'
 import { motion } from 'framer-motion'
 import React from 'react'
 import Image from 'next/image'
@@ -69,7 +68,6 @@ const ProductPhotos: React.FC = () => {
             </Swiper>
           </motion.div>
         )}
-        <RentalOffer product={product} />
       </div>
     </section>
   )

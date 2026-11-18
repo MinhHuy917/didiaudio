@@ -56,7 +56,6 @@ export default function Product3D({
           name={name}
           image={image}
           ar={ar}
-          showARHelp={ar}
           onClose={() => {
             setOpened(false)
             requestAnimationFrame(() => trigger.current?.focus())

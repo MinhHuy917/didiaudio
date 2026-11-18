@@ -1,4 +1,5 @@
 import Product3D from '@/components/product-3d/Product3D'
+import { RentalOffer } from '@/components/RentalOffer'
 import type { Product3DConfig } from '@/lib/product-3d'
 
 export function HomeRentalPreview({
@@ -25,6 +26,7 @@ export function HomeRentalPreview({
           preview
         />
       </div>
+      <RentalOffer product={product} />
     </section>
   )
 }

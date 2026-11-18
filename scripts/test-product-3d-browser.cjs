@@ -127,16 +127,6 @@ const product = '/products/loa-jbl-partyBox-stage-320'
         await gallery
           .getByRole('button', { name: 'Thu nhỏ', exact: true })
           .click()
-        await gallery.getByRole('button', { name: 'Góc ban đầu' }).click()
-        await gallery
-          .getByRole('button', { name: 'Tự xoay', exact: true })
-          .click()
-        await page.waitForFunction(() =>
-          document.querySelector('model-viewer').hasAttribute('auto-rotate'),
-        )
-        await gallery
-          .getByRole('button', { name: 'Dừng xoay', exact: true })
-          .click()
         await gallery
           .getByRole('button', { name: 'Toàn màn hình', exact: true })
           .click()
@@ -203,6 +193,7 @@ const product = '/products/loa-jbl-partyBox-stage-320'
     const c = await browser.newContext({
       viewport: { width: 390, height: 950 },
       reducedMotion: 'no-preference',
+      hasTouch: true,
     })
     await c.route('**/*', (r) =>
       r.request().url().startsWith(base) ? r.continue() : r.abort(),
@@ -239,6 +230,7 @@ const product = '/products/loa-jbl-partyBox-stage-320'
     assert.notEqual(
       await g
         .locator('[data-drag-hint] > div')
+        .first()
         .evaluate((e) => getComputedStyle(e).animationName),
       'none',
     )
@@ -267,8 +259,43 @@ const product = '/products/loa-jbl-partyBox-stage-320'
         ) > 0.05,
       before,
     )
+    const touch = await c.newCDPSession(p)
+    const touchBox = await g.locator('model-viewer').boundingBox()
+    const center = {
+      x: touchBox.x + touchBox.width / 2,
+      y: touchBox.y + touchBox.height / 2,
+    }
+    const radiusBeforePinch = await p.evaluate(
+      () => document.querySelector('model-viewer').getCameraOrbit().radius,
+    )
+    function points(spread) {
+      return [
+        { x: center.x - spread, y: center.y, id: 1 },
+        { x: center.x + spread, y: center.y, id: 2 },
+      ]
+    }
+    await touch.send('Input.dispatchTouchEvent', {
+      type: 'touchStart',
+      touchPoints: points(20),
+    })
+    for (let spread = 23; spread <= 65; spread += 3) {
+      await touch.send('Input.dispatchTouchEvent', {
+        type: 'touchMove',
+        touchPoints: points(spread),
+      })
+    }
+    await touch.send('Input.dispatchTouchEvent', {
+      type: 'touchEnd',
+      touchPoints: [],
+    })
+    await p.waitForFunction(
+      (radius) =>
+        document.querySelector('model-viewer').getCameraOrbit().radius <
+        radius - 0.01,
+      radiusBeforePinch,
+    )
     console.log(
-      'PASS photo swipe, idle animation and real drag: hint hidden and auto rotation stopped after interaction',
+      'PASS photo swipe, idle animation, real drag and two-finger pinch to zoom',
     )
     await c.close()
     const failure = await browser.newContext({

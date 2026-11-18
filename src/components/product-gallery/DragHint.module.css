@@ -1,20 +1,55 @@
-.hand {
-  filter: drop-shadow(0 3px 5px rgb(0 0 0 / 0.4));
+.swipe {
+  animation: reveal 0.3s ease-out both;
 }
-.animate {
-  animation: swipe 2.4s ease-in-out infinite;
+.hand {
+  animation: swipe 2s ease-in-out infinite;
+}
+.pinchStart {
+  animation: pinch-start 2s ease-in-out infinite;
+}
+.pinchEnd {
+  animation: pinch-end 2s ease-in-out infinite;
+}
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes swipe {
   0%,
   100% {
-    transform: translateX(-10px) rotate(-8deg);
+    transform: translateX(-9px) rotate(-8deg);
   }
   50% {
-    transform: translateX(12px) rotate(7deg);
+    transform: translateX(9px) rotate(8deg);
+  }
+}
+@keyframes pinch-start {
+  0%,
+  100% {
+    transform: translate(3px, 3px);
+  }
+  50% {
+    transform: translate(-3px, -3px);
+  }
+}
+@keyframes pinch-end {
+  0%,
+  100% {
+    transform: translate(-3px, -3px);
+  }
+  50% {
+    transform: translate(3px, 3px);
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .animate {
+  .swipe,
+  .hand,
+  .pinchStart,
+  .pinchEnd {
     animation: none;
   }
 }

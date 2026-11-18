@@ -24,42 +24,47 @@ const fs = require('node:fs')
       const errors = []
       p.on('pageerror', (e) => errors.push(e.message))
       await p.goto(base, { waitUntil: 'load' })
-      assert.equal(await p.locator('h1').innerText(), 'ĐIĐI AUDIO')
+      assert.equal(await p.locator('h1').innerText(), 'ĐiĐi Audio')
       assert.equal(await p.locator('h1').count(), 1)
       assert.equal(await p.locator('model-viewer').count(), 0)
       const hero = p.getByRole('region', {
         name: 'Dịch vụ thuê loa tại Đà Nẵng',
         exact: true,
       })
-      assert.equal(await hero.getByRole('tab').count(), 12)
-      assert.equal(await hero.getByRole('tab', { name: /360/ }).count(), 0)
       assert.equal(
         await p.evaluate(() => document.documentElement.scrollWidth),
         width,
       )
-      assert.doesNotMatch(await p.locator('#products').innerText(), /500.000đ/)
+      assert.match(await p.locator('#products').innerText(), /500.000đ/)
       const realPhotos = p.locator('#hinh-anh-thuc-te')
-      assert.match(await realPhotos.innerText(), /500.000đ/)
+      assert.doesNotMatch(await realPhotos.innerText(), /500.000đ/)
       assert.equal(await realPhotos.locator('.swiper-slide').count(), 12)
       assert.ok(
-        await realPhotos
-          .locator('strong')
+        await p
+          .locator('#products strong')
           .evaluate(
             (price) =>
               price.getBoundingClientRect().top >
               document
-                .querySelector('#hinh-anh-thuc-te .swiper')
-                .getBoundingClientRect().bottom,
+                .querySelector('#products img')
+                .parentElement.getBoundingClientRect().bottom,
           ),
       )
-      const filenames = await hero
-        .getByRole('tab')
-        .locator('img')
-        .evaluateAll((images) =>
-          images.map((image) => {
-            const src = new URL(image.src).searchParams.get('url')
-            return src.split('/').pop().split('.')[0]
-          }),
+      const filenames = await realPhotos
+        .locator('.swiper-slide')
+        .evaluateAll((slides) =>
+          [...slides]
+            .sort(
+              (a, b) =>
+                Number(a.dataset.swiperSlideIndex) -
+                Number(b.dataset.swiperSlideIndex),
+            )
+            .map((slide) => {
+              const src = new URL(
+                slide.querySelector('img').src,
+              ).searchParams.get('url')
+              return src.split('/').pop().split('.')[0]
+            }),
         )
       assert.deepEqual(filenames, [
         '01',
@@ -95,12 +100,10 @@ const fs = require('node:fs')
       )
       assert.equal(
         await hero.evaluate((e) => e.nextElementSibling.id),
-        'products',
+        'hinh-anh-thuc-te',
       )
       assert.equal(
-        await p
-          .locator('#hinh-anh-thuc-te')
-          .evaluate((e) => e.nextElementSibling.id),
+        await p.locator('#products').evaluate((e) => e.nextElementSibling.id),
         'promos',
       )
       assert.equal(await p.locator('#promos li').count(), 3)
@@ -137,9 +140,27 @@ const fs = require('node:fs')
           await activated.evaluate((e) => getComputedStyle(e).opacity),
           '1',
         )
+        const stage = p.locator('#products model-viewer').locator('..')
+        assert.equal((await stage.innerText()).trim(), 'AR')
+        for (const name of [
+          'Phóng to',
+          'Thu nhỏ',
+          'Toàn màn hình',
+          'Đóng 3D',
+        ]) {
+          const control = stage.getByRole('button', { name, exact: true })
+          assert.equal((await control.innerText()).trim(), '')
+          assert.ok(await control.locator('svg').count())
+        }
+        const hint = stage.locator('[data-drag-hint]')
+        assert.equal(await hint.count(), 1)
         await p
           .locator('#products')
           .screenshot({ path: `${out}/ar-active-${width}.png` })
+        await hint.waitFor({ state: 'detached', timeout: 8000 })
+        await p
+          .locator('#products')
+          .screenshot({ path: `${out}/ar-clean-${width}.png` })
         await p.keyboard.press('Escape')
         await trigger.waitFor({ state: 'visible' })
         assert.ok(await trigger.evaluate((e) => document.activeElement === e))

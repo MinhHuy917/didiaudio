@@ -148,7 +148,7 @@ export default function ProductMediaGallery({
             <ImageIcon aria-hidden="true" className="h-4 w-4 text-gray-300" />
           )}
           {slide.type === 'interactive'
-            ? '360° · Kéo để xoay'
+            ? '360°'
             : slide.source
               ? 'Ảnh chụp tham khảo'
               : 'Ảnh sản phẩm'}
@@ -301,7 +301,6 @@ export default function ProductMediaGallery({
               name={name}
               image={photos[0]?.src || config.posterUrl || ''}
               ar={ar}
-              showARHelp={false}
               onClose={() => select(0, true)}
             />
           </div>
