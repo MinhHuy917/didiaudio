@@ -12,11 +12,8 @@ const navigation = [
   {
     title: 'Liên Hệ',
     links: [
-      { title: 'Phone: 0339197917', href: 'tel:0339197917' },
-      {
-        title: 'Video JBL PartyBox Stage 320',
-        href: '/video-jbl-partybox-320',
-      },
+      { title: '0339197917', href: 'tel:0339197917' },
+
       { title: 'Messenger', href: '//m.me/thueloakeodanang.didiaudio' },
     ],
   },
@@ -52,12 +49,6 @@ function Navigation() {
                     href={link.href}
                     className="flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-cyan-400"
                   >
-                    {linkIndex === 0 && sectionIndex === 0 && (
-                      <Phone className="h-4 w-4" />
-                    )}
-                    {linkIndex === 0 && sectionIndex === 1 && (
-                      <MapPin className="h-4 w-4" />
-                    )}
                     {link.title}
                   </Link>
                 </li>

@@ -1,10 +1,10 @@
 'use client'
 
 import clsx from 'clsx'
-import { motion, MotionConfig, useReducedMotion, AnimatePresence } from 'framer-motion'
+import { MotionConfig, useReducedMotion } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { createContext, useEffect, useId, useRef, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
@@ -12,6 +12,7 @@ import logo from '@/images/logo.png'
 import Image from 'next/image'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { ScrollToTop } from '@/components/ScrollToTop'
+import { MobileMenu } from '@/components/MobileMenu'
 
 const RootLayoutContext = createContext<{
   logoHovered: boolean
@@ -114,7 +115,10 @@ function Header({
             <button
               onClick={onToggle}
               className="relative flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/10"
-              aria-label="Toggle Menu"
+              type="button"
+              aria-label={expanded ? 'Đóng menu' : 'Mở menu'}
+              aria-expanded={expanded}
+              aria-controls="mobile-navigation"
             >
               <div className="relative h-5 w-5">
                 <span className={clsx(
@@ -131,54 +135,6 @@ function Header({
         </div>
       </Container>
     </header>
-  )
-}
-
-// --- Mobile Menu Overlay ---
-
-function MobileMenu({ expanded, onClose }: { expanded: boolean, onClose: () => void }) {
-  return (
-    <AnimatePresence>
-      {expanded && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="fixed inset-0 z-40 lg:hidden"
-        >
-          {/* Backdrop */}
-          <div className="absolute inset-0 bg-black/90 backdrop-blur-2xl" onClick={onClose} />
-          
-          <nav className="relative flex flex-col justify-center h-full px-6 space-y-1">
-  {[
-    { label: 'Trang chủ', href: '/' },
-    { label: 'Bảng giá thuê', href: '/#products' },
-    { label: 'Chính Sách', href: '/#chinh-sach' },
-    { label: 'Về ĐiĐi Audio', href: '/about-didiaudio' },
-    { label: 'FAQ', href: '/#faq' },
-  ].map((item, idx) => (
-    <motion.div
-      key={item.href}
-      initial={{ opacity: 0, x: -10 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: idx * 0.05 }}
-    >
-      <Link 
-        href={item.href} 
-        onClick={onClose}
-        // Thêm padding, bo góc nhẹ và hiệu ứng khi nhấn (active:scale)
-        className="block py-4 px-4 text-2xl font-bold text-white/90 hover:text-cyan-400 active:bg-white/5 active:scale-[0.98] rounded-2xl transition-all"
-      >
-        {item.label}
-      </Link>
-    </motion.div>
-  ))}
-  
-  
-</nav>
-        </motion.div>
-      )}
-    </AnimatePresence>
   )
 }
 
