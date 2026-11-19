@@ -2,6 +2,7 @@
 
 import { products } from '@/data/products'
 import { getProductGallery } from '@/lib/product-gallery'
+import { HomeSection } from '@/components/HomeSection'
 import { motion } from 'framer-motion'
 import React from 'react'
 import Image from 'next/image'
@@ -18,18 +19,18 @@ const ProductPhotos: React.FC = () => {
   const sliderImages = getProductGallery(product)
 
   return (
-    <section
+    <HomeSection
+      tone="photos"
       id="hinh-anh-thuc-te"
       aria-labelledby="real-photos-title"
-      className="relative overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24"
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute right-0 top-1/4 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
-        <div className="absolute bottom-1/4 left-0 h-96 w-96 rounded-full bg-purple-500/10 blur-3xl" />
-      </div>
-
-      <div className="relative mx-auto max-w-7xl">
+      <h2
+        id="real-photos-title"
+        className="mb-6 text-center text-2xl font-bold text-white sm:text-3xl"
+      >
+        Hình ảnh loa thực tế
+      </h2>
+      <div>
         {/* Slider Section */}
         {sliderImages.length > 0 && (
           <motion.div
@@ -69,7 +70,7 @@ const ProductPhotos: React.FC = () => {
           </motion.div>
         )}
       </div>
-    </section>
+    </HomeSection>
   )
 }
 

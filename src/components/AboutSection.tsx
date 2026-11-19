@@ -2,6 +2,7 @@
 
 import type { GalleryPhoto } from '@/lib/product-gallery-types'
 import ProductMediaGallery from '@/components/product-gallery/ProductMediaGallery'
+import { HomeSection } from '@/components/HomeSection'
 
 export default function AboutSection({
   speaker,
@@ -9,20 +10,19 @@ export default function AboutSection({
   speaker?: { name: string; image: string; images?: GalleryPhoto[] }
 }) {
   return (
-    <section
+    <HomeSection
+      tone="hero"
+      width="medium"
       aria-label="Dịch vụ thuê loa tại Đà Nẵng"
-      className="bg-gradient-to-b from-black via-gray-900 to-black px-4 sm:px-6"
     >
-      <div className="mx-auto max-w-4xl text-center">
-        <h1 className="text-4xl font-black tracking-tight sm:text-6xl">
-          <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-            ĐiĐi Audio
-          </span>
+      <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-center sm:gap-x-4">
+        <h1 className="whitespace-nowrap text-xl font-semibold tracking-tight text-white sm:text-2xl">
+          ĐiĐi <span className="text-cyan-200">Audio</span>
         </h1>
-        <p className="mt-3 text-xl font-semibold text-white sm:text-3xl">
-          Thuê Loa Đà Nẵng
+        <p className="whitespace-nowrap border-l border-white/20 pl-3 text-sm font-normal text-slate-300 sm:pl-4 sm:text-base">
+          Thuê loa Đà Nẵng
         </p>
       </div>
-    </section>
+    </HomeSection>
   )
 }

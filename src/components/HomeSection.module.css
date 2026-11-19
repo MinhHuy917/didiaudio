@@ -1,0 +1,31 @@
+.hero {
+  background-color: #07151e;
+  background-image: radial-gradient(
+    ellipse at 50% 0%,
+    rgb(34 211 238 / 0.12),
+    transparent 75%
+  );
+}
+.photos {
+  background-color: #121820;
+}
+.product {
+  background-color: #06232c;
+  background-image: radial-gradient(
+    ellipse at 50% 30%,
+    rgb(34 211 238 / 0.07),
+    transparent 65%
+  );
+}
+.process {
+  background-color: #11151f;
+}
+.resources {
+  background-color: #082329;
+}
+.explore {
+  background-color: #1b1726;
+}
+.faq {
+  background-color: #0d1928;
+}

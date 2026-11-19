@@ -35,6 +35,67 @@ const fs = require('node:fs')
         await p.evaluate(() => document.documentElement.scrollWidth),
         width,
       )
+      const bands = await p
+        .locator('main > section, footer')
+        .evaluateAll((regions) =>
+          regions.map((region) => {
+            const box = region.getBoundingClientRect()
+            const style = getComputedStyle(region)
+            const heading = region.querySelector('h1, h2')
+            return {
+              color: style.backgroundColor,
+              left: box.left,
+              width: box.width,
+              top: box.top + scrollY,
+              bottom: box.bottom + scrollY,
+              heading: heading?.textContent.trim(),
+            }
+          }),
+        )
+      assert.equal(bands.length, 8)
+      for (let i = 0; i < bands.length; i++) {
+        assert.equal(
+          bands[i].left,
+          0,
+          'Section backgrounds must reach the left edge',
+        )
+        assert.equal(
+          bands[i].width,
+          width,
+          'Section backgrounds must span the viewport',
+        )
+        assert.notEqual(bands[i].color, 'rgba(0, 0, 0, 0)')
+        assert.ok(bands[i].heading, 'Each section needs a visible heading')
+        if (i > 0) {
+          assert.notEqual(
+            bands[i].color,
+            bands[i - 1].color,
+            'Adjacent sections need distinct backgrounds',
+          )
+          assert.ok(
+            Math.abs(bands[i].top - bands[i - 1].bottom) < 2,
+            'Section backgrounds must meet without an empty gap',
+          )
+        }
+      }
+      assert.ok(
+        await p
+          .locator('h1')
+          .evaluate(
+            (h1) =>
+              h1.getBoundingClientRect().top >=
+              document.querySelector('header').getBoundingClientRect().bottom,
+          ),
+      )
+      const faqQuestion = p.locator('#faq button').first()
+      await faqQuestion.click()
+      assert.equal(await faqQuestion.getAttribute('aria-expanded'), 'true')
+      const answer = p.locator(
+        '#' + (await faqQuestion.getAttribute('aria-controls')),
+      )
+      assert.equal(await answer.isVisible(), true)
+      await faqQuestion.click()
+      assert.equal(await answer.isVisible(), false)
       assert.match(await p.locator('#products').innerText(), /500.000đ/)
       const realPhotos = p.locator('#hinh-anh-thuc-te')
       assert.doesNotMatch(await realPhotos.innerText(), /500.000đ/)
@@ -121,6 +182,7 @@ const fs = require('node:fs')
       await realPhotos
         .locator('.swiper-slide-active img')
         .evaluate((image) => image.decode())
+      await p.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }))
       await p.screenshot({ path: `${out}/home-${width}.png`, fullPage: true })
       await p
         .locator('#products')
@@ -183,7 +245,7 @@ const fs = require('node:fs')
       console.log(
         'PASS',
         width,
-        'layout, slider, sections, resources, price, overflow',
+        'full-width section backgrounds, boundaries, headings, FAQ, slider, price and overflow',
         width === 390 ? '360 loaded/Escape/focus/booking' : '',
       )
       await c.close()

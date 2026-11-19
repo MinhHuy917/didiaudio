@@ -217,7 +217,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           onClose={() => setExpanded(false)} 
         />
 
-        <main className="relative flex-auto pt-24 sm:pt-32">
+        <main className={clsx('relative flex-auto', pathname !== '/' && 'pt-24 sm:pt-32')}>
           {children}
         </main>
 

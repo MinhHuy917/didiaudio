@@ -1,14 +1,15 @@
 import { CalendarDays, MessageCircle, Speaker } from 'lucide-react'
+import { HomeSection } from '@/components/HomeSection'
 export function RentalProcess() {
   return (
-    <section
+    <HomeSection
+      tone="process"
       id="promos"
       aria-labelledby="rental-process-title"
-      className="mx-auto max-w-6xl scroll-mt-28 px-4 py-8 sm:px-6"
     >
       <h2
         id="rental-process-title"
-        className="mb-5 text-center text-2xl font-bold"
+        className="mb-6 text-center text-2xl font-bold sm:text-3xl"
       >
         Thuê loa trong 3 bước
       </h2>
@@ -45,6 +46,6 @@ export function RentalProcess() {
           </li>
         ))}
       </ol>
-    </section>
+    </HomeSection>
   )
 }

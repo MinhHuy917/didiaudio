@@ -13,7 +13,10 @@ const navigation = [
     title: 'Liên Hệ',
     links: [
       { title: 'Phone: 0339197917', href: 'tel:0339197917' },
-      { title: 'Video JBL PartyBox Stage 320', href: '/video-jbl-partybox-320' },
+      {
+        title: 'Video JBL PartyBox Stage 320',
+        href: '/video-jbl-partybox-320',
+      },
       { title: 'Messenger', href: '//m.me/thueloakeodanang.didiaudio' },
     ],
   },
@@ -69,84 +72,86 @@ function Navigation() {
 
 export function Footer() {
   return (
-    <Container
-      as="footer"
-      className="mt-12 w-full bg-gradient-to-b from-black via-gray-900 to-black sm:mt-16 lg:mt-20"
-    >
-      <div>
-        <div className="mb-12 mt-12 h-[300px] w-full overflow-hidden rounded-2xl border border-white/10 shadow-lg sm:mt-16 sm:h-[400px] lg:mt-20">
-          <iframe
-            src="https://www.google.com/maps?q=41+T%E1%BB%91ng+Duy+T%C3%A2n%2C+%C4%90%C3%A0+N%E1%BA%B5ng&amp;output=embed"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen={false}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Bản đồ ĐiĐi Audio"
-          ></iframe>
-        </div>
-        <div className="mt-12 sm:mt-16 lg:mt-20">
-          <nav
-            aria-label="Các trang ngôn ngữ"
-            className="mb-8 flex flex-wrap gap-4 text-sm text-gray-300"
-          >
-            <Link
-              href="/speaker-rental-da-nang"
-              lang="en"
-              className="inline-flex min-h-11 items-center underline"
+    <footer className="w-full border-t border-white/10 bg-[#050b12] pt-12 text-white sm:pt-16">
+      <Container>
+        <div>
+          <h2 className="text-center text-2xl font-bold sm:text-3xl">
+            Ghé ĐiĐi Audio
+          </h2>
+          <div className="mb-8 mt-6 h-[240px] w-full overflow-hidden rounded-2xl border border-white/10 shadow-lg sm:h-[320px]">
+            <iframe
+              src="https://www.google.com/maps?q=41+T%E1%BB%91ng+Duy+T%C3%A2n%2C+%C4%90%C3%A0+N%E1%BA%B5ng&amp;output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Bản đồ ĐiĐi Audio"
+            ></iframe>
+          </div>
+          <div>
+            <nav
+              aria-label="Các trang ngôn ngữ"
+              className="mb-8 flex flex-wrap gap-4 text-sm text-gray-300"
             >
-              English
+              <Link
+                href="/speaker-rental-da-nang"
+                lang="en"
+                className="inline-flex min-h-11 items-center underline"
+              >
+                English
+              </Link>
+              <Link
+                href="/speaker-rental-da-nang-ru"
+                lang="ru"
+                className="inline-flex min-h-11 items-center underline"
+              >
+                Русский
+              </Link>
+              <Link
+                href="/speaker-rental-da-nang-zh"
+                lang="zh"
+                className="inline-flex min-h-11 items-center underline"
+              >
+                中文
+              </Link>
+            </nav>
+            <Navigation />
+          </div>
+          <div className="mt-10 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-white/10 pb-32 pt-8 sm:pb-16">
+            <Link href="/" aria-label="Home" className="group block">
+              <Image
+                src={logo}
+                alt="ĐiĐi Audio"
+                width={60}
+                height={60}
+                className="w-auto object-cover "
+                priority
+              />
             </Link>
-            <Link
-              href="/speaker-rental-da-nang-ru"
-              lang="ru"
-              className="inline-flex min-h-11 items-center underline"
-            >
-              Русский
-            </Link>
-            <Link
-              href="/speaker-rental-da-nang-zh"
-              lang="zh"
-              className="inline-flex min-h-11 items-center underline"
-            >
-              中文
-            </Link>
-          </nav>
-          <Navigation />
-        </div>
-        <div className="mb-40 mt-24 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-white/10 pt-12">
-          <Link href="/" aria-label="Home" className="group block">
-            <Image
-              src={logo}
-              alt="ĐiĐi Audio"
-              width={60}
-              height={60}
-              className="w-auto object-cover "
-              priority
-            />
-          </Link>
-          <div className="mt-4 flex flex-col items-start gap-2 sm:mt-0 sm:items-end">
-            <div className="flex items-center gap-2">
-              <Music className="h-4 w-4 text-cyan-400" />
-              <p className="text-sm text-gray-300">
-                © ĐiĐi Audio {new Date().getFullYear()}
+            <div className="mt-4 flex flex-col items-start gap-2 sm:mt-0 sm:items-end">
+              <div className="flex items-center gap-2">
+                <Music className="h-4 w-4 text-cyan-400" />
+                <p className="text-sm text-gray-300">
+                  © ĐiĐi Audio {new Date().getFullYear()}
+                </p>
+              </div>
+              <p className="mt-1 text-xs text-gray-500 sm:text-right sm:text-sm">
+                Website được thiết kế & phát triển bởi{' '}
+                <a
+                  href="https://huyseolocal.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 transition-colors hover:text-cyan-400"
+                >
+                  huyseolocal.com
+                </a>
               </p>
             </div>
-            <p className="mt-1 text-xs text-gray-500 sm:text-right sm:text-sm">
-              Website được thiết kế & phát triển bởi{' '}
-              <a
-                href="https://huyseolocal.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 transition-colors hover:text-cyan-400"
-              >
-                huyseolocal.com
-              </a>
-            </p>
           </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </footer>
   )
 }
