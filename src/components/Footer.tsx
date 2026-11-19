@@ -91,32 +91,7 @@ export function Footer() {
             ></iframe>
           </div>
           <div>
-            <nav
-              aria-label="Các trang ngôn ngữ"
-              className="mb-8 flex flex-wrap gap-4 text-sm text-gray-300"
-            >
-              <Link
-                href="/speaker-rental-da-nang"
-                lang="en"
-                className="inline-flex min-h-11 items-center underline"
-              >
-                English
-              </Link>
-              <Link
-                href="/speaker-rental-da-nang-ru"
-                lang="ru"
-                className="inline-flex min-h-11 items-center underline"
-              >
-                Русский
-              </Link>
-              <Link
-                href="/speaker-rental-da-nang-zh"
-                lang="zh"
-                className="inline-flex min-h-11 items-center underline"
-              >
-                中文
-              </Link>
-            </nav>
+
             <Navigation />
           </div>
           <div className="mt-10 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-white/10 pb-32 pt-8 sm:pb-16">
