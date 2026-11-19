@@ -86,7 +86,7 @@ function Header({
                   alt="ĐiĐi Audio"
                   width={60}
                   height={60}
-                  className="w-auto object-cover "
+                  className="w-auto rounded-xl object-cover"
                   priority
                 />
           

@@ -220,7 +220,7 @@ const fs = require('node:fs')
         await trigger.waitFor({ state: 'visible' })
         assert.ok(await trigger.evaluate((e) => document.activeElement === e))
         const booking = p.getByRole('link', {
-          name: 'Đặt thuê ngay',
+          name: 'Đặt thuê loa',
           exact: true,
         })
         await booking.click()
